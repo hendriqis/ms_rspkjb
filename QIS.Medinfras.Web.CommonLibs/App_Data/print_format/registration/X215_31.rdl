@@ -1,0 +1,44 @@
+﻿          BUKTI PENDAFTARAN
+           
+ {PatientName} ({Sex})
+
+ No. RM   : {MedicalNo}
+ No. Reg  : {RegistrationNo} 
+ Unit     : {ServiceUnitName}
+ Tanggal  : {ActualVisitDateInString}
+ Dokter   : {ParamedicName}
+ Pembayar : {BusinessPartnerName}
+ No. Urut : {QueueNo}
+ 
+ Order    :    LAB     FARMASI
+               RAD     ____________
+ 
+ Kartu    : {IsPrintCard}
+
+ Tindakan :
+ 1. _____________ : Rp. ________
+ 2. _____________ : Rp. ________
+ 3. _____________ : Rp. ________
+ 4. _____________ : Rp. ________
+ 5. _____________ : Rp. ________
+
+ Catatan Dokter   :
+
+
+
+ Diagnosa         :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

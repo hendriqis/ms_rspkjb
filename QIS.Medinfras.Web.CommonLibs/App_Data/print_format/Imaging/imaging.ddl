@@ -1,0 +1,8 @@
+﻿HealthcareName
+MedicalNo
+PatientName
+cfDateOfBirth
+cfGenderInitial1
+cfTransactionDate
+RegistrationPhysicianName
+cfItemDetailListForLabel

@@ -1,0 +1,483 @@
+<div>
+    <style>
+        .ddlForm {display:inline-block}
+    </style>
+    <table style="width: 100%;">
+        <tr>
+            <td colspan="2"><strong> Pengkajian Ulang : </strong></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="checkbox" class="chkForm" controlID="cbForm1" value="bulanan"> Bulanan ( Pasien Tidak Stabil ) - <input type="checkbox" class="chkForm" controlID="cbForm2" value="3 bulan pertama"> 3 Bulan Pertama - <input type="checkbox" class="chkForm" controlID="cbForm3" value="tahunan ke"> Tahunan, Ke <input type="text" class="txtForm" controlID="txtForm1"> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <p>Jika penilaian dilakukan bulanan (pasien tidak stabil), pilih alasannya :</p>
+                <ul style="list-style: none; margin-top: -10px;">
+                    <li><input type="checkbox" class="chkForm" controlID="cbForm4" value="Perawatan"> Perawatan Rumah Sakit – sering atau dalam waktu yang lama ( lama : <input type="text" class="txtForm" controlID="txtForm2"> ) </li>
+                    <li><input type="checkbox" class="chkForm" controlID="cbForm5" value="Perburukan"> Perburukan dari status kesehatan secara keseluruhan</li>
+                    <li><input type="checkbox" class="chkForm" controlID="cbForm6" value="Perubahan"> Perubahan kebutuhan psikososial </li>
+                    <li><input type="checkbox" class="chkForm" controlID="cbForm7" value="Status gizi"> Status gizi yang buruk, anemia yang tidak tertangani dan dialysis yang tidak adekuat</li>
+                    <li><input type="checkbox" class="chkForm" controlID="cbForm8" value="Lainnya"> Lainnya (tulis) : <input type="text" class="txtForm" controlID="txtForm3"></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table style="width: 100%;">
+        <tr>
+            <td colspan="2" style="width: 100%;"><strong> Keluhan : </strong></td>
+        </tr>
+        <tr>
+            <td style="width: 10%;">Tekanan Darah </td>
+            <td style="width: 90%;">: <input type="text" class="txtForm" controlID="txtForm4"> mmHg</td>
+        </tr>
+        <tr>
+            <td>Nadi </td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm5"> x/menit</td>
+        </tr>
+        <tr>
+            <td>Suhu</td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm6"> &#176;C</td>
+        </tr>
+        <tr>
+            <td>Respirasi </td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm7"> x/menit</td>
+        </tr>
+        <tr>
+            <td>Berat Badan </td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm8"> kg</td>
+        </tr>
+        <tr>
+            <td>Tinggi Badan </td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm9"> cm</td>
+        </tr>
+    </table>
+    <hr>
+    <table style="width: 100%;">
+        <tr>
+            <td colspan="2"><strong> <u>Riwayat Penyakit</u>  </strong></td>
+        </tr>
+        <tr>
+            <td>Kardiovaskular</td>
+            <td>: <input type="checkbox" class="chkForm" controlID="cbForm9_01" value="Tidak Ada 1"> Tidak Ada <input type="checkbox" class="chkForm" controlID="cbForm10_02" value="Tidak Tau 1"> Tidak Tau <input type="checkbox" class="chkForm" controlID="cbForm11_04" value="Ada 1"> Ada, jenisnya / sejak :  <input type="text" class="txtForm" controlID="txtForm10_03"></td>
+        </tr>
+        <tr>
+            <td>Paru</td>
+            <td>: <input type="checkbox" class="chkForm" controlID="cbForm12" value="Tidak Ada 2"> Tidak Ada <input type="checkbox" class="chkForm" controlID="cbForm13" value="Tidak Tau 2"> Tidak Tau <input type="checkbox" class="chkForm" controlID="cbForm14" value="Ada 2"> Ada, jenisnya / sejak :  <input type="text" class="txtForm" controlID="txtForm11"></td>
+        </tr>
+        <tr>
+            <td><u>Endokrine</u></td>
+            <td>: <input type="checkbox" class="chkForm" controlID="cbForm15" value="Tidak Ada 3"> Tidak Ada <input type="checkbox" class="chkForm" controlID="cbForm16" value="Tidak Tau 3"> Tidak Tau <input type="checkbox" class="chkForm" controlID="cbForm17" value="Ada 3"> Ada, jenisnya / sejak :  <input type="text" class="txtForm" controlID="txtForm12"></td>
+        </tr>
+        <tr>
+            <td>Cerebrovaskuler</td>
+            <td>: <input type="checkbox" class="chkForm" controlID="cbForm18" value="Tidak Ada 4"> Tidak Ada <input type="checkbox" class="chkForm" controlID="cbForm19" value="Tidak Tau 4"> Tidak Tau <input type="checkbox" class="chkForm" controlID="cbForm20" value="Ada 4"> Ada, jenisnya / sejak :  <input type="text" class="txtForm" controlID="txtForm13"></td>
+        </tr>
+        <tr>
+            <td>Musculoskeletal</td>
+            <td>: <input type="checkbox" class="chkForm" controlID="cbForm21" value="Tidak Ada 5"> Tidak Ada <input type="checkbox" class="chkForm" controlID="cbForm22" value="Tidak Tau 5"> Tidak Tau <input type="checkbox" class="chkForm" controlID="cbForm23" value="Ada 5"> Ada, jenisnya / sejak :  <input type="text" class="txtForm" controlID="txtForm14"></td>
+        </tr>
+        <tr>
+            <td>Genitourinary</td>
+            <td>: <input type="checkbox" class="chkForm" controlID="cbForm24" value="Tidak Ada 6"> Tidak Ada <input type="checkbox" class="chkForm" controlID="cbForm25" value="Tidak Tau 6"> Tidak Tau <input type="checkbox" class="chkForm" controlID="cbForm26" value="Ada 6"> Ada, jenisnya / sejak :  <input type="text" class="txtForm" controlID="txtForm15"></td>
+        </tr>
+        <tr>
+            <td>Penyakit Imun</td>
+            <td>: <input type="checkbox" class="chkForm" controlID="cbForm27" value="Tidak Ada 7"> Tidak Ada <input type="checkbox" class="chkForm" controlID="cbForm28" value="Tidak Tau 7"> Tidak Tau <input type="checkbox" class="chkForm" controlID="cbForm29" value="Ada 7"> Ada, jenisnya / sejak :  <input type="text" class="txtForm" controlID="txtForm16"></td>
+        </tr>
+        <tr>    
+            <td>Keganasan</td>
+            <td>: <input type="checkbox" class="chkForm" controlID="cbForm30" value="Tidak Ada 8"> Tidak Ada <input type="checkbox" class="chkForm" controlID="cbForm31" value="Tidak Tau 8"> Tidak Tau <input type="checkbox" class="chkForm" controlID="cbForm32" value="Ada 8"> Ada, jenisnya / sejak :  <input type="text" class="txtForm" controlID="txtForm17"></td>
+        </tr>
+        <tr>    
+            <td>Riwayat Keluarga PGK</td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm18"></td>
+        </tr>
+        <tr>    
+            <td><strong>Hubungan Kekeluargaan</strong></td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm19"></td>
+        </tr>
+        <tr>    
+            <td>Menjalani Dialisis</td>
+            <td>: <input type="checkbox" class="chkForm" controlID="cbForm33" value="Tidak 1"> Tidak <input type="checkbox" class="chkForm" controlID="cbForm34" value="Ya 1"> Ya, sejak :  <input type="text" class="txtForm" controlID="txtForm20"></td>
+        </tr>
+        <tr>    
+            <td>Kondisi terakhir</td>
+            <td>: <input type="checkbox" class="chkForm" controlID="cbForm35" value="Kondisi Hidup"> Hidup <input type="checkbox" class="chkForm" controlID="cbForm36" value="Kondisi Meninggal"> Meninggal, pada :  <input type="text" class="txtForm" controlID="txtForm21"></td>
+        </tr>
+    </table>
+    <hr>
+    <table style="width: 100%;">
+        <tr>
+            <td colspan="2"><strong> Status Cairan : </strong></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="3"><input type="checkbox" class="chkForm" controlID="cbForm36" value="Kekurangan"> Kekurangan <input type="checkbox" class="chkForm" controlID="cbForm37" value="normal"> normal<input type="checkbox" class="chkForm" controlID="cbForm38" value="Kelebihan"> Kelebihan</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Berat badan saat ini</td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_1_22"> Kg</td>
+            <td>
+                Edema extremitas : <input type="radio" name="optFormGroup_01" value="1" class="optForm" controlID="optGroup01_03_01">
+                <label>+</label>
+                <input type="radio" name="optFormGroup_01" value="0" class="optForm" controlID="optGroup01_03_02">
+                <label>-</label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Berat badan Post HD terakhir</td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_1_22"> Kg</td>
+            <td>
+                Ascites : <input type="radio"m name="optFormGroup_02" value="1" class="optForm" controlID="optGroup01_04_01">
+                <label>+</label>
+                <input type="radio" name="optFormGroup_02" value="0" class="optForm" controlID="optGroup01_04_02">
+                <label>-</label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Berat badan kering </td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_1_22"> Kg</td>
+            <td>
+                E Kongesti paru : <input type="radio" name="optFormGroup_03" value="1" class="optForm" controlID="optGroup01_05_01">
+                <label>+</label>
+                <input type="radio" name="optFormGroup_03" value="0" class="optForm" controlID="optGroup01_05_02">
+                <label>-</label>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table style="width: 100%;">
+        <tr>
+            <td colspan="2"><strong> <u>Evaluasi Nyeri</u>  </strong></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">
+                Nyeri : <input type="radio" id="male" name="optFormGroup_04" value="tidak" class="optForm" controlID="optGroup01_01_01">
+                <label for="tidak">Tidak</label>
+                <input type="radio" id="female" name="optFormGroup_04" value="ya" class="optForm" controlID="optGroup01_01_02">
+                <label for="ya">Ya</label> Lokasi : <input type="text" class="txtForm" controlID="txtForm_22"> Intensitas ( 0 - 10 ) : <input type="text" class="txtForm" controlID="txtForm_23">
+            </td>
+            <td rowspan="2"><img src="skala_nyeri.JPG" alt="skala-nyeri"></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">
+                Jenis : <input type="radio" id="jenis" name="jenis" value="akut" class="optForm" controlID="optGroup01_02_01">
+                <label for="tidak">Akut</label>
+                <input type="radio" id="jenis" name="jenis" value="kronis" class="optForm" controlID="optGroup01_02_02">
+                <label for="ya">Kronis</label>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table style="width: 100%;">
+        <tr>
+            <td colspan="2"><strong> <u>Status Gizi</u>  </strong></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="4"><input type="checkbox" class="chkForm" controlID="cbForm_01_01_01" value="Buruk"> Buruk <input type="checkbox" class="chkForm" controlID="cbForm_01_01_02" value="sedang"> Sedang<input type="checkbox" class="chkForm" controlID="cbForm_01_01_03" value="Baik"> Baik</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="width: 40%;">Tinggi Badan : <input type="text" class="txtForm" controlID="txtForm_24"> cm </td>
+            <td>BMI : <input type="text" class="txtForm" controlID="txtForm_25"> Kg/m&#178;</td>
+            <td>Kategori BMI
+                <select id="ddlParameter2" style="width:100%" class = "ddlForm" controlID = "ddlParameter2">
+                    <option value=""> - Pilih -</option>
+                    <option value="under">under</option>
+                    <option value="normal">normal</option>
+                    <option value="over">over</option>
+                    <option value="close">close</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="width: 40%;">Rata-rata peningkatan BB antar HD </td>
+            <td><input type="text" class="txtForm" controlID="txtForm_01_01"> Kg</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="width: 40%;">Kadar albumin</td>
+            <td><input type="text" class="txtForm" controlID="txtForm_01_02"> mg/dl</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="width: 40%;">Nafsu Makan</td>
+            <td><select id="ddlParameter2" style="width:100%" class = "ddlForm" controlID = "ddlParameter2">
+                <option value=""> - Pilih -</option>
+                <option value="kurang">Kurang</option>
+                <option value="normal">normal</option>
+            </select></td>
+            <td></td>
+        </tr>
+    </table>
+    <hr>
+    <table style="width: 100%;">
+        <tr>
+            <td colspan="2"><strong> Evaluasi Akses dialysis :  </strong></td>
+        </tr>
+        <tr>
+            <td>Akses vaskuler saat ini</td>
+            <td>: <input type="checkbox" class="chkForm" controlID="cbForm9_02" value="AV shunt"> AV shunt <input type="checkbox" class="chkForm" controlID="cbForm10_01" value="Graft"> Graft <input type="checkbox" class="chkForm" controlID="cbForm11" value="Ada 1"> Tunnel CDL <input type="checkbox" class="chkForm" controlID="cbForm11_02" value="Ada 1"> Temporer CDL <input type="checkbox" class="chkForm" controlID="cbForm11_03" value="Ada 1"> Femoral</td>
+        </tr>
+        
+        <tr>
+            <td>Tgl / bulan / tahun pembuatan AV shunt</td>
+            <td> I : <input type="text" class="txtForm" controlID="txtForm_01_03">  II : <input type="text" class="txtForm" controlID="txtForm_01_04"> III : <input type="text" class="txtForm" controlID="txtForm_01_05"></td>
+        </tr>
+        <tr>
+            <td>Rata-rata QB tiap dialisis</td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_01_06"></td>
+        </tr>
+        <tr>
+            <td>Kondisi akses vaskuler saat ini</td>
+            <td>: <input type="radio" id="male" name="nyeri" value="tidak" class="optForm" controlID="optGroup01_03_01">
+                <label for="tidak">Baik</label>
+                <input type="radio" id="female" name="nyeri" value="ya" class="optForm" controlID="optGroup01_03_02">
+                <label for="ya">Berkomplikasi</label></td>
+        </tr>
+        <tr>
+            <td>Komplikasi akses vaskuler</td>
+            <td>: <input type="checkbox" class="chkForm" controlID="cbForm_01_02_01" value="Tidak Ada 1"> Tidak ada <input type="checkbox" class="chkForm" controlID="cbForm_01_02_2" value="Tidak Tau 1"> Ya, jenisnya : <select id="ddlParameter3" class = "ddlForm" controlID = "ddlParameter3">
+                <option value=""> - Pilih -</option>
+                <option value="Aneurisma">Aneurisma </option>
+                <option value="Stenosis">Stenosis</option>
+                <option value="infeksi exit site">infeksi exit site</option>
+                <option value="Infeksi tunne">Infeksi tunne</option>
+                <option value="lain-lain">lain-lain</option>
+            </select></td>
+        </tr>
+    </table>
+    <table style="width: 100%;">
+        <tr>
+            <td colspan="2"><strong> Evaluasi Dialisis :  </strong></td>
+        </tr>
+        <tr>
+            <td>Tgl mulai HD pertama</td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_01_07"></td>
+        </tr>
+        <tr>
+            <td>Frekuensi HD</td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_01_08"> x/minggu</td>
+        </tr>
+        <tr>
+            <td>Lama waktu setiap HD</td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_01_09"> Jam</td>
+        </tr>
+        <tr>
+            <td>Dialiser yang digunakan, tipe</td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_01_10"></td>
+        </tr>
+        <tr>
+            <td>Luas membrane </td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_01_11"></td>
+        </tr>
+        <tr>
+            <td>Jenis </td>
+            <td>: <input type="checkbox" class="chkForm" controlID="cbForm_01_02_3" value="Tidak Ada 1">  Low flux <input type="checkbox" class="chkForm" controlID="cbForm_01_02_4" value="Tidak Tau 1"> High  Flux </td>
+        </tr>
+    </table>
+    <table style="width: 100%;">
+        <tr>
+            <td colspan="3">Keluhan yang timbul : </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="chkForm" controlID="cbForm_01_02_5" value="Kram">  Kram</td>
+            <td><input type="checkbox" class="chkForm" controlID="cbForm_01_02_6" value="Mual muntah">  Mual muntah</td>
+            <td><input type="checkbox" class="chkForm" controlID="cbForm_01_02_7" value="Hipertensi">  Hipertensi</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="chkForm" controlID="cbForm_01_02_8" value="Dizziness">  Dizziness </td>
+            <td><input type="checkbox" class="chkForm" controlID="cbForm_01_02_9" value="Hipoksemia">  Hipoksemia</td>
+            <td><input type="checkbox" class="chkForm" controlID="cbForm_01_02_10" value="Komplikasi kardiovaskular">  Komplikasi kardiovaskular</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="chkForm" controlID="cbForm_01_02-11" value="Tidak ada keluhan">  Tidak ada keluhan </td>
+            <td><input type="checkbox" class="chkForm" controlID="cbForm_01_02-12" value="Hipotensi">  Hipotensi</td>
+            <td><input type="checkbox" class="chkForm" controlID="cbForm_01_02-13" value="Lainnya">  Lainnya, sebutkan <input type="text" class="txtForm" controlID="txtForm_01_12"></td>
+        </tr>
+    </table>
+    <table style="width: 100%;">
+        <tr>
+            <td colspan="3"><strong>Adekuasi dialisis : </strong></td>
+        </tr>
+        <tr>
+            <td>URR  terakhir </td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_01_13"> % (dalam 6 bulan/ 1 tahun terakhir)</td>
+        </tr>
+        <tr>
+            <td>Kt / V </td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_01_14"> (6 bulan / 1 tahun terakhir)</td>
+        </tr>
+    </table>
+    <table style="width: 100%;">
+        <tr>
+            <td>Pemakaian Eritropoetin </td>
+            <td>: 
+                <input type="checkbox" class="chkForm" controlID="cbForm_01_02-14" value="Tidak Ada">  Tidak ada <input type="checkbox" class="chkForm" controlID="cbForm_01_02-15" value="Ada">  Ada 
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Sejak</td>
+                        <td>: <input type="text" class="txtForm" controlID="txtForm_01_12"> </td>
+                    </tr>
+                    <tr>
+                        <td>Jenisnya</td>
+                        <td>: <input type="text" class="txtForm" controlID="txtForm_01_13"> </td>
+                    </tr>
+                    <tr>
+                        <td>Dosisnyas</td>
+                        <td>: <input type="text" class="txtForm" controlID="txtForm_01_14"> x/minggu
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>Riwayat Transfusi selama Dialisis </td>
+            <td>: 
+                <input type="checkbox" class="chkForm" controlID="cbForm_01_02-16" value="Ada">  Ada <input type="checkbox" class="cbForm_01_02-17" controlID="cbForm9_03" value="Tidak Pernah">  Tidak Pernah 
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Transfusi pertama</td>
+                        <td>: <input type="text" class="txtForm" controlID="txtForm_01_15"> </td>
+                    </tr>
+                    <tr>
+                        <td>Transfusi terakhir</td>
+                        <td>: <input type="text" class="txtForm" controlID="txtForm_01_16"> </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>Produksi urine  per hari </td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_01_17"> </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Warna</td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_01_18"> </td>
+            <td></td>
+        </tr>
+    </table>
+    <hr>
+    <table style="width: 100%;">
+        <tr>
+            <td>Lab lain </td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_01_19"> </td>
+        </tr>
+        <tr>
+            <td>Thorak Ro </td>
+            <td>: <textarea class="txtForm" controlID="txtForm_01_20" rows="5" cols="40"> </textarea></td>
+        </tr>
+        <tr>
+            <td>BOF </td>
+            <td>: <textarea class="txtForm" controlID="txtForm_01_21" rows="5" cols="40"> </textarea></td>
+        </tr>
+        <tr>
+            <td>USG abd / urologi </td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_01_22"> </td>
+        </tr>
+        <tr>
+            <td>Ekokardiografi </td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_01_23"> </td>
+        </tr>
+        <tr>
+            <td>Penunjang lain </td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm_01_24"> </td>
+        </tr>
+        <tr>
+            <td>Obat  yang diminum selama ini </td>
+            <td>: <textarea class="txtForm" controlID="txtForm_01_25" rows="10" cols="40"> </textarea></td>
+        </tr>
+    </table>
+
+    <hr>
+    <table style="width: 100%;">
+        <tr>
+            <td colspan="2"><h4>RESUME  RE-ASSESMENT : </h4></td><td></td>
+        </tr>
+        <tr>
+            <td><strong>Diagnosis Pasien :</strong></td>
+            <td></td><td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Diagnosis Utama ( Dx/ Ginjal)</td>
+            <td>: <textarea class="txtForm" controlID="txtForm_01_26" rows="5" cols="40"> </textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Diagnosis  Komplikasi</td>
+            <td>: <textarea class="txtForm" controlID="txtForm_01_27" rows="5" cols="40"> </textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Diagnosis Tambahan</td>
+            <td>: <textarea class="txtForm" controlID="txtForm_01_28" rows="5" cols="40"> </textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong>Adekuasi Dialisis</strong></td>
+            <td>: <textarea class="txtForm" controlID="txtForm_01_29" rows="5" cols="40"> </textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong>Status Nutrisi</strong></td>
+            <td>: <textarea class="txtForm" controlID="txtForm_01_30" rows="5" cols="40"> </textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong>Rekomendasi</strong></td>
+            <td><input type="checkbox" class="chkForm" controlID="cbForm_01_02-18" value="Ada"> <strong>Peresepan Hemodialis</strong>
+                <table>
+                    <tr>
+                        <td> Blood Flow rate</td>
+                        <td>: <input type="text" class="txtForm" controlID="txtForm_01_31"> .mL/menit.</td>
+                    </tr>
+                    <tr>
+                        <td> Anti koagulan</td>
+                        <td>: <input type="text" class="txtForm" controlID="txtForm_01_32"> Unit</td>
+                    </tr>
+                    <tr>
+                        <td> dosis awal</td>
+                        <td>: <input type="text" class="txtForm" controlID="txtForm_01_33"> Unit</td>
+                    </tr>
+                    <tr>
+                        <td> Dosis pemeliharaan</td>
+                        <td>: <input type="text" class="txtForm" controlID="txtForm_01_34"> .Unit/jam
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Ukuran dialiser</td>
+                        <td>: <input type="text" class="txtForm" controlID="txtForm_01_35"> .Unit/jam
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Frekuensi HD/minggu</td>
+                        <td>: <input type="text" class="txtForm" controlID="txtForm_01_36"> .Unit/jam
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong>Th/ Anemia</strong></td>
+            <td>: <input type="checkbox" class="chkForm" controlID="cbForm_01_02-19" value="Ada"> Terapi Besi  <input type="text" class="txtForm" controlID="txtForm_02_24"> <input type="checkbox" class="cbForm_01_02-17" controlID="cbForm9_04" value="Tidak Pernah"> Terapi erythropoetin  <input type="text" class="txtForm" controlID="txtForm_01_37"> <input type="checkbox" class="cbForm_01_02-17" controlID="cbForm9_05" value="Tidak Pernah"> Transfusi Darah
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong>Therapi</strong></td>
+            <td>: <textarea class="txtForm" controlID="txtForm_01_38" rows="5" cols="40"> </textarea></td>
+        </tr>
+    </table>
+</div>

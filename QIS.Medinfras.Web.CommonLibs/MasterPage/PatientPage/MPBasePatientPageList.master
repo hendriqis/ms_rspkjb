@@ -1,0 +1,167 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Libs/MasterPage/PatientPage/MPBasePatientPage.Master"
+    AutoEventWireup="true" CodeBehind="MPBasePatientPageList.master.cs" Inherits="QIS.Medinfras.Web.CommonLibs.MasterPage.MPBasePatientPageList" %>
+
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="plhMPPatientPageNavigationPane"
+    runat="server">
+    <asp:ContentPlaceHolder ID="plhMPPatientPageNavigationPane" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="plhMPPatientPage" runat="server">
+    <div class="toolbarArea" id="toolbarPatientPageListArea">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <colgroup>
+                <col width="55%" />
+                <col width="45%" />
+            </colgroup>
+            <tr>
+                <td>
+                    <ul id="ulMPListToolbar" runat="server">
+                        <asp:ContentPlaceHolder ID="plhCustomLeftButtonToolbar" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <li id="btnMPListAdd" runat="server" crudmode="C">
+                            <img src='<%=ResolveUrl("~/Libs/Images/Icon/tbnew.png")%>' alt="" /><div>
+                                <%=GetLabel("Add")%></div>
+                        </li>
+                        <li id="btnMPListEdit" runat="server" crudmode="U">
+                            <img src='<%=ResolveUrl("~/Libs/Images/Icon/tbedit.png")%>' alt="" /><div>
+                                <%=GetLabel("Edit")%></div>
+                        </li>
+                        <li id="btnMPListDelete" runat="server" crudmode="D">
+                            <img src='<%=ResolveUrl("~/Libs/Images/Icon/tbdelete.png")%>' alt="" /><div>
+                                <%=GetLabel("Delete")%></div>
+                        </li>
+                        <asp:ContentPlaceHolder ID="plhCustomButtonToolbar" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </ul>
+                </td>
+                <td style="text-align: right; padding-right: 5px ;">
+                    <asp:ContentPlaceHolder ID="plhMenuTitle" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <input type="hidden" id="hdnIsEntryUsePopup" value="1" runat="server" />
+    <script type="text/javascript">
+        $(function () {
+            $('#<%=btnMPListAdd.ClientID %>').click(function () {
+                cbpMPListProcess.PerformCallback('add');
+            });
+            $('#<%=btnMPListEdit.ClientID %>').click(function (evt) {
+                var allow = true;
+                if (typeof onBeforeBasePatientPageListEdit == 'function') {
+                    allow = onBeforeBasePatientPageListEdit();
+                }
+                if (allow) cbpMPListProcess.PerformCallback('edit');
+            });
+            $('#<%=btnMPListDelete.ClientID %>').click(function () {
+                var allow = true;
+                if (typeof onBeforeBasePatientPageListDelete == 'function') {
+                    allow = onBeforeBasePatientPageListDelete();
+                }
+                if (allow) {
+                    displayConfirmationMessageBox('DELETE', 'Are you sure want to delete this record ?', function (result) {
+                        if (result) cbpMPListProcess.PerformCallback('delete');
+                    });
+                }
+            });
+
+            var isToolbarVisible = false;
+            $('#toolbarPatientPageListArea li').each(function () {
+                if ($(this).is(":visible"))
+                    isToolbarVisible = true;
+            });
+            if (!isToolbarVisible)
+                $('#toolbarPatientPageListArea').hide();
+        });
+
+        function onCustomButtonClick(type) {
+            cbpMPListProcess.PerformCallback('customclick|' + type);
+        }
+
+        function onCbpMPListProcessEndCallback(s, e) {
+            var isEntryUsePopup = ($('#<%=hdnIsEntryUsePopup.ClientID %>').val() == '1');
+            var result = s.cpResult.split('|');
+            if (result[0] == 'delete') {
+                if (result[1] == 'success') {
+                    if (typeof onBeforeRefreshControl == 'function') {
+                        onBeforeRefreshControl();
+                    }
+
+                    if (typeof onRefreshControl == 'function') {
+                        var filterExpression = '';
+                        onRefreshControl(filterExpression);
+                    }
+                }
+                else {
+                    if (result[2] != '')
+                        displayErrorMessageBox('DELETE', result[2]);    
+                    else
+                        displayErrorMessageBox('DELETE', "Terjadi kesalahan pada saat proses hapus data");    
+                }
+            }
+            else if (result[0] == 'add') {
+                if (result[1] == 'success') {
+                    if (isEntryUsePopup) {
+                        var size = s.cpSize.split('|');
+                        openUserControlPopup(s.cpURL, s.cpQueryString, s.cpHeaderText, size[0], size[1]);
+                    }
+                    else
+                        document.location = s.cpURL;
+                }
+                else {
+                    if (result[2] != '')
+                        displayErrorMessageBox('SAVE', result[2]);     
+                    else
+                        displayErrorMessageBox('SAVE', "Terjadi kesalahan pada saat proses penyimpanan data");    
+                }
+            }
+            else if (result[0] == 'edit') {
+                if (result[1] == 'success') {
+                    if (isEntryUsePopup) {
+                        var size = s.cpSize.split('|');
+                        openUserControlPopup(s.cpURL, s.cpQueryString, s.cpHeaderText, size[0], size[1]);
+                    }
+                    else
+                        document.location = s.cpURL;
+                }
+                else {
+                    if (result[2] != '')
+                        displayErrorMessageBox('EDIT', result[2]);     
+                    else
+                        displayErrorMessageBox('SAVE', "Terjadi kesalahan pada saat proses penyimpanan data");    
+                }
+            }
+            else if (result[0] == 'customclick') {
+                if (result[1] == 'success') {
+                    if (typeof onAfterCustomClickSuccess == 'function')
+                        onAfterCustomClickSuccess(s.cpType);
+
+                    if (typeof onAfterCustomClickSuccessSetRecordID == 'function')
+                        onAfterCustomClickSuccessSetRecordID(s.cpRetval);
+                }
+                else {
+                    if (result[2] != '')
+                        displayErrorMessageBox('Failed', 'Error Message : ' + '<br /> <br />' + result[2]);
+                    else
+                        displayErrorMessageBox('Failed', '');
+                }
+            }
+            hideLoadingPanel();
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="plhList" runat="server">
+    </asp:ContentPlaceHolder>
+    <dxcp:ASPxCallbackPanel ID="cbpMPListProcess" runat="server" Width="100%" ClientInstanceName="cbpMPListProcess"
+        ShowLoadingPanel="false" OnCallback="cbpMPListProcess_Callback">
+        <ClientSideEvents BeginCallback="function(s,e){
+                showLoadingPanel();
+            }" EndCallback="function(s,e){
+                onCbpMPListProcessEndCallback(s,e);
+            }" />
+    </dxcp:ASPxCallbackPanel>
+</asp:Content>

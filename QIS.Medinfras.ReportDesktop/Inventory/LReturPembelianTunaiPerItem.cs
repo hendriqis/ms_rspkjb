@@ -1,0 +1,27 @@
+﻿using System;
+using System.Drawing;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using DevExpress.XtraReports.UI;
+using QIS.Medinfras.Web.Common;
+using QIS.Medinfras.Data.Service;
+
+namespace QIS.Medinfras.ReportDesktop
+{
+    public partial class LReturPembelianTunaiPerItem : BaseCustomDailyLandscapeA3Rpt
+    {
+        public LReturPembelianTunaiPerItem()
+        {
+            InitializeComponent();
+        }
+
+        public override void InitializeReport(string[] param)
+        {
+            string[] temp = param[0].Split(';');
+            lblPeriod.Text = string.Format("Periode : {0} s/d {1}", Helper.YYYYMMDDToDate(temp[0]).ToString(Constant.FormatString.DATE_FORMAT), Helper.YYYYMMDDToDate(temp[1]).ToString(Constant.FormatString.DATE_FORMAT));
+            xrLabel1.Text = string.Format("Lokasi : {0}", BusinessLayer.GetLocation(Convert.ToInt32(param[1].ToString())).LocationName);
+            base.InitializeReport(param);
+        }
+    }
+}

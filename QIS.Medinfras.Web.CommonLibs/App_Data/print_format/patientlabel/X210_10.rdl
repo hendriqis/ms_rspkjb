@@ -1,0 +1,22 @@
+﻿^XA
+^LL200
+^PW400
+^LH5,10
+^AQN,28,24
+^FO15 ,5^FDREG.NO^FS
+^AQN,28,24
+^FO110,5^FD{RegistrationNo}^FS 
+^AQN,28,24
+^FO15 ,35^FDMRN^FS 
+^A0N,28,24
+^FO110,35^FD{MedicalNo}^FS 
+^A0N,28,33
+^FO15 , 65^FD{cfCardNameSalutation}^FS
+^AQN,28,24
+^FO15 ,95^FD{DateOfBirthInString} / ({cfPatientAgeInYear}) {cfGenderInitial} ^FS
+^AQN,28,24
+^FO15 ,125^FD{ActualVisitDateInString} {ActualVisitTime}^FS
+^FO15 ,155^^BY2,2,0
+^A0N,40,30^BAN,40,N,N,N^FD{cfAlternateRegistrationNo}^FS
+^PR2
+^XZ

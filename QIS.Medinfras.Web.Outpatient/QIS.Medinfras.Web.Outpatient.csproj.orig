@@ -1,0 +1,2228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78931DDA-587C-4393-B846-A14C103BCDE6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QIS.Medinfras.Web.Outpatient</RootNamespace>
+    <AssemblyName>QIS.Medinfras.Web.Outpatient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>
+    </SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 2011.1\Components\Sources\DevExpress.DLL\DevExpress.Web.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Design, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Extensions, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Service, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Web, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>..\_libs\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\ChangePasswordCtl.ascx">
+      <Link>SharedLibs\Controls\ChangePasswordCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralCtl.ascx">
+      <Link>SharedLibs\Controls\GeneralCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MPEntryPopupCtl.ascx">
+      <Link>SharedLibs\Controls\MPEntryPopupCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientAllergyInfoCtl.ascx">
+      <Link>SharedLibs\Controls\PatientAllergyInfoCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientBannerCtl.ascx">
+      <Link>SharedLibs\Controls\PatientBannerCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\CheckGridPatientVisitCtl.ascx">
+      <Link>SharedLibs\Controls\PatientGrid\CheckGridPatientVisitCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\GridInformationPatientVisitCtl.ascx">
+      <Link>SharedLibs\Controls\PatientGrid\GridInformationPatientVisitCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\GridPatientBillDetailCtl.ascx">
+      <Link>SharedLibs\Controls\PatientGrid\GridPatientBillDetailCtl.ascx</Link>
+    </Content>
+    <Content Include="..\qis.medinfras.web.commonlibs\controls\patientgrid\GridPatientRegistrationCtl.ascx">
+      <Link>SharedLibs\Controls\PatientGrid\GridPatientRegistrationCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\GridPatientRegOrderCtl.ascx">
+      <Link>SharedLibs\Controls\PatientGrid\GridPatientRegOrderCtl.ascx</Link>
+    </Content>
+    <Content Include="..\qis.medinfras.web.commonlibs\controls\patientgrid\GridPatientVisitCtl.ascx">
+      <Link>SharedLibs\Controls\PatientGrid\GridPatientVisitCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\GridServiceOrderCtl.ascx">
+      <Link>SharedLibs\Controls\PatientGrid\GridServiceOrderCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientInfoCtl.ascx">
+      <Link>SharedLibs\Controls\PatientInfoCtl.ascx</Link>
+    </Content>
+    <Content Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\episodesummarycontent\EpisodeSummaryBodyDiagramCtl.ascx">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryContent\EpisodeSummaryBodyDiagramCtl.ascx</Link>
+    </Content>
+    <Content Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\episodesummarycontent\EpisodeSummaryDiagnoseCtl.ascx">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryContent\EpisodeSummaryDiagnoseCtl.ascx</Link>
+    </Content>
+    <Content Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\episodesummarycontent\EpisodeSummaryEpisodeInformationCtl.ascx">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryContent\EpisodeSummaryEpisodeInformationCtl.ascx</Link>
+    </Content>
+    <Content Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\episodesummarycontent\EpisodeSummaryReviewOfSystemCtl.ascx">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryContent\EpisodeSummaryReviewOfSystemCtl.ascx</Link>
+    </Content>
+    <Content Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\episodesummarycontent\EpisodeSummaryVitalSignIndicatorCtl.ascx">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryContent\EpisodeSummaryVitalSignIndicatorCtl.ascx</Link>
+    </Content>
+    <Content Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\EpisodeSummaryCtl.ascx">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientPage\MPPatientPageEntry.ascx">
+      <Link>SharedLibs\Controls\PatientPage\MPPatientPageEntry.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\QRCodeCtl.ascx">
+      <Link>SharedLibs\Controls\QRCodeCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Default.aspx">
+      <Link>SharedLibs\Default.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\ErrorPage.aspx">
+      <Link>SharedLibs\ErrorPage.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Login.aspx">
+      <Link>SharedLibs\Login.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Controls\MedicalSickLeaveCtl.ascx">
+      <Link>SharedLibs\Program\Controls\MedicalSickLeaveCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Information\TariffEstimation.aspx">
+      <Link>SharedLibs\Program\Information\TariffEstimation.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Information\TariffList.aspx">
+      <Link>SharedLibs\Program\Information\TariffList.aspx</Link>
+    </Content>
+    <Content Include="..\qis.medinfras.web.commonlibs\program\information\TariffServiceList.aspx">
+      <Link>SharedLibs\Program\Information\TariffServiceList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Main.aspx">
+      <Link>SharedLibs\Program\Main.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ChangePatientTransactionStatus\ChangePatientTransactionStatusEntry.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\ChangePatientTransactionStatus\ChangePatientTransactionStatusEntry.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ChangePatientTransactionStatus\ChangePatientTransactionStatusList.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\ChangePatientTransactionStatus\ChangePatientTransactionStatusList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Information\TransactionPatientInformationDetailCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Information\TransactionPatientInformationDetailCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Information\TransactionPatientInformationList.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Information\TransactionPatientInformationList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\MedicalFileRequest\MedicalFileRequestList.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\MedicalFileRequest\MedicalFileRequestList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\Allergy\PatientAllergyEntryCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\Allergy\PatientAllergyEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\Allergy\PatientAllergyList.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\Allergy\PatientAllergyList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramAddCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramAddCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramEditCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramEditCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramList.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramTakePhotoCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramTakePhotoCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\InitialPhysicalExam\InitialPhysicalExam.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\InitialPhysicalExam\InitialPhysicalExam.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\InitialPhysicalExam\VitalSignEntryCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\InitialPhysicalExam\VitalSignEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PatientDiagnose\PatientDiagnoseCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PatientDiagnose\PatientDiagnoseCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PatientDiagnose\PatientDiagnoseList.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PatientDiagnose\PatientDiagnoseList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PatientDisposition\PatientDisposition.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PatientDisposition\PatientDisposition.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PatientStatus.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PatientStatus.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExaminationToolbarCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExaminationToolbarCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExam\PhysicalExam.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExam\PhysicalExam.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExam\PhysicalExamEntryCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExam\PhysicalExamEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\TreatmentProcedure\TreatmentProcedureCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\Treatment Procedure\TreatmentProcedureCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\TreatmentProcedure\TreatmentProcedureList.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\Treatment Procedure\TreatmentProcedureList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillDetail\PatientBillDetailReprintList.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillDetail\PatientBillDetailReprintList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBill.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBill.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtLaboratoryCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtLaboratoryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtPrescriptionCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtPrescriptionCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtPrescriptionReturnCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtPrescriptionReturnCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\Information\BillInformationList.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\Information\BillInformationList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\Information\InfoPatientTransaction.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\Information\InfoPatientTransaction.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountDtCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountDtCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountEntry.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountEntry.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountEntryCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryCharges.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryCharges.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryLab.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryLab.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPharmacy.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPharmacy.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPrescriptionReturn.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPrescriptionReturn.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPrescriptionReturnEntryCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPrescriptionReturnEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryToolbarCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryToolbarCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayDetailCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayDetailCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceipt.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceipt.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptDetailPrintCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptDetailPrintCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptDtCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptDtCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptPrint.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptPrint.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptVoidCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptVoidCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientPaymentReceipt.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientPaymentReceipt.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientPaymentReceiptReprintCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientPaymentReceiptReprintCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PatientBillSummaryPayment.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PatientBillSummaryPayment.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PaymentAccountReceivableCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PaymentAccountReceivableCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PaymentCloseRegistrationCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PaymentCloseRegistrationCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillDt.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillDt.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillProcessCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillProcessCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillUpdatePayerCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillUpdatePayerCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\UpdateRegistration\PatientBillSummaryUpdateRegistration.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\UpdateRegistration\PatientBillSummaryUpdateRegistration.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\ViewBillDetail\ViewBillDetail.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\ViewBillDetail\ViewBillDetail.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\VoidPatientBill\PatientBillSummaryVoidBill.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\VoidPatientBill\PatientBillSummaryVoidBill.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientDiagnose\PatientDiagnoseEntry.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientDiagnoseEntry\PatientDiagnoseEntry.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientRegistrationInformation\PatientRegistrationInformation.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientRegistrationInformation\PatientRegistrationInformation.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Process\ChangePatientBlackListStatus.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Process\ChangePatientBlackListStatus.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Process\CloseRegistration.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Process\CloseRegistration.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Process\OpenCloseRegistration.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Process\OpenCloseRegistration.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Process\VoidRegistration.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Process\VoidRegistration.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\CheckNewPatientCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\CheckNewPatientCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\CustomerNotesDetailCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\CustomerNotesDetailCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\EmergencyContactEntryCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\EmergencyContactEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\GenerateSEPCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\GenerateSEPCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\PatientEntryCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\PatientEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\PatientFamilyCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\PatientFamilyCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\PayerDetailEntryCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\PayerDetailEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\RegistrationEditCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\RegistrationEditCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\RegistrationEntry.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\RegistrationEntry.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\RegistrationNotesCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\RegistrationNotesCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\RegistrationPrintCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\RegistrationPrintCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\ViewNotesCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\ViewNotesCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderDetail.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderDetail.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderDtCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderDtCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderRemarksCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderRemarksCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderList\ServiceOrderList.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderList\ServiceOrderList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtProductViewCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtProductViewCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtServiceView1Ctl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtServiceView1Ctl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtServiceViewCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtServiceViewCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\Charges\TransactionPageCharges.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\Charges\TransactionPageCharges.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\EvaluationNotes\EvaluationNotes.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\EvaluationNotes\EvaluationNotes.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\EvaluationNotes\EvaluationNotesCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\EvaluationNotes\EvaluationNotesCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\IntegratedNotes\IntegratedNotes.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\IntegratedNotes\IntegratedNotes.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\MedicationOrderCompoundEntryCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\MedicationOrderCompoundEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\MedicationOrderHistoryCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\MedicationOrderHistoryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\PrescriptionCompoundEntryCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\PrescriptionCompoundEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\PrescriptionReturnOrderEntryCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\PrescriptionReturnOrderEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationOrder.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationOrder.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationOrderHd.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationOrderHd.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationReturnOrder.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationReturnOrder.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\NursingNotes\NursingNotes.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\NursingNotes\NursingNotes.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\NursingNotes\NursingNotesCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\NursingNotes\NursingNotesCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\PhysicianNotes\PhysicianNotes.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\PhysicianNotes\PhysicianNotes.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\PhysicianNotes\PhysicianNotesCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\PhysicianNotes\PhysicianNotesCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\ServiceOrder\TransactionPageServiceOrder.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\ServiceOrder\TransactionPageServiceOrder.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TestOrderLabQuickPicksCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TestOrderLabQuickPicksCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TestOrderQuickPicksCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TestOrderQuickPicksCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TransactionPageTestOrder.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TransactionPageTestOrder.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\TransactionPageToolbarCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\TransactionPageToolbarCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\VisitOrder\TransactionPageVisitOrder.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\VisitOrder\TransactionPageVisitOrder.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\DrugsLogisticsQuickPicksCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\DrugsLogisticsQuickPicksCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\DrugsReturnQuickPicksCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\DrugsReturnQuickPicksCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\ParamedicTeamCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\ParamedicTeamCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetail.aspx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetail.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailDrugMSCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailDrugMSCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailDrugMSReturnCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailDrugMSReturnCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailLogisticCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailLogisticCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailServiceCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailServiceCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\ServiceQuickPicksCtl.ascx">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\ServiceQuickPicksCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\RemoteLogon.aspx">
+      <Link>SharedLibs\Program\RemoteLogon.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportPage.aspx">
+      <Link>SharedLibs\Program\ReportPage.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewer.aspx">
+      <Link>SharedLibs\Program\ReportViewer.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Service\BPJSService.asmx">
+      <Link>SharedLibs\Service\BPJSService.asmx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Service\MethodService.asmx">
+      <Link>SharedLibs\Service\MethodService.asmx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Service\QueueService.asmx">
+      <Link>SharedLibs\Service\QueueService.asmx</Link>
+    </Content>
+    <Content Include="Controls\InfoRegistrationCtl.ascx" />
+    <Content Include="Controls\InfoParamedicScheduleCtl.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="Program\Appointment\AppointmentEntry.aspx" />
+    <Content Include="Program\Appointment\AppointmentVoidCtl.ascx" />
+    <Content Include="Program\Appointment\AppointmentChangeDateCtl.ascx" />
+    <Content Include="Program\InformationParamedicSchedule\InfoParamedicSchedule.aspx" />
+    <Content Include="Program\Information\PatientQueueInformation.aspx" />
+    <Content Include="Program\Inquiry\PatientVisitInfoList.aspx" />
+    <Content Include="Program\ParamedicSchedule\PhysicianSchedule.aspx" />
+    <Content Include="Program\ParamedicSchedule\PSScheduleEntryCtl.ascx" />
+    <Content Include="Program\ParamedicSchedule\PSVisitTypeEntryCtl.ascx" />
+    <Content Include="Program\PatientRegistrationConfirmation\PatientRegistrationConfirmationList.aspx" />
+    <Content Include="Program\PatientList\VisitList.aspx" />
+    <Content Include="Program\PatientList\RegistrationList.aspx" />
+    <Content Include="Program\Registration\PatientVisitCtl.ascx" />
+    <Content Include="StartPage.aspx" />
+    <Content Include="Test.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\ChangePasswordCtl.ascx.cs">
+      <Link>SharedLibs\Controls\ChangePasswordCtl.ascx.cs</Link>
+      <DependentUpon>ChangePasswordCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\ChangePasswordCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\ChangePasswordCtl.ascx.designer.cs</Link>
+      <DependentUpon>ChangePasswordCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralCtl.ascx.cs">
+      <Link>SharedLibs\Controls\GeneralCtl.ascx.cs</Link>
+      <DependentUpon>GeneralCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\GeneralCtl.ascx.designer.cs</Link>
+      <DependentUpon>GeneralCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MPEntryPopupCtl.ascx.cs">
+      <Link>SharedLibs\Controls\MPEntryPopupCtl.ascx.cs</Link>
+      <DependentUpon>MPEntryPopupCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MPEntryPopupCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\MPEntryPopupCtl.ascx.designer.cs</Link>
+      <DependentUpon>MPEntryPopupCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientAllergyInfoCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientAllergyInfoCtl.ascx.cs</Link>
+      <DependentUpon>PatientAllergyInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientAllergyInfoCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientAllergyInfoCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientAllergyInfoCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientBannerCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientBannerCtl.ascx.cs</Link>
+      <DependentUpon>PatientBannerCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientBannerCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientBannerCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBannerCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\CheckGridPatientVisitCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientGrid\CheckGridPatientVisitCtl.ascx.cs</Link>
+      <DependentUpon>CheckGridPatientVisitCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\CheckGridPatientVisitCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientGrid\CheckGridPatientVisitCtl.ascx.designer.cs</Link>
+      <DependentUpon>CheckGridPatientVisitCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\GridImagingResultVerificationCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientGrid\GridImagingResultVerificationCtl.ascx.cs</Link>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\GridImagingResultVerificationCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientGrid\GridImagingResultVerificationCtl.ascx.designer.cs</Link>
+      <DependentUpon>GridImagingResultVerificationCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\GridInformationPatientVisitCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientGrid\GridInformationPatientVisitCtl.ascx.cs</Link>
+      <DependentUpon>GridInformationPatientVisitCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\GridInformationPatientVisitCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientGrid\GridInformationPatientVisitCtl.ascx.designer.cs</Link>
+      <DependentUpon>GridInformationPatientVisitCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\GridPatientBillDetailCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientGrid\GridPatientBillDetailCtl.ascx.cs</Link>
+      <DependentUpon>GridPatientBillDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\GridPatientBillDetailCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientGrid\GridPatientBillDetailCtl.ascx.designer.cs</Link>
+      <DependentUpon>GridPatientBillDetailCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientgrid\GridPatientRegistrationCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientGrid\GridPatientRegistrationCtl.ascx.cs</Link>
+      <DependentUpon>GridPatientRegistrationCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientgrid\GridPatientRegistrationCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientGrid\GridPatientRegistrationCtl.ascx.designer.cs</Link>
+      <DependentUpon>GridPatientRegistrationCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\GridPatientRegOrderCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientGrid\GridPatientRegOrderCtl.ascx.cs</Link>
+      <DependentUpon>GridPatientRegOrderCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\GridPatientRegOrderCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientGrid\GridPatientRegOrderCtl.ascx.designer.cs</Link>
+      <DependentUpon>GridPatientRegOrderCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientgrid\GridPatientVisitCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientGrid\GridPatientVisitCtl.ascx.cs</Link>
+      <DependentUpon>GridPatientVisitCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientgrid\GridPatientVisitCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientGrid\GridPatientVisitCtl.ascx.designer.cs</Link>
+      <DependentUpon>GridPatientVisitCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\GridServiceOrderCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientGrid\GridServiceOrderCtl.ascx.cs</Link>
+      <DependentUpon>GridServiceOrderCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientGrid\GridServiceOrderCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientGrid\GridServiceOrderCtl.ascx.designer.cs</Link>
+      <DependentUpon>GridServiceOrderCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientInfoCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientInfoCtl.ascx.cs</Link>
+      <DependentUpon>PatientInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientInfoCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientInfoCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientInfoCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\episodesummarycontent\EpisodeSummaryBodyDiagramCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryContent\EpisodeSummaryBodyDiagramCtl.ascx.cs</Link>
+      <DependentUpon>EpisodeSummaryBodyDiagramCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\episodesummarycontent\EpisodeSummaryBodyDiagramCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryContent\EpisodeSummaryBodyDiagramCtl.ascx.designer.cs</Link>
+      <DependentUpon>EpisodeSummaryBodyDiagramCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\episodesummarycontent\EpisodeSummaryDiagnoseCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryContent\EpisodeSummaryDiagnoseCtl.ascx.cs</Link>
+      <DependentUpon>EpisodeSummaryDiagnoseCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\episodesummarycontent\EpisodeSummaryDiagnoseCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryContent\EpisodeSummaryDiagnoseCtl.ascx.designer.cs</Link>
+      <DependentUpon>EpisodeSummaryDiagnoseCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\episodesummarycontent\EpisodeSummaryEpisodeInformationCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryContent\EpisodeSummaryEpisodeInformationCtl.ascx.cs</Link>
+      <DependentUpon>EpisodeSummaryEpisodeInformationCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\episodesummarycontent\EpisodeSummaryEpisodeInformationCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryContent\EpisodeSummaryEpisodeInformationCtl.ascx.designer.cs</Link>
+      <DependentUpon>EpisodeSummaryEpisodeInformationCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\episodesummarycontent\EpisodeSummaryReviewOfSystemCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryContent\EpisodeSummaryReviewOfSystemCtl.ascx.cs</Link>
+      <DependentUpon>EpisodeSummaryReviewOfSystemCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\episodesummarycontent\EpisodeSummaryReviewOfSystemCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryContent\EpisodeSummaryReviewOfSystemCtl.ascx.designer.cs</Link>
+      <DependentUpon>EpisodeSummaryReviewOfSystemCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\episodesummarycontent\EpisodeSummaryVitalSignIndicatorCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryContent\EpisodeSummaryVitalSignIndicatorCtl.ascx.cs</Link>
+      <DependentUpon>EpisodeSummaryVitalSignIndicatorCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\episodesummarycontent\EpisodeSummaryVitalSignIndicatorCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryContent\EpisodeSummaryVitalSignIndicatorCtl.ascx.designer.cs</Link>
+      <DependentUpon>EpisodeSummaryVitalSignIndicatorCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\EpisodeSummaryCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryCtl.ascx.cs</Link>
+      <DependentUpon>EpisodeSummaryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\controls\patientpage\episodesummary\EpisodeSummaryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientPage\EpisodeSummary\EpisodeSummaryCtl.ascx.designer.cs</Link>
+      <DependentUpon>EpisodeSummaryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientPage\MPPatientPageEntry.ascx.cs">
+      <Link>SharedLibs\Controls\PatientPage\MPPatientPageEntry.ascx.cs</Link>
+      <DependentUpon>MPPatientPageEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientPage\MPPatientPageEntry.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientPage\MPPatientPageEntry.ascx.designer.cs</Link>
+      <DependentUpon>MPPatientPageEntry.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\QRCodeCtl.ascx.cs">
+      <Link>SharedLibs\Controls\QRCodeCtl.ascx.cs</Link>
+      <DependentUpon>QRCodeCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\QRCodeCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\QRCodeCtl.ascx.designer.cs</Link>
+      <DependentUpon>QRCodeCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Default.aspx.cs">
+      <Link>SharedLibs\Default.aspx.cs</Link>
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Default.aspx.designer.cs">
+      <Link>SharedLibs\Default.aspx.designer.cs</Link>
+      <DependentUpon>Default.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\ErrorPage.aspx.cs">
+      <Link>SharedLibs\ErrorPage.aspx.cs</Link>
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\ErrorPage.aspx.designer.cs">
+      <Link>SharedLibs\ErrorPage.aspx.designer.cs</Link>
+      <DependentUpon>ErrorPage.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Login.aspx.cs">
+      <Link>SharedLibs\Login.aspx.cs</Link>
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Login.aspx.designer.cs">
+      <Link>SharedLibs\Login.aspx.designer.cs</Link>
+      <DependentUpon>Login.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBase.Master.cs">
+      <Link>SharedLibs\MasterPage\MPBase.Master.cs</Link>
+      <DependentUpon>MPBase.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBase.Master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPBase.Master.designer.cs</Link>
+      <DependentUpon>MPBase.Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPEntry.master.cs">
+      <Link>SharedLibs\MasterPage\MPEntry.master.cs</Link>
+      <DependentUpon>MPEntry.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPEntry.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPEntry.master.designer.cs</Link>
+      <DependentUpon>MPEntry.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPList.master.cs">
+      <Link>SharedLibs\MasterPage\MPList.master.cs</Link>
+      <DependentUpon>MPList.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPList.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPList.master.designer.cs</Link>
+      <DependentUpon>MPList.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMain.master.cs">
+      <Link>SharedLibs\MasterPage\MPMain.master.cs</Link>
+      <DependentUpon>MPMain.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMain.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPMain.master.designer.cs</Link>
+      <DependentUpon>MPMain.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx.master.cs">
+      <Link>SharedLibs\MasterPage\MPTrx.master.cs</Link>
+      <DependentUpon>MPTrx.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPTrx.master.designer.cs</Link>
+      <DependentUpon>MPTrx.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx2.master.cs">
+      <Link>SharedLibs\MasterPage\MPTrx2.master.cs</Link>
+      <DependentUpon>MPTrx2.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx2.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPTrx2.master.designer.cs</Link>
+      <DependentUpon>MPTrx2.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\PatientPage\MPBasePatientPage.Master.cs">
+      <Link>SharedLibs\MasterPage\PatientPage\MPBasePatientPage.Master.cs</Link>
+      <DependentUpon>MPBasePatientPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\PatientPage\MPBasePatientPage.Master.designer.cs">
+      <Link>SharedLibs\MasterPage\PatientPage\MPBasePatientPage.Master.designer.cs</Link>
+      <DependentUpon>MPBasePatientPage.Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\PatientPage\MPBasePatientPageList.master.cs">
+      <Link>SharedLibs\MasterPage\PatientPage\MPBasePatientPageList.master.cs</Link>
+      <DependentUpon>MPBasePatientPageList.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\PatientPage\MPBasePatientPageList.master.designer.cs">
+      <Link>SharedLibs\MasterPage\PatientPage\MPBasePatientPageList.master.designer.cs</Link>
+      <DependentUpon>MPBasePatientPageList.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\PatientPage\MPBasePatientPageListEntry.master.cs">
+      <Link>SharedLibs\MasterPage\PatientPage\MPBasePatientPageListEntry.master.cs</Link>
+      <DependentUpon>MPBasePatientPageListEntry.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\PatientPage\MPBasePatientPageListEntry.master.designer.cs">
+      <Link>SharedLibs\MasterPage\PatientPage\MPBasePatientPageListEntry.master.designer.cs</Link>
+      <DependentUpon>MPBasePatientPageListEntry.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\PatientPage\MPBasePatientPageTrx.master.cs">
+      <Link>SharedLibs\MasterPage\PatientPage\MPBasePatientPageTrx.master.cs</Link>
+      <DependentUpon>MPBasePatientPageTrx.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\PatientPage\MPBasePatientPageTrx.master.designer.cs">
+      <Link>SharedLibs\MasterPage\PatientPage\MPBasePatientPageTrx.master.designer.cs</Link>
+      <DependentUpon>MPBasePatientPageTrx.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\PatientPage\MPBasePatientPageTrx2.master.cs">
+      <Link>SharedLibs\MasterPage\PatientPage\MPBasePatientPageTrx2.master.cs</Link>
+      <DependentUpon>MPBasePatientPageTrx2.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\PatientPage\MPBasePatientPageTrx2.master.designer.cs">
+      <Link>SharedLibs\MasterPage\PatientPage\MPBasePatientPageTrx2.master.designer.cs</Link>
+      <DependentUpon>MPBasePatientPageTrx2.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Controls\MedicalSickLeaveCtl.ascx.cs">
+      <Link>SharedLibs\Program\Controls\MedicalSickLeaveCtl.ascx.cs</Link>
+      <DependentUpon>MedicalSickLeaveCtl.ascx</DependentUpon>
+<<<<<<< HEAD
+      <SubType>ASPXCodeBehind</SubType>
+=======
+>>>>>>> 0ccbdca863dc46206c3840e7517f13838746550e
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Controls\MedicalSickLeaveCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Controls\MedicalSickLeaveCtl.ascx.designer.cs</Link>
+      <DependentUpon>MedicalSickLeaveCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Information\TariffEstimation.aspx.cs">
+      <Link>SharedLibs\Program\Information\TariffEstimation.aspx.cs</Link>
+      <DependentUpon>TariffEstimation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Information\TariffEstimation.aspx.designer.cs">
+      <Link>SharedLibs\Program\Information\TariffEstimation.aspx.designer.cs</Link>
+      <DependentUpon>TariffEstimation.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Information\TariffList.aspx.cs">
+      <Link>SharedLibs\Program\Information\TariffList.aspx.cs</Link>
+      <DependentUpon>TariffList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Information\TariffList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Information\TariffList.aspx.designer.cs</Link>
+      <DependentUpon>TariffList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\program\information\TariffServiceList.aspx.cs">
+      <Link>SharedLibs\Program\Information\TariffServiceList.aspx.cs</Link>
+      <DependentUpon>TariffServiceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\qis.medinfras.web.commonlibs\program\information\TariffServiceList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Information\TariffServiceList.aspx.designer.cs</Link>
+      <DependentUpon>TariffServiceList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Main.aspx.cs">
+      <Link>SharedLibs\Program\Main.aspx.cs</Link>
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Main.aspx.designer.cs">
+      <Link>SharedLibs\Program\Main.aspx.designer.cs</Link>
+      <DependentUpon>Main.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ChangePatientTransactionStatus\ChangePatientTransactionStatusEntry.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\ChangePatientTransactionStatus\ChangePatientTransactionStatusEntry.aspx.cs</Link>
+      <DependentUpon>ChangePatientTransactionStatusEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ChangePatientTransactionStatus\ChangePatientTransactionStatusEntry.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\ChangePatientTransactionStatus\ChangePatientTransactionStatusEntry.aspx.designer.cs</Link>
+      <DependentUpon>ChangePatientTransactionStatusEntry.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ChangePatientTransactionStatus\ChangePatientTransactionStatusList.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\ChangePatientTransactionStatus\ChangePatientTransactionStatusList.aspx.cs</Link>
+      <DependentUpon>ChangePatientTransactionStatusList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ChangePatientTransactionStatus\ChangePatientTransactionStatusList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\ChangePatientTransactionStatus\ChangePatientTransactionStatusList.aspx.designer.cs</Link>
+      <DependentUpon>ChangePatientTransactionStatusList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Information\TransactionPatientInformationDetailCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Information\TransactionPatientInformationDetailCtl.ascx.cs</Link>
+      <DependentUpon>TransactionPatientInformationDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Information\TransactionPatientInformationDetailCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Information\TransactionPatientInformationDetailCtl.ascx.designer.cs</Link>
+      <DependentUpon>TransactionPatientInformationDetailCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Information\TransactionPatientInformationList.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Information\TransactionPatientInformationList.aspx.cs</Link>
+      <DependentUpon>TransactionPatientInformationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Information\TransactionPatientInformationList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Information\TransactionPatientInformationList.aspx.designer.cs</Link>
+      <DependentUpon>TransactionPatientInformationList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\MedicalFileRequest\MedicalFileRequestList.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\MedicalFileRequest\MedicalFileRequestList.aspx.cs</Link>
+      <DependentUpon>MedicalFileRequestList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\MedicalFileRequest\MedicalFileRequestList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\MedicalFileRequest\MedicalFileRequestList.aspx.designer.cs</Link>
+      <DependentUpon>MedicalFileRequestList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\Allergy\PatientAllergyEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\Allergy\PatientAllergyEntryCtl.ascx.cs</Link>
+      <DependentUpon>PatientAllergyEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\Allergy\PatientAllergyEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\Allergy\PatientAllergyEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientAllergyEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\Allergy\PatientAllergyList.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\Allergy\PatientAllergyList.aspx.cs</Link>
+      <DependentUpon>PatientAllergyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\Allergy\PatientAllergyList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\Allergy\PatientAllergyList.aspx.designer.cs</Link>
+      <DependentUpon>PatientAllergyList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramAddCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramAddCtl.ascx.cs</Link>
+      <DependentUpon>BodyDiagramAddCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramAddCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramAddCtl.ascx.designer.cs</Link>
+      <DependentUpon>BodyDiagramAddCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramEditCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramEditCtl.ascx.cs</Link>
+      <DependentUpon>BodyDiagramEditCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramEditCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramEditCtl.ascx.designer.cs</Link>
+      <DependentUpon>BodyDiagramEditCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramList.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramList.aspx.cs</Link>
+      <DependentUpon>BodyDiagramList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramList.aspx.designer.cs</Link>
+      <DependentUpon>BodyDiagramList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramTakePhotoCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramTakePhotoCtl.ascx.cs</Link>
+      <DependentUpon>BodyDiagramTakePhotoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramTakePhotoCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\BodyDiagram\BodyDiagramTakePhotoCtl.ascx.designer.cs</Link>
+      <DependentUpon>BodyDiagramTakePhotoCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\InitialPhysicalExam\InitialPhysicalExam.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\InitialPhysicalExam\InitialPhysicalExam.aspx.cs</Link>
+      <DependentUpon>InitialPhysicalExam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\InitialPhysicalExam\InitialPhysicalExam.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\InitialPhysicalExam\InitialPhysicalExam.aspx.designer.cs</Link>
+      <DependentUpon>InitialPhysicalExam.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\InitialPhysicalExam\VitalSignEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\InitialPhysicalExam\VitalSignEntryCtl.ascx.cs</Link>
+      <DependentUpon>VitalSignEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\InitialPhysicalExam\VitalSignEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\InitialPhysicalExam\VitalSignEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>VitalSignEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PatientDiagnose\PatientDiagnoseCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PatientDiagnose\PatientDiagnoseCtl.ascx.cs</Link>
+      <DependentUpon>PatientDiagnoseCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PatientDiagnose\PatientDiagnoseCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PatientDiagnose\PatientDiagnoseCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientDiagnoseCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PatientDiagnose\PatientDiagnoseList.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PatientDiagnose\PatientDiagnoseList.aspx.cs</Link>
+      <DependentUpon>PatientDiagnoseList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PatientDiagnose\PatientDiagnoseList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PatientDiagnose\PatientDiagnoseList.aspx.designer.cs</Link>
+      <DependentUpon>PatientDiagnoseList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PatientDisposition\PatientDisposition.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PatientDisposition\PatientDisposition.aspx.cs</Link>
+      <DependentUpon>PatientDisposition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PatientDisposition\PatientDisposition.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PatientDisposition\PatientDisposition.aspx.designer.cs</Link>
+      <DependentUpon>PatientDisposition.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PatientStatus.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PatientStatus.aspx.cs</Link>
+      <DependentUpon>PatientStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PatientStatus.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PatientStatus.aspx.designer.cs</Link>
+      <DependentUpon>PatientStatus.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExaminationToolbarCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExaminationToolbarCtl.ascx.cs</Link>
+      <DependentUpon>PhysicalExaminationToolbarCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExaminationToolbarCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExaminationToolbarCtl.ascx.designer.cs</Link>
+      <DependentUpon>PhysicalExaminationToolbarCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExam\PhysicalExam.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExam\PhysicalExam.aspx.cs</Link>
+      <DependentUpon>PhysicalExam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExam\PhysicalExam.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExam\PhysicalExam.aspx.designer.cs</Link>
+      <DependentUpon>PhysicalExam.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExam\PhysicalExamEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExam\PhysicalExamEntryCtl.ascx.cs</Link>
+      <DependentUpon>PhysicalExamEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExam\PhysicalExamEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\PhysicalExam\PhysicalExamEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>PhysicalExamEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\TreatmentProcedure\TreatmentProcedureCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\Treatment Procedure\TreatmentProcedureCtl.ascx.cs</Link>
+      <DependentUpon>TreatmentProcedureCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\TreatmentProcedure\TreatmentProcedureCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\Treatment Procedure\TreatmentProcedureCtl.ascx.designer.cs</Link>
+      <DependentUpon>TreatmentProcedureCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\TreatmentProcedure\TreatmentProcedureList.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\Treatment Procedure\TreatmentProcedureList.aspx.cs</Link>
+      <DependentUpon>TreatmentProcedureList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientAssessment\TreatmentProcedure\TreatmentProcedureList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientAssessment\Treatment Procedure\TreatmentProcedureList.aspx.designer.cs</Link>
+      <DependentUpon>TreatmentProcedureList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillDetail\PatientBillDetailReprintList.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillDetail\PatientBillDetailReprintList.aspx.cs</Link>
+      <DependentUpon>PatientBillDetailReprintList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillDetail\PatientBillDetailReprintList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillDetail\PatientBillDetailReprintList.aspx.designer.cs</Link>
+      <DependentUpon>PatientBillDetailReprintList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBill.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBill.aspx.cs</Link>
+      <DependentUpon>PatientBillSummaryGenerateBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBill.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBill.aspx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryGenerateBill.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtCtl.ascx.cs</Link>
+      <DependentUpon>PatientBillSummaryGenerateBillDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryGenerateBillDtCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtLaboratoryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtLaboratoryCtl.ascx.cs</Link>
+      <DependentUpon>PatientBillSummaryGenerateBillDtLaboratoryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtLaboratoryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtLaboratoryCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryGenerateBillDtLaboratoryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtPrescriptionCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtPrescriptionCtl.ascx.cs</Link>
+      <DependentUpon>PatientBillSummaryGenerateBillDtPrescriptionCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtPrescriptionCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtPrescriptionCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryGenerateBillDtPrescriptionCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtPrescriptionReturnCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtPrescriptionReturnCtl.ascx.cs</Link>
+      <DependentUpon>PatientBillSummaryGenerateBillDtPrescriptionReturnCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtPrescriptionReturnCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\GenerateBill\PatientBillSummaryGenerateBillDtPrescriptionReturnCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryGenerateBillDtPrescriptionReturnCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\Information\BillInformationList.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\Information\BillInformationList.aspx.cs</Link>
+      <DependentUpon>BillInformationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\Information\BillInformationList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\Information\BillInformationList.aspx.designer.cs</Link>
+      <DependentUpon>BillInformationList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\Information\InfoPatientTransaction.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\Information\InfoPatientTransaction.aspx.cs</Link>
+      <DependentUpon>InfoPatientTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\Information\InfoPatientTransaction.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\Information\InfoPatientTransaction.aspx.designer.cs</Link>
+      <DependentUpon>InfoPatientTransaction.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountDtCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountDtCtl.ascx.cs</Link>
+      <DependentUpon>PatientBillSummaryDiscountDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountDtCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountDtCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryDiscountDtCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountEntry.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountEntry.aspx.cs</Link>
+      <DependentUpon>PatientBillSummaryDiscountEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountEntry.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountEntry.aspx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryDiscountEntry.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountEntryCtl.ascx.cs</Link>
+      <DependentUpon>PatientBillSummaryDiscountEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillDiscount\PatientBillSummaryDiscountEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryDiscountEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryCharges.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryCharges.aspx.cs</Link>
+      <DependentUpon>PatientBillSummaryCharges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryCharges.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryCharges.aspx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryCharges.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryLab.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryLab.aspx.cs</Link>
+      <DependentUpon>PatientBillSummaryLab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryLab.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryLab.aspx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryLab.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPharmacy.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPharmacy.aspx.cs</Link>
+      <DependentUpon>PatientBillSummaryPharmacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPharmacy.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPharmacy.aspx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryPharmacy.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPrescriptionReturn.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPrescriptionReturn.aspx.cs</Link>
+      <DependentUpon>PatientBillSummaryPrescriptionReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPrescriptionReturn.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPrescriptionReturn.aspx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryPrescriptionReturn.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPrescriptionReturnEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPrescriptionReturnEntryCtl.ascx.cs</Link>
+      <DependentUpon>PatientBillSummaryPrescriptionReturnEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPrescriptionReturnEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryPrescriptionReturnEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryPrescriptionReturnEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryToolbarCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryToolbarCtl.ascx.cs</Link>
+      <DependentUpon>PatientBillSummaryToolbarCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryToolbarCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientBillSummaryToolbarCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryToolbarCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayDetailCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayDetailCtl.ascx.cs</Link>
+      <DependentUpon>PatientBillSummaryPayDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayDetailCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayDetailCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryPayDetailCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceipt.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceipt.aspx.cs</Link>
+      <DependentUpon>PatientBillSummaryPayReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceipt.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceipt.aspx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryPayReceipt.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptDetailPrintCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptDetailPrintCtl.ascx.cs</Link>
+      <DependentUpon>PatientBillSummaryPayReceiptDetailPrintCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptDetailPrintCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptDetailPrintCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryPayReceiptDetailPrintCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptDtCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptDtCtl.ascx.cs</Link>
+      <DependentUpon>PatientBillSummaryPayReceiptDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptDtCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptDtCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryPayReceiptDtCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptPrint.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptPrint.aspx.cs</Link>
+      <DependentUpon>PatientBillSummaryPayReceiptPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptPrint.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptPrint.aspx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryPayReceiptPrint.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptVoidCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptVoidCtl.ascx.cs</Link>
+      <DependentUpon>PatientBillSummaryPayReceiptVoidCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptVoidCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientBillSummaryPayReceiptVoidCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryPayReceiptVoidCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientPaymentReceipt.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientPaymentReceipt.aspx.cs</Link>
+      <DependentUpon>PatientPaymentReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientPaymentReceipt.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientPaymentReceipt.aspx.designer.cs</Link>
+      <DependentUpon>PatientPaymentReceipt.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientPaymentReceiptReprintCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientPaymentReceiptReprintCtl.ascx.cs</Link>
+      <DependentUpon>PatientPaymentReceiptReprintCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientPaymentReceiptReprintCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\PatientPaymentReceipt\PatientPaymentReceiptReprintCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientPaymentReceiptReprintCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PatientBillSummaryPayment.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PatientBillSummaryPayment.aspx.cs</Link>
+      <DependentUpon>PatientBillSummaryPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PatientBillSummaryPayment.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PatientBillSummaryPayment.aspx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryPayment.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PaymentAccountReceivableCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PaymentAccountReceivableCtl.ascx.cs</Link>
+      <DependentUpon>PaymentAccountReceivableCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PaymentAccountReceivableCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PaymentAccountReceivableCtl.ascx.designer.cs</Link>
+      <DependentUpon>PaymentAccountReceivableCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PaymentCloseRegistrationCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PaymentCloseRegistrationCtl.ascx.cs</Link>
+      <DependentUpon>PaymentCloseRegistrationCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PaymentCloseRegistrationCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\Payment\PaymentCloseRegistrationCtl.ascx.designer.cs</Link>
+      <DependentUpon>PaymentCloseRegistrationCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillDt.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillDt.aspx.cs</Link>
+      <DependentUpon>PatientBillSummaryRecalculationBillDt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillDt.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillDt.aspx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryRecalculationBillDt.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillProcessCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillProcessCtl.ascx.cs</Link>
+      <DependentUpon>PatientBillSummaryRecalculationBillProcessCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillProcessCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillProcessCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryRecalculationBillProcessCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillUpdatePayerCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillUpdatePayerCtl.ascx.cs</Link>
+      <DependentUpon>PatientBillSummaryRecalculationBillUpdatePayerCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillUpdatePayerCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\RecalculationBill\PatientBillSummaryRecalculationBillUpdatePayerCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryRecalculationBillUpdatePayerCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\UpdateRegistration\PatientBillSummaryUpdateRegistration.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\UpdateRegistration\PatientBillSummaryUpdateRegistration.aspx.cs</Link>
+      <DependentUpon>PatientBillSummaryUpdateRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\UpdateRegistration\PatientBillSummaryUpdateRegistration.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\UpdateRegistration\PatientBillSummaryUpdateRegistration.aspx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryUpdateRegistration.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\ViewBillDetail\ViewBillDetail.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\ViewBillDetail\ViewBillDetail.aspx.cs</Link>
+      <DependentUpon>ViewBillDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\ViewBillDetail\ViewBillDetail.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\ViewBillDetail\ViewBillDetail.aspx.designer.cs</Link>
+      <DependentUpon>ViewBillDetail.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\VoidPatientBill\PatientBillSummaryVoidBill.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\VoidPatientBill\PatientBillSummaryVoidBill.aspx.cs</Link>
+      <DependentUpon>PatientBillSummaryVoidBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientBillSummary\VoidPatientBill\PatientBillSummaryVoidBill.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientBillSummary\VoidPatientBill\PatientBillSummaryVoidBill.aspx.designer.cs</Link>
+      <DependentUpon>PatientBillSummaryVoidBill.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientDiagnose\PatientDiagnoseEntry.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientDiagnoseEntry\PatientDiagnoseEntry.aspx.cs</Link>
+      <DependentUpon>PatientDiagnoseEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientDiagnose\PatientDiagnoseEntry.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientDiagnoseEntry\PatientDiagnoseEntry.aspx.designer.cs</Link>
+      <DependentUpon>PatientDiagnoseEntry.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientRegistrationInformation\PatientRegistrationInformation.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientRegistrationInformation\PatientRegistrationInformation.aspx.cs</Link>
+      <DependentUpon>PatientRegistrationInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\PatientRegistrationInformation\PatientRegistrationInformation.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\PatientRegistrationInformation\PatientRegistrationInformation.aspx.designer.cs</Link>
+      <DependentUpon>PatientRegistrationInformation.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Process\ChangePatientBlackListStatus.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Process\ChangePatientBlackListStatus.aspx.cs</Link>
+      <DependentUpon>ChangePatientBlackListStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Process\ChangePatientBlackListStatus.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Process\ChangePatientBlackListStatus.aspx.designer.cs</Link>
+      <DependentUpon>ChangePatientBlackListStatus.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Process\CloseRegistration.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Process\CloseRegistration.aspx.cs</Link>
+      <DependentUpon>CloseRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Process\CloseRegistration.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Process\CloseRegistration.aspx.designer.cs</Link>
+      <DependentUpon>CloseRegistration.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Process\OpenCloseRegistration.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Process\OpenCloseRegistration.aspx.cs</Link>
+      <DependentUpon>OpenCloseRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Process\OpenCloseRegistration.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Process\OpenCloseRegistration.aspx.designer.cs</Link>
+      <DependentUpon>OpenCloseRegistration.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Process\VoidRegistration.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Process\VoidRegistration.aspx.cs</Link>
+      <DependentUpon>VoidRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Process\VoidRegistration.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Process\VoidRegistration.aspx.designer.cs</Link>
+      <DependentUpon>VoidRegistration.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\CheckNewPatientCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\CheckNewPatientCtl.ascx.cs</Link>
+      <DependentUpon>CheckNewPatientCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\CheckNewPatientCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\CheckNewPatientCtl.ascx.designer.cs</Link>
+      <DependentUpon>CheckNewPatientCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\CustomerNotesDetailCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\CustomerNotesDetailCtl.ascx.cs</Link>
+      <DependentUpon>CustomerNotesDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\CustomerNotesDetailCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\CustomerNotesDetailCtl.ascx.designer.cs</Link>
+      <DependentUpon>CustomerNotesDetailCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\EmergencyContactEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\EmergencyContactEntryCtl.ascx.cs</Link>
+      <DependentUpon>EmergencyContactEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\EmergencyContactEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\EmergencyContactEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>EmergencyContactEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\GenerateSEPCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\GenerateSEPCtl.ascx.cs</Link>
+      <DependentUpon>GenerateSEPCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\GenerateSEPCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\GenerateSEPCtl.ascx.designer.cs</Link>
+      <DependentUpon>GenerateSEPCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\PatientEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\PatientEntryCtl.ascx.cs</Link>
+      <DependentUpon>PatientEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\PatientEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\PatientEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\PatientFamilyCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\PatientFamilyCtl.ascx.cs</Link>
+      <DependentUpon>PatientFamilyCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\PatientFamilyCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\PatientFamilyCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientFamilyCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\PayerDetailEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\PayerDetailEntryCtl.ascx.cs</Link>
+      <DependentUpon>PayerDetailEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\PayerDetailEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\PayerDetailEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>PayerDetailEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\RegistrationEditCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\RegistrationEditCtl.ascx.cs</Link>
+      <DependentUpon>RegistrationEditCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\RegistrationEditCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\RegistrationEditCtl.ascx.designer.cs</Link>
+      <DependentUpon>RegistrationEditCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\RegistrationEntry.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\RegistrationEntry.aspx.cs</Link>
+      <DependentUpon>RegistrationEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\RegistrationEntry.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\RegistrationEntry.aspx.designer.cs</Link>
+      <DependentUpon>RegistrationEntry.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\RegistrationNotesCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\RegistrationNotesCtl.ascx.cs</Link>
+      <DependentUpon>RegistrationNotesCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\RegistrationNotesCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\RegistrationNotesCtl.ascx.designer.cs</Link>
+      <DependentUpon>RegistrationNotesCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\RegistrationPrintCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\RegistrationPrintCtl.ascx.cs</Link>
+      <DependentUpon>RegistrationPrintCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\RegistrationPrintCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\RegistrationPrintCtl.ascx.designer.cs</Link>
+      <DependentUpon>RegistrationPrintCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\ViewNotesCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\ViewNotesCtl.ascx.cs</Link>
+      <DependentUpon>ViewNotesCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Registration\ViewNotesCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Registration\ViewNotesCtl.ascx.designer.cs</Link>
+      <DependentUpon>ViewNotesCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderDetail.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderDetail.aspx.cs</Link>
+      <DependentUpon>ServiceOrderDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderDetail.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderDetail.aspx.designer.cs</Link>
+      <DependentUpon>ServiceOrderDetail.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderDtCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderDtCtl.ascx.cs</Link>
+      <DependentUpon>ServiceOrderDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderDtCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderDtCtl.ascx.designer.cs</Link>
+      <DependentUpon>ServiceOrderDtCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderRemarksCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderRemarksCtl.ascx.cs</Link>
+      <DependentUpon>ServiceOrderRemarksCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderRemarksCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderDetail\ServiceOrderRemarksCtl.ascx.designer.cs</Link>
+      <DependentUpon>ServiceOrderRemarksCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderList\ServiceOrderList.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderList\ServiceOrderList.aspx.cs</Link>
+      <DependentUpon>ServiceOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderList\ServiceOrderList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\ServiceOrderTrans\ServiceOrderList\ServiceOrderList.aspx.designer.cs</Link>
+      <DependentUpon>ServiceOrderList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtProductViewCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtProductViewCtl.ascx.cs</Link>
+      <DependentUpon>TransactionDtProductViewCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtProductViewCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtProductViewCtl.ascx.designer.cs</Link>
+      <DependentUpon>TransactionDtProductViewCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtServiceView1Ctl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtServiceView1Ctl.ascx.cs</Link>
+      <DependentUpon>TransactionDtServiceView1Ctl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtServiceView1Ctl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtServiceView1Ctl.ascx.designer.cs</Link>
+      <DependentUpon>TransactionDtServiceView1Ctl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtServiceViewCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtServiceViewCtl.ascx.cs</Link>
+      <DependentUpon>TransactionDtServiceViewCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtServiceViewCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionDtView\TransactionDtServiceViewCtl.ascx.designer.cs</Link>
+      <DependentUpon>TransactionDtServiceViewCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\Charges\TransactionPageCharges.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\Charges\TransactionPageCharges.aspx.cs</Link>
+      <DependentUpon>TransactionPageCharges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\Charges\TransactionPageCharges.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\Charges\TransactionPageCharges.aspx.designer.cs</Link>
+      <DependentUpon>TransactionPageCharges.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\EvaluationNotes\EvaluationNotes.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\EvaluationNotes\EvaluationNotes.aspx.cs</Link>
+      <DependentUpon>EvaluationNotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\EvaluationNotes\EvaluationNotes.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\EvaluationNotes\EvaluationNotes.aspx.designer.cs</Link>
+      <DependentUpon>EvaluationNotes.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\EvaluationNotes\EvaluationNotesCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\EvaluationNotes\EvaluationNotesCtl.ascx.cs</Link>
+      <DependentUpon>EvaluationNotesCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\EvaluationNotes\EvaluationNotesCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\EvaluationNotes\EvaluationNotesCtl.ascx.designer.cs</Link>
+      <DependentUpon>EvaluationNotesCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\IntegratedNotes\IntegratedNotes.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\IntegratedNotes\IntegratedNotes.aspx.cs</Link>
+      <DependentUpon>IntegratedNotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\IntegratedNotes\IntegratedNotes.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\IntegratedNotes\IntegratedNotes.aspx.designer.cs</Link>
+      <DependentUpon>IntegratedNotes.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\MedicationOrderCompoundEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\MedicationOrderCompoundEntryCtl.ascx.cs</Link>
+      <DependentUpon>MedicationOrderCompoundEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\MedicationOrderCompoundEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\MedicationOrderCompoundEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>MedicationOrderCompoundEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\MedicationOrderHistoryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\MedicationOrderHistoryCtl.ascx.cs</Link>
+      <DependentUpon>MedicationOrderHistoryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\MedicationOrderHistoryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\MedicationOrderHistoryCtl.ascx.designer.cs</Link>
+      <DependentUpon>MedicationOrderHistoryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\PrescriptionCompoundEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\PrescriptionCompoundEntryCtl.ascx.cs</Link>
+      <DependentUpon>PrescriptionCompoundEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\PrescriptionCompoundEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\PrescriptionCompoundEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>PrescriptionCompoundEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\PrescriptionReturnOrderEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\PrescriptionReturnOrderEntryCtl.ascx.cs</Link>
+      <DependentUpon>PrescriptionReturnOrderEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\PrescriptionReturnOrderEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\PrescriptionReturnOrderEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>PrescriptionReturnOrderEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationOrder.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationOrder.aspx.cs</Link>
+      <DependentUpon>TransactionPageMedicationOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationOrder.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationOrder.aspx.designer.cs</Link>
+      <DependentUpon>TransactionPageMedicationOrder.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationOrderHd.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationOrderHd.aspx.cs</Link>
+      <DependentUpon>TransactionPageMedicationOrderHd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationOrderHd.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationOrderHd.aspx.designer.cs</Link>
+      <DependentUpon>TransactionPageMedicationOrderHd.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationReturnOrder.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationReturnOrder.aspx.cs</Link>
+      <DependentUpon>TransactionPageMedicationReturnOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationReturnOrder.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\MedicationOrder\TransactionPageMedicationReturnOrder.aspx.designer.cs</Link>
+      <DependentUpon>TransactionPageMedicationReturnOrder.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\NursingNotes\NursingNotes.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\NursingNotes\NursingNotes.aspx.cs</Link>
+      <DependentUpon>NursingNotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\NursingNotes\NursingNotes.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\NursingNotes\NursingNotes.aspx.designer.cs</Link>
+      <DependentUpon>NursingNotes.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\NursingNotes\NursingNotesCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\NursingNotes\NursingNotesCtl.ascx.cs</Link>
+      <DependentUpon>NursingNotesCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\NursingNotes\NursingNotesCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\NursingNotes\NursingNotesCtl.ascx.designer.cs</Link>
+      <DependentUpon>NursingNotesCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\PhysicianNotes\PhysicianNotes.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\PhysicianNotes\PhysicianNotes.aspx.cs</Link>
+      <DependentUpon>PhysicianNotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\PhysicianNotes\PhysicianNotes.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\PhysicianNotes\PhysicianNotes.aspx.designer.cs</Link>
+      <DependentUpon>PhysicianNotes.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\PhysicianNotes\PhysicianNotesCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\PhysicianNotes\PhysicianNotesCtl.ascx.cs</Link>
+      <DependentUpon>PhysicianNotesCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\PhysicianNotes\PhysicianNotesCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\PhysicianNotes\PhysicianNotesCtl.ascx.designer.cs</Link>
+      <DependentUpon>PhysicianNotesCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\ServiceOrder\TransactionPageServiceOrder.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\ServiceOrder\TransactionPageServiceOrder.aspx.cs</Link>
+      <DependentUpon>TransactionPageServiceOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\ServiceOrder\TransactionPageServiceOrder.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\ServiceOrder\TransactionPageServiceOrder.aspx.designer.cs</Link>
+      <DependentUpon>TransactionPageServiceOrder.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TestOrderLabQuickPicksCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TestOrderLabQuickPicksCtl.ascx.cs</Link>
+      <DependentUpon>TestOrderLabQuickPicksCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TestOrderLabQuickPicksCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TestOrderLabQuickPicksCtl.ascx.designer.cs</Link>
+      <DependentUpon>TestOrderLabQuickPicksCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TestOrderQuickPicksCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TestOrderQuickPicksCtl.ascx.cs</Link>
+      <DependentUpon>TestOrderQuickPicksCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TestOrderQuickPicksCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TestOrderQuickPicksCtl.ascx.designer.cs</Link>
+      <DependentUpon>TestOrderQuickPicksCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TransactionPageTestOrder.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TransactionPageTestOrder.aspx.cs</Link>
+      <DependentUpon>TransactionPageTestOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TransactionPageTestOrder.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\TestOrder\TransactionPageTestOrder.aspx.designer.cs</Link>
+      <DependentUpon>TransactionPageTestOrder.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\TransactionPageToolbarCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\TransactionPageToolbarCtl.ascx.cs</Link>
+      <DependentUpon>TransactionPageToolbarCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\TransactionPageToolbarCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\TransactionPageToolbarCtl.ascx.designer.cs</Link>
+      <DependentUpon>TransactionPageToolbarCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\VisitOrder\TransactionPageVisitOrder.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\VisitOrder\TransactionPageVisitOrder.aspx.cs</Link>
+      <DependentUpon>TransactionPageVisitOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\TransactionPage\VisitOrder\TransactionPageVisitOrder.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\TransactionPage\VisitOrder\TransactionPageVisitOrder.aspx.designer.cs</Link>
+      <DependentUpon>TransactionPageVisitOrder.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\BasePageTrxPatientManagement.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\BasePageTrxPatientManagement.cs</Link>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\DrugsLogisticsQuickPicksCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\DrugsLogisticsQuickPicksCtl.ascx.cs</Link>
+      <DependentUpon>DrugsLogisticsQuickPicksCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\DrugsLogisticsQuickPicksCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\DrugsLogisticsQuickPicksCtl.ascx.designer.cs</Link>
+      <DependentUpon>DrugsLogisticsQuickPicksCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\DrugsReturnQuickPicksCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\DrugsReturnQuickPicksCtl.ascx.cs</Link>
+      <DependentUpon>DrugsReturnQuickPicksCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\DrugsReturnQuickPicksCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\DrugsReturnQuickPicksCtl.ascx.designer.cs</Link>
+      <DependentUpon>DrugsReturnQuickPicksCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\ParamedicTeamCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\ParamedicTeamCtl.ascx.cs</Link>
+      <DependentUpon>ParamedicTeamCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\ParamedicTeamCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\ParamedicTeamCtl.ascx.designer.cs</Link>
+      <DependentUpon>ParamedicTeamCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetail.aspx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetail.aspx.cs</Link>
+      <DependentUpon>PatientManagementTransactionDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetail.aspx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetail.aspx.designer.cs</Link>
+      <DependentUpon>PatientManagementTransactionDetail.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailDrugMSCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailDrugMSCtl.ascx.cs</Link>
+      <DependentUpon>PatientManagementTransactionDetailDrugMSCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailDrugMSCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailDrugMSCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientManagementTransactionDetailDrugMSCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailDrugMSReturnCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailDrugMSReturnCtl.ascx.cs</Link>
+      <DependentUpon>PatientManagementTransactionDetailDrugMSReturnCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailDrugMSReturnCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailDrugMSReturnCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientManagementTransactionDetailDrugMSReturnCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailLogisticCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailLogisticCtl.ascx.cs</Link>
+      <DependentUpon>PatientManagementTransactionDetailLogisticCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailLogisticCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailLogisticCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientManagementTransactionDetailLogisticCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailServiceCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailServiceCtl.ascx.cs</Link>
+      <DependentUpon>PatientManagementTransactionDetailServiceCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailServiceCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\PatientManagementTransactionDetailServiceCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientManagementTransactionDetailServiceCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\ServiceQuickPicksCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\ServiceQuickPicksCtl.ascx.cs</Link>
+      <DependentUpon>ServiceQuickPicksCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\PatientManagement\Transaction\ServiceQuickPicksCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\PatientManagement\Transaction\ServiceQuickPicksCtl.ascx.designer.cs</Link>
+      <DependentUpon>ServiceQuickPicksCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\RemoteLogon.aspx.cs">
+      <Link>SharedLibs\Program\RemoteLogon.aspx.cs</Link>
+      <DependentUpon>RemoteLogon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\RemoteLogon.aspx.designer.cs">
+      <Link>SharedLibs\Program\RemoteLogon.aspx.designer.cs</Link>
+      <DependentUpon>RemoteLogon.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportPage.aspx.cs">
+      <Link>SharedLibs\Program\ReportPage.aspx.cs</Link>
+      <DependentUpon>ReportPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportPage.aspx.designer.cs">
+      <Link>SharedLibs\Program\ReportPage.aspx.designer.cs</Link>
+      <DependentUpon>ReportPage.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewer.aspx.cs">
+      <Link>SharedLibs\Program\ReportViewer.aspx.cs</Link>
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewer.aspx.designer.cs">
+      <Link>SharedLibs\Program\ReportViewer.aspx.designer.cs</Link>
+      <DependentUpon>ReportViewer.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Service\BPJSService.asmx.cs">
+      <Link>SharedLibs\Service\BPJSService.asmx.cs</Link>
+      <DependentUpon>BPJSService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Service\MethodService.asmx.cs">
+      <Link>SharedLibs\Service\MethodService.asmx.cs</Link>
+      <DependentUpon>MethodService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Service\QueueService.asmx.cs">
+      <Link>SharedLibs\Service\QueueService.asmx.cs</Link>
+      <DependentUpon>QueueService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\InfoRegistrationCtl.ascx.cs">
+      <DependentUpon>InfoRegistrationCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\InfoRegistrationCtl.ascx.designer.cs">
+      <DependentUpon>InfoRegistrationCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InfoParamedicScheduleCtl.ascx.cs">
+      <DependentUpon>InfoParamedicScheduleCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\InfoParamedicScheduleCtl.ascx.designer.cs">
+      <DependentUpon>InfoParamedicScheduleCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Appointment\AppointmentEntry.aspx.cs">
+      <DependentUpon>AppointmentEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Appointment\AppointmentEntry.aspx.designer.cs">
+      <DependentUpon>AppointmentEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Appointment\AppointmentVoidCtl.ascx.cs">
+      <DependentUpon>AppointmentVoidCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Appointment\AppointmentVoidCtl.ascx.designer.cs">
+      <DependentUpon>AppointmentVoidCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Appointment\AppointmentChangeDateCtl.ascx.cs">
+      <DependentUpon>AppointmentChangeDateCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Appointment\AppointmentChangeDateCtl.ascx.designer.cs">
+      <DependentUpon>AppointmentChangeDateCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\InformationParamedicSchedule\InfoParamedicSchedule.aspx.cs">
+      <DependentUpon>InfoParamedicSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\InformationParamedicSchedule\InfoParamedicSchedule.aspx.designer.cs">
+      <DependentUpon>InfoParamedicSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\PatientQueueInformation.aspx.cs">
+      <DependentUpon>PatientQueueInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\PatientQueueInformation.aspx.designer.cs">
+      <DependentUpon>PatientQueueInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Inquiry\PatientVisitInfoList.aspx.cs">
+      <DependentUpon>PatientVisitInfoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Inquiry\PatientVisitInfoList.aspx.designer.cs">
+      <DependentUpon>PatientVisitInfoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ParamedicSchedule\PhysicianSchedule.aspx.cs">
+      <DependentUpon>PhysicianSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ParamedicSchedule\PhysicianSchedule.aspx.designer.cs">
+      <DependentUpon>PhysicianSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ParamedicSchedule\PSScheduleEntryCtl.ascx.cs">
+      <DependentUpon>PSScheduleEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ParamedicSchedule\PSScheduleEntryCtl.ascx.designer.cs">
+      <DependentUpon>PSScheduleEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ParamedicSchedule\PSVisitTypeEntryCtl.ascx.cs">
+      <DependentUpon>PSVisitTypeEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ParamedicSchedule\PSVisitTypeEntryCtl.ascx.designer.cs">
+      <DependentUpon>PSVisitTypeEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\PatientRegistrationConfirmation\PatientRegistrationConfirmationList.aspx.cs">
+      <DependentUpon>PatientRegistrationConfirmationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\PatientRegistrationConfirmation\PatientRegistrationConfirmationList.aspx.designer.cs">
+      <DependentUpon>PatientRegistrationConfirmationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\PatientList\VisitList.aspx.cs">
+      <DependentUpon>VisitList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\PatientList\VisitList.aspx.designer.cs">
+      <DependentUpon>VisitList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\PatientList\RegistrationList.aspx.cs">
+      <DependentUpon>RegistrationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\PatientList\RegistrationList.aspx.designer.cs">
+      <DependentUpon>RegistrationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Registration\PatientVisitCtl.ascx.cs">
+      <DependentUpon>PatientVisitCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Registration\PatientVisitCtl.ascx.designer.cs">
+      <DependentUpon>PatientVisitCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="StartPage.aspx.cs">
+      <DependentUpon>StartPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StartPage.aspx.designer.cs">
+      <DependentUpon>StartPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="SharedLibs\Program\Module\MedicalDiagnostic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QIS.Data.Core\QIS.Data.Core.csproj">
+      <Project>{CAC7A3D3-E6BB-4C97-B728-B87D395EB688}</Project>
+      <Name>QIS.Data.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.Data.Service\QIS.Medinfras.Data.Service.csproj">
+      <Project>{E8019F76-DE58-43A7-984C-A1272D62EA45}</Project>
+      <Name>QIS.Medinfras.Data.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.ReportDesktop\QIS.Medinfras.ReportDesktop.csproj">
+      <Project>{9B194471-A1D2-47DF-A29A-D0BFA091489F}</Project>
+      <Name>QIS.Medinfras.ReportDesktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.Web.Common\QIS.Medinfras.Web.Common.csproj">
+      <Project>{12E5AAFD-04A7-4D8F-8840-C8CB4E0B23DC}</Project>
+      <Name>QIS.Medinfras.Web.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.Web.Control\QIS.Medinfras.Web.CustomControl.csproj">
+      <Project>{A61E72CD-A2CE-42EF-BBD5-9657CC3C8E9E}</Project>
+      <Name>QIS.Medinfras.Web.CustomControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\ConnectionString.config">
+      <Link>ConnectionString.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBase.Master">
+      <Link>SharedLibs\MasterPage\MPBase.Master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMain.master">
+      <Link>SharedLibs\MasterPage\MPMain.master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx.master">
+      <Link>SharedLibs\MasterPage\MPTrx.master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\AppSetting.config">
+      <Link>AppSetting.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\PatientPage\MPBasePatientPage.Master">
+      <Link>SharedLibs\MasterPage\PatientPage\MPBasePatientPage.Master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\PatientPage\MPBasePatientPageListEntry.master">
+      <Link>SharedLibs\MasterPage\PatientPage\MPBasePatientPageListEntry.master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\PatientPage\MPBasePatientPageTrx.master">
+      <Link>SharedLibs\MasterPage\PatientPage\MPBasePatientPageTrx.master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx2.master">
+      <Link>SharedLibs\MasterPage\MPTrx2.master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPEntry.master">
+      <Link>SharedLibs\MasterPage\MPEntry.master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPList.master">
+      <Link>SharedLibs\MasterPage\MPList.master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\PatientPage\MPBasePatientPageTrx2.master">
+      <Link>SharedLibs\MasterPage\PatientPage\MPBasePatientPageTrx2.master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\PatientPage\MPBasePatientPageList.master">
+      <Link>SharedLibs\MasterPage\PatientPage\MPBasePatientPageList.master</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>14149</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/medinfrasv2.1/dev/Outpatient</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>COPY "$(TargetDir)*.config" "$(ProjectDir)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

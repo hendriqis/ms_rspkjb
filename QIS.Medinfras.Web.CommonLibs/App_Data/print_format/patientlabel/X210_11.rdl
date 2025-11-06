@@ -1,0 +1,15 @@
+﻿^XA
+^LL800
+^PW640
+^LH10,10
+^CF022,20
+^FO110,40^FDNo. RM^FS
+^FO195,40^FD:^FS
+^FO205,40^FD{MedicalNo}^FS
+^FO110,70^FDNama^FS
+^FO195,70^FD:^FS
+^FO205,70^FD{cfPatientNameSalutation}^FS
+^FO110,100^FDTgl. Lhr^FS
+^FO195,100^FD:^FS
+^FO205,100^FD{DateOfBirthInString}^FS
+^XZ

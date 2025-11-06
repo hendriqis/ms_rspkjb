@@ -1,0 +1,12 @@
+﻿HealthcareName
+RegistrationNo
+ActualVisitDateInString
+ServiceUnitCode
+ServiceUnitName
+MedicalNo
+PatientName
+DateOfBirthInString
+Sex
+PatientAge
+ParamedicCode
+ParamedicName

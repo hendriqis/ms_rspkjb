@@ -1,0 +1,32 @@
+^XA
+^LL210
+^PW600
+^LH2,1^MD10
+^CF020,20
+^FO12,21^FD{HealthcareName}^FS
+^FO290,21^FDNo.Resep^FS"
+^FO370,21^FD:^FS
+^FO380,21^FD{PrescriptionNo}^FS
+^FO12,41^FDNo.RM^FS
+^FO92,41^FD:^FS
+^FO102,41^FD{MedicalNo}^FS
+^FO290,41^FDTanggal^FS
+^FO370,41^FD:^FS
+^FO380,41^FD{PrescriptionDate} {PrescriptionTime}^FS
+^FO2,45^FD______________________________________________________________________^FS
+^CF026,26
+^FO12,75^FDPro: {PatientFullName}  ({Sex})^FS
+^CF024,24
+^FO12,105^FD{cfDateOfBirthInString}^FS
+^CF028,28
+^FO12,135^FD{ItemName} {cfIsUsedDispenseQty1}^FS
+^CFD
+^FO12,170^FD{ConsumeMethod}^FS
+^FO12,195^FB570,7,^FD{MedicationAdministration}^FS
+^FO12,220^FB570,7,^FD{cfCoenamRuleLabel}^FS
+^CF022,22
+^FO12,245^FD{PhysicianName}^FS
+^CF026,26
+^FO400,245^FD{ExternalMedication}^FS
+^PR2
+^XZ

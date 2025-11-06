@@ -1,0 +1,11 @@
+﻿^XA
+^POI
+^FWR
+^LH0,30
+^FO62,10 ^BY1,2.0,80^BCN,80,Y,N,N^FD{cfAlternateRegistrationNo}^FS
+^FO230,110^A0,38,38^FD{cfPatientNameSalutation} ({cfGenderInitial})^FS
+^FO190,110^A0,38,38^FD{MedicalNo}^FS
+^FO150,110 ^A0,32,32^FDNo. Reg : {RegistrationNo}^FS
+^FO110,110 ^A0,32,32^FDTgl. Masuk : {ActualVisitDateInString}^FS
+^FO70,110 ^A0,32,32^FDDOB : {DateOfBirthInString}^FS
+^XZ

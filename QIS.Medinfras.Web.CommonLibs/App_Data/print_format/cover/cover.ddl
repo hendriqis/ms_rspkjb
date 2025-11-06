@@ -1,0 +1,8 @@
+﻿HealthcareName
+MedicalNo
+PatientName
+Sex
+DateOfBirthInString
+HomeAddress
+cfPatientNameSalutation
+cfGenderInitial

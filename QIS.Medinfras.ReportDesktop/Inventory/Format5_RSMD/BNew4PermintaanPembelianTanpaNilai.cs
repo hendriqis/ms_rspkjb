@@ -1,0 +1,62 @@
+﻿using System;
+using System.Linq;
+using System.Drawing;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using DevExpress.XtraReports.UI;
+using QIS.Medinfras.Data.Service;
+using QIS.Medinfras.Web.Common;
+
+namespace QIS.Medinfras.ReportDesktop
+    {
+    public partial class BNew4PermintaanPembelianTanpaNilai : BaseDailyPortraitRpt
+    {
+        public BNew4PermintaanPembelianTanpaNilai() 
+        {
+            InitializeComponent();
+        }
+
+        public override void InitializeReport(string[] param)
+        {
+            string filterexpression = string.Format("PurchaseRequestID = {0}",param[0]);
+            vPurchaseRequestHd entity = BusinessLayer.GetvPurchaseRequestHdList(filterexpression).FirstOrDefault();
+            lblPurchaseRequestNo.Text = entity.PurchaseRequestNo;
+            lblLocation.Text = string.Format("{0} ({1})", entity.LocationName, entity.LocationCode);
+
+            //string filterExpression1 = string.Format("ParameterCode IN ('{0}')", "SA0020");
+            //List<SettingParameterDt> lstParam1 = BusinessLayer.GetSettingParameterDtList(filterExpression1);
+            //lblDirektur.Text = lstParam1.Where(lst => lst.ParameterCode == "SA0020").FirstOrDefault().ParameterValue;
+
+            //string filterExpression2 = string.Format("ParameterCode IN ('{0}')", "SA0021");
+            //List<SettingParameterDt> lstParam2 = BusinessLayer.GetSettingParameterDtList(filterExpression2);
+            //lblKeuangan.Text = lstParam2.Where(lst => lst.ParameterCode == "SA0021").FirstOrDefault().ParameterValue;
+
+            //string filterExpression5 = string.Format("ParameterCode IN ('{0}')", "IM0009");
+            //List<SettingParameterDt> lstParam5 = BusinessLayer.GetSettingParameterDtList(filterExpression5);
+            //lblKepalaLogistik.Text = lstParam5.Where(lst => lst.ParameterCode == "IM0009").FirstOrDefault().ParameterValue;
+
+            lblProductLine.Text = entity.ProductLineName;
+            lblKeterangan.Text = entity.Remarks;
+           
+            if (entity.IsUrgent)
+            {
+                lblIsUrgent.Visible = true;
+            }
+            else
+            {
+                lblIsUrgent.Visible = false;
+            }
+
+            lblDateLeft.Text = string.Format("Tanggal : {0}", entity.CreatedDate.ToString(Constant.FormatString.DATE_FORMAT));
+            lblTimeLeft.Text = string.Format("Jam : {0}", entity.CreatedDate.ToString(Constant.FormatString.TIME_FORMAT));
+
+            lblDateCenter.Text = string.Format("Tanggal : {0}", entity.CreatedDate.ToString(Constant.FormatString.DATE_FORMAT));
+            lblTimeCenter.Text = string.Format("Jam : {0}", entity.CreatedDate.ToString(Constant.FormatString.TIME_FORMAT));
+
+
+            base.InitializeReport(param);
+            
+        }
+    }
+}

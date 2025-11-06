@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- #Region MR020100 -->
+  <page menucode="MR020100">
+    <prints>
+      <print title="History Update Data Patient" reportcode="MR-00008" />
+
+      <print title="Cetak Kartu" reportcode="PM-00106" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region MR030100 -->
+  <page menucode="MR030100">
+    <prints>
+      <print title="Bukti Kontrol Berkas Masuk" reportcode="MR-00001" />
+      <print title="Bukti Kontrol Berkas Keluar" reportcode="MR-00002" />
+      <print title="Bukti Kontrol Berkas Rekam Medis" reportcode="MR-00003" />
+      <print title="Daftar Pasien Baru" reportcode="MR-00006" />
+      <print title="Bukti Kontrol Berkas Akan Diproses" reportcode="MR-00007" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region MR030300 -->
+  <page menucode="MR030300">
+    <prints>
+      <print title="Bukti Kontrol Berkas Dikembalikan Ke Rak" reportcode="MR-00004" />
+      <print title="Bukti Kontrol Berkas Dikembalikan Ke Dokter" reportcode="MR-00005" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region MR070102 -->
+  <page menucode="MR070102">
+    <prints>
+      <print title="Bukti Retensi Rekam Medis" reportcode="MR-00009" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region MR070103 -->
+  <page menucode="MR070103">
+    <prints>
+      <print title="Bukti Archive Rekam Medis" reportcode="MR-00010" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region MR080300 -->
+  <page menucode="MR080300">
+    <prints>
+      <print title="Bukti Sensus Harian" reportcode="MR-00011" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region MR990101 -->
+  <page menucode="MR990101">
+    <tasks>
+      <task code="keteranganKematian" title="Surat Keterangan Kematian" description="Cetak Surat Keterangan Kematian" url="~/Libs/Program/Controls/SuratKeteranganKematianCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <task code="SuratKeranganDirawat" title="Surat Keterangan DiRawat" description="Cetak Surat Keterangan Dirawat" url="~/Libs/Program/Controls/NursingDateCtl.ascx" width="700" height="350" />
+    </tasks>
+    <informations>
+      <information code="infoPatientMutation" title="Informasi Mutasi Pasien" description="Informasi Mutasi Pasien" url="~/Libs/Program/Controls/InfoPatientMutationCtl.ascx" id="btninfoPatientMutation" width="1100" height="500" />
+    </informations>
+    <prints>
+      <print title="Episode Summary Report" reportcode="MR000002" visible="1" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Medical Assessment" reportcode="MR000006" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Integrated Notes Format 1" reportcode="MR000005" />
+
+      <print title="Integrated Notes Format 2" reportcode="MR000007" />
+
+      <print title="Surat Perintah Rawat Inap" reportcode="PM-00524" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Kajian Instalasi Gawat Darurat" reportcode="MR000008" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Ringkasan Pasien Pulang IGD" reportcode="MR000014" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Laporan Medis Awal" reportcode="MR000065" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Surat Keterangan Medis" reportcode="MR000017" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Resume Medis Rawat Jalan" reportcode="PM-90117" isByHealthcare="1" healthcareName="RSPKSB"/>
+      <print title="Resume Medis Rawat Inap" reportcode="PM-90118" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region MR990102 -->
+  <page menucode="MR990102">
+    <informations>
+      <information code="infoPayment" title="Informasi Pembayaran" description="Informasi Pembayaran" url="~/Libs/Program/Controls/InfoPaymentCtl.ascx" id="btnInfoPayment" width="1030" height="500" />
+    </informations>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region MR990103 -->
+  <page menucode="MR990103">
+    <prints>
+      <print title="Tracer Rekam Medis" reportcode="PM-00505" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+</root>

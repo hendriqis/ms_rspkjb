@@ -1,0 +1,12 @@
+^XA
+^LL2100
+^PW300
+^LH10,10
+^FO85,700
+^FH_
+^FDQA,
+^A0R
+^FO175,1830^A0R,20,20^FD{MedicalNo} ({cfGenderInitial}) {DateOfBirthInString} {AgeInDay} Hr ^FS
+^FO145,1830^A0R,20,20^FD{cfPatientNameInLabel}^FS
+^FO115,1830^A0R,20,20^FD{BusinessPartnerName}^FS
+^XZ

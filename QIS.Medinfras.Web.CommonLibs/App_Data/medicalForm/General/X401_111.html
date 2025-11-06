@@ -1,0 +1,143 @@
+﻿<head>
+    <style type="text/css">
+        .style2
+        {
+            height: 24px;
+        }
+        .style3
+        {
+            height: 35px;
+        }
+        .style4
+        {
+            height: 32px;
+        }
+    </style>
+</head>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+        <div class="col">
+            <table border="1" style="border-style: solid;border-collapse: collapse;">
+                <colgroup>
+                    <col style="width:20px" />
+                    <col />
+                    <col style="width:80px" />
+                </colgroup>
+                <tr>
+                    <td colspan="4" style="text-align: center; font-weight:bold; background-color: Silver;">STATUS PERFORMA ECOG 
+					</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:bold;vertical-align:top; text-align:center">
+                        NO.
+                    </td>
+                    <td style="font-weight:bold">PERTANYAAN</td>
+                    <td style="text-align: center; font-weight:bold">Pilihan</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        01.
+                    </td>
+                    <td>
+                        Aktif sepenuhnya, mampu menjalani aktivitas seperti saat sehat, tanpa hambatan 
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" value = "0" class="optForm" id="opt401_111Form1" controlID="opt401_111Form1" name="401_111_parameter1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        02.
+                    </td>
+                    <td>
+                        Terbatas dalam menjalani aktivitas fisik yang berat, namun mampu menjalani aktivitas fisik ringan, dan mampu mengurus diri sendiri
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" value = "1" class="optForm" id="opt401_111Form2" controlID="opt401_111Form2" name="401_111_parameter1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        03.
+                    </td>
+                    <td>
+                        Mampu mengurus diri sendiri, namun tidak mampu menjalani aktivitas fisik lainnya. Aktif lebih dari dalam 50% waktu bangun(tidak tidur)
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" value = "2" class="optForm" id="opt401_111Form3" controlID="opt401_111Form3" name="401_111_parameter1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        04.
+                    </td>
+                    <td>
+                        Hanya mampu melakukan aktivitas perawatan diri yang terbatas, lebih dari 50% waktu bangun (tidak tidur) terbatas di tempat tidur
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" value = "3" class="optForm" id="opt401_111Form4" controlID="opt401_111Form4" name="401_111_parameter1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        05.
+                    </td>
+                    <td>
+                        Telah terjadi hendaya total. Tidak dapat melakukan aktivitas perawatan diri sendiri. Seluruh waktunya dihabiskan di tempat tidur
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" value = "4" class="optForm" id="opt401_111Form5" controlID="opt401_111Form5" name="401_111_parameter1" />
+                    </td>
+                </tr>
+				<tr>
+                    <td style="vertical-align:top; text-align:center">
+                        06.
+                    </td>
+                    <td>
+                        Pasien Meninggal
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" value = "5" class="optForm" id="opt401_111Form6" controlID="opt401_111Form6" name="401_111_parameter1" />
+                    </td>
+                </tr>
+				<tr>
+                    <td colspan="2" style="text-align: left; font-weight:bold; background-color: Silver">TOTAL</td>
+					<td colspan="2" style="text-align:center;" >
+                        <input style="text-align: center; font-weight:bold; width:90%" type="text" readonly="readonly" value="" id="txtParamScore1" class="txtForm" controlID="txt401_111Form1"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script language="javascript" type="text/javascript" id="dxss_ECOG">
+	$(function (){
+	
+        $("#opt401_111Form1").change(function () {
+            $("#txtParamScore1").val($(this).val());
+        });
+		
+		$("#opt401_111Form2").change(function () {
+            $("#txtParamScore1").val($(this).val());
+        });
+		
+		$("#opt401_111Form3").change(function () {
+            $("#txtParamScore1").val($(this).val());
+        });
+		
+		$("#opt401_111Form4").change(function () {
+            $("#txtParamScore1").val($(this).val());
+        });
+		
+		$("#opt401_111Form5").change(function () {
+            $("#txtParamScore1").val($(this).val());
+        });
+		
+		$("#opt401_111Form6").change(function () {
+            $("#txtParamScore1").val($(this).val());
+        });
+	});
+</script>

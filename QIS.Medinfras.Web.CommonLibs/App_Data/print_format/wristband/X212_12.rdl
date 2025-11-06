@@ -1,0 +1,23 @@
+﻿^XA
+^LL2100
+^PW300
+^LH10,10
+^FO85,700
+^BQN,2,4,Q,1
+^FH_
+^FDQA,{MedicalNo}_0A_0D{RegistrationNo}_0A_0D{FirstName}_0A_0D{MiddleName}_0A_0D{LastName}_0A_0D{cfPatientLocation}_0A_0D^FS
+^A0R,53,47
+^FO230,915^FD{cfPatientNameInLabel}^FS
+^APR,30,27
+^FO195,915^FDMRN^FS
+^APR,30,27
+^FO195,1040^FD{MedicalNo}^FS
+^APR,30,27
+^FO155,915^FDREG.NO^FS
+^APR,30,27
+^FO155,1040^FD{RegistrationNo}^FS
+^APR,30,27
+^FO115,915^FD{ActualVisitDateInString} {ActualVisitTime}  DOB : {DateOfBirthInString} ({cfPatientAgeInYear}) / {cfGenderInitial}^FS
+^FO35,915^BY2,2.0
+^A0N,40,30^BAR,80,N,N,N^FD{cfAlternateRegistrationNo}^FS
+^XZ

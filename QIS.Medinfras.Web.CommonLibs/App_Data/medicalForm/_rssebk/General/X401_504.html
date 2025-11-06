@@ -1,0 +1,82 @@
+<div class="header" style="margin-bottom: 2%">
+    <h3 style="margin-left: 10%">Asesmen Nutrisi Berdasarkan Malnutrition Screening Tool (MST)</h3>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<ul>
+				<li style="list-style-type: decimal;">Apakah pasien mengalami penurunan BB yang tidak diinginkan dalam waktu 6 bulan terakhir :</li>
+						<table style="width: 50%">
+							<tr>
+								<td>
+									<input type="checkbox" class="chkForm" controlID="chkForm01">
+										Tidak ada penurunan BB
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="chkForm" controlID="chkForm02">
+										Tidak yakin / tidak tahu / terasa baju lebih longgar
+								</td>
+							</tr>
+							<tr>
+								<td>
+										Jika YA, berapa penurunan BB tersebut ? <br>
+									<input type="checkbox" class="chkForm" controlID="chkForm03"> 1 - 5 kg <br>
+									<input type="checkbox" class="chkForm" controlID="chkForm04"> 6 - 10 kg <br>
+									<input type="checkbox" class="chkForm" controlID="chkForm05"> 11 - 15 kg <br>
+									<input type="checkbox" class="chkForm" controlID="chkForm06"> > 15 kg
+								</td>
+							</tr>
+						</table>
+				<li style="list-style-type: decimal;">Apakah asupan makan berkurang karena tidak nafsu makan ?</li>
+					<table>
+						<tr>
+							<td>
+								<input type="radio" class="optForm" controlID="optForm01">Tidak
+							</td>
+						</tr>
+							<td>
+								<input type="radio" class="optForm" controlID="optForm02">Ya
+							</td>
+						</tr>
+							<tr>
+								<td>
+									<b>Total Skor
+									<input type="text" class="txtForm" controlID="txtForm01"  
+									style="width: 50%; border-bottom-style: dotted; 
+									border-top-style: none; border-right-style: none; 
+									border-left-style: none;"></b> 
+								</td>
+							</tr>
+						</table>
+
+				<li style="list-style-type: decimal;">
+					Pasien dengan diagnosa khusus :
+					<input type="radio" class="optForm" controlID="optForm03">
+					Ya
+
+					<input type="radio" class="optForm" controlID="optForm04">
+					Tidak
+				</li>
+				<li style="list-style-type: none;">(DM / Kemoterapi / Hemodialisa / Geriatri / Immunitas menurun / 
+					<input type="text" class="txtForm" controlID="txtForm02"  
+					style="width: 15%; border-bottom-style: dotted; 
+					border-top-style: none; border-right-style: none; 
+					border-left-style: none;">
+				</li>
+				<li style="list-style-type: none; margin-top: 1%">
+					Pasien memerlukan konsultasi Gizi 
+					<input type="radio" class="optForm" controlID="optForm05"> Ya
+					<input type="radio" class="optForm" controlID="optForm06"> Tidak
+					<br>
+					<i><b>Keterangan : </b></i> Total skor nilai gizi <br>
+					0-1 : tidak beresiko malnutrisi <br>
+					>2 : beresiko malnutrisi <br>
+					(Bila beresiko malnutrisi : konsul dengan ahli gizi)
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

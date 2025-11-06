@@ -1,0 +1,12 @@
+^XA
+^LL2100
+^PW300
+^LH10,10
+^FO85,700
+^FH_
+^FDQA,
+^A0R,53,47
+^FO160,300^A0R,29,29^FD{MedicalNo} ({cfGenderInitial})  {DateOfBirthInString}  {AgeInYear} Thn ^FS
+^FO120,300^A0R,35,35^FD{cfPatientNameInLabel} BAYI^FS
+^FO80,300^A0R,35,35^FDDPJP : {ParamedicName}^FS
+^XZ

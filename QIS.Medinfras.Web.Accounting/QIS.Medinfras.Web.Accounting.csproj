@@ -1,0 +1,1920 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C608D160-B553-4C1B-90A7-EB2B1A8DAAE1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QIS.Medinfras.Web.Accounting</RootNamespace>
+    <AssemblyName>QIS.Medinfras.Web.Accounting</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>qisicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Design, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Extensions, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Service, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Web, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>..\dllpendukung\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Owin">
+      <HintPath>..\dllpendukung\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
+      <HintPath>..\dllpendukung\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\dllpendukung\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\dllpendukung\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="QISEncryption, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dllpendukung\QISEncryption.dll</HintPath>
+    </Reference>
+    <Reference Include="QISEncryptionPasswordUser">
+      <HintPath>..\dllpendukung\QISEncryptionPasswordUser.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\ChangePasswordCtl.ascx">
+      <Link>SharedLibs\Controls\ChangePasswordCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\DeleteConfirmationCtl.ascx">
+      <Link>SharedLibs\Controls\DeleteConfirmationCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\FixedAssetBannerCtl.ascx">
+      <Link>SharedLibs\Controls\FixedAssetBannerCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralCtl.ascx">
+      <Link>SharedLibs\Controls\GeneralCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralDashboardCtl.ascx">
+      <Link>SharedLibs\Controls\GeneralDashboardCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MatrixCtl.ascx">
+      <Link>SharedLibs\Controls\MatrixCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MPEntryPopupCtl.ascx">
+      <Link>SharedLibs\Controls\MPEntryPopupCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Default.aspx">
+      <Link>SharedLibs\Default.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\ErrorPage.aspx">
+      <Link>SharedLibs\ErrorPage.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Login.aspx">
+      <Link>SharedLibs\Login.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Main.aspx">
+      <Link>SharedLibs\Program\Main.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\RemoteLogon.aspx">
+      <Link>SharedLibs\Program\RemoteLogon.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportPage.aspx">
+      <Link>SharedLibs\Program\ReportPage.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewer.aspx">
+      <Link>SharedLibs\Program\ReportViewer.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewerExport.aspx">
+      <Link>SharedLibs\Program\ReportViewerExport.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Service\MethodService.asmx">
+      <Link>SharedLibs\Service\MethodService.asmx</Link>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="Program\BankReconciliation\BankReconciliationEntry.aspx" />
+    <Content Include="Program\BankReconciliation\BankReconciliationEntryCtl.ascx" />
+    <Content Include="Program\FixedAssetProcess\FAAcceptanceQuickPicksCtl.ascx" />
+    <Content Include="Program\FixedAssetProcess\FAAcceptanceProcessEntry.aspx" />
+    <Content Include="Program\FixedAssetProcess\FAItemMovement\FAItemMovementProcessEntry.aspx" />
+    <Content Include="Program\FixedAssetProcess\FAAcceptanceVoidCtl.ascx" />
+    <Content Include="Program\FixedAssetProcess\FAItemMovement\FAItemMovementProcessApprovalList.aspx" />
+    <Content Include="Program\FixedAssetProcess\FAItemMovement\FAItemMovementProcessApprovalDetailCtl.ascx" />
+    <Content Include="Program\FixedAssetProcess\FAWriteOff\FAWriteOffProcessEntry.aspx" />
+    <Content Include="Program\FixedAsset\FAVoidWriteOff\FAVoidWriteOffList.aspx" />
+    <Content Include="Program\FixedAsset\FixedAssetToolbarCtl.ascx" />
+    <Content Include="Program\FixedAsset\FAItemMovement\FAItemMovementEntry.aspx" />
+    <Content Include="Program\FixedAsset\FAItemTrxList.aspx" />
+    <Content Include="Program\FixedAsset\FAWriteOff\FAWriteOffEntry.aspx" />
+    <Content Include="Program\GLSetting\GLAccountPayable\GLAccountPayableEntry.aspx" />
+    <Content Include="Program\GLSetting\GLAccountPayable\GLAccountPayableList.aspx" />
+    <Content Include="Program\GLSetting\GLAccountReceivable\GLAccountReceivableEntry.aspx" />
+    <Content Include="Program\GLSetting\GLAccountReceivable\GLAccountReceivableList.aspx" />
+    <Content Include="Program\GLSetting\GLAPRevenueSharing\GLAPRevenueSharingEntry.aspx" />
+    <Content Include="Program\GLSetting\GLAPRevenueSharing\GLAPRevenueSharingList.aspx" />
+    <Content Include="Program\GLSetting\GLARPayment\GLARPaymentEntry.aspx" />
+    <Content Include="Program\GLSetting\GLARPayment\GLARPaymentList.aspx" />
+    <Content Include="Program\GLSetting\GLAPPayment\GLAPPaymentEntry.aspx" />
+    <Content Include="Program\GLSetting\GLAPPayment\GLAPPaymentList.aspx" />
+    <Content Include="Program\GLSetting\GLCustomerLine\GLCustomerLineDtSourceDeptCtl.ascx" />
+    <Content Include="Program\GLSetting\GLFAWriteOffAccount\GLFAWriteOffAccountEntry.aspx" />
+    <Content Include="Program\GLSetting\GLFAWriteOffAccount\GLFAWriteOffAccountList.aspx" />
+    <Content Include="Program\GLSetting\GLFinalDiscountAccount\GLFinalDiscountAccountEntry.aspx" />
+    <Content Include="Program\GLSetting\GLFinalDiscountAccount\GLFinalDiscountAccountList.aspx" />
+    <Content Include="Program\GLSetting\GLIPRevenueAccount\GLIPRevenueAccountEntry.aspx" />
+    <Content Include="Program\GLSetting\GLIPRevenueAccount\GLIPRevenueAccountList.aspx" />
+    <Content Include="Program\GLSetting\GLIPRevenueSharingAccount\GLIPRevenueSharingAccountEntry.aspx" />
+    <Content Include="Program\GLSetting\GLIPRevenueSharingAccount\GLIPRevenueSharingAccountList.aspx" />
+    <Content Include="Program\GLSetting\GLItemGroupHealthcareUnit\GLItemGroupHealthcareUnitEntry.aspx" />
+    <Content Include="Program\GLSetting\GLItemGroupHealthcareUnit\GLItemGroupHealthcareUnitList.aspx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupServiceUnitCustomerLineDetailCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemGroupClassDetailEntryCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemGroupDetailEntryCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemGroupServiceUnitDetailEntryCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemMasterClassDetailEntryCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemMasterDetailEntryCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemMasterServiceUnitDetailEntryCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingRevenueAndDiscountDetailList.aspx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupClassServiceUnitDetailEntryCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupServiceUnitbyClassbyParamedicDetailCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicDetailCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupServiceUnitBySourceUnitbyClassDetailCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupServiceUnitBySourceUnitDetailCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitBySourceDepartmentCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitCustomerLineCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitBySourceUnitCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitbyClassbyParamedicCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitBySourceUnitbyClassCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupClassServiceUnitEntryCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingRevenueAndDiscountList.aspx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemGroupServiceUnitEntryCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemMasterServiceUnitEntryCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemMasterEntryCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemGroupEntryCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemGroupClassEntryCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemMasterClassEntryCtl.ascx" />
+    <Content Include="Program\GLSetting\GLMappingStandardCode\GLMappingStandardCodeList.aspx" />
+    <Content Include="Program\GLSetting\GLMappingStandardCode\GLMappingStandardCodeEntry.aspx" />
+    <Content Include="Program\GLSetting\GLMDRevenueAccount\GLMDRevenueAccountEntry.aspx" />
+    <Content Include="Program\GLSetting\GLMDRevenueAccount\GLMDRevenueAccountList.aspx" />
+    <Content Include="Program\GLSetting\GLMDRevenueSharingAccount\GLMDRevenueSharingAccountEntry.aspx" />
+    <Content Include="Program\GLSetting\GLMDRevenueSharingAccount\GLMDRevenueSharingAccountList.aspx" />
+    <Content Include="Program\GLSetting\GLOPRevenueAccount\GLOPRevenueAccountEntry.aspx" />
+    <Content Include="Program\GLSetting\GLOPRevenueAccount\GLOPRevenueAccountList.aspx" />
+    <Content Include="Program\GLSetting\GLOPRevenueSharingAccount\GLOPRevenueSharingAccountEntry.aspx" />
+    <Content Include="Program\GLSetting\GLOPRevenueSharingAccount\GLOPRevenueSharingAccountList.aspx" />
+    <Content Include="Program\GLSetting\GLOTCRevenueAccount\GLOTCRevenueAccountEntry.aspx" />
+    <Content Include="Program\GLSetting\GLOTCRevenueAccount\GLOTCRevenueAccountList.aspx" />
+    <Content Include="Program\GLSetting\GLPatientPaymentMethodEDCBank\GLPatientPaymentMethodEDCBankList.aspx" />
+    <Content Include="Program\GLSetting\GLPatientPaymentMethodEDCBank\GLPatientPaymentMethodEDCBankEntry.aspx" />
+    <Content Include="Program\GLSetting\GLPatientPaymentMethod\GLPatientPaymentMethodEntry.aspx" />
+    <Content Include="Program\GLSetting\GLPatientPaymentMethod\GLPatientPaymentMethodList.aspx" />
+    <Content Include="Program\GLSetting\GLPatientPaymentType\GLPatientPaymentTypeEntry.aspx" />
+    <Content Include="Program\GLSetting\GLPatientPaymentType\GLPatientPaymentTypeList.aspx" />
+    <Content Include="Program\GLSetting\GLPaymentMethod\GLPaymentMethodEntry.aspx" />
+    <Content Include="Program\GLSetting\GLPaymentMethod\GLPaymentMethodList.aspx" />
+    <Content Include="Program\GLSetting\GLProductLineBySource\GLProductLineBySourceEntry.aspx" />
+    <Content Include="Program\GLSetting\GLProductLineBySource\GLProductLineBySourceList.aspx" />
+    <Content Include="Program\GLSetting\GLProductLineHealthcareUnit\GLProductLineHealthcareUnitEntry.aspx" />
+    <Content Include="Program\GLSetting\GLProductLineHealthcareUnit\GLProductLineHealthcareUnitList.aspx" />
+    <Content Include="Program\GLSetting\GLSupplierLine\GLSupplierLineEntry.aspx" />
+    <Content Include="Program\GLSetting\GLSupplierLine\GLSupplierLineList.aspx" />
+    <Content Include="Program\GLSetting\GLCustomerLine\GLCustomerLineEntry.aspx" />
+    <Content Include="Program\GLSetting\GLCustomerLine\GLCustomerLineList.aspx" />
+    <Content Include="Program\GLSetting\GLProductLine\GLProductLineEntry.aspx" />
+    <Content Include="Program\GLSetting\GLProductLine\GLProductLineList.aspx" />
+    <Content Include="Program\GLSetting\GLRevenueAccount\GLRevenueAccountEntry.aspx" />
+    <Content Include="Program\GLSetting\GLRevenueAccount\GLRevenueAccountList.aspx" />
+    <Content Include="Program\GLSetting\GLSettingLevel1\GLSettingLevel1Entry.aspx" />
+    <Content Include="Program\GLSetting\GLSettingLevel1\GLSettingLevel1List.aspx" />
+    <Content Include="Program\GLSetting\GLWarehouseProductLineAccount\GLWarehouseProductLineAccountEntry.aspx" />
+    <Content Include="Program\GLSetting\GLWarehouseProductLineAccount\GLWarehouseProductLineAccountList.aspx" />
+    <Content Include="Program\Information\JournalInformationbyReferenceNumber.aspx" />
+    <Content Include="Program\Information\GLProcessAutomaticStatusInformation.aspx" />
+    <Content Include="Program\Information\InterfaceJournalStatusInformation.aspx" />
+    <Content Include="Program\Information\GLBalanceInformationPerAccount.aspx" />
+    <Content Include="Program\Information\GLProcessAutomaticInformation.aspx" />
+    <Content Include="Program\Information\GLSubLedgerInformationCtl.ascx" />
+    <Content Include="Program\Information\GLSubLedgerInformation.aspx" />
+    <Content Include="Program\Information\GLBalanceInformation.aspx" />
+    <Content Include="Program\Information\GLBalanceInformationCtl.ascx" />
+    <Content Include="Program\Information\FAItemWithoutAcceptanceInformationCtl.ascx" />
+    <Content Include="Program\Information\UnbalanceJournalInformation.aspx" />
+    <Content Include="Program\JournalPosting\BridgingJournal.aspx" />
+    <Content Include="Program\JournalPosting\JournalPostingEntryV2.aspx" />
+    <Content Include="Program\JournalPosting\JournalRecalculationBalance.aspx" />
+    <Content Include="Program\JournalPosting\JournalUnPostingEntry.aspx" />
+    <Content Include="Program\JournalPosting\JournalClosingEntry.aspx" />
+    <Content Include="Program\JournalPosting\JournalPostingEntry.aspx" />
+    <Content Include="Program\JournalPosting\JournalUnPostingEntryV2.aspx" />
+    <Content Include="Program\Journal\JournalAcrualPicksCtl.ascx" />
+    <Content Include="Program\Journal\InterfaceJournalProcessByUser.aspx" />
+    <Content Include="Program\Journal\JournalDocumentCtl.ascx" />
+    <Content Include="Program\Journal\InterfaceJournalProcess.aspx" />
+    <Content Include="Program\Journal\JournalTemplateCtl.ascx" />
+    <Content Include="Program\Journal\JournalEntry.aspx" />
+    <Content Include="Program\Journal\InterfaceJournalDtViewCtl.ascx" />
+    <Content Include="Program\Journal\JournalList.aspx" />
+    <Content Include="Program\Journal\JournalListDtCtl.ascx" />
+    <Content Include="Program\Journal\JournalEntryVoidCtl.ascx" />
+    <Content Include="Program\Master\AccountDisplaySetting\AccountDisplaySettingEntry.aspx" />
+    <Content Include="Program\Master\AccountDisplaySetting\AccountDisplaySettingList.aspx" />
+    <Content Include="Program\Master\Budgeting\BudgetingMasterEntry.aspx" />
+    <Content Include="Program\Master\Budgeting\BudgetingMasterDtRCCEntryCtl.ascx" />
+    <Content Include="Program\Master\Budgeting\BudgetingMasterPerMonth\BudgetingMasterPerMonthRCCEntryCtl.ascx" />
+    <Content Include="Program\Master\Budgeting\BudgetingMasterPerMonth\BudgetingMasterPerMonthEntry.aspx" />
+    <Content Include="Program\Master\Budgeting\BudgetingMasterPerMonth\BudgetMasterPerMonthTemplateCtl.ascx" />
+    <Content Include="Program\Master\Budgeting\BudgetingRealizationInformationList.aspx" />
+    <Content Include="Program\Master\Budgeting\BudgetingTemplate\BudgetingTemplateRCCEntryCtl.ascx" />
+    <Content Include="Program\Master\Budgeting\BudgetingTemplate\BudgetingTemplateEntry.aspx" />
+    <Content Include="Program\Master\Budgeting\BudgetingRealizationInformationPerMonthList.aspx" />
+    <Content Include="Program\Master\CashFlowAccount\CashFlowAccountEntry.aspx" />
+    <Content Include="Program\Master\CashFlowAccount\CashFlowAccountList.aspx" />
+    <Content Include="Program\Master\CashFlowType\CashFlowTypeEntry.aspx" />
+    <Content Include="Program\Master\CashFlowType\CashFlowTypeList.aspx" />
+    <Content Include="Program\Master\ChartOfAccount\ChartOfAccountEntry.aspx" />
+    <Content Include="Program\Master\ChartOfAccount\ChartOfAccountList.aspx" />
+    <Content Include="Program\Master\FAItem\FAItemChangeAfterAcceptanceCtl.ascx" />
+    <Content Include="Program\Master\FAItem\VoidFAItemFromListCtl.ascx" />
+    <Content Include="Program\Master\FAItem\FAItemFromPurchaseReceiveProcessList.aspx" />
+    <Content Include="Program\Master\FAItem\FAPartsDetailCtl.ascx" />
+    <Content Include="Program\Master\FAItem\VoidFAItemCtl.ascx" />
+    <Content Include="Program\Master\JournalTemplate\JournalTemplateDtViewCtl.ascx" />
+    <Content Include="Program\Master\JournalTemplate\JournalTemplateDtEntryCtl.ascx" />
+    <Content Include="Program\Master\JournalTemplate\JournalTemplateEntry.aspx" />
+    <Content Include="Program\Master\JournalTemplate\JournalTemplateList.aspx" />
+    <Content Include="Program\Master\FAItem\FAItemFromPurchaseReceiveList.aspx" />
+    <Content Include="Program\Master\FAItem\FAItemEntry.aspx" />
+    <Content Include="Program\Master\FAItem\FAItemList.aspx" />
+    <Content Include="Program\Master\FAGroup\FAGroupEntry.aspx" />
+    <Content Include="Program\Master\FAGroup\FAGroupList.aspx" />
+    <Content Include="Program\Master\FAItem\FADepreciationEntryCtl.ascx" />
+    <Content Include="Program\Master\FALocation\FALocationEntry.aspx" />
+    <Content Include="Program\Master\FALocation\FALocationList.aspx" />
+    <Content Include="Program\Master\RevenueCostCenter\RevenueCostCenterEntry.aspx" />
+    <Content Include="Program\Master\RevenueCostCenter\RevenueCostCenterList.aspx" />
+    <Content Include="Program\Master\SubLedgerType\SubLedgerTypeEntry.aspx" />
+    <Content Include="Program\Master\SubLedgerType\SubLedgerTypeList.aspx" />
+    <Content Include="Program\Master\SubLedger\SubLedgerDtViewCtl.ascx" />
+    <Content Include="Program\Master\SubLedger\SubLedgerDtEntryCtl.ascx" />
+    <Content Include="Program\Master\SubLedger\SubLedgerEntry.aspx" />
+    <Content Include="Program\Master\SubLedger\SubLedgerList.aspx" />
+    <Content Include="Program\Master\FADepreciationMethod\FADepreciationMethodEntry.aspx" />
+    <Content Include="Program\Master\FADepreciationMethod\FADepreciationMethodList.aspx" />
+    <Content Include="Program\Master\Treasury\MappingTreasuryTransactionEntry.aspx" />
+    <Content Include="Program\Master\Treasury\MappingTreasuryTransactionList.aspx" />
+    <Content Include="Program\ReportSetting\SubLedgerDtReportInfoCtl.ascx" />
+    <Content Include="Program\Utilities\ExportJournalEntry.aspx" />
+    <Content Include="qisicon.ico" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\ChangePasswordCtl.ascx.cs">
+      <Link>SharedLibs\Controls\ChangePasswordCtl.ascx.cs</Link>
+      <DependentUpon>ChangePasswordCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\ChangePasswordCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\ChangePasswordCtl.ascx.designer.cs</Link>
+      <DependentUpon>ChangePasswordCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\DeleteConfirmationCtl.ascx.cs">
+      <Link>SharedLibs\Controls\DeleteConfirmationCtl.ascx.cs</Link>
+      <DependentUpon>DeleteConfirmationCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\DeleteConfirmationCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\DeleteConfirmationCtl.ascx.designer.cs</Link>
+      <DependentUpon>DeleteConfirmationCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\FixedAssetBannerCtl.ascx.cs">
+      <Link>SharedLibs\Controls\FixedAssetBannerCtl.ascx.cs</Link>
+      <DependentUpon>FixedAssetBannerCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\FixedAssetBannerCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\FixedAssetBannerCtl.ascx.designer.cs</Link>
+      <DependentUpon>FixedAssetBannerCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralCtl.ascx.cs">
+      <Link>SharedLibs\Controls\GeneralCtl.ascx.cs</Link>
+      <DependentUpon>GeneralCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\GeneralCtl.ascx.designer.cs</Link>
+      <DependentUpon>GeneralCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralDashboardCtl.ascx.cs">
+      <Link>SharedLibs\Controls\GeneralDashboardCtl.ascx.cs</Link>
+      <DependentUpon>GeneralDashboardCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralDashboardCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\GeneralDashboardCtl.ascx.designer.cs</Link>
+      <DependentUpon>GeneralDashboardCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MatrixCtl.ascx.cs">
+      <Link>SharedLibs\Controls\MatrixCtl.ascx.cs</Link>
+      <DependentUpon>MatrixCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MatrixCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\MatrixCtl.ascx.designer.cs</Link>
+      <DependentUpon>MatrixCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MPEntryPopupCtl.ascx.cs">
+      <Link>SharedLibs\Controls\MPEntryPopupCtl.ascx.cs</Link>
+      <DependentUpon>MPEntryPopupCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MPEntryPopupCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\MPEntryPopupCtl.ascx.designer.cs</Link>
+      <DependentUpon>MPEntryPopupCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Default.aspx.cs">
+      <Link>SharedLibs\Default.aspx.cs</Link>
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Default.aspx.designer.cs">
+      <Link>SharedLibs\Default.aspx.designer.cs</Link>
+      <DependentUpon>Default.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\ErrorPage.aspx.cs">
+      <Link>SharedLibs\ErrorPage.aspx.cs</Link>
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\ErrorPage.aspx.designer.cs">
+      <Link>SharedLibs\ErrorPage.aspx.designer.cs</Link>
+      <DependentUpon>ErrorPage.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Login.aspx.cs">
+      <Link>SharedLibs\Login.aspx.cs</Link>
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Login.aspx.designer.cs">
+      <Link>SharedLibs\Login.aspx.designer.cs</Link>
+      <DependentUpon>Login.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\FixedAssetPage\MPBaseFixedAssetPage.Master.cs">
+      <Link>SharedLibs\MasterPage\FixedAssetPage\MPBaseFixedAssetPage.Master.cs</Link>
+      <DependentUpon>MPBaseFixedAssetPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\FixedAssetPage\MPBaseFixedAssetPage.Master.designer.cs">
+      <Link>SharedLibs\MasterPage\FixedAssetPage\MPBaseFixedAssetPage.Master.designer.cs</Link>
+      <DependentUpon>MPBaseFixedAssetPage.Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\FixedAssetPage\MPBaseFixedAssetPageTrx.master.cs">
+      <Link>SharedLibs\MasterPage\FixedAssetPage\MPBaseFixedAssetPageTrx.master.cs</Link>
+      <DependentUpon>MPBaseFixedAssetPageTrx.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\FixedAssetPage\MPBaseFixedAssetPageTrx.master.designer.cs">
+      <Link>SharedLibs\MasterPage\FixedAssetPage\MPBaseFixedAssetPageTrx.master.designer.cs</Link>
+      <DependentUpon>MPBaseFixedAssetPageTrx.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBase.Master.cs">
+      <Link>SharedLibs\MasterPage\MPBase.Master.cs</Link>
+      <DependentUpon>MPBase.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBase.Master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPBase.Master.designer.cs</Link>
+      <DependentUpon>MPBase.Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBaseDashboard.Master.cs">
+      <Link>SharedLibs\MasterPage\MPBaseDashboard.Master.cs</Link>
+      <DependentUpon>MPBaseDashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBaseDashboard.Master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPBaseDashboard.Master.designer.cs</Link>
+      <DependentUpon>MPBaseDashboard.Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPEntry.master.cs">
+      <Link>SharedLibs\MasterPage\MPEntry.master.cs</Link>
+      <DependentUpon>MPEntry.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPEntry.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPEntry.master.designer.cs</Link>
+      <DependentUpon>MPEntry.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPList.master.cs">
+      <Link>SharedLibs\MasterPage\MPList.master.cs</Link>
+      <DependentUpon>MPList.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPList.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPList.master.designer.cs</Link>
+      <DependentUpon>MPList.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMain.master.cs">
+      <Link>SharedLibs\MasterPage\MPMain.master.cs</Link>
+      <DependentUpon>MPMain.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMain.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPMain.master.designer.cs</Link>
+      <DependentUpon>MPMain.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMainDashboard.master.cs">
+      <Link>SharedLibs\MasterPage\MPMainDashboard.master.cs</Link>
+      <DependentUpon>MPMainDashboard.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMainDashboard.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPMainDashboard.master.designer.cs</Link>
+      <DependentUpon>MPMainDashboard.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx.master.cs">
+      <Link>SharedLibs\MasterPage\MPTrx.master.cs</Link>
+      <DependentUpon>MPTrx.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPTrx.master.designer.cs</Link>
+      <DependentUpon>MPTrx.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx2.master.cs">
+      <Link>SharedLibs\MasterPage\MPTrx2.master.cs</Link>
+      <DependentUpon>MPTrx2.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx2.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPTrx2.master.designer.cs</Link>
+      <DependentUpon>MPTrx2.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Main.aspx.cs">
+      <Link>SharedLibs\Program\Main.aspx.cs</Link>
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Main.aspx.designer.cs">
+      <Link>SharedLibs\Program\Main.aspx.designer.cs</Link>
+      <DependentUpon>Main.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\RemoteLogon.aspx.cs">
+      <Link>SharedLibs\Program\RemoteLogon.aspx.cs</Link>
+      <DependentUpon>RemoteLogon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\RemoteLogon.aspx.designer.cs">
+      <Link>SharedLibs\Program\RemoteLogon.aspx.designer.cs</Link>
+      <DependentUpon>RemoteLogon.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportPage.aspx.cs">
+      <Link>SharedLibs\Program\ReportPage.aspx.cs</Link>
+      <DependentUpon>ReportPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportPage.aspx.designer.cs">
+      <Link>SharedLibs\Program\ReportPage.aspx.designer.cs</Link>
+      <DependentUpon>ReportPage.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewer.aspx.cs">
+      <Link>SharedLibs\Program\ReportViewer.aspx.cs</Link>
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewer.aspx.designer.cs">
+      <Link>SharedLibs\Program\ReportViewer.aspx.designer.cs</Link>
+      <DependentUpon>ReportViewer.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewerExport.aspx.cs">
+      <Link>SharedLibs\Program\ReportViewerExport.aspx.cs</Link>
+      <DependentUpon>ReportViewerExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewerExport.aspx.designer.cs">
+      <Link>SharedLibs\Program\ReportViewerExport.aspx.designer.cs</Link>
+      <DependentUpon>ReportViewerExport.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Service\MethodService.asmx.cs">
+      <Link>SharedLibs\Service\MethodService.asmx.cs</Link>
+      <DependentUpon>MethodService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Service\signalR\BroadcastMessage.cs">
+      <Link>SharedLibs\Service\signalR\BroadcastMessage.cs</Link>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Program\BankReconciliation\BankReconciliationEntry.aspx.cs">
+      <DependentUpon>BankReconciliationEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\BankReconciliation\BankReconciliationEntry.aspx.designer.cs">
+      <DependentUpon>BankReconciliationEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\BankReconciliation\BankReconciliationEntryCtl.ascx.cs">
+      <DependentUpon>BankReconciliationEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\BankReconciliation\BankReconciliationEntryCtl.ascx.designer.cs">
+      <DependentUpon>BankReconciliationEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\FixedAssetProcess\FAAcceptanceQuickPicksCtl.ascx.cs">
+      <DependentUpon>FAAcceptanceQuickPicksCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\FixedAssetProcess\FAAcceptanceQuickPicksCtl.ascx.designer.cs">
+      <DependentUpon>FAAcceptanceQuickPicksCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\FixedAssetProcess\FAAcceptanceProcessEntry.aspx.cs">
+      <DependentUpon>FAAcceptanceProcessEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\FixedAssetProcess\FAAcceptanceProcessEntry.aspx.designer.cs">
+      <DependentUpon>FAAcceptanceProcessEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\FixedAssetProcess\FAItemMovement\FAItemMovementProcessEntry.aspx.cs">
+      <DependentUpon>FAItemMovementProcessEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\FixedAssetProcess\FAItemMovement\FAItemMovementProcessEntry.aspx.designer.cs">
+      <DependentUpon>FAItemMovementProcessEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\FixedAssetProcess\FAAcceptanceVoidCtl.ascx.cs">
+      <DependentUpon>FAAcceptanceVoidCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\FixedAssetProcess\FAAcceptanceVoidCtl.ascx.designer.cs">
+      <DependentUpon>FAAcceptanceVoidCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\FixedAssetProcess\FAItemMovement\FAItemMovementProcessApprovalList.aspx.cs">
+      <DependentUpon>FAItemMovementProcessApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\FixedAssetProcess\FAItemMovement\FAItemMovementProcessApprovalList.aspx.designer.cs">
+      <DependentUpon>FAItemMovementProcessApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\FixedAssetProcess\FAItemMovement\FAItemMovementProcessApprovalDetailCtl.ascx.cs">
+      <DependentUpon>FAItemMovementProcessApprovalDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\FixedAssetProcess\FAItemMovement\FAItemMovementProcessApprovalDetailCtl.ascx.designer.cs">
+      <DependentUpon>FAItemMovementProcessApprovalDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\FixedAssetProcess\FAWriteOff\FAWriteOffProcessEntry.aspx.cs">
+      <DependentUpon>FAWriteOffProcessEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\FixedAssetProcess\FAWriteOff\FAWriteOffProcessEntry.aspx.designer.cs">
+      <DependentUpon>FAWriteOffProcessEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\FixedAsset\FAVoidWriteOff\FAVoidWriteOffList.aspx.cs">
+      <DependentUpon>FAVoidWriteOffList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\FixedAsset\FAVoidWriteOff\FAVoidWriteOffList.aspx.designer.cs">
+      <DependentUpon>FAVoidWriteOffList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\FixedAsset\FixedAssetToolbarCtl.ascx.cs">
+      <DependentUpon>FixedAssetToolbarCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\FixedAsset\FixedAssetToolbarCtl.ascx.designer.cs">
+      <DependentUpon>FixedAssetToolbarCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\FixedAsset\FAItemMovement\FAItemMovementEntry.aspx.cs">
+      <DependentUpon>FAItemMovementEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\FixedAsset\FAItemMovement\FAItemMovementEntry.aspx.designer.cs">
+      <DependentUpon>FAItemMovementEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\FixedAsset\FAItemTrxList.aspx.cs">
+      <DependentUpon>FAItemTrxList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\FixedAsset\FAItemTrxList.aspx.designer.cs">
+      <DependentUpon>FAItemTrxList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\FixedAsset\FAWriteOff\FAWriteOffEntry.aspx.cs">
+      <DependentUpon>FAWriteOffEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\FixedAsset\FAWriteOff\FAWriteOffEntry.aspx.designer.cs">
+      <DependentUpon>FAWriteOffEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAccountPayable\GLAccountPayableEntry.aspx.cs">
+      <DependentUpon>GLAccountPayableEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAccountPayable\GLAccountPayableEntry.aspx.designer.cs">
+      <DependentUpon>GLAccountPayableEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAccountPayable\GLAccountPayableList.aspx.cs">
+      <DependentUpon>GLAccountPayableList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAccountPayable\GLAccountPayableList.aspx.designer.cs">
+      <DependentUpon>GLAccountPayableList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAccountReceivable\GLAccountReceivableEntry.aspx.cs">
+      <DependentUpon>GLAccountReceivableEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAccountReceivable\GLAccountReceivableEntry.aspx.designer.cs">
+      <DependentUpon>GLAccountReceivableEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAccountReceivable\GLAccountReceivableList.aspx.cs">
+      <DependentUpon>GLAccountReceivableList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAccountReceivable\GLAccountReceivableList.aspx.designer.cs">
+      <DependentUpon>GLAccountReceivableList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAPRevenueSharing\GLAPRevenueSharingEntry.aspx.cs">
+      <DependentUpon>GLAPRevenueSharingEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAPRevenueSharing\GLAPRevenueSharingEntry.aspx.designer.cs">
+      <DependentUpon>GLAPRevenueSharingEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAPRevenueSharing\GLAPRevenueSharingList.aspx.cs">
+      <DependentUpon>GLAPRevenueSharingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAPRevenueSharing\GLAPRevenueSharingList.aspx.designer.cs">
+      <DependentUpon>GLAPRevenueSharingList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLARPayment\GLARPaymentEntry.aspx.cs">
+      <DependentUpon>GLARPaymentEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLARPayment\GLARPaymentEntry.aspx.designer.cs">
+      <DependentUpon>GLARPaymentEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLARPayment\GLARPaymentList.aspx.cs">
+      <DependentUpon>GLARPaymentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLARPayment\GLARPaymentList.aspx.designer.cs">
+      <DependentUpon>GLARPaymentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAPPayment\GLAPPaymentEntry.aspx.cs">
+      <DependentUpon>GLAPPaymentEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAPPayment\GLAPPaymentEntry.aspx.designer.cs">
+      <DependentUpon>GLAPPaymentEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAPPayment\GLAPPaymentList.aspx.cs">
+      <DependentUpon>GLAPPaymentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLAPPayment\GLAPPaymentList.aspx.designer.cs">
+      <DependentUpon>GLAPPaymentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLCustomerLine\GLCustomerLineDtSourceDeptCtl.ascx.cs">
+      <DependentUpon>GLCustomerLineDtSourceDeptCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLCustomerLine\GLCustomerLineDtSourceDeptCtl.ascx.designer.cs">
+      <DependentUpon>GLCustomerLineDtSourceDeptCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLFAWriteOffAccount\GLFAWriteOffAccountEntry.aspx.cs">
+      <DependentUpon>GLFAWriteOffAccountEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLFAWriteOffAccount\GLFAWriteOffAccountEntry.aspx.designer.cs">
+      <DependentUpon>GLFAWriteOffAccountEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLFAWriteOffAccount\GLFAWriteOffAccountList.aspx.cs">
+      <DependentUpon>GLFAWriteOffAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLFAWriteOffAccount\GLFAWriteOffAccountList.aspx.designer.cs">
+      <DependentUpon>GLFAWriteOffAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLFinalDiscountAccount\GLFinalDiscountAccountEntry.aspx.cs">
+      <DependentUpon>GLFinalDiscountAccountEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLFinalDiscountAccount\GLFinalDiscountAccountEntry.aspx.designer.cs">
+      <DependentUpon>GLFinalDiscountAccountEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLFinalDiscountAccount\GLFinalDiscountAccountList.aspx.cs">
+      <DependentUpon>GLFinalDiscountAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLFinalDiscountAccount\GLFinalDiscountAccountList.aspx.designer.cs">
+      <DependentUpon>GLFinalDiscountAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLIPRevenueAccount\GLIPRevenueAccountEntry.aspx.cs">
+      <DependentUpon>GLIPRevenueAccountEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLIPRevenueAccount\GLIPRevenueAccountEntry.aspx.designer.cs">
+      <DependentUpon>GLIPRevenueAccountEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLIPRevenueAccount\GLIPRevenueAccountList.aspx.cs">
+      <DependentUpon>GLIPRevenueAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLIPRevenueAccount\GLIPRevenueAccountList.aspx.designer.cs">
+      <DependentUpon>GLIPRevenueAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLIPRevenueSharingAccount\GLIPRevenueSharingAccountEntry.aspx.cs">
+      <DependentUpon>GLIPRevenueSharingAccountEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLIPRevenueSharingAccount\GLIPRevenueSharingAccountEntry.aspx.designer.cs">
+      <DependentUpon>GLIPRevenueSharingAccountEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLIPRevenueSharingAccount\GLIPRevenueSharingAccountList.aspx.cs">
+      <DependentUpon>GLIPRevenueSharingAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLIPRevenueSharingAccount\GLIPRevenueSharingAccountList.aspx.designer.cs">
+      <DependentUpon>GLIPRevenueSharingAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLItemGroupHealthcareUnit\GLItemGroupHealthcareUnitEntry.aspx.cs">
+      <DependentUpon>GLItemGroupHealthcareUnitEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLItemGroupHealthcareUnit\GLItemGroupHealthcareUnitEntry.aspx.designer.cs">
+      <DependentUpon>GLItemGroupHealthcareUnitEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLItemGroupHealthcareUnit\GLItemGroupHealthcareUnitList.aspx.cs">
+      <DependentUpon>GLItemGroupHealthcareUnitList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLItemGroupHealthcareUnit\GLItemGroupHealthcareUnitList.aspx.designer.cs">
+      <DependentUpon>GLItemGroupHealthcareUnitList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupServiceUnitCustomerLineDetailCtl.ascx.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitCustomerLineDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupServiceUnitCustomerLineDetailCtl.ascx.designer.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitCustomerLineDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemGroupClassDetailEntryCtl.ascx.cs">
+      <DependentUpon>GLMappingItemGroupClassDetailEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemGroupClassDetailEntryCtl.ascx.designer.cs">
+      <DependentUpon>GLMappingItemGroupClassDetailEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemGroupDetailEntryCtl.ascx.cs">
+      <DependentUpon>GLMappingItemGroupDetailEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemGroupDetailEntryCtl.ascx.designer.cs">
+      <DependentUpon>GLMappingItemGroupDetailEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemGroupServiceUnitDetailEntryCtl.ascx.cs">
+      <DependentUpon>GLMappingItemGroupServiceUnitDetailEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemGroupServiceUnitDetailEntryCtl.ascx.designer.cs">
+      <DependentUpon>GLMappingItemGroupServiceUnitDetailEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemMasterClassDetailEntryCtl.ascx.cs">
+      <DependentUpon>GLMappingItemMasterClassDetailEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemMasterClassDetailEntryCtl.ascx.designer.cs">
+      <DependentUpon>GLMappingItemMasterClassDetailEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemMasterDetailEntryCtl.ascx.cs">
+      <DependentUpon>GLMappingItemMasterDetailEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemMasterDetailEntryCtl.ascx.designer.cs">
+      <DependentUpon>GLMappingItemMasterDetailEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemMasterServiceUnitDetailEntryCtl.ascx.cs">
+      <DependentUpon>GLMappingItemMasterServiceUnitDetailEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingItemMasterServiceUnitDetailEntryCtl.ascx.designer.cs">
+      <DependentUpon>GLMappingItemMasterServiceUnitDetailEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingRevenueAndDiscountDetailList.aspx.cs">
+      <DependentUpon>GLMappingRevenueAndDiscountDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLMappingRevenueAndDiscountDetailList.aspx.designer.cs">
+      <DependentUpon>GLMappingRevenueAndDiscountDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupClassServiceUnitDetailEntryCtl.ascx.cs">
+      <DependentUpon>GLRevenueItemGroupClassServiceUnitDetailEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupClassServiceUnitDetailEntryCtl.ascx.designer.cs">
+      <DependentUpon>GLRevenueItemGroupClassServiceUnitDetailEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupServiceUnitbyClassbyParamedicDetailCtl.ascx.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitbyClassbyParamedicDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupServiceUnitbyClassbyParamedicDetailCtl.ascx.designer.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitbyClassbyParamedicDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicDetailCtl.ascx.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicDetailCtl.ascx.designer.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupServiceUnitBySourceUnitbyClassDetailCtl.ascx.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitbyClassDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupServiceUnitBySourceUnitbyClassDetailCtl.ascx.designer.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitbyClassDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupServiceUnitBySourceUnitDetailCtl.ascx.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscountDetail\GLRevenueItemGroupServiceUnitBySourceUnitDetailCtl.ascx.designer.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitBySourceDepartmentCtl.ascx.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceDepartmentCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitBySourceDepartmentCtl.ascx.designer.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceDepartmentCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitCustomerLineCtl.ascx.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitCustomerLineCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitCustomerLineCtl.ascx.designer.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitCustomerLineCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitBySourceUnitCtl.ascx.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitBySourceUnitCtl.ascx.designer.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitbyClassbyParamedicCtl.ascx.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitbyClassbyParamedicCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitbyClassbyParamedicCtl.ascx.designer.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitbyClassbyParamedicCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicCtl.ascx.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicCtl.ascx.designer.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitBySourceUnitbyClassCtl.ascx.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitbyClassCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupServiceUnitBySourceUnitbyClassCtl.ascx.designer.cs">
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitbyClassCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupClassServiceUnitEntryCtl.ascx.cs">
+      <DependentUpon>GLRevenueItemGroupClassServiceUnitEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLRevenueItemGroupClassServiceUnitEntryCtl.ascx.designer.cs">
+      <DependentUpon>GLRevenueItemGroupClassServiceUnitEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingRevenueAndDiscountList.aspx.cs">
+      <DependentUpon>GLMappingRevenueAndDiscountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingRevenueAndDiscountList.aspx.designer.cs">
+      <DependentUpon>GLMappingRevenueAndDiscountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemGroupServiceUnitEntryCtl.ascx.cs">
+      <DependentUpon>GLMappingItemGroupServiceUnitEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemGroupServiceUnitEntryCtl.ascx.designer.cs">
+      <DependentUpon>GLMappingItemGroupServiceUnitEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemMasterServiceUnitEntryCtl.ascx.cs">
+      <DependentUpon>GLMappingItemMasterServiceUnitEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemMasterServiceUnitEntryCtl.ascx.designer.cs">
+      <DependentUpon>GLMappingItemMasterServiceUnitEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemMasterEntryCtl.ascx.cs">
+      <DependentUpon>GLMappingItemMasterEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemMasterEntryCtl.ascx.designer.cs">
+      <DependentUpon>GLMappingItemMasterEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemGroupEntryCtl.ascx.cs">
+      <DependentUpon>GLMappingItemGroupEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemGroupEntryCtl.ascx.designer.cs">
+      <DependentUpon>GLMappingItemGroupEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemGroupClassEntryCtl.ascx.cs">
+      <DependentUpon>GLMappingItemGroupClassEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemGroupClassEntryCtl.ascx.designer.cs">
+      <DependentUpon>GLMappingItemGroupClassEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemMasterClassEntryCtl.ascx.cs">
+      <DependentUpon>GLMappingItemMasterClassEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingRevenueAndDiscount\GLMappingItemMasterClassEntryCtl.ascx.designer.cs">
+      <DependentUpon>GLMappingItemMasterClassEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingStandardCode\GLMappingStandardCodeList.aspx.cs">
+      <DependentUpon>GLMappingStandardCodeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingStandardCode\GLMappingStandardCodeList.aspx.designer.cs">
+      <DependentUpon>GLMappingStandardCodeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingStandardCode\GLMappingStandardCodeEntry.aspx.cs">
+      <DependentUpon>GLMappingStandardCodeEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMappingStandardCode\GLMappingStandardCodeEntry.aspx.designer.cs">
+      <DependentUpon>GLMappingStandardCodeEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMDRevenueAccount\GLMDRevenueAccountEntry.aspx.cs">
+      <DependentUpon>GLMDRevenueAccountEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMDRevenueAccount\GLMDRevenueAccountEntry.aspx.designer.cs">
+      <DependentUpon>GLMDRevenueAccountEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMDRevenueAccount\GLMDRevenueAccountList.aspx.cs">
+      <DependentUpon>GLMDRevenueAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMDRevenueAccount\GLMDRevenueAccountList.aspx.designer.cs">
+      <DependentUpon>GLMDRevenueAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMDRevenueSharingAccount\GLMDRevenueSharingAccountEntry.aspx.cs">
+      <DependentUpon>GLMDRevenueSharingAccountEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMDRevenueSharingAccount\GLMDRevenueSharingAccountEntry.aspx.designer.cs">
+      <DependentUpon>GLMDRevenueSharingAccountEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMDRevenueSharingAccount\GLMDRevenueSharingAccountList.aspx.cs">
+      <DependentUpon>GLMDRevenueSharingAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLMDRevenueSharingAccount\GLMDRevenueSharingAccountList.aspx.designer.cs">
+      <DependentUpon>GLMDRevenueSharingAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLOPRevenueAccount\GLOPRevenueAccountEntry.aspx.cs">
+      <DependentUpon>GLOPRevenueAccountEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLOPRevenueAccount\GLOPRevenueAccountEntry.aspx.designer.cs">
+      <DependentUpon>GLOPRevenueAccountEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLOPRevenueAccount\GLOPRevenueAccountList.aspx.cs">
+      <DependentUpon>GLOPRevenueAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLOPRevenueAccount\GLOPRevenueAccountList.aspx.designer.cs">
+      <DependentUpon>GLOPRevenueAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLOPRevenueSharingAccount\GLOPRevenueSharingAccountEntry.aspx.cs">
+      <DependentUpon>GLOPRevenueSharingAccountEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLOPRevenueSharingAccount\GLOPRevenueSharingAccountEntry.aspx.designer.cs">
+      <DependentUpon>GLOPRevenueSharingAccountEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLOPRevenueSharingAccount\GLOPRevenueSharingAccountList.aspx.cs">
+      <DependentUpon>GLOPRevenueSharingAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLOPRevenueSharingAccount\GLOPRevenueSharingAccountList.aspx.designer.cs">
+      <DependentUpon>GLOPRevenueSharingAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLOTCRevenueAccount\GLOTCRevenueAccountEntry.aspx.cs">
+      <DependentUpon>GLOTCRevenueAccountEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLOTCRevenueAccount\GLOTCRevenueAccountEntry.aspx.designer.cs">
+      <DependentUpon>GLOTCRevenueAccountEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLOTCRevenueAccount\GLOTCRevenueAccountList.aspx.cs">
+      <DependentUpon>GLOTCRevenueAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLOTCRevenueAccount\GLOTCRevenueAccountList.aspx.designer.cs">
+      <DependentUpon>GLOTCRevenueAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPatientPaymentMethodEDCBank\GLPatientPaymentMethodEDCBankList.aspx.cs">
+      <DependentUpon>GLPatientPaymentMethodEDCBankList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPatientPaymentMethodEDCBank\GLPatientPaymentMethodEDCBankList.aspx.designer.cs">
+      <DependentUpon>GLPatientPaymentMethodEDCBankList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPatientPaymentMethodEDCBank\GLPatientPaymentMethodEDCBankEntry.aspx.cs">
+      <DependentUpon>GLPatientPaymentMethodEDCBankEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPatientPaymentMethodEDCBank\GLPatientPaymentMethodEDCBankEntry.aspx.designer.cs">
+      <DependentUpon>GLPatientPaymentMethodEDCBankEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPatientPaymentMethod\GLPatientPaymentMethodEntry.aspx.cs">
+      <DependentUpon>GLPatientPaymentMethodEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPatientPaymentMethod\GLPatientPaymentMethodEntry.aspx.designer.cs">
+      <DependentUpon>GLPatientPaymentMethodEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPatientPaymentMethod\GLPatientPaymentMethodList.aspx.cs">
+      <DependentUpon>GLPatientPaymentMethodList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPatientPaymentMethod\GLPatientPaymentMethodList.aspx.designer.cs">
+      <DependentUpon>GLPatientPaymentMethodList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPatientPaymentType\GLPatientPaymentTypeEntry.aspx.cs">
+      <DependentUpon>GLPatientPaymentTypeEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPatientPaymentType\GLPatientPaymentTypeEntry.aspx.designer.cs">
+      <DependentUpon>GLPatientPaymentTypeEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPatientPaymentType\GLPatientPaymentTypeList.aspx.cs">
+      <DependentUpon>GLPatientPaymentTypeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPatientPaymentType\GLPatientPaymentTypeList.aspx.designer.cs">
+      <DependentUpon>GLPatientPaymentTypeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPaymentMethod\GLPaymentMethodEntry.aspx.cs">
+      <DependentUpon>GLPaymentMethodEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPaymentMethod\GLPaymentMethodEntry.aspx.designer.cs">
+      <DependentUpon>GLPaymentMethodEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPaymentMethod\GLPaymentMethodList.aspx.cs">
+      <DependentUpon>GLPaymentMethodList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLPaymentMethod\GLPaymentMethodList.aspx.designer.cs">
+      <DependentUpon>GLPaymentMethodList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLProductLineBySource\GLProductLineBySourceEntry.aspx.cs">
+      <DependentUpon>GLProductLineBySourceEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLProductLineBySource\GLProductLineBySourceEntry.aspx.designer.cs">
+      <DependentUpon>GLProductLineBySourceEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLProductLineBySource\GLProductLineBySourceList.aspx.cs">
+      <DependentUpon>GLProductLineBySourceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLProductLineBySource\GLProductLineBySourceList.aspx.designer.cs">
+      <DependentUpon>GLProductLineBySourceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLProductLineHealthcareUnit\GLProductLineHealthcareUnitEntry.aspx.cs">
+      <DependentUpon>GLProductLineHealthcareUnitEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLProductLineHealthcareUnit\GLProductLineHealthcareUnitEntry.aspx.designer.cs">
+      <DependentUpon>GLProductLineHealthcareUnitEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLProductLineHealthcareUnit\GLProductLineHealthcareUnitList.aspx.cs">
+      <DependentUpon>GLProductLineHealthcareUnitList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLProductLineHealthcareUnit\GLProductLineHealthcareUnitList.aspx.designer.cs">
+      <DependentUpon>GLProductLineHealthcareUnitList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLSupplierLine\GLSupplierLineEntry.aspx.cs">
+      <DependentUpon>GLSupplierLineEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLSupplierLine\GLSupplierLineEntry.aspx.designer.cs">
+      <DependentUpon>GLSupplierLineEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLSupplierLine\GLSupplierLineList.aspx.cs">
+      <DependentUpon>GLSupplierLineList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLSupplierLine\GLSupplierLineList.aspx.designer.cs">
+      <DependentUpon>GLSupplierLineList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLCustomerLine\GLCustomerLineEntry.aspx.cs">
+      <DependentUpon>GLCustomerLineEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLCustomerLine\GLCustomerLineEntry.aspx.designer.cs">
+      <DependentUpon>GLCustomerLineEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLCustomerLine\GLCustomerLineList.aspx.cs">
+      <DependentUpon>GLCustomerLineList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLCustomerLine\GLCustomerLineList.aspx.designer.cs">
+      <DependentUpon>GLCustomerLineList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLProductLine\GLProductLineEntry.aspx.cs">
+      <DependentUpon>GLProductLineEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLProductLine\GLProductLineEntry.aspx.designer.cs">
+      <DependentUpon>GLProductLineEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLProductLine\GLProductLineList.aspx.cs">
+      <DependentUpon>GLProductLineList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLProductLine\GLProductLineList.aspx.designer.cs">
+      <DependentUpon>GLProductLineList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLRevenueAccount\GLRevenueAccountEntry.aspx.cs">
+      <DependentUpon>GLRevenueAccountEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLRevenueAccount\GLRevenueAccountEntry.aspx.designer.cs">
+      <DependentUpon>GLRevenueAccountEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLRevenueAccount\GLRevenueAccountList.aspx.cs">
+      <DependentUpon>GLRevenueAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLRevenueAccount\GLRevenueAccountList.aspx.designer.cs">
+      <DependentUpon>GLRevenueAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLSettingLevel1\GLSettingLevel1Entry.aspx.cs">
+      <DependentUpon>GLSettingLevel1Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLSettingLevel1\GLSettingLevel1Entry.aspx.designer.cs">
+      <DependentUpon>GLSettingLevel1Entry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLSettingLevel1\GLSettingLevel1List.aspx.cs">
+      <DependentUpon>GLSettingLevel1List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLSettingLevel1\GLSettingLevel1List.aspx.designer.cs">
+      <DependentUpon>GLSettingLevel1List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLWarehouseProductLineAccount\GLWarehouseProductLineAccountEntry.aspx.cs">
+      <DependentUpon>GLWarehouseProductLineAccountEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLWarehouseProductLineAccount\GLWarehouseProductLineAccountEntry.aspx.designer.cs">
+      <DependentUpon>GLWarehouseProductLineAccountEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLWarehouseProductLineAccount\GLWarehouseProductLineAccountList.aspx.cs">
+      <DependentUpon>GLWarehouseProductLineAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\GLSetting\GLWarehouseProductLineAccount\GLWarehouseProductLineAccountList.aspx.designer.cs">
+      <DependentUpon>GLWarehouseProductLineAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\JournalInformationbyReferenceNumber.aspx.cs">
+      <DependentUpon>JournalInformationbyReferenceNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\JournalInformationbyReferenceNumber.aspx.designer.cs">
+      <DependentUpon>JournalInformationbyReferenceNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\GLProcessAutomaticStatusInformation.aspx.cs">
+      <DependentUpon>GLProcessAutomaticStatusInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\GLProcessAutomaticStatusInformation.aspx.designer.cs">
+      <DependentUpon>GLProcessAutomaticStatusInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\InterfaceJournalStatusInformation.aspx.cs">
+      <DependentUpon>InterfaceJournalStatusInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\InterfaceJournalStatusInformation.aspx.designer.cs">
+      <DependentUpon>InterfaceJournalStatusInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\GLBalanceInformationPerAccount.aspx.cs">
+      <DependentUpon>GLBalanceInformationPerAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\GLBalanceInformationPerAccount.aspx.designer.cs">
+      <DependentUpon>GLBalanceInformationPerAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\GLProcessAutomaticInformation.aspx.cs">
+      <DependentUpon>GLProcessAutomaticInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\GLProcessAutomaticInformation.aspx.designer.cs">
+      <DependentUpon>GLProcessAutomaticInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\GLSubLedgerInformationCtl.ascx.cs">
+      <DependentUpon>GLSubLedgerInformationCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\GLSubLedgerInformationCtl.ascx.designer.cs">
+      <DependentUpon>GLSubLedgerInformationCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\GLSubLedgerInformation.aspx.cs">
+      <DependentUpon>GLSubLedgerInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\GLSubLedgerInformation.aspx.designer.cs">
+      <DependentUpon>GLSubLedgerInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\GLBalanceInformation.aspx.cs">
+      <DependentUpon>GLBalanceInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\GLBalanceInformation.aspx.designer.cs">
+      <DependentUpon>GLBalanceInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\GLBalanceInformationCtl.ascx.cs">
+      <DependentUpon>GLBalanceInformationCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\GLBalanceInformationCtl.ascx.designer.cs">
+      <DependentUpon>GLBalanceInformationCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\FAItemWithoutAcceptanceInformationCtl.ascx.cs">
+      <DependentUpon>FAItemWithoutAcceptanceInformationCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\FAItemWithoutAcceptanceInformationCtl.ascx.designer.cs">
+      <DependentUpon>FAItemWithoutAcceptanceInformationCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\UnbalanceJournalInformation.aspx.cs">
+      <DependentUpon>UnbalanceJournalInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\UnbalanceJournalInformation.aspx.designer.cs">
+      <DependentUpon>UnbalanceJournalInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\JournalPosting\BridgingJournal.aspx.cs">
+      <DependentUpon>BridgingJournal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\JournalPosting\BridgingJournal.aspx.designer.cs">
+      <DependentUpon>BridgingJournal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\JournalPosting\JournalPostingEntryV2.aspx.cs">
+      <DependentUpon>JournalPostingEntryV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\JournalPosting\JournalPostingEntryV2.aspx.designer.cs">
+      <DependentUpon>JournalPostingEntryV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\JournalPosting\JournalRecalculationBalance.aspx.cs">
+      <DependentUpon>JournalRecalculationBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\JournalPosting\JournalRecalculationBalance.aspx.designer.cs">
+      <DependentUpon>JournalRecalculationBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\JournalPosting\JournalUnPostingEntry.aspx.cs">
+      <DependentUpon>JournalUnPostingEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\JournalPosting\JournalUnPostingEntry.aspx.designer.cs">
+      <DependentUpon>JournalUnPostingEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\JournalPosting\JournalClosingEntry.aspx.cs">
+      <DependentUpon>JournalClosingEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\JournalPosting\JournalClosingEntry.aspx.designer.cs">
+      <DependentUpon>JournalClosingEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\JournalPosting\JournalPostingEntry.aspx.cs">
+      <DependentUpon>JournalPostingEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\JournalPosting\JournalPostingEntry.aspx.designer.cs">
+      <DependentUpon>JournalPostingEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\JournalPosting\JournalUnPostingEntryV2.aspx.cs">
+      <DependentUpon>JournalUnPostingEntryV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\JournalPosting\JournalUnPostingEntryV2.aspx.designer.cs">
+      <DependentUpon>JournalUnPostingEntryV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Journal\JournalAcrualPicksCtl.ascx.cs">
+      <DependentUpon>JournalAcrualPicksCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Journal\JournalAcrualPicksCtl.ascx.designer.cs">
+      <DependentUpon>JournalAcrualPicksCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Journal\InterfaceJournalProcessByUser.aspx.cs">
+      <DependentUpon>InterfaceJournalProcessByUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Journal\InterfaceJournalProcessByUser.aspx.designer.cs">
+      <DependentUpon>InterfaceJournalProcessByUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Journal\JournalDocumentCtl.ascx.cs">
+      <DependentUpon>JournalDocumentCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Journal\JournalDocumentCtl.ascx.designer.cs">
+      <DependentUpon>JournalDocumentCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Journal\InterfaceJournalProcess.aspx.cs">
+      <DependentUpon>InterfaceJournalProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Journal\InterfaceJournalProcess.aspx.designer.cs">
+      <DependentUpon>InterfaceJournalProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Journal\JournalTemplateCtl.ascx.cs">
+      <DependentUpon>JournalTemplateCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Journal\JournalTemplateCtl.ascx.designer.cs">
+      <DependentUpon>JournalTemplateCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Journal\JournalEntry.aspx.cs">
+      <DependentUpon>JournalEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Journal\JournalEntry.aspx.designer.cs">
+      <DependentUpon>JournalEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Journal\InterfaceJournalDtViewCtl.ascx.cs">
+      <DependentUpon>InterfaceJournalDtViewCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Journal\InterfaceJournalDtViewCtl.ascx.designer.cs">
+      <DependentUpon>InterfaceJournalDtViewCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Journal\JournalList.aspx.cs">
+      <DependentUpon>JournalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Journal\JournalList.aspx.designer.cs">
+      <DependentUpon>JournalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Journal\JournalListDtCtl.ascx.cs">
+      <DependentUpon>JournalListDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Journal\JournalListDtCtl.ascx.designer.cs">
+      <DependentUpon>JournalListDtCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Journal\JournalEntryVoidCtl.ascx.cs">
+      <DependentUpon>JournalEntryVoidCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Journal\JournalEntryVoidCtl.ascx.designer.cs">
+      <DependentUpon>JournalEntryVoidCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\AccountDisplaySetting\AccountDisplaySettingEntry.aspx.cs">
+      <DependentUpon>AccountDisplaySettingEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\AccountDisplaySetting\AccountDisplaySettingEntry.aspx.designer.cs">
+      <DependentUpon>AccountDisplaySettingEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\AccountDisplaySetting\AccountDisplaySettingList.aspx.cs">
+      <DependentUpon>AccountDisplaySettingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\AccountDisplaySetting\AccountDisplaySettingList.aspx.designer.cs">
+      <DependentUpon>AccountDisplaySettingList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingMasterEntry.aspx.cs">
+      <DependentUpon>BudgetingMasterEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingMasterEntry.aspx.designer.cs">
+      <DependentUpon>BudgetingMasterEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingMasterDtRCCEntryCtl.ascx.cs">
+      <DependentUpon>BudgetingMasterDtRCCEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingMasterDtRCCEntryCtl.ascx.designer.cs">
+      <DependentUpon>BudgetingMasterDtRCCEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingMasterPerMonth\BudgetingMasterPerMonthRCCEntryCtl.ascx.cs">
+      <DependentUpon>BudgetingMasterPerMonthRCCEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingMasterPerMonth\BudgetingMasterPerMonthRCCEntryCtl.ascx.designer.cs">
+      <DependentUpon>BudgetingMasterPerMonthRCCEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingMasterPerMonth\BudgetingMasterPerMonthEntry.aspx.cs">
+      <DependentUpon>BudgetingMasterPerMonthEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingMasterPerMonth\BudgetingMasterPerMonthEntry.aspx.designer.cs">
+      <DependentUpon>BudgetingMasterPerMonthEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingMasterPerMonth\BudgetMasterPerMonthTemplateCtl.ascx.cs">
+      <DependentUpon>BudgetMasterPerMonthTemplateCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingMasterPerMonth\BudgetMasterPerMonthTemplateCtl.ascx.designer.cs">
+      <DependentUpon>BudgetMasterPerMonthTemplateCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingRealizationInformationList.aspx.cs">
+      <DependentUpon>BudgetingRealizationInformationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingRealizationInformationList.aspx.designer.cs">
+      <DependentUpon>BudgetingRealizationInformationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingTemplate\BudgetingTemplateRCCEntryCtl.ascx.cs">
+      <DependentUpon>BudgetingTemplateRCCEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingTemplate\BudgetingTemplateRCCEntryCtl.ascx.designer.cs">
+      <DependentUpon>BudgetingTemplateRCCEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingTemplate\BudgetingTemplateEntry.aspx.cs">
+      <DependentUpon>BudgetingTemplateEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingTemplate\BudgetingTemplateEntry.aspx.designer.cs">
+      <DependentUpon>BudgetingTemplateEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingRealizationInformationPerMonthList.aspx.cs">
+      <DependentUpon>BudgetingRealizationInformationPerMonthList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Budgeting\BudgetingRealizationInformationPerMonthList.aspx.designer.cs">
+      <DependentUpon>BudgetingRealizationInformationPerMonthList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\CashFlowAccount\CashFlowAccountEntry.aspx.cs">
+      <DependentUpon>CashFlowAccountEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\CashFlowAccount\CashFlowAccountEntry.aspx.designer.cs">
+      <DependentUpon>CashFlowAccountEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\CashFlowAccount\CashFlowAccountList.aspx.cs">
+      <DependentUpon>CashFlowAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\CashFlowAccount\CashFlowAccountList.aspx.designer.cs">
+      <DependentUpon>CashFlowAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\CashFlowType\CashFlowTypeEntry.aspx.cs">
+      <DependentUpon>CashFlowTypeEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\CashFlowType\CashFlowTypeEntry.aspx.designer.cs">
+      <DependentUpon>CashFlowTypeEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\CashFlowType\CashFlowTypeList.aspx.cs">
+      <DependentUpon>CashFlowTypeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\CashFlowType\CashFlowTypeList.aspx.designer.cs">
+      <DependentUpon>CashFlowTypeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ChartOfAccount\ChartOfAccountEntry.aspx.cs">
+      <DependentUpon>ChartOfAccountEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ChartOfAccount\ChartOfAccountEntry.aspx.designer.cs">
+      <DependentUpon>ChartOfAccountEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ChartOfAccount\ChartOfAccountList.aspx.cs">
+      <DependentUpon>ChartOfAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ChartOfAccount\ChartOfAccountList.aspx.designer.cs">
+      <DependentUpon>ChartOfAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\FAItemChangeAfterAcceptanceCtl.ascx.cs">
+      <DependentUpon>FAItemChangeAfterAcceptanceCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\FAItemChangeAfterAcceptanceCtl.ascx.designer.cs">
+      <DependentUpon>FAItemChangeAfterAcceptanceCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\VoidFAItemFromListCtl.ascx.cs">
+      <DependentUpon>VoidFAItemFromListCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\VoidFAItemFromListCtl.ascx.designer.cs">
+      <DependentUpon>VoidFAItemFromListCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\FAItemFromPurchaseReceiveProcessList.aspx.cs">
+      <DependentUpon>FAItemFromPurchaseReceiveProcessList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\FAItemFromPurchaseReceiveProcessList.aspx.designer.cs">
+      <DependentUpon>FAItemFromPurchaseReceiveProcessList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\FAPartsDetailCtl.ascx.cs">
+      <DependentUpon>FAPartsDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\FAPartsDetailCtl.ascx.designer.cs">
+      <DependentUpon>FAPartsDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\VoidFAItemCtl.ascx.cs">
+      <DependentUpon>VoidFAItemCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\VoidFAItemCtl.ascx.designer.cs">
+      <DependentUpon>VoidFAItemCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\JournalTemplate\JournalTemplateDtViewCtl.ascx.cs">
+      <DependentUpon>JournalTemplateDtViewCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\JournalTemplate\JournalTemplateDtViewCtl.ascx.designer.cs">
+      <DependentUpon>JournalTemplateDtViewCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\JournalTemplate\JournalTemplateDtEntryCtl.ascx.cs">
+      <DependentUpon>JournalTemplateDtEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\JournalTemplate\JournalTemplateDtEntryCtl.ascx.designer.cs">
+      <DependentUpon>JournalTemplateDtEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\JournalTemplate\JournalTemplateEntry.aspx.cs">
+      <DependentUpon>JournalTemplateEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\JournalTemplate\JournalTemplateEntry.aspx.designer.cs">
+      <DependentUpon>JournalTemplateEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\JournalTemplate\JournalTemplateList.aspx.cs">
+      <DependentUpon>JournalTemplateList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\JournalTemplate\JournalTemplateList.aspx.designer.cs">
+      <DependentUpon>JournalTemplateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\FAItemFromPurchaseReceiveList.aspx.cs">
+      <DependentUpon>FAItemFromPurchaseReceiveList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\FAItemFromPurchaseReceiveList.aspx.designer.cs">
+      <DependentUpon>FAItemFromPurchaseReceiveList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\FAItemEntry.aspx.cs">
+      <DependentUpon>FAItemEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\FAItemEntry.aspx.designer.cs">
+      <DependentUpon>FAItemEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\FAItemList.aspx.cs">
+      <DependentUpon>FAItemList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\FAItemList.aspx.designer.cs">
+      <DependentUpon>FAItemList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\FAGroup\FAGroupEntry.aspx.cs">
+      <DependentUpon>FAGroupEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\FAGroup\FAGroupEntry.aspx.designer.cs">
+      <DependentUpon>FAGroupEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\FAGroup\FAGroupList.aspx.cs">
+      <DependentUpon>FAGroupList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\FAGroup\FAGroupList.aspx.designer.cs">
+      <DependentUpon>FAGroupList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\FADepreciationEntryCtl.ascx.cs">
+      <DependentUpon>FADepreciationEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\FAItem\FADepreciationEntryCtl.ascx.designer.cs">
+      <DependentUpon>FADepreciationEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\FALocation\FALocationEntry.aspx.cs">
+      <DependentUpon>FALocationEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\FALocation\FALocationEntry.aspx.designer.cs">
+      <DependentUpon>FALocationEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\FALocation\FALocationList.aspx.cs">
+      <DependentUpon>FALocationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\FALocation\FALocationList.aspx.designer.cs">
+      <DependentUpon>FALocationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\RevenueCostCenter\RevenueCostCenterEntry.aspx.cs">
+      <DependentUpon>RevenueCostCenterEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\RevenueCostCenter\RevenueCostCenterEntry.aspx.designer.cs">
+      <DependentUpon>RevenueCostCenterEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\RevenueCostCenter\RevenueCostCenterList.aspx.cs">
+      <DependentUpon>RevenueCostCenterList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\RevenueCostCenter\RevenueCostCenterList.aspx.designer.cs">
+      <DependentUpon>RevenueCostCenterList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\SubLedgerType\SubLedgerTypeEntry.aspx.cs">
+      <DependentUpon>SubLedgerTypeEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\SubLedgerType\SubLedgerTypeEntry.aspx.designer.cs">
+      <DependentUpon>SubLedgerTypeEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\SubLedgerType\SubLedgerTypeList.aspx.cs">
+      <DependentUpon>SubLedgerTypeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\SubLedgerType\SubLedgerTypeList.aspx.designer.cs">
+      <DependentUpon>SubLedgerTypeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\SubLedger\SubLedgerDtViewCtl.ascx.cs">
+      <DependentUpon>SubLedgerDtViewCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\SubLedger\SubLedgerDtViewCtl.ascx.designer.cs">
+      <DependentUpon>SubLedgerDtViewCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\SubLedger\SubLedgerDtEntryCtl.ascx.cs">
+      <DependentUpon>SubLedgerDtEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\SubLedger\SubLedgerDtEntryCtl.ascx.designer.cs">
+      <DependentUpon>SubLedgerDtEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\SubLedger\SubLedgerEntry.aspx.cs">
+      <DependentUpon>SubLedgerEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\SubLedger\SubLedgerEntry.aspx.designer.cs">
+      <DependentUpon>SubLedgerEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\SubLedger\SubLedgerList.aspx.cs">
+      <DependentUpon>SubLedgerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\SubLedger\SubLedgerList.aspx.designer.cs">
+      <DependentUpon>SubLedgerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\FADepreciationMethod\FADepreciationMethodEntry.aspx.cs">
+      <DependentUpon>FADepreciationMethodEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\FADepreciationMethod\FADepreciationMethodEntry.aspx.designer.cs">
+      <DependentUpon>FADepreciationMethodEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\FADepreciationMethod\FADepreciationMethodList.aspx.cs">
+      <DependentUpon>FADepreciationMethodList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\FADepreciationMethod\FADepreciationMethodList.aspx.designer.cs">
+      <DependentUpon>FADepreciationMethodList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Treasury\MappingTreasuryTransactionEntry.aspx.cs">
+      <DependentUpon>MappingTreasuryTransactionEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Treasury\MappingTreasuryTransactionEntry.aspx.designer.cs">
+      <DependentUpon>MappingTreasuryTransactionEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Treasury\MappingTreasuryTransactionList.aspx.cs">
+      <DependentUpon>MappingTreasuryTransactionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Treasury\MappingTreasuryTransactionList.aspx.designer.cs">
+      <DependentUpon>MappingTreasuryTransactionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ReportSetting\SubLedgerDtReportInfoCtl.ascx.cs">
+      <DependentUpon>SubLedgerDtReportInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ReportSetting\SubLedgerDtReportInfoCtl.ascx.designer.cs">
+      <DependentUpon>SubLedgerDtReportInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Utilities\ExportJournalEntry.aspx.cs">
+      <DependentUpon>ExportJournalEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Utilities\ExportJournalEntry.aspx.designer.cs">
+      <DependentUpon>ExportJournalEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\AppSetting.config">
+      <Link>AppSetting.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\ConnectionString.config">
+      <Link>ConnectionString.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBase.Master">
+      <Link>SharedLibs\MasterPage\MPBase.Master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPEntry.master">
+      <Link>SharedLibs\MasterPage\MPEntry.master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPList.master">
+      <Link>SharedLibs\MasterPage\MPList.master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMain.master">
+      <Link>SharedLibs\MasterPage\MPMain.master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx.master">
+      <Link>SharedLibs\MasterPage\MPTrx.master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx2.master">
+      <Link>SharedLibs\MasterPage\MPTrx2.master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QIS.Data.Core\QIS.Data.Core.csproj">
+      <Project>{CAC7A3D3-E6BB-4C97-B728-B87D395EB688}</Project>
+      <Name>QIS.Data.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.Data.Service\QIS.Medinfras.Data.Service.csproj">
+      <Project>{E8019F76-DE58-43A7-984C-A1272D62EA45}</Project>
+      <Name>QIS.Medinfras.Data.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.ReportDesktop\QIS.Medinfras.ReportDesktop.csproj">
+      <Project>{9B194471-A1D2-47DF-A29A-D0BFA091489F}</Project>
+      <Name>QIS.Medinfras.ReportDesktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.Web.Common\QIS.Medinfras.Web.Common.csproj">
+      <Project>{12E5AAFD-04A7-4D8F-8840-C8CB4E0B23DC}</Project>
+      <Name>QIS.Medinfras.Web.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.Web.Control\QIS.Medinfras.Web.CustomControl.csproj">
+      <Project>{A61E72CD-A2CE-42EF-BBD5-9657CC3C8E9E}</Project>
+      <Name>QIS.Medinfras.Web.CustomControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\FixedAssetPage\MPBaseFixedAssetPage.Master">
+      <Link>SharedLibs\MasterPage\FixedAssetPage\MPBaseFixedAssetPage.Master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\FixedAssetPage\MPBaseFixedAssetPageTrx.master">
+      <Link>SharedLibs\MasterPage\FixedAssetPage\MPBaseFixedAssetPageTrx.master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBaseDashboard.Master">
+      <Link>SharedLibs\MasterPage\MPBaseDashboard.Master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMainDashboard.master">
+      <Link>SharedLibs\MasterPage\MPMainDashboard.master</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3802</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/medinfrasv2.1/ms_rspkjb_202403-01/Accounting</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>COPY "$(TargetDir)*.config" "$(ProjectDir)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

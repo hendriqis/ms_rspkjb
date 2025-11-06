@@ -1,0 +1,300 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserInRoleEntryCtl.ascx.cs" 
+    Inherits="QIS.Medinfras.Web.SystemSetup.Program.UserInRoleEntryCtl" %>
+
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+
+<script type="text/javascript" id="dxss_serviceunititementryctl">
+    function addMatrixAvailableFilterRow(){
+        $trHeader = $('#<%=grdAvailable.ClientID %> tr:eq(0)');
+        $trFilter = $("<tr><td></td><td class='keyField'></td><td></td></tr>");
+        $input = $("<input type='text' id='txtMatrixFilterAvailable' style='width:100%' />").val($('#<%=hdnAvailableSearchText.ClientID %>').val());
+        $trFilter.find('td').last().append($input);
+        $trFilter.insertAfter($trHeader);
+    }
+
+    function addMatrixSelectedFilterRow(){
+        $trHeader = $('#<%=grdSelected.ClientID %> tr:eq(0)');
+        $trFilter = $("<tr><td></td><td class='keyField'></td><td></td></tr>");
+        $input = $("<input type='text' id='txtMatrixFilterSelected' style='width:100%' />").val($('#<%=hdnSelectedSearchText.ClientID %>').val());
+        $trFilter.find('td').last().append($input);
+        $trFilter.insertAfter($trHeader);
+    }
+
+    $('#txtMatrixFilterSelected').live('keypress', function (e) {
+        var code = (e.keyCode ? e.keyCode : e.which);
+        if (code == 13) {
+            $('#<%=hdnSelectedSearchText.ClientID %>').val($(this).val());
+            e.preventDefault();
+            cbpMatrixSelected.PerformCallback('refresh');
+        }
+    });
+
+    $('#txtMatrixFilterAvailable').live('keypress', function (e) {
+        var code = (e.keyCode ? e.keyCode : e.which);
+        if (code == 13) {
+            $('#<%=hdnAvailableSearchText.ClientID %>').val($(this).val());
+            e.preventDefault();
+            cbpMatrixAvailable.PerformCallback('refresh');
+        }
+    });
+
+    $(function(){
+        $('#btnMatrixMoveRightAll').click(function(){
+            cbpMatrixProcess.PerformCallback('rightAll');
+        });
+        $('#btnMatrixMoveRight').click(function(){
+            cbpMatrixProcess.PerformCallback('right|' + getCheckedAvailable());
+        });
+        $('#btnMatrixMoveLeft').click(function(){
+            cbpMatrixProcess.PerformCallback('left|' + getCheckedSelected());
+        });
+        $('#btnMatrixMoveLeftAll').click(function(){
+            cbpMatrixProcess.PerformCallback('leftAll');
+        });
+        $('#btnSaveMatrix').click(function(){
+            cbpMatrixProcess.PerformCallback('save');
+        });
+
+        $('#<%=ddlHealthcare.ClientID %>').change(function(){    
+            $('#<%=hdnSelectedHealthcare.ClientID %>').val($(this).val());
+            
+            cbpMatrixAvailable.PerformCallback('refresh');
+            cbpMatrixSelected.PerformCallback('refresh');
+        });
+        
+        addMatrixAvailableFilterRow();
+        addMatrixSelectedFilterRow();
+    });
+
+    function onCbpMatrixProcessEndCallback(s) {
+        hideLoadingPanel();
+        var param = s.cpResult.split('|')
+        if(param[0] == 'save'){
+            if (param[1] == 'success')
+                pcRightPanelContent.Hide();
+            else
+                showToast('Save Failed', 'Error Message : ' + param[2]);
+        }
+        else{
+            cbpMatrixAvailable.PerformCallback('refresh');
+            cbpMatrixSelected.PerformCallback('refresh');
+        }
+    }
+
+    //#region Paging Available
+    var pageCountAvailable = parseInt('<%=PageCountAvailable %>');
+    function getCheckedAvailable(){
+        var result = '';
+        $('#<%=grdAvailable.ClientID %> input:checked').each(function() {
+            if(result != '')
+                result += ';';
+            result += $(this).closest('tr').find('.keyField').html();
+        });
+        return result;
+    }
+
+    $(function () {
+        setPaging($("#pagingMatrixAvailable"), pageCountAvailable, function(page){
+            cbpMatrixAvailable.PerformCallback('changepage|' + page + '|' + getCheckedAvailable());
+        }, 8);
+    });
+
+    function onCbpMatrixAvailableEndCallback(s) {
+        $('#containerImgLoadingMatrixAvailable').hide();
+
+        var param = s.cpResult.split('|');
+        if(param[0] == 'refresh'){
+            var pageCount = parseInt(param[1]);
+            if (pageCount > 0)
+                $('#<%=grdAvailable.ClientID %> tr:eq(1)').click();
+
+            setPaging($("#pagingMatrixAvailable"), pageCount, function(page){
+                cbpMatrixAvailable.PerformCallback('changepage|' + page + '|' + getCheckedAvailable());
+            }, 8);
+            $('#<%=hdnCheckedAvailable.ClientID %>').val('');
+        }
+        else{
+            $('#<%=hdnCheckedAvailable.ClientID %>').val(s.cpCheckedAvailable);
+            $('#<%=grdAvailable.ClientID %> tr:eq(1)').click();
+        }
+
+        addMatrixAvailableFilterRow();
+    }
+    //#endregion
+
+    //#region Paging Selected
+    var pageCountSelected = parseInt('<%=PageCountSelected %>');
+    function getCheckedSelected(){
+        var result = '';
+        $('#<%=grdSelected.ClientID %> input:checked').each(function() {
+            if(result != '')
+                result += ';';
+            result += $(this).closest('tr').find('.keyField').html();
+        });
+        return result;
+    }
+
+    $(function () {
+        setPaging($("#pagingMatrixSelected"), pageCountSelected, function(page){
+            cbpMatrixSelected.PerformCallback('changepage|' + page + '|' + getCheckedSelected());
+        }, 8);
+    });
+
+    function onCbpMatrixSelectedEndCallback(s) {
+        $('#containerImgLoadingMatrixSelected').hide();
+
+        var param = s.cpResult.split('|');
+        if(param[0] == 'refresh'){
+            var pageCount = parseInt(param[1]);
+            if (pageCount > 0)
+                $('#<%=grdSelected.ClientID %> tr:eq(1)').click();
+
+            setPaging($("#pagingMatrixSelected"), pageCount, function(page){
+                cbpMatrixSelected.PerformCallback('changepage|' + page + '|' + getCheckedSelected());
+            }, 8);
+            $('#<%=hdnCheckedSelected.ClientID %>').val('');
+        }
+        else{
+            $('#<%=hdnCheckedSelected.ClientID %>').val(s.cpCheckedSelected);
+            $('#<%=grdSelected.ClientID %> tr:eq(1)').click();
+        }
+
+        addMatrixSelectedFilterRow();
+    }
+    //#endregion
+    
+</script>
+<input type="hidden" value="" runat="server" id="hdnCheckedAvailable" />
+<input type="hidden" value="" runat="server" id="hdnCheckedSelected" />
+<input type="hidden" value="" runat="server" id="hdnParam" />
+
+
+<input type="hidden" value="" runat="server" id="hdnAvailableSearchText" />
+<input type="hidden" value="" runat="server" id="hdnSelectedSearchText" />
+<input type="hidden" value="" runat="server" id="hdnSelectedHealthcare" />
+
+<table class="tblEntryContent" style="width:70%">
+    <colgroup>
+        <col style="width:160px"/>
+        <col/>
+    </colgroup>
+    <tr>
+        <td class="tdLabel"><label class="lblNormal" id="lblHeader" runat="server"><%=GetLabel("Profil Pengguna")%></label></td>
+        <td colspan="2"><asp:TextBox ID="txtHeader" ReadOnly="true" Width="100%" runat="server" /></td>
+    </tr>  
+    <tr id="trMatrixHeader2">
+        <td class="tdLabel"><label class="lblNormal" id="lblHeader2" runat="server" ><%=GetLabel("Rumah Sakit")%></label></td>
+        <td colspan="2"><asp:DropDownList ID="ddlHealthcare" ReadOnly="true" Width="100%" runat="server" /></td>
+    </tr>  
+</table>
+
+<table style="width:100%">
+    <colgroup>
+        <col width="45%" />
+        <col />
+        <col width="45%" />
+    </colgroup>
+    <tr>
+        <td valign="top">
+            <h4><%=GetLabel("Available")%></h4>
+            <div style="position: relative;">
+                <dxcp:ASPxCallbackPanel ID="cbpMatrixAvailable" runat="server" Width="100%" ClientInstanceName="cbpMatrixAvailable"
+                    ShowLoadingPanel="false" OnCallback="cbpMatrixAvailable_Callback">
+                    <ClientSideEvents BeginCallback="function(s,e){ $('#containerImgLoadingMatrixAvailable').show(); }"
+                        EndCallback="function(s,e){ onCbpMatrixAvailableEndCallback(s); }" />
+                    <PanelCollection>
+                        <dx:PanelContent ID="PanelContent1" runat="server">
+                            <asp:Panel runat="server" ID="pnlPatientVisitTransHdGrdView" Style="width: 100%; margin-left: auto; margin-right: auto; position: relative;font-size:0.95em;height: 266px;overflow-y:auto; ">
+                                <asp:GridView ID="grdAvailable" runat="server" CssClass="grdView notAllowSelect" AutoGenerateColumns="false" ShowHeaderWhenEmpty="true" EmptyDataRowStyle-CssClass="trEmpty">
+                                    <Columns>
+                                        <asp:TemplateField HeaderStyle-Width="70px" ItemStyle-HorizontalAlign="Center">
+                                            <ItemTemplate>
+                                                <asp:CheckBox ID="CheckBox1" Checked='<%#: DataBinder.Eval(Container, "DataItem.IsChecked") %>' runat="server" CssClass="chkAvailable" />
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:BoundField DataField="UserID" ItemStyle-CssClass="keyField" HeaderStyle-CssClass="keyField"  />
+                                        <asp:BoundField DataField="UserName" HeaderText="Nama" />
+                                    </Columns>
+                                    <EmptyDataTemplate>
+                                        <%=GetLabel("Data Tidak Tersedia")%>
+                                    </EmptyDataTemplate>
+                                </asp:GridView>
+                            </asp:Panel>
+                        </dx:PanelContent>
+                    </PanelCollection>
+                </dxcp:ASPxCallbackPanel>
+                <div class="imgLoadingGrdView" id="containerImgLoadingMatrixAvailable">
+                    <img src='<%= ResolveUrl("~/Libs/Images/loading_small.gif")%>' alt='' />
+                </div>
+                <div class="containerPaging">
+                    <div class="wrapperPaging">
+                        <div id="pagingMatrixAvailable"></div>
+                    </div>
+                </div> 
+            </div>
+        </td>
+        <td align="center">
+            <input type="button" value=">>" id="btnMatrixMoveRightAll" style="width:70px"/> <br /><br />
+            <input type="button" value=">" id="btnMatrixMoveRight" style="width:70px;margin-bottom:2px;"/> <br />
+            <input type="button" value="<" id="btnMatrixMoveLeft" style="width:70px"/> <br /><br />
+            <input type="button" value="<<" id="btnMatrixMoveLeftAll" style="width:70px"/>
+        </td>
+        <td valign="top">
+            <h4><%=GetLabel("Selected")%></h4>
+            <div style="position: relative;">
+                <input type="hidden" value="" runat="server" id="Hidden1" />
+                <input type="hidden" value="" runat="server" id="Hidden2" />
+                <dxcp:ASPxCallbackPanel ID="cbpMatrixSelected" runat="server" Width="100%" ClientInstanceName="cbpMatrixSelected"
+                    ShowLoadingPanel="false" OnCallback="cbpMatrixSelected_Callback">
+                    <ClientSideEvents BeginCallback="function(s,e){ $('#containerImgLoadingMatrixSelected').show(); }"
+                        EndCallback="function(s,e){ onCbpMatrixSelectedEndCallback(s); }" />
+                    <PanelCollection>
+                        <dx:PanelContent ID="PanelContent2" runat="server">
+                            <asp:Panel runat="server" ID="Panel1" Style="width: 100%; margin-left: auto; margin-right: auto; position: relative;font-size:0.95em;height: 266px;overflow-y:auto;">
+                                <asp:GridView ID="grdSelected" runat="server" CssClass="grdView notAllowSelect" AutoGenerateColumns="false" ShowHeaderWhenEmpty="true" EmptyDataRowStyle-CssClass="trEmpty">
+                                    <Columns>
+                                        <asp:TemplateField HeaderStyle-Width="70px" ItemStyle-HorizontalAlign="Center">
+                                            <ItemTemplate>
+                                                <asp:CheckBox ID="CheckBox1" Checked='<%#: DataBinder.Eval(Container, "DataItem.IsChecked") %>' runat="server" CssClass="chkSelected" />
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:BoundField DataField="UserID" ItemStyle-CssClass="keyField" HeaderStyle-CssClass="keyField"  />
+                                        <asp:BoundField DataField="UserName" HeaderText="Nama" />
+                                    </Columns>
+                                    <EmptyDataTemplate>
+                                        <%=GetLabel("Data Tidak Tersedia")%>
+                                    </EmptyDataTemplate>
+                                </asp:GridView>
+                            </asp:Panel>
+                        </dx:PanelContent>
+                    </PanelCollection>
+                </dxcp:ASPxCallbackPanel>
+                <div class="imgLoadingGrdView" id="containerImgLoadingMatrixSelected">
+                    <img src='<%= ResolveUrl("~/Libs/Images/loading_small.gif")%>' alt='' />
+                </div>
+                <div class="containerPaging">
+                    <div class="wrapperPaging">
+                        <div id="pagingMatrixSelected"></div>
+                    </div>
+                </div> 
+            </div>
+        </td>
+    </tr>
+</table>
+<dxcp:ASPxCallbackPanel ID="cbpMatrixProcess" runat="server" Width="100%" ClientInstanceName="cbpMatrixProcess"
+    ShowLoadingPanel="false" OnCallback="cbpMatrixProcess_Callback">
+    <ClientSideEvents BeginCallback="function(s,e){ showLoadingPanel(); }" EndCallback="function(s,e){ onCbpMatrixProcessEndCallback(s); }" />
+</dxcp:ASPxCallbackPanel>
+<div style="width:100%;text-align:center">
+    <table style="margin-left: auto; margin-right: auto; margin-top: 10px;">
+        <tr>
+            <td><input type="button" value='<%= GetLabel("Simpan")%>' style="width:70px" id="btnSaveMatrix" /></td>
+            <td><input type="button" value='<%= GetLabel("Tutup")%>' style="width:70px" onclick="pcRightPanelContent.Hide();" /></td>
+        </tr>
+    </table>
+</div>
+
+

@@ -1,0 +1,28 @@
+﻿^XA
+^LL320
+^PW630
+^LH2,1
+^CF036,36
+^FO195,30^FD{MedicalNo}^FS
+^CF026,26
+^FO2,80^FDNama^FS
+^FO181,80^FD:^FS
+^FO201,80^FD{PatientName}  ({Sex})^FS
+^CF026,26
+^FO2,120^FDTanggal Lahir^FS
+^FO181,120^FD:^FS
+^FO201,120^FD{DateOfBirthInString}^FS
+^FO2,160^FDNo. Registrasi^FS
+^FO181,160^FD:^FS
+^FO201,160^FD{RegistrationNo}^FS
+^FO2,200^FDTgl. Registrasi^FS
+^FO181,200^FD:^FS
+^FO201,200^FD{ActualVisitDateInString}^FS
+^FO2,240^FDDokter^FS
+^FO181,240^FD:^FS
+^FO201,240^FD{ParamedicName}^FS
+^FO2,280^FDLokasi Pasien^FS
+^FO181,280^FD:^FS
+^FO201,280^FD{ServiceUnitName}^FS
+^FO2,300^FD..............................................................................^FS
+^XZ

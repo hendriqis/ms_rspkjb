@@ -1,0 +1,124 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Libs/MasterPage/MPBase.Master" AutoEventWireup="true" 
+    CodeBehind="MPPatientDataPage.master.cs" Inherits="QIS.Medinfras.Web.EMR.MasterPage.MPPatientDataPage" %>
+
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dxpc" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="plhMPBase" runat="server">
+    <script type="text/javascript">
+        $(function () {
+            Methods.checkImageError('imgPatientProfilePicture', 'patient', 'hdnPatientGender');
+
+            $('#imgModuleHome').click(function () {
+                document.location = '<%=ResolveUrl("~/Libs/Program/Main.aspx")%>';
+            });
+
+            $('#imgBackPatientPage').click(function () {
+                exitPatientPage();
+            });
+
+            $('#ulPatientPageHeader li').click(function () {
+                showLoadingPanel();
+                document.location = ResolveUrl($(this).attr('url'));
+            });
+
+            $('#ulTabMenuChild li').click(function () {
+                showLoadingPanel();
+                document.location = ResolveUrl($(this).attr('url'));
+            });
+        });
+
+        function setPatientPagePicture(src) {
+            $('#<%=imgPatientProfilePicture.ClientID %>').attr('src', src);
+        }
+
+        function exitPatientPage() {
+            showLoadingPanel();
+            document.location = '<%=urlReferrer %>';
+        }
+
+        
+    </script>
+    <style type="text/css">        
+        .dxm-item:hover                     { background-color: #CBCBCB; border:1px solid #888888; } 
+        
+        body                                { background-color: White; }
+    </style>
+    <div class="borderBox" style="height: 650px">
+        <div style="height: 145px;padding:5px;">
+            <div style="height: 80px;">
+                <div style="float:left;margin:5px 0 0 5px;position: relative;">
+                    <img id="imgPatientProfilePicture" class="imgPatientProfilePicture" runat="server" src='' alt="" width="55" height="65" />
+                    <input type="hidden" id="hdnPatientGender" runat="server" class="hdnPatientGender" />
+                </div>
+                <table class="tblPatientBannerInfo" style="margin-left: 50px" cellpadding="0" cellspacing="0" >
+                    <col style="width:100px"/>
+                    <col style="width:145px"/>
+                    <col style="width:100px"/>
+                    <col style="width:180px"/>
+                    <col style="width:100px"/>
+                    <col style="width:240px"/>
+                    <tr style="font-size:1.2em">
+                        <td colspan="3" style="padding-left:20px"><label id="lblPatientName" runat="server" style="font-weight:bold"></label></td>
+                    </tr>
+                    <tr>
+                        <td class="tdPatientBannerLabel"><%=GetLabel("MRN")%></td>
+                        <td><label id="lblMRN" runat="server"></label></td>
+                        <td class="tdPatientBannerLabel"><%=GetLabel("DOB")%></td>
+                        <td><label id="lblDOB" runat="server"></label></td>
+                    </tr>
+                    <tr>
+                        <td class="tdPatientBannerLabel"><%=GetLabel("Allergy")%></td>
+                        <td><label id="lblAllergy" runat="server" style="color:Red;font-weight:bold"></label></td>
+                        <td class="tdPatientBannerLabel"><%=GetLabel("Age")%></td>
+                        <td><label id="lblPatientAge" runat="server"></label></td>
+                    </tr>
+                    <tr>
+                        <td class="tdPatientBannerLabel"><%=GetLabel("Note")%></td>
+                        <td><label id="lblNote" runat="server"></label></td>
+                        <td class="tdPatientBannerLabel"><%=GetLabel("Gender")%></td>
+                        <td><label id="lblGender" runat="server"></label></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="pageTitle" style="height:43px; margin-top: 5px;">
+                <img class="imgLink" id="imgBackPatientPage" src='<%= ResolveUrl("~/Libs/Images/Icon/back.png")%>' alt="" style="float:left; margin-top: 3px;" title="<%=GetLabel("Back")%>" />
+                <asp:Repeater ID="rptMenuHeader" runat="server" OnItemDataBound="rptMenuHeader_ItemDataBound">
+                    <HeaderTemplate>
+                        <ul id="ulPatientPageHeader" class="ulNavigationPane">
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <li ID="liCaption" runat="server"><%#:Eval("MenuCaption") %></li>
+                    </ItemTemplate>
+                    <FooterTemplate>
+                        </ul>
+                    </FooterTemplate>
+                </asp:Repeater>
+            </div>
+
+            <div class="containerUlTabPage">
+                <asp:Repeater ID="rptMenuChild" runat="server" OnItemDataBound="rptMenuChild_ItemDataBound">
+                    <HeaderTemplate>
+                        <ul class="ulTabPage" id="ulTabMenuChild">
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <li ID="liCaption" runat="server" url='<%#:Eval("MenuUrl") %>'><%#:Eval("MenuCaption") %></li>
+                    </ItemTemplate>
+                    <FooterTemplate>
+                        </ul>
+                    </FooterTemplate>
+                </asp:Repeater>
+            </div>
+            <div style="clear:both; padding: 5px;" class="borderBox" >
+                <asp:ContentPlaceHolder ID="plhMPPatientPage" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+</asp:Content>

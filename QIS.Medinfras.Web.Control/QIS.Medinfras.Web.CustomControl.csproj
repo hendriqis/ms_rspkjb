@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A61E72CD-A2CE-42EF-BBD5-9657CC3C8E9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QIS.Medinfras.Web.CustomControl</RootNamespace>
+    <AssemblyName>QIS.Medinfras.Web.CustomControl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Nonshipping>true</Nonshipping>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 2011.1\Components\Sources\DevExpress.DLL\DevExpress.Web.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="QISIntellisenseTextBox1.cs" />
+    <Compile Include="QISQuickEntryProperties\QISQuickEntryHintColumn.cs" />
+    <Compile Include="QISQuickEntryProperties\QISQuickEntryHint.cs" />
+    <Compile Include="QISQuickEntryProperties\QISQuickEntryClientSideEvent.cs" />
+    <Compile Include="QISQuickEntry.cs" />
+    <Compile Include="QISSearchTextBox.cs" />
+    <Compile Include="QISIntellisenseTextBox.cs" />
+    <Compile Include="QISGridView.cs" />
+    <Compile Include="QISGridViewProperties\QISGridViewClientSideEvent.cs" />
+    <Compile Include="QISGridViewProperties\QISGridViewColumn.cs" />
+    <Compile Include="QISGridViewProperties\QISDataSourceBusinessLayer.cs" />
+    <Compile Include="QISGridViewProperties\QISGridViewSetting.cs" />
+    <Compile Include="QISIntellisenseTextBoxProperties\QISIntellisenseTextBoxClientSideEvent.cs" />
+    <Compile Include="QISIntellisenseTextBoxProperties\QISIntellisenseHint.cs" />
+    <Compile Include="QISSearchTextBoxProperties\QISSearchTextBoxClientSideEvent.cs" />
+    <Compile Include="QISSearchTextBoxProperties\QISSearchTextBoxColumn.cs" />
+    <Compile Include="ServerControl1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QIS.Medinfras.Data.Service\QIS.Medinfras.Data.Service.csproj">
+      <Project>{E8019F76-DE58-43A7-984C-A1272D62EA45}</Project>
+      <Name>QIS.Medinfras.Data.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

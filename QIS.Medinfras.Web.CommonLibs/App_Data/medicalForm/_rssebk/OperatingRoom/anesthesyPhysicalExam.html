@@ -1,0 +1,491 @@
+<head>
+    <style type="text/css">     
+        .txtForm:disabled {
+          border-color:#dfe6e9;
+          background-color:#dfe6e9;
+        }              
+    </style>
+</head>
+<script language="javascript" type="text/javascript" id="eForm_anesthesyPhysicalExam">
+    $(function () {
+        $("#chkForm4").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtForm3").prop("disabled", false);
+            }
+            else {
+                $("#txtForm3").prop("disabled", true);
+                $("#txtForm3").val("");
+            }
+        });
+
+        $("#chkForm24").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtForm1").prop("disabled", false);
+            }
+            else {
+                $("#txtForm1").prop("disabled", true);
+                $("#txtForm1").val("");
+            }
+        });
+
+        $("#chkForm49").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtForm2").prop("disabled", false);
+            }
+            else {
+                $("#txtForm2").prop("disabled", true);
+                $("#txtForm2").val("");
+            }
+        });
+
+        $("#chkForm56").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtForm4").prop("disabled", false);
+            }
+            else {
+                $("#txtForm4").prop("disabled", true);
+                $("#txtForm4").val("");
+            }
+        });
+
+        $("#chkForm58").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtForm5").prop("disabled", false);
+            }
+            else {
+                $("#txtForm5").prop("disabled", true);
+                $("#txtForm5").val("");
+            }
+        });
+
+        $("#chkForm59").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtForm6").prop("disabled", false);
+            }
+            else {
+                $("#txtForm6").prop("disabled", true);
+                $("#txtForm6").val("");
+            }
+        });
+
+        $("#chkForm60").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtForm7").prop("disabled", false);
+            }
+            else {
+                $("#txtForm7").prop("disabled", true);
+                $("#txtForm7").val("");
+            }
+        });
+
+        $("#chkForm61").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtForm8").prop("disabled", false);
+            }
+            else {
+                $("#txtForm8").prop("disabled", true);
+                $("#txtForm8").val("");
+            }
+        });
+
+        $("#chkForm62").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtForm9").prop("disabled", false);
+            }
+            else {
+                $("#txtForm9").prop("disabled", true);
+                $("#txtForm9").val("");
+            }
+        });
+
+        $("#chkForm63").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtForm10").prop("disabled", false);
+            }
+            else {
+                $("#txtForm10").prop("disabled", true);
+                $("#txtForm10").val("");
+            }
+        });
+
+        $("#chkForm6").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkFormGroup2").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                });
+            }
+            else {
+                $(".chkFormGroup2").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+        });
+
+        $("#chkForm11").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkFormGroup3").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                });
+            }
+            else {
+                $(".chkFormGroup3").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+        });
+
+        $("#chkForm20").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkFormGroup4").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $("#txtForm1").prop("disabled", true);
+                    $("#txtForm1").val("");
+                });
+            }
+            else {
+                $(".chkFormGroup4").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+        });
+
+        $("#chkForm26").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkFormGroup5").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                });
+            }
+            else {
+                $(".chkFormGroup5").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+        });
+
+        $("#chkForm32").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkFormGroup6").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                });
+            }
+            else {
+                $(".chkFormGroup6").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+        });
+
+        $("#chkForm42").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkFormGroup7").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                });
+            }
+            else {
+                $(".chkFormGroup7").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+        });
+
+        $("#chkForm47").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkFormGroup8").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $("#txtForm2").prop("disabled", true);
+                    $("#txtForm4").prop("disabled", true);
+                    $("#txtForm2").val("");
+                    $("#txtForm4").val("");
+                });
+            }
+            else {
+                $(".chkFormGroup8").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+        });
+
+        $("#chkForm6").change();
+        $("#chkForm11").change();
+        $("#chkForm20").change();
+        $("#chkForm32").change();
+        $("#chkForm42").change();
+        $("#chkForm47").change();
+    });
+
+</script>
+
+<div id="Div1" class="w3-container w3-border w3-animate-left peGroup">
+    <table border="0" cellpadding="1" cellspacing="0" style="width:100%;">
+        <colgroup>
+            <col width="125px" />
+            <col width="125px" />
+            <col width="125px" />
+            <col width="125px" />
+            <col />
+        </colgroup>
+        <tr>
+            <td colspan="4"><div style="font-weight:bold">Gigi</div></td>
+        </tr>
+        <tr>
+            <td> <input type="checkbox" class="chkForm chkFormGroup1" controlID="chkForm1"/> Normal</td>
+            <td> <input type="checkbox" class="chkForm chkFormGroup1" controlID="chkForm2"/> Berlubang</td>
+            <td> <input type="checkbox" class="chkForm chkFormGroup1" controlID="chkForm3"/> Hilang</td>
+            <td> <input type="checkbox" id="chkForm4" class="chkForm chkFormGroup1" controlID="chkForm4"/> Lainnya</td>
+            <td> <input type="text" id="txtForm3" class="txtForm" controlID="txtForm3" style="width:150px; text-align:left" disabled="disabled"/></td>
+        </tr>
+        <tr>
+            <td colspan="4"> <input type="checkbox" class="chkForm" controlID="chkForm5"/> Tambalan</td>
+        </tr>
+        <tr>
+            <td style="padding-left:25px"> <input type="radio" class="optForm" name="optGroup" controlID="optGroup1"/> Full</td>
+            <td colspan="2"> 
+                <table border="0" cellpadding="0" cellspacing="1">
+                    <tr>
+                        <td><input type="radio" class="optForm" name="optFormGroup1" controlID="optForm1"/> Atas</td>
+                        <td><input type="radio" class="optForm" name="optFormGroup1" controlID="optForm2"/> Bawah</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-left:25px"> <input type="radio" class="optForm" name="optGroup" controlID="optGroup2"/> Partial</td>
+            <td colspan="2"> 
+                <table border="0" cellpadding="0" cellspacing="1">
+                    <tr>
+                        <td><input type="radio" class="optForm" name="optFormGroup2" controlID="optForm3"/> Atas</td>
+                        <td><input type="radio" class="optForm" name="optFormGroup2" controlID="optForm4"/> Bawah</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+        </tr>
+        <tr>
+            <td colspan="4"><div style="font-weight:bold">Kepala dan Leher / Jalan Nafas</div></td>
+            <td> <input type="checkbox" id="chkForm6" class="chkForm" controlID="chkForm6"/> DBN</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup2" controlID="chkForm7"/> Kacamata</td>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup2" controlID="chkForm8"/> Masalah Leher</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup2" controlID="chkForm9"/> Lensa Kontak</td>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup2" controlID="chkForm10"/> trimus</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" id="chkForm58" class="chkForm chkFormGroup2" controlID="chkForm58"/> Lainnya
+            </td>
+            <td> <input type="text" id="txtForm5" class="txtForm" controlID="txtForm5" style="width:150px; text-align:left" disabled="disabled" ></td>
+        </tr>
+        <tr>
+            <td colspan="4"><div style="font-weight:bold">Jantung dan Pembuluh Darah</div></td>
+            <td> <input type="checkbox" id="chkForm11" class="chkForm" controlID="chkForm11"/> DBN</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup3" controlID="chkForm12"/> Angina Pectoris/Mokard Infark</td>
+            <td colspan="3"> <input type="checkbox" class="chkForm chkFormGroup3" controlID="chkForm13"/> Tekanan Darah Tinggi</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup3" controlID="chkForm14"/> ASHD / CAD</td>
+            <td colspan="3"> <input type="checkbox" class="chkForm chkFormGroup3" controlID="chkForm15"/> dyslipidemia</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup3" controlID="chkForm16"/> PND / Orthopnea / CHF</td>
+            <td colspan="3"> <input type="checkbox" class="chkForm chkFormGroup3" controlID="chkForm17"/> Alat Pacu Jantung</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup3" controlID="chkForm18"/> Gangguan Ritme Jantung</td>
+            <td colspan="3"> <input type="checkbox" class="chkForm chkFormGroup3" controlID="chkForm19"/> Kelainan Katup Jantung</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" id="chkForm59" class="chkForm chkFormGroup3" controlID="chkForm59"/> Lainnya
+            </td>
+            <td> <input type="text" id="txtForm6"  class="txtForm" controlID="txtForm6" style="width:150px; text-align:left" disabled="disabled"/></td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+        </tr>
+        <tr>
+            <td colspan="4"><div style="font-weight:bold">Pernafasan</div></td>
+            <td> <input type="checkbox" id="chkForm20" class="chkForm" controlID="chkForm20"/> DBN</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup4" controlID="chkForm21"/> Asma Bronkiale</td>
+            <td colspan="3"> <input type="checkbox" class="chkForm chkFormGroup4" controlID="chkForm22"/> Obstructive Sleep Apnea</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup4" controlID="chkForm23"/> Penyakit Paru Obstruktif Menahun</td>
+            <td colspan="3">
+                <table border="0" cellpadding="1" cellspacing="0">
+                    <tr>
+                        <td> <input type="checkbox" id="chkForm24" class="chkForm chkFormGroup4" controlID="chkForm24"/> Perokok</td>
+                        <td style="padding-left:10px"> <input type="text" id="txtForm1" class="txtForm" controlID="txtForm1" style="width:50px; text-align:right" disabled="disabled"/> packs/hari</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup4" controlID="chkForm24"/> Infeksi Saluran Nafas Atas</td>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup4" controlID="chkForm25"/> Mantan perokok</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" id="chkForm60" class="chkForm chkFormGroup4" controlID="chkForm60"/> Lainnya
+            </td>
+            <td> <input type="text" id="txtForm7" class="txtForm" controlID="txtForm7" style="width:150px; text-align:left" disabled="disabled"/></td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+        </tr>
+        <tr>
+            <td colspan="4"><div style="font-weight:bold">Hati dan Saluran Pencernaan</div></td>
+            <td> <input type="checkbox" id="chkForm26" class="chkForm" controlID="chkForm26"/> DBN</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup5" controlID="chkForm27"/> Hiatal hernia / GERD</td>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup5" controlID="chkForm28"/> Mual / Muntah</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup5" controlID="chkForm29"/> Drug / Alcohol Abuse</td>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup5" controlID="chkForm30"/> Ulcers</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup5" controlID="chkForm31"/> Penyakit Liver</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" id="chkForm61" class="chkForm chkFormGroup5" controlID="chkForm61"/> Lainnya
+            </td>
+            <td> <input type="text" id="txtForm8" class="txtForm" controlID="txtForm8" style="width:150px; text-align:left" disabled="disabled"/></td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+        </tr>
+        <tr>
+            <td colspan="4"><div style="font-weight:bold">Sistem Saraf, Otot dan Kerangka</div></td>
+            <td> <input type="checkbox" id="chkForm32" class="chkForm" controlID="chkForm32"/> DBN</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup6" controlID="chkForm33"/> Arthritis</td>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup6" controlID="chkForm34"/> Neuropathy</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup6" controlID="chkForm35"/> CVA / TIA / Stroke</td>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup6" controlID="chkForm36"/> Kelumpuhan</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup6" controlID="chkForm37"/> Sakit Kepala</td>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup6" controlID="chkForm38"/> Kejang</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup6" controlID="chkForm39"/> Kelemahan Otot</td>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup6" controlID="chkForm40"/> Malignant Hyperthermia</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup6" controlID="chkForm41"/> Penyakit Neuromuscular</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" id="chkForm62" class="chkForm chkFormGroup6" controlID="chkForm62"/> Lainnya
+            </td>
+            <td> <input type="text" id="txtForm9" class="txtForm" controlID="txtForm9" style="width:150px; text-align:left" disabled="disabled"/></td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+        </tr>
+        <tr>
+            <td colspan="4"><div style="font-weight:bold">Ginjal dan Sistem Hormon</div></td>
+            <td> <input type="checkbox" id="chkForm42" class="chkForm" controlID="chkForm42"/> DBN</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup7" controlID="chkForm43"/> Diabetes : NIDDM / IDDM</td>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup7" controlID="chkForm44"/> Pemakaian Steroid</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup7" controlID="chkForm45"/> Gagal Ginjal / Dialysis</td>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup7" controlID="chkForm46"/> Penyakit Kelenjar Gondok</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" id="chkForm63" class="chkForm chkFormGroup7" controlID="chkForm63"/> Lainnya
+            </td>
+            <td> <input type="text" id="txtForm10" class="txtForm" controlID="txtForm10" style="width:150px; text-align:left" disabled="disabled"/></td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+        </tr>
+        <tr>
+            <td colspan="4"><div style="font-weight:bold">Lain-lain</div></td>
+            <td> <input type="checkbox" id="chkForm47" class="chkForm" controlID="chkForm47"/> DBN</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup8" controlID="chkForm48"/> Coagulopathy</td>
+            <td colspan="3"> 
+                <table border="0" cellpadding="1" cellspacing="0">
+                    <tr>
+                        <td><input type="checkbox" id="chkForm49" class="chkForm chkFormGroup8" controlID="chkForm49"/> Kanker, Lokasi</td>
+                        <td style="padding-left:10px"><input type="text" id="txtForm2" class="txtForm" controlID="txtForm2" style="width:150px; text-align:left" disabled="disabled"/></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup8" controlID="chkForm51"/> Obesity</td>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup8" controlID="chkForm52"/> Kehamilan</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup8" controlID="chkForm53"/> Radiation</td>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup8" controlID="chkForm54"/> Psychiatric</td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm chkFormGroup8" controlID="chkForm55"/> Chemotheraphy</td>
+            <td colspan="3"> 
+                <table border="0" cellpadding="1" cellspacing="0">
+                    <tr>
+                        <td><input type="checkbox" id="chkForm56" class="chkForm chkFormGroup8" controlID="chkForm56"/> Lain-lain</td>
+                        <td style="padding-left:45px"><input type="text" id="txtForm4" class="txtForm" controlID="txtForm4" style="width:150px; text-align:left" disabled="disabled"/></td>
+                    </tr>
+                </table>               
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+        </tr>
+        <tr>
+            <td colspan="4"><div style="font-weight:bold">Riwayat Transfusi darah atau komponen darah</div></td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm" controlID="chkForm57"/> Riwayat Transfusi</td>
+            <td colspan="2"> 
+                <table border="0" cellpadding="0" cellspacing="1">
+                    <tr>
+                        <td><input type="radio" class="optForm" name="optFormGroup3" controlID="optForm5"/> Ya</td>
+                        <td><input type="radio" class="optForm" name="optFormGroup3" controlID="optForm6"/> Tidak</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="checkbox" class="chkForm" controlID="chkForm58"/> Bersedia ditransfusi</td>
+            <td colspan="2"> 
+                <table border="0" cellpadding="0" cellspacing="1">
+                    <tr>
+                        <td><input type="radio" class="optForm" name="optFormGroup4" controlID="optForm7"/> Ya</td>
+                        <td><input type="radio" class="optForm" name="optFormGroup4" controlID="optForm8"/> Tidak</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>

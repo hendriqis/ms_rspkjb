@@ -1,0 +1,187 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+
+    var p1 = 0;
+    var p2 = 0;
+    var p3 = 0;
+    var p4 = 0;
+    var p5 = 0;
+
+    $(function () {
+        $("#ddlFace").change(function () {
+            $("#txtParamScore1").val($(this).val());
+            p1 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlLegs").change(function () {
+            $("#txtParamScore2").val($(this).val());
+            p2 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlActivity").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            p3 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlCry").change(function () {
+            $("#txtParamScore4").val($(this).val());
+            p4 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlConsolability").change(function () {
+            $("#txtParamScore5").val($(this).val());
+            p5 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlFace").change();
+        $("#ddlLegs").change();
+        $("#ddlActivity").change();
+        $("#ddlCry").change();
+        $("#ddlConsolability").change();
+    });
+
+    function CalculateTotalScore() {
+        var score = p1 + p2 + p3 + p4 + p5;
+        var value = parseInt(score);
+        var scoreType = 'Tidak ada nyeri';
+
+        if (value >= 1 && value <= 3) {
+            scoreType = "Nyeri Ringan";
+        }
+        else if (value >= 4 && value <= 6) {
+            scoreType = "Nyeri Sedang";
+        }
+        else if (value >= 7 && value <= 10) {
+            scoreType = "Nyeri Berat";
+        }
+        else {
+            scoreType = "Tidak ada Nyeri";
+        }
+
+        var result = score + '|' + scoreType;
+        SetTotalScore(result);
+    }
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <colgroup>
+                <col width="250px" />
+                <col width="600px" />
+                <col width="10px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="3">
+                    <label style="font-weight:bold; text-decoration:underline">FLACC SCALE (Face, Legs, Activity, Cry, Consolability)</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    </br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Face / Wajah</label>
+                </td>
+                <td>
+                    <select id="ddlFace" style="width:100%" class="ddlForm" controlID = "ddlFace">
+                        <option value="0" selected>Tidak ada ekspresi tertentu atau senyum</option>
+                        <option value="1">Sesekali meringis atau mengerutkan kening</option>
+                        <option value="2">Sering untuk cemberut, rahang terkatup, dagu bergetar tertarik</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px" class="txtForm" controlID = "txtParamScore1" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Legs / Kaki</label>
+                </td>
+                <td>
+                    <select id="ddlLegs" style="width:100%" class="ddlForm" controlID = "ddlLegs">
+                        <option value="0" selected>Normal posisi atau santai</option>
+                        <option value="1">Tidak nyaman, gelisah, tegang</option>
+                        <option value="2">Menendang, atau kaki disusun</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px" class="txtForm" controlID = "txtParamScore2" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Activity / Aktivitas</label>
+                </td>
+                <td>
+                    <select id="ddlActivity" style="width:100%" class="ddlForm" controlID = "ddlActivity">
+                        <option value="0" selected>Berbaring dengan tenang, posisi normal, bergerak dengan mudah</option>
+                        <option value="1">Menggeliat, menggeser maju mundur, tegang</option>
+                        <option value="2">Kaku / menyentak</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px" class="txtForm" controlID = "txtParamScore3" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Cry / Menangis</label>
+                </td>
+                <td>
+                    <select id="ddlCry" style="width:100%" class="ddlForm" controlID = "ddlCry">
+                        <option value="0" selected>Tidak ada teriakan (terjaga atau tertidur)</option>
+                        <option value="1">Erangan atau rengekan, keluhan sesekali</option>
+                        <option value="2">Menangis terus, teriakan atau isak tangis, keluhan sering</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px" class="txtForm" controlID = "txtParamScore4" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Consolability / Konsolabilitas / Respon</label>
+                </td>
+                <td>
+                    <select id="ddlConsolability" style="width:100%" class="ddlForm" controlID = "ddlConsolability">
+                        <option value="0" selected>Tenang, santai</option>
+                        <option value="1">Bisa disentuh sesekali, memegang / memeluk</option>
+                        <option value="2">Sulit untuk disentuh / diajak bicara / dihibur, tidak nyaman</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px" class="txtForm" controlID = "txtParamScore5" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    </br>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+

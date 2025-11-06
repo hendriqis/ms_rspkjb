@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Libs/MasterPage/PatientPage/MPBasePatientPageListEntry.Master" AutoEventWireup="true" 
+    CodeBehind="MPMRPatientSOAP.Master.cs" Inherits="QIS.Medinfras.Web.CommonLibs.Program.MPMRPatientSOAP" %>
+
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dxpc" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="plhMPPatientPageNavigationPane" runat="server">
+    <ul id="ulPatientPageHeader" class="ulNavigationPane">
+        <li id="liToolbarPatientDiagnose" runat="server"><%=GetLabel("Patient Diagnose")%></li>
+        <li id="liToolbarPatientProcedure" runat="server"><%=GetLabel("Patient Procedure") %></li>
+        <li id="liToolbarSOAP" runat="server"><%=GetLabel("SOAP") %></li>
+        <li id="liToolbarPatientDischarge" runat="server"><%=GetLabel("Patient Discharge") %></li>
+    </ul>
+    <asp:ContentPlaceHolder ID="plhHeader" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>
+    
+<asp:Content ID="Content2" ContentPlaceHolderID="plhEntry" runat="server">          
+    <script type="text/javascript">
+        function onGetUrlReferrer() {
+            return ResolveUrl("~/Program/PatientList/VisitList.aspx?id=bs");
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="plhEntry" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>

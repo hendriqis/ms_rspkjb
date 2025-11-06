@@ -1,0 +1,1474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{20EE50BE-6D9E-48CE-B121-39ED665D8B16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QIS.Medinfras.Report</RootNamespace>
+    <AssemblyName>QIS.Medinfras.Report</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Reports.v11.1.Designer, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v11.1.Extensions, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.1.Extensions, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseRpt\BaseDailyPortraitRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseRpt\BaseDailyPortraitRpt.Designer.cs">
+      <DependentUpon>BaseDailyPortraitRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseRpt\BaseRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseRpt\BaseRpt.Designer.cs">
+      <DependentUpon>BaseRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseRpt\BaseDailyLandscapeRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseRpt\BaseDailyLandscapeRpt.Designer.cs">
+      <DependentUpon>BaseDailyLandscapeRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseRpt\BaseCustomPaperRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseRpt\BaseCustomPaperRpt.Designer.cs">
+      <DependentUpon>BaseCustomPaperRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emergency\BCatatanPerkembanganPasien.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emergency\BCatatanPerkembanganPasien.designer.cs">
+      <DependentUpon>BCatatanPerkembanganPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emergency\BLembarStatusIGD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emergency\BLembarStatusIGD.designer.cs">
+      <DependentUpon>BLembarStatusIGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emergency\LKecelakaanLaluLintas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emergency\LKecelakaanLaluLintas.Designer.cs">
+      <DependentUpon>LKecelakaanLaluLintas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LaporanItemTariff.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LaporanItemTariff.Designer.cs">
+      <DependentUpon>LaporanItemTariff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LHutangJatuhTempo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LHutangJatuhTempo.Designer.cs">
+      <DependentUpon>LHutangJatuhTempo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LHutangJatuhTempo1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LHutangJatuhTempo1.Designer.cs">
+      <DependentUpon>LHutangJatuhTempo1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LKartuHutang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LKartuHutang.Designer.cs">
+      <DependentUpon>LKartuHutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LMutasiHutang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LMutasiHutang.Designer.cs">
+      <DependentUpon>LMutasiHutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LPembayaranHutang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LPembayaranHutang.Designer.cs">
+      <DependentUpon>LPembayaranHutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LPenerimaanHarianPerShift.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LPenerimaanHarianPerShift.designer.cs">
+      <DependentUpon>LPenerimaanHarianPerShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LaporanItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LaporanItem.Designer.cs">
+      <DependentUpon>LaporanItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LHonorDokter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LHonorDokter.designer.cs">
+      <DependentUpon>LHonorDokter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LOutstandingPenerimaanPasien.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LOutstandingPenerimaanPasien.designer.cs">
+      <DependentUpon>LOutstandingPenerimaanPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LPendapatanPerDokter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LPendapatanPerDokter.designer.cs">
+      <DependentUpon>LPendapatanPerDokter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LPendapatanPerInstansiDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LPendapatanPerInstansiDetail.designer.cs">
+      <DependentUpon>LPendapatanPerInstansiDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LPendapatanPerInstansiRekap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LPendapatanPerInstansiRekap.designer.cs">
+      <DependentUpon>LPendapatanPerInstansiRekap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LPendapatanPerPelayanan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LPendapatanPerPelayanan.designer.cs">
+      <DependentUpon>LPendapatanPerPelayanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LPendapatanPerUnit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LPendapatanPerUnit.Designer.cs">
+      <DependentUpon>LPendapatanPerUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LPenerimaanHarianPerKasir.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LPenerimaanHarianPerKasir.designer.cs">
+      <DependentUpon>LPenerimaanHarianPerKasir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LPenerimaanHarianSemuaKasir.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LPenerimaanHarianSemuaKasir.designer.cs">
+      <DependentUpon>LPenerimaanHarianSemuaKasir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LPenerimaanHarianSemuaKasirRekap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LPenerimaanHarianSemuaKasirRekap.designer.cs">
+      <DependentUpon>LPenerimaanHarianSemuaKasirRekap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LStatusKeuanganPasien.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LStatusKeuanganPasien.designer.cs">
+      <DependentUpon>LStatusKeuanganPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LUmurHutang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\LUmurHutang.Designer.cs">
+      <DependentUpon>LUmurHutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LDistribusiBarang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LDistribusiBarang.Designer.cs">
+      <DependentUpon>LDistribusiBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LJumlahPersediaanPerGudangPerLokasi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LJumlahPersediaanPerGudangPerLokasi.Designer.cs">
+      <DependentUpon>LJumlahPersediaanPerGudangPerLokasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LKartuPersediaan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LKartuPersediaan.Designer.cs">
+      <DependentUpon>LKartuPersediaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LKartuPersediaanTanpaNilai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LKartuPersediaanTanpaNilai.Designer.cs">
+      <DependentUpon>LKartuPersediaanTanpaNilai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LNotaKredit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LNotaKredit.Designer.cs">
+      <DependentUpon>LNotaKredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LPemakaianBarang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LPemakaianBarang.Designer.cs">
+      <DependentUpon>LPemakaianBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LPembelianTunai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LPembelianTunai.Designer.cs">
+      <DependentUpon>LPembelianTunai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LPemesananBarang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LPemesananBarang.Designer.cs">
+      <DependentUpon>LPemesananBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LPemesananBarangPerPemasok.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LPemesananBarangPerPemasok.Designer.cs">
+      <DependentUpon>LPemesananBarangPerPemasok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LPenerimaanBarang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LPenerimaanBarang.Designer.cs">
+      <DependentUpon>LPenerimaanBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LPenerimaanBarangPerPemasok.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LPenerimaanBarangPerPemasok.Designer.cs">
+      <DependentUpon>LPenerimaanBarangPerPemasok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LPenyesuaianPersediaanBarang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LPenyesuaianPersediaanBarang.Designer.cs">
+      <DependentUpon>LPenyesuaianPersediaanBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LPenyesuaianPersediaanDenganNilai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LPenyesuaianPersediaanDenganNilai.Designer.cs">
+      <DependentUpon>LPenyesuaianPersediaanDenganNilai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LPermintaanPembelianRekap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LPermintaanPembelianRekap.Designer.cs">
+      <DependentUpon>LPermintaanPembelianRekap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LPermintaanPembelianPerItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LPermintaanPembelianPerItem.Designer.cs">
+      <DependentUpon>LPermintaanPembelianPerItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LPersediaanBarangPerGudangPerLokasi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LPersediaanBarangPerGudangPerLokasi.Designer.cs">
+      <DependentUpon>LPersediaanBarangPerGudangPerLokasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LProduksiBarang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\LProduksiBarang.Designer.cs">
+      <DependentUpon>LProduksiBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagnostic\MedicalDiagnosticItemUsageRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalDiagnostic\MedicalDiagnosticItemUsageRpt.Designer.cs">
+      <DependentUpon>MedicalDiagnosticItemUsageRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\LKunjunganPerSpesialis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\LKunjunganPerSpesialis.designer.cs">
+      <DependentUpon>LKunjunganPerSpesialis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\LKunjunganPerItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\LKunjunganPerItem.designer.cs">
+      <DependentUpon>LKunjunganPerItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryDt\LSensusRJPerKlinik.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryDt\LSensusRJPerKlinik.designer.cs">
+      <DependentUpon>LSensusRJPerKlinik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\LGeografiKunjungan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\LGeografiKunjungan.Designer.cs">
+      <DependentUpon>LGeografiKunjungan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\LKematianBayiDanBalita.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\LKematianBayiDanBalita.Designer.cs">
+      <DependentUpon>LKematianBayiDanBalita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\LMorbiditasPasienRawatInap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\LMorbiditasPasienRawatInap.designer.cs">
+      <DependentUpon>LMorbiditasPasienRawatInap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\LMorbiditasPasienRawatJalan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\LMorbiditasPasienRawatJalan.designer.cs">
+      <DependentUpon>LMorbiditasPasienRawatJalan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emergency\LPendaftaranPasienIGDPerJenisKunjungan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emergency\LPendaftaranPasienIGDPerJenisKunjungan.designer.cs">
+      <DependentUpon>LPendaftaranPasienIGDPerJenisKunjungan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emergency\LPendaftaranPasienIGDPerCaraKeluar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emergency\LPendaftaranPasienIGDPerCaraKeluar.designer.cs">
+      <DependentUpon>LPendaftaranPasienIGDPerCaraKeluar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emergency\LPendaftaranPasienIGDPerKeadaanDatang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emergency\LPendaftaranPasienIGDPerKeadaanDatang.Designer.cs">
+      <DependentUpon>LPendaftaranPasienIGDPerKeadaanDatang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emergency\LPendaftaranPasienIGDPerKeadaanKeluar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emergency\LPendaftaranPasienIGDPerKeadaanKeluar.designer.cs">
+      <DependentUpon>LPendaftaranPasienIGDPerKeadaanKeluar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imaging\ImagingResultEngRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Imaging\ImagingResultEngRpt.Designer.cs">
+      <DependentUpon>ImagingResultEngRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imaging\ImagingResultRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Imaging\ImagingResultRpt.Designer.cs">
+      <DependentUpon>ImagingResultRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inpatient\LBayiBaruLahir.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inpatient\LBayiBaruLahir.Designer.cs">
+      <DependentUpon>LBayiBaruLahir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inpatient\LInformasiTTidur.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inpatient\LInformasiTTidur.Designer.cs">
+      <DependentUpon>LInformasiTTidur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inpatient\LLembarKartuIndeksPenderita.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inpatient\LLembarKartuIndeksPenderita.Designer.cs">
+      <DependentUpon>LLembarKartuIndeksPenderita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inpatient\LPasienKeluarRI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inpatient\LPasienKeluarRI.Designer.cs">
+      <DependentUpon>LPasienKeluarRI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\BPemesananBarangDenganNilai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\BPemesananBarangDenganNilai.Designer.cs">
+      <DependentUpon>BPemesananBarangDenganNilai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\BPemesananBarangTanpaNilai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\BPemesananBarangTanpaNilai.Designer.cs">
+      <DependentUpon>BPemesananBarangTanpaNilai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\BPermintaanBarang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\BPermintaanBarang.Designer.cs">
+      <DependentUpon>BPermintaanBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\BPermintaanPembelian.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\BPermintaanPembelian.Designer.cs">
+      <DependentUpon>BPermintaanPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Master\ItemListRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\Master\ItemListRpt.Designer.cs">
+      <DependentUpon>ItemListRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Master\WarehouseAndLocationListRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\Master\WarehouseAndLocationListRpt.Designer.cs">
+      <DependentUpon>WarehouseAndLocationListRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laboratory\LaboratoryResultRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Laboratory\LaboratoryResultRpt.Designer.cs">
+      <DependentUpon>LaboratoryResultRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterReport\DiagnoseRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterReport\DiagnoseRpt.Designer.cs">
+      <DependentUpon>DiagnoseRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagnostic\MedicalDiagnosticAllVisitRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalDiagnostic\MedicalDiagnosticAllVisitRpt.Designer.cs">
+      <DependentUpon>MedicalDiagnosticAllVisitRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagnostic\MedicalDiagnosticRegistrationRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalDiagnostic\MedicalDiagnosticRegistrationRpt.Designer.cs">
+      <DependentUpon>MedicalDiagnosticRegistrationRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\DeathListRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\DeathListRpt.Designer.cs">
+      <DependentUpon>DeathListRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryBodyDiagramDtRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryBodyDiagramDtRpt.Designer.cs">
+      <DependentUpon>EpisodeSummaryBodyDiagramDtRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryBodyDiagramRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryBodyDiagramRpt.Designer.cs">
+      <DependentUpon>EpisodeSummaryBodyDiagramRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryReviewOfSystemRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryReviewOfSystemRpt.Designer.cs">
+      <DependentUpon>EpisodeSummaryReviewOfSystemRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryVitalSignRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryVitalSignRpt.Designer.cs">
+      <DependentUpon>EpisodeSummaryVitalSignRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryAllergyRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryAllergyRpt.Designer.cs">
+      <DependentUpon>EpisodeSummaryAllergyRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryChiefComplaintRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryChiefComplaintRpt.Designer.cs">
+      <DependentUpon>EpisodeSummaryChiefComplaintRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\EpisodeSummaryRpt.Designer.cs">
+      <DependentUpon>EpisodeSummaryRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\LPenyakitMenularTerbanyak.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\LPenyakitMenularTerbanyak.Designer.cs">
+      <DependentUpon>LPenyakitMenularTerbanyak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\LPenyakitTerbanyak.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\LPenyakitTerbanyak.designer.cs">
+      <DependentUpon>LPenyakitTerbanyak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\LPenyakitTerbanyakPerDTD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\LPenyakitTerbanyakPerDTD.Designer.cs">
+      <DependentUpon>LPenyakitTerbanyakPerDTD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\LPenyakitTidakMenularTerbanyak.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\LPenyakitTidakMenularTerbanyak.Designer.cs">
+      <DependentUpon>LPenyakitTidakMenularTerbanyak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\LSensusRIPerBulanPerKelas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\LSensusRIPerBulanPerKelas.Designer.cs">
+      <DependentUpon>LSensusRIPerBulanPerKelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\LSensusRIPerBulanPerRuang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\LSensusRIPerBulanPerRuang.designer.cs">
+      <DependentUpon>LSensusRIPerBulanPerRuang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\LSensusRIPerTahunPerKelas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\LSensusRIPerTahunPerKelas.Designer.cs">
+      <DependentUpon>LSensusRIPerTahunPerKelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\LSensusRIPerTahunPerRuang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\LSensusRIPerTahunPerRuang.Designer.cs">
+      <DependentUpon>LSensusRIPerTahunPerRuang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\LKunjunganRawatInap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\LKunjunganRawatInap.Designer.cs">
+      <DependentUpon>LKunjunganRawatInap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecord\PatientCardRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord\PatientCardRpt.Designer.cs">
+      <DependentUpon>PatientCardRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPatientBillDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPatientBillDetail.designer.cs">
+      <DependentUpon>BPatientBillDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPaymentReceipt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPaymentReceipt.Designer.cs">
+      <DependentUpon>BPaymentReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangPribadi_DM1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BPiutangPribadi_DM.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BTransaksiRawatDarurat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BTransaksiRawatDarurat.designer.cs">
+      <DependentUpon>BTransaksiRawatDarurat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPembayaran.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPembayaran.designer.cs">
+      <DependentUpon>BPembayaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BKembaliUangMuka.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BKembaliUangMuka.designer.cs">
+      <DependentUpon>BKembaliUangMuka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BInformationList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BInformationList.designer.cs">
+      <DependentUpon>BInformationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangPribadi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangPribadi.designer.cs">
+      <DependentUpon>BPiutangPribadi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangInstansi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangInstansi.designer.cs">
+      <DependentUpon>BPiutangInstansi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BTerimaUangMuka.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BTerimaUangMuka.designer.cs">
+      <DependentUpon>BTerimaUangMuka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BRincianTagihan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BRincianTagihan.designer.cs">
+      <DependentUpon>BRincianTagihan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPenerimaanPembayaran.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPenerimaanPembayaran.designer.cs">
+      <DependentUpon>BPenerimaanPembayaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangPribadiDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangPribadiDetail.designer.cs">
+      <DependentUpon>BPiutangPribadiDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangInstansiDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangInstansiDetail.designer.cs">
+      <DependentUpon>BPiutangInstansiDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BTerimaUangMuka_DM.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BTerimaUangMuka_DM.designer.cs">
+      <DependentUpon>BTerimaUangMuka_DM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BKembaliUangMuka_DM.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BKembaliUangMuka_DM.designer.cs">
+      <DependentUpon>BKembaliUangMuka_DM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPenerimaanPembayaran_DM.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPenerimaanPembayaran_DM.designer.cs">
+      <DependentUpon>BPenerimaanPembayaran_DM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangPribadi_DM.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangPribadi_DM.designer.cs">
+      <DependentUpon>BPiutangPribadi_DM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangInstansi_DM.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangInstansi_DM.designer.cs">
+      <DependentUpon>BPiutangInstansi_DM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPaymentReceipt_DM.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPaymentReceipt_DM.Designer.cs">
+      <DependentUpon>BPaymentReceipt_DM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPatientBillItemGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPatientBillItemGroup.designer.cs">
+      <DependentUpon>BPatientBillItemGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangInstansiDetail2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangInstansiDetail2.designer.cs">
+      <DependentUpon>BPiutangInstansiDetail2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPembayaranPerKelompok.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPembayaranPerKelompok.designer.cs">
+      <DependentUpon>BPembayaranPerKelompok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPaymentReceiptPerKelompok.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPaymentReceiptPerKelompok.designer.cs">
+      <DependentUpon>BPaymentReceiptPerKelompok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangPribadiDetail2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BPiutangPribadiDetail2.designer.cs">
+      <DependentUpon>BPiutangPribadiDetail2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\PaymentReceiptRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\PaymentReceiptRpt.Designer.cs">
+      <DependentUpon>PaymentReceiptRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outpatient\OPAppointmentRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Outpatient\OPAppointmentRpt.Designer.cs">
+      <DependentUpon>OPAppointmentRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outpatient\OPRegistrationRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Outpatient\OPRegistrationRpt.Designer.cs">
+      <DependentUpon>OPRegistrationRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BKuitansiGabungan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BKuitansiGabungan.designer.cs">
+      <DependentUpon>BKuitansiGabungan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BKuitansiRawatJalan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BKuitansiRawatJalan.designer.cs">
+      <DependentUpon>BKuitansiRawatJalan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BLembarRekamMedisRJ.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BLembarRekamMedisRJ.designer.cs">
+      <DependentUpon>BLembarRekamMedisRJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BMasterFilePasien.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BMasterFilePasien.designer.cs">
+      <DependentUpon>BMasterFilePasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BTransaksiKlinik.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BTransaksiKlinik.designer.cs">
+      <DependentUpon>BTransaksiKlinik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\BTransaksiRawatJalan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\BTransaksiRawatJalan.designer.cs">
+      <DependentUpon>BTransaksiRawatJalan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\ClinicRegistrationRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\ClinicRegistrationRpt.Designer.cs">
+      <DependentUpon>ClinicRegistrationRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManagement\PMRegistrationRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientManagement\PMRegistrationRpt.Designer.cs">
+      <DependentUpon>PMRegistrationRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pharmacy\PHSalinanResepRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pharmacy\PHSalinanResepRpt.designer.cs">
+      <DependentUpon>PHSalinanResepRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemSetup\DiagnosticServiceUnitRecordRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemSetup\DiagnosticServiceUnitRecordRpt.Designer.cs">
+      <DependentUpon>DiagnosticServiceUnitRecordRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSetup\EmergencyServiceUnitRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemSetup\EmergencyServiceUnitRpt.Designer.cs">
+      <DependentUpon>EmergencyServiceUnitRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSetup\InPatientServiceUnitRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemSetup\InPatientServiceUnitRpt.Designer.cs">
+      <DependentUpon>InPatientServiceUnitRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSetup\OutPatientServiceUnitRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemSetup\OutPatientServiceUnitRpt.Designer.cs">
+      <DependentUpon>OutPatientServiceUnitRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSetup\ParamedicListRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemSetup\ParamedicListRpt.Designer.cs">
+      <DependentUpon>ParamedicListRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSetup\UserListRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemSetup\UserListRpt.Designer.cs">
+      <DependentUpon>UserListRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSetup\UserProfileRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemSetup\UserProfileRpt.Designer.cs">
+      <DependentUpon>UserProfileRpt.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseRpt\BaseDailyPortraitRpt.resx">
+      <DependentUpon>BaseDailyPortraitRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseRpt\BaseRpt.resx">
+      <DependentUpon>BaseRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseRpt\BaseDailyLandscapeRpt.resx">
+      <DependentUpon>BaseDailyLandscapeRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseRpt\BaseCustomPaperRpt.resx">
+      <DependentUpon>BaseCustomPaperRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emergency\BCatatanPerkembanganPasien.resx">
+      <DependentUpon>BCatatanPerkembanganPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emergency\BLembarStatusIGD.resx">
+      <DependentUpon>BLembarStatusIGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emergency\LKecelakaanLaluLintas.resx">
+      <DependentUpon>LKecelakaanLaluLintas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LaporanItemTariff.resx">
+      <DependentUpon>LaporanItemTariff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LHutangJatuhTempo.resx">
+      <DependentUpon>LHutangJatuhTempo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LHutangJatuhTempo1.resx">
+      <DependentUpon>LHutangJatuhTempo1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LKartuHutang.resx">
+      <DependentUpon>LKartuHutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LMutasiHutang.resx">
+      <DependentUpon>LMutasiHutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LPembayaranHutang.resx">
+      <DependentUpon>LPembayaranHutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LPenerimaanHarianPerShift.resx">
+      <DependentUpon>LPenerimaanHarianPerShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LaporanItem.resx">
+      <DependentUpon>LaporanItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LHonorDokter.resx">
+      <DependentUpon>LHonorDokter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LOutstandingPenerimaanPasien.resx">
+      <DependentUpon>LOutstandingPenerimaanPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LPendapatanPerDokter.resx">
+      <DependentUpon>LPendapatanPerDokter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LPendapatanPerInstansiDetail.resx">
+      <DependentUpon>LPendapatanPerInstansiDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LPendapatanPerInstansiRekap.resx">
+      <DependentUpon>LPendapatanPerInstansiRekap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LPendapatanPerPelayanan.resx">
+      <DependentUpon>LPendapatanPerPelayanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LPendapatanPerUnit.resx">
+      <DependentUpon>LPendapatanPerUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LPenerimaanHarianPerKasir.resx">
+      <DependentUpon>LPenerimaanHarianPerKasir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LPenerimaanHarianSemuaKasir.resx">
+      <DependentUpon>LPenerimaanHarianSemuaKasir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LPenerimaanHarianSemuaKasirRekap.resx">
+      <DependentUpon>LPenerimaanHarianSemuaKasirRekap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LStatusKeuanganPasien.resx">
+      <DependentUpon>LStatusKeuanganPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LUmurHutang.resx">
+      <DependentUpon>LUmurHutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LDistribusiBarang.resx">
+      <DependentUpon>LDistribusiBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LJumlahPersediaanPerGudangPerLokasi.resx">
+      <DependentUpon>LJumlahPersediaanPerGudangPerLokasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LKartuPersediaan.resx">
+      <DependentUpon>LKartuPersediaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LKartuPersediaanTanpaNilai.resx">
+      <DependentUpon>LKartuPersediaanTanpaNilai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LNotaKredit.resx">
+      <DependentUpon>LNotaKredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LPemakaianBarang.resx">
+      <DependentUpon>LPemakaianBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LPembelianTunai.resx">
+      <DependentUpon>LPembelianTunai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LPemesananBarang.resx">
+      <DependentUpon>LPemesananBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LPemesananBarangPerPemasok.resx">
+      <DependentUpon>LPemesananBarangPerPemasok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LPenerimaanBarang.resx">
+      <DependentUpon>LPenerimaanBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LPenerimaanBarangPerPemasok.resx">
+      <DependentUpon>LPenerimaanBarangPerPemasok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LPenyesuaianPersediaanBarang.resx">
+      <DependentUpon>LPenyesuaianPersediaanBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LPenyesuaianPersediaanDenganNilai.resx">
+      <DependentUpon>LPenyesuaianPersediaanDenganNilai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LPermintaanPembelianRekap.resx">
+      <DependentUpon>LPermintaanPembelianRekap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LPermintaanPembelianPerItem.resx">
+      <DependentUpon>LPermintaanPembelianPerItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LPersediaanBarangPerGudangPerLokasi.resx">
+      <DependentUpon>LPersediaanBarangPerGudangPerLokasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LProduksiBarang.resx">
+      <DependentUpon>LProduksiBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalDiagnostic\MedicalDiagnosticItemUsageRpt.resx">
+      <DependentUpon>MedicalDiagnosticItemUsageRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\LKunjunganPerSpesialis.resx">
+      <DependentUpon>LKunjunganPerSpesialis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\LKunjunganPerItem.resx">
+      <DependentUpon>LKunjunganPerItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\EpisodeSummaryDt\LSensusRJPerKlinik.resx">
+      <DependentUpon>LSensusRJPerKlinik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\LGeografiKunjungan.resx">
+      <DependentUpon>LGeografiKunjungan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\LKematianBayiDanBalita.resx">
+      <DependentUpon>LKematianBayiDanBalita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\LMorbiditasPasienRawatInap.resx">
+      <DependentUpon>LMorbiditasPasienRawatInap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\LMorbiditasPasienRawatJalan.resx">
+      <DependentUpon>LMorbiditasPasienRawatJalan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emergency\LPendaftaranPasienIGDPerJenisKunjungan.resx">
+      <DependentUpon>LPendaftaranPasienIGDPerJenisKunjungan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emergency\LPendaftaranPasienIGDPerCaraKeluar.resx">
+      <DependentUpon>LPendaftaranPasienIGDPerCaraKeluar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emergency\LPendaftaranPasienIGDPerKeadaanDatang.resx">
+      <DependentUpon>LPendaftaranPasienIGDPerKeadaanDatang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emergency\LPendaftaranPasienIGDPerKeadaanKeluar.resx">
+      <DependentUpon>LPendaftaranPasienIGDPerKeadaanKeluar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imaging\ImagingResultEngRpt.resx">
+      <DependentUpon>ImagingResultEngRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imaging\ImagingResultRpt.resx">
+      <DependentUpon>ImagingResultRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inpatient\LBayiBaruLahir.resx">
+      <DependentUpon>LBayiBaruLahir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inpatient\LInformasiTTidur.resx">
+      <DependentUpon>LInformasiTTidur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inpatient\LLembarKartuIndeksPenderita.resx">
+      <DependentUpon>LLembarKartuIndeksPenderita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inpatient\LPasienKeluarRI.resx">
+      <DependentUpon>LPasienKeluarRI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\BPemesananBarangDenganNilai.resx">
+      <DependentUpon>BPemesananBarangDenganNilai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\BPemesananBarangTanpaNilai.resx">
+      <DependentUpon>BPemesananBarangTanpaNilai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\BPermintaanBarang.resx">
+      <DependentUpon>BPermintaanBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\BPermintaanPembelian.resx">
+      <DependentUpon>BPermintaanPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Master\ItemListRpt.resx">
+      <DependentUpon>ItemListRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Master\WarehouseAndLocationListRpt.resx">
+      <DependentUpon>WarehouseAndLocationListRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laboratory\LaboratoryResultRpt.resx">
+      <DependentUpon>LaboratoryResultRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterReport\DiagnoseRpt.resx">
+      <DependentUpon>DiagnoseRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalDiagnostic\MedicalDiagnosticAllVisitRpt.resx">
+      <DependentUpon>MedicalDiagnosticAllVisitRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalDiagnostic\MedicalDiagnosticRegistrationRpt.resx">
+      <DependentUpon>MedicalDiagnosticRegistrationRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\DeathListRpt.resx">
+      <DependentUpon>DeathListRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryBodyDiagramDtRpt.resx">
+      <DependentUpon>EpisodeSummaryBodyDiagramDtRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryBodyDiagramRpt.resx">
+      <DependentUpon>EpisodeSummaryBodyDiagramRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryReviewOfSystemRpt.resx">
+      <DependentUpon>EpisodeSummaryReviewOfSystemRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryVitalSignRpt.resx">
+      <DependentUpon>EpisodeSummaryVitalSignRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryAllergyRpt.resx">
+      <DependentUpon>EpisodeSummaryAllergyRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\EpisodeSummaryDt\EpisodeSummaryChiefComplaintRpt.resx">
+      <DependentUpon>EpisodeSummaryChiefComplaintRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\EpisodeSummaryRpt.resx">
+      <DependentUpon>EpisodeSummaryRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\LPenyakitMenularTerbanyak.resx">
+      <DependentUpon>LPenyakitMenularTerbanyak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\LPenyakitTerbanyak.resx">
+      <DependentUpon>LPenyakitTerbanyak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\LPenyakitTerbanyakPerDTD.resx">
+      <DependentUpon>LPenyakitTerbanyakPerDTD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\LPenyakitTidakMenularTerbanyak.resx">
+      <DependentUpon>LPenyakitTidakMenularTerbanyak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\LSensusRIPerBulanPerKelas.resx">
+      <DependentUpon>LSensusRIPerBulanPerKelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\LSensusRIPerBulanPerRuang.resx">
+      <DependentUpon>LSensusRIPerBulanPerRuang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\LSensusRIPerTahunPerKelas.resx">
+      <DependentUpon>LSensusRIPerTahunPerKelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\LSensusRIPerTahunPerRuang.resx">
+      <DependentUpon>LSensusRIPerTahunPerRuang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\LKunjunganRawatInap.resx">
+      <DependentUpon>LKunjunganRawatInap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord\PatientCardRpt.resx">
+      <DependentUpon>PatientCardRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPatientBillDetail.resx">
+      <DependentUpon>BPatientBillDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPaymentReceipt.resx">
+      <DependentUpon>BPaymentReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BTransaksiRawatDarurat.resx">
+      <DependentUpon>BTransaksiRawatDarurat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPembayaran.resx">
+      <DependentUpon>BPembayaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BKembaliUangMuka.resx">
+      <DependentUpon>BKembaliUangMuka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BInformationList.resx">
+      <DependentUpon>BInformationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPiutangPribadi.resx">
+      <DependentUpon>BPiutangPribadi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPiutangInstansi.resx">
+      <DependentUpon>BPiutangInstansi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BTerimaUangMuka.resx">
+      <DependentUpon>BTerimaUangMuka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BRincianTagihan.resx">
+      <DependentUpon>BRincianTagihan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPenerimaanPembayaran.resx">
+      <DependentUpon>BPenerimaanPembayaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPiutangPribadiDetail.resx">
+      <DependentUpon>BPiutangPribadiDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPiutangInstansiDetail.resx">
+      <DependentUpon>BPiutangInstansiDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BTerimaUangMuka_DM.resx">
+      <DependentUpon>BTerimaUangMuka_DM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BKembaliUangMuka_DM.resx">
+      <DependentUpon>BKembaliUangMuka_DM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPenerimaanPembayaran_DM.resx">
+      <DependentUpon>BPenerimaanPembayaran_DM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPiutangPribadi_DM.resx">
+      <DependentUpon>BPiutangPribadi_DM.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>BPiutangPribadi_DM1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPiutangInstansi_DM.resx">
+      <DependentUpon>BPiutangInstansi_DM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPaymentReceipt_DM.resx">
+      <DependentUpon>BPaymentReceipt_DM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPatientBillItemGroup.resx">
+      <DependentUpon>BPatientBillItemGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPiutangInstansiDetail2.resx">
+      <DependentUpon>BPiutangInstansiDetail2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPembayaranPerKelompok.resx">
+      <DependentUpon>BPembayaranPerKelompok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPaymentReceiptPerKelompok.resx">
+      <DependentUpon>BPaymentReceiptPerKelompok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BPiutangPribadiDetail2.resx">
+      <DependentUpon>BPiutangPribadiDetail2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\PaymentReceiptRpt.resx">
+      <DependentUpon>PaymentReceiptRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outpatient\OPAppointmentRpt.resx">
+      <DependentUpon>OPAppointmentRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BKuitansiGabungan.resx">
+      <DependentUpon>BKuitansiGabungan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BKuitansiRawatJalan.resx">
+      <DependentUpon>BKuitansiRawatJalan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BLembarRekamMedisRJ.resx">
+      <DependentUpon>BLembarRekamMedisRJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BMasterFilePasien.resx">
+      <DependentUpon>BMasterFilePasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BTransaksiKlinik.resx">
+      <DependentUpon>BTransaksiKlinik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\BTransaksiRawatJalan.resx">
+      <DependentUpon>BTransaksiRawatJalan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\ClinicRegistrationRpt.resx">
+      <DependentUpon>ClinicRegistrationRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManagement\PMRegistrationRpt.resx">
+      <DependentUpon>PMRegistrationRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pharmacy\PHSalinanResepRpt.resx">
+      <DependentUpon>PHSalinanResepRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="SystemSetup\DiagnosticServiceUnitRecordRpt.resx">
+      <DependentUpon>DiagnosticServiceUnitRecordRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSetup\EmergencyServiceUnitRpt.resx">
+      <DependentUpon>EmergencyServiceUnitRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSetup\InPatientServiceUnitRpt.resx">
+      <DependentUpon>InPatientServiceUnitRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSetup\OutPatientServiceUnitRpt.resx">
+      <DependentUpon>OutPatientServiceUnitRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSetup\ParamedicListRpt.resx">
+      <DependentUpon>ParamedicListRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSetup\UserListRpt.resx">
+      <DependentUpon>UserListRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSetup\UserProfileRpt.resx">
+      <DependentUpon>UserProfileRpt.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QIS.Data.Core\QIS.Data.Core.csproj">
+      <Project>{CAC7A3D3-E6BB-4C97-B728-B87D395EB688}</Project>
+      <Name>QIS.Data.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.Common\QIS.Medinfras.Common.csproj">
+      <Project>{9E6B3785-82DE-4A2A-8E50-96127FCF7735}</Project>
+      <Name>QIS.Medinfras.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.Data.Service\QIS.Medinfras.Data.Service.csproj">
+      <Project>{E8019F76-DE58-43A7-984C-A1272D62EA45}</Project>
+      <Name>QIS.Medinfras.Data.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.Web.Common\QIS.Medinfras.Web.Common.csproj">
+      <Project>{12E5AAFD-04A7-4D8F-8840-C8CB4E0B23DC}</Project>
+      <Name>QIS.Medinfras.Web.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.Diagnose.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.GetItemDistributionDtReport.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.GetPatientCensusPerClass.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.GetPatientCensusPerMonthPerServiceUnit.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.GetPatientDiagnosisInfectious.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.GetPatientDiagnosisPerDTDTotal.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.GetPatientDiagnosisTotal.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.GetPatientPaymentHdPerShift.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.NursingSubjective.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.PatientBirthRecordDao.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.RLReportColumn1.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vAppointment.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vBed.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vConsultVisit.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vConsultVisitAccident.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vConsultVisitCensus.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vConsultVisitCharges.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vConsultVisitDeath.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vConsultVisitDiagnose.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vDirectPurchaseDt.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vHealthcareServiceUnit.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vImagingResultReport.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vItemBalance.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vItemBalanceReport.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vItemDistributionDt.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vItemMaster.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vItemMovement.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vItemProduct.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vItemProductionDt.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vItemRequestDt.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vItemTariffCustom.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vItemTransactionDt.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vItemUsage.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vLaboratoryResultDt.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vLocation.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vMedicalFormReport.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vParamedicMaster.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPatientBillPayment.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPatientBirthRecord.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPatientCensus.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPatientChargesDt.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPatientChargesDtPayment.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPatientChargesDtPerItem.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPatientChargesHd.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPatientChargesHdVisit.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPatientDiagnosis.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPatientDiagnosisTotal.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPatientPaymentDt.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPatientPaymentHd.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPatientPaymentHdRegistration.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPatientPaymentHdReport.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPatientPaymentPrint.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPaymentReceiptDt.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPrescriptionDtCustom.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPurchaseInvoiceHd.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPurchaseInvoiceHdPayment.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPurchaseOrderDt.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPurchaseReceiveDt.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPurchaseReceiveHd.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPurchaseRequestDt.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vPurchaseReturnDt.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vRegistration.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vRegistrationPatientBirth.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vRegistrationPayment.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vRLReportGridRowData1.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vServiceUnitParamedic.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vSupplierCreditNote.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vSupplierPaymentHd.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vTransRevenueSharingDtReport.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vUser.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vVisitType.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vVitalSignDt.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vVitalSignHd.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.AppSession.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.BasePatientManagementRecalculationBillPage.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+AdmissionSource.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+AdmissionType.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+AllergenType.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+AppointmentStatus.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+BedStatus.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+BusinessObjectType.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+ConstantDate.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+ControlType.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+CustomerType.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+DataSourceType.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+DefaultValueEntry.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+DeleteReason.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+DiagnoseType.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+DiscontinueMedicationReason.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+DosingFrequency.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+ErrorMessage.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+Facility.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+FilterParameterType.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+FormatString.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+Gender.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+GridViewPageSize.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+HealthcareParameter.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+ItemGroup.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+ItemGroupMaster.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+MedicalFileStatus.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+MedicationRoute.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+MenuCode+EmergencyCare.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+MenuCode+EMR.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+MenuCode+Finance.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+MenuCode+Imaging.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+MenuCode+Inpatient.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+MenuCode+Inventory.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+MenuCode+Laboratory.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+MenuCode+MedicalDiagnostic.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+MenuCode+MedicalRecord.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+MenuCode+Outpatient.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+MenuCode+Pharmacy.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+MenuCode+SystemSetup.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+MenuCode.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+Module.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+ParamedicRole.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+ParamedicType.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+PatientInstructionGroup.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+PatientTransferStatus.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+PatientVisitNotes.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+PaymentMethod.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+PaymentType.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+PrescriptionType.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+RegistrationStatus.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+ReportCode+MedicalRecord.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+ReportCode+SystemSetup.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+ReportCode.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+SettingParameter.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+StandardCode.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+TemplateGroup.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+TemplateTextType.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+TestOrderStatus.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+ToBePerformed.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+TransactionCode.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+TransactionStatus.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant+VisitReason.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Constant.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.ControlEntrySetting.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.DirectPrinting.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.DOCINFOW.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Helper.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.Methods.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.QuestionManager.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BaseContentPopupCtl.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BaseEntryPopupCtl.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BaseMP.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BaseMPPopupEntry.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BasePage.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BasePageCheckRegisteredPatient.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BasePageContent.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BasePageEntry.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BasePageList.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BasePageListEntry.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BasePagePatientOrder.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BasePagePatientPageEntryCtl.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BasePagePatientPageList.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BasePagePatientPageListEntry.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BasePageRegisteredPatient.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BasePageTrx.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BaseUserControlCtl.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Web.Common.UI.BaseViewPopupCtl.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

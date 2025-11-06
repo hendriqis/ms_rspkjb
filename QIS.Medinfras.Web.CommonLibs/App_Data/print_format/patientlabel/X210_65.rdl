@@ -1,0 +1,19 @@
+﻿^XA
+^LL200
+^PW400
+^LH5,10
+^AQN,28,24
+^FO15 ,1^FDMRN^FS
+^AQN,28,24
+^FO160,1^FD:^FS 
+^AQN,28,24
+^FO170,1^FD{MedicalNo}^FS 
+^A0N,28,33
+^FO15 , 30^FB380,7,^FD{cfPatientNameSalutation}^FS
+^AQN,28,24
+^FO15 , 60^FB380,7,^FDREG : {RegistrationNo}^FS
+^AQN,28,24
+^FO15 , 90^FB380,7,^FD{DateOfBirthInString} ({PatientAge}) ({cfGenderInitial})^FS
+^AQN,28,24
+^FO15 , 115^FB380,7,^FDDPJP : {ParamedicName}^FS
+^XZ

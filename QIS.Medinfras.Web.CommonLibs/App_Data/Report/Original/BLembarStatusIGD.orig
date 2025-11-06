@@ -1,0 +1,1065 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="11.1.5.0" Ref="1" ControlType="QIS.Medinfras.ReportDesktop.BLembarStatusIGD, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DataSource="#Ref-0" Font="Tahoma, 9pt" Version="11.1" SnappingMode="SnapToGrid" PageHeight="1100" PageWidth="850" Margins="25, 25, 25, 25">
+  <Bands>
+    <Item1 Ref="2" ControlType="PageHeaderBand" Name="PageHeader" HeightF="975">
+      <Controls>
+        <Item1 Ref="3" Name="xrTable1" ControlType="XRTable" LocationFloat="0, 125" Font="Tahoma, 8pt" Padding="3,0,0,0,100" SizeF="775,850" TextAlignment="MiddleLeft">
+          <Rows>
+            <Item1 Ref="4" Name="xrTableRow40" ControlType="XRTableRow" Weight="0.3842245439580807">
+              <Cells>
+                <Item1 Ref="5" ControlType="XRTableCell" Name="xrTableCell137" Weight="4.7903226200226818" />
+                <Item2 Ref="6" ControlType="XRTableCell" Name="xrTableCell138" Text="[MedicalNo]" TextAlignment="MiddleCenter" Borders="Left, Top, Right" Weight="1.9596773799773186">
+                  <StylePriority Ref="7" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+              </Cells>
+            </Item1>
+            <Item2 Ref="8" Name="xrTableRow1" ControlType="XRTableRow" Weight="0.85520493820260368">
+              <Cells>
+                <Item1 Ref="9" ControlType="XRTableCell" Name="xrTableCell2" Weight="4.7903226200226818" />
+                <Item2 Ref="10" ControlType="XRTableCell" Name="txtMedicalNo" Text="[MedicalNo]" TextAlignment="MiddleCenter" Font="Microsoft Sans Serif, 15pt" Borders="Left, Right" Weight="1.9596773799773186">
+                  <StylePriority Ref="11" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+              </Cells>
+            </Item2>
+            <Item3 Ref="12" Name="xrTableRow2" ControlType="XRTableRow" Weight="0.81182800128895727">
+              <Cells>
+                <Item1 Ref="13" ControlType="XRTableCell" Name="xrTableCell4" Text="Nama" Borders="Left, Top" Weight="0.43548381682365145">
+                  <StylePriority Ref="14" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="15" ControlType="XRTableCell" Name="tcPatientName" Text=": [PatientName]" Borders="Top" Weight="2.17741946804908">
+                  <StylePriority Ref="16" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="17" ControlType="XRTableCell" Name="xrTableCell8" Text="Umur" Borders="Left, Top" Weight="0.32661289338142646">
+                  <StylePriority Ref="18" UseBorders="false" />
+                </Item3>
+                <Item4 Ref="19" ControlType="XRTableCell" Name="txtAgeInYear" Text=": [AgeInYear]" Borders="Top" Weight="0.653225801529423">
+                  <StylePriority Ref="20" UseBorders="false" />
+                </Item4>
+                <Item5 Ref="21" ControlType="XRTableCell" Name="xrTableCell10" Text="Jenis Kelamin" Borders="Left, Top" Weight="0.65322580399051811">
+                  <StylePriority Ref="22" UseBorders="false" />
+                </Item5>
+                <Item6 Ref="23" ControlType="XRTableCell" Name="txtGender" Text=": [Gender]" Borders="Top" Weight="0.9798387072163246">
+                  <StylePriority Ref="24" UseBorders="false" />
+                </Item6>
+                <Item7 Ref="25" ControlType="XRTableCell" Name="xrTableCell11" Text="Triage" Borders="Left, Top" Weight="0.43548385127898182">
+                  <StylePriority Ref="26" UseBorders="false" />
+                </Item7>
+                <Item8 Ref="27" ControlType="XRTableCell" Name="txtTriage" Text=": [Triage]" Borders="Top, Right" Weight="1.0887096577305948">
+                  <StylePriority Ref="28" UseBorders="false" />
+                </Item8>
+              </Cells>
+            </Item3>
+            <Item4 Ref="29" Name="xrTableRow3" ControlType="XRTableRow" Weight="1.0645167836835308">
+              <Cells>
+                <Item1 Ref="30" ControlType="XRTableCell" Name="xrTableCell1" Text="Tanggal&#xD;&#xA;Jam" Borders="Left, Top" Weight="0.43548381682365145" Multiline="true">
+                  <StylePriority Ref="31" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="32" ControlType="XRTableCell" Name="xrTableCell12" Text=": [RegistrationDate!dd-MMM-yyyy]&#xD;&#xA;: [RegistrationTime]" Borders="Top" Weight="1.0887096577305946" Multiline="true">
+                  <StylePriority Ref="33" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="34" ControlType="XRTableCell" Name="xrTableCell17" Text="ANAMNESA, PEMERIKSAAN, PEMERIKSAAN PENUNJANG, DIAGNOSA, TERAPI" TextAlignment="MiddleCenter" Borders="Left, Top" Weight="3.7016129967474178">
+                  <StylePriority Ref="35" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="36" ControlType="XRTableCell" Name="xrTableCell18" Text="RIWAYAT PENYAKIT LALU" TextAlignment="MiddleCenter" Borders="Left, Top, Right" Weight="1.5241935286983368">
+                  <StylePriority Ref="37" UseBorders="false" UseTextAlignment="false" />
+                </Item4>
+              </Cells>
+            </Item4>
+            <Item5 Ref="38" Name="xrTableRow4" ControlType="XRTableRow" Weight="0.5">
+              <Cells>
+                <Item1 Ref="39" ControlType="XRTableCell" Name="xrTableCell19" Text="Status Mental :" Borders="Left, Top" Weight="1.5241935606925716">
+                  <StylePriority Ref="40" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="41" ControlType="XRTableCell" Name="xrTableCell21" Text="A. Anamnesa : " Borders="Left, Top" Weight="3.701612910609092">
+                  <StylePriority Ref="42" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="43" ControlType="XRTableCell" Name="xrTableCell26" Text="Alergi : " Borders="Left, Top, Right" Weight="1.524193528698337">
+                  <StylePriority Ref="44" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item5>
+            <Item6 Ref="45" Name="xrTableRow5" ControlType="XRTableRow" Weight="0.8">
+              <Cells>
+                <Item1 Ref="46" ControlType="XRTableCell" Name="xrTableCell20" Text="Mengikuti perintah sederhana" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="47" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="48" ControlType="XRTableCell" Name="txtAmnesa" Text="txtAmnesa" Borders="Left" Weight="3.701612930297852">
+                  <DataBindings>
+                    <Item1 Ref="49" PropertyName="Text" DataMember="Anamnesis" />
+                  </DataBindings>
+                  <StylePriority Ref="50" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="51" ControlType="XRTableCell" Name="xrTableCell32" Borders="Left, Right" Weight="1.5241935090095766">
+                  <Controls>
+                    <Item1 Ref="52" ControlType="XRCheckBox" Name="xrCheckBox2" SizeF="50,15" LocationFloat="62.5, 0" Borders="None" Text="Tidak">
+                      <StylePriority Ref="53" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="54" PropertyName="CheckState" DataMember="IsNotAllergy" />
+                      </DataBindings>
+                    </Item1>
+                    <Item2 Ref="55" ControlType="XRCheckBox" Name="xrCheckBox1" SizeF="50,15" LocationFloat="12.5, 0" Borders="None" Text="Ya">
+                      <StylePriority Ref="56" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="57" PropertyName="CheckState" DataMember="Allergy" />
+                      </DataBindings>
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="58" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item6>
+            <Item7 Ref="59" Name="xrTableRow6" ControlType="XRTableRow" Weight="0.59999999999999976">
+              <Cells>
+                <Item1 Ref="60" ControlType="XRTableCell" Name="xrTableCell13" Borders="Left" Weight="1.5241935606925716">
+                  <Controls>
+                    <Item1 Ref="61" ControlType="XRCheckBox" Name="xrCheckBox3" SizeF="100,15" LocationFloat="37.5, 0" Borders="None" Text="Ya">
+                      <StylePriority Ref="62" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="63" PropertyName="CheckState" DataMember="IsSimpleInstruction" />
+                      </DataBindings>
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="64" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="65" ControlType="XRTableCell" Name="xrTableCell14" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="66" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="67" ControlType="XRTableCell" Name="xrTableCell15" Text="Riwayat Kejadian" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="68" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item7>
+            <Item8 Ref="69" Name="xrTableRow7" ControlType="XRTableRow" Weight="0.79999999999999982">
+              <Cells>
+                <Item1 Ref="70" ControlType="XRTableCell" Name="xrTableCell16" Borders="Left" Weight="1.5241935606925716">
+                  <Controls>
+                    <Item1 Ref="71" ControlType="XRCheckBox" Name="xrCheckBox4" SizeF="100,15" LocationFloat="37.5, 0" Borders="None" Text="Tidak">
+                      <StylePriority Ref="72" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="73" PropertyName="CheckState" DataMember="IsNotSimpleInstruction" />
+                      </DataBindings>
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="74" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="75" ControlType="XRTableCell" Name="xrTableCell22" Text="B. Pengobatan Sebelumnya : " Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="76" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="77" ControlType="XRTableCell" Name="txtChronology" Text="txtChronology" Borders="Left, Right" Weight="1.5241935090095766">
+                  <DataBindings>
+                    <Item1 Ref="78" PropertyName="Text" DataMember="Chronology" />
+                  </DataBindings>
+                  <StylePriority Ref="79" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item8>
+            <Item9 Ref="80" Name="xrTableRow8" ControlType="XRTableRow" Weight="0.5">
+              <Cells>
+                <Item1 Ref="81" ControlType="XRTableCell" Name="xrTableCell29" Text="GCS : " Borders="Left" Weight="0.3810483901731429">
+                  <StylePriority Ref="82" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="83" ControlType="XRTableCell" Name="xrTableCell28" Text="E : [GCSEye]" Weight="0.3810483901731429" />
+                <Item3 Ref="84" ControlType="XRTableCell" Name="xrTableCell31" Text="V: [GCSVerbal]" Weight="0.3810483901731429" />
+                <Item4 Ref="85" ControlType="XRTableCell" Name="xrTableCell24" Text="M : [GCSMotor]" Weight="0.3810483901731429" />
+                <Item5 Ref="86" ControlType="XRTableCell" Name="txtLastMedicationNote" Text="txtLastMedicationNote" Borders="Left" Weight="3.701612930297852">
+                  <DataBindings>
+                    <Item1 Ref="87" PropertyName="Text" DataMember="LastMedicationNote" />
+                  </DataBindings>
+                  <StylePriority Ref="88" UseBorders="false" />
+                </Item5>
+                <Item6 Ref="89" ControlType="XRTableCell" Name="xrTableCell27" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="90" UseBorders="false" />
+                </Item6>
+              </Cells>
+            </Item9>
+            <Item10 Ref="91" Name="xrTableRow9" ControlType="XRTableRow" Weight="0.5">
+              <Cells>
+                <Item1 Ref="92" ControlType="XRTableCell" Name="xrTableCell36" Text="Tekanan Darah : " Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="93" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="94" ControlType="XRTableCell" Name="xrTableCell37" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="95" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="96" ControlType="XRTableCell" Name="xrTableCell38" Text="Asma : " Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="97" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item10>
+            <Item11 Ref="98" Name="xrTableRow14" ControlType="XRTableRow" Weight="0.8">
+              <Cells>
+                <Item1 Ref="99" ControlType="XRTableCell" Name="txtTekananDarah" Text="[Systole] / [Diastole] mmHg" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="100" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="101" ControlType="XRTableCell" Name="xrTableCell49" Text="C. Pemeriksaan Fisik Lanjutan : " Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="102" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="103" ControlType="XRTableCell" Name="xrTableCell50" Text="xrTableCell50" Borders="Left, Right" Weight="1.5241935090095766">
+                  <Controls>
+                    <Item1 Ref="104" ControlType="XRCheckBox" Name="xrCheckBox13" SizeF="50,15" LocationFloat="62.5, 0" Borders="None" Text="Tidak">
+                      <StylePriority Ref="105" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="106" PropertyName="CheckState" DataMember="IsNotAsthma" />
+                      </DataBindings>
+                    </Item1>
+                    <Item2 Ref="107" ControlType="XRCheckBox" Name="xrCheckBox12" SizeF="50,15" LocationFloat="12.5, 0" Borders="None" Text="Ya">
+                      <StylePriority Ref="108" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="109" PropertyName="CheckState" DataMember="IsAsthma" />
+                      </DataBindings>
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="110" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item11>
+            <Item12 Ref="111" Name="xrTableRow15" ControlType="XRTableRow" Weight="0.49999999999999989">
+              <Cells>
+                <Item1 Ref="112" ControlType="XRTableCell" Name="xrTableCell51" Text="Nadi : " Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="113" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="114" ControlType="XRTableCell" Name="xrTableCell127" Text="Keadaan Umum : " Borders="Left" Weight="0.87096775547150662">
+                  <StylePriority Ref="115" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="116" ControlType="XRTableCell" Name="txtGeneralCondition" Text="txtGeneralCondition" Weight="0.97983871644543086">
+                  <DataBindings>
+                    <Item1 Ref="117" PropertyName="Text" DataMember="GeneralCondition" />
+                  </DataBindings>
+                </Item3>
+                <Item4 Ref="118" ControlType="XRTableCell" Name="xrTableCell156" Text="Kesadaran :" Weight="0.65322580983561851" />
+                <Item5 Ref="119" ControlType="XRTableCell" Name="txtArrivalCondition" Text="txtArrivalCondition" Weight="1.197580648545296">
+                  <DataBindings>
+                    <Item1 Ref="120" PropertyName="Text" DataMember="ArrivalCondition" />
+                  </DataBindings>
+                </Item5>
+                <Item6 Ref="121" ControlType="XRTableCell" Name="xrTableCell53" Text="Diabetes : " Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="122" UseBorders="false" />
+                </Item6>
+              </Cells>
+            </Item12>
+            <Item13 Ref="123" Name="xrTableRow13" ControlType="XRTableRow" Weight="0.59999999999999987">
+              <Cells>
+                <Item1 Ref="124" ControlType="XRTableCell" Name="xrTableCell54" Text="xrTableCell54" Borders="Left" Weight="0.54435484486241481">
+                  <Controls>
+                    <Item1 Ref="125" ControlType="XRCheckBox" Name="xrCheckBox5" SizeF="57,14.99997" LocationFloat="5.499999, 3.051758E-05" Borders="None" Text="Teraba">
+                      <StylePriority Ref="126" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="127" PropertyName="CheckState" DataMember="IsHavePulse" />
+                      </DataBindings>
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="128" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="129" ControlType="XRTableCell" Name="xrTableCell45" Text="[PulseCount] x/mnt [PulseQuality]" Weight="0.9798387158301568" />
+                <Item3 Ref="130" ControlType="XRTableCell" Name="xrTableCell46" Text="C.1. Kepala dan Leher" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="131" UseBorders="false" />
+                </Item3>
+                <Item4 Ref="132" ControlType="XRTableCell" Name="xrTableCell47" Text="xrTableCell47" Borders="Left, Right" Weight="1.5241935090095766">
+                  <Controls>
+                    <Item1 Ref="133" ControlType="XRCheckBox" Name="xrCheckBox15" SizeF="50,15" LocationFloat="62.5, 0" Borders="None" Text="Tidak">
+                      <StylePriority Ref="134" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="135" PropertyName="CheckState" DataMember="IsNotDiabetes" />
+                      </DataBindings>
+                    </Item1>
+                    <Item2 Ref="136" ControlType="XRCheckBox" Name="xrCheckBox14" SizeF="50,15" LocationFloat="12.5, 0" Borders="None" Text="Ya">
+                      <StylePriority Ref="137" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="138" PropertyName="CheckState" DataMember="IsDiabetes" />
+                      </DataBindings>
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="139" UseBorders="false" />
+                </Item4>
+              </Cells>
+            </Item13>
+            <Item14 Ref="140" Name="xrTableRow12" ControlType="XRTableRow" Weight="0.79999999999999993">
+              <Cells>
+                <Item1 Ref="141" ControlType="XRTableCell" Name="xrTableCell42" Text="xrTableCell42" Borders="Left" Weight="1.5241935606925716">
+                  <Controls>
+                    <Item1 Ref="142" ControlType="XRCheckBox" Name="xrCheckBox6" SizeF="100,15" LocationFloat="5.5, 0" Borders="None" Text="Tidak Teraba">
+                      <StylePriority Ref="143" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="144" PropertyName="CheckState" DataMember="IsNotHavePulse" />
+                      </DataBindings>
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="145" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="146" ControlType="XRTableCell" Name="txtPupilDiameter" Text="Pupil : [LeftPupilDiameter] / [RightPupilDiameter]" Borders="Left" Weight="1.850806465148926">
+                  <StylePriority Ref="147" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="148" ControlType="XRTableCell" Name="txtPupilRetraction" Text="Re : [LeftPupilRetraction] / [RightPupilRetraction]" Weight="1.850806465148926" />
+                <Item4 Ref="149" ControlType="XRTableCell" Name="xrTableCell44" Text="Hipertensi : " TextAlignment="BottomLeft" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="150" UseBorders="false" UseTextAlignment="false" />
+                </Item4>
+              </Cells>
+            </Item14>
+            <Item15 Ref="151" Name="xrTableRow11" ControlType="XRTableRow" Weight="0.8">
+              <Cells>
+                <Item1 Ref="152" ControlType="XRTableCell" Name="xrTableCell39" Text="Capillary Refill : " Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="153" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="154" ControlType="XRTableCell" Name="xrTableCell40" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="155" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="156" ControlType="XRTableCell" Name="xrTableCell41" Text="xrTableCell41" Borders="Left, Right" Weight="1.5241935090095766">
+                  <Controls>
+                    <Item1 Ref="157" ControlType="XRCheckBox" Name="xrCheckBox17" SizeF="50,15" LocationFloat="62.5, 0" Borders="None" Text="Tidak">
+                      <StylePriority Ref="158" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="159" PropertyName="CheckState" DataMember="IsNotHipertency" />
+                      </DataBindings>
+                    </Item1>
+                    <Item2 Ref="160" ControlType="XRCheckBox" Name="xrCheckBox16" SizeF="50,15" LocationFloat="12.5, 0" Borders="None" Text="Ya">
+                      <StylePriority Ref="161" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="162" PropertyName="CheckState" DataMember="IsHipertency" />
+                      </DataBindings>
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="163" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item15>
+            <Item16 Ref="164" Name="xrTableRow10" ControlType="XRTableRow" Weight="0.50000000000000044">
+              <Cells>
+                <Item1 Ref="165" ControlType="XRTableCell" Name="xrTableCell33" Text="(Pengisian Kuku)" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="166" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="167" ControlType="XRTableCell" Name="xrTableCell34" Text="C.2. Toraks" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="168" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="169" ControlType="XRTableCell" Name="xrTableCell35" Text="Sakit Jantung : " Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="170" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item16>
+            <Item17 Ref="171" Name="xrTableRow24" ControlType="XRTableRow" Weight="0.59999999999999987">
+              <Cells>
+                <Item1 Ref="172" ControlType="XRTableCell" Name="xrTableCell79" Text="xrTableCell79" Borders="Left" Weight="1.5241935606925716">
+                  <Controls>
+                    <Item1 Ref="173" ControlType="XRCheckBox" Name="xrCheckBox7" SizeF="100,15" LocationFloat="37.5, 0" Borders="None" Text="&gt; 2 Detik">
+                      <StylePriority Ref="174" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="175" PropertyName="CheckState" DataMember="IsCapillaryRefilAbove2" />
+                      </DataBindings>
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="176" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="177" ControlType="XRTableCell" Name="txtThoracalNote" Text="txtThoracalNote" Borders="Left" Weight="3.701612930297852">
+                  <DataBindings>
+                    <Item1 Ref="178" PropertyName="Text" DataMember="ThoracalNote" />
+                  </DataBindings>
+                  <StylePriority Ref="179" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="180" ControlType="XRTableCell" Name="xrTableCell81" Text="xrTableCell81" Borders="Left, Right" Weight="1.5241935090095766">
+                  <Controls>
+                    <Item1 Ref="181" ControlType="XRCheckBox" Name="xrCheckBox19" SizeF="50,15" LocationFloat="62.5, 0" Borders="None" Text="Tidak">
+                      <StylePriority Ref="182" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="183" PropertyName="CheckState" DataMember="IsNotHeartAttack" />
+                      </DataBindings>
+                    </Item1>
+                    <Item2 Ref="184" ControlType="XRCheckBox" Name="xrCheckBox18" SizeF="50,15" LocationFloat="12.5, 0" Borders="None" Text="Ya">
+                      <StylePriority Ref="185" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="186" PropertyName="CheckState" DataMember="IsHeartAttack" />
+                      </DataBindings>
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="187" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item17>
+            <Item18 Ref="188" Name="xrTableRow23" ControlType="XRTableRow" Weight="0.80000000000000027">
+              <Cells>
+                <Item1 Ref="189" ControlType="XRTableCell" Name="xrTableCell76" Text="xrTableCell76" Borders="Left" Weight="1.5241935606925716">
+                  <Controls>
+                    <Item1 Ref="190" ControlType="XRCheckBox" Name="xrCheckBox8" SizeF="100,15" LocationFloat="37.5, 0" Borders="None" Text="&lt; 2 Detik">
+                      <StylePriority Ref="191" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="192" PropertyName="CheckState" DataMember="IsCapillaryRefillUnder2" />
+                      </DataBindings>
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="193" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="194" ControlType="XRTableCell" Name="xrTableCell77" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="195" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="196" ControlType="XRTableCell" Name="xrTableCell78" Text="Stroke : " TextAlignment="BottomLeft" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="197" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+            </Item18>
+            <Item19 Ref="198" Name="xrTableRow22" ControlType="XRTableRow" Weight="0.79999999999999982">
+              <Cells>
+                <Item1 Ref="199" ControlType="XRTableCell" Name="xrTableCell73" Text="Bernapas : " TextAlignment="BottomLeft" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="200" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="201" ControlType="XRTableCell" Name="xrTableCell74" Text="C.3. Abdomen" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="202" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="203" ControlType="XRTableCell" Name="xrTableCell75" Text="xrTableCell75" Borders="Left, Right" Weight="1.5241935090095766">
+                  <Controls>
+                    <Item1 Ref="204" ControlType="XRCheckBox" Name="xrCheckBox21" SizeF="50,15" LocationFloat="62.5, 0" Borders="None" Text="Tidak">
+                      <StylePriority Ref="205" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="206" PropertyName="CheckState" DataMember="IsNotStroke" />
+                      </DataBindings>
+                    </Item1>
+                    <Item2 Ref="207" ControlType="XRCheckBox" Name="xrCheckBox20" SizeF="50,15" LocationFloat="12.5, 0" Borders="None" Text="Ya">
+                      <StylePriority Ref="208" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="209" PropertyName="CheckState" DataMember="IsStroke" />
+                      </DataBindings>
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="210" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item19>
+            <Item20 Ref="211" Name="xrTableRow16" ControlType="XRTableRow" Weight="0.80000000000000049">
+              <Cells>
+                <Item1 Ref="212" ControlType="XRTableCell" Name="xrTableCell55" Text="xrTableCell55" Borders="Left" Weight="1.5241935606925716">
+                  <Controls>
+                    <Item1 Ref="213" ControlType="XRCheckBox" Name="xrCheckBox10" SizeF="100,15" LocationFloat="75, 0" Borders="None" Text="Tidak">
+                      <StylePriority Ref="214" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="215" PropertyName="CheckState" DataMember="IsNotBreathing" />
+                      </DataBindings>
+                    </Item1>
+                    <Item2 Ref="216" ControlType="XRCheckBox" Name="xrCheckBox9" SizeF="62.5,15" LocationFloat="12.5, 0" Borders="None" Text="Ya">
+                      <StylePriority Ref="217" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="218" PropertyName="CheckState" DataMember="IsBreathing" />
+                      </DataBindings>
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="219" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="220" ControlType="XRTableCell" Name="txtAbdomenNote" Text="txtAbdomenNote" Borders="Left" Weight="3.701612930297852">
+                  <DataBindings>
+                    <Item1 Ref="221" PropertyName="Text" DataMember="AbdomenNote" />
+                  </DataBindings>
+                  <StylePriority Ref="222" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="223" ControlType="XRTableCell" Name="xrTableCell57" Text="Sakit Ginjal : " TextAlignment="BottomLeft" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="224" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+            </Item20>
+            <Item21 Ref="225" Name="xrTableRow21" ControlType="XRTableRow" Weight="0.79999999999999982">
+              <Cells>
+                <Item1 Ref="226" ControlType="XRTableCell" Name="xrTableCell70" Text="Gerakan Napas : [RespirationMovement]" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="227" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="228" ControlType="XRTableCell" Name="xrTableCell71" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="229" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="230" ControlType="XRTableCell" Name="xrTableCell72" Text="xrTableCell72" Borders="Left, Right" Weight="1.5241935090095766">
+                  <Controls>
+                    <Item1 Ref="231" ControlType="XRCheckBox" Name="xrCheckBox23" SizeF="50,15" LocationFloat="62.5, 0" Borders="None" Text="Tidak">
+                      <StylePriority Ref="232" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="233" PropertyName="CheckState" DataMember="IsNotKidneyDisease" />
+                      </DataBindings>
+                    </Item1>
+                    <Item2 Ref="234" ControlType="XRCheckBox" Name="xrCheckBox22" SizeF="50,15" LocationFloat="12.5, 0" Borders="None" Text="Ya">
+                      <StylePriority Ref="235" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="236" PropertyName="CheckState" DataMember="IsKidneyDisease" />
+                      </DataBindings>
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="237" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item21>
+            <Item22 Ref="238" Name="xrTableRow20" ControlType="XRTableRow" Weight="0.5">
+              <Cells>
+                <Item1 Ref="239" ControlType="XRTableCell" Name="xrTableCell67" Text="Jalan Napas : [RespirationCondition]" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="240" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="241" ControlType="XRTableCell" Name="xrTableCell68" Text="C.4. Ekstrimitas" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="242" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="243" ControlType="XRTableCell" Name="xrTableCell69" Text="Sakit Liver : " Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="244" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item22>
+            <Item23 Ref="245" Name="xrTableRow19" ControlType="XRTableRow" Weight="0.8">
+              <Cells>
+                <Item1 Ref="246" ControlType="XRTableCell" Name="xrTableCell64" Text="Pernapasan : [RespirationMethod]" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="247" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="248" ControlType="XRTableCell" Name="txtExtremityNote" Text="txtExtremityNote" Borders="Left" Weight="3.701612930297852">
+                  <DataBindings>
+                    <Item1 Ref="249" PropertyName="Text" DataMember="ExtremityNote" />
+                  </DataBindings>
+                  <StylePriority Ref="250" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="251" ControlType="XRTableCell" Name="xrTableCell66" Text="xrTableCell66" Borders="Left, Right" Weight="1.5241935090095766">
+                  <Controls>
+                    <Item1 Ref="252" ControlType="XRCheckBox" Name="xrCheckBox24" SizeF="50,15" LocationFloat="12.5, 0" Borders="None" Text="Ya">
+                      <StylePriority Ref="253" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="254" PropertyName="CheckState" DataMember="IsLiverDisease" />
+                      </DataBindings>
+                    </Item1>
+                    <Item2 Ref="255" ControlType="XRCheckBox" Name="xrCheckBox25" SizeF="50,15" LocationFloat="62.5, 0" Borders="None" Text="Tidak">
+                      <StylePriority Ref="256" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="257" PropertyName="CheckState" DataMember="IsNotLiverDisease" />
+                      </DataBindings>
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="258" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item23>
+            <Item24 Ref="259" Name="xrTableRow18" ControlType="XRTableRow" Weight="0.80000000000000027">
+              <Cells>
+                <Item1 Ref="260" ControlType="XRTableCell" Name="xrTableCell61" Text="xrTableCell61" Borders="Left" Weight="1.5241935606925716">
+                  <Controls>
+                    <Item1 Ref="261" ControlType="XRCheckBox" Name="xrCheckBox11" SizeF="100,15" LocationFloat="12.5, 0" Borders="None" Text="Retraksi Dada">
+                      <StylePriority Ref="262" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="263" PropertyName="CheckState" DataMember="IsChestRetraction" />
+                      </DataBindings>
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="264" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="265" ControlType="XRTableCell" Name="xrTableCell62" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="266" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="267" ControlType="XRTableCell" Name="xrTableCell63" Text="KHUSUS KASUS OPERATIF" TextAlignment="MiddleCenter" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="268" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+            </Item24>
+            <Item25 Ref="269" Name="xrTableRow17" ControlType="XRTableRow" Weight="0.5">
+              <Cells>
+                <Item1 Ref="270" ControlType="XRTableCell" Name="xrTableCell58" Text="Frekuensi Pernapasan (RR) : " Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="271" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="272" ControlType="XRTableCell" Name="xrTableCell59" Text="C.5. Diagnosa Kerja" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="273" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="274" ControlType="XRTableCell" Name="xrTableCell60" Text="Riwayat Operasi" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="275" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item25>
+            <Item26 Ref="276" Name="xrTableRow25" ControlType="XRTableRow" Weight="0.79999999999999982">
+              <Cells>
+                <Item1 Ref="277" ControlType="XRTableCell" Name="txtRespirationRate" Text="[RespirationRate]" TextAlignment="MiddleCenter" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="278" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="279" ControlType="XRTableCell" Name="txtDiagnoseNote" Text="txtDiagnoseNote" Borders="Left" Weight="3.701612930297852">
+                  <DataBindings>
+                    <Item1 Ref="280" PropertyName="Text" DataMember="DiagnoseNote" />
+                  </DataBindings>
+                  <StylePriority Ref="281" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="282" ControlType="XRTableCell" Name="xrTableCell84" Text="xrTableCell84" Borders="Left, Right" Weight="1.5241935090095766">
+                  <Controls>
+                    <Item1 Ref="283" ControlType="XRCheckBox" Name="xrCheckBox27" SizeF="50,15" LocationFloat="62.5, 0" Borders="None" Text="Tidak">
+                      <StylePriority Ref="284" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="285" PropertyName="CheckState" DataMember="IsNotSurgeryHistory" />
+                      </DataBindings>
+                    </Item1>
+                    <Item2 Ref="286" ControlType="XRCheckBox" Name="xrCheckBox26" SizeF="50,15" LocationFloat="12.5, 0" Borders="None" Text="Ya">
+                      <StylePriority Ref="287" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="288" PropertyName="CheckState" DataMember="SurgeryHistory" />
+                      </DataBindings>
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="289" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item26>
+            <Item27 Ref="290" Name="xrTableRow31" ControlType="XRTableRow" Weight="0.5">
+              <Cells>
+                <Item1 Ref="291" ControlType="XRTableCell" Name="xrTableCell100" Text="Suhu Badan" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="292" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="293" ControlType="XRTableCell" Name="xrTableCell101" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="294" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="295" ControlType="XRTableCell" Name="xrTableCell102" Text="Jenis Operasi" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="296" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item27>
+            <Item28 Ref="297" Name="xrTableRow30" ControlType="XRTableRow" Weight="0.5">
+              <Cells>
+                <Item1 Ref="298" ControlType="XRTableCell" Name="xrTableCell106" Borders="Left" Weight="0.21774193856023968">
+                  <StylePriority Ref="299" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="300" ControlType="XRTableCell" Name="xrTableCell103" Text="Axillar" Weight="0.5443548417860461" />
+                <Item3 Ref="301" ControlType="XRTableCell" Name="txtAxillaryTemp" Text=": [AxillaryTemperature] C" Weight="0.76209678034628581" />
+                <Item4 Ref="302" ControlType="XRTableCell" Name="xrTableCell98" Text="C.6. Tindakan &amp; Terapi" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="303" UseBorders="false" />
+                </Item4>
+                <Item5 Ref="304" ControlType="XRTableCell" Name="txtSurgeryType" Text="txtSurgeryType" Borders="Left, Right" Weight="1.5241935090095766">
+                  <DataBindings>
+                    <Item1 Ref="305" PropertyName="Text" DataMember="SurgeryType" />
+                  </DataBindings>
+                  <StylePriority Ref="306" UseBorders="false" />
+                </Item5>
+              </Cells>
+            </Item28>
+            <Item29 Ref="307" Name="xrTableRow29" ControlType="XRTableRow" Weight="0.5">
+              <Cells>
+                <Item1 Ref="308" ControlType="XRTableCell" Name="xrTableCell107" Borders="Left" Weight="0.21774193856023968">
+                  <StylePriority Ref="309" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="310" ControlType="XRTableCell" Name="xrTableCell104" Text="Rectal" Weight="0.5443548417860461" />
+                <Item3 Ref="311" ControlType="XRTableCell" Name="txtRectalTemp" Text=": [RectalTemperature] C" Weight="0.76209678034628581" />
+                <Item4 Ref="312" ControlType="XRTableCell" Name="txtTherapyNote" Text="txtTherapyNote" Borders="Left" Weight="3.701612930297852">
+                  <DataBindings>
+                    <Item1 Ref="313" PropertyName="Text" DataMember="TherapyNote" />
+                  </DataBindings>
+                  <StylePriority Ref="314" UseBorders="false" />
+                </Item4>
+                <Item5 Ref="315" ControlType="XRTableCell" Name="xrTableCell96" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="316" UseBorders="false" />
+                </Item5>
+              </Cells>
+            </Item29>
+            <Item30 Ref="317" Name="xrTableRow28" ControlType="XRTableRow" Weight="0.5">
+              <Cells>
+                <Item1 Ref="318" ControlType="XRTableCell" Name="xrTableCell108" Borders="Left" Weight="0.21774193856023968">
+                  <StylePriority Ref="319" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="320" ControlType="XRTableCell" Name="xrTableCell105" Text="Auricular" Weight="0.5443548417860461" />
+                <Item3 Ref="321" ControlType="XRTableCell" Name="txtAuricularTemp" Text=": [AuricularTemperature] C" Weight="0.76209678034628581" />
+                <Item4 Ref="322" ControlType="XRTableCell" Name="xrTableCell92" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="323" UseBorders="false" />
+                </Item4>
+                <Item5 Ref="324" ControlType="XRTableCell" Name="xrTableCell93" Text="Gigi Palsu : " Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="325" UseBorders="false" />
+                </Item5>
+              </Cells>
+            </Item30>
+            <Item31 Ref="326" Name="xrTableRow27" ControlType="XRTableRow" Weight="0.80000000000000027">
+              <Cells>
+                <Item1 Ref="327" ControlType="XRTableCell" Name="xrTableCell88" Text="Sp O2 : [OxygenSaturation] %" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="328" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="329" ControlType="XRTableCell" Name="xrTableCell89" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="330" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="331" ControlType="XRTableCell" Name="xrTableCell90" Text="xrTableCell90" Borders="Left, Right" Weight="1.5241935090095766">
+                  <Controls>
+                    <Item1 Ref="332" ControlType="XRCheckBox" Name="xrCheckBox29" SizeF="50,15" LocationFloat="62.5, 0" Borders="None" Text="Tidak">
+                      <StylePriority Ref="333" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="334" PropertyName="CheckState" DataMember="IsNotFalseTeeth" />
+                      </DataBindings>
+                    </Item1>
+                    <Item2 Ref="335" ControlType="XRCheckBox" Name="xrCheckBox28" SizeF="50,15" LocationFloat="12.5, 0" Borders="None" Text="Ya">
+                      <StylePriority Ref="336" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="337" PropertyName="CheckState" DataMember="IsFalseTeeth" />
+                      </DataBindings>
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="338" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item31>
+            <Item32 Ref="339" Name="xrTableRow26" ControlType="XRTableRow" Weight="0.5">
+              <Cells>
+                <Item1 Ref="340" ControlType="XRTableCell" Name="xrTableCell85" Text="GDS : [GDSScore]" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="341" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="342" ControlType="XRTableCell" Name="xrTableCell86" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="343" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="344" ControlType="XRTableCell" Name="xrTableCell87" Text="Protesis : " Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="345" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item32>
+            <Item33 Ref="346" Name="xrTableRow32" ControlType="XRTableRow" Weight="0.8">
+              <Cells>
+                <Item1 Ref="347" ControlType="XRTableCell" Name="xrTableCell109" Text="Tinggi Badan : [Height] cm" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="348" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="349" ControlType="XRTableCell" Name="xrTableCell130" Borders="Left" Weight="1.850806465148926">
+                  <StylePriority Ref="350" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="351" ControlType="XRTableCell" Name="xrTableCell110" Weight="1.850806465148926">
+                  <Controls>
+                    <Item1 Ref="352" ControlType="XRCheckBox" Name="xrCheckBox34" SizeF="150,15" LocationFloat="0, 0" Text="Pendarahan">
+                      <DataBindings>
+                        <Item1 Ref="353" PropertyName="CheckState" DataMember="IsBleeding" />
+                      </DataBindings>
+                    </Item1>
+                  </Controls>
+                </Item3>
+                <Item4 Ref="354" ControlType="XRTableCell" Name="xrTableCell111" Text="xrTableCell111" Borders="Left, Right" Weight="1.5241935090095766">
+                  <Controls>
+                    <Item1 Ref="355" ControlType="XRCheckBox" Name="xrCheckBox31" SizeF="50,15" LocationFloat="62.5, 0" Borders="None" Text="Tidak">
+                      <StylePriority Ref="356" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="357" PropertyName="CheckState" DataMember="IsNotProsthesis" />
+                      </DataBindings>
+                    </Item1>
+                    <Item2 Ref="358" ControlType="XRCheckBox" Name="xrCheckBox30" SizeF="50,15" LocationFloat="12.5, 0" Borders="None" Text="Ya">
+                      <StylePriority Ref="359" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="360" PropertyName="CheckState" DataMember="IsProsthesis" />
+                      </DataBindings>
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="361" UseBorders="false" />
+                </Item4>
+              </Cells>
+            </Item33>
+            <Item34 Ref="362" Name="xrTableRow33" ControlType="XRTableRow" Weight="0.5">
+              <Cells>
+                <Item1 Ref="363" ControlType="XRTableCell" Name="xrTableCell112" Text="Berat Badan : [Weight] kg" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="364" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="365" ControlType="XRTableCell" Name="xrTableCell129" Borders="Left" Weight="1.850806465148926">
+                  <StylePriority Ref="366" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="367" ControlType="XRTableCell" Name="xrTableCell113" Text="Vol. Pendarahan : [BloodVolumeLoss]" Weight="1.850806465148926" />
+                <Item4 Ref="368" ControlType="XRTableCell" Name="xrTableCell114" Text="Lensa Kontak : " Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="369" UseBorders="false" />
+                </Item4>
+              </Cells>
+            </Item34>
+            <Item35 Ref="370" Name="xrTableRow34" ControlType="XRTableRow" Weight="0.79999999999999982">
+              <Cells>
+                <Item1 Ref="371" ControlType="XRTableCell" Name="xrTableCell115" Text="Tanda Tangan Dokter IGD" Borders="Left, Top" Weight="1.5241935606925716">
+                  <StylePriority Ref="372" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="373" ControlType="XRTableCell" Name="xrTableCell116" Text="Catatan : " Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="374" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="375" ControlType="XRTableCell" Name="xrTableCell117" Text="xrTableCell117" Borders="Left, Right" Weight="1.5241935090095766">
+                  <Controls>
+                    <Item1 Ref="376" ControlType="XRCheckBox" Name="xrCheckBox33" SizeF="50,15" LocationFloat="62.5, 0" Borders="None" Text="Tidak">
+                      <StylePriority Ref="377" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="378" PropertyName="CheckState" DataMember="IsNotContactLense" />
+                      </DataBindings>
+                    </Item1>
+                    <Item2 Ref="379" ControlType="XRCheckBox" Name="xrCheckBox32" SizeF="50,15" LocationFloat="12.5, 0" Borders="None" Text="Ya">
+                      <StylePriority Ref="380" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="381" PropertyName="CheckState" DataMember="IsContactLense" />
+                      </DataBindings>
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="382" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item35>
+            <Item36 Ref="383" Name="xrTableRow35" ControlType="XRTableRow" Weight="0.5">
+              <Cells>
+                <Item1 Ref="384" ControlType="XRTableCell" Name="xrTableCell118" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="385" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="386" ControlType="XRTableCell" Name="xrTableCell119" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="387" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="388" ControlType="XRTableCell" Name="xrTableCell120" Text="Makan Terakhir" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="389" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item36>
+            <Item37 Ref="390" Name="xrTableRow36" ControlType="XRTableRow" Weight="0.5">
+              <Cells>
+                <Item1 Ref="391" ControlType="XRTableCell" Name="xrTableCell121" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="392" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="393" ControlType="XRTableCell" Name="xrTableCell122" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="394" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="395" ControlType="XRTableCell" Name="txtLastMealsTime" Text="Jam : [LastMealsTime]" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="396" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item37>
+            <Item38 Ref="397" Name="xrTableRow37" ControlType="XRTableRow" Weight="0.5">
+              <Cells>
+                <Item1 Ref="398" ControlType="XRTableCell" Name="xrTableCell124" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="399" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="400" ControlType="XRTableCell" Name="xrTableCell125" Borders="Left" Weight="3.701612930297852">
+                  <StylePriority Ref="401" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="402" ControlType="XRTableCell" Name="xrTableCell126" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="403" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item38>
+            <Item39 Ref="404" Name="xrTableRow38" ControlType="XRTableRow" Weight="1.0844120395444938">
+              <Cells>
+                <Item1 Ref="405" ControlType="XRTableCell" Name="xrTableCell131" Borders="Left, Bottom" Weight="1.5241935606925716">
+                  <StylePriority Ref="406" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="407" ControlType="XRTableCell" Name="xrTableCell132" Text="TINDAK LANJUT" TextAlignment="MiddleCenter" Borders="Left, Top, Bottom" Weight="3.701612930297852">
+                  <StylePriority Ref="408" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="409" ControlType="XRTableCell" Name="xrTableCell133" Text="Tanda Tangan" TextAlignment="MiddleCenter" Borders="All" Weight="1.5241935090095766">
+                  <StylePriority Ref="410" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+            </Item39>
+            <Item40 Ref="411" Name="xrTableRow39" ControlType="XRTableRow" Weight="0.59750537047137109">
+              <Cells>
+                <Item1 Ref="412" ControlType="XRTableCell" Name="txtDoctor" Text="[Doctor]" TextAlignment="MiddleCenter" Borders="Left, Bottom" Weight="1.5241935606925716">
+                  <StylePriority Ref="413" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="414" ControlType="XRTableCell" Name="xrTableCell135" Text="xrTableCell135" Borders="Left" Weight="3.701612930297852">
+                  <Controls>
+                    <Item1 Ref="415" ControlType="XRCheckBox" Name="xrCheckBox35" SizeF="137.5,15" LocationFloat="12.5, 0" Borders="None" Text="Keluar">
+                      <StylePriority Ref="416" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="417" PropertyName="CheckState" DataMember="IsDischarged" />
+                      </DataBindings>
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="418" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="419" ControlType="XRTableCell" Name="xrTableCell136" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="420" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item40>
+            <Item41 Ref="421" Name="xrTableRow44" ControlType="XRTableRow" Weight="0.59750534100738473">
+              <Cells>
+                <Item1 Ref="422" ControlType="XRTableCell" Name="xrTableCell149" Text="Tanggal Disposisi : " Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="423" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="424" ControlType="XRTableCell" Name="xrTableCell150" Text="xrTableCell150" Borders="Left" Weight="3.701612930297852">
+                  <Controls>
+                    <Item1 Ref="425" ControlType="XRCheckBox" Name="xrCheckBox36" SizeF="150,15" LocationFloat="37.5, 0" Borders="None" Text="Pulang">
+                      <StylePriority Ref="426" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="427" PropertyName="CheckState" DataMember="IsGoingHome" />
+                      </DataBindings>
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="428" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="429" ControlType="XRTableCell" Name="xrTableCell151" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="430" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item41>
+            <Item42 Ref="431" Name="xrTableRow43" ControlType="XRTableRow" Weight="0.59750537197616516">
+              <Cells>
+                <Item1 Ref="432" ControlType="XRTableCell" Name="xrTableCell146" Text="[DispositionDate!dd-MMM-yyyy]" TextAlignment="MiddleCenter" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="433" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="434" ControlType="XRTableCell" Name="xrTableCell147" Text="xrTableCell147" Borders="Left" Weight="3.701612930297852">
+                  <Controls>
+                    <Item1 Ref="435" ControlType="XRCheckBox" Name="xrCheckBox37" SizeF="150,15" LocationFloat="37.5, 0" Borders="None" Text="Dirujuk">
+                      <StylePriority Ref="436" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="437" PropertyName="CheckState" DataMember="IsReferred" />
+                      </DataBindings>
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="438" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="439" ControlType="XRTableCell" Name="xrTableCell148" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="440" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item42>
+            <Item43 Ref="441" Name="xrTableRow45" ControlType="XRTableRow" Weight="0.59750534100738273">
+              <Cells>
+                <Item1 Ref="442" ControlType="XRTableCell" Name="xrTableCell152" Text="Jam Disposisi :" Borders="Left" Weight="1.5241935606925716">
+                  <StylePriority Ref="443" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="444" ControlType="XRTableCell" Name="xrTableCell153" Text="xrTableCell153" Borders="Left" Weight="3.701612930297852">
+                  <Controls>
+                    <Item1 Ref="445" ControlType="XRCheckBox" Name="xrCheckBox39" SizeF="237.5,15" LocationFloat="12.5, 0" Borders="None" Text="Rawat Inap">
+                      <StylePriority Ref="446" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="447" PropertyName="CheckState" DataMember="IsHospitalized" />
+                      </DataBindings>
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="448" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="449" ControlType="XRTableCell" Name="xrTableCell154" Borders="Left, Right" Weight="1.5241935090095766">
+                  <StylePriority Ref="450" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item43>
+            <Item44 Ref="451" Name="xrTableRow42" ControlType="XRTableRow" Borders="Bottom" Weight="0.80013904981598616">
+              <Cells>
+                <Item1 Ref="452" ControlType="XRTableCell" Name="xrTableCell143" Text="xrTableCell143" TextAlignment="MiddleCenter" Borders="Left, Bottom" Weight="1.5241935606925716">
+                  <DataBindings>
+                    <Item1 Ref="453" PropertyName="Text" DataMember="DispositionTime" />
+                  </DataBindings>
+                  <StylePriority Ref="454" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="455" ControlType="XRTableCell" Name="xrTableCell144" Text="xrTableCell144" Borders="Left, Bottom" Weight="3.701612930297852">
+                  <Controls>
+                    <Item1 Ref="456" ControlType="XRCheckBox" Name="xrCheckBox41" SizeF="150,15" LocationFloat="12.5, 0" Borders="None" Text="Meninggal ">
+                      <StylePriority Ref="457" UseBorders="false" />
+                      <DataBindings>
+                        <Item1 Ref="458" PropertyName="CheckState" DataMember="IsPassAway" />
+                      </DataBindings>
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="459" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="460" ControlType="XRTableCell" Name="xrTableCell145" Text="xrTableCell145" TextAlignment="MiddleCenter" Borders="All" Weight="1.5241935090095766">
+                  <DataBindings>
+                    <Item1 Ref="461" PropertyName="Text" DataMember="DispositionPhysician" />
+                  </DataBindings>
+                  <StylePriority Ref="462" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="463" UseBorders="false" />
+            </Item44>
+          </Rows>
+          <StylePriority Ref="464" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="465" Name="lblReportSubtitle" ControlType="XRLabel" SizeF="775,12.5" LocationFloat="0, 100" Font="Tahoma, 10pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleCenter">
+          <StylePriority Ref="466" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="467" Name="lblReportTitle" ControlType="XRLabel" SizeF="775,25" LocationFloat="0, 75" Font="Tahoma, 13pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text="Report Title">
+          <StylePriority Ref="468" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="469" Name="lblAddressLine2" ControlType="XRLabel" SizeF="362.5,12.5" LocationFloat="62.5, 37.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Address Line 2">
+          <StylePriority Ref="470" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="471" Name="xrLogo" ControlType="XRPictureBox" SizeF="62.5,68" LocationFloat="0, 0" Sizing="StretchImage" ImageUrl="/qislib/images/logo.png" />
+        <Item6 Ref="472" Name="lblAddressLine1" ControlType="XRLabel" SizeF="362.5,12.5" LocationFloat="62.5, 25" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Address Line 1">
+          <StylePriority Ref="473" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="474" Name="lblPhoneFaxNo" ControlType="XRLabel" SizeF="317,17.00001" LocationFloat="450, 0" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleRight" Text="Phone">
+          <StylePriority Ref="475" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="476" Name="lblHealthcareName" ControlType="XRLabel" SizeF="362.5,25" LocationFloat="62.5, 0" Font="Tahoma, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Healthcare Name">
+          <StylePriority Ref="477" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item8>
+      </Controls>
+      <StylePriority Ref="478" UseBorders="false" UseTextAlignment="false" />
+    </Item1>
+    <Item2 Ref="479" ControlType="PageFooterBand" Name="PageFooter" HeightF="29.50002">
+      <Controls>
+        <Item1 Ref="480" Name="xrPageInfo3" ControlType="XRPageInfo" SizeF="149.9999,12.5" Font="Tahoma, 7pt" Padding="2,2,0,0,100" LocationFloat="627, 12.5" TextAlignment="MiddleRight" Format="Page {0} of {1}">
+          <StylePriority Ref="481" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="482" Name="lineFooter" ControlType="XRLine" SizeF="777,12.49997" LocationFloat="0, 0" />
+        <Item3 Ref="483" Name="lblReportProperties" ControlType="XRLabel" SizeF="451.0417,12.5" LocationFloat="0, 12.5" Font="Tahoma, 7pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="MEDINFRAS - ReportID, Print Date/Time : dd-MMM-yyyy HH:MM:ss, User ID : XXXXX">
+          <StylePriority Ref="484" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item3>
+      </Controls>
+    </Item2>
+    <Item3 Ref="485" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+    <Item4 Ref="486" ControlType="ReportFooterBand" Name="ReportFooter">
+      <Controls>
+        <Item1 Ref="487" Name="lblParameter6" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="400, 75" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter6 = ParameterValue6">
+          <StylePriority Ref="488" UseFont="false" />
+        </Item1>
+        <Item2 Ref="489" Name="lblParameter0" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 50" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter0 = ParameterValue0">
+          <StylePriority Ref="490" UseFont="false" />
+        </Item2>
+        <Item3 Ref="491" Name="lblParameter1" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 62.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter1 = ParameterValue1">
+          <StylePriority Ref="492" UseFont="false" />
+        </Item3>
+        <Item4 Ref="493" Name="lblParameter2" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 75" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter2 = ParameterValue2">
+          <StylePriority Ref="494" UseFont="false" />
+        </Item4>
+        <Item5 Ref="495" Name="lblParameter4" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="400, 50" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter4 = ParameterValue4">
+          <StylePriority Ref="496" UseFont="false" />
+        </Item5>
+        <Item6 Ref="497" Name="lblParameter5" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="400, 62.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter5 = ParameterValue5">
+          <StylePriority Ref="498" UseFont="false" />
+        </Item6>
+        <Item7 Ref="499" Name="lblReportParameterTitle" ControlType="XRLabel" SizeF="150,12.5" LocationFloat="0, 25" Font="Tahoma, 8pt, style=Bold, Underline" Padding="2,2,0,0,100" Text="Report Parameter(s) :">
+          <StylePriority Ref="500" UseFont="false" />
+        </Item7>
+        <Item8 Ref="501" Name="lblParameter3" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 87.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter3 = ParameterValue3">
+          <StylePriority Ref="502" UseFont="false" />
+        </Item8>
+        <Item9 Ref="503" Name="lblParameter7" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="400, 87.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter7 = ParameterValue7">
+          <StylePriority Ref="504" UseFont="false" />
+        </Item9>
+      </Controls>
+    </Item4>
+    <Item5 Ref="505" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+    <Item6 Ref="506" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+    <Item7 Ref="507" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="0" />
+  </Bands>
+  <CalculatedFields>
+<<<<<<< HEAD
+    <Item1 Ref="508" Name="IsNotHipertency" Expression=" Not [IsHipertency]" />
+    <Item2 Ref="509" Name="IsNotAllergy" Expression="Not [Allergy]" />
+    <Item3 Ref="510" Name="IsNotAsthma" Expression="Not [IsAsthma]" />
+    <Item4 Ref="511" Name="IsNotDiabetes" Expression="Not [IsDiabetes]" />
+    <Item5 Ref="512" Name="IsNotHeartAttack" Expression="Not [IsHeartAttack]" />
+    <Item6 Ref="513" Name="IsNotKidneyDisease" Expression="Not [IsKidneyDisease]" />
+    <Item7 Ref="514" Name="IsNotStroke" Expression="Not [IsStroke]" />
+    <Item8 Ref="515" Name="IsNotLiverDisease" Expression="Not [IsLiverDisease]" />
+    <Item9 Ref="516" Name="IsNotSurgeryHistory" Expression="Not [SurgeryHistory]" />
+    <Item10 Ref="517" Name="IsNotFalseTeeth" Expression="Not [IsFalseTeeth]" />
+    <Item11 Ref="518" Name="IsNotProsthesis" Expression="Not [IsProsthesis]" />
+    <Item12 Ref="519" Name="IsNotContactLense" Expression="Not [[IsContactLense]" />
+    <Item13 Ref="520" Name="IsNotBreathing" Expression="Not [IsBreathing]" />
+    <Item14 Ref="521" Name="IsNotSimpleInstruction" Expression="Not [IsSimpleInstruction]" />
+    <Item15 Ref="522" Name="IsCapillaryRefilAbove2" Expression="iif([CapillaryRefill] = '01',True,False)" />
+    <Item16 Ref="523" Name="IsCapillaryRefillUnder2" Expression="iif([CapillaryRefill] = '02',True,False)" />
+    <Item17 Ref="524" Name="IsHavePulse" Expression="iif([PulseCountl] &gt; 0 ,True,False)" />
+    <Item18 Ref="525" Name="IsNotHavePulse" Expression="iif([PulseCountl] = 0 ,True,False)" />
+    <Item19 Ref="526" Name="IsBleeding" Expression="iif([BloodVolumeLossl] &gt; 0 ,True,False)" />
+    <Item20 Ref="527" Name="IsDischarged" Expression="iif([DischargeMethodCode] = '01' OR [DischargeMethodCode] = '02'&#xD;&#xA;     OR [DischargeMethodCode] = '03' OR [DischargeMethodCode] = '04'&#xD;&#xA;     OR [DischargeMethodCode] = '05' OR [DischargeMethodCode] = '06', True, False)" />
+    <Item21 Ref="528" Name="IsGoingHome" Expression="iif([DischargeMethodCode] = '01' OR [DischargeMethodCode] = '04'&#xD;&#xA;     OR [DischargeMethodCode] = '05' OR [DischargeMethodCode] = '06', True, False)" />
+    <Item22 Ref="529" Name="IsReferred" Expression="iif([DischargeMethodCode] = '02' OR [DischargeMethodCode] = '03' , True, False)" />
+    <Item23 Ref="530" Name="IsHospitalized" Expression="iif([DischargeMethodCode] = '07', True, False)" />
+    <Item24 Ref="531" Name="IsPassAway" Expression="iif([DischargeMethodCode] = '08', True, False)" />
+=======
+    <Item1 Ref="508" Expression=" Not [IsHipertency]" Name="IsNotHipertency" />
+    <Item2 Ref="509" Expression="Not [Allergy]" Name="IsNotAllergy" />
+    <Item3 Ref="510" Expression="Not [IsAsthma]" Name="IsNotAsthma" />
+    <Item4 Ref="511" Expression="Not [IsDiabetes]" Name="IsNotDiabetes" />
+    <Item5 Ref="512" Expression="Not [IsHeartAttack]" Name="IsNotHeartAttack" />
+    <Item6 Ref="513" Expression="Not [IsKidneyDisease]" Name="IsNotKidneyDisease" />
+    <Item7 Ref="514" Expression="Not [IsStroke]" Name="IsNotStroke" />
+    <Item8 Ref="515" Expression="Not [IsLiverDisease]" Name="IsNotLiverDisease" />
+    <Item9 Ref="516" Expression="Not [SurgeryHistory]" Name="IsNotSurgeryHistory" />
+    <Item10 Ref="517" Expression="Not [IsFalseTeeth]" Name="IsNotFalseTeeth" />
+    <Item11 Ref="518" Expression="Not [IsProsthesis]" Name="IsNotProsthesis" />
+    <Item12 Ref="519" Expression="Not [[IsContactLense]" Name="IsNotContactLense" />
+    <Item13 Ref="520" Expression="Not [IsBreathing]" Name="IsNotBreathing" />
+    <Item14 Ref="521" Expression="Not [IsSimpleInstruction]" Name="IsNotSimpleInstruction" />
+    <Item15 Ref="522" Expression="iif([CapillaryRefill] = '01',True,False)" Name="IsCapillaryRefilAbove2" />
+    <Item16 Ref="523" Expression="iif([CapillaryRefill] = '02',True,False)" Name="IsCapillaryRefillUnder2" />
+    <Item17 Ref="524" Expression="iif([PulseCountl] &gt; 0 ,True,False)" Name="IsHavePulse" />
+    <Item18 Ref="525" Expression="iif([PulseCountl] = 0 ,True,False)" Name="IsNotHavePulse" />
+    <Item19 Ref="526" Expression="iif([BloodVolumeLossl] &gt; 0 ,True,False)" Name="IsBleeding" />
+    <Item20 Ref="527" Expression="iif([DischargeMethodCode] = '01' OR [DischargeMethodCode] = '02'&#xA;     OR [DischargeMethodCode] = '03' OR [DischargeMethodCode] = '04'&#xA;     OR [DischargeMethodCode] = '05' OR [DischargeMethodCode] = '06', True, False)" Name="IsDischarged" />
+    <Item21 Ref="528" Expression="iif([DischargeMethodCode] = '01' OR [DischargeMethodCode] = '04'&#xD;&#xA;     OR [DischargeMethodCode] = '05' OR [DischargeMethodCode] = '06', True, False)" Name="IsGoingHome" />
+    <Item22 Ref="529" Expression="iif([DischargeMethodCode] = '02' OR [DischargeMethodCode] = '03' , True, False)" Name="IsReferred" />
+    <Item23 Ref="530" Expression="iif([DischargeMethodCode] = '07', True, False)" Name="IsHospitalized" />
+    <Item24 Ref="531" Expression="iif([DischargeMethodCode] = '08', True, False)" Name="IsPassAway" />
+>>>>>>> 7307129c24f28fe3af6770ffa8e8ee29d568db7d
+  </CalculatedFields>
+  <StyleSheet>
+    <Item1 Ref="532" Name="Title" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Times New Roman, 20pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item2 Ref="533" Name="FieldCaption" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 10pt, style=Bold" Sides="Top, Bottom" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item3 Ref="534" Name="PageInfo" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 9pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+  </StyleSheet>
+  <ObjectStorage>
+    <Item1 Ref="0" Content="~Xtra#NULL" Type="System.Windows.Forms.BindingSource" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

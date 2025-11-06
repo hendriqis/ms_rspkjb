@@ -1,0 +1,386 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using DevExpress.Web.ASPxCallbackPanel;
+using DevExpress.Web.ASPxEditors;
+using QIS.Data.Core.Dal;
+using QIS.Medinfras.Data.Service;
+using QIS.Medinfras.Web.Common;
+using QIS.Medinfras.Web.Common.UI;
+
+namespace QIS.Medinfras.Web.Finance.Program
+{
+    public partial class ARPayerReceiveAlocationEntryDetailCtl : BaseEntryPopupCtl
+    {
+        private string[] lstSelectedMember = null;
+
+        private ARPayerReceiveAlocationEntry DetailPage
+        {
+            get { return (ARPayerReceiveAlocationEntry)Page; }
+        }
+
+        public override void InitializeDataControl(string param)
+        {
+            hdnARReceivingIDCtl.Value = param;
+
+            List<Variable> lstFilterBy = new List<Variable>();
+            lstFilterBy.Add(new Variable { Code = "0", Value = "--ALL--" });
+            lstFilterBy.Add(new Variable { Code = "1", Value = "Full Outstanding" });
+            lstFilterBy.Add(new Variable { Code = "2", Value = "Partial Outstanding" });
+            Methods.SetComboBoxField<Variable>(cboFilterBy, lstFilterBy, "Value", "Code");
+            cboFilterBy.Value = "1";
+
+            BindGridView();
+        }
+
+        #region Bind Grid
+        private void BindGridView()
+        {
+            string filterExpression = string.Format("BusinessPartnerID = {0} AND GCTransactionStatus IN ('{1}','{2}')",
+                                        AppSession.BusinessPartnerID, Constant.TransactionStatus.APPROVED, Constant.TransactionStatus.PROCESSED);
+
+            if (cboFilterBy.Value.ToString() == "1")
+            {
+                filterExpression += " AND TotalPaymentAmount = 0";
+            }
+            else if (cboFilterBy.Value.ToString() == "2")
+            {
+                filterExpression += " AND TotalPaymentAmount < TotalClaimedAmount AND TotalPaymentAmount != 0";
+            }
+
+            if (hdnFilterExpressionQuickSearch.Value != "")
+            {
+                filterExpression += string.Format(" AND {0}", hdnFilterExpressionQuickSearch.Value);
+            }
+
+            lstSelectedMember = hdnSelectedARInvoice.Value.Split(',');
+
+            List<ARInvoiceHd> lstEntity = BusinessLayer.GetARInvoiceHdList(filterExpression);
+            lvwView.DataSource = lstEntity;
+            lvwView.DataBind();
+        }
+
+        protected void lvwView_ItemDataBound(object sender, ListViewItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListViewItemType.DataItem)
+            {
+                ARInvoiceHd entity = e.Item.DataItem as ARInvoiceHd;
+                CheckBox chkARInvoice = e.Item.FindControl("chkARInvoice") as CheckBox;
+                if (lstSelectedMember.Contains(entity.ARInvoiceID.ToString()))
+                    chkARInvoice.Checked = true;
+                else
+                    chkARInvoice.Checked = false;
+
+                TextBox txtAlocationAmount = e.Item.FindControl("txtAlocationAmount") as TextBox;
+                txtAlocationAmount.Text = entity.RemainingAmount.ToString();
+            }
+        }
+
+        protected void cbpProcessDetail_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        {
+            string result = "";
+            if (e.Parameter != null && e.Parameter != "")
+            {
+                BindGridView();
+            }
+
+            ASPxCallbackPanel panel = sender as ASPxCallbackPanel;
+            panel.JSProperties["cpResult"] = result;
+        }
+        #endregion
+
+        #region Save Entity
+        protected override bool OnSaveAddRecord(ref string errMessage, ref string retval)
+        {
+            bool result = true;
+            IDbContext ctx = DbFactory.Configure(true);
+            ARReceivingHdDao eReceivingHd = new ARReceivingHdDao(ctx);
+            ARInvoiceReceivingDao entityARRcvDao = new ARInvoiceReceivingDao(ctx);
+            ARInvoiceReceivingDtDao entityARRcvDtDao = new ARInvoiceReceivingDtDao(ctx);
+            ARInvoiceHdDao eInvoiceHd = new ARInvoiceHdDao(ctx);
+            ARInvoiceDtDao eInvoiceDt = new ARInvoiceDtDao(ctx);
+
+            try
+            {
+                string filterExpression = string.Format("ARInvoiceID IN ({0})", hdnSelectedARInvoice.Value.Substring(1));
+                List<ARInvoiceHd> lstAR = BusinessLayer.GetARInvoiceHdList(filterExpression, ctx);
+
+                int count = 0;
+                List<String> lstSelectedARInv = hdnSelectedARInvoice.Value.Split(',').ToList();
+                List<String> lstSelectedRcvAmount = hdnSelectedARReceivingAmount.Value.Split(',').ToList();
+                lstSelectedARInv.RemoveAt(0);
+                lstSelectedRcvAmount.RemoveAt(0);
+
+                ARReceivingHd rcvHD = eReceivingHd.Get(Convert.ToInt32(hdnARReceivingIDCtl.Value));
+
+                string filterInvRcvList = string.Format("ARReceivingID = {0} AND IsDeleted = 0", hdnARReceivingIDCtl.Value);
+                List<ARInvoiceReceiving> lstInvoiceDt = BusinessLayer.GetARInvoiceReceivingList(filterInvRcvList);
+                decimal tempRcv = 0;
+                decimal remainingRcv = rcvHD.cfReceiveAmount - lstInvoiceDt.Sum(a => a.ReceivingAmount);
+                decimal invAmount = 0;
+
+                foreach (ARInvoiceHd entity in lstAR)
+                {
+                    if (tempRcv <= rcvHD.cfReceiveAmount)
+                    {
+                        ARInvoiceReceiving entityARRcv = new ARInvoiceReceiving();
+
+                        entityARRcv.ARReceivingID = Convert.ToInt32(hdnARReceivingIDCtl.Value);
+                        entityARRcv.ARInvoiceID = Convert.ToInt32(entity.ARInvoiceID);
+
+                        decimal paymentAmount = Convert.ToDecimal(lstSelectedRcvAmount[count]);
+
+                        decimal invRemaining = (entity.TotalClaimedAmount - entity.TotalPaymentAmount);
+
+                        if (paymentAmount <= remainingRcv)
+                        {
+                            if (paymentAmount <= invRemaining)
+                            {
+                                entityARRcv.ReceivingAmount = paymentAmount;
+                                entity.TotalPaymentAmount += paymentAmount;
+                                tempRcv += paymentAmount;
+                                remainingRcv -= paymentAmount;
+                            }
+                            else
+                            {
+                                entityARRcv.ReceivingAmount = invRemaining;
+                                entity.TotalPaymentAmount += invRemaining;
+                                tempRcv += invRemaining;
+                                remainingRcv -= invRemaining;
+                            }
+                        }
+                        else
+                        {
+                            if (remainingRcv <= invRemaining)
+                            {
+                                entityARRcv.ReceivingAmount = remainingRcv;
+                                entity.TotalPaymentAmount += remainingRcv;
+                                tempRcv += remainingRcv;
+                                remainingRcv -= remainingRcv;
+                            }
+                            else
+                            {
+                                entityARRcv.ReceivingAmount = invRemaining;
+                                entity.TotalPaymentAmount += invRemaining;
+                                tempRcv += invRemaining;
+                                remainingRcv -= invRemaining;
+                            }
+                        }
+
+                        entityARRcv.IsDeleted = false;
+                        entityARRcv.CreatedBy = AppSession.UserLogin.UserID;
+                        ctx.CommandType = CommandType.Text;
+                        ctx.Command.Parameters.Clear();
+                        int oARInvoiceReceivingID = entityARRcvDao.InsertReturnPrimaryKeyID(entityARRcv); // INSERT AR INVOICE RECEIVING
+
+                        if (entity.TransactionCode != Constant.TransactionCode.AR_INVOICE_NON_OPERATIONAL)
+                        {
+                            Decimal RemainingAmountForAIIDt = entity.TotalPaymentAmount; //entityARRcv.ReceivingAmount;
+
+                            //#region ARInvoiceDt
+
+                            //string filterArInvDt = string.Format(
+                            //                    "ARInvoiceID IN ({0}) AND ISNULL(GCTransactionDetailStatus,'') != '{1}' AND PaymentDetailID IN (SELECT ppdi.PaymentDetailID FROM PatientPaymentDtInfo ppdi WHERE ppdi.GCClaimStatus = 'X380^002' AND ppdi.GCFinalStatus = 'X381^002' AND ppdi.GrouperAmountFinal != 0)",
+                            //                    entity.ARInvoiceID, Constant.TransactionStatus.VOID);
+                            //List<ARInvoiceDt> lstARInvoiceDT = BusinessLayer.GetARInvoiceDtList(filterArInvDt, ctx);
+                            //foreach (ARInvoiceDt entityDt in lstARInvoiceDT)
+                            //{
+                            //    decimal paymentAmountARInvoiceDtBefore = entityDt.PaymentAmount;
+                            //    if (RemainingAmountForAIIDt > entityDt.ClaimedAmount)
+                            //    {
+                            //        entityDt.PaymentAmount = entityDt.ClaimedAmount;
+                            //    }
+                            //    else
+                            //    {
+                            //        entityDt.PaymentAmount = RemainingAmountForAIIDt;
+                            //    }
+
+                            //    RemainingAmountForAIIDt -= entityDt.PaymentAmount;
+
+                            //    entityDt.GCTransactionDetailStatus = Constant.TransactionStatus.CLOSED;
+                            //    entityDt.LastUpdatedBy = AppSession.UserLogin.UserID;
+                            //    entityDt.LastUpdatedDate = DateTime.Now;
+                            //    ctx.CommandType = CommandType.Text;
+                            //    ctx.Command.Parameters.Clear();
+                            //    eInvoiceDt.Update(entityDt); // UPDATE AR INVOICE DT
+
+
+                            //    string filterARInvRcvDt = string.Format("ARInvoiceReceivingID = {0} AND IsDeleted = 0", oARInvoiceReceivingID);
+                            //    List<ARInvoiceReceivingDt> lstARInvRcvDt = BusinessLayer.GetARInvoiceReceivingDtList(filterARInvRcvDt, ctx);
+
+                            //    decimal totalReceivingBefore = 0;
+                            //    decimal totalReceivingAmount = 0;
+                            //    if (lstARInvRcvDt.Count > 0)
+                            //    {
+                            //        totalReceivingBefore = lstARInvRcvDt.Sum(p => p.ReceivingAmount);
+                            //    }
+
+                            //    List<ARInvoiceReceivingDt> lstARInvRcvDt1 = lstARInvRcvDt.Where(p => p.ARInvoiceDtID == entityDt.ID).ToList();
+                            //    if (lstARInvRcvDt1.Count() == 0)
+                            //    {
+                            //        ARInvoiceReceivingDt entityARRcvDt = new ARInvoiceReceivingDt();
+                            //        entityARRcvDt.ARInvoiceReceivingID = oARInvoiceReceivingID;
+                            //        entityARRcvDt.ARInvoiceDtID = entityDt.ID;
+
+                            //        totalReceivingAmount = entityARRcv.ReceivingAmount - totalReceivingBefore;
+
+                            //        if (totalReceivingAmount > 0)
+                            //        {
+                            //            if ((entityDt.ClaimedAmount - paymentAmountARInvoiceDtBefore) > 0)
+                            //            {
+                            //                if (totalReceivingAmount > (entityDt.ClaimedAmount - paymentAmountARInvoiceDtBefore))
+                            //                {
+                            //                    entityARRcvDt.ReceivingAmount = (entityDt.ClaimedAmount - paymentAmountARInvoiceDtBefore);
+                            //                }
+                            //                else
+                            //                {
+                            //                    entityARRcvDt.ReceivingAmount = totalReceivingAmount;
+                            //                }
+                            //            }
+                            //            else
+                            //            {
+                            //                entityARRcvDt.ReceivingAmount = 0;
+                            //            }
+                            //        }
+                            //        else
+                            //        {
+                            //            entityARRcvDt.ReceivingAmount = 0;
+                            //        }
+
+
+                            //        entityARRcvDt.IsDeleted = false;
+                            //        entityARRcvDt.CreatedBy = AppSession.UserLogin.UserID;
+                            //        ctx.CommandType = CommandType.Text;
+                            //        ctx.Command.Parameters.Clear();
+                            //        entityARRcvDtDao.Insert(entityARRcvDt);
+                            //    }
+                            //    else
+                            //    {
+                            //        ARInvoiceReceivingDt entityARRcvDt = lstARInvRcvDt.FirstOrDefault();
+
+                            //        totalReceivingAmount = entityARRcv.ReceivingAmount - totalReceivingBefore;
+
+                            //        if (totalReceivingAmount > (entityDt.ClaimedAmount - paymentAmountARInvoiceDtBefore))
+                            //        {
+                            //            entityARRcvDt.ReceivingAmount = (entityDt.ClaimedAmount - paymentAmountARInvoiceDtBefore);
+                            //        }
+                            //        else
+                            //        {
+                            //            entityARRcvDt.ReceivingAmount = totalReceivingAmount;
+                            //        }
+
+                            //        entityARRcvDt.LastUpdatedBy = AppSession.UserLogin.UserID;
+                            //        ctx.CommandType = CommandType.Text;
+                            //        ctx.Command.Parameters.Clear();
+                            //        entityARRcvDtDao.Update(entityARRcvDt);
+                            //    }
+                            //}
+
+                            //#endregion
+
+                            ctx.Command.CommandTimeout = 90;
+                            BusinessLayer.GenerateARInvoiceReceivingDtPerAlokasiHd(oARInvoiceReceivingID, ctx);
+                        }
+                        else
+                        {
+                            #region ARInvoiceNonOperational
+
+                            List<ARInvoiceDt> lstARInvoiceDT = BusinessLayer.GetARInvoiceDtList(string.Format(
+                                                "ARInvoiceID IN ({0}) AND ISNULL(GCTransactionDetailStatus,'') != '{1}'",
+                                                entity.ARInvoiceID, Constant.TransactionStatus.VOID), ctx);
+                            foreach (ARInvoiceDt entityDt in lstARInvoiceDT)
+                            {
+                                if (entityDt.PaymentAmount > entityDt.ClaimedAmount)
+                                {
+                                    entityDt.PaymentAmount += entityDt.ClaimedAmount;
+                                }
+                                else
+                                {
+                                    entityDt.PaymentAmount += entityARRcv.ReceivingAmount;
+                                }
+
+                                entityDt.GCTransactionDetailStatus = Constant.TransactionStatus.CLOSED;
+                                entityDt.LastUpdatedBy = AppSession.UserLogin.UserID;
+                                entityDt.LastUpdatedDate = DateTime.Now;
+                                eInvoiceDt.Update(entityDt); // UPDATE AR INVOICE DT
+
+                                string filterARInvRcvDt = string.Format("ARInvoiceReceivingID = {0} AND ARInvoiceDtID = {1} AND IsDeleted = 0", oARInvoiceReceivingID, entityDt.ID);
+                                List<ARInvoiceReceivingDt> lstARInvRcvDt = BusinessLayer.GetARInvoiceReceivingDtList(filterARInvRcvDt, ctx);
+                                if (lstARInvRcvDt.Count() == 0)
+                                {
+                                    ARInvoiceReceivingDt entityARRcvDt = new ARInvoiceReceivingDt();
+                                    entityARRcvDt.ARInvoiceReceivingID = oARInvoiceReceivingID;
+                                    entityARRcvDt.ARInvoiceDtID = entityDt.ID;
+                                    if (entityARRcv.ReceivingAmount > entityDt.ClaimedAmount)
+                                    {
+                                        entityARRcvDt.ReceivingAmount = entityDt.ClaimedAmount;
+                                    }
+                                    else
+                                    {
+                                        entityARRcvDt.ReceivingAmount = entityARRcv.ReceivingAmount;
+                                    }
+
+                                    entityARRcvDt.IsDeleted = false;
+                                    entityARRcvDt.CreatedBy = AppSession.UserLogin.UserID;
+                                    entityARRcvDtDao.Insert(entityARRcvDt);
+                                }
+                                else
+                                {
+                                    ARInvoiceReceivingDt entityARRcvDt = lstARInvRcvDt.FirstOrDefault();
+                                    entityARRcvDt.ReceivingAmount += entityDt.ClaimedAmount;
+                                    entityARRcvDt.LastUpdatedBy = AppSession.UserLogin.UserID;
+                                    entityARRcvDtDao.Update(entityARRcvDt);
+                                }
+                            }
+
+                            #endregion
+                        }
+
+                        if (entity.RemainingAmount == 0)
+                        {
+                            entity.GCTransactionStatus = Constant.TransactionStatus.CLOSED;
+                        }
+                        else
+                        {
+                            entity.GCTransactionStatus = Constant.TransactionStatus.PROCESSED;
+                        }
+
+                        invAmount += entity.TotalClaimedAmount;
+
+                        entity.LastUpdatedBy = AppSession.UserLogin.UserID;
+                        ctx.CommandType = CommandType.Text;
+                        ctx.Command.Parameters.Clear();
+                        eInvoiceHd.Update(entity); // UPDATE AR INVOICE HD
+
+                        count++;
+                    }
+                }
+
+                rcvHD.TotalInvoiceAmount += invAmount;
+                rcvHD.LastUpdatedBy = AppSession.UserLogin.UserID;
+                eReceivingHd.Update(rcvHD); // UPDATE AR RECEIVING HD
+
+                retval = hdnARReceivingIDCtl.Value;
+                ctx.CommitTransaction();
+            }
+            catch (Exception ex)
+            {
+                result = false;
+                errMessage = ex.Message;
+                Helper.InsertErrorLog(ex);
+                ctx.RollBackTransaction();
+            }
+            finally
+            {
+                ctx.Close();
+            }
+            return result;
+        }
+        #endregion
+    }
+}

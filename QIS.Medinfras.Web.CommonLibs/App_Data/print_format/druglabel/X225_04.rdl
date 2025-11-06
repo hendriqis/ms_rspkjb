@@ -1,0 +1,34 @@
+^XA
+^LL400
+^PW640
+^LH10,10
+^ATN,42,40
+^FO15,55^FD{PatientFullName}^FS
+^AQN,28,24
+^FO440,18^FD{PrescriptionDate}^FS
+^AQN,28,24
+^FO15,102^FD{RegistrationNo}^FS
+^AQN,28,24
+^FO440,102^FD{MedicalNo}^FS
+^AQN,28,24
+^FO15,132^FD{DateOfBirth}^FS
+^ATN,36,30
+^FO15,165^FD{ItemName}^FS
+^AQN,28,24
+^FO15,207^FD{cfConsumeMethodRoute}^FS
+^AQN,28,24
+^FO440,207^FDED : {ExpiredDate}^FS
+^AQN,28,24
+^FO15,237^FD{cfCoenamRuleLabel}^FS
+^AQN,28,24
+^FO15,267^FD{cfTakenQty}^FS
+^AQN,28,24
+^FO15,297^FD{MedicationAdministration}^FS
+^ADN,18,10
+^FO15,330^FD___________________________________________________^FS
+^ADN,18,10
+^FO127,350^FDHindari dari jangkauan anak-anak^FS
+^ADN,18,10
+^FO175,370^FD(Keep away from children)^FS
+^PR2
+^XZ

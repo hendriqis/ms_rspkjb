@@ -1,0 +1,232 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+    $(function () {
+        $("#chkIsHasFallingHistory1").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore1").val('25');
+            else
+                $("#txtParamScore1").val('0');
+
+            CalculateTotalScore();
+        });
+
+        $("#chkIsHasFallingHistory2").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore1").val('0');
+            else
+                $("#txtParamScore1").val('25');
+            CalculateTotalScore();
+        });
+
+        $("#chkSecondaryDiagnosis1").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore2").val('15');
+            else
+                $("#txtParamScore2").val('0');
+            CalculateTotalScore();
+        });
+
+        $("#chkSecondaryDiagnosis2").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore2").val('0');
+            else
+                $("#txtParamScore2").val('15');
+            CalculateTotalScore();
+        });
+
+        $("#ddlAmbulatoryAid").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#chkIVHeparinLock1").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore4").val('20');
+            else
+                $("#txtParamScore4").val('0');
+            CalculateTotalScore();
+        });
+
+        $("#chkIVHeparinLock2").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore4").val('0');
+            else
+                $("#txtParamScore4").val('20');
+            CalculateTotalScore();
+        });
+
+        $("#ddlTransferringStatus").change(function () {
+            $("#txtParamScore5").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlMentalStatus").change(function () {
+            $("#txtParamScore6").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlAmbulatoryAid").change();
+        $("#ddlTransferringStatus").change();
+        $("#ddlMentalStatus").change();
+
+        function CalculateTotalScore() {
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+            var p4 = 0;
+            var p5 = 0;
+            var p6 = 0;
+
+            if ($("#txtParamScore1").val())
+                p1 = parseInt($("#txtParamScore1").val());
+
+            if ($("#txtParamScore2").val())
+                p2 = parseInt($("#txtParamScore2").val());
+
+            if ($("#txtParamScore3").val())
+                p3 = parseInt($("#txtParamScore3").val());
+
+            if ($("#txtParamScore4").val())
+                p4 = parseInt($("#txtParamScore4").val());
+
+            if ($("#txtParamScore5").val())
+                p5 = parseInt($("#txtParamScore5").val());
+
+            if ($("#txtParamScore6").val())
+                p6 = parseInt($("#txtParamScore6").val());
+
+            var total = p1 + p2 + p3 + p4 + p5 + p6;
+
+            SetTotalScore(total);
+        }
+    });
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+            <colgroup>
+                <col width="350px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="150px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold; text-decoration:underline">Morse Fall Scale</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Riwayat Jatuh</label>
+                </td>
+                <td>
+                    <input type="radio" name="group01.01" value="1" id="chkIsHasFallingHistory1" class = "chkForm" controlID = "chkIsHasFallingHistory1" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="group01.01" value="0" id="chkIsHasFallingHistory2" class = "chkForm" controlID = "chkIsHasFallingHistory2"/>
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px" class = "txtForm" controlID = "txtParamScore1" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Diagnosis Sekunder (≥2 diagnosis medis)</label>
+                </td>
+                <td>
+                    <input type="radio" name="group01.02" value="1" id="chkSecondaryDiagnosis1" class = "chkForm" controlID = "chkSecondaryDiagnosis1"/>
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="group01.02" value="0" id="chkSecondaryDiagnosis2" class = "chkForm" controlID = "chkSecondaryDiagnosis2"/>
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px" class = "txtForm" controlID = "txtParamScore2" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Alat Bantu</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlAmbulatoryAid" class="ddlForm" controlID="ddlAmbulatoryAid" style="width:100%">
+                        <option value="30">Berpegangan pada perabot</option>
+                        <option value="15">Tongkat / Alat Penopang</option>
+                        <option value="0" selected>Tidak ada / kursi roda / perawat / tirah baring</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px" class = "txtForm" controlID = "txtParamScore3"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Terpasang Infus</label>
+                </td>
+                <td>
+                    <input type="radio" name="group01.04" value="1" id="chkIVHeparinLock1" class = "chkForm" controlID = "chkIVHeparinLock1" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="group01.04" value="0" id="chkIVHeparinLock2" class = "chkForm" controlID = "chkIVHeparinLock2" />
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px" class = "txtForm" controlID = "txtParamScore4" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Gaya Berjalan</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlTransferringStatus" class="ddlForm" controlID="ddlTransferringStatus" style="width:100%">
+                        <option value="20">Terganggu</option>
+                        <option value="10">Lemah</option>
+                        <option value="0" selected>Normal / tirah baring / imobilisasi</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px" class = "txtForm" controlID = "txtParamScore5" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Status Mental</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlMentalStatus" class="ddlForm" controlID="ddlMentalStatus" style="width:100%">
+                        <option value="15">Sering lupa akan keterbatasan yang dimiliki</option>
+                        <option value="0" selected>Sadar akan kemampuan diri sendiri</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore6" style="width:50px" class = "txtForm" controlID = "txtParamScore6" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+

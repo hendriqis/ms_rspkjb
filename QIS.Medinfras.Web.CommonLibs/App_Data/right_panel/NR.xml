@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- #Region NR020100 -->
+  <page menucode="NR020100">
+    <prints>
+      <print title="Asuhan Keperawatan" reportcode="NR-00001" visible="1" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region NR020200 -->
+  <page menucode="NR020200">
+    <prints>
+      <print title="Jurnal Keperawatan" reportcode="NR-00002" visible="1" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region NR020300 -->
+  <page menucode="NR020300">
+    <prints>
+      <print title="Asuhan Keperawatan" reportcode="NR-00001" visible="1" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region NR020400 -->
+  <page menucode="NR020400">
+    <prints>
+      <print title="Asuhan Keperawatan" reportcode="NR-00001" visible="1" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region NR020500 -->
+  <page menucode="NR020500">
+    <prints>
+      <print title="Jurnal Keperawatan" reportcode="NR-00002" visible="1" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region NR020600 -->
+  <page menucode="NR020600">
+    <prints>
+      <print title="Jurnal Keperawatan" reportcode="NR-00002" visible="1" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region NR030100 -->
+  <page menucode="NR030100">
+    <prints>
+      <print title="Asuhan Keperawatan" reportcode="NR-00001" visible="1" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region NR030200 -->
+  <page menucode="NR030200">
+    <prints>
+      <print title="Jurnal Keperawatan" reportcode="NR-00002" visible="1" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+</root>

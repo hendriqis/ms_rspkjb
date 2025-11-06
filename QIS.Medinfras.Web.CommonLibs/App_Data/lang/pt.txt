@@ -1,0 +1,120 @@
+AddData;Tambah Data
+AdditionalInformation;Data Tambahan
+Address;Alamat
+Age;Umur
+AllClinic;Semua Poliklinik
+Allergy;Alergi
+AppointmentDate;Tanggal Perjanjian
+AppointmentNo;No. Appointment
+BlackList;Black List
+BirthPlace;Tempat Lahir
+BloodType;Golongan Darah
+Cancel;Batal
+CardFee;Biaya Kartu
+ChangeAppointmentSchedule;Pindah Jadwal Perjanjian
+ChangePatientBlackListStatus;Ubah Status Black List Pasien
+ChangeToDate;Pindah Ke Tanggal
+City;Kota
+Close;Tutup
+ClosePatientRegistrationStatusProcess;Proses Tutup Status Pendaftaran Pasien
+Company;Instansi
+ContactInformation;Informasi Kontak
+CoverageLimit;Coverage Limit
+Date;Tanggal
+Day;Hari
+Delete;Hapus
+DOB;Tanggal Lahir
+Edit;Ubah
+Education;Pendidikan
+Email;Email
+EmergencyContact;Kontak Darurat
+Ethnic;Suku
+Every10Minutes;Setiap 10 Menit
+ExpiredDate;Berlaku hingga
+FamilyName;Marga
+Father/HusbandName;Nama Ayah / Suami
+Female;Wanita
+Gender;Jenis Kelamin
+Hour;Jam
+IdentityCardNo;No. KTP/SIM 
+Job;Pekerjaan
+JobDescription;Deskripsi Pekerjaan
+Male;Pria
+MaritalStatus;Status Perkawinan
+MobilePhone;Mobile Phone
+Month;Bulan
+Mother/WifeName;Nama Ibu / Istri
+MRN;No.RM
+Name;Nama
+Nationality;Kewarganegaraan
+New;Baru
+Next;Next
+Notes;Catatan
+Office;Kantor
+OfficeAddress;Alamat Kantor
+OfficeTelephone;Telepon Kantor
+OtherInformation;Informasi Lainnya
+Open;Buka
+OpenClosePatientRegistrationStatus;Tutup / Buka Status Pendaftaran Pasien 
+OutpatientRegistration;Pendaftaran Rawat Jalan
+PacketNo;No Paket
+ParticipantNo;No Peserta
+PassportNo;No. Paspor
+PatientAddressData;Data Alamat Pasien
+PatientAppointment;Perjanjian Pasien
+PatientBillSummary;Ringkasan Tagihan Pasien
+PatientCategory;Kategori Pasien
+PatientContactData;Data Kontak Pasien
+PatientData;Data Pasien
+PatientFamilyData;Data Keluarga Pasien
+PatientIdentity;Identitas Pasien
+PatientInformation;Informasi Pasien
+PatientJobData;Data Pekerjaan Pasien
+PatientManagement;Manajemen Pasien
+PatientName;Nama Pasien
+PatientPayerData;Data Pembayar Pasien
+PatientStatus;Status Pasien
+PatientVisit;Kunjungan Pasien
+Payer;Pembayar
+PayerData;Data Pembayar
+Physician;Dokter
+Plafon;Plafon
+Polyclinic;Poliklinik
+PolyclinicTransaction;Transaksi Poliklinik
+PreferredName;Nama Panggilan
+Pregnant;Hamil
+Prev;Prev
+Province;Provinsi
+QueueNo;Nomor Antrian
+Reason;Alasan
+Referral;Pengirim
+ReferralDescription;Deskripsi Pengirim
+Registrar;Petugas
+RegistrationData;Data Registrasi
+RegistrationDate;Tanggal Masuk
+RegistrationDateTime;Tanggal / Jam Registrasi
+RegistrationNo;No. Registrasi
+RegistrationTime;Waktu Registrasi
+Relation;Hubungan
+Religion;Agama
+RT;RT
+RW;RW
+Salutation;Salutation
+Save;Simpan
+SearchDialog;inquirição
+SelectPatient;Pilih Pasien
+Shift;Shift
+Specialty;Spesialisasi
+Telephone;Telepon
+TelephoneNo;No. Telepon
+ThisPageWill;Halaman Ini Akan
+Title;Gelar
+TransactionNo;No Transaksi
+VisitData;Data Kunjungan
+VisitInformation;Informasi Kunjungan
+VisitNotes;Keterangan Kunjungan
+VisitType;Jenis Kunjungan
+Void;Batal
+Welcome;Selamat Datang
+Year;Tahun
+ZipCode;Kode Pos

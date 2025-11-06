@@ -1,0 +1,920 @@
+﻿<head>
+    <style type="text/css">
+        .style1
+        {
+            height: 24px;
+        }
+    </style>
+</head>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="0" style="width:100%;">
+            <colgroup>
+                <col width="150px" />
+                <col width="65px" />
+                <col width="65px" />
+                <col width="100px" />
+                <col width="80px" />
+                <col width="20px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5"><label style="font-weight:bold; text-decoration:underline"class="lblGroupTitle" controlID = "lblGroup01">Obstetri/Maternitas</label></td>
+                <td />
+                <td><div class="w3-container w3-border peGroup"><label style="font-weight:bold; text-decoration:underline">Masalah Keperawatan</label></div></td>
+            </tr>
+            <tr>
+                <td colspan="5"><label>Screening penyakit menular</label></td>
+                <td />
+                <td rowspan="6" style="vertical-align:top">
+                    <div class="w3-container w3-border nursingProblem">
+                        <table border="0" cellpadding="1" cellspacing="0">
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem01" nursingProblemCode="021"/> Cemas</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem02" nursingProblemCode="002"/> Pendarahan Post Partum</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem03" nursingProblemCode="003"/> Pre eklamsi</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem04" nursingProblemCode="004"/> Sub invulosio</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem05" nursingProblemCode="004"/> Retensi urin</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem06" nursingProblemCode="004"/> Persalinan prematur</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem07" nursingProblemCode="004"/> Nyeri</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem08" nursingProblemCode="004"/> Gangguan psikologi</td></tr>
+                            <tr><td style="padding-left:20px;"> <input type="text" class="txtNursingProblem" controlID="txtNursingProblem01" style="width:100%"/></td></tr>
+                            <tr><td style="padding-left:20px;"><input type="text" class="txtNursingProblem" controlID="txtNursingProblem02" style="width:100%"/></td></tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right"><label>HbsAg</label></td>
+                <td><input type="radio" name="group01.01" value="1" class="optForm" controlID="optForm01"/><label> Ya</label></td>
+                <td colspan="2"><input type="radio" name="group01.01" value="0" class="optForm" controlID="optForm02"/><label> Tidak</label></td>
+                <td />
+                <td />
+            </tr>
+            <tr>
+                <td style="text-align:right"><label>HbeAg</label></td>
+                <td><input type="radio" name="group01.02" value="1" class="optForm" controlID="optForm03"/><label> Ya</label></td>
+                <td colspan="2"><input type="radio" name="group01.02" value="0" class="optForm" controlID="optForm04"/><label> Tidak</label></td>
+                <td />
+                <td />
+            </tr>
+            <tr>
+                <td style="text-align:right"><label>HIV/AIDS</label></td>
+                <td><input type="radio" name="group01.03" value="1" class="optForm" controlID="optForm05"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.03" value="0" class="optForm" controlID="optForm06"/><label> Tidak</label></td>
+                <td />
+                <td />
+            </tr>
+            <tr>
+                <td colspan="5"><label>Riwayat Obstetri dan Ginekologi</label></td>
+                <td />
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"><label>Riwayat Haid</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><label>Menarche</label></td>
+                <td colspan="2"><input type="text" style="width: 100%" class="txtForm" controlID="txtForm01"/></td>
+                <td style="text-align:left; padding-left:10px"><label>Tahun</label></td>
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><label>Siklus</label></td>
+                <td colspan="2"><input type="text" style="width: 100%" class="txtForm" controlID="txtForm02"/></td>
+                <td style="text-align:left; padding-left:10px"><label>Hari</label></td>
+                <td style="padding-left:10px">
+                    <table border="0" cellpadding="1" cellspacing="0">
+                        <tr>
+                            <td><input type="radio" name="group01.04" value="1" class="optForm" controlID="optForm07"/><label> Teratur</label></td>
+                            <td><input type="radio" name="group01.04" value="0" class="optForm" controlID="optForm08"/><label> Tidak Teratur</label></td>                        
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><label>Keluhan</label></td>
+                <td><input type="radio" name="group01.05" value="1" class="optForm" controlID="optForm09"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.05" value="0" class="optForm" controlID="optForm10"/><label> Tidak</label></td>   
+                <td />
+                <td />
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"></td>
+                <td colspan="2"> <input type="checkbox" class="chkForm" controlID="chkForm01" /> Dismenorhea</td>
+                <td />
+                <td />
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"></td>
+                <td colspan="3"> <input type="checkbox" class="chkForm" controlID="chkForm02" /> Pendarahan antara haid</td>
+                <td />
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><label>Dyspareuni</label></td>
+                <td><input type="radio" name="group01.06" value="1" class="optForm" controlID="optForm11"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.06" value="0" class="optForm" controlID="optForm12"/><label> Tidak</label></td>   
+                <td />
+                <td />
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><label>Keputihan</label></td>
+                <td><input type="radio" name="group01.07" value="1" class="optForm" controlID="optForm13"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.07" value="0" class="optForm" controlID="optForm14"/><label> Tidak</label></td>   
+                <td />
+                <td />
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><label>HPHT</label></td>
+                <td colspan="2"><input type="text" style="width: 100%" class="txtForm" controlID="txtForm03"/></td>
+                <td style="text-align:left; padding-left:10px"><label>Lamanya</label></td>
+                <td style="padding-left:10px">
+                    <table border="0" cellpadding="1" cellspacing="0">
+                        <tr>
+                            <td><input type="text" style="width: 100px; text-align:right" class="txtForm" controlID="txtForm04"/></td>
+                            <td><label> Hari</label></td>                        
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"><label>Riwayat Obstetri</label></td>
+                <td colspan="2" />
+                <td colspan="2" />
+                <td />
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td colspan="3" style="text-align:left; padding-left:10px"><label>Masalah selama kehamilan</label></td>
+                <td colspan="3"><input type="text" style="width: 380px" class="txtForm" controlID="txtForm05"/></td>                
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td colspan="3" style="text-align:left; padding-left:10px"><label>Berat Badan sebelum lahir</label></td>
+                <td colspan="1"><input type="text" style="width: 100%" class="txtForm" controlID="txtForm06"/></td>   
+                <td style="text-align:left; padding-left:10px"><label>Kg</label></td>             
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td colspan="2" style="text-align:left; padding-left:20px"><label>Trimester 1</label></td>
+                <td><input type="radio" name="group01.08" value="1" class="optForm" controlID="optForm14"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.08" value="0" class="optForm" controlID="optForm15"/><label> Tidak</label></td>   
+                <td style="text-align:left; padding-left:10px"><label>Sebutkan</label></td>
+                <td style="padding-left:10px"><input type="text" style="width: 205px; text-align:right" class="txtForm" controlID="txtForm07"/></td>
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td colspan="2" style="text-align:left; padding-left:20px"><label>Trimester 2</label></td>
+                <td><input type="radio" name="group01.09" value="1" class="optForm" controlID="optForm16"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.09" value="0" class="optForm" controlID="optForm17"/><label> Tidak</label></td>   
+                <td style="text-align:left; padding-left:10px"><label>Sebutkan</label></td>
+                <td style="padding-left:10px"><input type="text" style="width: 205px; text-align:right" class="txtForm" controlID="txtForm08"/></td>
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td colspan="2" style="text-align:left; padding-left:20px"><label>Trimester 3</label></td>
+                <td><input type="radio" name="group01.10" value="1" class="optForm" controlID="optForm18"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.10" value="0" class="optForm" controlID="optForm19"/><label> Tidak</label></td>   
+                <td style="text-align:left; padding-left:10px"><label>Sebutkan</label></td>
+                <td style="padding-left:10px"><input type="text" style="width: 205px; text-align:right" class="txtForm" controlID="txtForm09"/></td>
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><label>Vaksinasi TT</label></td>
+                <td><input type="radio" name="group01.11" value="1" class="optForm" controlID="optForm20"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.11" value="0" class="optForm" controlID="optForm21"/><label> Tidak</label></td>   
+                <td style="text-align:left; padding-left:10px"><label>Terakhir</label></td>
+                <td style="padding-left:10px"><input type="text" style="width: 205px; text-align:right" class="txtForm" controlID="txtForm10"/></td>
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px" colspan="4"><label>Riwayat Kehamilan, Persalinan dan Nifas lalu</label></td>
+                <td><input type="radio" name="group01.12" value="1" class="optForm" controlID="optForm22"/><label> Ya</label></td>
+                <td colspan="2"><input type="radio" name="group01.12" value="0" class="optForm" controlID="optForm23"/><label> Tidak</label></td>   
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <table border="1" cellpadding="1" cellspacing="1">
+                        <colgroup>
+                            <col style="width:80px" />
+                            <col style="width:200px" />
+                            <col style="width:70px" />
+                            <col style="width:70px" />
+                            <col style="width:70px" />
+                            <col style="width:70px" />
+                            <col style="width:200px"/>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <td style="text-align:left"><label>Umur Kehamilan</label></td>
+                                <td style="text-align:left"><label>Persalinan (Jenis, Penolong, Tempat, Tahun)</label></td>
+                                <td style="text-align:left"><label>Nifas</label></td>
+                                <td style="text-align:left"><label>L/P</label></td>
+                                <td style="text-align:left"><label>BBL</label></td>
+                                <td style="text-align:left"><label>Umur Saat Ini</label></td>
+                                <td style="text-align:left"><label>Kett</label></td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm11" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm12" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm13" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm14" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm15" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm16" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm17" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm18" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm19" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm20" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm21" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm22" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm23" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm24" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm25" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm26" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm27" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm28" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm29" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm30" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm31" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm32" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm33" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm34" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm35" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm36" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm37" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm38" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm39" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm40" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm41" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm42" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm43" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm44" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm45" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm46" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm47" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm48" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm49" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm50" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm51" /></td>
+                            <td><input type="text" style="width: 100%" class="txtForm" controlID="txtForm52" /></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align:left; padding-left:10px;"><label>Spiritual: Pandangan pasien terhadap kelahiran</label></td>
+                <td />
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td  colspan="4" style="text-align:left; padding-left:10px"> <input type="checkbox" class="chkForm" controlID="chkForm03" /> Proses dari akhir suatu kehamilan</td>
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td  colspan="4" style="text-align:left; padding-left:10px"> <input type="checkbox" class="chkForm" controlID="chkForm04" /> Menyenangkan</td>
+            </tr>
+            <tr>
+                <td style="text-align:left; padding-left:10px"></td>
+                <td  colspan="4" style="text-align:left; padding-left:10px"> <input type="checkbox" class="chkForm" controlID="chkForm05" /> Menakutkan</td>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align:left; padding-left:10px;"><label>Psikososial: Pandangan pasien terhadap</label></td>
+                <td />
+            </tr>
+            <tr>
+                <td />
+                <td colspan="2" style="text-align:left; padding-left:10px"><label>Kehamilan</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group12" value="1" class="optForm" controlID="optForm24"/><label> Menerima</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group12" value="0" class="optForm" controlID="optForm25"/><label> Tidak Menerima</label></td>   
+            </tr>
+            <tr>
+                <td />
+                <td colspan="2" style="text-align:left; padding-left:10px"></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group13" value="1" class="optForm" controlID="optForm26"/><label> Takut</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group13" value="0" class="optForm" controlID="optForm27"/><label> Khawatir</label></td>   
+            </tr>
+            <tr>
+                <td />
+                <td colspan="2" style="text-align:left; padding-left:10px"><label>Kelahiran</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group14" value="1" class="optForm" controlID="optForm28"/><label> Menerima</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group14" value="0" class="optForm" controlID="optForm29"/><label> Tidak Menerima</label></td>   
+            </tr>
+            <tr>
+                <td />
+                <td colspan="2" style="text-align:left; padding-left:10px"></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group15" value="1" class="optForm" controlID="optForm30"/><label> Takut</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group15" value="0" class="optForm" controlID="optForm31"/><label> Khawatir</label></td>   
+            </tr>
+            <tr>
+                <td />
+                <td colspan="2" style="text-align:left; padding-left:10px"><label>Penyakit</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group16" value="1" class="optForm" controlID="optForm32"/><label> Menerima</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group16" value="0" class="optForm" controlID="optForm33"/><label> Tidak Menerima</label></td>   
+            </tr>
+            <tr>
+                <td />
+                <td colspan="2" style="text-align:left; padding-left:10px"></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group17" value="1" class="optForm" controlID="optForm33"/><label> Takut</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group17" value="0" class="optForm" controlID="optForm34"/><label> Khawatir</label></td>   
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"><label>Status Pernikahan</label></td>
+                <td colspan="3" style="text-align:left; padding-left:10px"><input type="radio" name="group18" value="1" class="optForm" controlID="optForm35"/><label> Menikah 1x</label></td>
+                <td />
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:10px"><input type="radio" name="group18" value="2" class="optForm" controlID="optForm36"/><label> Menikah > 1x</label></td>
+                <td style="text-align:left; padding-left:10px"><label>Sebutkan</label></td>
+                <td colspan="2" style="padding-left:10px"><input type="text" style="width: 205px; text-align:right" class="txtForm" controlID="txtForm53"/></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:10px"><label>Lama Pernikahan saat ini</label></td>
+                <td style="padding-left:10px"><input type="text" style="width: 100px; text-align:right" class="txtForm" controlID="txtForm54"/></td>
+                <td />
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:10px"><input type="radio" name="group18" value="3" class="optForm" controlID="optForm37"/><label> Tidak menikah</label></td>
+                <td />
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align:left; padding-left:10px;"><label>Pemeriksaan Fisik fokus obstetri ginekologi</label></td>
+                <td />
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:10px"><label>Cloasma gravidarum</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group20" value="1" class="optForm" controlID="optForm38"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group20" value="0" class="optForm" controlID="optForm39"/><label> Tidak</label></td>   
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:10px"><label>Edema di wajah</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group21" value="1" class="optForm" controlID="optForm40"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group21" value="0" class="optForm" controlID="optForm41"/><label> Tidak</label></td>   
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:10px"><label>Konjungtiva anemis</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group22" value="1" class="optForm" controlID="optForm42"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group22" value="0" class="optForm" controlID="optForm43"/><label> Tidak</label></td>   
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:10px"><label>Sklera ikterus</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group23" value="1" class="optForm" controlID="optForm44"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group23" value="0" class="optForm" controlID="optForm45"/><label> Tidak</label></td>   
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:10px"><label>Payudara bengkak</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group24" value="1" class="optForm" controlID="optForm46"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group24" value="0" class="optForm" controlID="optForm47"/><label> Tidak</label></td>   
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:10px"><label>Puting Susu</label></td>
+                <td style="text-align:left; padding-left:10px"><label>Menonjol</label></td>
+                <td colspan="2">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width:120px;text-align:left;"><input type="radio" name="group25" value="1" class="optForm" controlID="optForm48" /><label> Ya</label></td>
+                            <td style="width:120px;text-align:left;"><input type="radio" name="group25" value="0" class="optForm" controlID="optForm49"/><label> Tidak</label></td>   
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:10px" />
+                <td style="text-align:left; padding-left:10px"><label>Datar</label></td>
+                <td colspan="2">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width:120px;text-align:left;"><input type="radio" name="group26" value="1" class="optForm" controlID="optForm50" /><label> Ya</label></td>
+                            <td style="width:120px;text-align:left;"><input type="radio" name="group26" value="0" class="optForm" controlID="optForm51"/><label> Tidak</label></td>   
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:10px" />
+                <td style="text-align:left; padding-left:10px"><label>Tenggelam</label></td>
+                <td colspan="2">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width:120px;text-align:left;"><input type="radio" name="group27" value="1" class="optForm" controlID="optForm52" /><label> Ya</label></td>
+                            <td style="width:120px;text-align:left;"><input type="radio" name="group27" value="0" class="optForm" controlID="optForm53"/><label> Tidak</label></td>   
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:10px"><label>Ada colostrum</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group28" value="1" class="optForm" controlID="optForm54"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group28" value="0" class="optForm" controlID="optForm55"/><label> Tidak</label></td>   
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Masalah</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group29" value="1" class="optForm" controlID="optForm56"/><label> Ya</label></td>
+                <td colspan="3">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="text-align:left; padding-left:10px"><label>Sebutkan</label></td>
+                            <td style="text-align:left; padding-left:10px"><input type="text" style="width: 250px; text-align:right" class="txtForm" controlID="txtForm55"/></td>
+                            <td style="width:120px;text-align:left;"><input type="radio" name="group29" value="0" class="optForm" controlID="optForm56"/><label> Tidak</label></td>   
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:10px"><label>Ada ASI</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group30" value="1" class="optForm" controlID="optForm57"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group30" value="0" class="optForm" controlID="optForm58"/><label> Tidak</label></td>   
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Masalah</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group31" value="1" class="optForm" controlID="optForm59"/><label> Ya</label></td>
+                <td colspan="3">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="text-align:left; padding-left:10px"><label>Sebutkan</label></td>
+                            <td style="text-align:left; padding-left:10px"><input type="text" style="width: 250px; text-align:right" class="txtForm" controlID="txtForm56"/></td>
+                            <td style="width:120px;text-align:left;"><input type="radio" name="group31" value="0" class="optForm" controlID="optForm60"/><label> Tidak</label></td>   
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:10px"><label>Pemeriksaan Abdomen</label></td>
+                <td style="text-align:left; padding-left:10px" />
+                <td colspan="2" style="text-align:left; padding-left:10px" />
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Bentuk Memanjang</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group32" value="1" class="optForm" controlID="optForm61"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group32" value="1" class="optForm" controlID="optForm62"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:98px"><label>Melintang</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group33" value="1" class="optForm" controlID="optForm63"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group33" value="1" class="optForm" controlID="optForm64"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:98px"><label>Oblique</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group34" value="1" class="optForm" controlID="optForm65"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group34" value="1" class="optForm" controlID="optForm66"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Linea Alba</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group35" value="1" class="optForm" controlID="optForm67"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group35" value="1" class="optForm" controlID="optForm68"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:89px"><label>Nigra</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group36" value="1" class="optForm" controlID="optForm69"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group36" value="1" class="optForm" controlID="optForm70"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Striae lividae</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group37" value="1" class="optForm" controlID="optForm71"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group37" value="1" class="optForm" controlID="optForm72"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Masa</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group38" value="1" class="optForm" controlID="optForm73"/><label> Ya</label></td>
+                <td colspan="3">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="text-align:left; padding-left:10px"><label>Sebutkan</label></td>
+                            <td style="text-align:left; padding-left:10px"><input type="text" style="width: 250px; text-align:right" class="txtForm" controlID="txtForm56"/></td>
+                            <td style="width:120px;text-align:left;"><input type="radio" name="group38" value="0" class="optForm" controlID="optForm74"/><label> Tidak</label></td>   
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Acites</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group39" value="1" class="optForm" controlID="optForm75"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group39" value="1" class="optForm" controlID="optForm76"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Bekas luka parut</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group40" value="1" class="optForm" controlID="optForm77"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group40" value="1" class="optForm" controlID="optForm78"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:10px"><label>Edema extrimitas</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group41" value="1" class="optForm" controlID="optForm79"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group41" value="0" class="optForm" controlID="optForm80"/><label> Tidak</label></td>   
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:left; padding-left:10px"></td>
+                <td colspan="3" style="text-align:left; padding-left:50px"> <input type="checkbox" class="chkForm" controlID="chkForm05" /> Tangan</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:left; padding-left:10px"></td>
+                <td colspan="3" style="text-align:left; padding-left:50px"> <input type="checkbox" class="chkForm" controlID="chkForm06" /> Kaki</td>
+            </tr>
+            <tr>
+                <td class="style1" />
+                <td colspan="3" style="text-align:left; padding-left:10px" class="style1"><label>Pemeriksaan Fisik Antenatal</label></td>
+                <td style="text-align:left; padding-left:10px" class="style1"><input type="radio" name="group41" value="1" class="optForm" controlID="optForm79"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px" class="style1"><input type="radio" name="group41" value="0" class="optForm" controlID="optForm80"/><label> Tidak</label></td>   
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="4" style="text-align:left; padding-left:40px"><label>Leopold 1 TFU</label></td>
+                <td colspan="2" style="padding-left:10px"><input type="text" style="width: 200px; text-align:right" class="txtForm" controlID="txtForm57"/></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="4" style="text-align:left; padding-left:80px"><label>> 22 minggu</label></td>
+                <td colspan="2" style="padding-left:10px"><input type="text" style="width: 80px; text-align:right" class="txtForm" controlID="txtForm57"/> <label>cm</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Leopold II Ballotement</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group42" value="1" class="optForm" controlID="optForm79"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group42" value="1" class="optForm" controlID="optForm80"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="4" style="text-align:left; padding-left:80px"><label>Letak punggung</label></td>
+                <td colspan="2">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width:140px;text-align:left;"><input type="radio" name="group43" value="0" class="optForm" controlID="optForm81"/><label> Kanan</label></td>   
+                            <td style="width:140px;text-align:left;"><input type="radio" name="group43" value="0" class="optForm" controlID="optForm82"/><label> Kiri</label></td>   
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Leopold III Presentasi</label></td>
+                <td colspan="2">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="text-align:left; padding-left:10px"><input type="radio" name="group44" value="1" class="optForm" controlID="optForm83"/><label> Kepala</label></td>
+                            <td style="text-align:left; padding-left:10px"><input type="radio" name="group44" value="1" class="optForm" controlID="optForm84"/><label> Bokong</label></td>
+                        </tr>
+                    </table>
+                </td>
+                <td />
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:80px"></td>
+                <td colspan="2">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="text-align:left;padding-left:10px"><input type="radio" name="group45" value="0" class="optForm" controlID="optForm85"/></td>   
+                            <td style="width:140px;text-align:left;padding-left:5px"><input type="text" style="width: 150px; text-align:right" class="txtForm" controlID="txtForm57"/></td>   
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Leopold IV Penurunan bagian terendah</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group45" value="1" class="optForm" controlID="optForm86"/><label> 5/5</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group45" value="1" class="optForm" controlID="optForm87"/><label> 4/5</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group45" value="1" class="optForm" controlID="optForm88"/><label> 3/5</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group45" value="1" class="optForm" controlID="optForm89"/><label> 2/5</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group45" value="1" class="optForm" controlID="optForm90"/><label> 1/5</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group45" value="1" class="optForm" controlID="optForm91"/><label> 0/5</label></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>TBBJ</label></td>
+                <td colspan="2"style="padding-left:10px"><input type="text" style="width: 200px; text-align:right" class="txtForm" controlID="txtForm58"/></td>
+                <td><label>Gram</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Kontraksi</label></td>
+                <td colspan="3" style="text-align:left; padding-left:10px">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td><input type="radio" name="group46" value="1" class="optForm" controlID="optForm91"/><label> Ya, frekuensi dalam 10 menit</label></td>
+                            <td style="text-align:left; padding-left:10px"><input type="radio" name="group46" value="1" class="optForm" controlID="optForm92"/><label> Tidak</label></td>
+                        </tr>
+                    </table>                    
+                </td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"></td>
+                <td colspan="2" style="text-align:left; padding-left:60px"><input type="radio" name="group47" value="1" class="optForm" controlID="optForm93"/><label> 20 detik</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"></td>
+                <td colspan="2" style="text-align:left; padding-left:60px"><input type="radio" name="group47" value="1" class="optForm" controlID="optForm94"/><label> 20-40 detik</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"></td>
+                <td colspan="2" style="text-align:left; padding-left:60px"><input type="radio" name="group47" value="1" class="optForm" controlID="optForm95"/><label> 40 detik</label></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Terdengar DJJ</label></td>
+                <td colspan="2"style="padding-left:10px"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:70px"><label>Janin 1</label></td>
+                <td colspan="2"style="padding-left:10px"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="5"style="padding-left:70px">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width:60px;padding-right:30px"><input type="radio" name="group48" value="1" class="optForm" controlID="optForm96"/><label> Ya</label></td>
+                            <td style="width:60px;padding-left:10px"><label> Frekuensi</label></td>
+                            <td style="width:60px" style="padding-left:10px"><input type="text" style="width: 80px; text-align:right" class="txtForm" controlID="txtForm59"/></td>
+                            <td style="width:60px"><label> x/menit</label></td>
+                            <td style="width:80px;padding-left:10px"><input type="radio" name="group48" value="1" class="optForm" controlID="optForm97"/><label> Tidak</label></td>
+                        </tr>
+                    </table>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:140px"><label> Teratur</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group49" value="1" class="optForm" controlID="optForm98"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group49" value="1" class="optForm" controlID="optForm99"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:70px"><label>Janin 2</label></td>
+                <td colspan="2"style="padding-left:10px"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="5"style="padding-left:70px">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width:60px;padding-right:30px"><input type="radio" name="group50" value="1" class="optForm" controlID="optForm100"/><label> Ya</label></td>
+                            <td style="width:60px;padding-left:10px"><label> Frekuensi</label></td>
+                            <td style="width:60px" style="padding-left:10px"><input type="text" style="width: 80px; text-align:right" class="txtForm" controlID="txtForm60"/></td>
+                            <td style="width:60px"><label> x/menit</label></td>
+                            <td style="width:80px;padding-left:10px"><input type="radio" name="group50" value="1" class="optForm" controlID="optForm101"/><label> Tidak</label></td>
+                        </tr>
+                    </table>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:140px"><label> Teratur</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group51" value="1" class="optForm" controlID="optForm102"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group51" value="1" class="optForm" controlID="optForm103"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:70px"><label>Janin 3</label></td>
+                <td colspan="2"style="padding-left:10px"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="5"style="padding-left:70px">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width:60px;padding-right:30px"><input type="radio" name="group52" value="1" class="optForm" controlID="optForm104"/><label> Ya</label></td>
+                            <td style="width:60px;padding-left:10px"><label> Frekuensi</label></td>
+                            <td style="width:60px" style="padding-left:10px"><input type="text" style="width: 80px; text-align:right" class="txtForm" controlID="txtForm61"/></td>
+                            <td style="width:60px"><label> x/menit</label></td>
+                            <td style="width:80px;padding-left:10px"><input type="radio" name="group52" value="1" class="optForm" controlID="optForm105"/><label> Tidak</label></td>
+                        </tr>
+                    </table>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:140px"><label> Teratur</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group53" value="1" class="optForm" controlID="optForm106"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group53" value="1" class="optForm" controlID="optForm107"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Flour albu Warna</label></td>
+                <td colspan="2"style="padding-left:10px"><input type="text" style="width: 100%; text-align:right" class="txtForm" controlID="txtForm62"/></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:100px"><label>Jumlah</label></td>
+                <td colspan="2"style="padding-left:10px"><input type="text" style="width: 100%; text-align:right" class="txtForm" controlID="txtForm63"/></td>
+                <td><label>Ml</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:100px"><label> Bau</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group54" value="1" class="optForm" controlID="optForm108"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group54" value="1" class="optForm" controlID="optForm109"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:40px">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td><label>Lochea</label></td>
+                            <td style="text-align:right;"><label>Jumlah</label></td>
+                        </tr>
+                    </table>
+                </td>
+                <td colspan="2"style="padding-left:10px"><input type="text" style="width: 100%; text-align:right" class="txtForm" controlID="txtForm62"/></td>
+                <td><label>Ml</label></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:40px">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td><label>Darah</label></td>
+                            <td style="text-align:right;"><label>Warna</label></td>
+                        </tr>
+                    </table>
+                </td>
+                <td colspan="2"style="padding-left:10px"><input type="text" style="width: 100%; text-align:right" class="txtForm" controlID="txtForm63"/></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:40px">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td></td>
+                            <td style="text-align:right;"><label>Jumlah</label></td>
+                        </tr>
+                    </table>
+                </td>
+                <td colspan="2"style="padding-left:10px"><input type="text" style="width: 100%; text-align:right" class="txtForm" controlID="txtForm64"/></td>
+                <td><label>Ml</label></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:40px">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td><label>Cairan amnion</label></td>
+                            <td style="text-align:right; "><label>Warna</label></td>
+                        </tr>
+                    </table>
+                </td>
+                <td colspan="2"style="padding-left:10px"><input type="text" style="width: 100%; text-align:right" class="txtForm" controlID="txtForm65"/></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:40px">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td></td>
+                            <td style="text-align:right;"><label>Jumlah</label></td>
+                        </tr>
+                    </table>
+                </td>
+                <td colspan="2"style="padding-left:10px"><input type="text" style="width: 100%; text-align:right" class="txtForm" controlID="txtForm66"/></td>
+                <td><label>Ml</label></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:40px">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td></td>
+                            <td style="text-align:right;"><label>Test lakmus</label></td>
+                        </tr>
+                    </table>
+                </td>
+                <td colspan="2"style="padding-left:10px"><input type="text" style="width: 100%; text-align:right" class="txtForm" controlID="txtForm67"/></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:40px">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td><label>Darah lendir</label></td>
+                            <td style="text-align:right;"><label>Jumlah</label></td>
+                        </tr>
+                    </table>
+                </td>
+                <td colspan="2"style="padding-left:10px"><input type="text" style="width: 100%; text-align:right" class="txtForm" controlID="txtForm68"/></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label> Kategori NST</label></td>
+                <td style="text-align:left;"><input type="radio" name="group55" value="1" class="optForm" controlID="optForm110"/><label> 1</label></td>
+                <td style="text-align:left;"><input type="radio" name="group55" value="1" class="optForm" controlID="optForm111"/><label> 2</label></td>
+                <td style="text-align:left;><input type="radio" name="group55" value="1" class="optForm" controlID="optForm112"/><label> 3</label></td>
+            </tr>
+            <tr>
+                <td class="style1" />
+                <td colspan="3" style="text-align:left; padding-left:10px" class="style1"><label>Pemeriksaan fisik postnatal</label></td>
+                <td style="text-align:left; padding-left:10px" class="style1"><input type="radio" name="group56" value="1" class="optForm" controlID="optForm113"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px" class="style1"><input type="radio" name="group56" value="0" class="optForm" controlID="optForm114"/><label> Tidak</label></td>   
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align:left; padding-left:10px;"></td>
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>TFU</label></td>
+                <td colspan="2"style="padding-left:10px"><input type="text" style="width: 100%; text-align:right" class="txtForm" controlID="txtForm69"/></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Konstraksi uterus kerasa</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group57" value="1" class="optForm" controlID="optForm113"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group57" value="1" class="optForm" controlID="optForm113"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Konstraksi uterus kerasa</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group58" value="1" class="optForm" controlID="optForm114"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group58" value="1" class="optForm" controlID="optForm115"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Kantung kemih kosong</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group59" value="1" class="optForm" controlID="optForm116"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group59" value="1" class="optForm" controlID="optForm117"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Lochea</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group60" value="1" class="optForm" controlID="optForm119"/><label> Rubra</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group60" value="1" class="optForm" controlID="optForm120"/><label> Sanguilenta</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group60" value="1" class="optForm" controlID="optForm121"/><label> Serosa</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group60" value="1" class="optForm" controlID="optForm122"/><label> Alba</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Jumlah Lochea</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group61" value="1" class="optForm" controlID="optForm122"/><label> Banyak</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group61" value="1" class="optForm" controlID="optForm123"/><label> Sedikit</label></td>
+            </tr>
+            <tr>
+                <td />
+                <td colspan="3" style="text-align:left; padding-left:40px"><label>Tampon</label></td>
+                <td style="text-align:left; padding-left:10px"><input type="radio" name="group62" value="1" class="optForm" controlID="optForm124"/><label> Ya</label></td>
+                <td colspan="2" style="text-align:left; padding-left:10px"><input type="radio" name="group62" value="1" class="optForm" controlID="optForm125"/><label> Tidak</label></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+</script>

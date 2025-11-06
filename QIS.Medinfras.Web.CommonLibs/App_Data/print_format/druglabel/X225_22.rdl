@@ -1,0 +1,38 @@
+^XA
+^LL210
+^PW600
+^LH2,1^MD10
+^CF020,20
+^FO2,21^FD{HealthcareName}^FS
+^FO2,41^FDApoteker^FS
+^FO80,41^FD:^FS
+^FO90,41^FD{Pharmacist}^FS
+^FO2,61^FD{PharmacistLicenseNo}^FS
+^FO2,81^FDTgl. Resep^FS
+^FO90,81^FD:^FS
+^FO100,81^FD{PrescriptionDate} {PrescriptionTime}^FS
+^FO320,21^FDNo.Resep^FS"
+^FO400,21^FD:^FS
+^FO410,21^FD{PrescriptionNo}^FS
+^FO320,41^FDNo.RM^FS
+^FO400,41^FD:^FS
+^FO410,41^FD{MedicalNo}^FS
+^FO320,61^FDTgl. Lahir^FS
+^FO400,61^FD:^FS
+^FO410,61^FD{DateOfBirth}^FS
+^FO320,81^FDExp. Date^FS
+^FO400,81^FD:^FS
+^FO410,81^FD{ExpiredDate}^FS
+^FO2,85^FD______________________________________________________________________^FS
+^CF026,26
+^FO2,110^FDPro: {PatientFullName}  ({Sex})^FS
+^CF028,28
+^FO2,140^FD{ItemName} {cfIsUsedDispenseQty1}^FS
+^CFD
+^FO2,175^FB570,7,^FD{MedicationAdministration}^FS
+^FO2,195^FB570,7,^FD{cfCoenamRuleLabel}^FS
+^CF026,26
+^FO2,215^FD{ConsumeMethod}^FS
+^FO400,215^FD{ExternalMedication}^FS
+^PR2
+^XZ

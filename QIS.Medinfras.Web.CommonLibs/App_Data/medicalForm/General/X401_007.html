@@ -1,0 +1,147 @@
+﻿<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="0" style="width:100%;">
+            <colgroup>
+                <col width="150px" />
+                <col width="65px" />
+                <col width="65px" />
+                <col width="100px" />
+                <col width="80px" />
+                <col width="20px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5"><label style="font-weight:bold; text-decoration:underline"class="lblGroupTitle" controlID = "lblGroup01">Asesment Pasien Nyeri (Dalam Perawatan)</label></td>
+                <td />
+                <td><div class="w3-container w3-border peGroup"><label style="font-weight:bold; text-decoration:underline">Masalah Keperawatan</label></div></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold" colspan="6"><label>Onset</label></td>
+                <td rowspan="6" style="vertical-align:top">
+                    <div class="w3-container w3-border nursingProblem">
+                        <table border="0" cellpadding="1" cellspacing="0">
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem01" nursingProblemCode="000"/> Tidak ada masalah</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem02" nursingProblemCode="002"/> Gangguan rasa nyaman</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem03" nursingProblemCode="003"/> Nyeri akut</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem04" nursingProblemCode="004"/> Nyeri kronis</td></tr>
+                            <tr><td style="padding-left:20px;"> <input type="text" class="txtNursingProblem" controlID="txtNursingProblem01" style="width:100%"/></td></tr>
+                            <tr><td style="padding-left:20px;"><input type="text" class="txtNursingProblem" controlID="txtNursingProblem02" style="width:100%"/></td></tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Kapan nyeri mulai dirasakan ?</label></td>
+                <td style="vertical-align:top" colspan="3"><input type="text" class="txtForm" controlID="txtOnset1" style="width:99%"/></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Berapa lama nyeri dirasakan?</label></td>
+                <td colspan="3"><input type="text" class="txtForm" controlID="txtOnset2" style="width:99%"/></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Berapa sering terjadinya nyeri?</label></td>
+                <td colspan="3"><input type="text" class="txtForm" controlID="txtOnset3" style="width:99%"/></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold" colspan="6"><label>Quality</label></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Seperti apa nyeri dirasakan?</label></td>
+                <td colspan="3"><input type="text" class="txtForm" controlID="txtQuality" style="width:100%"/></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold" colspan="6"><label>Region/Radiation</label></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Apakah nyeri menyebar ?</label></td>
+                <td><input type="radio" name="group01.01" value="1" class="optForm" controlID="optGroup01_01_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.01" value="0" class="optForm" controlID="optGroup01_01_02"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Menyebar ke daerah tubuh bagian mana?</label></td>
+                <td style="vertical-align:top" colspan="3"><input type="text" class="txtForm" controlID="txtRegion" style="width:100%"/></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold" colspan="6"><label>Severity</label></td>
+            </tr>
+            <tr>
+                <td colspan="6"><label>Dalam Skala 0-10 (0 tidak dirasakan nyeri & 10 rasa nyeri terberat).</label></td>
+            </tr>
+            <tr>
+                <td colspan="6"><label>Berapa intensitas nyeri yang dirasakan saat ini ? (Rata-rata)</label></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Dalam keadaan terburuk</label></td>
+                <td style="vertical-align:top" colspan="3"><input type="text" class="txtForm" controlID="txtSeverity1" style="width:100%"/></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Dalam keadaan ringan</label></td>
+                <td style="vertical-align:top" colspan="3"><input type="text" class="txtForm" controlID="txtSeverity2" style="width:100%"/></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Seberapa terganggu anda dengan rasa nyeri yang timbul</label></td>
+                <td style="vertical-align:top" colspan="3"><input type="text" class="txtForm" controlID="txtSeverity3" style="width:100%"/></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Apakah ada gejala/tanda-tanda lain yang menyertai rasa nyeri?</label></td>
+                <td style="vertical-align:top" colspan="3"><input type="text" class="txtForm" controlID="txtSeverity4" style="width:100%"/></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold" colspan="6"><label>Treatment</label></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Pengobatan/perawatan apa yang sedang digunakan?</label></td>
+                <td style="vertical-align:top" colspan="3"><input type="text" class="txtForm" controlID="txtTreatment1" style="width:100%"/></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Seberapa efektif pengobatan/perawatan yang dilakukan sekarang?</label></td>
+                <td style="vertical-align:top" colspan="3"><input type="text" class="txtForm" controlID="txtTreatment2" style="width:100%"/></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Apa ada efek samping dari  pengobatan/perawatan yang dijalani?</label></td>
+                <td style="vertical-align:top" colspan="3"><input type="text" class="txtForm" controlID="txtTreatment3" style="width:100%"/></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Pengobatan/perawatan apa yang pernah anda gunakan sebelumnya?</label></td>
+                <td style="vertical-align:top" colspan="3"><input type="text" class="txtForm" controlID="txtTreatment4" style="width:100%"/></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold" colspan="6"><label>Understanding/Impact on You</label></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Apa yang anda percayai yang menyebabkan timbulnya nyeri?</label></td>
+                <td style="vertical-align:top" colspan="3"><input type="text" class="txtForm" controlID="txtUnderstanding1" style="width:100%"/></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Bagaimana gejala ini mempengaruhi anda dan atau keluarga anda?</label></td>
+                <td style="vertical-align:top" colspan="3"><input type="text" class="txtForm" controlID="txtUnderstanding2" style="width:100%"/></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold" colspan="6"><label>Value</label></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Apa tujuan/harapan anda terhadap nyeri yang anda rasakan?</label></td>
+                <td style="vertical-align:top" colspan="3"><input type="text" class="txtForm" controlID="txtValue1" style="width:100%"/></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Seberapa kenyamanan/tingkat yang dapat anda terima (menggunakan skala nyeri 0-10) ?</label></td>
+                <td style="vertical-align:top" colspan="3"><input type="text" class="txtForm" controlID="txtValue2" style="width:100%"/></td>
+            </tr>
+            <tr>
+                <td style="padding:10px" colspan="3"><label>Apakah ada pendangan lain atau perasaan nyeri yang anda rasakan yang penting bagi anda atau keluarga anda?</label></td>
+                <td style="vertical-align:top" colspan="3"><input type="text" class="txtForm" controlID="txtValue3" style="width:100%"/></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+</script>

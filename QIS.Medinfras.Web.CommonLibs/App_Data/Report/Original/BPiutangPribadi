@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="11.1.5.0" Ref="1" ControlType="QIS.Medinfras.ReportDesktop.BPiutangPribadi, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DataSource="#Ref-0" EventsInfo="lblKeterangan,BeforePrint,lblKeterangan_BeforePrint" Font="Tahoma, 9pt" Version="11.1" SnappingMode="SnapToGrid" PageHeight="550" PageWidth="850" PaperKind="Custom" Margins="45, 25, 25, 0">
+  <Bands>
+    <Item1 Ref="2" ControlType="PageHeaderBand" Name="PageHeader" HeightF="425">
+      <Controls>
+        <Item1 Ref="3" Name="lblKeterangan" ControlType="XRLabel" SizeF="400,12.5" LocationFloat="150, 312.5" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="4" UseFont="false" />
+        </Item1>
+        <Item2 Ref="5" Name="xrLabel26" ControlType="XRLabel" SizeF="112.5,12.5" LocationFloat="0, 412.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="*** TERIMA KASIH">
+          <StylePriority Ref="6" UseFont="false" />
+        </Item2>
+        <Item3 Ref="7" Name="xrLabel27" ControlType="XRLabel" SizeF="200,12.5" LocationFloat="550, 412.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text="xrLabel27">
+          <DataBindings>
+            <Item1 Ref="8" PropertyName="Text" DataMember="LastUpdatedByUserName" />
+          </DataBindings>
+          <StylePriority Ref="9" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="10" Name="xrLabel22" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="125, 312.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text=":">
+          <StylePriority Ref="11" UseFont="false" />
+        </Item4>
+        <Item5 Ref="12" Name="xrLabel23" ControlType="XRLabel" SizeF="112.5,12.5" LocationFloat="0, 312.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="Keterangan">
+          <StylePriority Ref="13" UseFont="false" />
+        </Item5>
+        <Item6 Ref="14" Name="lblPaymentDate2" ControlType="XRLabel" SizeF="200,12.5" LocationFloat="550, 337.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter">
+          <StylePriority Ref="15" UseFont="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="16" Name="xrLabel14" ControlType="XRLabel" SizeF="125,12.5" LocationFloat="0, 225" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="Transaksi untuk Pasien">
+          <StylePriority Ref="17" UseFont="false" />
+        </Item7>
+        <Item8 Ref="18" Name="xrLabel15" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="125, 237.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text=":">
+          <StylePriority Ref="19" UseFont="false" />
+        </Item8>
+        <Item9 Ref="20" Name="lblPatientName2" ControlType="XRLabel" SizeF="237.5,12.5" LocationFloat="150, 225" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="[PatientName]">
+          <StylePriority Ref="21" UseFont="false" />
+        </Item9>
+        <Item10 Ref="22" Name="xrLabel10" ControlType="XRLabel" SizeF="112.5,12.5" LocationFloat="0, 187.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="Tanggal Periksa">
+          <StylePriority Ref="23" UseFont="false" />
+        </Item10>
+        <Item11 Ref="24" Name="xrLabel11" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="125, 225" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text=":">
+          <StylePriority Ref="25" UseFont="false" />
+        </Item11>
+        <Item12 Ref="26" Name="lblTotalAmount" ControlType="XRLabel" SizeF="237.5,12.5" LocationFloat="150, 237.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="lblTotalAmount">
+          <DataBindings>
+            <Item1 Ref="27" FormatString="{0:#,##0.00}" PropertyName="Text" DataMember="TotalPatientBillAmount" />
+          </DataBindings>
+          <StylePriority Ref="28" UseFont="false" />
+        </Item12>
+        <Item13 Ref="29" Name="lblTotalAmountString" ControlType="XRLabel" SizeF="325,12.5" LocationFloat="62.5, 275" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="lblTotalAmountString">
+          <StylePriority Ref="30" UseFont="false" />
+        </Item13>
+        <Item14 Ref="31" Name="xrLabel20" ControlType="XRLabel" SizeF="112.5,12.5" LocationFloat="0, 262.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="Terbilang ">
+          <StylePriority Ref="32" UseFont="false" />
+        </Item14>
+        <Item15 Ref="33" Name="xrLabel17" ControlType="XRLabel" SizeF="112.5,12.5" LocationFloat="0, 237.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="Sejumlah">
+          <StylePriority Ref="34" UseFont="false" />
+        </Item15>
+        <Item16 Ref="35" Name="xrLabel18" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="125, 262.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text=":">
+          <StylePriority Ref="36" UseFont="false" />
+        </Item16>
+        <Item17 Ref="37" Name="lblPaymentDate" ControlType="XRLabel" SizeF="237.5,12.5" LocationFloat="150, 187.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="[PaymentDateInString]">
+          <StylePriority Ref="38" UseFont="false" />
+        </Item17>
+        <Item18 Ref="39" Name="xrLabel2" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="125, 162.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text=":">
+          <StylePriority Ref="40" UseFont="false" />
+        </Item18>
+        <Item19 Ref="41" Name="lblRegistrationNo" ControlType="XRLabel" SizeF="237.5,12.5" LocationFloat="150, 162.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="[RegistrationNo]">
+          <StylePriority Ref="42" UseFont="false" />
+        </Item19>
+        <Item20 Ref="43" Name="xrLabel21" ControlType="XRLabel" SizeF="112.5,12.5" LocationFloat="0, 150" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="No. Bukti">
+          <StylePriority Ref="44" UseFont="false" />
+        </Item20>
+        <Item21 Ref="45" Name="xrLabel1" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="125, 150" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text=":">
+          <StylePriority Ref="46" UseFont="false" />
+        </Item21>
+        <Item22 Ref="47" Name="lblPaymentNo" ControlType="XRLabel" SizeF="237.5,12.5" LocationFloat="150, 150" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="[PaymentNo]">
+          <StylePriority Ref="48" UseFont="false" />
+        </Item22>
+        <Item23 Ref="49" Name="xrLabel7" ControlType="XRLabel" SizeF="112.5,12.5" LocationFloat="0, 175" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="Nama Pasien">
+          <StylePriority Ref="50" UseFont="false" />
+        </Item23>
+        <Item24 Ref="51" Name="xrLabel8" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="125, 187.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text=":">
+          <StylePriority Ref="52" UseFont="false" />
+        </Item24>
+        <Item25 Ref="53" Name="lblPatientName" ControlType="XRLabel" SizeF="237.5,12.5" LocationFloat="150, 175" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="[PatientName]">
+          <StylePriority Ref="54" UseFont="false" />
+        </Item25>
+        <Item26 Ref="55" Name="xrLabel4" ControlType="XRLabel" SizeF="112.5,12.5" LocationFloat="0, 162.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="No. Registrasi">
+          <StylePriority Ref="56" UseFont="false" />
+        </Item26>
+        <Item27 Ref="57" Name="xrLabel5" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="125, 175" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text=":">
+          <StylePriority Ref="58" UseFont="false" />
+        </Item27>
+        <Item28 Ref="59" Name="lblReportTitle" ControlType="XRLabel" SizeF="775,25" LocationFloat="0, 75" Font="Tahoma, 13pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text="Report Title">
+          <StylePriority Ref="60" UseFont="false" UseTextAlignment="false" />
+        </Item28>
+        <Item29 Ref="61" Name="lblReportSubtitle" ControlType="XRLabel" SizeF="775,12.5" LocationFloat="0, 100" Font="Tahoma, 10pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleCenter">
+          <StylePriority Ref="62" UseFont="false" UseTextAlignment="false" />
+        </Item29>
+        <Item30 Ref="63" Name="lblAddressLine2" ControlType="XRLabel" SizeF="362.5,12.5" LocationFloat="62.5, 37.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Address Line 2">
+          <StylePriority Ref="64" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item30>
+        <Item31 Ref="65" Name="xrLogo" ControlType="XRPictureBox" SizeF="62.5,68" LocationFloat="0, 0" Sizing="StretchImage" ImageUrl="/qislib/images/logo.png" />
+        <Item32 Ref="66" Name="lblAddressLine1" ControlType="XRLabel" SizeF="362.5,12.5" LocationFloat="62.5, 25" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Address Line 1">
+          <StylePriority Ref="67" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item32>
+        <Item33 Ref="68" Name="lblPhoneFaxNo" ControlType="XRLabel" SizeF="317,17.00001" LocationFloat="450, 0" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleRight" Text="Phone">
+          <StylePriority Ref="69" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item33>
+        <Item34 Ref="70" Name="lblHealthcareName" ControlType="XRLabel" SizeF="362.5,25" LocationFloat="62.5, 0" Font="Tahoma, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Healthcare Name">
+          <StylePriority Ref="71" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item34>
+      </Controls>
+    </Item1>
+    <Item2 Ref="72" ControlType="PageFooterBand" Name="PageFooter" HeightF="29.50002">
+      <Controls>
+        <Item1 Ref="73" Name="xrPageInfo3" ControlType="XRPageInfo" SizeF="149.9999,12.5" Font="Tahoma, 7pt" Padding="2,2,0,0,100" LocationFloat="627, 12.5" TextAlignment="MiddleRight" Format="Page {0} of {1}">
+          <StylePriority Ref="74" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="75" Name="lineFooter" ControlType="XRLine" SizeF="777,12.49997" LocationFloat="0, 0" />
+        <Item3 Ref="76" Name="lblReportProperties" ControlType="XRLabel" SizeF="451.0417,12.5" LocationFloat="0, 12.5" Font="Tahoma, 7pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="MEDINFRAS - ReportID, Print Date/Time : dd-MMM-yyyy HH:MM:ss, User ID : XXXXX">
+          <StylePriority Ref="77" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item3>
+      </Controls>
+    </Item2>
+    <Item3 Ref="78" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="16.66667" />
+    <Item4 Ref="79" ControlType="ReportFooterBand" Name="ReportFooter">
+      <Controls>
+        <Item1 Ref="80" Name="lblParameter6" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="400, 75" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter6 = ParameterValue6">
+          <StylePriority Ref="81" UseFont="false" />
+        </Item1>
+        <Item2 Ref="82" Name="lblParameter0" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 50" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter0 = ParameterValue0">
+          <StylePriority Ref="83" UseFont="false" />
+        </Item2>
+        <Item3 Ref="84" Name="lblParameter1" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 62.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter1 = ParameterValue1">
+          <StylePriority Ref="85" UseFont="false" />
+        </Item3>
+        <Item4 Ref="86" Name="lblParameter2" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 75" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter2 = ParameterValue2">
+          <StylePriority Ref="87" UseFont="false" />
+        </Item4>
+        <Item5 Ref="88" Name="lblParameter4" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="400, 50" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter4 = ParameterValue4">
+          <StylePriority Ref="89" UseFont="false" />
+        </Item5>
+        <Item6 Ref="90" Name="lblParameter5" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="400, 62.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter5 = ParameterValue5">
+          <StylePriority Ref="91" UseFont="false" />
+        </Item6>
+        <Item7 Ref="92" Name="lblReportParameterTitle" ControlType="XRLabel" SizeF="150,12.5" LocationFloat="0, 25" Font="Tahoma, 8pt, style=Bold, Underline" Padding="2,2,0,0,100" Text="Report Parameter(s) :">
+          <StylePriority Ref="93" UseFont="false" />
+        </Item7>
+        <Item8 Ref="94" Name="lblParameter3" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 87.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter3 = ParameterValue3">
+          <StylePriority Ref="95" UseFont="false" />
+        </Item8>
+        <Item9 Ref="96" Name="lblParameter7" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="400, 87.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter7 = ParameterValue7">
+          <StylePriority Ref="97" UseFont="false" />
+        </Item9>
+      </Controls>
+    </Item4>
+    <Item5 Ref="98" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+    <Item6 Ref="99" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+    <Item7 Ref="100" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="0" />
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="101" Name="Title" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Times New Roman, 20pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item2 Ref="102" Name="FieldCaption" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 10pt, style=Bold" Sides="Top, Bottom" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item3 Ref="103" Name="PageInfo" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 9pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+  </StyleSheet>
+  <ObjectStorage>
+    <Item1 Ref="0" Content="~Xtra#NULL" Type="System.Windows.Forms.BindingSource" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

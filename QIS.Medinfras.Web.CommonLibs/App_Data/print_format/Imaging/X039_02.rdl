@@ -1,0 +1,19 @@
+﻿^XA
+^LL640
+^PW800
+^LH5,10
+^A0N,48,48
+^FO20,30^FD{PatientName}^FS
+^A0N,35,35
+^FO20,80^FD{cfDateOfBirth} / {cfGenderInitial1} ^FS 
+^A0N,42,42
+^FO20,130^FD{RegistrationPhysicianName}^FS
+^A0N,40,40
+^FO20,180^FD{cfTransactionDate}^FS
+^A0N,42,42
+^FO20,230^FD{MedicalNo}^FS
+^A0N,35,35
+^FB800,8
+^FO20,300^FD{cfItemDetailListForLabel}^FS
+^PR2
+^XZ

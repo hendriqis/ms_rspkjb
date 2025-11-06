@@ -1,0 +1,25 @@
+^XA
+^LL800
+^PW640
+^LH10,10
+^FO70,15^CF0,25^FB500,1,0,C^FD{HealthcareName}^FS
+^FO110,38^CF0,25^FB400,1,0,C^FDTelp:{Phone} Fax:{Fax}^FS
+^FO50,60^GB520,1,2^FS
+^CF0,28
+^FO65,70^FD{PatientFullName} {Salutation}^FS
+^CF0,20
+^FO65,100^FDTgl Lahir:{DateOfBirth}^FS
+^FO420,100^FD{MedicalNo}^FS
+^CF0,20
+^FO65,120^FD{PhysicianName}^FS
+^FO420,120^FD{PrescriptionDate}^FS
+^FO50,140^GB520,1,2^FS
+^CF0,28
+^FO65,150^FD{ItemName} {cfIsUsedDispenseQty1}^FS
+^CF0,20
+^FO65,180^AQN,28,24^FD{MedicationRoute} {ConsumeMethod}^FS
+^FO65,220^FD{cfCoenamRuleLabel} ^FS
+^FO65,245^FD{MedicationAdministration}^FS
+^FO60,245^AQN,28,24
+^FO420,245^FDED:{ExpiredDate}^FS
+^XZ

@@ -1,0 +1,86 @@
+﻿^XA
+^POI
+^PW840
+^LL1100
+^MD10
+^LH2,1	
+^FO10,30^GFA,790,790,10,O01C,O0FFC,N03FFE,N07IF,N0JF8,M01JFC,M01JFE,M03JFE,::M03KF,:::::M03JFE,::::::M03JFC,01PFC,07PFC,0QF8,1QF8,3QF,7QF,7PFE,7PFC,:QF8,QF,7OFE003FC7C,7OF803FF7FF8,7OF01FFDIFE,3NFC0IFBJF,3NF83NF81MFC07NF80MF01OFC03FFDFF803OFC007C7FI0PFCN01PFEN03PFEN07PFCN07IFELFCN0QFCM01QFCM01QF8M03QF,M03PFE,M07PFC,M07PF,M07JF8,M0KF8,::::::L01KF8,:::::M0KF8,::M0KF,M07JF,M03IFE,M01IFC,N0IF8,N07FE,O07,^FS
+^CFD
+^FO100,18^FDNational Hospital ^FS
+^FO100,48^FDJl. Boulevard Famili Selatan Kav. 1 ^FS
+^FO100,78^FDGraha Famili ^FS
+^FO100,108^FDSurabaya 60228 ^FS
+^FO100,138^FDTelephone^FS
+^FO220,138^FD:^FS
+^FO240,138^FD031 - 2975777^FS
+^FO100,168^FDFax^FS
+^FO220,168^FD:^FS
+^FO240,168^FD031 - 2975799^FS
+^CF036,36
+^FO270,210^FDCASHIER RECEIPT^FS
+^CF030,30
+^FO260,250^FDNo : PRJ/20160709/00004^FS
+^CFD
+^FO10,290^FDPT. Surabaya Jasa Medika^FS
+^FO10,320^FD02.776.542 9-618 000^FS
+^CF024,24
+^FO10,330^FD_________________________________________________________________^FS
+^CFD
+^FO10,360^FDPatient Name^FS
+^FO240,360^FD:^FS
+^FO260,360^FD{PatientName}^FS
+^FO10,390^FDDate of Birth^FS
+^FO240,390^FD:^FS
+^FO260,390^FD{DateOfBirth}^FS
+^FO10,420^FDRegistration No.^FS
+^FO240,420^FD:^FS
+^FO260,420^FD{RegistrationNo}^FS
+^FO10,450^FDRegistration Date^FS
+^FO240,450^FD:^FS
+^FO260,450^FD{RegistrationDate}^FS
+^FO10,480^FDService Unit / Room^FS
+^FO240,480^FD:^FS
+^FO260,480^FD{Service Unit} / {RoomCode}^FS
+^FO10,510^FDPhysician^FS
+^FO240,510^FD:^FS
+^FO260,510^FD{ParamedicName}^FS
+^CF024,24
+^FO10,520^FD_________________________________________________________________^FS
+^CFD
+^FO10,550^FDItem Name^FS
+^FO500,550^FDQuantity^FS
+^FO610,550^FDAmount^FS
+^CF024,24
+^FO10,560^FD_________________________________________________________________^FS
+^CFD
+^FO10,590^FDHematologi Lengkap tanpa LED^FS
+
+^FO610,590^FD999,000,000.00^FS
+^FO10,620^FDGolongan Darah A,B, O dan Rh^FS
+^FO500,620^FD1,00 X^FS
+^FO610,620^FD69,000.00^FS
+^CF024,24
+^FO10,800^FD_________________________________________________________________^FS
+^CFD
+^FO10,830^FDDisc. Global  :  0.00^FS
+^FO440,830^FDTotal Amount^FS
+^FO600,830^FD:^FS
+^FO620,830^FD999,000,000.00^FS
+^FO440,860^FDTotal Payment^FS
+^FO600,860^FD:^FS
+^FO620,860^FD999,000,000.00^FS
+^CF024,24
+^FO440,880^FD_____________________________^FS
+^CFD
+^FO440,910^FDBalance^FS
+^FO600,910^FD:^FS
+^FO620,910^FD999,000,000.00^FS
+^FO10,960^FDNOTES : ^FS
+^FO80,960^FD* This printed form also applies as Payment Receipt  ^FS
+^FO80,980^FD* Printed by system, no signature needed  ^FS
+^CF024,24
+^FO10,1000^FD_________________________________________________________________^FS
+^CFD
+^FO10,1030^FDPrint Date : {PrintDateTime} ^FS
+^FO500,1030^FDPrinted By : {UserName} ^FS
+^XZ

@@ -1,0 +1,24 @@
+^XA
+^LL440
+^PW520
+^LH10,10
+^AQN,30,30
+^FO80,15^FD{HealthcareName}^FS
+^CFD
+^FO80,55^FD{RegistrationNo} {PrescriptionDate} MR {MedicalNo}^FS
+^AQN,28,24
+^FO15,95^FD{PatientFullName}^FS
+^AQN,24,24
+^FO15,135^FDDOB/Age/Sex: {DateOfBirth} / {PatientAge} / {Sex}^FS
+^AQN,24,24
+^FO15,180^FD07 - 08 / 13 - 14 / 19 - 20 / 22 - 23^FS
+^AQN,24,24
+^FO15,180^FDORAL / IV / IM / RECTAL^FS
+^AQN,28,24
+^FO15,260^FD({cfTakenQty}) {ItemName}^FS
+^CFD
+^FB480,3,,
+^FO15,200^FD{MedicationLine}^FS
+^FO15,380^FDED : {ExpiredDate}^FS
+^PR2
+^XZ

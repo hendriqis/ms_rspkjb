@@ -1,0 +1,8 @@
+﻿ProductionNo
+ProductionDateInString
+ItemCode
+ItemName1
+Remarks
+CreatedByName
+LastUpdatedByName
+ApprovedByName

@@ -1,0 +1,16 @@
+﻿^XA
+^LL200
+^PW640
+^LH10,10^MD10
+^CF030,30
+^FO130,0^FD{MedicalNo}^FS
+^CF025,25
+^BY1,2,30^FO355,0^BAN,30,N,N,N^FD{MedicalNo}^FS
+^CF020,20
+^FO130,40^FD{PatientName}^FS
+^FO130,60^FD{DateOfBirthInString} ({Sex})^FS
+^FO130,80^FDPenjamin : {BusinessPartnerName}^FS
+^CF025,25
+^FO130,105^FDNo. Kamar : {RoomCode}^FS
+^PR2
+^XZ

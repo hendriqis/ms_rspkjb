@@ -1,0 +1,338 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+    $(function () {
+
+        $("#ddlParameter1").change(function () {
+            $("#txtParamScore1").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter2").change(function () {
+            $("#txtParamScore2").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter3").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter4").change(function () {
+            $("#txtParamScore4").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter5").change(function () {
+            $("#txtParamScore5").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter6").change(function () {
+            $("#txtParamScore6").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter7").change(function () {
+            $("#txtParamScore7").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter8").change(function () {
+            $("#txtParamScore8").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter9").change(function () {
+            $("#txtParamScore9").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter10").change(function () {
+            $("#txtParamScore10").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter1").change();
+        $("#ddlParameter2").change();
+        $("#ddlParameter3").change();
+        $("#ddlParameter4").change();
+        $("#ddlParameter5").change();
+        $("#ddlParameter6").change();
+        $("#ddlParameter7").change();
+        $("#ddlParameter8").change();
+        $("#ddlParameter9").change();
+        $("#ddlParameter10").change();
+
+        function CalculateTotalScore() {
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+            var p4 = 0;
+            var p5 = 0;
+            var p6 = 0;
+            var p7 = 0;
+            var p8 = 0;
+            var p9 = 0;
+            var p10 = 0;
+
+            if ($("#txtParamScore1").val())
+                p1 = parseInt($("#txtParamScore1").val());
+
+            if ($("#txtParamScore2").val())
+                p2 = parseInt($("#txtParamScore2").val());
+
+            if ($("#txtParamScore3").val())
+                p3 = parseInt($("#txtParamScore3").val());
+
+            if ($("#txtParamScore4").val())
+                p4 = parseInt($("#txtParamScore4").val());
+
+            if ($("#txtParamScore5").val())
+                p5 = parseInt($("#txtParamScore5").val());
+
+            if ($("#txtParamScore6").val())
+                p6 = parseInt($("#txtParamScore6").val());
+
+            if ($("#txtParamScore7").val())
+                p7 = parseInt($("#txtParamScore7").val());
+
+            if ($("#txtParamScore8").val())
+                p8 = parseInt($("#txtParamScore8").val());
+
+            if ($("#txtParamScore9").val())
+                p9 = parseInt($("#txtParamScore9").val());
+
+            if ($("#txtParamScore10").val())
+                p10 = parseInt($("#txtParamScore10").val());
+
+
+            var total = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10;
+
+            $("#txtTotalScore").val(total);
+        }
+
+        function SetTotalScore(param) {
+            $('#<%=txtTotalScore.ClientID %>').val(param);
+            var score = parseInt(param);
+            SetRiskFactorType(param);
+        }
+    });
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+            <colgroup>
+                <col width="450px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="150px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold; text-decoration:underline">MALNUTRITION INFLAMATION SCORE (MIS)</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold;">A. Riwayat Medis</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Perubahan berat badan kering di akhir dialysis (secara keseluruhan pada 3-6 bulan terakhir)</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlParameter1" style="width:100%" class = "ddlForm" controlID = "ddlParameter1">
+                        <option value="0" selected>< 0.5 kg</option>
+                        <option value="1">0.5 - 1 kg</option>
+                        <option value="2">≥ 1 kg tapi < 5%</option>
+                        <option value="3">≥ 5%</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore1" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Asupan Diit</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlParameter2" class="ddlForm" controlID="ddlParameter2" style="width:100%" class = "ddlForm" controlID = "ddlParameter2">
+                        <option value="0" selected>Nafsu makan baik (Asupan tidak menurun)</option>
+                        <option value="1">Asupan diit padat sub optimal</option>
+                        <option value="2">Berkurangnya asupan makan padat dan cair</option>
+                        <option value="3">Starvasi karena diit cair pun tidak masuk</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore2"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Gejala Gastrointestinal</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlParameter3" class="ddlForm" controlID="ddlParameter3" style="width:100%" class = "ddlForm" controlID = "ddlParameter3">
+                        <option value="0" selected>Tidak ada gejala (Nafsu makan baik)</option>
+                        <option value="1">Gejala ringan nafsu makan buruk atau kadang mual</option>
+                        <option value="2">Kadang muntah atau gejala GI sedang</option>
+                        <option value="3">Sering diare atau muntah atau anoreksia berat</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore3" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Kapasitas Fungsional (hubungan nutrisi dengan gangguan fungsional)</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlParameter4" class="ddlForm" controlID="ddlParameter4" style="width:100%">
+                        <option value="0" selected>Kapasitas fungsional normal (merasa sehat)</option>
+                        <option value="1">Kadang sulit melakukan aktifitas dasar atau sering merasa lelah</option>
+                        <option value="2">Sulit melakukan aktifitas mandiri</option>
+                        <option value="3">Bed/chair-ridden (aktifitas fisik minimal sampai tidak ada)</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore4" class = "txtForm" controlID = "txtParamScore4" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Komorbitas, termasuk lama (tahun) dialysis</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlParameter5" style="width:100%" class = "ddlForm" controlID = "ddlParameter5">
+                        <option value="0" selected>Tanpa komorbiditas dalam dialysis selama 1 tahun terakhir</option>
+                        <option value="1">Komorbiditas ringan, dalam dialysis 1-4 tahun (excluding MMC*)</option>
+                        <option value="2">Komorbiditas sedang, dalam dialysis > 4 tahun (including MMC*)</option>
+                        <option value="3">Setiap komorbiditas berat,multiple (2 or more MMC*)</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore5"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold;">B. Pemeriksaan Fisik</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Berkurangnya cadangan lemak atau kehilangan lemak subkutan (dibawah mata, trisep, bisep, dada)</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlParameter6" class="ddlForm" controlID="ddlParameter6" style="width:100%">
+                        <option value="0" selected>Tidak ada perubahan</option>
+                        <option value="1">Ringan</option>
+                        <option value="2">Sedang</option>
+                        <option value="3">Berat</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore6" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore6"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Tanda kehilangan masa otot (kening, clavikula,scapula, costae, kuadrisep, lutut, interoseous)</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlParameter7" class="ddlForm" controlID="ddlParameter7" style="width:100%">
+                        <option value="0" selected>Tidak ada perubahan</option>
+                        <option value="1">Ringan</option>
+                        <option value="2">Sedang</option>
+                        <option value="3">Berat</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore7" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore7"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold;">C. Ukuran Tubuh</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Index Masa Tubuh (kg/m<sup>2</sup>)</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlParameter8" class="ddlForm" controlID="ddlParameter8" style="width:100%">
+                        <option value="0" selected>≥ 20</option>
+                        <option value="1">18 - 19.9</option>
+                        <option value="2">16 - 17.99</option>
+                        <option value="3">< 16</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore8" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore8"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold;">D. Parameter Laboratorium</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Albumin serum (g/dl)</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlParameter9" class="ddlForm" controlID="ddlParameter9" style="width:100%">
+                        <option value="0" selected>≥ 4</option>
+                        <option value="1">3.5 - 3.9</option>
+                        <option value="2">3.0 - 3.4</option>
+                        <option value="3">< 3.0</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore9" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore9"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        TIBC (<i>Total Iron-Binding Capacit Serum</i>) mg/dl**</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlParameter10" class="ddlForm" controlID="ddlParameter10" style="width:100%">
+                        <option value="0" selected>≥ 250</option>
+                        <option value="1">200 - 249</option>
+                        <option value="2">150 - 199</option>
+                        <option value="3">< 150</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore10" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore10"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:right; padding-right:10px">
+                    <label style="font-weight:bold;">TOTAL</label>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtTotalScore" style="width:50px; text-align:right" class = "txtForm" controlID = "txtTotalScore"/>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+</div>
+

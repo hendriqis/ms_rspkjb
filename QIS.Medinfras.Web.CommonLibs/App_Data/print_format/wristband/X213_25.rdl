@@ -1,0 +1,19 @@
+﻿^XA
+^LL3452
+^PW361
+^LH10,10
+^FO20,1140
+^FH_
+^FDQA,
+^A0R,53,47
+^FO300,250^A0R,30,30^FD{cfPatientNameInLabel}^FS
+^APR,30,27
+^FO260,250^A0R,30,30^FDMRN^FS
+^APR,30,27
+^FO260,330^A0R,30,30^FD{MedicalNo}    REG.NO    {RegistrationNo}^FS
+^APR,30,27
+^FO230,250^A0R,30,30^FD{ActualVisitDateInString} {ActualVisitTime}  DOB : {DateOfBirthInString} ({cfPatientAgeInYear}) / {cfGenderInitial}^FS
+^APR,30,27
+^FO140,250^BY3,2.0
+^A0N,40,30^BAR,90,N,N,N^FD{cfAlternateRegistrationNo}^FS
+^XZ

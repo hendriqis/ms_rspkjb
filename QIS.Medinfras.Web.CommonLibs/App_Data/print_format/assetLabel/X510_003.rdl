@@ -1,0 +1,9 @@
+^XA
+^LL200
+^PW400
+^LH5,10
+^FO10,15^CF024,20
+^FB395,5,0,L^FD{FixedAssetCode}-{FixedAssetName}/{HealthcareName}/{FALocationName}/{cfProcurementYear}^FS
+^FO10,90^BY1,2,0^BAN,30,N,N,N^FD{FixedAssetCode}^FS
+^PR2
+^XZ

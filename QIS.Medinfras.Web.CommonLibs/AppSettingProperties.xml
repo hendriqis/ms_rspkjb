@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <appsetting key="Lang" caption="Language" type="2">
+    <comboboxitems>
+      <comboboxitem value="id" text="Indonesia" />
+      <comboboxitem value="en" text="English" />
+    </comboboxitems>
+  </appsetting>
+  <appsetting key="Themes" caption="Themes" type="2">
+    <comboboxitems>
+      <comboboxitem value="MetroGreen" text="Metro Green" />
+      <comboboxitem value="MetroBlue" text="Metro Blue" />
+    </comboboxitems>
+  </appsetting>
+</root>

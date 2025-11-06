@@ -1,0 +1,287 @@
+<div>
+    
+<script language="javascript" type="text/javascript" id="dxss_RAPUHAssessment">
+
+    document.getElementById("ddlParameter1").onchange = function()
+    {
+        var values = document.getElementById("ddlParameter1").value;
+        document.getElementById("txtForm_01_01").value = values;
+        sumScore();
+    }
+    document.getElementById("ddlParameter2").onchange = function()
+    {
+        var values = document.getElementById("ddlParameter2").value;
+        document.getElementById("txtForm_01_02").value = values;
+        sumScore();
+    }
+
+    document.getElementById("ddlParameter3").onchange = function()
+    {
+        var values = document.getElementById("ddlParameter3").value;
+        document.getElementById("txtForm_01_03").value = values;
+        sumScore();
+    }
+
+    document.getElementById("ddlParameter4").onchange = function()
+    {
+        var values = document.getElementById("ddlParameter4").value;
+        document.getElementById("txtForm_01_04").value = values;
+        sumScore();
+    }
+    document.getElementById("ddlParameter5").onchange = function()
+    {
+        var values = document.getElementById("ddlParameter5").value;
+        document.getElementById("txtForm_01_05").value = values;
+        sumScore();
+    }
+
+    document.getElementById("ddlParameter6").onchange = function()
+    {
+        var values = document.getElementById("ddlParameter6").value;
+        document.getElementById("txtForm_01_06").value = values;
+        sumScore();
+    }
+    document.getElementById("ddlParameter7").onchange = function()
+    {
+        var values = document.getElementById("ddlParameter7").value;
+        document.getElementById("txtForm_01_07").value = values;
+        sumScore();
+    }
+
+    document.getElementById("ddlParameter8").onchange = function()
+    {
+        var values = document.getElementById("ddlParameter8").value;
+        document.getElementById("txtForm_01_08").value = values;
+        sumScore();
+    }
+
+    document.getElementById("ddlParameter9").onchange = function()
+    {
+        var values = document.getElementById("ddlParameter9").value;
+        document.getElementById("txtForm_01_09").value = values;
+        sumScore();
+    }
+    
+    document.getElementById("ddlParameter10").onchange = function()
+    {
+        var values = document.getElementById("ddlParameter10").value;
+        document.getElementById("txtForm_01_10").value = values;
+        sumScore();
+    }
+
+    function sumScore()
+    {
+        var kriteria1 = parseInt(document.getElementById("txtForm_01_01").value);
+        var kriteria2 = parseInt(document.getElementById("txtForm_01_02").value);
+        var kriteria3 = parseInt(document.getElementById("txtForm_01_03").value);
+        var kriteria4 = parseInt(document.getElementById("txtForm_01_04").value);
+        var kriteria5 = parseInt(document.getElementById("txtForm_01_05").value);
+        var kriteria6 = parseInt(document.getElementById("txtForm_01_06").value);
+        var kriteria7 = parseInt(document.getElementById("txtForm_01_07").value);
+        var kriteria8 = parseInt(document.getElementById("txtForm_01_08").value);
+        var kriteria9 = parseInt(document.getElementById("txtForm_01_09").value);
+        var kriteria10 = parseInt(document.getElementById("txtForm_01_10").value);
+
+        var scoreTotal = (kriteria1 + kriteria2 + kriteria3 + kriteria4 + kriteria5 + kriteria6 + kriteria7 + kriteria8 + kriteria9 + kriteria10);
+        
+        document.getElementById("txtForm_01_11").value = scoreTotal;
+    }
+</script>
+    <style>
+        .ddlForm {display:inline-block}
+    </style>
+    <table style="width: 100%;">
+        <tr>
+            <td>Diagnosa medis</td>
+            <td>: <input type="text" class="txtForm" controlID="txtForm5"></td>
+            <td>e.c </td>
+            <td></td>
+        </tr>
+    </table>
+    <hr>
+    <table style="width: 100%;">
+        <thead>
+            <tr>
+                <td style="width: 5%;"><strong>No.</strong></td>
+                <td style="width: 45%;"><strong>KOMPONEN MIS</strong></td>
+                <td style="width: 30%;"><strong>Kiteria</strong></td>
+                <td style="width: 20%;"><strong>SCORE</strong></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="4"><strong>A. Riwayat Medis</strong> </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Perubahan berat badan kering di akhir dialysis (perubahan secara keseluruhan pada 3-6 bulan terakhir)</td>
+                <td>
+                    <select id="ddlParameter1" style="width:100%" class = "ddlForm" controlID = "ddlParameter1">
+                        <option value="0">(0) - &#60; 0,5 kg</option>
+                        <option value="1">(1) - 0,5 – 1 kg</option>
+                        <option value="2">(2) - ≥ 1 kg tapi &#60; 5%</option>
+                        <option value="3">(3) - ≥ 5%</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" class="txtForm" controlID="txtForm_01_01" id="txtForm_01_01" readonly="" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Asupan diit</td>
+                <td>
+                    <select id="ddlParameter2" style="width:100%" class = "ddlForm" controlID = "ddlParameter2">
+                        <option value="0">(0) - Nafsu makan baik, asupan tidak menurun</option>
+                        <option value="1">(1) - Asupan diit padat sub optimal</option>
+                        <option value="2">(2) - Berkurangnya asupan makan padat dan cair</option>
+                        <option value="3">(3) - Starvasi karena diit cair pun tidak masuk</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" class="txtForm" controlID="txtForm_01_02" id="txtForm_01_02" readonly="" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Gejala gastrointestinal</td>
+                <td>
+                    <select id="ddlParameter3" style="width:100%" class = "ddlForm" controlID = "ddlParameter3">
+                        <option value="0">(0) - Tidak ada gejala, nafsu makan baik</option>
+                        <option value="1">(1) - Gejala ringan nafsu makan buruk atau kadang mual</option>
+                        <option value="2">(2) - Kadang muntah atau gejala GI sedang</option>
+                        <option value="3">(3) - Sering diare atau muntah atau anoreksia berat</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" class="txtForm" controlID="txtForm_01_03" id="txtForm_01_03" readonly="" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Kapasitas fungsional (hubungan nutrisi dengan gangguan fungsional)</td>
+                <td>
+                    <select id="ddlParameter4" style="width:100%" class = "ddlForm" controlID = "ddlParameter4">
+                        <option value="0">(0) - Kapasitas fungsional normal, merasa sehat</option>
+                        <option value="1">(1) - Kadang sulit melakukan aktifitas dasar atau sering merasa lelah</option>
+                        <option value="2">(2) - Sulit melakukan aktifitas mandiri</option>
+                        <option value="3">(3) - Bed/ chair-ridden atau aktifitas fisik minimal sampai tidak ada</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" class="txtForm" controlID="txtForm_01_04" id="txtForm_01_04" readonly="" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Komorbiditas, termasuk lama (tahun) dialysis</td>
+                <td>
+                    <select id="ddlParameter5" style="width:100%" class = "ddlForm" controlID = "ddlParameter5">
+                        <option value="0">(0) - Tanpa komorbiditas dalam dialysis selama 1 tahun terakhir</option>
+                        <option value="1">(1) - Komorbiditas ringan, dalam dialysis 1-4 tahun (excluding MMC*)</option>
+                        <option value="2">(2) - Komorbiditas sedang, dalam dialysis >4 tahun (including one MMC*)</option>
+                        <option value="3">(3) - Setiap komorbiditas berat, multiple (2 or more MMC*)</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" class="txtForm" controlID="txtForm_01_05" id="txtForm_01_05" readonly="" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><strong>B. Pemeriksaan Fisik</strong></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Komorbiditas, termasuk lama (tahun) dialysis</td>
+                <td>
+                    <select id="ddlParameter6" style="width:100%" class = "ddlForm" controlID = "ddlParameter6">
+                        <option value="0">(0) - Tidak ada perubahan</option>
+                        <option value="1">(1) - Ringan</option>
+                        <option value="2">(2) - Sedang</option>
+                        <option value="3">(3) - Berat</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" class="txtForm" controlID="txtForm_01_06" id="txtForm_01_06" readonly="" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Tanda kehilangan masa otot (kening, clavikula, scapula, costae, kuadrisep, lutut, interoseous) </td>
+                <td>
+                    <select id="ddlParameter7" style="width:100%" class = "ddlForm" controlID = "ddlParameter7">
+                        <option value="0">(0) - Tidak ada perubahan</option>
+                        <option value="1">(1) - Ringan</option>
+                        <option value="2">(2) - Sedang</option>
+                        <option value="3">(3) - Berat</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" class="txtForm" controlID="txtForm_01_07" id="txtForm_01_07" readonly="" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><strong>C. Ukuran tubuh</strong></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Index masa tubuh (kg/m2)</td>
+                <td>
+                    <select id="ddlParameter8" style="width:100%" class = "ddlForm" controlID = "ddlParameter8">
+                        <option value="0">(0) - ≥20</option>
+                        <option value="1">(1) - 18-19,9</option>
+                        <option value="2">(2) - 16-17,99</option>
+                        <option value="3">(3) - &#60; 16</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" class="txtForm" controlID="txtForm_01_08" id="txtForm_01_08" readonly="" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><strong>D. Parameter Laboratorium</strong></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Albumin serum (g/dl)</td>
+                <td>
+                    <select id="ddlParameter9" style="width:100%" class = "ddlForm" controlID = "ddlParameter9">
+                        <option value="0">(0) - ≥4</option>
+                        <option value="1">(1) - 3,5-3,9</option>
+                        <option value="2">(2) - 3,0-3,4</option>
+                        <option value="3">(3) - &#60; 3,0</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" class="txtForm" controlID="txtForm_01_09" id="txtForm_01_09" readonly="" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>TIBC (Total Iron-Binding Capacit Serum) mg/dl</td>
+                <td>
+                    <select id="ddlParameter10" style="width:100%" class = "ddlForm" controlID = "ddlParameter10">
+                        <option value="0">(0) - ≥250</option>
+                        <option value="1">(1) - 200-249</option>
+                        <option value="2">(2) - 150-199</option>
+                        <option value="3">(3) - &#60; 50</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" class="txtForm" controlID="txtForm_01_10" id="txtForm_01_10" readonly="" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>Total</strong></td>
+                <td><input type="text" class="txtForm" controlID="txtForm_01_11" id="txtForm_01_11" readonly="" value="0"></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    *MMC (Major Comorbid Condition) include CHF class III or IV, full down AIDS, severe CAD, moderate to severe COPD major neurogical sequel. And metastatic malignancies or s/p recent  chemotherapy.
+**Suggested equivalent increment for serum transferring are : >200 (0), 170-199 (1), 140-169 (2), and <140 mg/dl (3)
+Kesimpulan : tanpa malnutrisi total nilai <6 apabila malnutrisi nilai >6, jika nilai = 6 lihat klinis pasien dalam kesimpulan diambil seobjektif mungkin.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

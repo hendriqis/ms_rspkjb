@@ -1,0 +1,12 @@
+﻿{cfGroupPoliRSAJ}
+		{cfGroupPoliRSAJCaption}
+{cfGroupPoliRSAJ}
+No RM   : {MedicalNo}{cfAppointmentSymbol}
+Nama    : {PatientName}
+Tanggal : {ActualVisitDateInString} - {VisitTime}
+Poli    : {ServiceUnitName}
+DOKTER	: {ParamedicName}
+Catatan :
+
+
+ 

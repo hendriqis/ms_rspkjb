@@ -1,0 +1,295 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+
+    var p1 = 0;
+    var p2 = 0;
+    var p3 = 0;
+    var p4 = 0;
+    var p5 = 0;
+    var p6 = 0;
+    var p7 = 0;
+    var p8 = 0;
+    var p9 = 0;
+
+    $(function () {
+        $("#ddlForm1").change(function () {
+            $("#txtParamScore1").val($(this).val());
+            p1 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm2").change(function () {
+            $("#txtParamScore2").val($(this).val());
+            p2 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm3").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            p3 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm4").change(function () {
+            $("#txtParamScore4").val($(this).val());
+            p4 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm5").change(function () {
+            $("#txtParamScore5").val($(this).val());
+            p5 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm6").change(function () {
+            $("#txtParamScore6").val($(this).val());
+            p6 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm7").change(function () {
+            $("#txtParamScore7").val($(this).val());
+            p7 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm8").change(function () {
+            $("#txtParamScore8").val($(this).val());
+            p8 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm9").change(function () {
+            $("#txtParamScore9").val($(this).val());
+            p9 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm1").change();
+        $("#ddlForm2").change();
+        $("#ddlForm3").change();
+        $("#ddlForm4").change();
+        $("#ddlForm5").change();
+        $("#ddlForm6").change();
+        $("#ddlForm7").change();
+        $("#ddlForm8").change();
+        $("#ddlForm9").change();
+    });
+
+    function CalculateTotalScore() {
+        var score = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9;
+        var value = parseInt(score);
+        var scoreType = 'Tidak Beresiko Jatuh (TB)';
+
+        if (value >= 90) {
+            scoreType = "Resiko Jatuh (RJ)";
+        }
+
+        var result = score;
+        SetTotalScore(result);
+    }
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <colgroup>
+                <col width="250px" />
+                <col width="600px" />
+                <col width="10px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="3">
+                    <label style="font-weight:bold; text-decoration:underline">SKALA EDMONSON</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    </br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Usia</label>
+                </td>
+                <td>
+                    <select id="ddlForm1" style="width:100%" class="ddlForm" controlID = "ddlForm1">
+                        <option value="0" selected></option>
+                        <option value="8">&le; 50 tahun</option>
+                        <option value="10">50 - 79 tahun</option>
+                        <option value="26">&ge; 80 tahun</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px; text-align:right" class="txtForm" controlID = "txtParamScore1"  />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Mental Status</label>
+                </td>
+                <td>
+                    <select id="ddlForm2" style="width:100%" class="ddlForm" controlID = "ddlForm2">
+                        <option value="0" selected></option>
+                        <option value="-4">Sadar Penuh</option>
+                        <option value="12">Gelisah/Cemas</option>
+                        <option value="13">Kadang-kadang bingung</option>
+                        <option value="14">Bingung/disorientasi</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px ;text-align:right" class="txtForm" controlID = "txtParamScore2" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Eliminasi</label>
+                </td>
+                <td>
+                    <select id="ddlForm3" style="width:100%" class="ddlForm" controlID = "ddlForm3">
+                        <option value="0" selected></option>
+                        <option value="8">Mandiri dan dapat mengontrol BAB/BAK</option>
+                        <option value="12">Menggunakan Kateter/ostomy</option>
+                        <option value="10">Eliminasi dengan bantuan</option>
+                        <option value="12">Gangguan Eliminasi (inkontinensia, nokturia, sering BAK)</option>
+                        <option value="12">Inkontinensia, tetapi dapat mobilisasi sendiri</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px;text-align:right" class="txtForm" controlID = "txtParamScore3" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Pengobatan</label>
+                </td>
+                <td>
+                    <select id="ddlForm4" style="width:100%" class="ddlForm" controlID = "ddlForm4">
+                        <option value="0" selected></option>
+                        <option value="10">Tidak mendapat obat</option>
+                        <option value="10">Mendapat obat jantung</option>
+                        <option value="8">Mendapat obat psikotropik (termasuk benzodiazepine & antidepresi)</option>
+                        <option value="12">Mendapat tambahan obat psikiatri dan/atau obat nyeri dalam waktu 24 jam</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px;text-align:right" class="txtForm" controlID = "txtParamScore4" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Diagnosis</label>
+                </td>
+                <td>
+                    <select id="ddlForm5" style="width:100%" class="ddlForm" controlID = "ddlForm5">
+                        <option value="0" selected></option>
+                        <option value="10">Bipolar/Schizoaffective Disorder</option>
+                        <option value="8">Pencandu Obat/Alkohol</option>
+                        <option value="10">Gangguan Depresi Berat (Major Depressive Disorder)</option>
+                        <option value="12">Demensia/Delirium</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px;text-align:right" class="txtForm" controlID = "txtParamScore5" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Mobilisasi / Keseimbangan</label>
+                </td>
+                <td>
+                    <select id="ddlForm6" style="width:100%" class="ddlForm" controlID = "ddlForm6">
+                        <option value="0" selected></option>
+                        <option value="7">Mandiri/seimbang/immobilisasi</option>
+                        <option value="8">Menggunakan Alat Bantu (tongkat, walker, walker/tongkat)</option>
+                        <option value="10">Vertigo/Hipotensi orthostatik/lemah</option>
+                        <option value="8">Tidak stabil/membutuhkan bantuan & menyadari kemampuannya</option>
+                        <option value="15">Tidak stabil tetapi tidak menyadari keterbatasannya</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore6" style="width:50px;text-align:right" class="txtForm" controlID = "txtParamScore6" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Nutrisi</label>
+                </td>
+                <td>
+                    <select id="ddlForm7" style="width:100%" class="ddlForm" controlID = "ddlForm7">
+                        <option value="0" selected></option>
+                        <option value="12">Makan & minum sedikit dalam 24 jam</option>
+                        <option value="0">Tidak tampak nyata ada gangguan nafsu makan)</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore7" style="width:50px;text-align:right" class="txtForm" controlID = "txtParamScore7" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Gangguan Tidur</label>
+                </td>
+                <td>
+                    <select id="ddlForm8" style="width:100%" class="ddlForm" controlID = "ddlForm8">
+                        <option value="0" selected></option>
+                        <option value="8">Tidak ada gangguan tidur</option>
+                        <option value="12">Ada laporan gangguan tidur dari pasien/keluarga/teman (tidur < 4 jam)</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore8" style="width:50px;text-align:right" class="txtForm" controlID = "txtParamScore8" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Riwayat Jatuh</label>
+                </td>
+                <td>
+                    <select id="ddlForm9" style="width:100%" class="ddlForm" controlID = "ddlForm9">
+                        <option value="0" selected></option>
+                        <option value="8">Tidak ada riwayat jatuh</option>
+                        <option value="12">Riwayat jatuh dalam 3 bulan yang lalu</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore9" style="width:50px;text-align:right" class="txtForm" controlID = "txtParamScore9" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    </br>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+

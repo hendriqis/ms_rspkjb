@@ -1,0 +1,17 @@
+﻿^XA
+^POI
+^LL3452
+^PW361
+^LH10,10
+^FO120, 0
+^BQN,2,2,Q,0
+^FH_
+^FDQA,{MedicalNo}_0A_0D{RegistrationNo}_0A_0D{FirstName}_0A_0D{MiddleName}_0A_0D{LastName}_0A_0D{cfPatientLocation}_0A_0D^FS
+^A0R,25,23
+^FO190,150^FD{MedicalNo}^FS
+^A0R,19,15
+^FO155,150^FD{cfPatientNameSalutation}^FS
+^A0R,15,13
+^FO120,150^FD{DateOfBirthInString}^FS
+^A0R,24,22
+^XZ

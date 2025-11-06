@@ -1,0 +1,298 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage/MPPatientPageList.master" ValidateRequest="false" 
+    AutoEventWireup="true" CodeBehind="PatientAssessmentForm.aspx.cs" Inherits="QIS.Medinfras.Web.EMR.Program.PatientAssessmentForm" %>
+
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="plhList" runat="server">
+    <script type="text/javascript" id="dxss_vitalsignlist">
+        $(function () {
+            $('#<%=grdFormList.ClientID %> tr:gt(0):not(.trEmpty)').live('click', function () {
+                $('#<%=grdFormList.ClientID %> tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+                $('#<%=hdnGCAssessmentType.ClientID %>').val($(this).find('.keyField').html());
+                cbpView.PerformCallback('refresh');
+            });
+            $('#<%=grdFormList.ClientID %> tr:eq(1)').click();
+
+            $('#<%=grdView.ClientID %> tr:gt(0):not(.trEmpty)').live('click', function () {
+                $('#<%=grdView.ClientID %> tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+                $('#<%=hdnID.ClientID %>').val($(this).find('.keyField').html());
+                $('#<%=hdnIsVerified.ClientID %>').val($(this).find('.isVerified').html());
+                $('#<%=hdnAssessmentDate.ClientID %>').val($(this).find('.assessmentDate').html());
+                $('#<%=hdnAssessmentTime.ClientID %>').val($(this).find('.assessmentTime').html());
+                $('#<%=hdnParamedicID.ClientID %>').val($(this).find('.paramedicID').html());
+                $('#<%=hdnParamedicName.ClientID %>').val($(this).find('.paramedicName').html());
+                $('#<%=hdnAssessmentLayout.ClientID %>').val($(this).find('.formLayout').html());
+                $('#<%=hdnAssessmentValues.ClientID %>').val($(this).find('.formValue').html());
+                $('#<%=hdnIsInitialAssessment.ClientID %>').val($(this).find('.isInitialAssessment').html());
+            });
+        });
+
+        $('.lnkView').live('click', function () {
+            var formType = $(this).attr("assessmentType");
+            var id = $(this).attr('recordID');
+            var date = $(this).attr('assessmentDate');
+            var time = $(this).attr('assessmentTime');
+            var ppa = $(this).attr("paramedicName");
+            var isInitialAssessment = $(this).attr("isInitialAssessment");
+            var isNeedVerified = $(this).attr("isNeedVerified");
+            var layout = $(this).attr("assessmentLayout");
+            var values = $(this).attr("assessmentValue");
+            var formGroup = "1";
+            var visitID = $(this).attr("visitID");
+
+            var medicalNo = $('#<%=hdnPageMedicalNo.ClientID %>').val();
+            var patientName = $('#<%=hdnPagePatientName.ClientID %>').val();
+            var patientDOB = $('#<%=hdnPagePatientDOB.ClientID %>').val();
+            var registrationNo = $('#<%=hdnPageRegistrationNo.ClientID %>').val();
+            var patientInfo = medicalNo + "|" + patientName + "|" + patientDOB + "|" + registrationNo;
+
+            var param = formType + '|' + id + '|' + date + '|' + time + '|' + ppa + '|' + isInitialAssessment + '|' + layout + '|' + values + '|' + formGroup + "|" + visitID + '|' + patientInfo + "|" + isNeedVerified;
+
+            var url = ResolveUrl("~/libs/Controls/EMR/Nursing/Assessment/ViewNursePatientAssessmentCtl.ascx");
+            openUserControlPopup(url, param, 'Pengkajian Pasien', 800, 600);
+        });
+
+        $('.lnkCopy').live('click', function () {
+            var formType = $(this).attr("assessmentType");
+            var visitID = $(this).attr('.visitID');
+            var id = $(this).attr('recordID');
+            var layout = $(this).attr("assessmentLayout");
+            var values = $(this).attr("assessmentValue");
+
+            var medicalNo = $('#<%=hdnPageMedicalNo.ClientID %>').val();
+            var patientName = $('#<%=hdnPagePatientName.ClientID %>').val();
+            var patientDOB = $('#<%=hdnPagePatientDOB.ClientID %>').val();
+            var registrationNo = $('#<%=hdnPageRegistrationNo.ClientID %>').val();
+            var patientInfo = medicalNo + "|" + patientName + "|" + patientDOB + "|" + registrationNo;
+
+            var message = "Lakukan copy pengkajian pasien ?";
+            displayConfirmationMessageBox('COPY PENGKAJIAN PASIEN :', message, function (result) {
+                if (result) {
+                    var url = ResolveUrl("~/libs/Controls/EMR/Nursing/CopyNurseAssessmentFormEntry.ascx");
+                    var param = formType + '|' + visitID + "|" + id + '|' + layout + '|' + values + '|' + patientInfo;
+                    if (formType == 'X401^113') {
+                        param = formType + '@' + visitID + "@" + id + '@' + layout + '@' + values + '@' + patientInfo;
+                    }
+                    openUserControlPopup(url, param, 'Pengkajian Pasien', 800, 600);
+                }
+            });
+        });
+
+        function onBeforeBasePatientPageListEdit() {
+            if (($('#<%=hdnCurrentParamedicID.ClientID %>').val() == $('#<%=hdnParamedicID.ClientID %>').val())) {
+                return true;
+            }
+            else {
+                displayErrorMessageBox('EDIT', 'Maaf, Perubahan Pengkajian hanya bisa dilakukan oleh user yang mengkaji.');
+                return false;
+            }
+        }
+
+        function onBeforeBasePatientPageListDelete() {
+            if ($('#<%=hdnCurrentParamedicID.ClientID %>').val() == $('#<%=hdnParamedicID.ClientID %>').val()) {
+                return true;
+            }
+            else {
+                displayErrorMessageBox('EDIT', 'Maaf, Pengkajian hanya bisa dihapus oleh user yang mengkaji.');
+                return false;
+            }
+        }
+
+        function onAfterSaveRecordPatientPageEntry() {
+            cbpView.PerformCallback('refresh');
+        }
+
+        function onRefreshControl() {
+            cbpView.PerformCallback('refresh');
+        }
+
+        function onAfterSavePatientPhoto() {
+            var MRN = $('#<%:hdnMRN.ClientID %>').val();
+            var filterExpression = 'MRN = ' + MRN;
+            hideLoadingPanel();
+            pcRightPanelContent.Hide();
+        }
+
+        //#region Paging Header
+        var pageCount = parseInt('<%=PageCount %>');
+        $(function () {
+            setPaging($("#pagingHd"), pageCount, function (page) {
+                cbpFormList.PerformCallback('changepage|' + page);
+            });
+        });
+
+        function onCbpFormListEndCallback(s) {
+            $('#containerHdImgLoadingView').hide();
+
+            var param = s.cpResult.split('|');
+            if (param[0] == 'refresh') {
+                var pageCount = parseInt(param[1]);
+                if (pageCount > 0)
+                    $('#<%=grdFormList.ClientID %> tr:eq(1)').click();
+
+                setPaging($("#pagingHd"), pageCount, function (page) {
+                    cbpFormList.PerformCallback('changepage|' + page);
+                });
+            }
+            else
+                $('#<%=grdFormList.ClientID %> tr:eq(1)').click();
+        }
+        //#endregion
+
+        //#region Paging
+        function onCbpViewEndCallback(s) {
+            $('#containerImgLoadingView').hide();
+
+            var param = s.cpResult.split('|');
+            if (param[0] == 'refresh') {
+                var pageCount = parseInt(param[1]);
+                if (pageCount > 0)
+                    $('#<%=grdView.ClientID %> tr:eq(1)').click();
+
+                setPaging($("#paging"), pageCount, function (page) {
+                    cbpView.PerformCallback('changepage|' + page);
+                });
+            }
+            else
+                $('#<%=grdView.ClientID %> tr:eq(1)').click();
+        }
+        //#endregion
+
+        function onBeforeLoadRightPanelContent(code) {
+            if (code == 'patientPhoto') {
+                var param = $('#<%:hdnMRN.ClientID %>').val();
+                return param;
+            }
+        }
+    </script>
+    <input type="hidden" id="hdnPageTitle" runat="server" />
+    <input type="hidden" id="hdnIsVerified" runat="server" value="0" />
+    <input type="hidden" runat="server" id="hdnGCAssessmentType" value="" />
+    <input type="hidden" value="" id="hdnHealthcareServiceUnitID" runat="server" />
+    <input type="hidden" value="" id="hdnDepartmentID" runat="server" />
+    <input type="hidden" value="" id="hdnIsHealthcareServiceUnitHasParamedic" runat="server" />
+    <input type="hidden" value="" id="hdnMRN" runat="server" />
+    <input type="hidden" value="" id="hdnPageMedicalNo" runat="server" />
+    <input type="hidden" value="" id="hdnPagePatientName" runat="server" />
+    <input type="hidden" value="" id="hdnPagePatientDOB" runat="server" />
+    <input type="hidden" value="" id="hdnPageRegistrationNo" runat="server" />
+    <input type="hidden" runat="server" id="hdnID" value="" />
+    <input type="hidden" runat="server" id="hdnCurrentParamedicID" value="" />
+    <input type="hidden" runat="server" id="hdnAssessmentDate" value="" />
+    <input type="hidden" runat="server" id="hdnAssessmentTime" value="" />
+    <input type="hidden" runat="server" id="hdnParamedicID" value="" />
+    <input type="hidden" runat="server" id="hdnParamedicName" value="" />
+    <input type="hidden" runat="server" id="hdnAssessmentLayout" value="" />
+    <input type="hidden" runat="server" id="hdnAssessmentValues" value="" />
+    <input type="hidden" runat="server" id="hdnIsInitialAssessment" value="" />
+    <div style="position: relative;">
+        <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+            <colgroup>
+                <col width="30%" />
+                <col />
+            </colgroup>
+            <tr>
+                <td style="vertical-align:top">
+                    <div style="position: relative;">
+                        <dxcp:ASPxCallbackPanel ID="cbpFormList" runat="server" Width="100%" ClientInstanceName="cbpFormList"
+                            ShowLoadingPanel="false" OnCallback="cbpFormList_Callback">
+                            <ClientSideEvents BeginCallback="function(s,e){ $('#containerHdImgLoadingView').show(); }"
+                                EndCallback="function(s,e){ onCbpFormListEndCallback(s); }" />
+                            <PanelCollection>
+                                <dx:PanelContent ID="PanelContent2" runat="server">
+                                    <asp:Panel runat="server" ID="panFormList" CssClass="pnlContainerGridPatientPage">
+                                        <asp:GridView ID="grdFormList" runat="server" CssClass="grdSelected grdPatientPage" AutoGenerateColumns="false" ShowHeaderWhenEmpty="true" 
+                                            EmptyDataRowStyle-CssClass="trEmpty">
+                                            <Columns>
+                                                <asp:BoundField DataField="StandardCodeID" HeaderStyle-CssClass="keyField" ItemStyle-CssClass="keyField" />
+                                                <asp:BoundField DataField="StandardCodeName" HeaderText="Jenis Pengkajian" HeaderStyle-CssClass="gridColumnText" ItemStyle-CssClass="gridColumnText" />
+                                            </Columns>
+                                            <EmptyDataTemplate>
+                                                <%=GetLabel("Tidak ada template form pengkajian yang bisa digunakan")%>
+                                            </EmptyDataTemplate>
+                                        </asp:GridView>
+                                    </asp:Panel>
+                                </dx:PanelContent>
+                            </PanelCollection>
+                        </dxcp:ASPxCallbackPanel>    
+                        <div class="imgLoadingGrdView" id="containerHdImgLoadingView" >
+                            <img src='<%= ResolveUrl("~/Libs/Images/loading_small.gif")%>' alt='' />
+                        </div>
+                        <div class="containerPaging">
+                            <div class="wrapperPaging">
+                                <div id="pagingHd"></div>
+                            </div>
+                        </div> 
+                    </div>
+                </td>
+                <td style="vertical-align:top">
+                    <dxcp:ASPxCallbackPanel ID="cbpView" runat="server" Width="100%" ClientInstanceName="cbpView"
+                        ShowLoadingPanel="false" OnCallback="cbpView_Callback">
+                        <ClientSideEvents BeginCallback="function(s,e){ $('#containerImgLoadingView').show(); }"
+                            EndCallback="function(s,e){ onCbpViewEndCallback(s); }" />
+                        <PanelCollection>
+                            <dx:PanelContent ID="PanelContent1" runat="server">
+                                <asp:Panel runat="server" ID="pnlView" CssClass="pnlContainerGridPatientPage">
+                                    <asp:GridView ID="grdView" runat="server" CssClass="grdSelected grdPatientPage" AutoGenerateColumns="false"
+                                        ShowHeaderWhenEmpty="true" EmptyDataRowStyle-CssClass="trEmpty" OnRowDataBound="grdView_RowDataBound">
+                                        <Columns>
+                                            <asp:BoundField DataField="AssessmentID" HeaderStyle-CssClass="keyField" ItemStyle-CssClass="keyField" />
+                                            <asp:BoundField DataField="VisitID" HeaderStyle-CssClass="hiddenColumn" ItemStyle-CssClass="hiddenColumn visitID" />
+                                            <asp:BoundField DataField="cfAssessmentDate" HeaderText = "Tanggal" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Width="120px" ItemStyle-HorizontalAlign="Center"/>
+                                            <asp:BoundField DataField="AssessmentTime" HeaderText = "Jam" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Width="60px" ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="assessmentTime" ItemStyle-CssClass="assessmentTime" />
+                                            <asp:BoundField DataField="ParamedicID" HeaderText = "Values" HeaderStyle-HorizontalAlign="Left" ItemStyle-HorizontalAlign="Left" HeaderStyle-CssClass="paramedicID hiddenColumn" ItemStyle-CssClass="paramedicID hiddenColumn"/>
+                                            <asp:BoundField DataField="GCAssessmentType" HeaderText = "Values" HeaderStyle-HorizontalAlign="Left" HeaderStyle-CssClass="formType hiddenColumn" ItemStyle-CssClass="formType hiddenColumn" />
+                                            <asp:BoundField DataField="AssessmentFormLayout" HeaderText = "Values" HeaderStyle-HorizontalAlign="Left" HeaderStyle-CssClass="formLayout hiddenColumn" ItemStyle-CssClass="formLayout hiddenColumn" />
+                                            <asp:BoundField DataField="AssessmentFormValue" HeaderText = "Values" HeaderStyle-HorizontalAlign="Left" HeaderStyle-CssClass="formValue hiddenColumn" ItemStyle-CssClass="formValue hiddenColumn" />
+                                            <asp:BoundField DataField="IsInitialAssessment" HeaderText = "Values" HeaderStyle-HorizontalAlign="Left" ItemStyle-HorizontalAlign="Left" HeaderStyle-CssClass="isInitialAssessment hiddenColumn" ItemStyle-CssClass="isInitialAssessment hiddenColumn"/>
+                                            <asp:BoundField DataField="IsNeedVerified" HeaderText = "Values" HeaderStyle-HorizontalAlign="Left" ItemStyle-HorizontalAlign="Left" HeaderStyle-CssClass="isNeedVerified hiddenColumn" ItemStyle-CssClass="isNeedVerified hiddenColumn"/>
+                                            <asp:BoundField DataField="IsVerified" HeaderText = "Values" HeaderStyle-HorizontalAlign="Left" ItemStyle-HorizontalAlign="Left" HeaderStyle-CssClass="isVerified hiddenColumn" ItemStyle-CssClass="isVerified hiddenColumn"/>
+                                            <asp:BoundField DataField="ParamedicName" HeaderText = "Dikaji Oleh" HeaderStyle-HorizontalAlign="Left" ItemStyle-HorizontalAlign="Left" HeaderStyle-CssClass="paramedicName" ItemStyle-CssClass="paramedicName" />
+                                            <asp:BoundField DataField="cfAssessmentDatePickerFormat" HeaderText = "Values" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Width="120px" ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="assessmentDate hiddenColumn" ItemStyle-CssClass="assessmentDate hiddenColumn" />
+                                            <asp:TemplateField HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" ItemStyle-Width="60px">
+                                                <ItemTemplate>
+                                                    <div>
+                                                        <a class="lnkView" recordid="<%#:Eval("AssessmentID") %>"
+                                                            visitID="<%#:Eval("VisitID") %>" assessmentType="<%#:Eval("GCAssessmentType") %>" assessmentDate="<%#:Eval("cfAssessmentDatePickerFormat") %>" assessmentTime="<%#:Eval("AssessmentTime") %>" assessmentLayout="<%#:Eval("AssessmentFormLayout") %>" assessmentValue="<%#:Eval("AssessmentFormValue") %>"
+                                                            paramedicName="<%#:Eval("ParamedicName") %>" isInitialAssessment="<%#:Eval("IsInitialAssessment") %>" isNeedVerified="<%#:Eval("IsNeedVerified") %>" isVerified="<%#:Eval("IsVerified") %>">View</a>
+                                                    </div>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                            <asp:TemplateField HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" ItemStyle-Width="60px">
+                                                <ItemTemplate>
+                                                    <div>
+                                                        <a class="lnkCopy" recordid="<%#:Eval("AssessmentID") %>"
+                                                            visitID="<%#:Eval("VisitID") %>" assessmentType="<%#:Eval("GCAssessmentType") %>" assessmentDate="<%#:Eval("cfAssessmentDatePickerFormat") %>" assessmentTime="<%#:Eval("AssessmentTime") %>" assessmentLayout="<%#:Eval("AssessmentFormLayout") %>" assessmentValue="<%#:Eval("AssessmentFormValue") %>"
+                                                            paramedicName="<%#:Eval("ParamedicName") %>" isInitialAssessment="<%#:Eval("IsInitialAssessment") %>" isNeedVerified="<%#:Eval("IsNeedVerified") %>" isVerified="<%#:Eval("IsVerified") %>">Copy</a>
+                                                    </div>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                        </Columns>
+                                        <EmptyDataTemplate>
+                                            <%=GetLabel("Tidak ada data pengkajian populasi khusus untuk pasien ini") %>
+                                        </EmptyDataTemplate>
+                                    </asp:GridView>
+                                </asp:Panel>
+                            </dx:PanelContent>
+                        </PanelCollection>
+                    </dxcp:ASPxCallbackPanel>
+                    <div class="imgLoadingGrdView" id="containerImgLoadingView">
+                        <img src='<%= ResolveUrl("~/Libs/Images/loading_small.gif")%>' alt='' />
+                    </div>
+                    <div class="containerPaging">
+                        <div class="wrapperPaging">
+                            <div id="paging">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</asp:Content>

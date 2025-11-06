@@ -1,0 +1,287 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Libs/MasterPage/CustomerPage/MPBaseCustomerPage.Master"
+    AutoEventWireup="true" CodeBehind="MPBaseCustomerPageTrx3.master.cs" Inherits="QIS.Medinfras.Web.CommonLibs.MasterPage.MPBaseCustomerPageTrx3" %>
+
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="plhMPPatientPageNavigationPane"
+    runat="server">
+    <asp:ContentPlaceHolder ID="plhMPPatientPageNavigationPane" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="plhMPPatientPage" runat="server">
+    <input type="hidden" runat="server" id="hdnIsRefreshControlAfterSaveAddRecord" value="1" />
+    <input type="hidden" runat="server" id="hdnIsAdd" value="1" />
+    <input type="hidden" runat="server" id="hdnIsAllowEdit" value="1" />
+    <input type="hidden" runat="server" id="hdnIsAllowVoid" value="1" />
+    <input type="hidden" runat="server" id="hdnIsAllowNextPrev" value="1" />
+    <input type="hidden" runat="server" id="hdnRowCount" value="0" />
+    <input type="hidden" runat="server" id="hdnPageIndex" value="-1" />
+    <input type="hidden" runat="server" id="hdnWatermark" value="" />
+    <div class="toolbarArea">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <colgroup>
+                <col width="70%" />
+                <col width="30%" />
+            </colgroup>
+            <tr>
+                <td>
+                    <ul id="ulMPTrxToolbar" runat="server">
+                        <li id="btnMPEntryPrev" runat="server" crudmode="R">
+                            <img src='<%=ResolveUrl("~/Libs/Images/Icon/tbback.png")%>' alt="" /><div>
+                                <%=GetLabel("Prev")%></div>
+                        </li>
+                        <li id="btnMPEntryNext" runat="server" crudmode="R">
+                            <img src='<%=ResolveUrl("~/Libs/Images/Icon/tbnext.png")%>' alt="" /><div>
+                                <%=GetLabel("Next")%></div>
+                        </li>
+                        <asp:ContentPlaceHolder ID="plhCustomButtonToolbar" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </ul>
+                </td>
+                <td style="text-align: right; padding-right: 5px">
+                    <asp:ContentPlaceHolder ID="plhMenuTitle" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="position: relative;">
+        <div runat="server" id="pnlWatermark" style="display: none; position: absolute; z-index: 10000;
+            height: 150px; width: 100%; text-align: center; padding-top: 30px; margin-top: 140px;
+            font-size: 40px; background-color: transparent; opacity: 0.45; color: #FF0000;
+            overflow-y: hidden;" class="borderBox">
+            <div style="-webkit-transform: rotate(-10deg); -moz-transform: rotate(-10deg); filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);">
+                <span style="border: 1px solid #F00; padding: 5px;">PENDAFTARAN TUTUP</span>
+            </div>
+        </div>
+        <div style="padding: 12px;">
+            <script type="text/javascript">
+                function showWatermark(watermarkText) {
+                    $('#<%=pnlWatermark.ClientID %> span').html(watermarkText);
+                    $('#<%=pnlWatermark.ClientID %>').show();
+                }
+
+                function hideWatermark() {
+                    $('#<%=pnlWatermark.ClientID %>').hide();
+                }
+
+                window.setIsAdd = function (isAdd) {
+                    if (isAdd) {
+                        $('#<%=hdnIsAdd.ClientID %>').val('1');
+                    }
+                    else {
+                        var $group = $('#fsMPEntry');
+                        var result = true;
+                        $group.find(':[IsEditAbleInEditMode=0]').each(function (i, item) {
+                            if ($(item)[0].tagName == 'SELECT')
+                                $(item).attr('disabled', 'disabled');
+                            else if ($(item)[0].tagName == 'SPAN')
+                                $(item).find('input').attr('disabled', 'disabled');
+                            else if ($(item)[0].tagName == 'LABEL')
+                                $(item).attr('class', 'lblDisabled');
+                            else
+                                $(item).attr('readonly', 'readonly');
+                        });
+                        $group.find(':[IsEditAbleInEditMode=1]').each(function (i, item) {
+                            if ($(item)[0].tagName == 'SELECT')
+                                $(item).removeAttr('disabled');
+                            else if ($(item)[0].tagName == 'SPAN')
+                                $(item).find('input').removeAttr('disabled');
+                            else if ($(item)[0].tagName == 'LABEL')
+                                $(item).removeClass('lblDisabled');
+                            else
+                                $(item).removeAttr('readonly');
+                        });
+                        $('#<%=hdnIsAdd.ClientID %>').val('0');
+
+                    }
+                }
+                window.getIsAdd = function () {
+                    return ($('#<%=hdnIsAdd.ClientID %>').val() == '1');
+                }
+
+                function onAfterCustomSaveSuccess() {
+                    setPageIndex(0);
+                    var rowCount = parseInt($('#<%=hdnRowCount.ClientID %>').val());
+                    rowCount++;
+                    if ($('#<%=hdnIsAllowNextPrev.ClientID %>').val() == '1') {
+                        $('#<%=btnMPEntryPrev.ClientID %>').show();
+                        $('#<%=btnMPEntryNext.ClientID %>').show();
+                    }
+                    $('#<%=hdnRowCount.ClientID %>').val(rowCount);
+                    setIsAdd(false);
+                }
+
+                function setPageIndex(pageIndex) {
+                    $('#<%=hdnPageIndex.ClientID %>').val(pageIndex);
+                }
+
+                function isRefreshControlAfterSaveAddRecord() {
+                    return ($('#<%=hdnIsRefreshControlAfterSaveAddRecord.ClientID %>').val() == '1');
+                }
+
+                function onMPEntryProcessSaveSuccess(param) {
+                    if ($('#<%=hdnIsAdd.ClientID %>').val() == '1') {
+                        var rowCount = parseInt($('#<%=hdnRowCount.ClientID %>').val());
+                        rowCount++;
+                        if ($('#<%=hdnIsAllowNextPrev.ClientID %>').val() == '1') {
+                            $('#<%=btnMPEntryPrev.ClientID %>').show();
+                            $('#<%=btnMPEntryNext.ClientID %>').show();
+                        }
+                        $('#<%=hdnRowCount.ClientID %>').val(rowCount);
+                    }
+                    if ($('#<%=hdnIsAdd.ClientID %>').val() == '1') {
+                        if (typeof onAfterSaveAddRecord == 'function')
+                            onAfterSaveAddRecord(param);
+                    }
+                    else {
+                        if (typeof onAfterSaveEditRecord == 'function')
+                            onAfterSaveEditRecord(param);
+                    }
+
+                    if (isRefreshControlAfterSaveAddRecord()) {
+                        setPageIndex(0);
+                        cbpMPEntryContent.PerformCallback('load');
+                    }
+                }
+
+                function onAfterAddRecordAddRowCount() {
+                    var rowCount = parseInt($('#<%=hdnRowCount.ClientID %>').val());
+                    rowCount++;
+                    if ($('#<%=hdnIsAllowNextPrev.ClientID %>').val() == '1') {
+                        $('#<%=btnMPEntryPrev.ClientID %>').show();
+                        $('#<%=btnMPEntryNext.ClientID %>').show();
+                    }
+                    $('#<%=hdnRowCount.ClientID %>').val(rowCount);
+                }
+
+                function onMPEntryProcessVoidSuccess() {
+                    /*var rowCount = parseInt($('#<%=hdnRowCount.ClientID %>').val());
+                    rowCount--;
+                    $('#<%=hdnRowCount.ClientID %>').val(rowCount);
+                    */
+                }
+
+                function onLoadObject(keyValue) {
+                    showLoadingPanel();
+                    cbpMPEntryContent.PerformCallback('loadobject|' + keyValue);
+                }
+
+                function onCustomButtonClick(type) {
+                    cbpMPEntryProcess.PerformCallback('customclick|' + type);
+                }
+
+                function onRefreshControl() {
+                    cbpMPEntryContent.PerformCallback('refresh');
+                }
+
+                $(function () {
+                    if (!getIsAdd()) {
+                        var cpWatermark = $('#<%=hdnWatermark.ClientID %>').val().split('|');
+                        if (cpWatermark[0] == '1')
+                            showWatermark(cpWatermark[1]);
+                        else
+                            hideWatermark();
+                    }
+
+                    $('#<%=btnMPEntryPrev.ClientID %>').click(function () {
+                        cbpMPEntryContent.PerformCallback('prev');
+                    });
+                    $('#<%=btnMPEntryNext.ClientID %>').click(function () {
+                        cbpMPEntryContent.PerformCallback('next');
+                    });
+                    if (typeof onLoad == 'function')
+                        onLoad();
+                });
+            </script>
+            <asp:ContentPlaceHolder ID="plhHeader" runat="server">
+            </asp:ContentPlaceHolder>
+            <dxcp:ASPxCallbackPanel ID="cbpMPEntryContent" runat="server" Width="100%" ClientInstanceName="cbpMPEntryContent"
+                ShowLoadingPanel="false" OnCallback="cbpMPEntryContent_Callback">
+                <ClientSideEvents BeginCallback="function(s,e){
+                    showLoadingPanel();
+                }" EndCallback="function(s,e){
+                    var param = s.cpParam;
+                    if(param == 'new' || param == 'refresh'){
+                        setIsAdd(true);
+                        hideWatermark();
+                        if (typeof setRightPanelButtonEnabled == 'function')
+                            setRightPanelButtonEnabled();
+                    }
+                    else if(param == 'next' || param == 'prev' || param == 'load' || param == 'loadobject'){
+                        setIsAdd(false);
+                        var cpWatermark = s.cpWatermark.split('|');
+                        if (cpWatermark[0] == '1')
+                           showWatermark(cpWatermark[1]); 
+                        else
+                           hideWatermark();
+                        if (typeof setRightPanelButtonEnabled == 'function')
+                            setRightPanelButtonEnabled();
+                    }
+                    setPageIndex(s.cpPageIndex);
+                    hideLoadingPanel();
+
+                    if (typeof onLoad == 'function')
+                        onLoad();
+                }" />
+                <PanelCollection>
+                    <dx:PanelContent ID="PanelContent1" runat="server">
+                        <fieldset id="fsMPEntry">
+                            <asp:ContentPlaceHolder ID="plhEntry" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </fieldset>
+                    </dx:PanelContent>
+                </PanelCollection>
+            </dxcp:ASPxCallbackPanel>
+            <dxcp:ASPxCallbackPanel ID="cbpMPEntryProcess" runat="server" Width="100%" ClientInstanceName="cbpMPEntryProcess"
+                ShowLoadingPanel="false" OnCallback="cbpMPEntryProcess_Callback">
+                <ClientSideEvents BeginCallback="function(s,e){
+                    showLoadingPanel();
+                }" EndCallback="function(s,e){
+                    var result = s.cpResult.split('|');
+                    if(result[0] == 'save'){
+                        if(result[1] == 'success'){
+                            var param = s.cpRetval;
+                            //cbpMPEntryContent.PerformCallback('refresh');
+                            if(getIsAdd())
+                                onMPEntryProcessSaveSuccess(param);
+                        }
+                        else
+                            if(result[2] != '')
+                                showToast('Save Failed', 'Error Message : ' + result[2]);
+                            else
+                                showToast('Save Failed', '');
+                    }
+                    else if(result[0] == 'void'){
+                        if(result[1] == 'success'){
+                            onMPEntryProcessVoidSuccess();
+                            cbpMPEntryContent.PerformCallback('refresh');
+                        }
+                        else{
+                            if(result[2] != '')
+                                showToast('Void Failed', 'Error Message : ' + result[2]);
+                            else
+                                showToast('Void Failed', '');
+                        }
+                    }
+                    else if(result[0] == 'customclick'){
+                        if(result[1] == 'success'){
+                            var param = s.cpRetval;
+                            if (typeof onAfterCustomClickSuccess == 'function')
+                                onAfterCustomClickSuccess(s.cpType, param);
+                        }
+                        else{
+                            if(result[2] != '')
+                                showToast('Failed', 'Error Message : ' + result[2]);
+                            else
+                                showToast('Failed', '');
+                        }
+                    }
+                    hideLoadingPanel();
+                }" />
+            </dxcp:ASPxCallbackPanel>
+        </div>
+    </div>
+</asp:Content>

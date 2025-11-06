@@ -1,0 +1,12 @@
+﻿MedicalNo
+ClassName
+TransactionNo
+DateOfBirthInString
+cfPatientName
+StreetName
+VisitServiceUnitName
+VisitRoomName
+VisitBedCode
+cfTransactionDateInString
+ItemName
+DokterRujukan

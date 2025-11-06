@@ -1,0 +1,236 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Libs/MasterPage/MPMain.Master" AutoEventWireup="true" 
+    CodeBehind="MPList.master.cs" Inherits="QIS.Medinfras.Web.CommonLibs.MasterPage.MPList" %>
+
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+<%@ Register Assembly="QIS.Medinfras.Web.CustomControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" 
+    Namespace="QIS.Medinfras.Web.CustomControl" TagPrefix="qis" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="plhMPMain" runat="server">
+    <div class="toolbarArea" style="height: 53px;">
+        <table style="float:right;margin-top:20px;" id="tblFilter" runat="server">
+            <tr>
+                <td>
+                    <qis:QISIntellisenseTextBox1 runat="server" ClientInstanceName="txtSearchView" ID="txtSearchView" Width="300px" Watermark="Search">
+                        <ClientSideEvents SearchClick="function(s){ onTxtSearchViewSearchClick(s); }" />
+                    </qis:QISIntellisenseTextBox1>
+                </td>
+            </tr>
+        </table>
+        <ul id="ulMPListToolbar" runat="server">
+            <asp:ContentPlaceHolder ID="plhCustomButtonToolbarLeft" runat="server">                
+            </asp:ContentPlaceHolder>
+            <li id="btnMPListAdd" runat="server" CRUDMode="C"><img src='<%=ResolveUrl("~/Libs/Images/Icon/tbnew.png")%>' alt="" /><br style="clear:both"/> <div><%=GetLabel("Add")%></div></li>
+            <li id="btnMPListEdit" runat="server" CRUDMode="U"><img src='<%=ResolveUrl("~/Libs/Images/Icon/tbedit.png")%>' alt="" /><br style="clear:both"/><div><%=GetLabel("Edit")%></div></li>
+            <li id="btnMPListDelete" runat="server" CRUDMode="D"><img src='<%=ResolveUrl("~/Libs/Images/Icon/tbdelete.png")%>' alt="" /><br style="clear:both"/><div><%=GetLabel("Delete")%></div></li>
+            <li id="btnMPListPrint" runat="server" CRUDMode="P"><img src='<%=ResolveUrl("~/Libs/Images/Icon/tbprint.png")%>' alt="" /><br style="clear:both"/><div><%=GetLabel("Print")%></div></li>
+            <asp:ContentPlaceHolder ID="plhCustomButtonToolbar" runat="server">                
+            </asp:ContentPlaceHolder>
+        </ul>
+    </div>
+    <div style="padding:12px;">  
+        <script type="text/javascript">
+            function getFilterExpressionMasterList() {
+                return txtSearchView.GenerateFilterExpression();
+            }
+
+            function onCustomButtonClick(type) {
+                cbpMPListProcess.PerformCallback('customclick|' + type);
+            }
+
+            function isAllowEditRecord() {
+                return ($('#<%=btnMPListEdit.ClientID %>').is(":visible"));
+            }
+
+            function isAllowDeleteRecord() {
+                return ($('#<%=btnMPListDelete.ClientID %>').is(":visible"));
+            }
+
+            function isAllowAddRecord() {
+                return ($('#<%=btnMPListAdd.ClientID %>').is(":visible"));
+            }
+
+            function onTxtSearchViewSearchClick(s) {
+                setTimeout(function () {
+                    s.SetBlur();
+                    var filterExpression = s.GenerateFilterExpression();
+                    if (typeof onRefreshControl == 'function')
+                        onRefreshControl(filterExpression);
+                    $('#<%=hdnFilterExpression.ClientID %>').val(filterExpression);
+                }, 0);
+            }
+
+            var isTextSearchMasterListExists;
+            $(function () {
+                $('#<%=btnMPListAdd.ClientID %>').click(function () {
+                    cbpMPListProcess.PerformCallback('add');
+                });
+                $('#<%=btnMPListEdit.ClientID %>').click(function (evt) {
+                    cbpMPListProcess.PerformCallback('edit');
+                });
+                $('#<%=btnMPListDelete.ClientID %>').click(function () {
+                    displayConfirmationMessageBox('DELETE','Are you sure want to delete this record?', function (result) {
+                        if (result) cbpMPListProcess.PerformCallback('delete');
+                    });
+                });
+                $('#<%=btnMPListPrint.ClientID %>').click(function () {
+                    var reportCode = '<%=OnGetReportCode() %>';
+                    if (reportCode != '')
+                        openReportViewer(reportCode, $('#<%=hdnFilterExpression.ClientID %>').val());
+
+                });
+
+                $('#<%=ctxMenuEdit.ClientID %>:not(.disabled)').click(function () {
+                    if (isAllowEditRecord())
+                        cbpMPListProcess.PerformCallback('edit');
+                });
+
+                $('#<%=ctxMenuDelete.ClientID %>:not(.disabled)').click(function () {
+                    if (isAllowDeleteRecord())
+                        displayConfirmationMessageBox("DELETE", 'Are you sure want to delete this record?', function (result) {
+                            if (result) cbpMPListProcess.PerformCallback('delete');
+                        });
+
+                });
+
+                $('#<%=ctxMenuAdd.ClientID %>:not(.disabled)').click(function () {
+                    if (isAllowAddRecord())
+                        cbpMPListProcess.PerformCallback('add');
+                });
+
+                var intellisenseHints = '<%=IntellisenseHints %>';
+                if (intellisenseHints != '') {
+                    isTextSearchMasterListExists = true;
+                    intellisenseHints = $.parseJSON('[' + intellisenseHints + ']');
+                    txtSearchViewHelper.setIntellisenseHints(intellisenseHints);
+                    txtSearchView.setIntellisenseHints(intellisenseHints);
+                    txtSearchView.SetText('<%=TextSearch %>');
+                }
+                else
+                    isTextSearchMasterListExists = false;
+            });
+
+            function setDocumentLocationToEntry(url) {
+                var mapForm = document.createElement("form");
+                mapForm.method = "POST";
+                mapForm.action = url;
+
+                if (typeof onGetCurrID == 'function') {
+                    var id = onGetCurrID();
+                    mapForm.appendChild(createInputHiddenPost("id", id));
+                }
+                if (typeof onGetFilterExpression == 'function') {
+                    var filterExpression = onGetFilterExpression();
+                    mapForm.appendChild(createInputHiddenPost("filterExpression", filterExpression));
+                }
+                if (isTextSearchMasterListExists)
+                    mapForm.appendChild(createInputHiddenPost("txtSearchView", txtSearchView.GetText()));
+                else
+                    mapForm.appendChild(createInputHiddenPost("txtSearchView", ""));
+
+                if (typeof onBeforeGoToEntryPage == 'function') {
+                    onBeforeGoToEntryPage(mapForm);
+                }
+
+                document.body.appendChild(mapForm);
+
+                mapForm.submit();
+
+                $(mapForm).remove();
+                //document.location = document.referrer;
+            }
+
+            function createInputHiddenPost(name, value) {
+                var mapInput = document.createElement("input");
+                mapInput.type = "hidden";
+                mapInput.name = name;
+                mapInput.value = value;
+                return mapInput;
+            }
+        </script>    
+        <div class="pageInformation" >
+<%--            <div class="breadcrumbs">
+                <%=GetBreadcrumbs()%>
+            </div>--%>
+            <%=GetMenuCaption() %>
+        </div>   
+        <div id="ctxMenuMPList" class="context-menu">
+            <ol>
+                <li id="ctxMenuAdd" runat="server"><a href="#"><%=GetLabel("Add")%></a> </li>
+                <li id="ctxMenuEdit" runat="server"><a href="#"><%=GetLabel("Edit")%></a> </li>
+                <li id="ctxMenuDelete" runat="server"><a href="#"><%=GetLabel("Delete")%></a> </li>
+                <asp:ContentPlaceHolder ID="plhCustomContextMenu" runat="server">                
+                </asp:ContentPlaceHolder>
+            </ol>
+        </div>
+        <asp:ContentPlaceHolder ID="plhList" runat="server">                
+        </asp:ContentPlaceHolder>
+        <input type="hidden" id="hdnFilterExpression" runat="server" value="" />
+        <div style="display:none;height:0px; overflow:hidden;">
+            <dxcp:ASPxCallbackPanel ID="cbpMPListProcess" runat="server" Width="100%" ClientInstanceName="cbpMPListProcess"
+                ShowLoadingPanel="false" OnCallback="cbpMPListProcess_Callback">
+                <ClientSideEvents BeginCallback="function(s,e){
+                    showLoadingPanel();
+                }" EndCallback="function(s,e){
+                    var result = s.cpResult.split('|');
+                    if(result[0] == 'delete'){
+                        if(result[1] == 'success'){
+                            if (typeof onAfterDeleteClickSuccess == 'function'){
+                                onAfterDeleteClickSuccess();
+                            }
+                            if (typeof onRefreshControl == 'function'){
+                                var filterExpression = '';
+                                if(isTextSearchMasterListExists)
+                                    filterExpression = txtSearchView.GenerateFilterExpression();
+                                onRefreshControl(filterExpression);
+                            }
+                        }
+                        else{
+                            if(result[2] != '')
+                                showToast('Delete Failed', 'Error Message : ' + result[2]);
+                            else
+                                showToast('Delete Failed', '');
+                        }
+                    }
+                    else if(result[0] == 'add'){
+                        if(result[1] == 'success'){
+                            setDocumentLocationToEntry(s.cpURL);
+                        }
+                        else{
+                            if(result[2] != '')
+                                showToast('Add Failed', 'Error Message : ' + result[2]);
+                            else
+                                showToast('Add Failed', '');
+                        }
+                    }
+                    else if(result[0] == 'edit'){
+                        if(result[1] == 'success'){
+                            setDocumentLocationToEntry(s.cpURL);
+                        }
+                        else{
+                            if(result[2] != '')
+                                showToast('Edit Failed', 'Error Message : ' + result[2]);
+                            else
+                                showToast('Edit Failed', '');
+                        }
+                    }
+                    else if(result[0] == 'customclick'){
+                        if(result[1] == 'success'){
+                            if (typeof onAfterCustomClickSuccess == 'function')
+                                onAfterCustomClickSuccess(s.cpType, s.cpRetval);
+                        }
+                        else{
+                            if(result[2] != '')
+                                showToast('Failed', 'Error Message : ' + result[2]);
+                            else
+                                showToast('Failed', '');
+                        }
+                    }
+                    hideLoadingPanel();
+                }" />
+            </dxcp:ASPxCallbackPanel>
+        </div>
+    </div>
+</asp:Content>

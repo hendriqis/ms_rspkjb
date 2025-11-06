@@ -1,0 +1,541 @@
+﻿<head>
+    <style type="text/css">
+        .style1
+        {
+            height: 26px;
+        }
+    </style>
+</head>
+<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+
+    var p1 = 0;
+    var p2 = 0;
+    var p3 = 0;
+    var p4 = 0;
+    var p5 = 0;
+    var p6 = 0;
+    var p7 = 0;
+    var p8 = 0;
+    var p9 = 0;
+
+    $(function () {
+        CalculateScore1();
+        CalculateScore2();
+        CalculateScore3();
+        CalculateScore4();
+        CalculateScore8();
+        CalculateScore9();
+
+        $("#chkIsHasMultipleDiagnosis1").click(function () {
+            CalculateScore8();
+        });
+
+        $("#chkIsHasMultipleDiagnosis2").click(function () {
+            CalculateScore8();
+        });
+
+        $("#chkIsUsingInfusion1").click(function () {
+            CalculateScore9();
+        });
+
+        $("#chkIsUsingInfusion2").click(function () {
+            CalculateScore9();
+        });
+
+        $("#chkIsHasFallingHistory1").click(function () {
+            CalculateScore1();
+        });
+
+        $("#chkIsHasFallingHistory2").click(function () {
+            CalculateScore1();
+        });
+
+        $("#chkIsHasFallingHistory3").click(function () {
+            CalculateScore1();
+        });
+
+        $("#chkIsHasFallingHistory4").click(function () {
+            CalculateScore1();
+        });
+
+        $("#chkIsMentalStatus1").click(function () {
+            CalculateScore2();
+        });
+
+        $("#chkIsMentalStatus2").click(function () {
+            CalculateScore2();
+        });
+
+        $("#chkIsMentalStatus3").click(function () {
+            CalculateScore2();
+        });
+
+        $("#chkIsMentalStatus4").click(function () {
+            CalculateScore2();
+        });
+
+        $("#chkIsMentalStatus5").click(function () {
+            CalculateScore2();
+        });
+
+        $("#chkIsMentalStatus6").click(function () {
+            CalculateScore2();
+        });
+
+        $("#chkIsVision1").click(function () {
+            CalculateScore3();
+        });
+
+        $("#chkIsVision2").click(function () {
+            CalculateScore3();
+        });
+
+        $("#chkIsVision3").click(function () {
+            CalculateScore3();
+        });
+
+        $("#chkIsVision4").click(function () {
+            CalculateScore3();
+        });
+
+        $("#chkIsVision5").click(function () {
+            CalculateScore3();
+        });
+
+        $("#chkIsVision6").click(function () {
+            CalculateScore3();
+        });
+
+        $("#chkToileting1").click(function () {
+            CalculateScore4();
+        });
+
+        $("#chkToileting2").click(function () {
+            CalculateScore4();
+        });
+
+
+        $("#ddlTransferScore").change(function () {
+            $("#txtParamScore5").val($(this).val());
+            p5 = parseInt($(this).val());
+            CalculateMobilityTransferScore();
+        });
+
+        $("#ddlMobility").change(function () {
+            $("#txtParamScore6").val($(this).val());
+            p6 = parseInt($(this).val());
+            CalculateMobilityTransferScore();
+        });
+
+        $("#ddlTransferScore").change();
+        $("#ddlMobility").change();
+    });
+
+    function CalculateScore1() {
+        if ($("#chkIsHasFallingHistory1").is(':checked') || $("#chkIsHasFallingHistory3").is(':checked')) {
+            p1 = parseInt("6");
+        }
+        else {
+            p1 = parseInt("0");
+        }
+
+        $("#txtParamScore1").val(p1);
+        CalculateTotalScore();
+    }
+
+    function CalculateScore2() {
+        if ($("#chkIsMentalStatus1").is(':checked') || $("#chkIsMentalStatus3").is(':checked') || $("#chkIsMentalStatus5").is(':checked'))
+            p2 = parseInt("14");
+        else
+            p2 = parseInt("0");
+
+        $("#txtParamScore2").val(p2);
+        CalculateTotalScore();
+    }
+
+    function CalculateScore3() {
+        if ($("#chkIsVision1").is(':checked') || $("#chkIsVision3").is(':checked') || $("#chkIsVision5").is(':checked'))
+            p3 = parseInt("1");
+        else
+            p3 = parseInt("0");
+
+        $("#txtParamScore3").val(p3);
+        CalculateTotalScore();
+    }
+
+    function CalculateScore4() {
+        if ($("#chkToileting1").is(':checked'))
+            p4 = parseInt("2");
+        else
+            p4 = parseInt("0");
+
+        $("#txtParamScore4").val(p4);
+        CalculateTotalScore();
+    }
+
+    function CalculateScore8() {
+        if ($("#chkIsHasMultipleDiagnosis1").is(':checked'))
+            p8 = parseInt("4");
+        else
+            p8 = parseInt("0");
+
+        $("#txtParamScore8").val(p8);
+        CalculateTotalScore();
+    }
+
+    function CalculateScore9() {
+        if ($("#chkIsUsingInfusion1").is(':checked'))
+            p9 = parseInt("4");
+        else
+            p9 = parseInt("0");
+
+        $("#txtParamScore9").val(p9);
+        CalculateTotalScore();
+    }
+
+    function CalculateMobilityTransferScore() {
+        var value = p5 + p6;
+
+        if (value >= 0 && value <= 3) {
+            p7 = 0;
+        }
+        else {
+            p7 = 7;
+        }
+        $("#txtParamScore7").val(p7);
+        CalculateTotalScore();
+    }
+
+    function CalculateTotalScore() {
+        var total = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9;
+
+        SetTotalScore(total);
+    }
+
+</script>
+<div style="height: 400px;overflow-y: auto;">
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+            <colgroup>
+                <col width="350px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="150px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold; text-decoration:underline">Ontario Modified Stratify - Sidney Scoring</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" class="style1">
+                    <label style="font-weight:bold;">Faktor Resiko</label>
+                </td>
+                <td class="style1">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Diagnosa Sekunder (>= 2 Diagnosa)?</label>
+                </td>
+                <td>
+                    <input type="radio" name="chkIsHasMultipleDiagnosis" value="1" id="chkIsHasMultipleDiagnosis1" class="chkForm" controlID = "chkIsHasMultipleDiagnosis1" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="chkIsHasMultipleDiagnosis" value="0" id="chkIsHasMultipleDiagnosis2" class="chkForm" controlID = "chkIsHasMultipleDiagnosis2"/>
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore8" style="width:50px" class="txtForm" controlID = "txtParamScore8" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Terpasang infus</label>
+                </td>
+                <td>
+                    <input type="radio" name="chkIsUsingInfusion" value="1" id="chkIsUsingInfusion1" class="chkForm" controlID = "chkIsUsingInfusion1" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="chkIsUsingInfusion" value="0" id="chkIsUsingInfusion2" class="chkForm" controlID = "chkIsUsingInfusion2"/>
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore9" style="width:50px" class="txtForm" controlID = "txtParamScore9" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <label style="font-weight:bold;">Riwayat Jatuh</label>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px" class="txtForm" controlID = "txtParamScore1" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Apakah pasien datang ke rumah sakit karena jatuh?</label>
+                </td>
+                <td>
+                    <input type="radio" name="group01.01" value="1" id="chkIsHasFallingHistory1" class="chkForm" controlID = "chkIsHasFallingHistory1" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="group01.01" value="0" id="chkIsHasFallingHistory2" class="chkForm" controlID = "chkIsHasFallingHistory2"/>
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Jika tidak, apakah pasien mengalami jatuh dalam 2 bulan terakhir ini?</label>
+                </td>
+                <td>
+                    <input type="radio" name="group02.01" value="1" id="chkIsHasFallingHistory3" class="chkForm" controlID = "chkIsHasFallingHistory3"/>
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="group02.01" value="0" id="chkIsHasFallingHistory4" class="chkForm" controlID = "chkIsHasFallingHistory4"/>
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <label style="font-weight:bold;">Status Mental</label>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px" class="txtForm" controlID = "txtParamScore2" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Apakah pasien delirium? (Tidak dapat membuat keputusan, pola pikir tidak terorganisir, gangguan daya ingat)</label>
+                </td>
+                <td>
+                    <input type="radio" name="group09.01" value="1" id="chkIsMentalStatus1" class="chkForm" controlID = "chkIsMentalStatus1"/>
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="group09.01" value="0" id="chkIsMentalStatus2" class="chkForm" controlID = "chkIsMentalStatus2"/>
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Apakah pasien disorientasi? (salah menyebutkan waktu, tempat atau orang)</label>
+                </td>
+                <td>
+                    <input type="radio" name="group03.01" value="1" id="chkIsMentalStatus3" class="chkForm" controlID = "chkIsMentalStatus3" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="group03.01" value="0" id="chkIsMentalStatus4" class="chkForm" controlID = "chkIsMentalStatus4" />
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Apakah pasien mengalami agitasi? (ketakutan, gelisah, dan cemas)</label>
+                </td>
+                <td>
+                    <input type="radio" name="group04.01" value="1" id="chkIsMentalStatus5" class="chkForm" controlID = "chkIsMentalStatus5" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="group04.01" value="0" id="chkIsMentalStatus6" class="chkForm" controlID = "chkIsMentalStatus6" />
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <label style="font-weight:bold;">
+                        Penglihatan</label>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px" class="txtForm" controlID = "txtParamScore3" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Apakah pasien memakai kacamata?</label>
+                </td>
+                <td>
+                    <input type="radio" name="group05.01" value="1" id="chkIsVision1" class="chkForm" controlID = "chkIsVision1" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="group05.01" value="0" id="chkIsVision2" class="chkForm" controlID = "chkIsVision2" />
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Apakah pasien mengeluh adanya penglihatan buram? </label>
+                </td>
+                <td>
+                    <input type="radio" name="group06.01" value="1" id="chkIsVision3" class="chkForm" controlID = "chkIsVision3" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="group06.01" value="0" id="chkIsVision4" class="chkForm" controlID = "chkIsVision4" />
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Apakah pasien mempunya glaukoma/katarak/degenerasi makula? </label>
+                </td>
+                <td>
+                    <input type="radio" name="group07.01" value="1" id="chkIsVision5" class="chkForm" controlID = "chkIsVision5" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="group07.01" value="0" id="chkIsVision6" class="chkForm" controlID = "chkIsVision6" />
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <label style="font-weight:bold;">
+                        Kebiasaan berkemih</label>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px" class="txtForm" controlID = "txtParamScore4"  />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Apakah terdapat perubahan perilaku berkemih? (frekuensi, urgensi, inkontinensia, nokturia)</label>
+                </td>
+                <td>
+                    <input type="radio" name="group08.01" value="1" id="chkToileting1" class="chkForm" controlID = "chkToileting1" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="group08.01" value="0" id="chkToileting2" class="chkForm" controlID = "chkToileting2"/>
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label style="font-weight:bold;">
+                        Transfer (dari tempat tidur ke kursi dan kembali lagi ke tempat tidur)</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlTransferScore" style="width:100%" class="ddlForm" controlID = "ddTransferScore">
+                        <option value="0" selected>Mandiri (boleh memakai alat bantu jalan)</option>
+                        <option value="1">Memerlukan sedikit bantuan (1 orang) / dalam pengawasan</option>
+                        <option value="2">Memerlukan bantuan yang nyata (2 orang)</option>
+                        <option value="3">Tidak dapat duduk dengan seimbang, perlu bantuan total</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px" class="txtForm" controlID = "txtParamScore5" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label style="font-weight:bold;">
+                        Mobilitas</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlMobility" style="width:100%" class="ddlForm" controlID = "ddlMobility">
+                        <option value="0" selected>Mandiri (boleh menggunakan alat bantu jalan)</option>
+                        <option value="1">Berjalan dengan bantuan 1 orang (verbal / fisik)</option>
+                        <option value="2">Menggunakan kursi roda</option>
+                        <option value="3">Imobilisasi</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore6" style="width:50px" class="txtForm" controlID = "txtParamScore6" />
+                </td>
+            </tr>
+            <tr>
+                <td  colspan="4">
+                    <label style="font-weight:bold;">
+                        Transfer + Mobilitas</label>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore7" style="width:50px" class="txtForm" controlID = "txtParamScore7" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+

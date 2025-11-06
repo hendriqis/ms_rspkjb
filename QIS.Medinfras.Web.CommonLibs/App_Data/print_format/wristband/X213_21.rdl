@@ -1,0 +1,11 @@
+﻿^XA
+^POI
+^FWR
+^LH0,370
+^FO100,220 
+^FO200,240^A0,38,38^FD{PatientName} ({cfWristbandGender})^FS
+^FO160,240^A0,33,33^FDMRN : {MedicalNo}    {RegistrationNo}^FS
+^FO120,240^A0,33,33^FDDOB : {DateOfBirthInString}^FS
+^FO100,600^BY3,2.0
+^A0N,40,30^BAR,50,N,N,N^FD{cfAlternateRegistrationNo}^FS
+^XZ

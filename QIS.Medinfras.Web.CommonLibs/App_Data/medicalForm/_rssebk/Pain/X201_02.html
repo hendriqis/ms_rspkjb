@@ -1,0 +1,97 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+    $(function () {
+        $('input:radio').click(function () {
+            CalculateTotalScore($("input:radio']:checked").val());
+        });
+
+        CalculateTotalScore($("input:radio']:checked").val());
+    });
+
+    function CalculateTotalScore(param) {
+        var score = param;
+        var value = parseInt(score);
+        var scoreType = 'Tidak ada nyeri';
+
+        if (value >= 1 && value <= 3) {
+            scoreType = "Nyeri Ringan";
+        }
+        else if (value >= 4 && value <= 6) {
+            scoreType = "Nyeri Sedang";
+        }
+        else if (value >= 7 && value <= 10) {
+            scoreType = "Nyeri Berat";
+        }
+        else {
+            scoreType = "Tidak ada Nyeri";
+        }
+
+        var result = score + '|' + scoreType;
+        SetTotalScore(result);
+    }
+</script>
+<div>
+  <center>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <colgroup>
+                <col width="50px" />
+                <col width="50px" />
+                <col width="50px" />
+                <col width="50px" />
+                <col width="50px" />
+                <col width="50px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="7" style="width:100%">
+                    <label style="font-weight:bold; text-decoration:underline; text-align:center; width:100%">Wong-Baker FACES Pain Rating Scale</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="text-align:center;font-size:50px">&#128512;</div>
+                </td>
+                <td style="text-align:center">
+                    <div style="font-size:50px">&#128578;</div>
+                </td>
+                <td style="text-align:center">
+                    <div style="font-size:50px">&#128528;</div>
+                </td>
+                <td style="text-align:center">
+                    <div style="font-size:50px">&#128543;</div>
+                </td>
+                <td style="text-align:center">
+                    <div style="font-size:50px">&#128547;</div>
+                </td>
+                <td style="text-align:center">
+                    <div style="font-size:50px">&#128557;</div>
+                </td>                
+            </tr>
+            <tr>
+                <td style="font-weight:bold; text-align:center;border-left-style:groove;border-right-style:groove">0</td>
+                <td style="font-weight:bold; text-align:center;border-right-style:groove">2</td>
+                <td style="font-weight:bold; text-align:center;border-right-style:groove">4</td>
+                <td style="font-weight:bold; text-align:center;border-right-style:groove">6</td>
+                <td style="font-weight:bold; text-align:center;border-right-style:groove">8</td>
+                <td style="font-weight:bold; text-align:center;border-right-style:groove">10</td>
+                <td />
+            </tr>
+            <tr>
+                <td style="text-align:center;border-left-style:groove;border-right-style:groove"><input type="radio" class="optForm" name="grpNumericScalePain" controlID="grpNumericScalePain0" value="0" checked/></td>
+                <td style="text-align:center;border-right-style:groove"><input type="radio" class="optForm" name="grpNumericScalePain" controlID="grpNumericScalePain1" value="2" /></td>
+                <td style="text-align:center;border-right-style:groove"><input type="radio" class="optForm" name="grpNumericScalePain" controlID="grpNumericScalePain2" value="4" /></td>
+                <td style="text-align:center;border-right-style:groove"><input type="radio" class="optForm" name="grpNumericScalePain" controlID="grpNumericScalePain3" value="6" /></td>
+                <td style="text-align:center;border-right-style:groove"><input type="radio" class="optForm" name="grpNumericScalePain" controlID="grpNumericScalePain4" value="8" /></td>
+                <td style="text-align:center;border-right-style:groove"><input type="radio" class="optForm" name="grpNumericScalePain" controlID="grpNumericScalePain5" value="10" /></td>
+                <td />
+            </tr>
+        </table>
+    </div>
+  </center>
+</div>
+

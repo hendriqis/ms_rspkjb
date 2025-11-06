@@ -1,0 +1,84 @@
+<head>
+    <style type="text/css">
+        .txtForm:disabled {
+          border-color:#dfe6e9;
+          background-color:#dfe6e9;
+        }          
+    </style>
+</head>
+<script language="javascript" type="text/javascript" id="eForm_accessoriesList">
+    $(function () {
+        $("#chkFoleyCath").change(function () {
+            if ($(this).is(":checked")) {
+                $("#ddlAccessoriesFoleyCath").prop("disabled", false);
+            }
+            else {
+                $("#ddlAccessoriesFoleyCath").prop("disabled", true);
+                $("#ddlAccessoriesFoleyCath").val("");
+            }
+        });
+
+        $("#chkNasogastric").change(function () {
+            if ($(this).is(":checked")) {
+                $("#ddlAccessoriesNasogatric").prop("disabled", false);
+            }
+            else {
+                $("#ddlAccessoriesNasogatric").prop("disabled", true);
+                $("#ddlAccessoriesNasogatric").val("");
+            }
+        });
+
+        $("#chkFoleyCath").change();
+        $("#chkNasogastric").change();
+    });
+</script>
+<div>
+    <div id="group01" class="w3-container w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="0" style="width:100%;" class="w3-table w3-bordered w3-card-4">
+            <colgroup>
+                <col width="250px" />
+                <col />
+            </colgroup>
+            <tr><td  colspan="2"> <input type="checkbox" class="chkForm" controlID="chkFluid_Warmer"/> Fluid Warmer</td></tr>
+            <tr><td  colspan="2"> <input type="checkbox" class="chkForm" controlID="chkBlood_Warmer"/> Blood Warmer</td></tr>
+            <tr><td  colspan="2"> <input type="checkbox" class="chkForm" controlID="chkInfusion_Pump"/> Infusion Pump</td></tr>
+            <tr><td  colspan="2"> <input type="checkbox" class="chkForm" controlID="chkSyringe_Pump"/> Syringe Pump</td></tr>
+            <tr><td  colspan="2"> <input type="checkbox" class="chkForm" controlID="chkAir_Blanket"/> Air Blanket</td></tr>
+            <tr><td  colspan="2"> <input type="checkbox" class="chkForm" controlID="chkWater_Blanket"/> Water Blanket</td></tr>
+            <tr>
+                <td> <input type="checkbox" id="chkFoleyCath" class="chkForm" controlID="chkFoleyCath"/> Foley Cath No.</td>
+                <td style="padding-left:20px;"> 
+                    <select id="ddlAccessoriesFoleyCath" class="ddlForm" controlID="ddlAccessoriesFoleyCath" style="width:80px">
+                        <option value="" selected></option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                        <option value="22">22</option>
+                        <option value="24">24</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" id="chkNasogastric" class="chkForm" controlID="chkNasogastric"/> Nasogastric Tube No. </td>
+                <td style="padding-left:20px;">
+                    <select id="ddlAccessoriesNasogatric" class="ddlForm" controlID="ddlAccessoriesNasogatric" style="width:80px">
+                        <option value="" selected></option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                        <option value="22">22</option>
+                        <option value="24">24</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,149 @@
+Alasan Dihentikan;Discontinue Reason
+Alasan lain-lain;Other Reason
+Asal Pasien;Department
+Barcode;Barcode
+AddData;Add Data
+AdditionalInformation;Additional Information
+Address;Address
+Age;Age
+ALAMAT DAN KONTAK PASIEN;ADDRESS AND PHONE
+AllClinic;All Clinic
+Allergy;Allergy
+AppointmentDate;Appointment Date
+AppointmentNo;Appointment No.
+BirthPlace;Birth Place
+BlackList;Black List
+BloodType;Blood Type
+Cancel;Cancel
+CardFee;Card Fee
+Catatan Farmasi;Pharmacist Notes;
+ChangeAppointmentSchedule;Change Appointment Schedule
+ChangePatientBlackListStatus;Change Patient Black List Status
+ChangeToDate;Change To Date
+ClosePatientRegistrationStatusProcess;Close Patient Registration Status Proses
+City;City
+Close;Close
+Company;Company
+ContactInformation;Contact Information
+CoverageLimit;Coverage Limit
+Date;Date
+Day;Day
+Dokter;Physician
+hari;day(s)
+Delete;Delete
+Kode Instalasi; Department Code
+DOB;Date Of Birth
+Edit;Edit
+Education;Education
+Email;Email
+EmergencyContact;Emergency Contact
+Ethnic;Ethnic
+ExpiredDate;Expired Date
+Farmasi;Dispensary
+FamilyName;Family Name
+Father/HusbandName;Father / Husband Name
+Female;Female
+Gender;Gender
+Halaman Ini Akan;This page will be
+Jam;Hour
+IdentityCardNo;Identity Card No
+INFORMASI KUNJUNGAN;VISIT INFORMATION
+Instruksi Perawat/Dokter;Physician/Nurse Note
+Jam;Time
+Job;Job
+JobDescription;JobDescription
+Lokasi;Location
+Male;Male
+MaritalStatus;Marital Status
+Menit;minutes
+menit;minutes
+MobilePhone;Mobile Phone
+Month;Month
+Mother/WifeName;Mother / Wife Name
+MRN;MRN
+Nama Barang;Item Name
+Nationality;Nationality
+New;New
+Next;Next
+Nomor Referensi;Reference No.
+Nomor Transaksi;Transaction No.
+Notes;Notes
+Note Text;Catatan
+Office;Office
+OfficeAddress;Office Address
+OfficeTelephone;Office Telephone
+Open;Open
+OpenClosePatientRegistrationStatus;Open / Close Patient Registration Status
+OtherInformation;Other Information
+OutpatientRegistration;Outpatient Registration
+PacketNo;Packet No
+ParticipantNo;Participant No
+PassportNo;Passport No
+PASIEN;PATIENT
+PatientAddressData;Patient Address
+PatientAppointment;Patient Appointment
+PatientBillSummary;Patient Bill Summary
+PatientCategory;Patient Category
+PatientContactData;Patient Contact
+PatientData;Patient Data
+PatientFamilyData;Patient Family Data
+PatientIdentity;Patient Identity
+PatientInformation;Patient Information
+PatientJobData;Patient Job Data
+PatientManagement;Patient Management
+PatientName;Patient Name
+PatientPayerData;Patient Payer Data
+PatientStatus;Patient Status
+PatientVisit;Patient Visit
+Payer;Payer
+PayerData;Payer Data
+PEMBAYAR;PAYER
+Physician;Physician
+Plafon;Plafon
+Polyclinic;Polyclinic
+PolyclinicTransaction;Polyclinic Transaction
+PreferredName;Preferred Name
+Pregnant;Pregnant
+Prev;Prev
+Province;Province
+QueueNo;Queue No
+Reason;Reason
+Referral;Referral
+ReferralDescription;Referral Description
+Registrar;Registrar
+RegistrationData;Registration Data
+RegistrationDate;Registration Date
+RegistrationDateTime;Registration Date / Time
+RegistrationNo;Registration No.
+RegistrationTime;Registration Time
+Relation;Relation
+Religion;Religion
+RT;RT
+RW;RW
+Salutation;Salutation
+SearchDialog;Search Dialog
+Save;Save
+SelectPatient;Select Patient
+Setiap;every
+setiap;every
+Shift;Shift
+Specialty;Specialty
+Tanggal;Date
+Tanggal Dimulai; Start Date
+Tanggal Dihentikan; Discontinue Date
+Telephone;Telephone
+TelephoneNo;Telephone No
+ThisPageWill;This Page Will
+Tidak ada data kunjungan pasien;No visit information available
+Title;Title
+TransactionNo;Transaction No
+Unit Pelayanan;Service Unit
+Service Unit;Service Unit
+VisitData;Visit Information
+VisitInformation;Visit Information
+VisitNotes;Visit Notes
+VisitType;Visit Type
+Void;Void
+Welcome;Welcome
+Year;Year
+ZipCode;Zip Code

@@ -1,0 +1,231 @@
+﻿<head>  
+</head>
+<script language="javascript" type="text/javascript" id="dxss_strongkids">
+    $(function () {
+        $("#chkPostNutritionInstruction1").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtInstructionNutritionForm5").prop("disabled", false);
+            }
+            else {
+                $("#txtInstructionNutritionForm5").prop("disabled", true);
+                $("#txtInstructionNutritionForm5").val("");
+            }
+        });
+
+        $("#chkPostNutritionInstruction2").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtInstructionNutritionForm6").prop("disabled", false);
+                $("#txtInstructionNutritionForm7").prop("disabled", false);
+                $("#txtInstructionNutritionForm8").prop("disabled", false);
+            }
+            else {
+                $("#txtInstructionNutritionForm6").prop("disabled", true);
+                $("#txtInstructionNutritionForm7").prop("disabled", true);
+                $("#txtInstructionNutritionForm8").prop("disabled", true);
+                $("#txtInstructionNutritionForm6").val("");
+                $("#txtInstructionNutritionForm7").val("");
+                $("#txtInstructionNutritionForm8").val("");
+            }
+        });
+
+        $("#chkPostNutritionInstruction3").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtInstructionNutritionForm9").prop("disabled", false);
+                $("#txtInstructionNutritionForm10").prop("disabled", false);
+                $("#txtInstructionNutritionForm11").prop("disabled", false);
+            }
+            else {
+                $("#txtInstructionNutritionForm9").prop("disabled", true);
+                $("#txtInstructionNutritionForm10").prop("disabled", true);
+                $("#txtInstructionNutritionForm11").prop("disabled", true);
+                $("#txtInstructionNutritionForm9").val("");
+                $("#txtInstructionNutritionForm10").val("");
+                $("#txtInstructionNutritionForm11").val("");
+            }
+        });
+
+        $("#chkPostNutritionInstruction4").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtInstructionNutritionForm12").prop("disabled", false);
+            }
+            else {
+                $("#txtInstructionNutritionForm12").prop("disabled", true);
+                $("#txtInstructionNutritionForm12").val("");
+            }
+        });
+
+        $("#chkPostNutritionInstruction1").change();
+        $("#chkPostNutritionInstruction2").change();
+        $("#chkPostNutritionInstruction3").change();
+        $("#chkPostNutritionInstruction4").change();
+    });
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table border="1" style="border-style: solid;width:100%">
+                <colgroup>
+                    <col style="width:120px" />
+                    <col />
+                    <col style="width:100px" />
+                </colgroup>
+                <tr>
+                    <td style="font-weight:bold;vertical-align:middle; text-align:center" rowspan="3">
+                        Nutrisi Parenteral
+                    </td>
+                    <td style="font-weight:bold">Jenis</td>
+                    <td style="text-align: center; font-weight:bold">Jumlah (mL/24jam)</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top;">
+                        <input type="text" class="txtForm" id="txtInstructionNutritionForm1" controlID="txtInstructionNutritionForm1" style="width:99%; text-align:left"/>
+                    </td>
+                    <td>
+                        <input type="text" class="txtForm" id="txtInstructionNutritionForm2" controlID="txtInstructionNutritionForm2" style="width:100px; text-align:left"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top;">
+                        <input type="text" class="txtForm" id="txtInstructionNutritionForm3" controlID="txtInstructionNutritionForm3" style="width:99%; text-align:left"/>
+                    </td>
+                    <td>
+                        <input type="text" class="txtForm" id="txtInstructionNutritionForm4" controlID="txtInstructionNutritionForm4" style="width:100px; text-align:left"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <table border="0" cellpadding="1" cellspacing="0">
+                            <colgroup>
+                                <col width="200px" />
+                                <col />
+                            </colgroup>
+                            <tr>
+                                <td> <input type="checkbox" class="chkForm" id="chkPostNutritionInstruction1" controlID="chkPostNutritionInstruction1"/> Puasa selama</td>
+                                <td> 
+                                    <table border="0" cellpadding="1px" cellspacing="0px">
+                                        <tr>
+                                            <td style="padding-left:3px"><input type="text" class="txtForm" id="txtInstructionNutritionForm5" controlID="txtInstructionNutritionForm5" style="width:50px; text-align:right"/></td>
+                                            <td style="padding-left:3px"> jam/hari</td>
+                                            <td style="padding-left:3px"></td>
+                                            <td style="padding-left:3px"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <table border="0" cellpadding="1" cellspacing="0">
+                            <colgroup>
+                                <col width="200px" />
+                                <col />
+                            </colgroup>
+                            <tr>
+                                <td> <input type="checkbox" class="chkForm" id="chkPostNutritionInstruction2" controlID="chkPostNutritionInstruction2"/> Mulai minum</td>
+                                <td> 
+                                    <table border="0" cellpadding="1px" cellspacing="0px">
+                                        <tr>
+                                            <td style="padding-left:3px"><input type="text" class="txtForm" id="txtInstructionNutritionForm6" controlID="txtInstructionNutritionForm6" style="width:50px; text-align:right"/></td>
+                                            <td style="padding-left:3px"> Jam</td>
+                                            <td style="padding-left:3px"><input type="text" class="txtForm" id="txtInstructionNutritionForm7" controlID="txtInstructionNutritionForm7" style="width:50px; text-align:right"/></td>
+                                            <td style="padding-left:3px"> Tanggal</td>
+                                            <td style="padding-left:3px"><input type="text" class="txtForm" id="txtInstructionNutritionForm8" controlID="txtInstructionNutritionForm8" style="width:120px; text-align:center"/></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <table border="0" cellpadding="1" cellspacing="0">
+                            <colgroup>
+                                <col width="200px" />
+                                <col />
+                            </colgroup>
+                            <tr>
+                                <td> <input type="checkbox" class="chkForm" id="chkPostNutritionInstruction3" controlID="chkPostNutritionInstruction3"/> Mulai makan</td>
+                                <td> 
+                                    <table border="0" cellpadding="1px" cellspacing="0px">
+                                        <tr>
+                                            <td style="padding-left:3px"><input type="text" class="txtForm" id="txtInstructionNutritionForm9" controlID="txtInstructionNutritionForm9" style="width:50px; text-align:right"/></td>
+                                            <td style="padding-left:3px"> Jam</td>
+                                            <td style="padding-left:3px"><input type="text" class="txtForm" id="txtInstructionNutritionForm10" controlID="txtInstructionNutritionForm10" style="width:50px; text-align:right"/></td>
+                                            <td style="padding-left:3px"> Tanggal</td>
+                                            <td style="padding-left:3px"><input type="text" class="txtForm" id="txtInstructionNutritionForm11" controlID="txtInstructionNutritionForm11" style="width:120px; text-align:center"/></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <table border="0" cellpadding="1" cellspacing="0">
+                            <colgroup>
+                                <col width="300px" />
+                                <col />
+                            </colgroup>
+                            <tr>
+                                <td> <input type="checkbox" class="chkForm" id="chkPostNutritionInstruction4" controlID="chkPostNutritionInstruction4"/> Bila timbul mual/muntah, berikan</td>
+                                <td style="padding-left:3px"><input type="text" class="txtForm" id="txtInstructionNutritionForm12" controlID="txtInstructionNutritionForm12" style="width:230px; text-align:center"/></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight:bold;vertical-align:middle; text-align:center" rowspan="3">
+                        Terapi Cairan Rumatan
+                    </td>
+                    <td style="font-weight:bold">Jenis</td>
+                    <td style="text-align: center; font-weight:bold">Jumlah (mL/24jam)</td>
+                </tr>
+
+                <tr>
+                    <td style="vertical-align:top;">
+                        <input type="text" class="txtForm" id="txtInstructionNutritionForm13" controlID="txtInstructionNutritionForm13" style="width:99%; text-align:left"/>
+                    </td>
+                    <td>
+                        <input type="text" class="txtForm" id="txtInstructionNutritionForm14" controlID="txtInstructionNutritionForm14" style="width:100px; text-align:left"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top;">
+                        <input type="text" class="txtForm" id="txtInstructionNutritionForm15" controlID="txtInstructionNutritionForm15" style="width:99%; text-align:left"/>
+                    </td>
+                    <td>
+                        <input type="text" class="txtForm" id="txtInstructionNutritionForm16" controlID="txtInstructionNutritionForm16" style="width:100px; text-align:left"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="font-weight:bold;vertical-align:middle; text-align:center" rowspan="3">
+                        Transfusi
+                    </td>
+                    <td style="font-weight:bold">Jenis</td>
+                    <td style="text-align: center; font-weight:bold">Jumlah (mL/24jam)</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top;">
+                        <input type="text" class="txtForm" id="txtInstructionNutritionForm17" controlID="txtInstructionNutritionForm17" style="width:99%; text-align:left"/>
+                    </td>
+                    <td>
+                        <input type="text" class="txtForm" id="txtInstructionNutritionForm18" controlID="txtInstructionNutritionForm18" style="width:100px; text-align:left"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top;">
+                        <input type="text" class="txtForm" id="txtInstructionNutritionForm19" controlID="txtInstructionNutritionForm19" style="width:99%; text-align:left"/>
+                    </td>
+                    <td>
+                        <input type="text" class="txtForm" id="txtInstructionNutritionForm20" controlID="txtInstructionNutritionForm20" style="width:100px; text-align:left"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

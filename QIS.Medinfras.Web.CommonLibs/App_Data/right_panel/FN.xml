@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- #Region FN030100 -->
+  <page menucode="FN030100">
+    <tasks>
+      <task code="changeBusinessPartners" id="btnChangeBusinessPartners" title="Perubahan Business Partners" description="Perubahan Business Partners" url="~/Program/Treasury/TreasuryTransaction/TreasuryTransactionChangeBusinessPartnerCtl.ascx" width="900" height="500" />
+    </tasks>
+    <prints>
+      <print title="Bukti Transaksi Treasury (DRAFT)" reportcode="FN-00055" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi Treasury" reportcode="FN-00054" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN030200 -->
+  <page menucode="FN030200">
+    <prints>
+      <print title="Bukti Transaksi Treasury (DRAFT)" reportcode="FN-00055" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi Treasury" reportcode="FN-00054" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN040112 -->
+  <page menucode="FN040112">
+    <tasks>
+      <task code="ARNote" id="btnARNote" title="Catatan Piutang" description="Catatan Piutang" url="~/Program/ARProcess/ARNoteCtl.ascx" width="900" height="500" />
+
+      <task code="ARInvoicePayerDocDate" id="btnUpdateDocDate" title="Ubah Tanggal Kirim Invoice" description="Ubah Tanggal Kirim Invoice" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARInvoicePayerUpdateDocDate.ascx" width="400" height="250" />
+      <task code="ARInvoicePayerDocRecieveDate" id="btnUpdateARDocRecieveDate" title="Ubah Tanggal Terima Dokumen" description="Ubah Tanggal Terima Dokumen" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARInvoicePayerUpdateDocumentRecieveDate.ascx" width="400" height="250" />
+      <task code="ARInvoicePayerDocRecieveByName" id="btnUpdateARDocRecieveByName" title="Ubah Terima Dokumen Oleh" description="Ubah Terima Dokumen Oleh" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARInvoicePayerUpdateDocumentRecieveByName.ascx" width="400" height="250" />
+
+    </tasks>
+    <informations>
+      <information code="informasiInstansi" id="btnInformasiInstansi" title="Informasi Instansi" description="Insformasi Instansi" url="~/Program/Information/InformasiKontrakInstansiCtl.ascx" width="900" height="500" />
+      <information code="infoReceivingInvoice" title="Informasi Penerimaan Piutang" description="Informasi Penerimaan Piutang" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARInvoiceReceivingInformationCtl.ascx" id="btninfoReceivingInvoice" width="1100" height="550" />
+      <information code="infoARReceipt" title="Informasi Kwitansi Kolektif Piutang" description="Informasi Kwitansi Kolektif Piutang" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARReceiptPerInvoiceInfoCtl.ascx" id="btninfoARReceipt" width="1100" height="250" />
+    </informations>
+    <prints>
+      <print title="Invoice Payment Slip - Rekap" reportcode="FN-00061" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Payment Slip - Detail" reportcode="FN-00062" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Payment Slip - Rekap (DRAFT)" reportcode="FN-00121" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Payment Slip - Detail (DRAFT)" reportcode="FN-00122" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Surat Penagihan Piutang" reportcode="FN-00160" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Surat Penagihan Piutang (tanpa detail)" reportcode="FN-00161" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Kwitansi Penagihan Piutang (Rekap)" reportcode="FN-00158" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Kwitansi Penagihan Piutang (Detail)" reportcode="FN-00058" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Tanda Terima Berkas Penagihan" reportcode="FN-00065" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Rekap Tagihan Farmasi" reportcode="FN-00086" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Rekap Tagihan Farmasi - Detail" reportcode="FN-00170" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Rekap Tagihan Non Farmasi" reportcode="FN-00087" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Rekap Tagihan Laboratorium" reportcode="FN-00169" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN040113 -->
+  <page menucode="FN040113">
+    <informations>
+      <information code="infoReceivingInvoicePerInvoice" title="Informasi Alokasi Penerimaan" description="Informasi Alokasi Penerimaan" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARInvoiceReceivingInformationPerReceiveCtl.ascx" id="btninfoReceivingInvoicePerReceive" width="1100" height="550" />
+      <information code="infoReceivingOutstanding" title="Informasi Outstanding Penerimaan" description="Informasi Outstanding Penerimaan" url="~/Program/ARInvoicePayer/ARInvoicePayerReceive/ARInvoiceOutstandingReceivingInformationCtl.ascx" id="btninfoReceivingOutstanding" width="1100" height="550" />
+    </informations>
+    <prints>
+      <print title="Corporate Payment Slip" reportcode="FN-00009" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Kwitansi Penerimaan Piutang" reportcode="FN-00179" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+    </prints>
+    <informations>
+      <information code="infoReceivingOutstanding" title="Informasi Outstanding Penerimaan" description="Informasi Outstanding Penerimaan" url="~/Program/ARInvoicePayer/ARInvoicePayerReceive/ARInvoiceOutstandingReceivingInformationCtl.ascx" id="btninfoReceivingOutstanding" width="1100" height="550" />
+    </informations>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN040114 -->
+  <page menucode="FN040114">
+    <prints>
+      <print title="Alokasi Penerimaan Piutang" reportcode="FN-00112"/>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN040115 -->
+  <page menucode="FN040115">
+    <tasks>
+      <task code="ARNote" id="btnARNote" title="Catatan Piutang" description="Catatan Piutang" url="~/Program/ARProcess/ARNoteCtl.ascx" width="900" height="500" />
+
+    </tasks>
+    <informations>
+      <information code="infoReceivingInvoice" title="Informasi Penerimaan Piutang" description="Informasi Penerimaan Piutang" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARInvoiceReceivingInformationCtl.ascx" id="btninfoReceivingInvoice" width="1100" height="550" />
+      <information code="infoARReceipt" title="Informasi Kwitansi Kolektif Piutang" description="Informasi Kwitansi Kolektif Piutang" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARReceiptPerInvoiceInfoCtl.ascx" id="btninfoARReceipt" width="1100" height="250" />
+    </informations>
+    <prints>
+      <print title="Invoice Payment Slip - Rekap" reportcode="FN-00061" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Payment Slip - Detail" reportcode="FN-00062" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Payment Slip - Detail (DRAFT)" reportcode="FN-00122" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Payment Slip - Detail (DRAFT)" reportcode="FN-00122" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Surat Penagihan Piutang" reportcode="FN-00160" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Surat Penagihan Piutang (tanpa detail)" reportcode="FN-00161" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Kwitansi Penagihan Piutang (Rekap)" reportcode="FN-00158" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Kwitansi Penagihan Piutang (Detail)" reportcode="FN-00058" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Tanda Terima Berkas Penagihan" reportcode="FN-00065" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Amplop Penagihan Piutang Instansi" reportcode="FN-00079" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Rekap Tagihan Farmasi" reportcode="FN-00086" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Rekap Tagihan Farmasi - Detail" reportcode="FN-00170" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Rekap Tagihan Non Farmasi" reportcode="FN-00087" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Rekap Tagihan Laboratorium" reportcode="FN-00169" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN040116 -->
+  <page menucode="FN040116">
+    <tasks>
+      <task code="ARNote" id="btnARNote" title="Catatan Piutang" description="Catatan Piutang" url="~/Program/ARProcess/ARNoteCtl.ascx" width="900" height="500" />
+      <task code="ARInvoicePayerDocDate" id="btnUpdateDocDate" title="Ubah Tanggal Kirim Invoice" description="Ubah Tanggal Kirim Invoice" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARInvoicePayerUpdateDocDate.ascx" width="400" height="250" />
+    </tasks>
+    <informations>
+      <information code="infoReceivingInvoice" title="Informasi Penerimaan Piutang" description="Informasi Penerimaan Piutang" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARInvoiceReceivingInformationCtl.ascx" id="btninfoReceivingInvoice" width="1100" height="550" />
+      <information code="infoARReceipt" title="Informasi Kwitansi Kolektif Piutang" description="Informasi Kwitansi Kolektif Piutang" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARReceiptPerInvoiceInfoCtl.ascx" id="btninfoARReceipt" width="1100" height="250" />
+    </informations>
+    <prints>
+      <print title="Invoice Payment Slip - Rekap" reportcode="FN-00123" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Payment Slip - Detail" reportcode="FN-00118" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Kwitansi Penagihan Piutang (Rekap)" reportcode="FN-00057" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Kwitansi Penagihan Piutang (Detail)" reportcode="FN-00119" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Surat Penagihan Piutang" reportcode="FN-00160" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Surat Penagihan Piutang (tanpa detail)" reportcode="FN-00161" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Tanda Terima Berkas Penagihan" reportcode="FN-00065" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Amplop Penagihan Piutang Instansi" reportcode="FN-00079" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN040118 -->
+  <page menucode="FN040118">
+    <tasks>
+      <task code="ARNote" id="btnARNote" title="Catatan Piutang" description="Catatan Piutang" url="~/Program/ARProcess/ARNoteCtl.ascx" width="900" height="500" />
+
+      <task code="ARInvoicePayerDocDate" id="btnUpdateDocDate" title="Ubah Tanggal Kirim Invoice" description="Ubah Tanggal Kirim Invoice" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARInvoicePayerUpdateDocDate.ascx" width="400" height="250" />
+    </tasks>
+    <informations>
+      <information code="infoReceivingInvoice" title="Informasi Penerimaan Piutang" description="Informasi Penerimaan Piutang" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARInvoiceReceivingInformationCtl.ascx" id="btninfoReceivingInvoice" width="1100" height="550" />
+      <information code="infoARReceipt" title="Informasi Kwitansi Kolektif Piutang" description="Informasi Kwitansi Kolektif Piutang" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARReceiptPerInvoiceInfoCtl.ascx" id="btninfoARReceipt" width="1100" height="250" />
+    </informations>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN040122 -->
+  <page menucode="FN040122">
+    <tasks>
+      <task code="ARNote" id="btnARNote" title="Catatan Piutang" description="Catatan Piutang" url="~/Program/ARProcess/ARNoteCtl.ascx" width="900" height="500" />
+
+      <task code="ARInvoicePatientDocDate" id="btnUpdateDocDate" title="Ubah Tanggal Kirim Invoice" description="Ubah Tanggal Kirim Invoice" url="~/Program/ARInvoicePatient/ARInvoicePatientEdit/ARInvoicePatientUpdateDocDate.ascx" width="400" height="250" />
+    </tasks>
+    <informations>
+      <information code="infoReceivingInvoice" title="Informasi Penerimaan Piutang" description="Informasi Penerimaan Piutang" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARInvoiceReceivingInformationCtl.ascx" id="btninfoReceivingInvoice" width="1100" height="550" />
+    </informations>
+    <prints>
+      <print title="Invoice Payment Slip - Rekap" reportcode="FN-00061" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Payment Slip - Detail" reportcode="FN-00062" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Surat Penagihan Piutang" reportcode="FN-00292" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Surat Penagihan Piutang (tanpa detail)" reportcode="FN-00293" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Kwitansi Penagihan Piutang (Rekap)" reportcode="FN-00294" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Kwitansi Penagihan Piutang (Detail)" reportcode="FN-00295" isByHealthcare="1" healthcareName="RSPKSB" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN040123 -->
+  <page menucode="FN040123">
+    <prints>
+      <print title="Corporate Payment Slip" reportcode="FN-00009" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Kwitansi Penerimaan Piutang" reportcode="FN-00291" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN040124 -->
+  <page menucode="FN040124">
+    <prints>
+      <print title="Bukti Alokasi Penerimaan Piutang" reportcode="FN-00113" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN040125 -->
+  <page menucode="FN040125">
+    <tasks>
+      <task code="ARNote" id="btnARNote" title="Catatan Piutang" description="Catatan Piutang" url="~/Program/ARProcess/ARNoteCtl.ascx" width="900" height="500" />
+
+      <task code="ARInvoicePatientDocDate" id="btnUpdateDocDate" title="Ubah Tanggal Kirim Invoice" description="Ubah Tanggal Kirim Invoice" url="~/Program/ARInvoicePatient/ARInvoicePatientEdit/ARInvoicePatientUpdateDocDate.ascx" width="400" height="250" />
+    </tasks>
+    <informations>
+      <information code="infoReceivingInvoice" title="Informasi Penerimaan Piutang" description="Informasi Penerimaan Piutang" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARInvoiceReceivingInformationCtl.ascx" id="btninfoReceivingInvoice" width="1100" height="550" />
+    </informations>
+    <prints>
+      <print title="Invoice Payment Slip - Rekap" reportcode="FN-00061" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Payment Slip - Detail" reportcode="FN-00062" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Surat Penagihan Piutang" reportcode="FN-00160" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Surat Penagihan Piutang (tanpa detail)" reportcode="FN-00161" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Kwitansi Penagihan Piutang (Rekap)" reportcode="FN-00057" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Kwitansi Penagihan Piutang (Detail)" reportcode="FN-00058" isByHealthcare="1" healthcareName="RSPKSB" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN040126 -->
+  <page menucode="FN040126">
+    <tasks>
+      <task code="ARNote" id="btnARNote" title="Catatan Piutang" description="Catatan Piutang" url="~/Program/ARProcess/ARNoteCtl.ascx" width="900" height="500" />
+
+      <task code="ARInvoicePayerDocDate" id="btnUpdateDocDate" title="Ubah Tanggal Kirim Invoice" description="Ubah Tanggal Kirim Invoice" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARInvoicePayerUpdateDocDate.ascx" width="400" height="250" />
+    </tasks>
+    <informations>
+      <information code="infoReceivingInvoice" title="Informasi Penerimaan Piutang" description="Informasi Penerimaan Piutang" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARInvoiceReceivingInformationCtl.ascx" id="btninfoReceivingInvoice" width="1100" height="550" />
+      <information code="infoARReceipt" title="Informasi Kwitansi Kolektif Piutang" description="Informasi Kwitansi Kolektif Piutang" url="~/Program/ARInvoicePayer/ARInvoicePayerEdit/ARReceiptPerInvoiceInfoCtl.ascx" id="btninfoARReceipt" width="1100" height="250" />
+    </informations>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN050201 -->
+  <page menucode="FN050201">
+    <informations>
+      <information code="infoSupplierPayment" title="Informasi Pembayaran Hutang" description="Informasi Pembayaran Hutang" url="~/Program/APInvoiceSupplier/APInvoicePaymentCtl.ascx" id="btninfoSupplierPayment"  width="1100" height="550" />
+    </informations>
+    <prints>
+      <print title="Tanda Terima Faktur" reportcode="FN-00010" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Tanda Terima Faktur (DotMatrix)" reportcode="FN-00026" />
+
+      <print title="Tanda Terima Faktur - Detail (DotMatrix)" reportcode="FN-00033" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN040201 -->
+  <page menucode="FN040201">
+    <tasks>
+      <task code="downloadExcelInhealthPerARReceipt" title="Download Excel Inhealth per Kolektif Piutang" description="Download Excel Inhealth per Kolektif Piutang" url="~/Program/ARReceipt/DownloadExcelInhealthPerARReceiptCtl.ascx" width="500" height="200" isByHealthcare="1" healthcareName="RSSBB" />
+    </tasks>
+    <prints>
+      <print title="Surat Penagihan Piutang" reportcode="FN-00073" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Surat Penagihan Piutang (tanpa detail)" reportcode="FN-00085" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Tanda Terima Berkas Penagihan" reportcode="FN-00076" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Amplop Penagihan Piutang Kolektif Instansi" reportcode="FN-00082" isByHealthcare="1" healthcareName="RSPKSB" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN050101 -->
+  <page menucode="FN050101">
+    <tasks>
+      <task code="changeParamedicMaster" title="Ubah Data Dokter/Paramedis" description="Untuk mengubah data master untuk Dokter/Paramedis" url="~/Program/RevenueSharing/Controls/ChangeParamedicMasterEditCtl.ascx" id="btnChangeParamedicMaster" width="700" height="320" />
+      <task code="prepareRevenueSharing" title="Prepare Revenue Sharing" description="Prepare Revenue Sharing" url="~/Program/RevenueSharing/Controls/PrepareRevenueSharingCtl.ascx" width="550" height="200" />
+    </tasks>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN050102 -->
+  <page menucode="FN050102">
+    <informations>
+      <information code="infoAdj" title="Informasi Penyesuaian" description="Informasi Penyesuaian" url="~/Program/RevenueSharing/RevenueSharingVerification/RevenueSharingVerificationEntryCtl.ascx" id="btnInfoRevAdj" width="1200" height="500" />
+    </informations>
+    <prints>
+      <print title="Bukti Honor Dokter" reportcode="FN-00023" />
+      <print title="Surat Pengantar Pengambilan" reportcode="FN-00074" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN050104 -->
+  <page menucode="FN050104">
+    <prints>
+      <print title="Rincian (Slip) Dokter" reportcode="FN-00075" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Slip Honor Dokter" reportcode="FN-00328" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Rekap Honor Dokter" reportcode="FN-00025" />
+
+      <print title="Laporan Rincian Pembayaran Jasa Dokter" reportcode="FN-00027" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN050105 -->
+  <page menucode="FN050105">
+    <prints>
+      <print title="Slip Honor Dokter" reportcode="FN-00328" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Tanda Terima Honor Dokter" reportcode="FN-00177" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Rincian Honor Dokter" reportcode="FN-00172" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN050106 -->
+  <page menucode="FN050106">
+    <prints>
+      <print title="Slip Honor Dokter" reportcode="FN-00328" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Tanda Terima Honor Dokter" reportcode="FN-00177" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN050401 -->
+  <page menucode="FN050401">
+    <prints>
+      <print title="A/P Payment Plan v1" reportcode="FN-00151" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="A/P Payment Plan v2" reportcode="FN-00092" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Pengeluaran Kas/Bank" reportcode="FN-00016" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Bukti Verifikasi Pembayaran Hutang" reportcode="FN-00031" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN050501 -->
+  <page menucode="FN050501">
+    <prints>
+      <print title="Kwitansi Honor Dokter" reportcode="FN-00091" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Voucher Payable" reportcode="FN-00096" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN060202 -->
+  <page menucode="FN060202">
+    <tasks>
+      <task code="transactionNotes" title="Catatan Transaksi" description="Catatan mengenai transaksi pasien" url="~/Libs/Program/Module/PatientManagement/Transaction/BillingNotesEntry.ascx" id="btnBillingNotes" width="1200" height="550" />
+
+      <task code="downloadReportTagihan" id="downloadReportTagihan" title="Proses Generate Dokumen E-Klaim" description="Proses Generate Dokumen E-Klaim" url="~/Libs/Program/Controls/GenerateDokumenBPJSCtl.ascx" width="500" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+      <task code="downloadReportTagihan" id="downloadReportTagihan" title="Proses Generate Dokumen E-Klaim" description="Proses Generate Dokumen E-Klaim" url="~/Libs/Program/Controls/GenerateDokumenBPJSCtl.ascx" width="500" height="200" isByHealthcare="1" healthcareName="RSSES" />
+    </tasks>
+    <informations>
+      <information code="infoTransactionParameter" title="Info Transaksi Parameter" description="Informasi Transaksi per E-Klaim Parameter" url="~/Program/BPJS/TemporaryClaim/InfoTransactionEKlaimParameterCtl.ascx" id="btnInfoTransactionParameter" width="1000" height="500" />
+      <information code="infoTransactionDetailParameter" title="Info Transaksi Detail Parameter" description="Informasi Transaksi Detail per E-Klaim Parameter" url="~/Program/BPJS/TemporaryClaim/InfoTransactionDetailEKlaimParameterCtl.ascx" id="btnInfoTransactionParameter" width="1200" height="500" />
+      <information code="infoTransactionDetailPharmacyParameter" title="Informasi Transaksi Farmasi" description="Informasi Transaksi Farmasi" url="~/Program/BPJS/TemporaryClaim/InfoTransactionDetailPharmacyCtl.ascx" id="btnInfoTransactionPharmacy" width="1000" height="500" />
+      <information code="infoDiagnosticResult" title="Informasi Hasil Penunjang" description="Informasi hasil penunjang medis tanpa bridging LIS/RIS" url="~/Program/BPJS/TemporaryClaim/InfoDiagnosticResultCtl.ascx" id="btnInfoDiagnosticResult" width="1000" height="500" />
+      <information code="infoSurgeryReport" title="Info Laporan Operasi" description="Informasi Laporan Operasi" url="~/Program/BPJS/TemporaryClaim/InfoSurgeryReportListCtl.ascx" id="btnSurgeryReport" width="1000" height="500" />
+      <information code="infoPersalinanReport" title="Info Laporan Persalinan" description="Informasi Laporan Persalinan" url="~/Program/BPJS/TemporaryClaim/InfoPersalinanCtl.ascx" id="btnPersalinanReport" width="1000" height="500" />
+      <information code="infoEdocument" title="Info E-Document" description="Informasi E-Document" url="~/Program/BPJS/TemporaryClaim/InfoPatientDocumentListCtl.ascx" id="btnEdocument" width="1000" height="500" />
+      <information code="infoNoSEPDuplicate" title="Info Duplikasi NoSEP Detail" description="Daftar NoRegistrasi yg NoSEP nya sama dengan NoSEP terpilih" url="~/Program/BPJS/EKlaim/InfoNoSEPDuplicateDetailCtl.ascx" id="btnEdocument" width="1100" height="500" />
+    </informations>
+    <prints>
+      <print title="Resume Medis (EMR)" reportcode="PM-90085" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Integrated Notes Format 2" reportcode="MR000007" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Surat Keterangan Kelahiran" reportcode="PM-90084" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Surat Keterangan Kematian" reportcode="PM-00564" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="1.D. Invoice (Detail) - All Bill" reportcode="PM-002163" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="1.S. Invoice (Summary) - All Bill" reportcode="PM-002136" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="2.D. Invoice (Detail)" reportcode="PM-002137" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="2.S. Invoice (Summary)" reportcode="PM-002138" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="3.D. Invoice (Detail - Patient)" reportcode="PM-00282" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="3.D. Invoice (Detail - Patient) - v2" reportcode="PM-00493" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="3.S. Invoice (Summary - Patient)" reportcode="PM-00283" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="3.S. Invoice (Summary - Patient) - v2" reportcode="PM-00494" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="4.D. Invoice (Detail - Payer)" reportcode="PM-00284" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="4.D. Invoice (Detail - Payer) - v2" reportcode="PM-00500" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="4.S. Invoice (Summary - Payer)" reportcode="PM-00285" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="4.S. Invoice (Summary - Payer) - v2" reportcode="PM-00496" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Rekap Penggunaan Obat dan Alkes" reportcode="PM-00248" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN060401 -->
+  <page menucode="FN060401">
+    <prints>
+      <print title="Resume Medis (EMR)" reportcode="PM-90114" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Laporan Operasi (Versi Lengkap)" reportcode="PM-00567" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="1.D. Invoice (Detail) - All Bill" reportcode="PM-002163" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="1.S. Invoice (Summary) - All Bill" reportcode="PM-002136" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="2.D. Invoice (Detail)" reportcode="PM-002137" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="2.S. Invoice (Summary)" reportcode="PM-002138" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="3.D. Invoice (Detail - Patient)" reportcode="PM-00282" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="3.D. Invoice (Detail - Patient) - v2" reportcode="PM-00493" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="3.S. Invoice (Summary - Patient)" reportcode="PM-00283" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="3.S. Invoice (Summary - Patient) - v2" reportcode="PM-00494" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="4.D. Invoice (Detail - Payer)" reportcode="PM-00284" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="4.D. Invoice (Detail - Payer) - v2" reportcode="PM-00500" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="4.S. Invoice (Summary - Payer)" reportcode="PM-00285" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="4.S. Invoice (Summary - Payer) - v2" reportcode="PM-00496" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN060501 -->
+  <page menucode="FN060501">
+    <informations>
+      <information code="infoTransactionParameter" title="Info Transaksi Parameter" description="Informasi Transaksi per E-Klaim Parameter" url="~/Program/BPJS/TemporaryClaim/InfoTransactionEKlaimParameterCtl.ascx" id="btnInfoTransactionParameter" width="1000" height="500" />
+      <information code="infoTransactionDetailParameter" title="Info Transaksi Detail Parameter" description="Informasi Transaksi Detail per E-Klaim Parameter" url="~/Program/BPJS/TemporaryClaim/InfoTransactionDetailEKlaimParameterCtl.ascx" id="btnInfoTransactionParameter" width="1200" height="500" />
+      <information code="infoTransactionDetailPharmacyParameter" title="Informasi Transaksi Farmasi" description="Informasi Transaksi Farmasi" url="~/Program/BPJS/TemporaryClaim/InfoTransactionDetailPharmacyCtl.ascx" id="btnInfoTransactionPharmacy" width="1000" height="500" />
+      <information code="infoDiagnosticResult" title="Informasi Hasil Penunjang" description="Informasi hasil penunjang medis tanpa bridging LIS/RIS" url="~/Program/BPJS/TemporaryClaim/InfoDiagnosticResultCtl.ascx" id="btnInfoDiagnosticResult" width="1000" height="500" />
+      <information code="infoSurgeryReport" title="Info Laporan Operasi" description="Informasi Laporan Operasi" url="~/Program/BPJS/TemporaryClaim/InfoSurgeryReportListCtl.ascx" id="btnSurgeryReport" width="1000" height="500" />
+      <information code="infoPersalinanReport" title="Info Laporan Persalinan" description="Informasi Laporan Persalinan" url="~/Program/BPJS/TemporaryClaim/InfoPersalinanCtl.ascx" id="btnPersalinanReport" width="1000" height="500" />
+      <information code="infoEdocument" title="Info E-Document" description="Informasi E-Document" url="~/Program/BPJS/TemporaryClaim/InfoPatientDocumentListCtl.ascx" id="btnEdocument" width="1000" height="500" />
+      <information code="infoNoSEPDuplicate" title="Info Duplikasi NoSEP Detail" description="Daftar NoRegistrasi yg NoSEP nya sama dengan NoSEP terpilih" url="~/Program/BPJS/EKlaim/InfoNoSEPDuplicateDetailCtl.ascx" id="btnEdocument" width="1100" height="500" />
+    </informations>
+    <prints>
+      <print title="1.D. Invoice (Detail) - All Bill" reportcode="PM-002163" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="1.S. Invoice (Summary) - All Bill" reportcode="PM-002136" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="2.D. Invoice (Detail)" reportcode="PM-002137" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="2.S. Invoice (Summary)" reportcode="PM-002138" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="3.D. Invoice (Detail - Patient)" reportcode="PM-00282" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="3.D. Invoice (Detail - Patient) - v2" reportcode="PM-00493" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="3.S. Invoice (Summary - Patient)" reportcode="PM-00283" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="3.S. Invoice (Summary - Patient) - v2" reportcode="PM-00494" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="4.D. Invoice (Detail - Payer)" reportcode="PM-00284" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="4.D. Invoice (Detail - Payer) - v2" reportcode="PM-00500" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="4.S. Invoice (Summary - Payer)" reportcode="PM-00285" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="4.S. Invoice (Summary - Payer) - v2" reportcode="PM-00496" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region FN060502 -->
+  <page menucode="FN060502">
+    <informations>
+      <information code="infoTransactionParameter" title="Info Transaksi Parameter" description="Informasi Transaksi per E-Klaim Parameter" url="~/Program/BPJS/TemporaryClaim/InfoTransactionEKlaimParameterCtl.ascx" id="btnInfoTransactionParameter" width="1000" height="500" />
+      <information code="infoTransactionDetailParameter" title="Info Transaksi Detail Parameter" description="Informasi Transaksi Detail per E-Klaim Parameter" url="~/Program/BPJS/TemporaryClaim/InfoTransactionDetailEKlaimParameterCtl.ascx" id="btnInfoTransactionParameter" width="1200" height="500" />
+      <information code="infoTransactionDetailPharmacyParameter" title="Informasi Transaksi Farmasi" description="Informasi Transaksi Farmasi" url="~/Program/BPJS/TemporaryClaim/InfoTransactionDetailPharmacyCtl.ascx" id="btnInfoTransactionPharmacy" width="1000" height="500" />
+      <information code="infoDiagnosticResult" title="Informasi Hasil Penunjang" description="Informasi hasil penunjang medis tanpa bridging LIS/RIS" url="~/Program/BPJS/TemporaryClaim/InfoDiagnosticResultCtl.ascx" id="btnInfoDiagnosticResult" width="1000" height="500" />
+      <information code="infoSurgeryReport" title="Info Laporan Operasi" description="Informasi Laporan Operasi" url="~/Program/BPJS/TemporaryClaim/InfoSurgeryReportListCtl.ascx" id="btnSurgeryReport" width="1000" height="500" />
+      <information code="infoPersalinanReport" title="Info Laporan Persalinan" description="Informasi Laporan Persalinan" url="~/Program/BPJS/TemporaryClaim/InfoPersalinanCtl.ascx" id="btnPersalinanReport" width="1000" height="500" />
+      <information code="infoEdocument" title="Info E-Document" description="Informasi E-Document" url="~/Program/BPJS/TemporaryClaim/InfoPatientDocumentListCtl.ascx" id="btnEdocument" width="1000" height="500" />
+      <information code="infoNoSEPDuplicate" title="Info Duplikasi NoSEP Detail" description="Daftar NoRegistrasi yg NoSEP nya sama dengan NoSEP terpilih" url="~/Program/BPJS/EKlaim/InfoNoSEPDuplicateDetailCtl.ascx" id="btnEdocument" width="1100" height="500" />
+    </informations>
+    <prints>
+      <print title="1.D. Invoice (Detail) - All Bill" reportcode="PM-002163" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="1.S. Invoice (Summary) - All Bill" reportcode="PM-002136" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="2.D. Invoice (Detail)" reportcode="PM-002137" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="2.S. Invoice (Summary)" reportcode="PM-002138" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="3.D. Invoice (Detail - Patient)" reportcode="PM-00282" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="3.D. Invoice (Detail - Patient) - v2" reportcode="PM-00493" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="3.S. Invoice (Summary - Patient)" reportcode="PM-00283" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="3.S. Invoice (Summary - Patient) - v2" reportcode="PM-00494" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="4.D. Invoice (Detail - Payer)" reportcode="PM-00284" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="4.D. Invoice (Detail - Payer) - v2" reportcode="PM-00500" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="4.S. Invoice (Summary - Payer)" reportcode="PM-00285" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="4.S. Invoice (Summary - Payer) - v2" reportcode="PM-00496" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+</root>

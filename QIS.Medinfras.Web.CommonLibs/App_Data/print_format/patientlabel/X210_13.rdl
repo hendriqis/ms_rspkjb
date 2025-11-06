@@ -1,0 +1,19 @@
+﻿^XA
+^LL240
+^PW640
+^LH2,1
+^MD10
+^CF030,30
+^FO40,40^FD{cfPatientNameSalutation} ({cfGenderInitial})^FS
+^FO40,80^FDNO. RM^FS
+^FO240,80^FD:^FS
+^FO260,80^FD{MedicalNo}^FS
+^CF024,24
+^FO40,120^FDTANGGAL LAHIR^FS
+^FO240,120^FD:^FS
+^FO260,120^FD{DateOfBirthInString} / {cfPatientAgeInYear}^FS
+^FO40,160^FDALAMAT^FS
+^FO240,160^FD:^FS
+^FO260,160^FD{HomeAddress}^FS
+^PR2
+^XZ

@@ -1,0 +1,14 @@
+﻿^XA
+^LL200
+^PW600
+^LH5,10
+^A0N,32,26
+^FO80 , 30^FD{MedicalNo} | {RegistrationNo}^FS
+^AQN,28,24
+^FO80 ,65^FD{cfPatientNameSalutation} ^FS
+^AQN,28,24
+^FO80 ,95^FDTgl Lahir : {DateOfBirthInString} / ({PatientAge})^FS
+^AQN,28,24
+^FO80 ,125^FDNIK : {SSN}^FS
+^PR2
+^XZ

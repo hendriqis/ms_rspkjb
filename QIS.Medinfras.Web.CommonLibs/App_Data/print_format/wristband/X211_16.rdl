@@ -1,0 +1,6 @@
+﻿^XA
+^FO365,1405^A0B,35,35^FB900,1,0,C^FD{PatientName} ({cfWristbandGender})^FS
+^FO405,1515^GB1,700,3^FS
+^FO415,1880^A0B,30,30^FDDOB:{DateOfBirthInString}^FS
+^FO415,1550^A0B,30,30^FDMR:{MedicalNo}^FS
+^XZ

@@ -1,0 +1,10 @@
+﻿^XA
+^POI
+^FWR
+^LH0,236
+^FO80,160 ^BY1,2.0,200^BCN,200,Y,N,N^FD{MedicalNo}^FS
+^FO250,400 ^A0,38,38^FD{FirstName} {MiddleName} {LastName} ({Gender})^FS
+^FO200,400 ^A0,33,33^FD{MedicalNo}^FS
+^FO160,400 ^A0,33,33^FD{DateOfBirthInString}^FS
+^FO80,400 ^A0,33,33^FDRSK. BHAKTIWARA^FS
+^XZ

@@ -1,0 +1,388 @@
+﻿<head>
+    <style type="text/css">
+        .style1
+        {
+            height: 33px;
+        }
+    </style>
+</head>
+<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+    $(function () {
+
+        $("#ddlParameter1").change(function () {
+            $("#txtParamScore1").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter2").change(function () {
+            $("#txtParamScore2").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter3").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter4").change(function () {
+            $("#txtParamScore4").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter5").change(function () {
+            $("#txtParamScore5").val($(this).val());
+            CalculateTotalScore();
+        });
+
+
+        $("#ddlParameter1").change();
+        $("#ddlParameter2").change();
+        $("#ddlParameter3").change();
+        $("#ddlParameter4").change();
+        $("#ddlParameter5").change();
+
+        function CalculateTotalScore() {
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+            var p4 = 0;
+            var p5 = 0;
+
+            if ($("#txtParamScore1").val())
+                p1 = parseInt($("#txtParamScore1").val());
+
+            if ($("#txtParamScore2").val())
+                p2 = parseInt($("#txtParamScore2").val());
+
+            if ($("#txtParamScore3").val())
+                p3 = parseInt($("#txtParamScore3").val());
+
+            if ($("#txtParamScore4").val())
+                p4 = parseInt($("#txtParamScore4").val());
+
+            if ($("#txtParamScore5").val())
+                p5 = parseInt($("#txtParamScore5").val());
+
+
+            var total = p1 + p2 + p3 + p4 + p5;
+
+            $("#txtScore").val(total);
+
+            if (total >= 1 && total <= 3) {
+                $("#ddlScore").val("01");
+            }
+            else if (total >= 4 && total <= 6) {
+                $("#ddlScore").val("02");
+            }
+            else if (total>6) {
+                $("#ddlScore").val("03");
+            }
+            else {
+                $("#ddlScore").val("");
+            }
+        }
+    });
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+            <colgroup>
+                <col width="350px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="150px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold; text-decoration:underline">KRITERIA MASUK RUANG NICU</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>1. Frekuensi Napas</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter1" style="width:100%" class = "ddlForm" controlID = "ddlParameter1">
+                        <option value="0" selected></option>
+                        <option value="0"><60 x/m</option> 
+                        <option value="1">60-80 x/m</option>
+                        <option value="2">>80 x/m</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore1" />
+                </td>
+            </tr>
+            <tr>
+                <td><label>2. Retraksi Dinding Dada</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter2" style="width:100%" class = "ddlForm" controlID = "ddlParameter2">
+                        <option value="0" selected></option>
+                        <option value="0">Tidak ada retraksi</option>
+                        <option value="1">Retraksi Ringan</option>
+                        <option value="2">Retraksi Berat</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore2"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="style1"><label>3. Sianosis</label></td>
+                <td colspan="3" class="style1">
+                    <select id="ddlParameter3" class="ddlForm" controlID="ddlParameter3" style="width:100%">
+                        <option value="0" selected></option>
+                        <option value="0">Tidak sianosis</option>
+                        <option value="1">Sianosis hilang dengan pemberian oksigen</option>
+                        <option value="2">Sianosis menetap walaupun diberi oksigen</option>
+                    </select>
+                </td>
+                <td class="style1">
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore3"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="style1"><label>4. Air Entry</label></td>
+                <td colspan="3" class="style1">
+                    <select id="ddlParameter4" class="ddlForm" controlID="ddlParameter4" style="width:100%">
+                        <option value="0" selected></option>
+                        <option value="0">Udara Masuk</option>
+                        <option value="1">Penurunan ringan udara masuk</option>
+                        <option value="2">Tidak ada udara masuk</option>
+                    </select>
+                </td>
+                <td class="style1">
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore4"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>5. Merintih</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter5" class="ddlForm" controlID="ddlParameter5" style="width:100%">
+                        <option value="0" selected></option>
+                        <option value="0">Tidak merintih</option>
+                        <option value="1">Dapat didengar dengan stetoskop</option>
+                        <option value="2">Dapat didengar tanpa alat bantu</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore5"/>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold; text-align: center" colspan="4"><label class="lblNormal">TOTAL SKOR</label></td>      
+                <td><input type="text" style="width: 50px; text-align:right" id="txtScore" class="txtForm" controlID="txtScore" readonly="readonly"/></td>                          
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal">KESIMPULAN DOWN SCORE</label></td>
+                <td colspan="4">
+                    <select id="ddlScore" class="ddlForm" controlID="ddlScore" style="width:450px">
+                        <option value="" selected></option>
+                        <option value="01">1-3 : Gawat Napas Ringan</option>
+                        <option value="02">4-6 : Gawat Napas Sedang</option>
+                        <option value="03">&#8805;6 : Gawat Napas Berat</option>
+                    </select>
+                </td> 
+                <td />
+            </tr>
+        </table>
+    </div>
+    <br />
+    <div>
+            <table border="1" style="border-style: solid;border-collapse: collapse;">
+                <colgroup>
+                    <col />
+                    <col style="width:80px" />
+                    <col style="width:80px" />
+                </colgroup>
+                <tr>
+                    <td style="font-weight:bold"></td>
+                    <td style="text-align: center; font-weight:bold">YA</td>
+                    <td style="text-align: center; font-weight:bold">TIDAK</td>
+                </tr>
+                <tr>
+                    <td style="padding-left:5px">
+                        6. Usia < 28 hari
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt116Form1" controlID="opt116Form1" name="116_parameter1" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt116Form2" controlID="opt116Form2" name="116_parameter1"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:5px">
+                        7. APGAR Score 1-3
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt116Form3" controlID="opt116Form3" name="116_parameter2" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt116Form4" controlID="opt116Form4" name="116_parameter2"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:5px">
+                        8. Pasien memerlukan alat bantu napas seperti Bubble CPAP atau ventilator mekanik dan monitoring
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt116Form31" controlID="opt116Form31" name="116_parameter3" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt116Form32" controlID="opt116Form32" name="116_parameter3"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:5px">
+                        9. Bayi dengan post resusitasi
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt116Form41" controlID="opt116Form41" name="116_parameter4" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt116Form42" controlID="opt116Form42" name="116_parameter4"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:5px">
+                        10. Bayi dengan kelainan kongenital seperti Labiopalatoskizis, Down Sindrom, Dll
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt116Form51" controlID="opt116Form51" name="116_parameter5" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt116Form52" controlID="opt116Form52" name="116_parameter5"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:5px">
+                        11. BBLR kurang dari 2.000 gram dengan respirasi distres sindrome
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt116Form61" controlID="opt116Form61" name="116_parameter6" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt116Form62" controlID="opt116Form62" name="116_parameter6"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:5px">
+                        12. Masa gestasi kurang dari 36 minggu dengan respirasi distress sindrom
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt116Form63" controlID="opt116Form63" name="116_parameter7" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt116Form64" controlID="opt116Form64" name="116_parameter7"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:5px">
+                        13. Air ketuban warna hijau dengan tanda – tanda sepsis
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt116Form65" controlID="opt116Form65" name="116_parameter8" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt116Form66" controlID="opt116Form66" name="116_parameter8"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:5px">
+                        14. Post Date : dengan tanda-tanda Sepsis, masa kehamilan 42 minggu 
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt116Form67" controlID="opt116Form67" name="116_parameter9" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt116Form68" controlID="opt116Form68" name="116_parameter9"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:5px">
+                        15. Sepsis neonatorum :
+                        <br />
+                        <div style="padding-top:10px">
+                            <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                                <colgroup>
+                                     <col />
+                                </colgroup>
+                                <tr>
+                                    <td style="padding-left:50px">
+                                        Leucocyte &nbsp;x/menit
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-left:50px">
+                                        Temp : >38°C/ <36°C
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-left:50px">
+                                        HR : >160 atau <100
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt116Form69" controlID="opt116Form69" name="116_parameter10" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt116Form70" controlID="opt116Form70" name="116_parameter10"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:5px">
+                        16. Kejang pada bayi /neonatal seizure 
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt116Form71" controlID="opt116Form71" name="116_parameter11" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt116Form72" controlID="opt116Form72" name="116_parameter11"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:5px">
+                        17. Gagal napas atau gangguan napas berat yang membutuhkan bantuan ventilator 
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt116Form73" controlID="opt116Form73" name="116_parameter12" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt116Form74" controlID="opt116Form74" name="116_parameter12"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:5px">
+                        18. Dehidrasi Berat 
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt116Form75" controlID="opt116Form75" name="116_parameter13" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt116Form76" controlID="opt116Form76" name="116_parameter13"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:5px; font-weight:bold">
+                        Berdasarkan kondisi di atas maka pasien tersebut memenuhi kriteria masuk NICU 
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt116Form76" controlID="opt116Form76" name="116_parameter14" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt116Form77" controlID="opt116Form77" name="116_parameter14"/> 
+                    </td>
+                </tr>
+            </table>    
+    </div>
+</div>
+

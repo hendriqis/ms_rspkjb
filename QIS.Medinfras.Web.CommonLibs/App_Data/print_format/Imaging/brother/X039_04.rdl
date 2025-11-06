@@ -1,0 +1,8 @@
+﻿txtTransactionNo=TransactionNo
+txtMedicalNo=MedicalNo
+txtPatientName=PatientName
+txtcfAgeAndDOBInString=cfAgeAndDOBInString
+txtcfPatientAddressFull=cfPatientAddressFull
+txtcfTransactionDate=cfTransactionDate
+txtDetailParamedicName=DetailParamedicName
+txtitemDetailList=itemDetailList

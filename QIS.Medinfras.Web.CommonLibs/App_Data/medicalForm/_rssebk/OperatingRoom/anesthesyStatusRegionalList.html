@@ -1,0 +1,1846 @@
+<head>
+    <style type="text/css">
+        .tdColumn1
+        {
+            vertical-align:top;
+        }
+        .tdColumn2
+        {
+            vertical-align:middle;
+            padding-left:20px;
+        }   
+        .tdColumn3
+        {
+            width:100px;
+        }     
+        .tdColumn4
+        {
+            width:100px;
+            vertical-align:top;
+        }  
+        .style1
+        {
+            width: 100px;
+            height: 27px;
+        }
+        .style2
+        {
+            height: 27px;
+        }
+    </style>
+</head>
+<script language="javascript" type="text/javascript" id="eForm_anesthesyIVList">
+    $(function () {
+        $("#chkBlock1").change(function () {
+            if ($(this).is(":checked")) {
+                var currentDateTime = new Date();
+                $("#txtBlock1DateTime").val(currentDateTime.toLocaleString());
+                $(".chkBlock1Field").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $("#txtBlock1DateTime").val("");
+                $(".chkBlock1Field").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock2").change(function () {
+            if ($(this).is(":checked")) {
+                var currentDateTime = new Date();
+                $("#txtBlock2DateTime").val(currentDateTime.toLocaleString());
+                $(".chkBlock2Field").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $("#txtBlock2DateTime").val("");
+                $(".chkBlock2Field").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock3").change(function () {
+            if ($(this).is(":checked")) {
+                var currentDateTime = new Date();
+                $("#txtBlock3DateTime").val(currentDateTime.toLocaleString());
+                $(".chkBlock3Field").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $("#txtBlock3DateTime").val("");
+                $(".chkBlock3Field").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock4").change(function () {
+            if ($(this).is(":checked")) {
+                var currentDateTime = new Date();
+                $("#txtBlock4DateTime").val(currentDateTime.toLocaleString());
+                $(".chkBlock4Field").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $("#txtBlock4DateTime").val("");
+                $(".chkBlock4Field").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock5").change(function () {
+            if ($(this).is(":checked")) {
+                var currentDateTime = new Date();
+                $("#txtBlock5DateTime").val(currentDateTime.toLocaleString());
+                $(".chkBlock5Field").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $("#txtBlock5DateTime").val("");
+                $(".chkBlock5Field").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock1Drug1").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock1Drug1").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock1Drug1").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock1Drug2").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock1Drug2").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock1Drug2").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock1Drug3").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock1Drug3").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock1Drug3").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock1Drug4").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock1Drug4").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock1Drug4").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock1Adjuvant1").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock1Adjuvant1").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock1Adjuvant1").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock1Adjuvant2").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock1Adjuvant2").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock1Adjuvant2").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock1Adjuvant3").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock1Adjuvant3").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock1Adjuvant3").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock1Adjuvant4").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock1Adjuvant4").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock1Adjuvant4").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock1Adjuvant5").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock1Adjuvant5").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock1Adjuvant5").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock2Drug1").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock2Drug1").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock2Drug1").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock2Drug2").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock2Drug2").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock2Drug2").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock2Drug3").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock2Drug3").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock2Drug3").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock2Drug4").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock2Drug4").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock2Drug4").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock2Adjuvant1").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock2Adjuvant1").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock2Adjuvant1").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock2Adjuvant2").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock2Adjuvant2").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock2Adjuvant2").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock2Adjuvant3").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock2Adjuvant3").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock2Adjuvant3").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock2Adjuvant4").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock2Adjuvant4").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock2Adjuvant4").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock2Adjuvant5").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock2Adjuvant5").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock2Adjuvant5").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+
+        $("#chkBlock3Drug1").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock3Drug1").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock3Drug1").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock3Drug2").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock3Drug2").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock3Drug2").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock3Drug3").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock3Drug3").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock3Drug3").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock3Drug4").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock3Drug4").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock3Drug4").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock3Adjuvant1").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock3Adjuvant1").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock3Adjuvant1").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock3Adjuvant2").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock3Adjuvant2").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock3Adjuvant2").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock3Adjuvant3").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock3Adjuvant3").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock3Adjuvant3").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock3Adjuvant4").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock3Adjuvant4").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock3Adjuvant4").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock3Adjuvant5").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock3Adjuvant5").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock3Adjuvant5").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock4Drug1").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock4Drug1").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock4Drug1").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock4Drug2").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock4Drug2").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock4Drug2").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock4Drug3").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock4Drug3").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock4Drug3").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock4Drug4").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock4Drug4").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock4Drug4").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock4Adjuvant1").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock4Adjuvant1").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock4Adjuvant1").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock4Adjuvant2").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock4Adjuvant2").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock4Adjuvant2").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock4Adjuvant3").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock4Adjuvant3").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock4Adjuvant3").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock4Adjuvant4").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock4Adjuvant4").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock4Adjuvant4").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock4Adjuvant5").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock4Adjuvant5").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock4Adjuvant5").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock5Drug1").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock5Drug1").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock5Drug1").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock5Drug2").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock5Drug2").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock5Drug2").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock5Drug3").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock5Drug3").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock5Drug3").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock5Drug4").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock5Drug4").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock5Drug4").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock5Adjuvant1").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock5Adjuvant1").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock5Adjuvant1").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock5Adjuvant2").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock5Adjuvant2").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock5Adjuvant2").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock5Adjuvant3").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock5Adjuvant3").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock5Adjuvant3").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock5Adjuvant4").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock5Adjuvant4").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock5Adjuvant4").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock5Adjuvant5").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkBlock5Adjuvant1").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkBlock5Adjuvant1").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkBlock1").change();
+        $("#chkBlock2").change();
+        $("#chkBlock3").change();
+        $("#chkBlock4").change();
+        $("#chkBlock5").change();
+
+        $("#chkBlock1Drug1").change();
+        $("#chkBlock1Drug2").change();
+        $("#chkBlock1Drug3").change();
+        $("#chkBlock1Drug4").change();
+
+        $("#chkBlock2Drug1").change();
+        $("#chkBlock2Drug2").change();
+        $("#chkBlock2Drug3").change();
+        $("#chkBlock2Drug4").change();
+
+        $("#chkBlock3Drug1").change();
+        $("#chkBlock3Drug2").change();
+        $("#chkBlock3Drug3").change();
+        $("#chkBlock3Drug4").change();
+
+        $("#chkBlock4Drug1").change();
+        $("#chkBlock4Drug2").change();
+        $("#chkBlock4Drug3").change();
+        $("#chkBlock4Drug4").change();
+
+        $("#chkBlock5Drug1").change();
+        $("#chkBlock5Drug2").change();
+        $("#chkBlock5Drug3").change();
+        $("#chkBlock5Drug4").change();
+
+        $("#chkBlock1Adjuvant1").change();
+        $("#chkBlock1Adjuvant2").change();
+        $("#chkBlock1Adjuvant3").change();
+        $("#chkBlock1Adjuvant4").change();
+        $("#chkBlock1Adjuvant5").change();
+
+        $("#chkBlock2Adjuvant1").change();
+        $("#chkBlock2Adjuvant2").change();
+        $("#chkBlock2Adjuvant3").change();
+        $("#chkBlock2Adjuvant4").change();
+        $("#chkBlock2Adjuvant5").change();
+
+        $("#chkBlock3Adjuvant1").change();
+        $("#chkBlock3Adjuvant2").change();
+        $("#chkBlock3Adjuvant3").change();
+        $("#chkBlock3Adjuvant4").change();
+        $("#chkBlock35Adjuvant5").change();
+
+        $("#chkBlock4Adjuvant1").change();
+        $("#chkBlock4Adjuvant2").change();
+        $("#chkBlock4Adjuvant3").change();
+        $("#chkBlock4Adjuvant4").change();
+        $("#chkBlock4Adjuvant5").change();
+
+        $("#chkBlock5Adjuvant1").change();
+        $("#chkBlock5Adjuvant2").change();
+        $("#chkBlock5Adjuvant3").change();
+        $("#chkBlock5Adjuvant4").change();
+        $("#chkBlock5Adjuvant5").change();
+
+    });
+    function txtBlock3DateTime_onclick() {
+
+    }
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-animate-left peGroup">
+        <table border="1" cellpadding="1" cellspacing="0" style="width:100%;" class="w3-table w3-bordered w3-card-4">
+            <colgroup>
+                <col style="width:20%" />
+                <col style="width:20%" />
+                <col style="width:20%" />
+                <col style="width:20%" />
+                <col style="width:20%" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <td style="text-align:left">
+                        <table border="0" cellpadding="0" cellspacing="1" style="width:100%">
+                            <colgroup>
+                                <col style="width:110px" />
+                                <col />
+                            </colgroup>
+                            <tr>
+                                <td style="font-weight:bold">
+                                     <input type="checkbox" id="chkBlock1" class="chkForm" controlID="chkBlock1"/> Block #1
+                                </td>
+                                <td>
+                                    <select id="ddlBlockType1" class="ddlForm chkBlock1Field" controlID="ddlBlockType1" style="width:98%" disabled="disabled">
+                                        <option value="" selected></option>
+                                        <option value="1">Spinal</option>
+                                        <option value="2">Epidural</option>
+                                        <option value="3">Combined : Spinal + Epidural</option>
+                                        <option value="4">Regional : Continous</option>
+                                        <option value="5">Regional : Single Shot</option>
+                                        <option value="6">Regional : Caudal</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="text-align:left">
+                        <table border="0" cellpadding="0" cellspacing="1" style="width:100%">
+                            <colgroup>
+                                <col style="width:110px" />
+                                <col />
+                            </colgroup>
+                            <tr>
+                                <td style="font-weight:bold">
+                                     <input type="checkbox" id="chkBlock2" class="chkForm" controlID="chkBlock2"/> Block #2
+                                </td>
+                                <td>
+                                    <select id="ddlBlockType2" class="ddlForm chkBlock2Field" controlID="ddlBlockType2" style="width:98%" disabled="disabled">
+                                        <option value="" selected></option>
+                                        <option value="1">Spinal</option>
+                                        <option value="2">Epidural</option>
+                                        <option value="3">Combined : Spinal + Epidural</option>
+                                        <option value="4">Regional : Continous</option>
+                                        <option value="5">Regional : Single Shot</option>
+                                        <option value="6">Regional : Caudal</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="text-align:left">
+                        <table border="0" cellpadding="0" cellspacing="1" style="width:100%">
+                            <colgroup>
+                                <col style="width:110px" />
+                                <col />
+                            </colgroup>
+                            <tr>
+                                <td style="font-weight:bold">
+                                     <input type="checkbox" id="chkBlock3" class="chkForm" controlID="chkBlock3"/> Block #3
+                                </td>
+                                <td>
+                                    <select id="ddlBlockType3" class="ddlForm chkBlock3Field" controlID="ddlBlockType3" style="width:98%" disabled="disabled">
+                                        <option value="" selected></option>
+                                        <option value="1">Spinal</option>
+                                        <option value="2">Epidural</option>
+                                        <option value="3">Combined : Spinal + Epidural</option>
+                                        <option value="4">Regional : Continous</option>
+                                        <option value="5">Regional : Single Shot</option>
+                                        <option value="6">Regional : Caudal</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="text-align:left">
+                        <table border="0" cellpadding="0" cellspacing="1" style="width:100%">
+                            <colgroup>
+                                <col style="width:110px" />
+                                <col />
+                            </colgroup>
+                            <tr>
+                                <td style="font-weight:bold">
+                                     <input type="checkbox" id="chkBlock4" class="chkForm" controlID="chkBlock4"/> Block #4
+                                </td>
+                                <td>
+                                    <select id="ddlBlockType4" class="ddlForm chkBlock4Field" controlID="ddlBlockType4" style="width:98%" disabled="disabled">
+                                        <option value="" selected></option>
+                                        <option value="1">Spinal</option>
+                                        <option value="2">Epidural</option>
+                                        <option value="3">Combined : Spinal + Epidural</option>
+                                        <option value="4">Regional : Continous</option>
+                                        <option value="5">Regional : Single Shot</option>
+                                        <option value="6">Regional : Caudal</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="text-align:left">
+                        <table border="0" cellpadding="0" cellspacing="1" style="width:100%">
+                            <colgroup>
+                                <col style="width:110px" />
+                                <col />
+                            </colgroup>
+                            <tr>
+                                <td style="font-weight:bold">
+                                     <input type="checkbox" id="chkBlock5" class="chkForm" controlID="chkBlock5"/> Block #5
+                                </td>
+                                <td>
+                                    <select id="ddlBlockType5" class="ddlForm chkBlock5Field" controlID="ddlBlockType5" style="width:98%" disabled="disabled">
+                                        <option value="" selected></option>
+                                        <option value="1">Spinal</option>
+                                        <option value="2">Epidural</option>
+                                        <option value="3">Combined : Spinal + Epidural</option>
+                                        <option value="4">Regional : Continous</option>
+                                        <option value="5">Regional : Single Shot</option>
+                                        <option value="6">Regional : Caudal</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </thead>
+            <tr>
+                <td>
+                    <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                        <colgroup>
+                            <col style="width:100px" />
+                            <col style="width:120px" />
+                            <col />
+                        </colgroup>
+                        <tr>
+                            <td>Time</td>
+                            <td colspan="2"> <input type="text" class="txtForm chkBlock1Field" id="txtBlock1DateTime" controlID="txtBlock1DateTime" style="width:180px;" disabled="disabled"></td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Attempts</td>
+                            <td> <input type="number" min="1" max="3" class="txtForm chkBlock1Field" controlID="txtBlock1Attempts" style="width:60px;" disabled="disabled" /></td>
+                        </tr>
+                        <tr>
+                            <td>Neddle</td>
+                            <td colspan="2"> 
+                                <select id="ddlBlock1Neddle" class="ddlForm chkBlock1Field" controlID="ddlBlock1Neddle" style="width:98%" disabled="disabled">
+                                    <option value="" selected></option>
+                                    <option value="01">25G</option>
+                                    <option value="02">26G</option>
+                                    <option value="03">27G</option>
+                                    <option value="04">29G</option>
+                                    <option value="05">EpiSpin</option>
+                                    <option value="06">Espocan</option>
+                                    <option value="07">SonoPlex 50 mm</option>
+                                    <option value="08">SonoPlex 80 mm</option>
+                                    <option value="09">SonoPlex 100 mm</option>
+                                    <option value="10">PlexoLong 50 mm</option>
+                                    <option value="11">PlexoLong 100 mm</option>
+                                    <option value="12">IntraLong</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style1">Location</td>
+                            <td colspan="2" class="style2"> <input type="text" class="txtForm chkBlock1Field" controlID="txtBlock1Location" style="width:98%;" disabled="disabled" /></td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Position</td>
+                            <td colspan="2"> 
+                                <select id="ddlBlock1Position" class="ddlForm chkBlock1Field" controlID="ddlBlock1Position" style="width:98%" disabled="disabled">
+                                    <option value="" selected></option>
+                                    <option value="1">Supine</option>
+                                    <option value="2">Prone</option>
+                                    <option value="3">Lateral</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="padding:0px"> 
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width:180px" />
+                                        <col style="width:40px"/>
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>Drugs : </td>
+                                        <td style="text-align:center">%</td>
+                                        <td style="text-align:center">ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock1Drug1" class="chkForm chkBlock1Field" controlID="chkBlock1Drug1"/> Lidocain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock1Drug1" id="txtBlock1Drug1Strength" controlID="txtBlock1Drug1Strength" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock1Drug1" id="txtBlock1Drug1Amount" controlID="txtBlock1Drug1Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock1Drug2" class="chkForm chkBlock1Field" controlID="chkBlock1Drug2"/> Bupivacain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock1Drug2" id="txtBlock1Drug2Strength" controlID="txtBlock1Drug2Strength" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock1Drug2" id="txtBlock1Drug2Amount" controlID="txtBlock1Drug2Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock1Drug3" class="chkForm chkBlock1Field" controlID="chkBlock1Drug3"/> Levobupivacain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock1Drug3" id="txtBlock1Drug3Strength" controlID="txtBlock1Drug3Strength" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock1Drug3" id="txtBlock1Drug3Amount" controlID="txtBlock1Drug3Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock1Drug4" class="chkForm chkBlock1Field" controlID="chkBlock1Drug4"/> Ropivacain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock1Drug4" id="txtBlock1Drug4Strength" controlID="txtBlock1Drug4Strength" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock1Drug4" id="txtBlock1Drug4Amount" controlID="txtBlock1Drug4Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="padding:0px"> 
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width:180px" />
+                                        <col style="width:40px"/>
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>Adjuvant : </td>
+                                        <td style="text-align:center"></td>
+                                        <td style="text-align:center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock1Adjuvant1" class="chkForm chkBlock1Field" controlID="chkBlock1Adjuvant1"/> Fentanyl (micro)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock1Adjuvant1" id="txtBlock1Adjuvant1Amount" controlID="txtBlock1Adjuvant1Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock1Adjuvant2" class="chkForm chkBlock1Field" controlID="chkBlock1Adjuvant2"/> Petidine (mg)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock1Adjuvant2" id="txtBlock1Adjuvant2Amount" controlID="txtBlock1Adjuvant2Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock1Adjuvant3" class="chkForm chkBlock1Field" controlID="chkBlock1Adjuvant3"/> Morphine (mg)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock1Adjuvant3" id="txtBlock1Drug3Adjuvant" controlID="txtBlock1Drug3Adjuvant" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock1Adjuvant4" class="chkForm chkBlock1Field" controlID="chkBlock1Adjuvant4"/> Dexa (mg)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock1Adjuvant4" id="txtBlock1Drug4Adjuvant" controlID="txtBlock1Drug4Adjuvant" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock1Adjuvant5" class="chkForm chkBlock1Field" controlID="chkBlock1Adjuvant5"/> Adrenalin (micro/ml)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock1Adjuvant5" id="txtBlock1Drug5Adjuvant" controlID="txtBlock1Drug5Adjuvant" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn4">Comment</td>
+                            <td colspan="2"> <textarea class="txtForm chkBlock1Field" controlID="txtBlock1Comment" rows="2" style="width:98%" disabled="disabled"></textarea></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td class="tdColumn3">Time</td>
+                            <td colspan="2"> <input type="text" class="txtForm chkBlock2Field" id="txtBlock2DateTime" controlID="txtBlock2DateTime" style="width:180px;" disabled="disabled"></td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Attempts</td>
+                            <td> <input type="number" min="1" max="3" class="txtForm chkBlock2Field" controlID="txtBlock2Attempts" style="width:60px;" disabled="disabled" /></td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Neddle</td>
+                            <td colspan="2"> 
+                                <select id="ddlBlock2Neddle" class="ddlForm chkBlock2Field" controlID="ddlBlock2Neddle" style="width:98%" disabled="disabled">
+                                    <option value="" selected></option>
+                                    <option value="01">25G</option>
+                                    <option value="02">26G</option>
+                                    <option value="03">27G</option>
+                                    <option value="04">29G</option>
+                                    <option value="05">EpiSpin</option>
+                                    <option value="06">Espocan</option>
+                                    <option value="07">SonoPlex 50 mm</option>
+                                    <option value="08">SonoPlex 80 mm</option>
+                                    <option value="09">SonoPlex 100 mm</option>
+                                    <option value="10">PlexoLong 50 mm</option>
+                                    <option value="11">PlexoLong 100 mm</option>
+                                    <option value="12">IntraLong</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Location</td>
+                            <td> <input type="text" class="txtForm chkBlock2Field" controlID="txtBlock2Location" style="width:98%;" disabled="disabled"></td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Position</td>
+                            <td colspan="2"> 
+                                <select id="ddlBlock2Position" class="ddlForm chkBlock2Field" controlID="ddlBlock2Position" style="width:98%" disabled="disabled">
+                                    <option value="" selected></option>
+                                    <option value="1">Supine</option>
+                                    <option value="2">Prone</option>
+                                    <option value="3">Lateral</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="padding:0px"> 
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width:180px" />
+                                        <col style="width:40px"/>
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>Drugs : </td>
+                                        <td style="text-align:center">%</td>
+                                        <td style="text-align:center">ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock2Drug1" class="chkForm chkBlock2Field" controlID="chkBlock2Drug1"/> Lidocain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock2Drug1" id="txtBlock2Drug1Strength" controlID="txtBlock2Drug1Strength" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock2Drug1" id="txtBlock2Drug1Amount" controlID="txtBlock2Drug1Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock2Drug2" class="chkForm chkBlock2Field" controlID="chkBlock2Drug2"/> Bupivacain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock2Drug2" id="txtBlock2Drug2Strength" controlID="txtBlock2Drug2Strength" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock2Drug2" id="txtBlock2Drug2Amount" controlID="txtBlock2Drug2Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock2Drug3" class="chkForm chkBlock2Field" controlID="chkBlock2Drug3"/> Levobupivacain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock2Drug3" id="txtBlock2Drug3Strength" controlID="txtBlock2Drug3Strength" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock2Drug3" id="txtBlock2Drug3Amount" controlID="txtBlock2Drug3Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock2Drug4" class="chkForm chkBlock2Field" controlID="chkBlock2Drug4"/> Ropivacain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock2Drug4" id="txtBlock2Drug4Strength" controlID="txtBlock2Drug4Strength" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock2Drug4" id="txtBlock2Drug4Amount" controlID="txtBlock2Drug4Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="padding:0px"> 
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width:180px" />
+                                        <col style="width:40px"/>
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>Adjuvant : </td>
+                                        <td style="text-align:center"></td>
+                                        <td style="text-align:center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock2Adjuvant1" class="chkForm chkBlock2Field" controlID="chkBlock2Adjuvant1"/> Fentanyl (micro)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock2Adjuvant1" id="txtBlock2Adjuvant1Amount" controlID="txtBlock2Adjuvant1Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock2Adjuvant2" class="chkForm chkBlock2Field" controlID="chkBlock2Adjuvant2"/> Petidine (mg)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock2Adjuvant2" id="txtBlock2Adjuvant2Amount" controlID="txtBlock2Adjuvant2Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock2Adjuvant3" class="chkForm chkBlock2Field" controlID="chkBlock2Adjuvant3"/> Morphine (mg)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock2Adjuvant3" id="txtBlock2Drug3Adjuvant" controlID="txtBlock2Drug3Adjuvant" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock2Adjuvant4" class="chkForm chkBlock2Field" controlID="chkBlock2Adjuvant4"/> Dexa (mg)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock2Adjuvant4" id="txtBlock2Drug4Adjuvant" controlID="txtBlock2Drug4Adjuvant" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock2Adjuvant5" class="chkForm chkBlock2Field" controlID="chkBlock2Adjuvant5"/> Adrenalin (micro/ml)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock2Adjuvant5" id="txtBlock2Drug5Adjuvant" controlID="txtBlock2Drug5Adjuvant" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn4">Comment</td>
+                            <td> <textarea class="txtForm chkBlock2Field" controlID="txtBlock2Comment" rows="2" style="width:98%" disabled="disabled"></textarea></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td class="tdColumn3">Time</td>
+                            <td colspan="2"> <input type="text" class="txtForm chkBlock3Field" id="txtBlock3DateTime" controlID="txtBlock3DateTime" style="width:180px;" disabled="disabled" onclick="return txtBlock3DateTime_onclick()" /></td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Attempts</td>
+                            <td> <input type="number" min="1" max="3" class="txtForm chkBlock3Field" controlID="txtBlock3Attempts" style="width:60px;" disabled="disabled" /></td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Neddle</td>
+                            <td colspan="2"> 
+                                <select id="ddlBlock3Neddle" class="ddlForm chkBlock3Field" controlID="ddlBlock3Neddle" style="width:98%" disabled="disabled">
+                                    <option value="" selected></option>
+                                    <option value="01">25G</option>
+                                    <option value="02">26G</option>
+                                    <option value="03">27G</option>
+                                    <option value="04">29G</option>
+                                    <option value="05">EpiSpin</option>
+                                    <option value="06">Espocan</option>
+                                    <option value="07">SonoPlex 50 mm</option>
+                                    <option value="08">SonoPlex 80 mm</option>
+                                    <option value="09">SonoPlex 100 mm</option>
+                                    <option value="10">PlexoLong 50 mm</option>
+                                    <option value="11">PlexoLong 100 mm</option>
+                                    <option value="12">IntraLong</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Location</td>
+                            <td> <input type="text" class="txtForm chkBlock3Field" controlID="txtBlock3Location" style="width:98%;" disabled="disabled"></td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Position</td>
+                            <td colspan="2"> 
+                                <select id="ddlBlock3Position" class="ddlForm chkBlock3Field" controlID="ddlBlock3Position" style="width:98%" disabled="disabled">
+                                    <option value="" selected></option>
+                                    <option value="1">Supine</option>
+                                    <option value="2">Prone</option>
+                                    <option value="3">Lateral</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="padding:0px"> 
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width:180px" />
+                                        <col style="width:40px"/>
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>Drugs : </td>
+                                        <td style="text-align:center">%</td>
+                                        <td style="text-align:center">ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock3Drug1" class="chkForm chkBlock3Field" controlID="chkBlock3Drug1"/> Lidocain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock3Drug1" id="txtBlock3Drug1Strength" controlID="txtBlock3Drug1Strength" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock3Drug1" id="txtBlock3Drug1Amount" controlID="txtBlock3Drug1Amount" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock3Drug2" class="chkForm chkBlock3Field" controlID="chkBlock3Drug2"/> Bupivacain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock3Drug2" id="txtBlock3Drug2Strength" controlID="txtBlock3Drug2Strength" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock3Drug2" id="txtBlock3Drug2Amount" controlID="txtBlock3Drug2Amount" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock3Drug3" class="chkForm chkBlock3Field" controlID="chkBlock3Drug3"/> Levobupivacain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock3Drug3" id="txtBlock3Drug3Strength" controlID="txtBlock3Drug3Strength" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock3Drug3" id="txtBlock3Drug3Amount" controlID="txtBlock3Drug3Amount" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock3Drug4" class="chkForm chkBlock3Field" controlID="chkBlock3Drug4"/> Ropivacain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock3Drug4" id="txtBlock3Drug4Strength" controlID="txtBlock3Drug4Strength" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock3Drug4" id="txtBlock3Drug4Amount" controlID="txtBlock3Drug4Amount" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="padding:0px"> 
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width:180px" />
+                                        <col style="width:40px"/>
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>Adjuvant : </td>
+                                        <td style="text-align:center"></td>
+                                        <td style="text-align:center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock3Adjuvant1" class="chkForm chkBlock3Field" controlID="chkBlock3Adjuvant1"/> Fentanyl (micro)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock3Adjuvant1" id="txtBlock3Adjuvant1Amount" controlID="txtBlock3Adjuvant1Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock3Adjuvant2" class="chkForm chkBlock3Field" controlID="chkBlock3Adjuvant2"/> Petidine (mg)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock3Adjuvant2" id="txtBlock3Adjuvant2Amount" controlID="txtBlock3Adjuvant2Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock3Adjuvant3" class="chkForm chkBlock3Field" controlID="chkBlock3Adjuvant3"/> Morphine (mg)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock3Adjuvant3" id="txtBlock3Drug3Adjuvant" controlID="txtBlock3Drug3Adjuvant" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock3Adjuvant4" class="chkForm chkBlock3Field" controlID="chkBlock3Adjuvant4"/> Dexa (mg)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock3Adjuvant4" id="txtBlock3Drug4Adjuvant" controlID="txtBlock3Drug4Adjuvant" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock3Adjuvant5" class="chkForm chkBlock3Field" controlID="chkBlock3Adjuvant5"/> Adrenalin (micro/ml)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock3Adjuvant5" id="txtBlock3Drug5Adjuvant" controlID="txtBlock3Drug5Adjuvant" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn4">Comment</td>
+                            <td> <textarea class="txtForm chkBlock3Field" controlID="txtBlock3Comment" rows="2" style="width:98%" disabled="disabled"></textarea></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td class="tdColumn3">Time</td>
+                            <td colspan="2"> <input type="text" class="txtForm chkBlock3Field" id="txtBlock4DateTime" controlID="txtBlock4DateTime" style="width:180px;" disabled="disabled" /></td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Attempts</td>
+                            <td> <input type="number" min="1" max="3" class="txtForm chkBlock4Field" controlID="txtBlock4Attempts" style="width:60px;" disabled="disabled" /></td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Neddle</td>
+                            <td colspan="2"> 
+                                <select id="ddlBlock4Neddle" class="ddlForm chkBlock4Field" controlID="ddlBlock4Neddle" style="width:98%" disabled="disabled">
+                                    <option value="" selected></option>
+                                    <option value="01">25G</option>
+                                    <option value="02">26G</option>
+                                    <option value="03">27G</option>
+                                    <option value="04">29G</option>
+                                    <option value="05">EpiSpin</option>
+                                    <option value="06">Espocan</option>
+                                    <option value="07">SonoPlex 50 mm</option>
+                                    <option value="08">SonoPlex 80 mm</option>
+                                    <option value="09">SonoPlex 100 mm</option>
+                                    <option value="10">PlexoLong 50 mm</option>
+                                    <option value="11">PlexoLong 100 mm</option>
+                                    <option value="12">IntraLong</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Location</td>
+                            <td> <input type="text" class="txtForm chkBlock4Field" controlID="txtBlock4Location" style="width:98%;" disabled="disabled"></td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Position</td>
+                            <td colspan="2"> 
+                                <select id="ddlBlock4Position" class="ddlForm chkBlock4Field" controlID="ddlBlock4Position" style="width:98%" disabled="disabled">
+                                    <option value="" selected></option>
+                                    <option value="1">Supine</option>
+                                    <option value="2">Prone</option>
+                                    <option value="3">Lateral</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="padding:0px"> 
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width:180px" />
+                                        <col style="width:40px"/>
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>Drugs : </td>
+                                        <td style="text-align:center">%</td>
+                                        <td style="text-align:center">ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock4Drug1" class="chkForm chkBlock4Field" controlID="chkBlock4Drug1"/> Lidocain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock4Drug1" id="txtBlock4Drug1Strength" controlID="txtBlock4Drug1Strength" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock4Drug1" id="txtBlock4Drug1Amount" controlID="txtBlock4Drug1Amount" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock4Drug2" class="chkForm chkBlock4Field" controlID="chkBlock4Drug2"/> Bupivacain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock4Drug2" id="Text5" controlID="txtBlock4Drug2Strength" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock4Drug2" id="Text6" controlID="txtBlock4Drug2Amount" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock4Drug3" class="chkForm chkBlock4Field" controlID="chkBlock4Drug3"/> Levobupivacain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock4Drug3" id="Text7" controlID="txtBlock3Drug3Strength" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock4Drug3" id="Text8" controlID="txtBlock3Drug3Amount" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock4Drug4" class="chkForm chkBlock4Field" controlID="chkBlock4Drug4"/> Ropivacain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock4Drug4" id="txtBlock3Drug4Strength" controlID="txtBlock3Drug4Strength" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock4Drug4" id="txtBlock3Drug4Amount" controlID="txtBlock3Drug4Amount" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="padding:0px"> 
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width:180px" />
+                                        <col style="width:40px"/>
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>Adjuvant : </td>
+                                        <td style="text-align:center"></td>
+                                        <td style="text-align:center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock4Adjuvant1" class="chkForm chkBlock4Field" controlID="chkBlock4Adjuvant1"/> Fentanyl (micro)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock4Adjuvant1" id="Text11" controlID="txtBlock4Adjuvant1Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock4Adjuvant2" class="chkForm chkBlock4Field" controlID="chkBlock4Adjuvant2"/> Petidine (mg)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock4Adjuvant2" id="txtBlock4Adjuvant2Amount" controlID="txtBlock4Adjuvant2Amount" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock4Adjuvant3" class="chkForm chkBlock4Field" controlID="chkBlock4Adjuvant3"/> Morphine (mg)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock4Adjuvant3" id="txtBlock4Drug3Adjuvant" controlID="txtBlock4Drug3Adjuvant" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock4Adjuvant4" class="chkForm chkBlock4Field" controlID="chkBlock4Adjuvant4"/> Dexa (mg)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock4Adjuvant4" id="txtBlock4Drug4Adjuvant" controlID="txtBlock4Drug4Adjuvant" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock4Adjuvant5" class="chkForm chkBlock4Field" controlID="chkBlock4Adjuvant5"/> Adrenalin (micro/ml)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock4Adjuvant5" id="txtBlock4Drug5Adjuvant" controlID="txtBlock4Drug5Adjuvant" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn4">Comment</td>
+                            <td> <textarea class="txtForm chkBlock4Field" controlID="txtBlock4Comment" rows="2" style="width:98%" disabled="disabled"></textarea></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td class="tdColumn3">Time</td>
+                            <td colspan="2"> <input type="text" class="txtForm chkBlock5Field" id="txtBlock5DateTime" controlID="txtBlock4DateTime" style="width:180px;" disabled="disabled" /></td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Attempts</td>
+                            <td> <input type="number" min="1" max="3" class="txtForm chkBlock5Field" controlID="txtBlock5Attempts" style="width:60px;" disabled="disabled" /></td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Neddle</td>
+                            <td colspan="2"> 
+                                <select id="ddlBlock5Neddle" class="ddlForm chkBlock5Field" controlID="ddlBlock5Neddle" style="width:98%" disabled="disabled">
+                                    <option value="" selected></option>
+                                    <option value="01">25G</option>
+                                    <option value="02">26G</option>
+                                    <option value="03">27G</option>
+                                    <option value="04">29G</option>
+                                    <option value="05">EpiSpin</option>
+                                    <option value="06">Espocan</option>
+                                    <option value="07">SonoPlex 50 mm</option>
+                                    <option value="08">SonoPlex 80 mm</option>
+                                    <option value="09">SonoPlex 100 mm</option>
+                                    <option value="10">PlexoLong 50 mm</option>
+                                    <option value="11">PlexoLong 100 mm</option>
+                                    <option value="12">IntraLong</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Location</td>
+                            <td> <input type="text" class="txtForm chkBlock5Field" controlID="txtBlock5Location" style="width:98%;" disabled="disabled"></td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Position</td>
+                            <td colspan="2"> 
+                                <select id="Select1" class="ddlForm chkBlock5Field" controlID="ddlBlock5Position" style="width:98%" disabled="disabled">
+                                    <option value="" selected></option>
+                                    <option value="1">Supine</option>
+                                    <option value="2">Prone</option>
+                                    <option value="3">Lateral</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="padding:0px"> 
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width:180px" />
+                                        <col style="width:40px"/>
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>Drugs : </td>
+                                        <td style="text-align:center">%</td>
+                                        <td style="text-align:center">ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock5Drug1" class="chkForm chkBlock5Field" controlID="chkBlock5Drug1"/> Lidocain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock5Drug1" id="txtBlock5Drug1Strength" controlID="txtBlock5Drug1Strength" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock5Drug1" id="txtBlock5Drug1Amount" controlID="txtBlock5Drug1Amount" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock5Drug2" class="chkForm chkBlock5Field" controlID="chkBlock5Drug2"/> Bupivacain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock5Drug2" id="txtBlock5Drug2Strength" controlID="txtBlock5Drug2Strength" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock5Drug2" id="txtBlock5Drug2Amount" controlID="txtBlock5Drug2Amount" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock5Drug3" class="chkForm chkBlock5Field" controlID="chkBlock5Drug3"/> Levobupivacain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock5Drug3" id="txtBlock5Drug3Strength" controlID="txtBlock5Drug3Strength" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock5Drug3" id="txtBlock5Drug3Amount" controlID="txtBlock5Drug3Amount" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             <input type="checkbox" id="chkBlock5Drug4" class="chkForm chkBlock5Field" controlID="chkBlock5Drug4"/> Ropivacain                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock4Drug4" id="txtBlock5Drug4Strength" controlID="txtBlock5Drug4Strength" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock4Drug4" id="txtBlock5Drug4Amount" controlID="txtBlock5Drug4Amount" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="padding:0px"> 
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width:180px" />
+                                        <col style="width:40px"/>
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>Adjuvant : </td>
+                                        <td style="text-align:center"></td>
+                                        <td style="text-align:center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock5Adjuvant1" class="chkForm chkBlock5Field" controlID="chkBlock5Adjuvant1"/> Fentanyl (micro)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock5Adjuvant1" id="txtBlock5Adjuvant1Amount" controlID="txtBlock5Adjuvant1Amount" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock5Adjuvant2" class="chkForm chkBlock5Field" controlID="chkBlock5Adjuvant2"/> Petidine (mg)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock5Adjuvant2" id="txtBlock5Adjuvant2Amount" controlID="txtBlock5Adjuvant2Amount" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock5Adjuvant3" class="chkForm chkBlock5Field" controlID="chkBlock5Adjuvant3"/> Morphine (mg)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock5Adjuvant3" id="txtBlock5Drug3Adjuvant" controlID="txtBlock5Drug3Adjuvant" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock5Adjuvant4" class="chkForm chkBlock5Field" controlID="chkBlock5Adjuvant4"/> Dexa (mg)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock5Adjuvant4" id="txtBlock5Drug4Adjuvant" controlID="txtBlock5Drug4Adjuvant" style="width:40px; text-align:right" disabled="disabled" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                             <input type="checkbox" id="chkBlock5Adjuvant6" class="chkForm chkBlock6Field" controlID="chkBlock5Adjuvant6"/> Adrenalin (micro/ml)                                           
+                                        </td>
+                                        <td>
+                                             <input type="text" class="txtForm chkBlock5Adjuvant6" id="txtBlock5Drug6Adjuvant" controlID="txtBlock5Drug5Adjuvant" style="width:40px; text-align:right" disabled="disabled">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn4">Comment</td>
+                            <td> <textarea class="txtForm chkBlock5Field" controlID="txtBlock5Comment" rows="2" style="width:98%" disabled="disabled"></textarea></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</div>

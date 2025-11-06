@@ -1,0 +1,810 @@
+﻿<head>
+    <style type="text/css">
+        .style1
+        {
+            height: 25px;
+        }
+    </style>
+</head>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="0">
+            <colgroup>
+                <col width="20px" />
+                <col width="20px" />
+                <col width="150px" />
+                <col width="80px" />
+                <col width="50px" />
+                <col width="150px" />
+                <col width="80px" />
+                <col width="50px" />
+                <col width="150px" />
+                <col width="80px" />
+                <col width="50px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="12"><label style="font-weight:bold; text-decoration:underline"class="lblGroupTitle" controlID = "lblGroup01">ASESMENT PASIEN TAHAP MENJELANG AKHIR KEHIDUPAN</label></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="font-weight:bold;" class="style1"><label>Sumber Data</label></td>
+                <td colspan="9" class="style1">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="50%" />
+                            <col width="50%" />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_99" id="opt401_006_101" class="chkForm" controlID="opt401_006_101"/> Pasien</td>
+                            <td><input type="radio" name="optForm401_006_99" id="opt401_006_102" class="chkForm" controlID="opt401_006_102"/> Keluarga / Orang Terdekat</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="12"><br /></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;">I</td>
+                <td style="font-weight:bold;" colspan="6"><label>ASESMEN FAKTOR FISIOLOGIS</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;">01</td>
+                <td style="font-weight:bold;" colspan="10"><label>Kondisi Umum</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="10"> <input type="checkbox" id="chk401_006_01" class="chkForm" controlID="chk401_006_01"/> Gelisah</td>   
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="10"> <input type="checkbox" id="chk401_006_02" class="chkForm" controlID="chk401_006_02"/> Berontak</td>   
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="10"> <input type="checkbox" id="chk401_006_03" class="chkForm" controlID="chk401_006_03"/> Lemah</td>   
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;">02</td>
+                <td style="font-weight:bold;" colspan="10"><label>Tanda-tanda Vital</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><label>Tekanan Darah</label></td>   
+                <td><input type="text" id="txt401_006_01" class="txtForm" controlID="txt401_006_01" style="width:80px; text-align:right" /></td>
+                <td><label>mm/hg</label></td>   
+                <td style="padding-left : 10px"><label>Suhu</label></td>   
+                <td><input type="text" id="txt401_006_02" class="txtForm" controlID="txt401_006_02" style="width:80px; text-align:right" /></td>
+                <td>°C</td>
+                <td style="padding-left : 10px"><label>RR</label></td>   
+                <td><input type="text" id="txt401_006_03" class="txtForm" controlID="txt401_006_03" style="width:80px; text-align:right" /></td>
+                <td>x/menit</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><label>Nadi</label></td>   
+                <td><input type="text" id="txt401_006_04" class="txtForm" controlID="txt401_006_04" style="width:80px; text-align:right" /></td>
+                <td><label>x/menit</label></td>   
+                <td colspan="6">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="22%" />
+                            <col width="22%" />
+                            <col width="22%" />
+                            <col width="36%" />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_01" id="opt401_006_01" class="chkForm" controlID="opt401_006_01"/> Reguler</td>
+                            <td><input type="radio" name="optForm401_006_01" id="opt401_006_02" class="chkForm" controlID="opt401_006_02"/> Ireguler</td>
+                            <td><input type="radio" name="optForm401_006_01" id="opt401_006_03" class="chkForm" controlID="opt401_006_03"/> Kuat</td>
+                            <td><input type="radio" name="optForm401_006_01" id="opt401_006_04" class="chkForm" controlID="opt401_006_04"/> Lambat dan Lemah</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;">03</td>
+                <td style="font-weight:bold;"><label>Kesadaran</label></td>
+                <td colspan="9">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="20%" />
+                            <col width="20%" />
+                            <col width="20%" />
+                            <col width="20%" />
+                            <col />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_02" id="opt401_006_05" class="optForm" controlID="opt401_006_05"/> Compos Mentis</td>
+                            <td><input type="radio" name="optForm401_006_02" id="opt401_006_06" class="optForm" controlID="opt401_006_06"/> Apatis</td>
+                            <td><input type="radio" name="optForm401_006_02" id="opt401_006_07" class="optForm" controlID="opt401_006_07"/> Somnolent</td>
+                            <td><input type="radio" name="optForm401_006_02" id="opt401_006_08" class="optForm" controlID="opt401_006_08"/> Soporocoma</td>
+                            <td><input type="radio" name="optForm401_006_02" id="opt401_006_09" class="optForm" controlID="opt401_006_09"/> Coma</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><label>GCS</label></td>   
+                <td><input type="text" id="txt401_006_05" class="txtForm" controlID="txt401_006_05" style="width:80px; text-align:right" /></td>
+                <td colspan="7" style="padding-left:30px">
+                    <table border="0" cellpadding="1" cellspacing="0">
+                        <tr>
+                            <td>E </td>
+                            <td style="padding:5px"><input type="text" id="txt401_006_06" class="txtForm" controlID="txt401_006_06" style="width:60px; text-align:right" /></td>
+                            <td>M </td>
+                            <td><input type="text" id="txt401_006_07" class="txtForm" controlID="txt401_006_07" style="width:60px; text-align:right" /></td>
+                            <td style="padding:5px">V </td>
+                            <td><input type="text" id="txt401_006_08" class="txtForm" controlID="txt401_006_08" style="width:60px; text-align:right" /></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;">04</td>
+                <td style="font-weight:bold;"><label>Pernafasan</label></td>
+                <td colspan="9">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="50%" />
+                            <col width="50%" />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_20" id="opt401_006_10" class="chkForm" controlID="opt401_006_10"/> Ada Kelainan</td>
+                            <td><input type="radio" name="optForm401_006_20" id="opt401_006_11" class="chkForm" controlID="opt401_006_11"/> Tidak Ada Kelainan</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td> <input type="checkbox" id="chk401_006_04" class="chkForm" controlID="chk401_006_04"/> Dispnea</td>   
+                <td colspan="2"> <input type="checkbox" id="chk401_006_05" class="chkForm" controlID="chk401_006_05"/> <i>Kusmaul</i></td>   
+                <td> <input type="checkbox" id="chk401_006_06" class="chkForm" controlID="chk401_006_06"/> <i>Cheynestokes</i></td>   
+                <td colspan="2"> <input type="checkbox" id="chk401_006_07" class="chkForm" controlID="chk401_006_07"/> <i>Orthopnoe</i></td>   
+                <td style="padding-right : 10px; text-align: right"><label>SPO<sub>2</sub></label></td>   
+                <td><input type="text" id="txt401_006_09" class="txtForm" controlID="txt401_006_09" style="width:80px; text-align:right" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="2"> <input type="checkbox" id="chk401_006_08" class="chkForm" controlID="chk401_006_08"/> Nafas cepat dan dangkal</td>  
+                <td colspan="2"> <input type="checkbox" id="chk401_006_09" class="chkForm" controlID="chk401_006_09"/> Nafas Lambat</td>   
+                <td colspan="2"> <input type="checkbox" id="chk401_006_10" class="chkForm" controlID="chk401_006_10"/> Nafas tidak teratur</td>   
+                <td colspan="2"> <input type="checkbox" id="chk401_006_11" class="chkForm" controlID="chk401_006_11"/> Ada Sekret</td>   
+                <td colspan="2"> <input type="checkbox" id="chk401_006_12" class="chkForm" controlID="chk401_006_12"/> Nafas melalui mulut</td>   
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="2"><label>Pemakaian Oksigen</label></td>   
+                <td colspan="9">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="210px" />
+                            <col />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_03" id="opt401_006_12" class="optForm" controlID="opt401_006_12"/> Canul Nasal / Binasal</td>
+                            <td>
+                                <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                                    <tr>
+                                        <td><input type="radio" name="optForm401_006_03" id="opt401_006_13" class="optForm" controlID="opt401_006_13"/> Masker</td>
+                                        <td style="padding:5px"><input type="text" id="txt401_006_10" class="txtForm" controlID="txt401_006_10" style="width:100px; text-align:right" /></td>
+                                        <td><input type="radio" name="optForm401_006_03" id="opt401_006_14" class="optForm" controlID="opt401_006_14"/> Lainnya</td>
+                                        <td style="padding:5px"><input type="text" id="txt401_006_11" class="txtForm" controlID="txt401_006_11" style="width:120px; text-align:right" /></td>
+                                    </tr>
+                                </table>                               
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;">05</td>
+                <td style="font-weight:bold;" colspan="3"><label>Perlambatan dalam sirkulasi</label></td>
+                <td colspan="8">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="50%" />
+                            <col width="50%" />
+                        </colgroup>
+                        <tr>
+                            <td><input type="checkbox" id="chk401_006_13" class="chkForm" controlID="chk401_006_13"/> Sianonis Ekstrimitas</td>
+                            <td><input type="checkbox" id="chk401_006_14" class="chkForm" controlID="chk401_006_14"/> Kemunduran Sensasi</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;"></td>
+                <td colspan="3"><label>Kulit dingin pada daerah</label></td>
+                <td colspan="8">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                        <colgroup>
+                            <col width="25%" />
+                            <col width="25%" />
+                        </colgroup>
+                        <tr>
+                            <td><input type="checkbox" id="chk401_006_15" class="chkForm" controlID="chk401_006_15"/> Kaki</td>
+                            <td><input type="checkbox" id="chk401_006_16" class="chkForm" controlID="chk401_006_16"/> Tangan</td>
+                            <td><input type="checkbox" id="chk401_006_17" class="chkForm" controlID="chk401_006_17"/> Telinga</td>
+                            <td><input type="checkbox" id="chk401_006_18" class="chkForm" controlID="chk401_006_18"/> Hidung</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+           <tr>
+                <td></td>
+                <td style="font-weight:bold;">06</td>
+                <td style="font-weight:bold;" colspan="2"><label>Kehilangan Tonus Otot</label></td>
+                <td colspan="8">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="50%" />
+                            <col width="50%" />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_04" id="opt401_006_15" class="chkForm" controlID="opt401_006_15"/> Ada Kelainan</td>
+                            <td><input type="radio" name="optForm401_006_04" id="opt401_006_16" class="chkForm" controlID="opt401_006_16"/> Tidak Ada Kelainan</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="5"> <input type="checkbox" id="chk401_006_19" class="chkForm" controlID="chk401_006_19"/> Relaksasi Otot Muka sehingga dagu turun</td>  
+                <td colspan="5"> <input type="checkbox" id="chk401_006_20" class="chkForm" controlID="chk401_006_20"/> Kesulitan dalam berbicara</td>   
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="5"> <input type="checkbox" id="chk401_006_21" class="chkForm" controlID="chk401_006_21"/> Kesulitan dalam proses menelan dan hilangnya reflek menelan</td>  
+                <td colspan="5"> <input type="checkbox" id="chk401_006_22" class="chkForm" controlID="chk401_006_22"/> <i>Inkontinentia uri dan alvi</i></td>   
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="10"> <input type="checkbox" id="chk401_006_23" class="chkForm" controlID="chk401_006_23"/> Penurunan Kegiatan traktus Gastrointestinal ditandai : Naussea, Muntah, Perut Kembung, Obstipasi</td>  
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="10"> <input type="checkbox" id="chk401_006_24" class="chkForm" controlID="chk401_006_24"/> Gerakan Tubuh yang Terbatas</td>  
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;">07</td>
+                <td style="font-weight:bold;" colspan="10"><label>Nutrisi dan Cairan</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="5"> <input type="checkbox" id="chk401_006_25" class="chkForm" controlID="chk401_006_25"/> Bibir dan lidah kering, pecah-pecah, bengkak</td>  
+                <td colspan="5"> <input type="checkbox" id="chk401_006_26" class="chkForm" controlID="chk401_006_26"/> Dehidrasi</td>   
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="5"> <input type="checkbox" id="chk401_006_27" class="chkForm" controlID="chk401_006_27"/> Singultus</td>  
+                <td colspan="5"> <input type="checkbox" id="chk401_006_28" class="chkForm" controlID="chk401_006_28"/> Oedema anasarka</td>   
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><label>BB</label></td>   
+                <td colspan="9"><input type="text" id="txt401_006_12" class="txtForm" controlID="txt401_006_12" style="width:80px; text-align:right" /> kg</td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;"></td>
+                <td style="font-weight:bold;">08</td>
+                <td style="font-weight:bold;" colspan="2"><label>Nyeri</label></td>   
+                <td colspan="9">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="210px" />
+                            <col />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_05" id="opt401_006_17" class="optForm" controlID="opt401_006_17"/> Tidak</td>
+                            <td>
+                                <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                                    <tr>
+                                        <td><input type="radio" name="optForm401_006_05" id="opt401_006_18" class="optForm" controlID="opt401_006_18"/> Ya</td>
+                                        <td style="padding-left:5px"><label>,Skala</label></td>   
+                                        <td style="padding:5px"><input type="text" id="txt401_006_13" class="txtForm" controlID="txt401_006_13" style="width:50px; text-align:right" /></td>
+                                        <td style="padding-left:5px"><label>dari</label></td>   
+                                        <td style="padding:5px"><input type="text" id="txt401_006_14" class="txtForm" controlID="txt401_006_14" style="width:50px; text-align:right" /></td>
+                                        <td> <input type="checkbox" id="chk401_006_29" class="chkForm" controlID="chk401_006_29"/> Ambang nyeri menurun</td>   
+                                    </tr>
+                                </table>                               
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;">09</td>
+                <td style="font-weight:bold;" colspan="10"><label>Sensori</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="3"> <input type="checkbox" id="chk401_006_30" class="chkForm" controlID="chk401_006_30"/> Penglihatan Kabur</td>  
+                <td colspan="3"> <input type="checkbox" id="chk401_006_31" class="chkForm" controlID="chk401_006_31"/> Reflek Berkedip hilang</td>  
+                <td colspan="4"> <input type="checkbox" id="chk401_006_32" class="chkForm" controlID="chk401_006_32"/> Pendengaran Menurun</td>     
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="3"> <input type="checkbox" id="chk401_006_33" class="chkForm" controlID="chk401_006_33"/> Konsentrasi Menurun</td>  
+                <td colspan="7"> <input type="checkbox" id="chk401_006_34" class="chkForm" controlID="chk401_006_34"/> Gangguan Penciuman dan Pendengaran</td>      
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;">10</td>
+                <td style="font-weight:bold;" colspan="2"><label>Integumen dan Mobilitas</label></td>
+                <td colspan="2"> <input type="checkbox" id="chk401_006_35" class="chkForm" controlID="chk401_006_35"/> Mobilitas Pasif</td> 
+                <td colspan="2"> <input type="checkbox" id="chk401_006_36" class="chkForm" controlID="chk401_006_36"/> Kulit Kering</td> 
+                <td colspan="5"> <input type="checkbox" id="chk401_006_37" class="chkForm" controlID="chk401_006_37"/> Dekubitus</td> 
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;"></td>
+                <td colspan="3"><label>Ekstrimitas</label></td>
+                <td colspan="8">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td><input type="checkbox" id="chk401_006_38" class="chkForm" controlID="chk401_006_38"/> Hangat</td>
+                            <td><input type="checkbox" id="chk401_006_39" class="chkForm" controlID="chk401_006_39"/> Dingin</td>
+                            <td><input type="checkbox" id="chk401_006_40" class="chkForm" controlID="chk401_006_40"/> Sianotik</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;">11</td>
+                <td style="font-weight:bold;" colspan="10"><label>Faktor-faktor yang meningkatkan dan membangkitkan gejala fisik</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="3"> <input type="checkbox" id="chk401_006_41" class="chkForm" controlID="chk401_006_41"/> Melakukan Aktifitas Fisik</td>  
+                <td colspan="3"> <input type="checkbox" id="chk401_006_42" class="chkForm" controlID="chk401_006_42"/> Pindah posisi</td>  
+                <td colspan="4"> <input type="checkbox" id="chk401_006_43" class="chkForm" controlID="chk401_006_43"/> Lainnya<input type="text" id="txt401_006_15" class="txtForm" controlID="txt401_006_15" style="width:120px; text-align:Left; margin-left:15px" /></td>    
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;"></td>
+                <td style="font-weight:bold;" colspan="10"><br /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;"></td>
+                <td style="font-weight:bold;" colspan="10"><label>Manajemen Gejala Saat Ini</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;"></td>
+                <td style="font-weight:bold;" colspan="10"><label>Masalah Keperawatan :</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="2"> <input type="checkbox" id="chk401_006_44" class="chkForm" controlID="chk401_006_44"/> Nausea</td>  
+                <td colspan="2"> <input type="checkbox" id="chk401_006_45" class="chkForm" controlID="chk401_006_45"/> Nyeri</td>  
+                <td colspan="2"> <input type="checkbox" id="chk401_006_46" class="chkForm" controlID="chk401_006_46"/> Konstipasi</td>    
+                <td colspan="2"> <input type="checkbox" id="chk401_006_47" class="chkForm" controlID="chk401_006_47"/> Defisit Perawatan Diri</td>    
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="3"> <input type="checkbox" id="chk401_006_48" class="chkForm" controlID="chk401_006_48"/> Pola Nafas tidak Efektif</td>  
+                <td colspan="3"> <input type="checkbox" id="chk401_006_49" class="chkForm" controlID="chk401_006_49"/> Perubahan Persepsi Sensori</td>   
+                <td colspan="3"> <input type="checkbox" id="chk401_006_50" class="chkForm" controlID="chk401_006_50"/> Bersihan Jalan Nafas tidak Efektif</td>  
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="4"> <input type="checkbox" id="chk401_006_51" class="chkForm" controlID="chk401_006_51"/> Gangguan Keseimbangan Cairan dan Elektrolit</td>  
+                <td colspan="6"> <input type="checkbox" id="chk401_006_52" class="chkForm" controlID="chk401_006_52"/><input type="text" id="txt401_006_16" class="txtForm" controlID="txt401_006_16" style="width:250px; padding-left:20px; text-align:Left" /></td> 
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="10"><br /><label>(Selanjutnya untuk Masalah Keperawatan, Implementasi dan Evaluasi, dicatat dalam Asuhan Keperawatan Pasien)</label></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;" colspan="12"><hr /></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;">II</td>
+                <td style="font-weight:bold;" colspan="6"><label>ASESMEN ORIENTASI SPIRITUAL PASIEN DAN KELUARGA</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="2"> <input type="checkbox" id="chk401_006_53" class="chkForm" controlID="chk401_006_53"/> Putus Asa</td>  
+                <td colspan="2"> <input type="checkbox" id="chk401_006_54" class="chkForm" controlID="chk401_006_54"/> Rasa Bersalah</td>   
+                <td colspan="3"> <input type="checkbox" id="chk401_006_55" class="chkForm" controlID="chk401_006_55"/> Makin mendekatkan diri kepada Tuhan</td>  
+                <td colspan="3"> <input type="checkbox" id="chk401_006_56" class="chkForm" controlID="chk401_006_56"/> Berontak akan keadaannya</td>   
+            </tr>
+            <tr>
+                <td style="font-weight:bold;"></td>
+                <td style="font-weight:bold;"></td>
+                <td colspan="3"><label>Perlu didoakan</label></td>   
+                <td colspan="7">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="210px" />
+                            <col />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_06" id="opt401_006_19" class="optForm" controlID="opt401_006_19"/> Tidak</td>
+                            <td>
+                                <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                                    <tr>
+                                        <td><input type="radio" name="optForm401_006_06" id="opt401_006_20" class="optForm" controlID="opt401_006_20"/> Ya</td>
+                                        <td style="padding-left:5px"><label>, Oleh</label></td>   
+                                        <td style="padding:5px"><input type="text" id="txt401_006_17" class="txtForm" controlID="txt401_006_17" style="width:200px; text-align:Left" /></td>
+                                    </tr>
+                                </table>                               
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;"></td>
+                <td style="font-weight:bold;"></td>
+                <td colspan="3"><label>Perlu Bimbingan dan Pendampingan Rohani</label></td>   
+                <td colspan="7">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="210px" />
+                            <col />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_07" id="opt401_006_21" class="optForm" controlID="opt401_006_21"/> Tidak</td>
+                            <td>
+                                <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                                    <tr>
+                                        <td><input type="radio" name="optForm401_006_07" id="opt401_006_22" class="optForm" controlID="opt401_006_22"/> Ya</td>
+                                        <td style="padding-left:5px"><label>, Oleh</label></td>   
+                                        <td style="padding:5px"><input type="text" id="Text1" class="txtForm" controlID="txt401_006_17" style="width:200px; text-align:Left" /></td>
+                                    </tr>
+                                </table>                               
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;"></td>
+                <td style="font-weight:bold;"></td>
+                <td colspan="4"><label>Perlu Bimbingan dengan Tokoh Budaya dan Kepercayaan Setempat</label></td>   
+                <td colspan="6">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="210px" />
+                            <col />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_08" id="opt401_006_23" class="optForm" controlID="opt401_006_23"/> Tidak</td>
+                            <td>
+                                <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                                    <tr>
+                                        <td><input type="radio" name="optForm401_006_08" id="opt401_006_24" class="optForm" controlID="opt401_006_24"/> Ya</td>
+                                        <td style="padding-left:5px"><label>, Oleh</label></td>   
+                                        <td style="padding:5px"><input type="text" id="Text2" class="txtForm" controlID="txt401_006_17" style="width:200px; text-align:Left" /></td>
+                                    </tr>
+                                </table>                               
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;" colspan="12"><hr /></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;">III</td>
+                <td style="font-weight:bold;" colspan="6"><label>ASESMEN STATUS PSIKOSOSIAL PASIEN DAN KELUARGA</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;">1</td>
+                <td colspan="4"> <label>Apakah ada orang yang ingin dihubungi saat ini ?</label></td>  
+                <td colspan="6">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="80px" />
+                            <col width="80px" />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_09" id="opt401_006_25" class="chkForm" controlID="opt401_006_25"/> Tidak</td>
+                            <td><input type="radio" name="optForm401_006_09" id="opt401_006_26" class="chkForm" controlID="opt401_006_26"/> Ya</td>
+                        </tr>
+                    </table>
+                </td>   
+            </tr>
+            <tr>
+                <td style="font-weight:bold;"></td>
+                <td style="font-weight:bold;"></td>
+                <td colspan="3"><label>Nama Orang yang dihubungi</label></td>   
+                <td colspan="7">
+                    <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td style="padding:5px"><input type="text" id="txt401_006_18" class="txtForm" controlID="txt401_006_18" style="width:200px; text-align:Left" /></td>
+                            <td style="padding-left:5px"><label>, Hubungan dengan Pasien</label></td>   
+                            <td style="padding:5px"><input type="text" id="txt401_006_19" class="txtForm" controlID="txt401_006_19" style="width:200px; text-align:Left" /></td>
+                        </tr>
+                    </table>   
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;"></td>
+                <td style="font-weight:bold;"></td>
+                <td colspan="3"><label>Lokasi</label></td>   
+                <td colspan="7">
+                    <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td style="padding:5px"><input type="text" id="txt401_006_20" class="txtForm" controlID="txt401_006_20" style="width:200px; text-align:Left" /></td>
+                            <td style="padding-left:5px"><label>, No. Telephone/HP</label></td>   
+                            <td style="padding:5px"><input type="text" id="txt401_006_21" class="txtForm" controlID="txt401_006_21" style="width:200px; text-align:Left" /></td>
+                        </tr>
+                    </table>   
+                </td>
+            </tr>
+            <tr>
+                <td class="style1"></td>
+                <td style="font-weight:bold;" class="style1">2</td>
+                <td colspan="3"> <label>Bagaimana rencana perawatan selanjutnya ?</label></td>  
+                <td colspan="7">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="50%" />
+                            <col width="50%" />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_10" id="opt401_006_27" class="chkForm" controlID="opt401_006_27"/> Tetap Dirawat di Rumah Sakit</td>
+                            <td><input type="radio" name="optForm401_006_10" id="opt401_006_28" class="chkForm" controlID="opt401_006_28"/> Dirawat di Rumah</td>
+                        </tr>
+                    </table>
+                </td>   
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;"></td>
+                <td style="font-weight:bold;" colspan="10"><label><i>Jika dilakukan perawatan di rumah :</i></label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;"></td>
+                <td colspan="3"> <label>Apakah ada yang merawat di rumah ?</label></td>  
+                <td colspan="7">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="50%" />
+                            <col width="50%" />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_11" id="opt401_006_29" class="chkForm" controlID="opt401_006_29"/> Ya</td>
+                            <td><input type="radio" name="optForm401_006_11" id="opt401_006_30" class="chkForm" controlID="opt401_006_30"/> Tidak</td>
+                        </tr>
+                    </table>
+                </td>   
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;"></td>
+                <td colspan="4"> <label>Jika Tidak, Apakah membutuhkan fasilitas dari Rumah Sakit ?</label></td>  
+                <td colspan="6">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="50%" />
+                            <col width="50%" />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_12" id="opt401_006_31" class="chkForm" controlID="opt401_006_31"/> Ya</td>
+                            <td><input type="radio" name="optForm401_006_12" id="opt401_006_32" class="chkForm" controlID="opt401_006_32"/> Tidak</td>
+                        </tr>
+                    </table>
+                </td>   
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;"></td>
+                <td colspan="4"> <label>Apakah Lingkungan di rumah sudah disiapkan ?</label></td>  
+                <td colspan="6">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="50%" />
+                            <col width="50%" />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_13" id="opt401_006_33" class="chkForm" controlID="opt401_006_33"/> Ya</td>
+                            <td><input type="radio" name="optForm401_006_13" id="opt401_006_34" class="chkForm" controlID="opt401_006_34"/> Tidak</td>
+                        </tr>
+                    </table>
+                </td>   
+            </tr>
+            <tr>
+                <td style="font-weight:bold;" colspan="12"><hr /></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;">IV</td>
+                <td style="font-weight:bold;" colspan="6"><label>ASESMEN RESPON PASIEN ATAS PENYAKITNYA</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td> <input type="checkbox" id="chk401_006_57" class="chkForm" controlID="chk401_006_57"/> Menyangkal</td>  
+                <td> <input type="checkbox" id="chk401_006_58" class="chkForm" controlID="chk401_006_58"/> Marah</td>   
+                <td colspan="2"> <input type="checkbox" id="chk401_006_59" class="chkForm" controlID="chk401_006_59"/> Sedih/Menangis</td>  
+                <td colspan="2"> <input type="checkbox" id="chk401_006_60" class="chkForm" controlID="chk401_006_60"/> Ketidak berdayaan</td>   
+                <td colspan="3"> <input type="checkbox" id="chk401_006_61" class="chkForm" controlID="chk401_006_61"/> Takut</td> 
+            </tr>
+            <tr>
+                <td style="font-weight:bold;" colspan="12"><hr /></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;">V</td>
+                <td style="font-weight:bold;" colspan="6"><label>ASESMEN RESPON KELUARGA ATAS PENYAKIT PASIEN</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;"></td>
+                <td colspan="10"><label>Respon keluarga terhadap penjelasan tentang Diagnosis, Kondisi dan Prognosis Pasien</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="2"> <input type="checkbox" id="chk401_006_64" class="chkForm" controlID="chk401_006_64"/> Penolakan</td>  
+                <td colspan="2"> <input type="checkbox" id="chk401_006_65" class="chkForm" controlID="chk401_006_65"/> Marah</td>   
+                <td colspan="3"> <input type="checkbox" id="chk401_006_66" class="chkForm" controlID="chk401_006_66"/> Sedih/Menangis</td>  
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="2"> <input type="checkbox" id="chk401_006_67" class="chkForm" controlID="chk401_006_67"/> Rasa Bersalah</td>   
+                <td colspan="2"> <input type="checkbox" id="chk401_006_68" class="chkForm" controlID="chk401_006_68"/> Gangguan Tidur</td> 
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="10"> <input type="checkbox" id="chk401_006_69" class="chkForm" controlID="chk401_006_69"/> Keluarga kurang berkomunikasi dengan pasien</td>  
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="10"> <input type="checkbox" id="chk401_006_70" class="chkForm" controlID="chk401_006_70"/> Keluarga kurang berpartisipasi membuat keputusan dalam perawatan pasien</td>  
+            </tr>
+            <tr>
+                <td style="font-weight:bold;" colspan="12"><hr /></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;">VI</td>
+                <td style="font-weight:bold;" colspan="11"><label>KEBUTUHAN DUKUNGAN ATAU KELONGGARAN PELAYANAN BAGI PASIEN, KELUARGA DAN PEMBERI PELAYANAN LAIN</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="5"> <input type="checkbox" id="chk401_006_73" class="chkForm" controlID="chk401_006_73"/> Pasien perlu didampingi keluarga</td>  
+                <td colspan="5"> <input type="checkbox" id="chk401_006_74" class="chkForm" controlID="chk401_006_74"/> Keluarga dapat mengunjungi pasien di luar waktu berkunjung</td>  
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="5"> <input type="checkbox" id="chk401_006_75" class="chkForm" controlID="chk401_006_75"/> Sahabat dapat mengunjungi pasien di luar waktu berkunjung</td>  
+                <td colspan="5"> <input type="checkbox" id="chk401_006_76" class="chkForm" controlID="chk401_006_76"/> <input type="text" id="txt401_006_21" class="txtForm" controlID="txt401_006_21" style="width:350px; text-align:Left" /></td>  
+            </tr>
+            <tr>
+                <td style="font-weight:bold;" colspan="12"><hr /></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;">VII</td>
+                <td style="font-weight:bold;" colspan="6"><label>KEBUTUHAN AKAN ALTERNATIF ATAU TINGKAT PELAYANAN LAIN</label></td>
+                <td colspan="6">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col width="210px" />
+                            <col />
+                        </colgroup>
+                        <tr>
+                            <td><input type="radio" name="optForm401_006_14" id="opt401_006_35" class="optForm" controlID="opt401_006_35"/> Tidak</td>
+                            <td>
+                                <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                                    <tr>
+                                        <td><input type="radio" name="optForm401_006_14" id="opt401_006_36" class="optForm" controlID="opt401_006_36"/> Ya</td>
+                                        <td style="padding:5px"><input type="text" id="txt401_006_22" class="txtForm" controlID="txt401_006_22" style="width:250px; text-align:Left" /></td>
+                                    </tr>
+                                </table>                               
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;" colspan="12"><hr /></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;">VIII</td>
+                <td style="font-weight:bold;" colspan="10"><label>ASESMEN FAKTOR RISIKO BAGI KELUARGA YANG DI TINGGALKAN</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="2"> <input type="checkbox" id="chk401_006_77" class="chkForm" controlID="chk401_006_77"/> Sedih/Menangis</td>  
+                <td colspan="2"> <input type="checkbox" id="chk401_006_78" class="chkForm" controlID="chk401_006_78"/> Marah</td>  
+                <td colspan="2"> <input type="checkbox" id="chk401_006_79" class="chkForm" controlID="chk401_006_79"/> Rasa Bersalah</td>  
+                <td colspan="3"> <input type="checkbox" id="chk401_006_80" class="chkForm" controlID="chk401_006_80"/> Penurunan Konsentrasi</td>  
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="2"> <input type="checkbox" id="chk401_006_81" class="chkForm" controlID="chk401_006_81"/> Gangguan Tidur</td>  
+                <td colspan="2"> <input type="checkbox" id="chk401_006_82" class="chkForm" controlID="chk401_006_82"/> Panik</td>  
+                <td colspan="2"> <input type="checkbox" id="chk401_006_83" class="chkForm" controlID="chk401_006_83"/> Menyendiri</td>  
+                <td colspan="3"> <input type="checkbox" id="chk401_006_84" class="chkForm" controlID="chk401_006_84"/> Letih/Lelah</td>  
+            </tr>
+            <tr>
+                <td style="font-weight:bold;" colspan="12"><hr /></td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;">IX</td>
+                <td style="font-weight:bold;" colspan="10"><label>RENCANA PERAWATAN SELANJUTNYA</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;"></td>
+                <td style="font-weight:bold;" colspan="10"><input type="radio" name="optForm401_006_15" id="opt401_006_37" class="optForm" controlID="opt401_006_37"/> Tetap dirawat di Rumah Sakit</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="10" style="padding-left: 80px"> <input type="checkbox" id="chk401_006_87" class="chkForm" controlID="chk401_006_87"/> Melanjutkan Pengobatan</td>  
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="10" style="padding-left: 80px"> <input type="checkbox" id="chk401_006_88" class="chkForm" controlID="chk401_006_88"/> DNR dengan pendampingan spiritual</td>  
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight:bold;"></td>
+                <td style="font-weight:bold;" colspan="10"><input type="radio" name="optForm401_006_15" id="opt401_006_38" class="optForm" controlID="opt401_006_38"/> Dirawat di Rumah</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="10" style="padding-left: 80px"> <input type="checkbox" id="chk401_006_89" class="chkForm" controlID="chk401_006_89"/> Perawatan oleh keluarga</td>  
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="10" style="padding-left: 80px"> <input type="checkbox" id="chk401_006_90" class="chkForm" controlID="chk401_006_90"/> Perlu difasilitasi oleh Rumah Sakit</td>  
+            </tr>
+    </table>
+
+    </div>
+</div>
+<script type="text/javascript">
+</script>

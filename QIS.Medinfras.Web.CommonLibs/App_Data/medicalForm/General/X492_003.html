@@ -1,0 +1,202 @@
+<script language="javascript" type="text/javascript" id="dxss_strongkids">
+    $(function () {
+        $("#optMSTForm1").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtMSTParamScore1").val('0');
+            else
+                $("#txtMSTParamScore1").val('2');
+
+            CalculateTotalScore();
+        });
+
+        $("#optMSTForm2").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtMSTParamScore1").val('2');
+            else
+                $("#txtMSTParamScore1").val('0');
+            CalculateTotalScore();
+        });
+
+        $("#optMSTForm3").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtMSTParamScore2").val('1');
+            CalculateTotalScore();
+        });
+
+        $("#optMSTForm4").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtMSTParamScore2").val('2');
+            CalculateTotalScore();
+        });
+
+        $("#optMSTForm5").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtMSTParamScore2").val('3');
+            CalculateTotalScore();
+        });
+
+        $("#optMSTForm6").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtMSTParamScore2").val('4');
+            CalculateTotalScore();
+        });
+
+        $("#optMSTForm7").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtMSTParamScore3").val('1');
+            else
+                $("#txtMSTParamScore3").val('0');
+            CalculateTotalScore();
+        });
+
+        $("#optMSTForm8").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtMSTParamScore3").val('0');
+            else
+                $("#txtMSTParamScore3").val('1');
+            CalculateTotalScore();
+        });
+
+        function CalculateTotalScore() {
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+
+            if ($("#txtMSTParamScore1").val())
+                p1 = parseInt($("#txtMSTParamScore1").val());
+
+            if ($("#txtMSTParamScore2").val())
+                p2 = parseInt($("#txtMSTParamScore2").val());
+
+            if ($("#txtMSTParamScore3").val())
+                p3 = parseInt($("#txtMSTParamScore3").val());
+
+
+            var total = p1 + p2 + p3;
+
+            $("#txtTotalMSTScore").val(total);
+        }
+    });
+
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table border="1" style="border-style: solid;border-collapse: collapse;">
+                <colgroup>
+                    <col style="width:20px" />
+                    <col />
+                    <col style="width:80px" />
+                </colgroup>
+                <tr>
+                    <td colspan="3" style="text-align: center; font-weight: bold">Malnutrition Screening Tool (MST)</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; font-weight:bold">PARAMETER</td>
+                    <td style="text-align: center; font-weight:bold">SKOR</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        01.
+                    </td>
+                    <td>
+                        Apakah pasien mengalami penurunan berat badan yang tidak diinginkan dalam waktu 6 bulan terakhir :
+                        <br />
+                        <div style="padding-top:10px">
+                            <input type="radio" class="optForm" id="optMSTForm1" controlID="optMSTForm1" name="MSTForm1" /> Tidak ada penurunan berat badan
+                            <input type="radio" class="optForm" id="optMSTForm2" controlID="optMSTForm2" name="MSTForm1" /> Tidak yakin / tidak tahu / terasa baju lebih longgar
+                        </div>
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                         <input type="text" readonly="readonly" value="" id="txtMSTParamScore1" style="width:50px; text-align:right" class = "txtForm" controlID = "txtMSTParamScore1" />
+                    </td>
+                </tr>
+				<tr>
+                    <td style="vertical-align:top">
+                        02.
+                    </td>
+					<td>
+						Jika <b>ada penurunan berat badan</b>, berapa penurunan Berat Badan tersebut ? <br />
+						<input type="radio" class="optForm" id="optMSTForm3" controlID="optMSTForm3" name="MSTForm2" /> 1 - 5 kg <br />
+						<input type="radio" class="optForm" id="optMSTForm4" controlID="optMSTForm4" name="MSTForm2" /> 6 - 10 kg <br />
+						<input type="radio" class="optForm" id="optMSTForm5" controlID="optMSTForm5" name="MSTForm2" /> 11 - 15 kg <br />
+						<input type="radio" class="optForm" id="optMSTForm6" controlID="optMSTForm6" name="MSTForm2" /> > 15 kg
+					</td>
+                    <td style="text-align:center; vertical-align:top" >
+                         <input type="text" readonly="readonly" value="" id="txtMSTParamScore2" style="width:50px; text-align:right" class = "txtForm" controlID = "txtMSTParamScore2" />
+                    </td>
+				</tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        03.
+                    </td>
+                    <td>
+                        Apakah asupan makan berkurang karena tidak nafsu makan ? 
+                        <br />
+                        <div style="padding-top:10px">
+                            <input type="radio" class="optForm" id="optMSTForm7" controlID="optMSTForm7" name="MSTForm3" /> Ya
+                            <input type="radio" class="optForm" id="optMSTForm8" controlID="optMSTForm8" name="MSTForm3" /> Tidak
+                        </div>
+                    </td>
+                    <td colspan="2" style="text-align:center; vertical-align:top">
+                         <input type="text" readonly="readonly" value="" id="txtMSTParamScore3" style="width:50px; text-align:right" class = "txtForm" controlID = "txtMSTParamScore3" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; font-weight:bold">TOTAL SCORE</td>
+                    <td style="text-align: center; padding-top: 10px; padding-bottom:10px">
+                         <input type="text" readonly="readonly" value="" id="txtTotalMSTScore" style="width:50px; text-align:right" class = "txtForm" controlID = "txtTotalMSTScore" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        Pasien dengan diagnosa khusus
+                        <br />
+                        <div style="padding-top:10px">
+                            <input type="radio" class="optForm" id="optMSTForm9" controlID="optMSTForm9" name="MSTForm4" /> Ya
+                            <input type="radio" class="optForm" id="optMSTForm10" controlID="optMSTForm10" name="MSTForm4" /> Tidak
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <table border="0" cellpadding="1" cellspacing="0">
+                            <tr>
+                                <td>
+						            Jika <b>YA</b> :
+                                </td>
+                                <td>
+                                    <select id="ddlMST1" class="ddlForm" controlID="ddlMST1" style="width:350px">
+                                        <option value="0" selected></option>
+                                        <option value="01">DM</option>
+                                        <option value="02">Kemoterapi</option>
+                                        <option value="03">Hemodialisa</option>
+                                        <option value="04">Geriatri</option>
+                                        <option value="05">Imunitas</option>
+                                        <option value="06">Obesitas</option>
+                                        <option value="99">Lain-lain</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        Pasien memerlukan konsultasi Gizi
+                        <br />
+                        <div style="padding-top:10px">
+                            <input type="radio" class="optForm" id="optMSTForm11" controlID="optMSTForm11" name="MSTForm5" /> Ya
+                            <input type="radio" class="optForm" id="optMSTForm12" controlID="optMSTForm12" name="MSTForm5" /> Tidak
+					        <br />
+					        <br />
+					        <i><b>Keterangan : </b></i> Total skor nilai gizi (Bila beresiko malnutrisi : konsul dengan ahli gizi) <br />
+					        0-1 : tidak beresiko malnutrisi  <br />
+					        >2 : beresiko malnutrisi <br />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

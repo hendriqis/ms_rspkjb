@@ -1,0 +1,231 @@
+﻿<head>
+    <style type="text/css">
+        .style1
+        {
+            height: 26px;
+        }
+    </style>
+</head>
+<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+
+    var p1 = 0;
+    var p2 = 0;
+    var p3 = 0;
+
+    $(function () {
+        CalculateScore1();
+        CalculateScore2();
+        CalculateScore3();
+
+        $("#chkX202_91_01_01").click(function () {
+            CalculateScore1();
+        });
+
+        $("#chkX202_91_01_02").click(function () {
+            CalculateScore1();
+        });
+
+        $("#chkX202_91_02_01").click(function () {
+            CalculateScore2();
+        });
+
+        $("#chkX202_91_02_02").click(function () {
+            CalculateScore2();
+        });
+
+        $("#chkX202_91_03_01").click(function () {
+            CalculateScore3();
+        });
+    });
+
+    function CalculateScore1() {
+        if ($("#chkX202_91_01_01").is(':checked')) {
+            p1 = parseInt("1");
+        }
+        else {
+            p1 = parseInt("0");
+        }
+
+        $("#txtX202_91_01").val(p1);
+        CalculateTotalScore();
+    }
+
+    function CalculateScore2() {
+        if ($("#chkX202_91_02_01").is(':checked'))
+            p2 = parseInt("1");
+        else
+            p2 = parseInt("0");
+
+        $("#txtX202_91_02").val(p2);
+        CalculateTotalScore();
+    }
+
+    function CalculateScore3() {
+        if ($("#chkX202_91_03_01").is(':checked'))
+            p3 = parseInt("1");
+        else
+            p3 = parseInt("0");
+
+        $("#txtX202_91_03").val(p3);
+        CalculateTotalScore();
+    }
+
+    function CalculateTotalScore() {
+        var total = p1 + p2 + p3;
+
+        SetTotalScore(total);
+    }
+
+</script>
+<div style="height: 400px;overflow-y: auto;">
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+            <colgroup>
+                <col width="450px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="50px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold; text-decoration:underline">SKRINING DAN INTERVENSI RISIKO JATUH PASIEN RAWAT JALAN</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Apakah anda merasa tidak stabil ketika berdiri atau berjalan?</label>
+                </td>
+                <td>
+                    <input type="radio" name="chkX202_91_01" value="1" id="chkX202_91_01_01" class="chkForm" controlID = "chkX202_91_01_01" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="chkX202_91_01" value="0" id="chkX202_91_01_02" class="chkForm" controlID = "chkX202_91_01_02"/>
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtX202_91_01" style="width:50px" class="txtForm" controlID = "txtX202_91_01" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Apakah Anda khawatir akan jatuh ?</label>
+                </td>
+                <td>
+                    <input type="radio" name="chkX202_91_02" value="1" id="chkX202_91_02_01" class="chkForm" controlID = "chkX202_91_02_01" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="chkX202_91_02" value="0" id="chkX202_91_02_02" class="chkForm" controlID = "chkX202_91_02_02"/>
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtX202_91_02" style="width:50px" class="txtForm" controlID = "txtX202_91_02" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Apakah Anda pernah jatuh dalam setahun terakhir?</label>
+                </td>
+                <td>
+                    <input type="radio" name="chkX202_91_03" value="1" id="chkX202_91_03_01" class="chkForm" controlID = "chkX202_91_03_01" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="chkX202_91_03" value="0" id="chkX202_91_03_02" class="chkForm" controlID = "chkX202_91_03_02"/>
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtX202_91_03" style="width:50px" class="txtForm" controlID = "txtX202_91_03" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <label style="font-weight:bold;">Intervensi / Tindakan</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Edukasi dan Pasang Pin Kuning ? <i>(Fall Risk)</i></label>
+                </td>
+                <td>
+                    <input type="radio" name="chkX202_91_03" value="1" id="chkX202_91_03_01" class="chkForm" controlID = "chkX202_91_03_01" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="chkX202_91_03" value="0" id="chkX202_91_03_02" class="chkForm" controlID = "chkX202_91_03_02"/>
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Memfasilitasi pasien dengan kursi roda ?</label>
+                </td>
+                <td>
+                    <input type="radio" name="chkX202_91_04" value="1" id="chkX202_91_04_01" class="chkForm" controlID = "chkX202_91_04_01" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="chkX202_91_04" value="0" id="chkX202_91_04_02" class="chkForm" controlID = "chkX202_91_04_02"/>
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Tidak ada tindakan ?</label>
+                </td>
+                <td>
+                    <input type="radio" name="chkX202_91_06" value="1" id="chkX202_91_06_01" class="chkForm" controlID = "chkX202_91_06_01" />
+                    <label>
+                        Ya</label>
+                </td>
+                <td>
+                    <input type="radio" name="chkX202_91_06" value="0" id="chkX202_91_06_02" class="chkForm" controlID = "chkX202_91_06_02"/>
+                    <label>
+                        Tidak</label>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+

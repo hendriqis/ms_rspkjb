@@ -1,0 +1,17 @@
+{
+	'Sources':[
+		{
+			'DataSource' : 'GetLocation',
+			'ConditionType' : 'ParamSingleEntity', 
+			'Condition' : '',
+			'ConditionParams': 1,
+			'UsedData' : ['LocationName']
+		}
+	],
+	'Fields':[
+		{'LabelName':'lblLocation', 'Name' : '-', 'Source' : ['LocationName'], 'Operator' : []},
+	],
+	'Methods':[
+		{'MethodName':'ParamSplitter','LabelName':'lblPeriod','Separator':';','ParameterIndex':0,'MethodFormat':'PeriodDate'}
+	]
+}

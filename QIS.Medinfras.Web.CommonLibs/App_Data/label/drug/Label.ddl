@@ -1,0 +1,13 @@
+﻿HealthcareName
+PrescriptionNo
+PrescriptionDate
+Pharmacist
+PharmacistLicenseNo
+MedicalNo
+PatientFullName
+PatientAge
+ItemName
+ConsumeMethod
+MedicationAdministration
+PhysicianName
+ExternalMedication

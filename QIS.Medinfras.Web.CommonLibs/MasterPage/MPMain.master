@@ -1,0 +1,202 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Libs/MasterPage/MPBase.Master" AutoEventWireup="true" 
+    CodeBehind="MPMain.master.cs" Inherits="QIS.Medinfras.Web.CommonLibs.MasterPage.MPMain" %>
+
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+    <%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="plhMPBase" runat="server">
+    <script type="text/javascript">
+        $(function () {
+            $('#imgModuleHome').click(function () {
+                document.location = '<%=ResolveUrl("~/Libs/Program/Main.aspx")%>';
+            });
+
+            $('#dropDownMenu').superfish({
+                //useClick: true
+            });
+
+            $('#userlogininfo').click(function (evt) {
+                if ($('#userlogininfodetail').is(":visible")) {
+                    $('#userlogininfodetail').slideUp(function () {
+                        $('#userlogininfo').removeClass('opened');
+                    });
+                }
+                else {
+                    $('#userlogininfodetail').slideDown();
+                    $(this).addClass('opened');
+                }
+                evt.stopPropagation();
+            });
+
+            var mouse_is_inside = false;
+            $("#userlogininfodetail").hover(function () {
+                mouse_is_inside = true;
+            }, function () {
+                mouse_is_inside = false;
+            });
+
+            $("html").click(function () {
+                if (!mouse_is_inside) {
+                    if ($('#userlogininfodetail').is(":visible")) {
+                        $('#userlogininfodetail').slideUp(function () {
+                            $('#userlogininfo').removeClass('opened');
+                        });
+                    }
+                }
+            });
+
+            $('#lnkMPMainChangePassword').click(function () {
+                var url = ResolveUrl("~/Libs/Controls/ChangePasswordCtl.ascx");
+                openUserControlPopup(url, '', '<%=GetLabel("Ubah Password") %>', 400, 200);
+            });
+
+            $('#lnkViewMessage').click(function () {
+                ShowSnackbarNotification("This is snackbar notification");
+            });
+
+            /*$.connection.hub.stop();
+
+            $.connection.hub.start().done(function () { ConnectionStarted = true; });
+
+            $.connection.BroadcastMessage.client.addMessage = function (message) {
+                var totalNotif = parseInt($('#<%=hdnTotalNotif.ClientID%>').val());
+                totalNotif += 1;
+                $('#<%=spTotalNotif.ClientID%>').innerHtml(totalNotif);
+                if (totalNotif > 0) {
+                    $('#<%=spTotalNotif.ClientID%>').removeAttr('style');
+                }
+                else {
+                    $('#<%=spTotalNotif.ClientID%>').attr('style', 'display:none');
+                }
+            };*/
+
+        });
+
+        function notifyOK(message) {
+        var UserLoginID = <%=GetUserLoginID()%> ;
+            if (message != "") {
+                var JsonData =JSON.parse(message) ;
+                var totalNotify = 0;
+                if (JsonData.length > 0) {
+                    for (var i = 0; i < JsonData.length; i++) { 
+                         if( JsonData[i]['UserID'] == UserLoginID){
+                            totalNotify = JsonData[i]['TotalUnReadMessage']; 
+                         }
+                    }
+                }
+                if(totalNotify > 0){
+                    $('#<%=spTotalNotif.ClientID%>').removeAttr('style');
+                    $('#<%=spTotalNotif.ClientID%>').html(totalNotify);
+                }
+            }
+        }
+
+        
+    </script>
+    </style>
+    <input type="hidden" value="0" id="hdnTotalNotif" runat="server" />
+    <div class="applicationTopBar" style="height: 33px;">
+        <img src='<%=GetModuleImage()%>' alt="" width="68px" style="float:left;margin-right:19px;border:1px solid White;" />
+        <div class="containeruserlogininfo" style="border-radius:20px">
+            <table cellpadding="0" cellspacing="0" style="height:100%" >
+                <tr>
+                    <td><img id="imgModuleHome" src='<%=ResolveUrl("~/Libs/Images/home.png")%>' style="cursor: pointer;" title='Home' alt="" /></td>
+                    <td style="width:10px"></td>
+                    <td>
+                        <div style="position: relative">
+                            <div class="userlogininfo borderBox notifbadge" id="userlogininfo" style="height:30px; padding-top: 2px; margin-top:2px;"><%=GetUserInfo()%><span class="badge" id="spTotalNotif" runat="server" style="display:none"></span></div>
+                            <div class="userlogininfodetail" id="userlogininfodetail"style="border-radius:10px">                                
+                                <table border="0" cellpadding="0" cellspacing="0" style="margin:10px">
+                                    <tr>
+                                        <td style="width:50px; background-color: White; border: 1px solid #AAA;">
+                                            <img src='<%=ResolveUrl("~/Libs/Images/user.png")%>' style="width:50px;height:55px" alt="" />
+                                        </td>
+                                        <td style="width:5px">&nbsp;</td>
+                                        <td style="vertical-align: top;">
+                                            <a href="javascript:void(0);" id="lnkViewMessage" ><%=GetLabel("View Message")%></a><br />
+                                            <a href="javascript:void(0);" id="lnkMPMainChangePassword" ><%=GetLabel("Ubah Password")%></a><br />
+                                            <a href="javascript:void(0);" onclick="cbpCloseWindow.PerformCallback();" ><%=GetLabel("Logout")%></a><br />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="hospitalName" id="hospitalName"><%=GetHospitalName()%></div>
+    </div>
+    <div class="containerDropDownMenu borderBox">
+        <div id="page-wrap" style="margin-top:7px;">
+            <asp:Repeater ID="rptMenu" runat="server" OnItemDataBound="rptMenu_ItemDataBound">
+                <HeaderTemplate>
+                    <ul class="sf-menu" id="dropDownMenu">
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <li class="liHeader"><a href="<%#: GetResolveUrl((string)Eval("MenuUrl"))%>"><%#: HttpUtility.HtmlEncode(GetLabel((string)Eval("MenuCaption"))) %></a>
+                        <asp:Repeater ID="rptMenuLevel2" runat="server" OnItemDataBound="rptMenuLevel2_ItemDataBound">
+                            <HeaderTemplate>
+                                <ul>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                    <li><a href="<%#: GetResolveUrl((string)Eval("MenuUrl"))%>"><%#: HttpUtility.HtmlEncode(GetLabel((string)Eval("MenuCaption")))%></a>
+                                        <asp:Repeater ID="rptMenuLevel3" runat="server" OnItemDataBound="rptMenuLevel3_ItemDataBound">
+                                            <HeaderTemplate>
+                                                <ul>
+                                            </HeaderTemplate>
+                                            <ItemTemplate>
+                                                <li><a href="<%#: GetResolveUrl((string)Eval("MenuUrl"))%>"><%#: HttpUtility.HtmlEncode(GetLabel((string)Eval("MenuCaption")))%></a>
+                                                    <asp:Repeater ID="rptMenuLevel4" runat="server">
+                                                        <HeaderTemplate>
+                                                            <ul>
+                                                        </HeaderTemplate>
+                                                        <ItemTemplate>
+                                                                <li><a href="<%#: GetResolveUrl((string)Eval("MenuUrl"))%>"><%#: HttpUtility.HtmlEncode(GetLabel((string)Eval("MenuCaption")))%></a></li>
+                                                        </ItemTemplate>
+                                                        <FooterTemplate>
+                                                            </ul>
+                                                        </FooterTemplate>
+                                                    </asp:Repeater>  
+                                                </li>
+                                            </ItemTemplate>
+                                            <FooterTemplate>
+                                                </ul>
+                                            </FooterTemplate>
+                                        </asp:Repeater>                                
+                                    </li>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </ul>
+                            </FooterTemplate>
+                        </asp:Repeater>
+                    </li>
+                </ItemTemplate>
+                <FooterTemplate>
+                    </ul>
+                </FooterTemplate>
+            </asp:Repeater>
+        </div>
+        <br style="clear:both"/>
+    </div>
+    <div style="position: relative;width:100%;height:615px">
+        <div style="position:absolute;width:100%;z-index:1;">
+        <asp:ContentPlaceHolder ID="plhMPMain" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div style="display:none;height:0px; overflow:hidden;">
+        <dxcp:ASPxCallbackPanel ID="cbpCloseWindow" runat="server" Width="100%" ClientInstanceName="cbpCloseWindow"
+            ShowLoadingPanel="false" OnCallback="cbpCloseWindow_Callback">
+            <ClientSideEvents BeginCallback="function(s,e){ showLoadingPanel(); }" 
+                EndCallback="function(s,e){                
+                    hideLoadingPanel();
+                    opener.location.reload(true);
+                    window.close();
+                }" />
+        </dxcp:ASPxCallbackPanel> 
+    </div> 
+    
+</asp:Content>

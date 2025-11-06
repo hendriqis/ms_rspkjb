@@ -1,0 +1,31 @@
+﻿
+
+
+
+
+
+
+No RM    : {MedicalNo}
+
+Nama     : {cfPatientNameInLabel}
+
+Tanggal  : {ActualVisitDateInString} - {VisitTime}
+
+Poli     : {ServiceUnitName}
+
+Dokter	 : {ParamedicName}
+
+{cfBusinessPartnerVisibleBPJSOnly}
+
+
+
+
+
+
+
+
+
+
+
+
+

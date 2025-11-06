@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="11.1.5.0" Ref="0" ControlType="QIS.Medinfras.ReportDesktop.PatientCardRpt, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Font="Calibri, 9.75pt, style=Bold" Dpi="254" Version="11.1" PageHeight="2969" PaperKind="Custom" PageWidth="2101" Margins="0, 0, 2, 0" ReportUnit="TenthsOfAMillimeter">
+  <Bands>
+    <Item1 Ref="1" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254" HeightF="520.875">
+      <Controls>
+        <Item1 Ref="2" Name="lblMedicalNo" ControlType="XRLabel" SizeF="254,58.20834" LocationFloat="163.7917, 444.1875" Dpi="254" Font="Arial, 11.25pt, style=Bold" Padding="5,5,0,0,254" TextAlignment="MiddleLeft" Text="00-01-09-06">
+          <StylePriority Ref="3" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="4" Name="xrBarCode1" ControlType="XRBarCode" Padding="0,2,0,0,254" SizeF="412,79.375" LocationFloat="29.00005, 358.3334" Text="00-01-09-06" TextAlignment="MiddleCenter" ShowText="false" Dpi="254" AutoModule="true" Module="5.08" Alignment="MiddleRight">
+          <Symbology Ref="5" Name="Code128" />
+          <StylePriority Ref="6" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="7" Name="lblPatientName" ControlType="XRLabel" SizeF="790.2083,58.20837" LocationFloat="29.00005, 286.125" Dpi="254" Font="Arial, 11.25pt, style=Bold" Padding="5,5,0,0,254" TextAlignment="BottomLeft" Text="Ryan Gerald Herman">
+          <StylePriority Ref="8" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+      </Controls>
+    </Item1>
+    <Item2 Ref="9" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254" HeightF="1.999999" />
+    <Item3 Ref="10" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254" HeightF="0" />
+    <Item4 Ref="11" ControlType="ReportHeaderBand" Name="ReportHeader" Dpi="254" Expanded="false" HeightF="0" />
+    <Item5 Ref="12" ControlType="PageFooterBand" Name="PageFooter" Dpi="254" HeightF="0" />
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="13" Name="Title" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Times New Roman, 20pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item2 Ref="14" Name="FieldCaption" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 10pt, style=Bold" Sides="Top, Bottom" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item3 Ref="15" Name="PageInfo" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 9pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+  </StyleSheet>
+</XtraReportsLayoutSerializer>

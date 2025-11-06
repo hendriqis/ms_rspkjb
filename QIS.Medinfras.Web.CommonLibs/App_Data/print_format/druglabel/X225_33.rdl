@@ -1,0 +1,28 @@
+^XA
+^LL210
+^PW600
+^LH2,1^MD10
+^CF020,20
+^FO10,21^FDRS Royal Taruma^FS
+^FO10,41^FDNo.Resep  ^FS
+^FO100,41^FD{PrescriptionNo}^FS
+^FO10,60^FDTanggal  ^FS
+^FO100,60^FD{PrescriptionDate}^FS
+^FO340,41^FDNo.RM ^FS
+^FO400,41^FD{MedicalNo}^FS
+^FO340,61^FDDOB ^FS
+^FO400,61^FD{cfDateOfBirthInString}^FS
+^FO2,81^FD______________________________________________________________________^FS
+^CF026,26
+^FO10,111^FDPro: {PatientFullName}  ({Sex})^FS
+^CF026,26
+^FO10,150^FD{ItemName} ({cfTakenQty})^FS
+^CF025,25
+^FO10,180^FD{ConsumeMethod} {cfCoenamRuleLabel}^FS
+^FO10,205^FD{MedicationAdministration}^FS
+^CF022,22
+^FO10,231^FD{PhysicianName}^FS
+^CF026,26
+^FO400,180^FD{ExternalMedication}^FS
+^PR2
+^XZ

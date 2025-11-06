@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="11.1.5.0" Ref="1" ControlType="QIS.Medinfras.ReportDesktop.BLembarRekamMedisRJ, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DataSource="#Ref-0" EventsInfo="xrTableCell26,BeforePrint,xrTableCell26_BeforePrint" Font="Tahoma, 9pt" Version="11.1" SnappingMode="SnapToGrid" PageHeight="1100" PageWidth="850" Margins="25, 25, 25, 25">
+  <Bands>
+    <Item1 Ref="2" ControlType="PageHeaderBand" Name="PageHeader" HeightF="1068.75">
+      <Controls>
+        <Item1 Ref="3" Name="xrTable1" ControlType="XRTable" LocationFloat="0, 137.5" Font="Tahoma, 8pt" Padding="3,0,0,0,100" Borders="Left, Top" SizeF="775,918.75" TextAlignment="MiddleLeft">
+          <Rows>
+            <Item1 Ref="4" Name="xrTableRow1" ControlType="XRTableRow" Weight="1">
+              <Cells>
+                <Item1 Ref="5" ControlType="XRTableCell" Name="xrTableCell115" Text="Nama" Weight="0.24193549371534784" />
+                <Item2 Ref="6" ControlType="XRTableCell" Name="xrTableCell1" Text=" : [FirstName] [LastName]" Borders="Top" Weight="1.3064515046150453">
+                  <StylePriority Ref="7" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="8" ControlType="XRTableCell" Name="xrTableCell119" Text="No. RM" Weight="0.24193561184790824" />
+                <Item4 Ref="9" ControlType="XRTableCell" Name="xrTableCell2" Text=" : [MedicalNo]" Borders="Top" Weight="0.43548376267956146">
+                  <StylePriority Ref="10" UseBorders="false" />
+                </Item4>
+                <Item5 Ref="11" ControlType="XRTableCell" Name="xrTableCell120" Text="Agama" Weight="0.24193549371534775" />
+                <Item6 Ref="12" ControlType="XRTableCell" Name="xrTableCell3" Text=" : [Religion]" Borders="Top, Right" Weight="0.53225813342678929">
+                  <StylePriority Ref="13" UseBorders="false" />
+                </Item6>
+              </Cells>
+            </Item1>
+            <Item2 Ref="14" Name="xrTableRow2" ControlType="XRTableRow" Weight="1">
+              <Cells>
+                <Item1 Ref="15" ControlType="XRTableCell" Name="xrTableCell116" Text="Umur" Weight="0.2419354789487777" />
+                <Item2 Ref="16" ControlType="XRTableCell" Name="xrTableCell4" Text=" : [AgeInYear] thn [AgeInMonth] bln [AgeInDay] hr" Borders="Top" Weight="0.629032223609186">
+                  <StylePriority Ref="17" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="18" ControlType="XRTableCell" Name="xrTableCell117" Text="Jenis Kelamin" Weight="0.338709716796875" />
+                <Item4 Ref="19" ControlType="XRTableCell" Name="xrTableCell5" Text=" : [Sex]" Borders="Top" Weight="0.338709716796875">
+                  <StylePriority Ref="20" UseBorders="false" />
+                </Item4>
+                <Item5 Ref="21" ControlType="XRTableCell" Name="xrTableCell118" Text="Pekerjaan" Weight="0.24193546418220768" />
+                <Item6 Ref="22" ControlType="XRTableCell" Name="xrTableCell6" Text=" : [Occupation]" Borders="Top, Right" Weight="1.2096773996660786">
+                  <StylePriority Ref="23" UseBorders="false" />
+                </Item6>
+              </Cells>
+            </Item2>
+            <Item3 Ref="24" Name="xrTableRow3" ControlType="XRTableRow" Weight="1.5">
+              <Cells>
+                <Item1 Ref="25" ControlType="XRTableCell" Name="xrTableCell121" Text="Alamat" Weight="0.24193548387096778" />
+                <Item2 Ref="26" ControlType="XRTableCell" Name="xrTableCell7" Text=" : [HomeAddress]" Borders="Top, Right" Weight="2.7580645161290316" Multiline="true">
+                  <StylePriority Ref="27" UseBorders="false" />
+                </Item2>
+              </Cells>
+            </Item3>
+            <Item4 Ref="28" Name="xrTableRow4" ControlType="XRTableRow" Weight="1">
+              <Cells>
+                <Item1 Ref="29" ControlType="XRTableCell" Name="xrTableCell123" Text="Telp" Borders="Left" Weight="0.24193548387096775">
+                  <StylePriority Ref="30" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="31" ControlType="XRTableCell" Name="xrTableCell8" Text=" : [PhoneNo1]" Borders="Right" Weight="2.758064516129032">
+                  <StylePriority Ref="32" UseBorders="false" />
+                </Item2>
+              </Cells>
+            </Item4>
+            <Item5 Ref="33" Name="xrTableRow5" ControlType="XRTableRow" TextAlignment="MiddleCenter" Weight="1.875">
+              <Cells>
+                <Item1 Ref="34" ControlType="XRTableCell" Name="xrTableCell11" Text="Tanggal&#xD;&#xA;Kunjungan" Borders="Left, Top" Weight="0.24193548387096769" Multiline="true">
+                  <StylePriority Ref="35" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="36" ControlType="XRTableCell" Name="xrTableCell10" Text="Klinik&#xD;&#xA;yang&#xD;&#xA;Dikunjungi" Borders="Left, Top" Weight="0.43548387096774183" Multiline="true">
+                  <StylePriority Ref="37" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="38" ControlType="XRTableCell" Name="xrTableCell13" Text="Diagnosa" Borders="Left, Top" Weight="0.91935483870967749">
+                  <StylePriority Ref="39" UseBorders="false" />
+                </Item3>
+                <Item4 Ref="40" ControlType="XRTableCell" Name="xrTableCell15" Text="Kode&#xD;&#xA;Diagnosa" Borders="Left, Top" Weight="0.19354838709677419" Multiline="true">
+                  <StylePriority Ref="41" UseBorders="false" />
+                </Item4>
+                <Item5 Ref="42" ControlType="XRTableCell" Name="xrTableCell14" Text="Therapi" Borders="Left, Top" Weight="0.43548387096774188">
+                  <StylePriority Ref="43" UseBorders="false" />
+                </Item5>
+                <Item6 Ref="44" ControlType="XRTableCell" Name="xrTableCell12" Text="TT &amp; Nama&#xD;&#xA;Dokter&#xD;&#xA;Klinik" Borders="Left, Top" Weight="0.38709677419354838" Multiline="true">
+                  <StylePriority Ref="45" UseBorders="false" />
+                </Item6>
+                <Item7 Ref="46" ControlType="XRTableCell" Name="xrTableCell9" Text="Tindak&#xD;&#xA;Lanjut&#xD;&#xA;Pelayanan" Borders="Left, Top, Right" Weight="0.38709677419354832" Multiline="true">
+                  <StylePriority Ref="47" UseBorders="false" />
+                </Item7>
+              </Cells>
+              <StylePriority Ref="48" UseTextAlignment="false" />
+            </Item5>
+            <Item6 Ref="49" Name="xrTableRow6" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="50" ControlType="XRTableCell" Name="xrTableCell16" Borders="Left, Top" Weight="0.24193548387096769">
+                  <StylePriority Ref="51" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="52" ControlType="XRTableCell" Name="xrTableCell17" Borders="Left, Top" Weight="0.43548387096774183">
+                  <StylePriority Ref="53" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="54" ControlType="XRTableCell" Name="xrTableCell18" Borders="Left, Top" Weight="0.91935483870967749">
+                  <StylePriority Ref="55" UseBorders="false" />
+                </Item3>
+                <Item4 Ref="56" ControlType="XRTableCell" Name="xrTableCell19" Borders="Left, Top" Weight="0.19354838709677419">
+                  <StylePriority Ref="57" UseBorders="false" />
+                </Item4>
+                <Item5 Ref="58" ControlType="XRTableCell" Name="xrTableCell20" Borders="Left, Top" Weight="0.43548387096774188">
+                  <StylePriority Ref="59" UseBorders="false" />
+                </Item5>
+                <Item6 Ref="60" ControlType="XRTableCell" Name="xrTableCell21" Borders="Left, Top" Weight="0.38709677419354838">
+                  <StylePriority Ref="61" UseBorders="false" />
+                </Item6>
+                <Item7 Ref="62" ControlType="XRTableCell" Name="xrTableCell22" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="63" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item6>
+            <Item7 Ref="64" Name="xrTableRow19" ControlType="XRTableRow" Borders="Left, Top" Weight="1.125">
+              <Cells>
+                <Item1 Ref="65" ControlType="XRTableCell" Name="xrTableCell107" Weight="0.24193548387096769" />
+                <Item2 Ref="66" ControlType="XRTableCell" Name="xrTableCell108" Weight="0.43548387096774183" />
+                <Item3 Ref="67" ControlType="XRTableCell" Name="xrTableCell109" Weight="0.91935483870967749" />
+                <Item4 Ref="68" ControlType="XRTableCell" Name="xrTableCell110" Weight="0.19354838709677419" />
+                <Item5 Ref="69" ControlType="XRTableCell" Name="xrTableCell111" Weight="0.43548387096774188" />
+                <Item6 Ref="70" ControlType="XRTableCell" Name="xrTableCell112" Weight="0.38709677419354838" />
+                <Item7 Ref="71" ControlType="XRTableCell" Name="xrTableCell113" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="72" UseBorders="false" />
+                </Item7>
+              </Cells>
+              <StylePriority Ref="73" UseBorders="false" />
+            </Item7>
+            <Item8 Ref="74" Name="xrTableRow18" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="75" ControlType="XRTableCell" Name="xrTableCell100" Weight="0.24193548387096769" />
+                <Item2 Ref="76" ControlType="XRTableCell" Name="xrTableCell101" Weight="0.43548387096774183" />
+                <Item3 Ref="77" ControlType="XRTableCell" Name="xrTableCell102" Weight="0.91935483870967749" />
+                <Item4 Ref="78" ControlType="XRTableCell" Name="xrTableCell103" Weight="0.19354838709677419" />
+                <Item5 Ref="79" ControlType="XRTableCell" Name="xrTableCell104" Weight="0.43548387096774188" />
+                <Item6 Ref="80" ControlType="XRTableCell" Name="xrTableCell105" Weight="0.38709677419354838" />
+                <Item7 Ref="81" ControlType="XRTableCell" Name="xrTableCell106" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="82" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item8>
+            <Item9 Ref="83" Name="xrTableRow17" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="84" ControlType="XRTableCell" Name="xrTableCell93" Weight="0.24193548387096769" />
+                <Item2 Ref="85" ControlType="XRTableCell" Name="xrTableCell94" Weight="0.43548387096774183" />
+                <Item3 Ref="86" ControlType="XRTableCell" Name="xrTableCell95" Weight="0.91935483870967749" />
+                <Item4 Ref="87" ControlType="XRTableCell" Name="xrTableCell96" Weight="0.19354838709677419" />
+                <Item5 Ref="88" ControlType="XRTableCell" Name="xrTableCell97" Weight="0.43548387096774188" />
+                <Item6 Ref="89" ControlType="XRTableCell" Name="xrTableCell98" Weight="0.38709677419354838" />
+                <Item7 Ref="90" ControlType="XRTableCell" Name="xrTableCell99" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="91" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item9>
+            <Item10 Ref="92" Name="xrTableRow16" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="93" ControlType="XRTableCell" Name="xrTableCell86" Weight="0.24193548387096769" />
+                <Item2 Ref="94" ControlType="XRTableCell" Name="xrTableCell87" Weight="0.43548387096774183" />
+                <Item3 Ref="95" ControlType="XRTableCell" Name="xrTableCell88" Weight="0.91935483870967749" />
+                <Item4 Ref="96" ControlType="XRTableCell" Name="xrTableCell89" Weight="0.19354838709677419" />
+                <Item5 Ref="97" ControlType="XRTableCell" Name="xrTableCell90" Weight="0.43548387096774188" />
+                <Item6 Ref="98" ControlType="XRTableCell" Name="xrTableCell91" Weight="0.38709677419354838" />
+                <Item7 Ref="99" ControlType="XRTableCell" Name="xrTableCell92" Borders="Left, Top, Right" Weight="0.38709677419354838">
+                  <StylePriority Ref="100" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item10>
+            <Item11 Ref="101" Name="xrTableRow15" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="102" ControlType="XRTableCell" Name="xrTableCell79" Weight="0.24193548387096769" />
+                <Item2 Ref="103" ControlType="XRTableCell" Name="xrTableCell80" Weight="0.43548387096774183" />
+                <Item3 Ref="104" ControlType="XRTableCell" Name="xrTableCell81" Weight="0.91935483870967749" />
+                <Item4 Ref="105" ControlType="XRTableCell" Name="xrTableCell82" Weight="0.19354838709677419" />
+                <Item5 Ref="106" ControlType="XRTableCell" Name="xrTableCell83" Weight="0.43548387096774188" />
+                <Item6 Ref="107" ControlType="XRTableCell" Name="xrTableCell84" Weight="0.38709677419354838" />
+                <Item7 Ref="108" ControlType="XRTableCell" Name="xrTableCell85" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="109" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item11>
+            <Item12 Ref="110" Name="xrTableRow14" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="111" ControlType="XRTableCell" Name="xrTableCell72" Weight="0.24193548387096769" />
+                <Item2 Ref="112" ControlType="XRTableCell" Name="xrTableCell73" Weight="0.43548387096774183" />
+                <Item3 Ref="113" ControlType="XRTableCell" Name="xrTableCell74" Weight="0.91935483870967749" />
+                <Item4 Ref="114" ControlType="XRTableCell" Name="xrTableCell75" Weight="0.19354838709677419" />
+                <Item5 Ref="115" ControlType="XRTableCell" Name="xrTableCell76" Weight="0.43548387096774188" />
+                <Item6 Ref="116" ControlType="XRTableCell" Name="xrTableCell77" Weight="0.38709677419354838" />
+                <Item7 Ref="117" ControlType="XRTableCell" Name="xrTableCell78" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="118" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item12>
+            <Item13 Ref="119" Name="xrTableRow13" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="120" ControlType="XRTableCell" Name="xrTableCell65" Weight="0.24193548387096769" />
+                <Item2 Ref="121" ControlType="XRTableCell" Name="xrTableCell66" Weight="0.43548387096774183" />
+                <Item3 Ref="122" ControlType="XRTableCell" Name="xrTableCell67" Weight="0.91935483870967749" />
+                <Item4 Ref="123" ControlType="XRTableCell" Name="xrTableCell68" Weight="0.19354838709677419" />
+                <Item5 Ref="124" ControlType="XRTableCell" Name="xrTableCell69" Weight="0.43548387096774188" />
+                <Item6 Ref="125" ControlType="XRTableCell" Name="xrTableCell70" Weight="0.38709677419354838" />
+                <Item7 Ref="126" ControlType="XRTableCell" Name="xrTableCell71" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="127" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item13>
+            <Item14 Ref="128" Name="xrTableRow12" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="129" ControlType="XRTableCell" Name="xrTableCell58" Weight="0.24193548387096769" />
+                <Item2 Ref="130" ControlType="XRTableCell" Name="xrTableCell59" Weight="0.43548387096774183" />
+                <Item3 Ref="131" ControlType="XRTableCell" Name="xrTableCell60" Weight="0.91935483870967749" />
+                <Item4 Ref="132" ControlType="XRTableCell" Name="xrTableCell61" Weight="0.19354838709677419" />
+                <Item5 Ref="133" ControlType="XRTableCell" Name="xrTableCell62" Weight="0.43548387096774188" />
+                <Item6 Ref="134" ControlType="XRTableCell" Name="xrTableCell63" Weight="0.38709677419354838" />
+                <Item7 Ref="135" ControlType="XRTableCell" Name="xrTableCell64" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="136" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item14>
+            <Item15 Ref="137" Name="xrTableRow11" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="138" ControlType="XRTableCell" Name="xrTableCell51" Weight="0.24193548387096769" />
+                <Item2 Ref="139" ControlType="XRTableCell" Name="xrTableCell52" Weight="0.43548387096774183" />
+                <Item3 Ref="140" ControlType="XRTableCell" Name="xrTableCell53" Weight="0.91935483870967749" />
+                <Item4 Ref="141" ControlType="XRTableCell" Name="xrTableCell54" Weight="0.19354838709677419" />
+                <Item5 Ref="142" ControlType="XRTableCell" Name="xrTableCell55" Weight="0.43548387096774188" />
+                <Item6 Ref="143" ControlType="XRTableCell" Name="xrTableCell56" Weight="0.38709677419354838" />
+                <Item7 Ref="144" ControlType="XRTableCell" Name="xrTableCell57" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="145" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item15>
+            <Item16 Ref="146" Name="xrTableRow10" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="147" ControlType="XRTableCell" Name="xrTableCell44" Weight="0.24193548387096769" />
+                <Item2 Ref="148" ControlType="XRTableCell" Name="xrTableCell45" Weight="0.43548387096774183" />
+                <Item3 Ref="149" ControlType="XRTableCell" Name="xrTableCell46" Weight="0.91935483870967749" />
+                <Item4 Ref="150" ControlType="XRTableCell" Name="xrTableCell47" Weight="0.19354838709677419" />
+                <Item5 Ref="151" ControlType="XRTableCell" Name="xrTableCell48" Weight="0.43548387096774188" />
+                <Item6 Ref="152" ControlType="XRTableCell" Name="xrTableCell49" Weight="0.38709677419354838" />
+                <Item7 Ref="153" ControlType="XRTableCell" Name="xrTableCell50" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="154" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item16>
+            <Item17 Ref="155" Name="xrTableRow9" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="156" ControlType="XRTableCell" Name="xrTableCell37" Weight="0.24193548387096769" />
+                <Item2 Ref="157" ControlType="XRTableCell" Name="xrTableCell38" Weight="0.43548387096774183" />
+                <Item3 Ref="158" ControlType="XRTableCell" Name="xrTableCell39" Weight="0.91935483870967749" />
+                <Item4 Ref="159" ControlType="XRTableCell" Name="xrTableCell40" Weight="0.19354838709677419" />
+                <Item5 Ref="160" ControlType="XRTableCell" Name="xrTableCell41" Weight="0.43548387096774188" />
+                <Item6 Ref="161" ControlType="XRTableCell" Name="xrTableCell42" Weight="0.38709677419354838" />
+                <Item7 Ref="162" ControlType="XRTableCell" Name="xrTableCell43" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="163" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item17>
+            <Item18 Ref="164" Name="xrTableRow8" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="165" ControlType="XRTableCell" Name="xrTableCell30" Weight="0.24193548387096769" />
+                <Item2 Ref="166" ControlType="XRTableCell" Name="xrTableCell31" Weight="0.43548387096774183" />
+                <Item3 Ref="167" ControlType="XRTableCell" Name="xrTableCell32" Weight="0.91935483870967749" />
+                <Item4 Ref="168" ControlType="XRTableCell" Name="xrTableCell33" Weight="0.19354838709677419" />
+                <Item5 Ref="169" ControlType="XRTableCell" Name="xrTableCell34" Weight="0.43548387096774188" />
+                <Item6 Ref="170" ControlType="XRTableCell" Name="xrTableCell35" Weight="0.38709677419354838" />
+                <Item7 Ref="171" ControlType="XRTableCell" Name="xrTableCell36" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="172" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item18>
+            <Item19 Ref="173" Name="xrTableRow7" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="174" ControlType="XRTableCell" Name="xrTableCell23" Weight="0.24193548387096769" />
+                <Item2 Ref="175" ControlType="XRTableCell" Name="xrTableCell24" Weight="0.43548387096774183" />
+                <Item3 Ref="176" ControlType="XRTableCell" Name="xrTableCell25" Weight="0.91935483870967749" />
+                <Item4 Ref="177" ControlType="XRTableCell" Name="xrTableCell26" Weight="0.19354838709677419" />
+                <Item5 Ref="178" ControlType="XRTableCell" Name="xrTableCell27" Weight="0.43548387096774188" />
+                <Item6 Ref="179" ControlType="XRTableCell" Name="xrTableCell28" Weight="0.38709677419354838" />
+                <Item7 Ref="180" ControlType="XRTableCell" Name="xrTableCell29" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="181" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item19>
+            <Item20 Ref="182" Name="xrTableRow28" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="183" ControlType="XRTableCell" Name="xrTableCell173" Weight="0.24193548387096769" />
+                <Item2 Ref="184" ControlType="XRTableCell" Name="xrTableCell174" Weight="0.43548387096774183" />
+                <Item3 Ref="185" ControlType="XRTableCell" Name="xrTableCell175" Weight="0.91935483870967749" />
+                <Item4 Ref="186" ControlType="XRTableCell" Name="xrTableCell176" Weight="0.19354838709677419" />
+                <Item5 Ref="187" ControlType="XRTableCell" Name="xrTableCell177" Weight="0.43548387096774188" />
+                <Item6 Ref="188" ControlType="XRTableCell" Name="xrTableCell178" Weight="0.38709677419354838" />
+                <Item7 Ref="189" ControlType="XRTableCell" Name="xrTableCell179" Borders="Left, Top, Right" Weight="0.38709677419354838">
+                  <StylePriority Ref="190" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item20>
+            <Item21 Ref="191" Name="xrTableRow27" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="192" ControlType="XRTableCell" Name="xrTableCell166" Weight="0.24193548387096769" />
+                <Item2 Ref="193" ControlType="XRTableCell" Name="xrTableCell167" Weight="0.43548387096774183" />
+                <Item3 Ref="194" ControlType="XRTableCell" Name="xrTableCell168" Weight="0.91935483870967749" />
+                <Item4 Ref="195" ControlType="XRTableCell" Name="xrTableCell169" Weight="0.19354838709677419" />
+                <Item5 Ref="196" ControlType="XRTableCell" Name="xrTableCell170" Weight="0.43548387096774188" />
+                <Item6 Ref="197" ControlType="XRTableCell" Name="xrTableCell171" Weight="0.38709677419354838" />
+                <Item7 Ref="198" ControlType="XRTableCell" Name="xrTableCell172" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="199" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item21>
+            <Item22 Ref="200" Name="xrTableRow26" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="201" ControlType="XRTableCell" Name="xrTableCell159" Weight="0.24193548387096764" />
+                <Item2 Ref="202" ControlType="XRTableCell" Name="xrTableCell160" Weight="0.43548387096774183" />
+                <Item3 Ref="203" ControlType="XRTableCell" Name="xrTableCell161" Weight="0.91935483870967749" />
+                <Item4 Ref="204" ControlType="XRTableCell" Name="xrTableCell162" Weight="0.19354838709677419" />
+                <Item5 Ref="205" ControlType="XRTableCell" Name="xrTableCell163" Weight="0.43548387096774188" />
+                <Item6 Ref="206" ControlType="XRTableCell" Name="xrTableCell164" Weight="0.38709677419354838" />
+                <Item7 Ref="207" ControlType="XRTableCell" Name="xrTableCell165" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="208" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item22>
+            <Item23 Ref="209" Name="xrTableRow25" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="210" ControlType="XRTableCell" Name="xrTableCell152" Weight="0.24193548387096769" />
+                <Item2 Ref="211" ControlType="XRTableCell" Name="xrTableCell153" Weight="0.43548387096774183" />
+                <Item3 Ref="212" ControlType="XRTableCell" Name="xrTableCell154" Weight="0.91935483870967749" />
+                <Item4 Ref="213" ControlType="XRTableCell" Name="xrTableCell155" Weight="0.19354838709677413" />
+                <Item5 Ref="214" ControlType="XRTableCell" Name="xrTableCell156" Weight="0.43548387096774188" />
+                <Item6 Ref="215" ControlType="XRTableCell" Name="xrTableCell157" Weight="0.38709677419354838" />
+                <Item7 Ref="216" ControlType="XRTableCell" Name="xrTableCell158" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="217" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item23>
+            <Item24 Ref="218" Name="xrTableRow24" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="219" ControlType="XRTableCell" Name="xrTableCell145" Weight="0.24193548387096769" />
+                <Item2 Ref="220" ControlType="XRTableCell" Name="xrTableCell146" Weight="0.43548387096774183" />
+                <Item3 Ref="221" ControlType="XRTableCell" Name="xrTableCell147" Weight="0.91935483870967749" />
+                <Item4 Ref="222" ControlType="XRTableCell" Name="xrTableCell148" Weight="0.19354838709677419" />
+                <Item5 Ref="223" ControlType="XRTableCell" Name="xrTableCell149" Weight="0.43548387096774188" />
+                <Item6 Ref="224" ControlType="XRTableCell" Name="xrTableCell150" Weight="0.38709677419354838" />
+                <Item7 Ref="225" ControlType="XRTableCell" Name="xrTableCell151" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="226" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item24>
+            <Item25 Ref="227" Name="xrTableRow23" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="228" ControlType="XRTableCell" Name="xrTableCell138" Weight="0.24193548387096769" />
+                <Item2 Ref="229" ControlType="XRTableCell" Name="xrTableCell139" Weight="0.43548387096774183" />
+                <Item3 Ref="230" ControlType="XRTableCell" Name="xrTableCell140" Weight="0.91935483870967749" />
+                <Item4 Ref="231" ControlType="XRTableCell" Name="xrTableCell141" Weight="0.19354838709677419" />
+                <Item5 Ref="232" ControlType="XRTableCell" Name="xrTableCell142" Weight="0.43548387096774188" />
+                <Item6 Ref="233" ControlType="XRTableCell" Name="xrTableCell143" Weight="0.38709677419354838" />
+                <Item7 Ref="234" ControlType="XRTableCell" Name="xrTableCell144" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="235" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item25>
+            <Item26 Ref="236" Name="xrTableRow22" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="237" ControlType="XRTableCell" Name="xrTableCell131" Weight="0.24193548387096769" />
+                <Item2 Ref="238" ControlType="XRTableCell" Name="xrTableCell132" Weight="0.43548387096774183" />
+                <Item3 Ref="239" ControlType="XRTableCell" Name="xrTableCell133" Weight="0.91935483870967749" />
+                <Item4 Ref="240" ControlType="XRTableCell" Name="xrTableCell134" Weight="0.19354838709677419" />
+                <Item5 Ref="241" ControlType="XRTableCell" Name="xrTableCell135" Weight="0.43548387096774188" />
+                <Item6 Ref="242" ControlType="XRTableCell" Name="xrTableCell136" Weight="0.38709677419354838" />
+                <Item7 Ref="243" ControlType="XRTableCell" Name="xrTableCell137" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="244" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item26>
+            <Item27 Ref="245" Name="xrTableRow21" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="246" ControlType="XRTableCell" Name="xrTableCell124" Weight="0.24193548387096769" />
+                <Item2 Ref="247" ControlType="XRTableCell" Name="xrTableCell125" Weight="0.43548387096774183" />
+                <Item3 Ref="248" ControlType="XRTableCell" Name="xrTableCell126" Weight="0.91935483870967749" />
+                <Item4 Ref="249" ControlType="XRTableCell" Name="xrTableCell127" Weight="0.19354838709677419" />
+                <Item5 Ref="250" ControlType="XRTableCell" Name="xrTableCell128" Weight="0.43548387096774188" />
+                <Item6 Ref="251" ControlType="XRTableCell" Name="xrTableCell129" Weight="0.38709677419354838" />
+                <Item7 Ref="252" ControlType="XRTableCell" Name="xrTableCell130" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="253" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item27>
+            <Item28 Ref="254" Name="xrTableRow33" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="255" ControlType="XRTableCell" Name="xrTableCell208" Weight="0.24193548387096769" />
+                <Item2 Ref="256" ControlType="XRTableCell" Name="xrTableCell209" Weight="0.43548387096774183" />
+                <Item3 Ref="257" ControlType="XRTableCell" Name="xrTableCell210" Weight="0.91935483870967749" />
+                <Item4 Ref="258" ControlType="XRTableCell" Name="xrTableCell211" Weight="0.19354838709677419" />
+                <Item5 Ref="259" ControlType="XRTableCell" Name="xrTableCell212" Weight="0.43548387096774188" />
+                <Item6 Ref="260" ControlType="XRTableCell" Name="xrTableCell213" Weight="0.38709677419354838" />
+                <Item7 Ref="261" ControlType="XRTableCell" Name="xrTableCell214" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="262" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item28>
+            <Item29 Ref="263" Name="xrTableRow32" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="264" ControlType="XRTableCell" Name="xrTableCell201" Weight="0.24193548387096769" />
+                <Item2 Ref="265" ControlType="XRTableCell" Name="xrTableCell202" Weight="0.43548387096774183" />
+                <Item3 Ref="266" ControlType="XRTableCell" Name="xrTableCell203" Weight="0.91935483870967749" />
+                <Item4 Ref="267" ControlType="XRTableCell" Name="xrTableCell204" Weight="0.19354838709677419" />
+                <Item5 Ref="268" ControlType="XRTableCell" Name="xrTableCell205" Weight="0.43548387096774188" />
+                <Item6 Ref="269" ControlType="XRTableCell" Name="xrTableCell206" Weight="0.38709677419354838" />
+                <Item7 Ref="270" ControlType="XRTableCell" Name="xrTableCell207" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="271" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item29>
+            <Item30 Ref="272" Name="xrTableRow31" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="273" ControlType="XRTableCell" Name="xrTableCell194" Weight="0.24193548387096769" />
+                <Item2 Ref="274" ControlType="XRTableCell" Name="xrTableCell195" Weight="0.43548387096774183" />
+                <Item3 Ref="275" ControlType="XRTableCell" Name="xrTableCell196" Weight="0.91935483870967749" />
+                <Item4 Ref="276" ControlType="XRTableCell" Name="xrTableCell197" Weight="0.19354838709677419" />
+                <Item5 Ref="277" ControlType="XRTableCell" Name="xrTableCell198" Weight="0.43548387096774188" />
+                <Item6 Ref="278" ControlType="XRTableCell" Name="xrTableCell199" Weight="0.38709677419354838" />
+                <Item7 Ref="279" ControlType="XRTableCell" Name="xrTableCell200" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="280" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item30>
+            <Item31 Ref="281" Name="xrTableRow30" ControlType="XRTableRow" Weight="1.125">
+              <Cells>
+                <Item1 Ref="282" ControlType="XRTableCell" Name="xrTableCell187" Weight="0.24193548387096769" />
+                <Item2 Ref="283" ControlType="XRTableCell" Name="xrTableCell188" Weight="0.43548387096774183" />
+                <Item3 Ref="284" ControlType="XRTableCell" Name="xrTableCell189" Weight="0.91935483870967749" />
+                <Item4 Ref="285" ControlType="XRTableCell" Name="xrTableCell190" Weight="0.19354838709677413" />
+                <Item5 Ref="286" ControlType="XRTableCell" Name="xrTableCell191" Weight="0.43548387096774188" />
+                <Item6 Ref="287" ControlType="XRTableCell" Name="xrTableCell192" Weight="0.38709677419354838" />
+                <Item7 Ref="288" ControlType="XRTableCell" Name="xrTableCell193" Borders="Left, Top, Right" Weight="0.38709677419354832">
+                  <StylePriority Ref="289" UseBorders="false" />
+                </Item7>
+              </Cells>
+            </Item31>
+            <Item32 Ref="290" Name="xrTableRow29" ControlType="XRTableRow" Borders="Left, Top, Bottom" Weight="1.125">
+              <Cells>
+                <Item1 Ref="291" ControlType="XRTableCell" Name="xrTableCell180" Weight="0.24193548387096769" />
+                <Item2 Ref="292" ControlType="XRTableCell" Name="xrTableCell181" Weight="0.43548387096774183" />
+                <Item3 Ref="293" ControlType="XRTableCell" Name="xrTableCell182" Weight="0.91935483870967749" />
+                <Item4 Ref="294" ControlType="XRTableCell" Name="xrTableCell183" Weight="0.19354838709677419" />
+                <Item5 Ref="295" ControlType="XRTableCell" Name="xrTableCell184" Weight="0.43548387096774188" />
+                <Item6 Ref="296" ControlType="XRTableCell" Name="xrTableCell185" Weight="0.38709677419354838" />
+                <Item7 Ref="297" ControlType="XRTableCell" Name="xrTableCell186" Borders="All" Weight="0.38709677419354832">
+                  <StylePriority Ref="298" UseBorders="false" />
+                </Item7>
+              </Cells>
+              <StylePriority Ref="299" UseBorders="false" />
+            </Item32>
+          </Rows>
+          <StylePriority Ref="300" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="301" Name="lblReportSubtitle" ControlType="XRLabel" SizeF="775,12.5" LocationFloat="0, 100" Font="Tahoma, 10pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleCenter">
+          <StylePriority Ref="302" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="303" Name="lblAddressLine2" ControlType="XRLabel" SizeF="362.5,12.5" LocationFloat="62.5, 37.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Address Line 2">
+          <StylePriority Ref="304" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="305" Name="xrLogo" ControlType="XRPictureBox" SizeF="62.5,68" LocationFloat="0, 0" Sizing="StretchImage" ImageUrl="/qislib/images/logo.png" />
+        <Item5 Ref="306" Name="lblAddressLine1" ControlType="XRLabel" SizeF="362.5,12.5" LocationFloat="62.5, 25" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Address Line 1">
+          <StylePriority Ref="307" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="308" Name="lblPhoneFaxNo" ControlType="XRLabel" SizeF="317,17.00001" LocationFloat="450, 0" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleRight" Text="Phone">
+          <StylePriority Ref="309" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="310" Name="lblHealthcareName" ControlType="XRLabel" SizeF="362.5,25" LocationFloat="62.5, 0" Font="Tahoma, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Healthcare Name">
+          <StylePriority Ref="311" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="312" Name="lblReportTitle" ControlType="XRLabel" SizeF="775,25" LocationFloat="0, 75" Font="Tahoma, 13pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text="Report Title">
+          <StylePriority Ref="313" UseFont="false" UseTextAlignment="false" />
+        </Item8>
+      </Controls>
+    </Item1>
+    <Item2 Ref="314" ControlType="PageFooterBand" Name="PageFooter" HeightF="29.50002">
+      <Controls>
+        <Item1 Ref="315" Name="xrPageInfo3" ControlType="XRPageInfo" SizeF="149.9999,12.5" Font="Tahoma, 7pt" Padding="2,2,0,0,100" LocationFloat="627, 12.5" TextAlignment="MiddleRight" Format="Page {0} of {1}">
+          <StylePriority Ref="316" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="317" Name="lineFooter" ControlType="XRLine" SizeF="777,12.49997" LocationFloat="0, 0" />
+        <Item3 Ref="318" Name="lblReportProperties" ControlType="XRLabel" SizeF="451.0417,12.5" LocationFloat="0, 12.5" Font="Tahoma, 7pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="MEDINFRAS - ReportID, Print Date/Time : dd-MMM-yyyy HH:MM:ss, User ID : XXXXX">
+          <StylePriority Ref="319" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item3>
+      </Controls>
+    </Item2>
+    <Item3 Ref="320" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+    <Item4 Ref="321" ControlType="ReportFooterBand" Name="ReportFooter">
+      <Controls>
+        <Item1 Ref="322" Name="lblParameter6" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="400, 75" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter6 = ParameterValue6">
+          <StylePriority Ref="323" UseFont="false" />
+        </Item1>
+        <Item2 Ref="324" Name="lblParameter0" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 50" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter0 = ParameterValue0">
+          <StylePriority Ref="325" UseFont="false" />
+        </Item2>
+        <Item3 Ref="326" Name="lblParameter1" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 62.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter1 = ParameterValue1">
+          <StylePriority Ref="327" UseFont="false" />
+        </Item3>
+        <Item4 Ref="328" Name="lblParameter2" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 75" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter2 = ParameterValue2">
+          <StylePriority Ref="329" UseFont="false" />
+        </Item4>
+        <Item5 Ref="330" Name="lblParameter4" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="400, 50" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter4 = ParameterValue4">
+          <StylePriority Ref="331" UseFont="false" />
+        </Item5>
+        <Item6 Ref="332" Name="lblParameter5" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="400, 62.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter5 = ParameterValue5">
+          <StylePriority Ref="333" UseFont="false" />
+        </Item6>
+        <Item7 Ref="334" Name="lblReportParameterTitle" ControlType="XRLabel" SizeF="150,12.5" LocationFloat="0, 25" Font="Tahoma, 8pt, style=Bold, Underline" Padding="2,2,0,0,100" Text="Report Parameter(s) :">
+          <StylePriority Ref="335" UseFont="false" />
+        </Item7>
+        <Item8 Ref="336" Name="lblParameter3" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 87.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter3 = ParameterValue3">
+          <StylePriority Ref="337" UseFont="false" />
+        </Item8>
+        <Item9 Ref="338" Name="lblParameter7" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="400, 87.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter7 = ParameterValue7">
+          <StylePriority Ref="339" UseFont="false" />
+        </Item9>
+      </Controls>
+    </Item4>
+    <Item5 Ref="340" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+    <Item6 Ref="341" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+    <Item7 Ref="342" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="0" />
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="343" Name="Title" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Times New Roman, 20pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item2 Ref="344" Name="FieldCaption" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 10pt, style=Bold" Sides="Top, Bottom" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item3 Ref="345" Name="PageInfo" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 9pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+  </StyleSheet>
+  <ObjectStorage>
+    <Item1 Ref="0" Content="~Xtra#NULL" Type="System.Windows.Forms.BindingSource" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

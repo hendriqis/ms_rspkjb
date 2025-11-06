@@ -1,0 +1,38 @@
+{
+	'Sources':[
+		{
+			'DataSource' : 'GetvPatientChargesHdList',
+			'ConditionType' : 'Param', 
+			'Condition' : 'TransactionID = {0}',
+			'ParamSkip' : 0,
+			'ConditionParams': 1,
+			'UsedData' : ['RegistrationID','TransactionNo','DepartmentID','LastUpdatedDateInString']
+		},
+		{
+			'DataSource' : 'GetvHealthcareList',
+			'ConditionType' : 'AppSession',
+			'Condition' : 'HealthcareID = {0}',
+			'ConditionParams' : 'HealthcareID',
+			'UsedData' : ['City']
+		},
+		{
+			'DataSource' : 'GetvRegistrationList',
+			'ConditionType' : 'DataSourceProp',
+			'Condition' : 'RegistrationID = {0}',
+			'ConditionParams' : 'E.RegistrationID',
+			'UsedData' : ['RegistrationNo','BusinessPartner','PatientName','MedicalNo','DateOfBirthInString']
+		}
+	],
+	'Fields':[
+		{'LabelName':'lblLastUpdatedDate', 'Name' : '-', 'Source' : ['E.City','X., ','E.LastUpdatedDateInString'], 'Operator' : ['s+','s+']},
+		{'LabelName':'lblRegistrationNo', 'Name' : '-', 'Source' : ['E.RegistrationNo','X. / ','E.TransactionNo'], 'Operator' : ['s+','s+']},
+		{'LabelName':'lblPayer', 'Name' : '-', 'Source' : ['E.BusinessPartner'], 'Operator' : []},
+		{'LabelName':'lblPatientName', 'Name' : '-', 'Source' : ['E.PatientName'], 'Operator' : []},
+		{'LabelName':'lblMedicalNo', 'Name' : '-', 'Source' : ['E.MedicalNo'], 'Operator' : []},
+		{'LabelName':'lblDateOfBirth', 'Name' : '-', 'Source' : ['E.DateOfBirthInString'], 'Operator' : []},
+	],
+	'Methods':[
+		{'MethodName':'GetFullUsername', 'LabelName':'lblLastUpdatedBy'},
+		{'MethodName':'GetDepartmentName', 'LabelName':'lblServiceUnit','Source':'E.DepartmentID'}
+	]
+}

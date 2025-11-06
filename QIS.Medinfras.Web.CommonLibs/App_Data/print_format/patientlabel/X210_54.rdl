@@ -1,0 +1,8 @@
+﻿^XA
+^LL200
+^LH5,10
+^FO100,15^CF0,24
+^FB395,5,0,L^FD{PatientName}^FS
+^FO100,80^FB450,50,0,L^FDNo.RM : {MedicalNo}^FS
+^FO100,105^FB380,50,0,L^FDLahir : {DateOfBirth} ({Gender})^FS
+^XZ

@@ -1,0 +1,30 @@
+^XA
+^LL260
+^PW640
+^LH10,10
+^ADN,18,10
+^FO10,5^FD{PrescriptionNo} {cfDispensaryInitial}^FS
+^AQN,28,24
+^FO480,0^FD{PrescriptionDate}^FS
+^ATN,28,22
+^FO10,30^FD{ItemName}^FS
+^ADN,18,10
+^FO10,80^FD{cfGenericName}^FS
+^ADN,18,10
+^FO10,110^FD{ConsumeMethod} ({Route})^FS
+^ADN,6,6
+^FO10,130^FD{MedicationAdministration}^FS
+^FO510,90
+^BQN,2,3,Q,1
+^FH_
+^FDQA,{RegistrationNo}_0A_0D^FS
+^AQN,28,24
+^FO510,70^FDQty= {cfTakenQty}^FS
+^AQN,28,24
+^FO10,155^FDPro: {cfPatientNameInLabel}^FS
+^AQN,28,24
+^FO10,180^FDDOB: {DateOfBirth}  MRN: {MedicalNo}  ED: {ExpiredDate}^FS
+^ADN,18,10
+^FO10,210^FDFarmasi National Hospital (031)2975777 Ext 1515^FS
+^PR2
+^XZ

@@ -1,0 +1,19 @@
+﻿^XA
+^LL270
+^PW550
+^LH1,30^MD5
+^CF0,24
+^FO2,18^FDNo. RM^FS
+^FO150,18^FD:^FS
+^FO165,18^FD{MedicalNo}^FS
+^FO2,60^FDNama^FS
+^FO150,60^FD:^FS
+^FO165,60^FD{cfPatientNameSalutation}^FS
+^FO2,100^FDTgl Lahir^FS
+^FO150,100^FD:^FS
+^FO165,100^FD{cfDateOfBirthInStringWithAge}^FS
+^FO2,142^FDJenis Kelamin^FS
+^FO150,142^FD:^FS
+^FO165,142^FD{Gender}^FS
+^PR2
+^XZ

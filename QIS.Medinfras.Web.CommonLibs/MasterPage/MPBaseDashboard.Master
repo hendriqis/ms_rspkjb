@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MPBaseDashboard.Master.cs" 
+Inherits="QIS.Medinfras.Web.CommonLibs.MasterPage.MPBaseDashboard" %>
+
+<%@ Register Src="~/Libs/Controls/GeneralDashboardCtl.ascx" TagName="GeneralDashboardCtl" TagPrefix="uc1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MEDINFRAS</title>
+    <link href='../Styles/common.css' rel="stylesheet" type="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="../Images/qisicon.ico" rel="icon" type="image/gif" />
+    <link href='../Styles/bootstrap/bootstrap.css' rel="stylesheet" type="text/css" />
+    <link href='../Styles/select2.min.css' rel="stylesheet" type="text/css" />
+    <link href='../Styles/elegant/css/style.css' rel="stylesheet" type="text/css" />
+    <link href='../Styles/elegant/fonts/stylesheet.css' rel="stylesheet" type="text/css" />
+    <link href='../Styles/commonDS.css' rel="stylesheet" type="text/css" />
+    <link href='../Styles/FontAwesome/css/font-awesome.min.css' rel="stylesheet" type="text/css" />
+<%--    <link href='../Styles/BootstrapDatatables/dataTables.bootstrap.min.css' rel="stylesheet" type="text/css" />
+    <link href='../Styles/BootstrapDatatables/jquery.dataTables.min.css' rel="stylesheet" type="text/css" />--%>
+    <link href='../Styles/w3.css' rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/Pivot/c3.min.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/Pivot/pivot.css">
+    <link rel="stylesheet" href='../Styles/HoverMaster/css/hover.css' type="text/css" />
+    <link rel="stylesheet" href='../Styles/jquery/jquery.ui.core.css' type="text/css" />
+    <link rel="stylesheet" href='../Styles/jquery/jquery.ui.datepicker.css' type="text/css" />
+    <style type="text/css">
+        .imgHidden
+        {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm" runat="server">
+    <uc1:GeneralDashboardCtl ID="ctlGeneral" runat="server" />   
+        <asp:ContentPlaceHolder ID="plhMPBase" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </form>
+
+    <style type="text/css">
+        .dxeListBoxItemHover                { background-color: #FFA55A; color: Black; }
+        .dxeListBoxItemSelected             { background-color: #F36F00; color: White; }
+
+        .dxeDisabled        { color: Maroon !important; background-color: #EAEAEA !important; border: 1px solid #848484; border-right: 1px solid #FAFAFA; border-bottom: 1px solid #FAFAFA; }
+    </style>
+
+   
+
+</body>
+</html>

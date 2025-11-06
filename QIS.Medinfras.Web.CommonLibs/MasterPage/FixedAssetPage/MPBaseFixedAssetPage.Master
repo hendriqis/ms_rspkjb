@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Libs/MasterPage/MPBase.Master" AutoEventWireup="true" 
+    CodeBehind="MPBaseFixedAssetPage.Master.cs" Inherits="QIS.Medinfras.Web.CommonLibs.Program.MPBaseFixedAssetPage" %>
+
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dxpc" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+<%@ Register Src="~/Libs/Controls/FixedAssetBannerCtl.ascx" TagName="FixedAssetBannerCtl" TagPrefix="uc1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="plhMPBase" runat="server">
+    <script type="text/javascript">
+        $(function () {
+            Methods.checkImageError('imgPatientProfilePicture', 'patient', 'hdnPatientGender');
+
+            $('#imgModuleHome').click(function () {
+                document.location = '<%=ResolveUrl("~/Libs/Program/Main.aspx")%>';
+            });
+
+            $('#imgBackPatientPage').click(function () {
+                exitPatientPage();
+            });
+
+            $('#ulPatientPageHeader li').click(function () {
+                showLoadingPanel();
+                document.location = ResolveUrl($(this).attr('url'));
+            });
+        });
+
+        function exitPatientPage() {
+            showLoadingPanel();
+            document.location = onGetUrlReferrer();
+        }
+    </script>
+    <style type="text/css">
+        body                                { background-color: White; }        
+    </style>
+
+    <div style="position:absolute;z-index:20003;">
+        <dxpc:ASPxPopupControl ID="pcTopCharmbar" runat="server" ClientInstanceName="pcTopCharmbar" EnableHierarchyRecreation="True"
+            FooterText="" HeaderText="" Modal="True" AllowDragging="True" PopupHorizontalAlign="WindowCenter" Width="950px" Height="600px"
+            PopupVerticalAlign="WindowCenter" CloseAction="CloseButton">
+            <ClientSideEvents Shown="function (s,e) {  }" 
+                Closing="function(s,e) { onPcTopCharmBarClosing(); }"/>
+            <ContentCollection>
+                <dxpc:PopupControlContentControl ID="PopupControlContentControl1" runat="server">
+                    <div style="text-align: left; width: 100%;">
+                        <asp:Panel runat="server" ID="pnlTopCharmbarPopup" Style="width: 100%; margin-left: auto; margin-right: auto">
+                        </asp:Panel>
+                    </div>                
+                </dxpc:PopupControlContentControl>
+            </ContentCollection>
+        </dxpc:ASPxPopupControl>
+    </div>
+
+    <div class="borderBox" style="height: 650px">
+        <div style="height: 145px;padding:5px;">
+            <uc1:FixedAssetBannerCtl ID="ctlFixedAssetBanner" runat="server" />
+
+            <div class="pageTitle" style="height:43px; margin-top: 5px;">
+                <img class="imgLink" id="imgBackPatientPage" src='<%= ResolveUrl("~/Libs/Images/Icon/back.png")%>' alt="" style="float:left; margin-top: 3px;" title="<%=GetLabel("Back")%>" />
+                <asp:ContentPlaceHolder ID="plhMPPatientPageNavigationPane" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div style="clear:both; padding: 5px;" class="borderBox" >
+                <asp:ContentPlaceHolder ID="plhMPPatientPage" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+</asp:Content>

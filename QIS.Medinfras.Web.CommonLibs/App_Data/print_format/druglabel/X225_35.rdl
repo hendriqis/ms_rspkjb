@@ -1,0 +1,25 @@
+^XA
+^LL210
+^PW600
+^LH2,1^MD10
+^CF018,20
+^FO0,21^FD {HealthcareName} ^FS,
+^FO320,21^FD No.Resep ^FS, 
+^FO410,21^FD : ^FS,
+^FO420,21^FD {PrescriptionNo} ^FS,
+^FO0,41^FD Apoteker ^FS, 
+^FO85,41^FD : ^FS,
+^FO102,41^FD{Pharmacist}^FS,
+^FO6,61^FD{PharmacistLicenseNo}^FS,
+^FO326,61^FDTanggal^FS,
+^FO410,61^FD : ^FS,
+^FO425,61^FD{PrescriptionDate}^FS, 
+^FO5,100^GB600,1,2^FS
+^CF024,24
+^FO0,111^FD Pro: {PatientFullName} ({Sex}), {PatientAgeInYear}, {MedicalNo}^FS,
+^CF024,24
+^FO6,151^FD{ItemName} ({cfIsUsedDispenseQty1})^FS,
+^CF028,28
+^FO6,182^FD{MedicationRoute} {ConsumeMethod2}, {cfIsExternalMedication}^FS,
+^FO6,215^FD{MedicationAdministration}^FS,
+^XZ

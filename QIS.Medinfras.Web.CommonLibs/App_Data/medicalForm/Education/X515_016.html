@@ -1,0 +1,186 @@
+﻿<head>
+    <style type="text/css">   
+       .txtForm { background-color:#dfe6e9;}
+        .style1
+        {
+            height: 26px;
+        }
+    </style>
+</head>
+<div>
+    <div id="groupEducation" class="w3-container w3-animate-left peGroup" style="padding:2px">
+        <label style="font-weight:bold; text-decoration:underline">PENGOBATAN YANG AMAN </label>
+        <br />
+        <br />
+                    <table border="1" cellpadding="1" cellspacing="1">
+                        <colgroup>
+                            <col style="width:60px" />
+                            <col style="width:300px" />
+                            <col style="width:200px" />
+                            <col style="width:100px" />
+                            <col style="width:70px" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <td style="text-align:Center"><label>No.</label></td>
+                                <td style="text-align:left"><label>Nama Obat</label></td>
+                                <td style="text-align:left"><label>Frekuensi</label></td>
+                                <td style="text-align:left"><label>Dosis</label></td>
+                                <td style="text-align:left"><label>Rute</label></td>
+                                <td style="text-align:left"><label>Jumlah</label></td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td style="text-align:center">1</td>
+                            <td><input type="text" style="width: 100%;" class="txtForm" controlID="txtForm12" /></td>
+                            <td><input type="text" style="width: 100%; text-align: right" class="txtForm" controlID="txtForm13" /></td>
+                            <td><input type="text" style="width: 100%; text-align: right" class="txtForm" controlID="txtForm14" /></td>
+                            <td><input type="text" style="width: 100%; text-align: right" class="txtForm" controlID="txtForm15" /></td>
+                            <td><input type="text" style="width: 100%; text-align: right" class="txtForm" controlID="txtForm16" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><br /></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center">2</td>
+                            <td colspan="5">
+                                <table border="1" cellpadding="1" cellspacing="0" style="width:100%">
+                                    <colgroup>
+                                        <col style="width: 250px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td><label>Golongan Obat </label></td>
+                                        <td>
+                                            <select id="ddlDrugClass" style="width:100%" class="ddlForm" controlID = "ddlDrugClass">
+                                                <option value="0" selected></option>
+                                                <option value="1">Obat Bebas</option>
+                                                <option value="2">Obat Bebas Terbatas</option>
+                                                <option value="3">Obat Keras</option>
+                                                <option value="4">High Alert</option>
+                                                <option value="5">Psikotropika</option>
+                                                <option value="6">Narkotika</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center">3</td>
+                            <td colspan="5">
+                                <table border="1" cellpadding="1" cellspacing="0" style="width:100%">
+                                    <colgroup>
+                                        <col style="width: 250px" />
+                                        <col style="width: 200px" />    
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td><label>Kontraindikasi Obat </label></td>
+                                        <td>
+                                            <select id="ddlContraIndicator" style="width:100%" class="ddlForm" controlID = "ddlContraIndicator">
+                                                <option value="0" selected></option>
+                                                <option value="1">Hamil</option>
+                                                <option value="2">Anak-anak</option>
+                                                <option value="3">Asma</option>
+                                                <option value="4">Fungsi hati tinggi</option>
+                                                <option value="9">Lain-lain</option>
+                                            </select>
+                                        </td>
+                                        <td>Jika Lain-lain <input type="text" style="width: 180px; text-align: right" class="txtForm" controlID="txtForm18" /></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center">4</td>
+                            <td colspan="5">
+                                <table border="1" cellpadding="1" cellspacing="0" style="width:100%">
+                                    <colgroup>
+                                        <col style="width: 250px" />
+                                        <col style="width: 200px" />    
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td><label>Efek Samping Obat </label></td>
+                                        <td>
+                                            <select id="ddlSideEffect" style="width:100%" class="ddlForm" controlID = "ddlSideEffect">
+                                                <option value="0" selected></option>
+                                                <option value="1">Mual</option>
+                                                <option value="2">Ngantuk</option>
+                                                <option value="3">Sakit Kepala</option>
+                                                <option value="4">Nyeri Otot</option>
+                                                <option value="5">Fungsi Hati Memburuk</option>
+                                                <option value="9">Lain-lain</option>
+                                            </select>
+                                        </td>
+                                        <td>Jika Lain-lain <input type="text" style="width: 180px; text-align: right" class="txtForm" controlID="txtForm17" /></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center">5</td>
+                            <td colspan="5">
+                                <table border="1" cellpadding="1" cellspacing="0" style="width:100%">
+                                    <colgroup>
+                                        <col style="width: 250px" />
+                                        <col style="width: 100px" />   
+                                        <col style="width: 100px" />   
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td><label>Potensi Interaksi Obat-obat </label></td>
+                                        <td><input type="radio" name="group01.01" value="1" class="optForm" controlID="optGroup01_01_01"/><label> Ya</label></td>
+                                        <td><input type="radio" name="group01.01" value="0" class="optForm" controlID="optGroup01_01_02"/><label> Tidak</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Jika Ya, Interaksi Obat dengan</label></td>
+                                        <td colspan="2">
+                                            <select id="ddlDrugInteraction" style="width:100%" class="ddlForm" controlID = "ddlDrugInteraction">
+                                                <option value="0" selected></option>
+                                                <option value="1">Golongan Pengencer Darah</option>
+                                                <option value="2">Obat Lambung</option>
+                                                <option value="9">Lain-lain</option>
+                                            </select>
+                                        </td>
+                                        <td>Jika Lain-lain <input type="text" style="width: 180px; text-align: right" class="txtForm" controlID="txtForm18" /></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center">6</td>
+                            <td colspan="5">
+                                <table border="1" cellpadding="1" cellspacing="0" style="width:100%">
+                                    <colgroup>
+                                        <col style="width: 250px" />
+                                        <col style="width: 100px" />    
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td><label>Cara Penyimpanan Obat</label></td>
+                                        <td><label>Suhu</label> </td>
+                                        <td><input type="text" style="width: 80px; text-align: right" class="txtForm" controlID="txtForm19" /> &#8451;</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><label>Lainnya</label> </td>
+                                        <td><input type="text" style="width: 100%; text-align: right" class="txtForm" controlID="txtForm20" /></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"><label style="font-weight:bold; text-decoration:underline">CATATAN </label></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">
+                                <textarea class="txtForm" controlID="txtFormRemarks" rows="5" style="width:99%;border-style:none"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+    </div>
+</div>
+<script type="text/javascript">
+</script>

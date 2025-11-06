@@ -1,0 +1,84 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using QIS.Medinfras.Web.Common.UI;
+using QIS.Medinfras.Data.Service;
+using QIS.Medinfras.Web.Common;
+using DevExpress.Web.ASPxCallbackPanel;
+using System.Web.UI.HtmlControls;
+
+namespace QIS.Medinfras.Web.CommonLibs.Controls
+{
+    public partial class InfoContractCustomerCtl : BaseViewPopupCtl
+    {
+        protected int PageCount = 1;
+
+        private const string DEFAULT_GRDVIEW_FILTER = "BusinessPartnerID > 1 AND GCBusinessPartnerType = '{0}' AND (HealthcareID = '{1}' OR HealthcareID IS NULL) AND IsDeleted = 0";
+
+        public override void InitializeDataControl(string param)  
+        {
+            BindGridView(1, true, ref PageCount);
+        }
+
+        private void BindGridView(int pageIndex, bool isCountPageCount, ref int pageCount)
+        {
+            string filterExpression = GetFilterExpression();
+            if (isCountPageCount)
+            {
+                int rowCount = BusinessLayer.GetBusinessPartnersRowCount(filterExpression);
+                pageCount = Helper.GetPageCount(rowCount, Constant.GridViewPageSize.GRID_MASTER);
+            }
+
+            List<BusinessPartners> lstEntity = BusinessLayer.GetBusinessPartnersList(filterExpression, Constant.GridViewPageSize.GRID_MASTER, pageIndex, " BusinessPartnerCode ASC");
+            lvwView.DataSource = lstEntity;
+            lvwView.DataBind();
+        }
+
+        private string GetFilterExpression()
+        {
+            //string filterExpression = hdnFilterExpression.Value;
+            //if (filterExpression != "")
+            //    filterExpression += " AND ";
+            //filterExpression += String.Format(DEFAULT_GRDVIEW_FILTER, Constant.BusinessObjectType.CUSTOMER, AppSession.UserLogin.HealthcareID);
+
+            //if (hdnFilterExpressionQuickSearch.Value != null)
+            //{
+            //    filterExpression += string.Format(" AND BusinessPartnerID IN (SELECT BusinessPartnerID FROM Customer WHERE GCCustomerType = '{0}')", hdnFilterExpressionQuickSearch.Value);
+            //}
+            //return filterExpression;
+
+            String filterExpression = hdnFilterExpressionQuickSearch.Value;
+            if (hdnFilterExpressionQuickSearch.Value != "")
+                filterExpression += string.Format(" AND {0}", hdnFilterExpressionQuickSearch.Value);
+
+            return filterExpression;
+        }
+
+        protected void cbpInfoRegistrationView_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        {
+            int pageCount = 1;
+            string result = "";
+            if (e.Parameter != null && e.Parameter != "")
+            {
+                string[] param = e.Parameter.Split('|');
+                if (param[0] == "changepage")
+                {
+                    BindGridView(Convert.ToInt32(param[1]), false, ref pageCount);
+                    result = "changepage";
+                }
+                else // refresh
+                {
+
+                    BindGridView(1, true, ref pageCount);
+                    result = "refresh";
+                }
+            }
+            result += "|" + pageCount;
+            ASPxCallbackPanel panel = sender as ASPxCallbackPanel;
+            panel.JSProperties["cpResult"] = result;
+        }
+    }
+}

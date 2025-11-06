@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- #Region EM91100 -->
+  <page menucode="EM91100">
+    <tasks>
+      <task code="healthyinformation" title="Surat Keterangan Sehat" description="Cetak Surat Keterangan Sehat" url="~/Libs/Program/Controls/HealthyInformationReasonCtl.ascx" id="btnHealthyInformation" width="500" height="200" />
+      <task code="medicalSickLeave" title="Medical Sick Leave" description="Cetak Surat Keterangan Sakit" url="~/Libs/Program/Controls/MedicalSickLeaveCtl.ascx" width="550" height="200" />
+      <task code="medicalSickLeaveBilingual" title="Surat Keterangan Sakit" description="Cetak Surat Keterangan Sakit (Bilingual)" url="~/Libs/Program/Controls/MedicalSickLeaveBilingualCtl.ascx" width="550" height="200" />
+    </tasks>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region EM92100 -->
+  <page menucode="EM92100">
+    <tasks>
+      <task code="patientVisit1" title="Rujukan Internal Pasien" description="Pembuatan Rujukan Internal Pasien ke Dokter Lain dengan proses konfirmasi" url="~/Program/PatientPage/_PopupEntry/Visit/ReferralVisitCtl1.ascx" id="btnPatientVisit1" width="850" height="650" visible="1" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <task code="bpjsFollowup" title="Surat Keterangan Kontrol BPJS" description="Pembuatan Surat Keterangan Kontrol BPJS" url="~/Program/PatientPage/_PopupEntry/MedicalResume/GenerateBPJSFollowup1Ctl.ascx" id="btnBPJSFollowup" width="850" height="550" visible="0"/>
+
+      <task code="medicalResume" title="Resume Medis Rawat Jalan" description="Pembuatan Resume Medis Rawat Jalan" url="~/Program/PatientPage/_PopupEntry/MedicalResume/GenerateMedicalResume1Ctl.ascx" id="btnMedicalResume" width="850" height="750" />
+
+      <task code="medicalSickLeave" title="Surat Keterangan Sakit" description="Cetak Surat Keterangan Sakit" url="~/Libs/Program/Controls/MedicalSickLeaveCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="medicalSickLeaveBilingual" title="Surat Keterangan Sakit" description="Cetak Surat Keterangan Sakit (Bilingual)" url="~/Libs/Program/Controls/MedicalSickLeaveBilingualCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="healthyinformation" title="Surat Keterangan Sehat" description="Cetak Surat Keterangan Sehat" url="~/Libs/Program/Controls/HealthyInformationReasonCtl.ascx" id="btnHealthyInformation" width="500" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="lembarKonsultasi" title="Lembar Konsultasi" description="Cetak Lembar Konsultasi" url="~/Libs/Program/Controls/LembarKonsultasiCtl.ascx" width="550" height="200" />
+
+      <task code="keteranganIstirahat1" title="Surat Keterangan Istirahat" description="Cetak Surat Keterangan Istirahat" url="~/Libs/Program/Controls/SuratKeteranganIstirahat1Ctl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+
+    </tasks>
+    <prints>
+      <!--<print title="Resume Medis Rawat Jalan" reportcode="MR000009" />-->
+
+      <print title="Surat Keterangan Kontrol BPJS" reportcode="MR000010" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region EM92100 -->
+  <!-- #Region EM09201 -->
+  <page menucode="EM09201">
+    <tasks>
+      <task code="patientVisit" title="Rujukan ke Poli Lain" description="Pembuatan Rujukan Pasien ke Poli Lain di hari yang sama" url="~/Program/PatientPage/_PopupEntry/Visit/ReferralVisitCtl.ascx" id="btnPatientVisit" width="850" height="500" visible="0"/>
+      <task code="medicalResume" title="Resume Medis Rawat Jalan" description="Pembuatan Resume Medis Rawat Jalan" url="~/Program/PatientPage/_PopupEntry/MedicalResume/GenerateMedicalResume1Ctl.ascx" id="btnMedicalResume" width="850" height="750" />
+      <task code="bpjsFollowup" title="Surat Keterangan Kontrol BPJS" description="Pembuatan Surat Keterangan Kontrol BPJS" url="~/Program/PatientPage/_PopupEntry/MedicalResume/GenerateBPJSFollowup1Ctl.ascx" id="btnBPJSFollowup" width="850" height="550" visible="0"/>
+    </tasks>
+    <prints>
+      <!--<print title="Resume Medis Rawat Jalan" reportcode="MR000009" />-->
+
+      <print title="Surat Keterangan Kontrol BPJS" reportcode="MR000010" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region EM92300 -->
+  <page menucode="EM92300">
+    <tasks>
+      <task code="keteranganSehat2" title="Surat Keterangan Sehat" description="Cetak Surat Keterangan Sehat" url="~/Libs/Program/Controls/SuratKeteranganSehat2Ctl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="keteranganButaWarna" title="Surat Keterangan Buta Warna" description="Cetak Surat Keterangan Buta Warna" url="~/Libs/Program/Controls/SuratKeteranganButaWarnaCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="rujukanrslain" title="Surat Rujukan ke RS Lain" description="Cetak Surat Rujukan ke RS Lain" url="~/Libs/Program/Controls/SuratRujukanRsLainCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB" visible="0" />
+      <task code="rujukanrslain" title="Surat Rujukan ke RS Lain" description="Cetak Surat Rujukan ke RS Lain" url="~/Libs/Program/Controls/SuratRujukanRsLainCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB" visible="0" />
+      <task code="rujukanrslain" title="Surat Rujukan ke RS Lain" description="Cetak Surat Rujukan ke RS Lain" url="~/Libs/Program/Controls/SuratRujukanRsLainCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSUKI" visible="0" />
+      <task code="rujukanrslain" title="Surat Rujukan ke RS Lain" description="Cetak Surat Rujukan ke RS Lain" url="~/Libs/Program/Controls/SuratRujukanRsLainCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSSM" visible="0" />
+      <task code="rujukanrslain" title="Surat Rujukan ke RS Lain" description="Cetak Surat Rujukan ke RS Lain" url="~/Libs/Program/Controls/SuratRujukanRsLainCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSSES" visible="0" />
+
+      <task code="keteranganVaksin" title="Surat Keterangan Vaksin" description="Cetak Surat Keterangan Vaksin" url="~/Libs/Program/Controls/SuratKeteranganVaksinCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <task code="keteranganDokter" title="Surat Keterangan Dokter" description="Cetak Surat Keterangan Dokter" url="~/Libs/Program/Controls/SuratKeteranganDokterCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB"/>
+      <task code="keteranganDokter" title="Surat Cuti Hamil" description="Cetak Surat Cuti Hamil" url="~/Libs/Program/Controls/SuratKeteranganDokterCtl1.ascx" id="keteranganDokter" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </tasks>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region EM09201 -->
+  <page menucode="EM09202">
+    <tasks>
+      <task code="patientVisit" title="Rujukan ke Poli Lain" description="Pasien rujukan ke unit lain" url="~/Program/PatientPage/_PopupEntry/Visit/ReferralVisitCtl.ascx" id="btnPatientVisit" width="850" height="500" visible="0"/>
+      <task code="medicalResume" title="Resume Medis Rawat Jalan" description="Pembuatan Resume Medis Rawat Jalan" url="~/Program/PatientPage/_PopupEntry/MedicalResume/GenerateMedicalResume1Ctl.ascx" id="btnMedicalResume" width="850" height="450" />
+      <task code="bpjsFollowup" title="Surat Keterangan Kontrol BPJS" description="Pembuatan Surat Keterangan Kontrol BPJS" url="~/Program/PatientPage/_PopupEntry/MedicalResume/GenerateBPJSFollowup1Ctl.ascx" id="btnBPJSFollowup" width="850" height="550" visible="0"/>
+    </tasks>
+    <prints>
+      <!--<print title="Resume Medis Rawat Jalan" reportcode="MR000009" />-->
+      <print title="Surat Keterangan Kontrol BPJS" reportcode="MR000010" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region EM94501 -->
+  <page menucode="EM94501">
+    <prints>
+      <print title="Laporan Operasi (Versi Lengkap)" reportcode="PM-90128" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Formulir Penandaan Lokasi Operasi" reportcode="PM-00569" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region EM09606 -->
+  <page menucode="EM09606">
+    <tasks>
+      <task code="changeOrderStatus" title="Ubah Jenis Order" description="Proses ubah jenis dan keterangan order" url="~/Program/PatientPage/Planning/Prescription/UpdateOrderStatusCtl.ascx" id="btnUpdateUDDFlag" width="900" height="350" />
+    </tasks>
+    <prints>
+      <print title="Resep Asli (Original)" reportcode="PH-00044" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region EM09702 -->
+  <page menucode="EM09702">
+    <tasks>
+      <task code="registrationNotes" title="Catatan Transaksi Pasien" description="Catatan khusus mengenai transaksi pasien" url="~/Libs/Program/Module/PatientManagement/Transaction/BillingNotesEntry.ascx" id="btnRegistrationNotes" width="900" height="550" />
+    </tasks>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region EM09801 -->
+  <page menucode="EM09801">
+    <prints>
+      <print title="Episode Summary Report" reportcode="MR000002" visible="1" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Emergency - Episode Summary Report" reportcode="MR000011" visible="1" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Kajian Instalasi Gawat Darurat" reportcode="MR000008" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Medical Assesment - General" reportcode="MR000006" visible="1" />
+
+      <print title="Medical Resume" reportcode="MR000003" visible="1" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Certificate of Health" reportcode="PM-00120" />
+
+      <print title="Formulir Penandaan Lokasi Operasi" reportcode="MR000018" />
+
+      <print title="Ringkasan Pasien Pulang IGD" reportcode="MR000014" isByHealthcare="1" healthcareName="RSPKSB" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region EM09803 -->
+  <page menucode="EM09803">
+    <tasks>
+      <task code="medicalSickLeaveBilingual" title="Surat Keterangan Sakit" description="Cetak Surat Keterangan Sakit (Bilingual)" url="~/Libs/Program/Controls/MedicalSickLeaveBilingualCtl.ascx" width="550" height="200" />
+
+      <task code="keteranganIstirahat1" title="Surat Keterangan Istirahat" description="Cetak Surat Keterangan Istirahat" url="~/Libs/Program/Controls/SuratKeteranganIstirahat1Ctl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="generateControlLetter" title="Pembuatan Surat Rencana Kontrol BPJS" description="Pembuatan Surat Rencana Kontrol BPJS" url="~/Libs/Program/Module/PatientManagement/Registration/BPJSGenerateControlLetter.ascx" id="btnGenerateControlLetter" width="700" height="250" visible="1" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </tasks>
+    <prints>
+      <print title="Resume Medis Rawat Jalan" reportcode="PM-90117" isByHealthcare="1" healthcareName="RSPKSB"/>
+      <print title="Resume Medis Rawat Inap" reportcode="PM-90118" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Surat Rujukan Eksternal" reportcode="PM-00545" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region EM09806 -->
+  <page menucode="EM09806">
+    <prints>
+      <print title="Resume Medis Rawat Jalan" reportcode="PM-90117" isByHealthcare="1" healthcareName="RSPKSB"/>
+      <print title="Resume Medis Rawat Inap" reportcode="PM-90118" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <!--<print title="Resume Medis Rawat Jalan" reportcode="MR000055" isByHealthcare="1" healthcareName="RSPKSB"/>-->
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+
+  <!-- #Region EM91200 -->
+  <page menucode="EM91200">
+    <tasks>
+      <task code="keteranganSehat2" title="Surat Keterangan Sehat" description="Cetak Surat Keterangan Sehat" url="~/Libs/Program/Controls/SuratKeteranganSehat2Ctl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="keteranganKematian" title="Surat Keterangan Kematian" description="Cetak Surat Keterangan Kematian" url="~/Libs/Program/Controls/SuratKeteranganKematianCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </tasks>
+    <prints>
+      <print title="Cetak Catatan Perkembangan Pasien" reportcode="MR000005" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region EM96100 -->
+  <page menucode="EM96100">
+    <prints>
+      <print title="Lembar Hasil Uji Fungsi RSPKSB" reportcode="MD-00014" visible="1" isByHealthcare="1" healthcareName="RSPKSB"/>
+      <print title="Formulir Rawat Jalan Rehabilitas Medik" reportcode="MD-00015" visible="1" isByHealthcare="1" healthcareName="RSPKSB"/>
+      <print title="Lembar Program Terapi" reportcode="MD-00013" visible="1" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region EM91600 -->
+  <page menucode="EM91600">
+    <tasks>
+      <task code="keteranganSehat" title="Surat Keterangan Sehat v1" description="Cetak Surat Keterangan Sehat" url="~/Libs/Program/Controls/SuratKeteranganSehatCtl.ascx" width="700" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+      <task code="keteranganSehat1" title="Surat Keterangan Sehat v2" description="Cetak Surat Keterangan Sehat" url="~/Libs/Program/Controls/SuratKeteranganSehat1Ctl.ascx" width="700" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+    </tasks>
+  </page>
+  <!-- #EndRegion -->
+  <page menucode="EM09607">
+    <tasks>
+      <task code="lembarKonsultasi" title="Lembar Konsultasi" description="Cetak Lembar Konsultasi" url="~/Libs/Program/Controls/LembarKonsultasiCtl.ascx" width="550" height="200" />
+    </tasks>
+  </page>
+  <!-- #EndRegion -->
+</root>

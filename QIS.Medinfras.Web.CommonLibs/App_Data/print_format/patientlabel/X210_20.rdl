@@ -1,0 +1,16 @@
+﻿^XA
+^LL240
+^PW640
+^LH2,1
+^MD10
+^CF038,36
+^FO40,40^FD{cfPatientNameSalutation} ({cfGenderInitial})^FS
+^FO40,90^FDNO. RM^FS
+^FO240,90^FD:^FS
+^FO260,90^FD{MedicalNo}^FS
+^CF038,36
+^FO40,140^FDTGL LAHIR^FS
+^FO240,140^FD:^FS
+^FO260,140^FD{DateOfBirthInString} / {cfPatientAgeInYear}^FS
+^PR2
+^XZ

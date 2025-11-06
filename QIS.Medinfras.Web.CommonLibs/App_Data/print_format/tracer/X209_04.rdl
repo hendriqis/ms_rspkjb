@@ -1,0 +1,9 @@
+﻿{MedicalNo}
+
+{RegistrationNo}
+{PatientName}
+{ActualVisitDateInString} - {VisitTime}
+{ServiceUnitName}
+{ParamedicName}
+{cfRoomInformation}
+{BusinessPartnerName}

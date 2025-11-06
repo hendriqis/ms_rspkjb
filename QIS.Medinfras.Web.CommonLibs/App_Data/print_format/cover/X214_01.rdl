@@ -1,0 +1,11 @@
+﻿^XA
+^LL240
+^PW640
+^LH2,1^MD10
+^CF032,32
+^FO20,20^FD{PatientName} ({Sex})^FS
+^CF026,26
+^FO20,60^FD{HomeAddress}^FS
+^FO159,100^BCN,90,Y,N,N^FD{MedicalNo}^FS
+^PR2
+^XZ

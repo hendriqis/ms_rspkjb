@@ -1,0 +1,7 @@
+﻿^XA
+^FWR
+^LH0,1000
+^FO440,80 ^A0,35,35^FD{PatientName} ({Gender})^FS
+^FO380,80 ^A0,33,33^FD{RegistrationNo} / {MedicalNo}^FS
+^FO340,80 ^A0,33,33^FD{DateOfBirthInString} ({AgeInYear} thn {AgeInMonth} bln {AgeInDay} hari)^FS
+^XZ

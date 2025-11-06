@@ -1,0 +1,30 @@
+^XA
+^LL210
+^PW600
+^LH2,1^MD10
+^CF0,22
+^FO175,25^FD{HealthcareName}^FS
+^FO1,50^GB580,1,3^FS
+^FX
+^CF0,20
+^FO8,65^FD{PatientName}^FS
+^FO8,90^FDTGL LAHIR: {DateOfBirthInString}^FS
+^FO8,115^FDMR: {MedicalNo}^FS
+^CF0,24
+^FO8,140^FD{MealPlanName}^FS
+^FO305,50^GB1,120,3^FS
+^FX
+^CF0,20
+^FO315,65^FD{MealTime}^FS
+^CF0,18
+^FO315,90^FD{ScheduleDate}^FS
+^CF0,20
+^FO315,115^FD{ServiceUnitName}^FS
+^CF0,20
+^FO315,140^FD{BedCode}^FS
+^FX
+^FO1,170^GB580,70,3^FS
+^CF0,20
+^FO10,180^FD{cfDietNotes1}^FS
+^FO10,210^FD{RemarksHd}^FS
+^XZ

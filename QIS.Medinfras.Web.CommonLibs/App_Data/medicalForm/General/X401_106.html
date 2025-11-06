@@ -1,0 +1,336 @@
+﻿<head>
+    <style type="text/css">
+        .style2
+        {
+            height: 24px;
+        }
+        .style3
+        {
+            height: 35px;
+        }
+        .style4
+        {
+            height: 32px;
+        }
+    </style>
+</head>
+<script language="javascript" type="text/javascript" id="dxss_401_106">		
+	$(function () {
+        $("#opt401_106Form33").click(function () {
+            if ($(this).is(":checked")) {
+                $("#txtForm401_106_2").removeAttr("disabled");
+                $("#txtForm401_106_2").focus();
+            } else {
+                $(txtForm401_106_2).attr("disabled", "disabled");
+            }
+        });
+		
+		$("#opt401_106Form34").click(function () {
+            if ($(this).is(":checked")) {
+                $("#txtForm401_106_2").attr("disabled", true);
+                $("#txtForm401_106_2").focus();
+				RemoveString()
+            } else {
+                $(txtForm401_106_2).attr("disabled", "disabled");
+            }
+        });
+    });
+	
+	function RemoveString(){
+        var text = document.getElementById("txtForm401_106_2").value="";
+      }
+		
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        <div class="col">
+            <table border="1" style="border-style: solid;border-collapse: collapse;">
+                <colgroup>
+                    <col style="width:20px" />
+                    <col />
+                    <col style="width:80px" />
+                    <col style="width:80px" />
+                </colgroup>
+                <tr>
+                    <td colspan="4" style="text-align: center; font-weight: bold">SKRINING PASIEN RISIKO TINGGI DAN PELAYANAN RISIKO TINGGI</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:bold;vertical-align:top; text-align:center">
+                        No.
+                    </td>
+                    <td style="font-weight:bold">Kriteria</td>
+                    <td style="text-align: center; font-weight:bold">YA</td>
+                    <td style="text-align: center; font-weight:bold">TIDAK</td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: center; font-weight:bold; background-color: Silver;">PASIEN RISIKO TINGGI</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        01.
+                    </td>
+                    <td>
+                        Pasien emergensi
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt401_106Form1" controlID="opt401_106Form1" name="401_106_parameter1" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt401_106Form2" controlID="opt401_106Form2" name="401_106_parameter1"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        02.
+                    </td>
+                    <td>
+                        Pasien dengan penyakit menular (contoh: TBC)
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt401_106Form3" controlID="opt401_106Form3" name="401_106_parameter2" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt401_106Form4" controlID="opt401_106Form4" name="401_106_parameter2"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        03.
+                    </td>
+                    <td>
+                        Pasien Koma
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt401_106Form5" controlID="opt401_106Form5" name="401_106_parameter3" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt401_106Form6" controlID="opt401_106Form6" name="401_106_parameter3"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        04.
+                    </td>
+                    <td>
+                        Pasien dengan alat bantu hidup dasar
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt401_106Form7" controlID="opt401_106Form7" name="401_106_parameter4" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt401_106Form8" controlID="opt401_106Form8" name="401_106_parameter4"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        05.
+                    </td>
+                    <td>
+                        Pasien Immunosuppressed (contoh: HIV, AIDS,pasien dengan steroid jangka panjang)
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt401_106Form9" controlID="opt401_106Form9" name="401_106_parameter5" />
+                    </td>
+                    <td style="text-align:center; vertical-align:top">
+                        <input type="radio" class="optForm" id="opt401_106Form10" controlID="opt401_106Form10" name="401_106_parameter5"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        06.
+                    </td>
+                    <td>
+                        Pasien Dialisis 
+                    </td>
+                    <td style="text-align:center;" >
+                        <input type="radio" class="optForm" id="opt401_106Form11" controlID="opt401_106Form11" name="401_106_parameter6" />
+                    </td>
+                    <td style="text-align:center;">
+                        <input type="radio" class="optForm" id="opt401_106Form12" controlID="opt401_106Form12" name="401_106_parameter6"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center" class="style2">
+                        07.
+                    </td>
+                    <td class="style2">
+                        Pasien dengan <i>restrainst</i> 
+                    </td>
+                    <td style="text-align:center;" class="style2" >
+                        <input type="radio" class="optForm" id="opt401_106Form13" controlID="opt401_106Form13" name="401_106_parameter7" />
+                    </td>
+                    <td style="text-align:center;" class="style2">
+                        <input type="radio" class="optForm" id="opt401_106Form14" controlID="opt401_106Form14" name="401_106_parameter7"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        08.
+                    </td>
+                    <td>
+                        Pasien dengan risiko bunuh diri 
+                    </td>
+                    <td style="text-align:center;" >
+                        <input type="radio" class="optForm" id="opt401_106Form15" controlID="opt401_106Form15" name="401_106_parameter8" />
+                    </td>
+                    <td style="text-align:center;">
+                        <input type="radio" class="optForm" id="opt401_106Form16" controlID="opt401_106Form16" name="401_106_parameter8"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        09.
+                    </td>
+                    <td>
+                        Pasien Kemoterapi 
+                    </td>
+                    <td style="text-align:center;" >
+                        <input type="radio" class="optForm" id="opt401_106Form17" controlID="opt401_106Form17" name="401_106_parameter9" />
+                    </td>
+                    <td style="text-align:center;">
+                        <input type="radio" class="optForm" id="opt401_106Form18" controlID="opt401_106Form18" name="401_106_parameter9"/> 
+                    </td>
+                </tr>
+				<tr>
+                    <td style="vertical-align:top; text-align:center">
+                        10.
+                    </td>
+                    <td>
+                        Pasien Anak
+                    </td>
+                    <td style="text-align:center;" >
+                        <input type="radio" class="optForm" id="opt401_106Form19" controlID="opt401_106Form19" name="401_106_parameter10" />
+                    </td>
+                    <td style="text-align:center;">
+                        <input type="radio" class="optForm" id="opt401_106Form20" controlID="opt401_106Form20" name="401_106_parameter10"/> 
+                    </td>
+                </tr>
+				<tr>
+                    <td style="vertical-align:top; text-align:center">
+                        11.
+                    </td>
+                    <td>
+                        Pasien Geriatri/lanjut usia (60 tahun keatas)
+                    </td>
+                    <td style="text-align:center;" >
+                        <input type="radio" class="optForm" id="opt401_106Form21" controlID="opt401_106Form21" name="401_106_parameter11" />
+                    </td>
+                    <td style="text-align:center;">
+                        <input type="radio" class="optForm" id="opt401_106Form22" controlID="opt401_106Form22" name="401_106_parameter11"/> 
+                    </td>
+                </tr>
+				<tr>
+                    <td style="vertical-align:top; text-align:center">
+                        12.
+                    </td>
+                    <td>
+                        Pasien berisiko tindak kekerasan atau ditelantarkan
+                    </td>
+                    <td style="text-align:center;" >
+                        <input type="radio" class="optForm" id="opt401_106Form23" controlID="opt401_106Form23" name="401_106_parameter12" />
+                    </td>
+                    <td style="text-align:center;">
+                        <input type="radio" class="optForm" id="opt401_106Form24" controlID="opt401_106Form24" name="401_106_parameter12"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: center; font-weight:bold; background-color: Silver">PELAYANAN RISIKO TINGGI</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        01.
+                    </td>
+                    <td>
+                        Pelayanan pasien dengan penyakit menular
+                    </td>
+                    <td style="text-align:center;" >
+                        <input type="radio" class="optForm" id="opt401_106Form25" controlID="opt401_106Form25" name="401_106_parameter13" />
+                    </td>
+                    <td style="text-align:center;">
+                        <input type="radio" class="optForm" id="opt401_106Form26" controlID="opt401_106Form26" name="401_106_parameter13"/> 
+                    </td>
+                <tr>
+                    <td style="text-align:center">
+                        02.
+                    </td>
+                    <td>
+                        Pelayanan pasien yang menerima dialisis
+                    </td>
+                    <td style="text-align:center;" >
+                        <input type="radio" class="optForm" id="opt401_106Form27" controlID="opt401_106Form27" name="401_106_parameter14" />
+                    </td>
+                    <td style="text-align:center;">
+                        <input type="radio" class="optForm" id="opt401_106Form28" controlID="opt401_106Form28" name="401_106_parameter14"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:center">
+                        03.
+                    </td>
+                    <td>
+                        Pelayanan pasien yang menerima kemoterapi
+                    </td>
+                    <td style="text-align:center;" >
+                        <input type="radio" class="optForm" id="opt401_106Form29" controlID="opt401_106Form29" name="401_106_parameter15" />
+                    </td>
+                    <td style="text-align:center;">
+                        <input type="radio" class="optForm" id="opt401_106Form30" controlID="opt401_106Form30" name="401_106_parameter15"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:center">
+                        04.
+                    </td>
+                    <td>
+                        Pelayanan pasien yang mendapatkan transfusi darah/produk darah
+                    </td>
+                    <td style="text-align:center;" >
+                        <input type="radio" class="optForm" id="opt401_106Form31" controlID="opt401_106Form31" name="401_106_parameter16" />
+                    </td>
+                    <td style="text-align:center;">
+                        <input type="radio" class="optForm" id="opt401_106Form32" controlID="opt401_106Form32" name="401_106_parameter16"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:center; vertical-align:top">
+                        05.
+                    </td>
+                    <td>
+                        Pelayanan radiologi intervensi
+                        <br />
+                        <div id="txtForm401_106_1" class="txtForm" controlID="txtForm401_106_1" name="401_106_parameter18">
+                            <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                                <colgroup>
+                                <col style="width:50px" />
+                                <col style="width:50px" />
+                                <col style="width:50px" />
+                                <col />
+                                </colgroup>
+                                <tr>
+                                    <td style="padding-left:5px">
+                                        Jika Ya, Sebutkan
+                                    </td>
+                                    <td style="vertical-align:middle">
+                                        <input type="text" id="txtForm401_106_2" class="txtForm" controlID="txtForm401_106_2" name="401_106_parameter18" style="width:150px; text-align:left" disabled="disabled" enable/>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <td style="text-align:center; vertical-align:top" >
+                        <input type="radio" class="optForm" id="opt401_106Form33" controlID="opt401_106Form33" name="401_106_parameter17"/>
+                    </td>
+                    <td style="text-align:center;vertical-align:top">
+                        <input type="radio" class="optForm" id="opt401_106Form34" controlID="opt401_106Form34" name="401_106_parameter17"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: center;">Jika salah satu jawaban YA, <b>cap RESIKO TINGGI</b> di kanan atas RM 1 (warna hijau)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

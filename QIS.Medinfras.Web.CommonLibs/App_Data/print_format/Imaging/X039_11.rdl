@@ -1,0 +1,40 @@
+﻿^XA
+^LL640
+^PW800
+^LH5,10
+
+^A0N,38,38
+^FO20,15^FD Nama  ^FS
+^A0N,35,35
+^FO170,15^FD: {PatientName} ({cfGenderInitial1})^FS
+
+^A0N,32,32
+^FO20,55^FD No.RM  ^FS
+^A0N,32,32
+^FO170,55^FD: {MedicalNo}^FS
+
+^A0N,32,32
+^FO20,90^FD Tgl.Lahir  ^FS
+^A0N,32,32
+^FO170,90^FD: {cfDateOfBirth} / {AgeInYear} Thn^FS
+
+^A0N,32,32
+^FO20,130^FD Tgl.Pengiriman ^FS
+^A0N,32,32
+^FO240,130^FD : {cfTransactionDate}^FS
+
+^A0N,30,30
+^FO20,170^FD{RegistrationPhysicianName}^FS
+
+^FO20,210
+^GB760,1,2,B^FS ; 
+
+^A0N,30,30
+^FO20,230
+^FB760,10,5,L,0
+^FD{cfItemDetailListForLabel}^FS
+
+^PR2
+^XZ
+
+

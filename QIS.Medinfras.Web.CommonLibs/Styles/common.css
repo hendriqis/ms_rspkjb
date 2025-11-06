@@ -1,0 +1,1096 @@
+﻿*                               { font-family: Segoe UI,"Open Sans", Calibri, Arial, Helvetica, sans-serif }
+body                            { padding:0px; margin:0;height:100%; max-width:100%; width:100%; overflow-x: hidden; }
+
+html { font-size: 62.5%; }
+body { font-size: 0.85em;}
+
+@media (max-width: 300px) {
+    html { font-size: 40%; }
+}
+
+@media (min-width: 500px) {
+    html { font-size: 60%; }
+}
+
+@media (min-width: 700px) {
+    html { font-size: 70%; }
+}
+
+@media (min-width: 900px) {
+    html                    { font-size: 78%; }
+    .dxpcContent            { font-size: 1em; }
+}
+
+@media (min-width: 1200px) {
+    html                    { font-size: 100%; }
+    .grdView, .grdSelected, .grdCollapsible { font-size:1em; }
+    .grdSelected .grdSelected               { font-size:1em; }
+    .dxpcContent            { font-size: 1.15em; }
+    .dxpcContent .grdView   { font-size:1em; }
+}
+
+span                            { font-family: Segoe UI !important; font-size:1em; }
+.spnProcessed                   { color: Red; }
+
+fieldset                        { border: 0px; margin: 0; padding: 0; }
+
+input.number                    { text-align: right; }
+input.time, input.colorpicker   { text-align: center; }
+input,textarea                                                         { font-size:0.96em; }
+input[type="button"], input[type="submit"]                             { cursor: pointer; border: 0px;}
+input[type="button"][enabled="false"] { /*background-color: #EAEAEA; color: #BEBEBE;*/background-color:#AAA; color: #979797; cursor: not-allowed; }
+
+.btnNormal { width:80px ; height:25px} /*input[type="button"]*/
+.btnMedicationStatus { width:30px ; height:35px ; background-color: green} /*input[type="button"]*/
+.btnPageEntry { width:80px ; height:30px} /*input[type="button"]*/
+
+.highlightText                  { background-color:yellow; }
+.watermark                      { color:#AAA !important; }
+
+.borderBox                      { -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; margin-top:1%; }
+.boxShadow                      { box-shadow: 5px 5px 10px #888888; }
+
+div.ui-datepicker               { font-size:12px; }
+input.datepicker                { text-align: center; }
+
+select option                   { min-height: 1.5em; }
+
+textarea                        { resize: none; }
+.dxpcHeader td                  { font-family: Segoe UI; }
+
+.imgLink                        { cursor: pointer; }
+.imgStatus                      { cursor: pointer; width:34px; height:34px }
+.imgDisabled                    { cursor: not-allowed; }
+
+.containerUlTabPage             { width: 100%; height: 22px; }
+.ulTabPage                      { margin: 0 0 0 2px; padding: 0; padding-top: 3px; }
+.ulTabPage li                   { font-family: Calibri; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; cursor: pointer; list-style-type: none; display: inline-block; min-width: 150px; height: 20px; text-align: center; font-size: 1em; }
+.ulTabPage li:hover             { }
+.ulTabPage li.selected          { }
+
+.containerUlTabPage2             { width: 100%; min-height: 25px; }
+.ulTabPage2                      { margin: 0 0 0 0px; padding: 0; padding-top: 0px; }
+.ulTabPage2 li                   { font-family: Calibri; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; cursor: pointer; list-style-type: none; display: inline-block; min-width: 80px; max-width:80px; min-height: 18px; text-align: center; font-size: 1em; }
+.ulTabPage2 li:hover             { }
+.ulTabPage2 li.selected          { }
+
+.containerUlTabPage3            { width: 100%; height: 22px; }
+.ulTabPage3                     { margin: 0 0 0 2px; padding: 0; padding-top: 3px; }
+.ulTabPage3 li                   { font-family: Calibri; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; cursor: pointer; list-style-type: none; display: inline-block; min-width: 100px; height: 18px; text-align: center; font-size: 1em; }
+.ulTabPage3 li:hover             { }
+.ulTabPage3 li.selected          { }
+
+.lblComponent                   { text-align: center; width: 100%; font-size: 0.9em; height: 100%; padding: 2px 0; }
+.lblReadOnlyText                { color:Maroon; }
+.lblNegativeAmount              { color:Red; }
+
+.menuTitle                      {font-size: 16pt;vertical-align:middle;float:right}
+.txtCurrency, .txtNumeric         { text-align: right; }
+
+.ui-datepicker-trigger          { margin-bottom: -5px;  }
+.isAbnormalColor                  { color:#e74c3c; font-weight: bold; }
+.isPanicRangeColor                  { color:#e17055; font-weight: bold; font-size: larger }
+input[type="checkbox"][disabled="disabled"] {
+    background-color: #FFFFFF;
+    padding:0;
+}
+
+/* #region Navigation Pane */
+.ulNavigationPane                { margin: 0px; margin-left: 30px; }
+.ulNavigationPane li             { cursor: pointer; font-size: 0.8em; background-color: #1BA1E2; color: #FFFFFF; list-style-type: none; padding: 3px 5px 5px 5px; height: 32px; width: 125px; display: inline-block; vertical-align: middle;  }
+.ulNavigationPane li.selected    { box-shadow: 0px 5px 10px #222;background-color:#FE5D15; color: #FFFFFF; }
+.ulNavigationPane li:not(.selected):hover    { text-decoration: underline; } 
+ /* #endregion */       
+
+/* #region Navigation Pane */
+.ulNavigationPaneEMR                { margin: 0px; margin-left: 15px; }
+.ulNavigationPaneEMR li             { cursor: pointer; font-size: 0.87em; background-color: #1FAEFF; color: #FFFFFF; list-style-type: none; padding: 3px 5px 2px 5px; height: 38px; width: 108px; display: inline-block; vertical-align: middle;  }
+.ulNavigationPaneEMR li.selected    { box-shadow: 0px 5px 10px #222;background-color:#FE5D15; color: #FFFFFF; }
+.ulNavigationPaneEMR li:not(.selected):hover    { text-decoration: underline; } 
+ /* #endregion */ 
+/* #region Context Menu */
+.context-menu                   { z-index: 30000; position: fixed; border: solid 1px #111; box-shadow: 5px 5px 10px #A8A8A8; background-color: white; padding: 5px 0; display: none; }
+.context-menu ol                { padding: 0; margin: 0; list-style-type: none; min-width: 130px; width: auto; max-width: 200px; }
+.context-menu ol li             { margin: 0; display: block; list-style: none; zoom: 0; padding: 5px 5px; }
+.context-menu ol li:not(.disabled):hover       { background-color: #efefef; }
+.context-menu ol li:not(.disabled):active      { color: White; background-color: #000; }
+.context-menu ol .list-devider  { padding: 0px; margin: 0px; }
+.context-menu ol .list-devider:hover {     /*background-color: #efefef;*/ }
+.context-menu ol .list-devider hr { margin: 2px 0px; border: none; height: 1px; color: blue; background: #A8A8A8; }
+.context-menu ol li a           { color: Black; text-decoration: none; display: block; padding: 0px 5px; }
+.context-menu ol li.disabled a  { color: #BBB; cursor: default; }
+.context-menu ol li:not(.disabled) a:active    { color: White; }
+/* #endregion */   
+
+/* #region Toast Panel */
+.toastPanel                     { display:none; }
+.toastPanel .tblToast           { display: table; position:fixed; top:0;left:0; width:99.9%; height:100%; z-index:29010; }
+.toastPanel .tblCellToast       { margin: 0; padding: 0; display: table-cell; text-align: center; vertical-align: middle; z-index:0; }
+.toastPanel .blanket            { width:100%; height:100%; z-index: 29000; background-color: #8C8C8C; opacity: 0.65; position:fixed; top:0; left:0; }
+.toastPanel .toastBox           { background-color: #FFF; width: 100%; min-height: 150px; margin: auto; position: relative; }             
+.toastPanel .toastBox input[type=button], .toastPanel .toastBox input[type=submit] { border: 1px solid black; }          
+.toastPanel .toastBox .btnClose { position: absolute; bottom: 20px; right: 130px; color: #000; background-color: #CCCCCC; }  
+.toastPanel .toastBox .btnOK { position: absolute; bottom: 20px; right: 260px; color: #FFF; background-color: #14984C; }  
+.toastPanel .toastBox .messageContainer { color: #000; text-align: left; padding-left: 150px; padding-top: 10px; font-size: 16px; }
+.toastPanel .toastBox .messageContainer h2  { font-size: 28px; padding: 0; margin: 0; font-weight: normal; }
+ /* #endregion */  
+
+/* #region Snackbar */
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+   However, delay the fade out process for 2.5 seconds */
+   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+   animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+} 
+ /* #endregion */  
+ 
+/* #region Login */
+.loginBg                                        { width: 100%; padding: 2px 20px; font-size: 2.5em; margin-bottom: 10px; }
+.loginContainerLoginInfo table td:first-child   { text-align: right; padding-right: 10px; min-width: 150px;  }
+.loginContainerLoginInfo table td + td          { padding-right: 10px;  }
+.loginContainerLoginInfo table td               { font-size: 1em; }
+.loginContainerLoginInfo input[type=button]     { padding: 1px 20px; }
+.loginContainerLoginInfo                        { opacity: 0.6; padding: 3px; }
+#loginUlListModule                              { padding: 0; margin: 0; width: 700px; }
+#loginUlListModule li                           { height: 100%; list-style-type: none; display: inline-block; margin: 0; margin-bottom: 10px; width: 130px; }
+#loginUlListModule li img                       { width: 100%; }
+#loginUlListModule li div                       { opacity: 0.6; font-size: 0.35em; background-color: #555; color: #FFF; text-align: center; padding: 5px 0; width: 100%; }
+#loginUlListModule li div.enabled               { opacity: 1; }
+#loginUlListModule li img                       { opacity: 0.6; margin: 0; padding: 0; display: block; margin-bottom: 4px; cursor:auto; }
+#loginUlListModule li img.enabled               { opacity: 1; cursor: pointer; }
+#loginUlListModule li.enabled:hover             { box-shadow: 0px 0px 10px #444; }
+#loginFooter                                    { font-size: 0.8em; margin-top: 0px; color: #666; }
+        
+.pnlUserLoginInformation                        { font-size: 1.4em; height: 85px; padding-top:2px; padding-left: 20px; } 
+.lnkLogout                                      { color: #FFF; text-decoration: none; font-size: 0.9em; cursor: pointer; clear:both; }
+.lnkLogout:hover                                { text-decoration: underline; }
+/* #endregion */
+
+/* #region Toolbar Area */      
+.toolbarArea                { width: 100%; vertical-align:middle;font-size: 10pt; }
+.toolbarArea ul             { display: table-cell; list-style-type: none; margin: 0; padding: 0; height: 100%; padding: 2px; }
+.toolbarArea ul li          { display: inline-block; padding: 0 1em; cursor: pointer; text-align:center; height: 100%; }        
+.toolbarArea ul li div      { width: 100%; text-align: center;color: White; font-size: 10pt; margin-top: -2px; }
+.toolbarArea ul li:hover    {  }
+/* #endregion */    
+
+/* #region Content Page */  
+.hospitalName               { font-size: 1.5em; }
+.containeruserlogininfo     { float: right; margin: -3px 10px 0 0; font-size: 1.1em; padding-top: 3px; }
+.userlogininfo              { cursor: pointer; padding: 1px 2px; }
+.userlogininfodetail        { width: 220px; height: 80px; position: absolute; right: 0; display: none; z-index: 10000; box-shadow: 5px 5px 10px #888888; }
+.pageInformation            { border-bottom: 1px solid #AAA; margin-bottom: 5px; margin-top: -5px; font-size: 20px; padding-bottom: 3px; color: #333; }
+.breadcrumbs                { font-weight:normal; float:right; font-size: 12px; color:#FF3300; margin-top: 12px; }
+
+
+.containerHomeClose img     { cursor: pointer; }
+
+div.pageTitle               { padding: 3px 5px; font-size: 1.2em;}
+.tblContentArea             { width: 100%; }
+        
+h4                          { font-weight:normal;font-size:1.1em; margin: 0; margin-top: 4px; padding: 1px 2px; }   
+        
+.lblLink , .lblLink2        { cursor: pointer; }
+.lblKey                     { position: absolute; z-index: 10001; top: -10px; }
+.lblLink:hover              { text-decoration: underline; }
+.lblLink2:hover             { text-decoration: underline; }
+.lblLink2                   { color: White;}
+
+        
+.lblMandatory:after         { content:  "  *"; color: #F00; }
+        
+.lblDisabled                { }
+        
+.tdLabel                    { /*text-align:right; padding-right: 10px;*/ }
+
+.tblPatientBannerInfo       { font-size: 0.9em; }
+.tblEntryContent            { width: 100%; padding-right:20px; }
+
+.tblEntryDetail             { width: 100%; padding: 5px; margin-bottom: 10px; background-color: #DEE3E7; }
+.tblEntryDetail1            { width: 100%; background-color: #DEE3E7; }
+
+/* #endregion */ 
+
+/* #region Patient Banner */
+.tdPatientBannerLabel       { text-align: right; font-style: italic; padding-right: 10px; font-size: 9pt; }
+.tdPatientBannerValue       { font-size: 9pt; }
+.divPatientBannerImgInfo    { width: 8px; height: 14px; }
+/* #endregion */ 
+
+/* #region Grid */
+.pnlContainerGrid               { background-color: #FFF; width: 100%; margin-left: auto; margin-right: auto;height:383px; overflow-y:auto;overflow-x:hidden; border:1px solid #EDEDED; }
+.pnlContainerGridProcessList    { background-color: #FFF; width: 100%; margin-left: auto; margin-right: auto;height:550px; overflow-y:auto;overflow-x:hidden; border:1px solid #EDEDED; }
+.pnlContainerGridProcessList1    { background-color: #FFF; width: 100%; margin-left: auto; margin-right: auto;height:auto; overflow-y:auto;overflow-x:hidden; border:1px solid #EDEDED; }
+.pnlContainerGridPatientPage    { width: 100%; margin-left: auto; margin-right: auto;height:370px; overflow-y:auto;overflow-x:hidden; border:1px solid #EDEDED; }
+.pnlContainerGridPatientPage1   { width: 100%; margin-left: auto; margin-right: auto;height:420px; overflow-y:auto;overflow-x:hidden; border:1px solid #EDEDED; }
+.pnlContainerGridPatientPage2   { width: 100%; height:600px; overflow-y:auto;overflow-x:hidden; border:1px solid #EDEDED; }
+.pnlContainerGridPatientPage3    { width: 100%; margin-left: auto; margin-right: auto;height:120px; overflow-y:auto;overflow-x:hidden; border:1px solid #EDEDED; }
+.pnlContainerGridPatientPage4   { width: 100%; height:450px; overflow-y:auto;overflow-x:hidden; border:1px solid #EDEDED; }
+.pnlContainerGridPatientPage5    { width: 100%; margin-left: auto; margin-right: auto;height:180px; overflow-y:auto;overflow-x:hidden; border:1px solid #EDEDED; }
+.pnlContainerGridPatientPage6    { width: 100%; margin-left: auto; margin-right: auto;height:250px; overflow-y:auto;overflow-x:hidden; border:1px solid #EDEDED; }
+.pnlContainerGridPatientPage7   { width: 100%; height:auto; overflow-y:auto;overflow-x:hidden; border:1px solid #EDEDED; }
+.pnlContainerGrid1              { width: 100%; height:450px; overflow-y:auto;overflow-x:hidden; border:1px solid #EDEDED; }
+.pnlContainerGrid2              { width: 100%; height:250px; overflow-y:auto;overflow-x:hidden; border:1px solid #EDEDED; }
+.pnlContainer                   { width: 100%; margin-left: auto; margin-right: auto;height:383px; overflow-y:auto;overflow-x:hidden; border:1px solid #EDEDED; }
+
+.pnlContainer *  { font-family: Calibri; font-size: 14px; }
+.pnlContainerGrid *  { font-family: Calibri; font-size: 14px; }
+.pnlContainerGridPatientPage *  { font-family: Calibri,Segoe UI,"Open Sans",  Arial, Helvetica, sans-serif }
+
+td.tdExpand                     { vertical-align: middle; padding-top: 5px; text-align:center; }
+
+.grdTotal                       { width: 100%; border:0; }
+
+.grdView                        { width: 100%; border:0; }
+.grdView .keyField              { display: none; }
+.grdView .hiddenColumn          { display: none; }
+.grdView .controlColumn         { display: none; }
+.grdView th                     { font-weight: normal; padding: 5px 5px; }
+.grdView th.ASC:after           { content: '      ' url('../Images/up-arrow.png');  }
+.grdView th.DESC:after          { content: '      ' url('../Images/down-arrow.png');  }
+/*.grdView tr:not(:first-child)   { cursor: pointer; }*/
+.grdView > tbody > tr > td                     { vertical-align: top; padding: 5px; }
+.grdView:not(.notAllowSelect) tr:not(:first-child) { cursor: pointer; }
+.imgLoadingGrdView              { background-color:White;border:1px solid #AAA;text-align:center;vertical-align:middle; z-index:100; width:70px;height:35px;position:absolute;left:48%;top:20%;display:none; }
+.imgLoadingGrdView img          { margin: auto; }
+
+.grdCollapsible                 { width: 100%; border:0; }
+.grdCollapsible > tbody > tr > td              { vertical-align: top; padding: 5px; }
+.grdCollapsible > tbody > tr > td.tdExpand     { padding-top: 10px; }
+.grdCollapsible .keyField       { display: none; }
+.grdCollapsible .hiddenColumn   { display: none; }
+.grdCollapsible th              { font-weight: normal; padding: 5px 5px; }
+.grdCollapsible th.ASC:after    { content: '      ' url('../Images/up-arrow.png');  }
+.grdCollapsible th.DESC:after   { content: '      ' url('../Images/down-arrow.png');  }
+.grdCollapsible:not(.notAllowSelect) > tbody > tr:not(.trDetail) { cursor: pointer; }
+
+.grdSelected                    { width: 100%; border:0; }
+.grdSelected > tbody > tr > td                 { vertical-align: top; padding: 5px; }
+.grdSelected > tbody > tr > td.tdExpand        { padding-top: 8px; }
+.grdSelected .keyField          { display: none; }
+.grdSelected .hiddenColumn      { display: none; }
+.grdSelected .controlColumn     { display: none; }
+.grdSelected th                 { font-weight: normal; padding: 5px 5px; }
+.grdSelected th.ASC:after       { content: '      ' url('../Images/up-arrow.png');  }
+.grdSelected th.DESC:after      { content: '      ' url('../Images/down-arrow.png');  }
+/*.grdSelected tr:not(:first-child)   { cursor: pointer; }*/
+.grdSelected tr td a            { color: #0066FF; cursor: pointer; }
+.grdSelected tr td a:hover      { text-decoration: underline; }
+
+.grdLabResultDt                    { width: 100%; border:0; }
+.grdLabResultDt > tbody > tr > td                 { vertical-align: top; padding: 5px; }
+.grdLabResultDt > tbody > tr > td.tdExpand        { padding-top: 8px; }
+.grdLabResultDt .keyField          { display: none; }
+.grdLabResultDt .hiddenColumn      { display: none; }
+.grdLabResultDt .controlColumn     { display: none; }
+.grdLabResultDt th                 { font-weight: normal; padding: 5px 5px; }
+.grdLabResultDt th.ASC:after       { content: '      ' url('../Images/up-arrow.png');  }
+.grdLabResultDt th.DESC:after      { content: '      ' url('../Images/down-arrow.png');  }
+/*.grdLabResultDt tr:not(:first-child)   { cursor: pointer; }*/
+.grdLabResultDt > tbody > tr .GroupColumn       { font-weight: bold; }
+.grdLabResultDt tr td a            { color: #0066FF; cursor: pointer; }
+.grdLabResultDt tr td a:hover      { text-decoration: underline; }
+
+.grdNormal                      { width: 100%; border:0; }
+.grdNormal td                   { vertical-align: top; }
+.grdNormal > tbody > tr > td    { vertical-align: top; padding: 0px 7px; }
+.grdNormal .keyField            { display: none; }
+.grdNormal .hiddenColumn        { display: none; }
+.grdNormal th                   { font-weight: normal; padding: 2px 7px; }
+.grdNormal th.ASC:after         { content: '      ' url('../Images/up-arrow.png');  }
+.grdNormal th.DESC:after        { content: '      ' url('../Images/down-arrow.png');  }
+/*.grdSelected tr:not(:first-child)   { cursor: pointer; }*/
+.grdNormal tr td a              { color: #0066FF; cursor: pointer; }
+.grdNormal tr td a:hover        { text-decoration: underline; }
+
+.grdPatientPage, .grdNormal, .grdView     { font-size: 1em; }
+.grdPatientPage     { font-size: 1em; }
+
+.gridColumnText                     { text-align: left; }
+.gridColumnBoolean, .gridColumnLink { text-align: center; }
+
+.inline-grid-label { font-size:0.9em;font-style:italic; color:Gray }
+.specialText {color: Blue; }
+
+.tdBedStatusM
+{
+    background-color: #4ac5e3;
+}
+.tdBedStatusF
+{
+    background-color: #ffbdde;
+}
+/* #endregion */
+
+/* #region Search Dialog */  
+.dxpcHeader                     { background-color: #426D1D; padding: 5px 10px !important; color: #F00 !important; }
+.dxpcHeader td                  { color: #FFF !important; }
+/* #endregion */ 
+
+/* #region Drop Down Menu */
+.containerDropDownMenu  { width: 100%; height: 25px; padding-left: 5px;margin-top: -7px; }
+.sf-menu, .sf-menu *    { margin: 0; padding: 0; list-style: none; font-family: Segoe UI; font-size: 1.02em; }
+.sf-menu                { line-height:	1.1; }
+.sf-menu ul             { position:	absolute; top: -999em; width: 18em; }
+.sf-menu ul li          { width: 100%; }
+.sf-menu li:hover       { visibility: inherit; }
+.sf-menu li             { float: left; position: relative; }
+.sf-menu a              { display: block; position:	relative; font-size:0.9em; }
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul  { left: 0; top: 1.6em; z-index:	99; }
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul { top: -999em; }
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul { font-size: 14px; left: 17.5em; top: 0; }
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul { top: -999em; }
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul { left: 18em; top: 0; }
+.sf-menu                { float: left; margin-bottom: 1em; }
+.sf-menu ul             { box-shadow: 2px 2px 6px rgba(0,0,0,.2); }
+.sf-menu a              { padding: .3em 1em .6em 1em; }
+.sf-menu a, .sf-menu a:visited  { text-decoration:none; }
+
+.sf-menu a:hover, .sf-menu li:hover { text-decoration:underline; }
+.sf-menu a.sf-with-ul   { padding-right: 2.25em; min-width:	1px; }
+.sf-sub-indicator       { position:	absolute; display: block; right: 0.75em; top: 1.05em; width: 10px; height: 10px;	text-indent: -999em; overflow: hidden; background: url('../Images/DropDownMenu/arrows-ffffff.png') no-repeat -10px -100px; }
+a > .sf-sub-indicator   { top: .45em; background-position: 0 -100px; }
+
+a:focus > .sf-sub-indicator,
+a:hover > .sf-sub-indicator,
+a:active > .sf-sub-indicator,
+li:hover > a > .sf-sub-indicator,
+li.sfHover > a > .sf-sub-indicator { background-position: -10px -100px; }
+
+.sf-menu ul .sf-sub-indicator { background-position:  -10px 0; }
+.sf-menu ul a > .sf-sub-indicator { background-position:  0 0; }
+
+.sf-menu ul a:focus > .sf-sub-indicator,
+.sf-menu ul a:hover > .sf-sub-indicator,
+.sf-menu ul a:active > .sf-sub-indicator,
+.sf-menu ul li:hover > a > .sf-sub-indicator,
+.sf-menu ul li.sfHover > a > .sf-sub-indicator { background-position: -10px 0; }
+/* #endregion */
+
+/* #region Intellisense TextBox */
+.containerIntellisense
+{
+    position:relative;
+    text-align:left;
+    font-size:0.8em;
+}
+.containerIntellisense .contentText
+{
+    font-size:1em;
+    margin:0 2px;
+    color: #000;
+}
+.containerIntellisense .intellisenseBox
+{
+    font-size:1em;
+    position:absolute;
+    top:22px;
+    left:0;
+    background-color:#EAEAEA;
+    border:1px solid #7C7C7C;
+    background: -moz-linear-gradient(top, #FFFFFF 0%, #E8E9F2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFFFFF), color-stop(100%,#E8E9F2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #FFFFFF 0%,#E8E9F2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #FFFFFF 0%,#E8E9F2 100%); /* Opera11.10+ */
+    background: linear-gradient(top, #FFFFFF 0%,#E8E9F2 100%); /* W3C */
+    display:none;
+    vertical-align:middle;
+    z-index:10000;
+}
+.containerIntellisense .intellisenseContentInfo
+{
+    float:left;
+    margin-right:10px;
+    margin-left:-5px;
+    vertical-align:middle;
+}
+.containerIntellisense .intellisenseContentInfo img
+{
+    vertical-align: middle;
+    margin-top:-4px;
+    cursor:pointer;
+}
+.containerIntellisense .intellisenseContent
+{
+    margin:2px 0 0 10px;
+    display:inline-block;
+}
+.containerIntellisense .intellisenseContentText
+{
+    display:inline-block;
+    margin-right:10px;
+    color: #000;
+}
+.containerIntellisense .intellisenseContentText b
+{
+    color: #000;
+}
+.containerIntellisense .intellisenseDescription
+{
+    margin-right:10px;
+    margin-bottom:2px;
+    font-style:italic;
+    color: #000;
+}
+.containerIntellisense .intellisenseDescription b
+{
+    color: #000;
+}
+table.tblContainerTextBox       { background-color: white; border: 1px #9B9B9B solid; }
+table.tblContainerTextBox.error { border: 1px #F00 solid; }
+input.txtIntellisense, input.txtAutoComplete { background-color: white; }
+/* #endregion */
+
+/* #region QIS Search Text Box */
+.containerAutoComplete              { position:relative; text-align:left; }
+.containerAutoComplete .imgLoadingAutoComplete { display:none; }
+.containerAutoComplete .containerAutoCompleteIntellisenseBox { display:none; position:absolute; top:22px; left:0; background-color:#FFFFFF; border:1px solid #7C7C7C; /*display:none;*/ z-index:10000; vertical-align:middle; font-size:12px; }
+.containerAutoComplete .autoCompleteBox { margin-top:5px; display:none; }
+.containerAutoComplete .autoCompleteContent { max-height:250px; overflow-y:auto; position:relative; }    
+
+.containerAutoComplete .tblAutoCompleteContent  { font-size: 0.9em; }
+.containerAutoComplete .tblAutoCompleteContent th { background-color:#9CC525; padding:7px 5px; padding:5px; border-right:1px solid #EEEEEE; border-bottom:1px solid #EEEEEE; cursor:default; }
+.containerAutoComplete .tblAutoCompleteContent tr:hover th { color:#000; }
+.containerAutoComplete .tblAutoCompleteContent th:hover { color:#000; }
+.containerAutoComplete .tblAutoCompleteContent tr { cursor:pointer; }
+.containerAutoComplete .tblAutoCompleteContent tr.selected { background-color:#F4921B; color:#FFF; }
+.containerAutoComplete .tblAutoCompleteContent tr:hover { background-color:#FFA55A; color:#FFF; }
+.containerAutoComplete .tblAutoCompleteContent td { padding:5px; border-right:1px solid #EEEEEE; border-bottom:1px solid #EEEEEE; vertical-align:top; }
+
+.containerAutoComplete .containerAutoCompleteIntellisenseBox { font-size:12px; font-family:Calibri; border:1px solid #7C7C7C; vertical-align:middle; font-size:12px; z-index:10000; }
+.containerAutoComplete .autoCompleteIntellisenseBox { background-color:#F4F4F4; padding-bottom:5px; display:none; }
+.containerAutoComplete .autoCompleteIntellisenseContent { margin:2px 0 0 10px; display:inline-block; }
+.containerAutoComplete .autoCompleteIntellisenseContentText { display:inline-block; margin-right:10px; }
+.containerAutoComplete .intellisenseDescription     { margin-right:10px; margin-bottom:2px; font-style:italic; }
+.containerAutoComplete .autoCompleteTitle           { padding-left:5px; }
+/* #endregion */
+
+/* #region Paging */
+.jPaginate              { height:34px; position:relative; color:#a5a5a5; font-size:0.9em; width:100%; font-family: SegoeUi; }
+.jPaginate a            { cursor:pointer; line-height:15px; height:18px; padding:2px 5px; margin:2px; float:left; }
+.jPag-control-back      { position:absolute; left:0px; }
+.jPag-control-front     { position:absolute; top:0px; }
+.jPaginate span         { cursor:pointer; }
+ul.jPag-pages           { float:left; list-style-type:none; margin:0px 0px 0px 0px; padding:0px; }
+ul.jPag-pages li        { cursor:pointer; display:inline-block; float:left; padding:0px; margin:0px; border:1px solid #999; -webkit-border-radius: 999px; -moz-border-radius: 999px; border-radius: 999px; margin-right:3px; width:22px; height:22px; vertical-align:top; position:relative; text-align:center; }
+ul.jPag-pages li:hover  { border:1px solid #FFF; color:White; }
+ul.jPag-pages li.selected{ border:1px solid #FFF; }
+ul.jPag-pages li span   { padding:2px 5px; line-height:22px; height:18px; }
+span.jPag-current       { cursor:default; font-weight:normal; line-height:22px; height:18px; padding:2px 5px; }
+ul.jPag-pages li span.jPag-previous,
+ul.jPag-pages li span.jPag-next,
+span.jPag-sprevious,
+span.jPag-snext,
+ul.jPag-pages li span.jPag-previous-img,
+ul.jPag-pages li span.jPag-next-img,
+span.jPag-sprevious-img,
+span.jPag-snext-img     { height:22px; margin:2px; float:left; line-height:18px; }
+ul.jPag-pages li span.jPag-previous,
+ul.jPag-pages li span.jPag-previous-img { margin:2px 0px 2px 2px; font-weight:bold; width:10px; }
+ul.jPag-pages li span.jPag-next,
+ul.jPag-pages li span.jPag-next-img{ margin:2px 2px 2px 0px; font-weight:bold; width:10px; }
+span.jPag-sprevious,
+span.jPag-sprevious-img { margin:2px 0px 2px 2px; font-size:18px; width:15px; text-align:right; }
+span.jPag-snext,
+span.jPag-snext-img     { margin:2px 2px 2px 0px; font-size:18px; width:15px; text-align:right; }
+a.jPag-first, a.jPag-last{ }
+.containerPaging        { width:100%; padding-top: 5px; height: 30px; }
+/* #endregion */
+
+/* #region Medication Chart */
+.divDrugTypeLegend
+{
+    width:15px;
+}
+        
+.divDrugTypeLegend1
+{
+    background-color:#0066FF;
+}
+        
+.divDrugTypeLegend2
+{
+    background-color:Red;
+}
+        
+.divSTATUS
+{
+    width: 110px;
+    height: 55px;
+    line-height: 55px;     
+    text-align: center;       
+    padding:1px;     
+    font-size:18pt;
+    font-weight:bold;
+}
+.divMultiVisitSTATUS
+{
+    width: 110px;
+    height: 55px;
+    line-height: 55px;     
+    text-align: center;       
+    padding:1px;     
+    font-size:8pt;
+    font-weight:bold;
+}
+.divOPEN
+{
+    background-color: #95a5a6;
+    color: Black;
+}
+.divSchedule
+{
+    cursor:pointer;
+    background-color: #0066FF;
+    color: White;
+}
+.divTaken
+{
+    cursor:pointer;
+    background-color: #2ecc71;
+    color: #2c3e50;
+}
+.divMultiVisitOPEN
+{
+    background-color: #95a5a6;
+    color: Black;
+}
+.divMultiVisitSchedule
+{
+    cursor:pointer;
+    background-color: #0066FF;
+    color: White;
+}
+.divMultiVisitTaken
+{
+    cursor:pointer;
+    background-color: #2ecc71;
+    color: #2c3e50;
+}
+.divPending
+{
+    cursor:pointer;
+    background-color: #f1c40f;
+    color: Black;
+}
+.divOverDue
+{
+    cursor:pointer;
+    background-color: red;
+    color: White;
+}
+.divRefused
+{
+    cursor:pointer;
+    background-color: Maroon;
+    color: Black;
+}
+.divDiscontinue
+{
+    cursor:pointer;
+    background-color: black;
+    color: White;
+}
+
+.divMedicationStatusIcon
+{
+    border:1px;
+    background:#ecf0f1;
+    color:black;
+    width:30px;
+    height:25px;
+    line-height: 25px;
+}
+
+.divMedicationStatusInfo
+{
+    border:1px;
+    background:#ecf0f1;
+    width:30px;
+    height:30px;
+    line-height:30px; 
+    text-align: center;
+}
+
+.divDetailInfo
+{
+    z-index: 11;
+    font-size: 10px;
+    display: none;
+    padding: 5px;
+    position: absolute;
+    top: 15px;
+    width: 300px;
+    border: 1px solid #AAA;
+    text-align: left;
+    background-color: White;
+}
+.divDetailInfo td
+{
+    color: #000;
+}
+
+.externalMedicationColor {background-color: Yellow !important;}
+/* #endregion */ 
+
+/* #region Color Picker */
+div.colorPicker-picker          { height: 16px; width: 16px; padding: 0 !important; border: 1px solid #ccc; background: url(../Images/ColorPicker/arrow.gif) no-repeat top right; cursor: pointer; line-height: 16px; }
+div.colorPicker-palette         { width: 110px; position: absolute; border: 1px solid #598FEF; background-color: #EFEFEF; padding: 2px; z-index: 9999; }
+div.colorPicker_hexWrap         { width: 100%; float:left; }
+div.colorPicker_hexWrap label   { font-size: 95%; color: #2F2F2F; margin: 5px 2px; width: 25%; }
+div.colorPicker_hexWrap input   { margin: 5px 2px; padding: 0; font-size: 95%; border: 1px solid #000; width: 65%; }
+div.colorPicker-swatch          { height: 12px; width: 12px; border: 1px solid #000; margin: 2px; float: left; cursor: pointer; line-height: 12px; }
+/* #endregion */
+
+/* #region Scroll Image */
+.ad-gallery                     { width: 95%; }
+.ad-gallery, .ad-gallery *      { margin: 0; padding: 0; }
+.ad-gallery .ad-image-wrapper   { width: 300px; height: 300px; margin-right:20px; border:1px solid #9C9898; margin-bottom: 10px; position: relative; display: table-cell; z-index:100; }
+.ad-gallery .ad-image-wrapper .ad-loader    { position: absolute; z-index: 10; top: 48%; left: 48%; border: 1px solid #CCC; }
+.ad-gallery .ad-image-wrapper .ad-next      { position: absolute; right: 0; top: 0; width: 25%; height: 100%; cursor: pointer; display: block; z-index: 200; }
+.ad-gallery .ad-image-wrapper .ad-prev      { position: absolute; left: 0; top: 0; width: 25%; height: 100%; cursor: pointer; display: block; z-index: 200; }
+.ad-gallery .ad-image-wrapper .ad-prev, .ad-gallery .ad-image-wrapper .ad-next { /* Or else IE will hide it */background: url(../Images/Scroll/trans.gif); }
+.ad-gallery .ad-image-wrapper .ad-prev .ad-prev-image, .ad-gallery .ad-image-wrapper .ad-next .ad-next-image { background: url(../Images/Scroll/ad_prev.png); width: 30px; height: 30px; display: none; position: absolute; top: 47%; left: 0; z-index: 101; }
+.ad-gallery .ad-image-wrapper .ad-next .ad-next-image   { background: url(../Images/Scroll/ad_next.png);width: 30px; height: 30px; right: 0; left: auto; }
+.ad-gallery .ad-image-wrapper .ad-image                 { position: absolute; overflow: hidden; top: 0; left: 0; z-index: 9; }
+.ad-gallery .ad-image-wrapper .ad-image a img           { border: 0; }
+.ad-gallery .ad-controls                                { height: 20px; }
+.ad-gallery .ad-info                                    { float: left; }
+.ad-gallery .ad-slideshow-controls                      { float: right; }
+.ad-gallery .ad-slideshow-controls .ad-slideshow-start, .ad-gallery .ad-slideshow-controls .ad-slideshow-stop { padding-left: 5px; cursor: pointer; }
+.ad-gallery .ad-slideshow-controls .ad-slideshow-countdown  { padding-left: 5px; font-size: 0.9em; }
+.ad-gallery .ad-slideshow-running .ad-slideshow-start   { cursor: default; font-style: italic; }
+.ad-gallery .ad-nav                         { width: 100%; position: relative; }
+.ad-gallery .ad-forward, .ad-gallery .ad-back   { position: absolute; top: 0; height: 100%; z-index: 10; }
+/* IE 6 doesn't like height: 100% */
+* html .ad-gallery .ad-forward, .ad-gallery .ad-back { height: 100px; }
+.ad-gallery .ad-back                { cursor: pointer; left: -20px; width: 13px; display: block; background: url(../Images/Scroll/ad_scroll_back.png) 0px 40px no-repeat; }
+.ad-gallery .ad-forward             { cursor: pointer; display: block; right: -20px; width: 13px; background: url(../Images/Scroll/ad_scroll_forward.png) 0px 40px no-repeat; }
+.ad-gallery .ad-nav .ad-thumbs      { overflow: hidden; width: 100%; }
+.ad-gallery .ad-thumbs .ad-thumb-list { float: left; width: 9000px; list-style: none; }
+.ad-gallery .ad-thumbs li           { float: left; padding-right: 5px; }
+.ad-gallery .ad-thumbs li a         { display: block; }
+.ad-gallery .ad-thumbs li a img     { border: 3px solid #CCC; display: block; height:100px; }
+.ad-gallery .ad-thumbs li a.ad-active img   { border: 3px solid #616161; }
+/* Can't do display none, since Opera won't load the images then */
+.ad-preloads                        { position: absolute;left: -9000px;top: -9000px; }
+/* #endregion */
+
+/* #region Accordion */
+.ui-accordion-header{
+   background:black;
+}
+
+.accordion  {
+	width: 100%;
+	margin:0;
+	border: 1px solid black;
+    height:100%;
+}
+
+.accordion div {
+	background-color: #fff;
+	position:relative;
+}
+.accordion div img {
+	position:absolute;
+	left:44%;
+}
+.accordion div ul 
+{
+    margin:0;
+    padding:0;
+    padding-left:2px;
+}
+.accordion div ul li {
+	list-style-type: none;
+	vertical-align:middle;
+}     
+        
+.symptomNameTmpl
+{
+    padding-left:5px;
+}
+
+.accordion p {
+	margin-bottom : 10px;
+	border: none;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 10px;
+	margin: 0px;
+	padding: 10px;
+}
+.accordion a {
+	cursor:pointer;
+	display:block;
+	padding:2px;
+	margin-top: 0;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 11px;
+	color: black;
+}
+.accordion a span {
+	float: left;
+}
+/* #endregion */
+
+/* #region ComboBox Auto Complete */
+.ui-button {
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	line-height: normal;
+	margin-right: .1em;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+	overflow: visible; /* removes extra width in IE */
+}
+.ui-button,
+.ui-button:link,
+.ui-button:visited,
+.ui-button:hover,
+.ui-button:active {
+	text-decoration: none;
+}
+/* to make room for the icon, a width needs to be set here */
+.ui-button-icon-only {
+	width: 2.2em;
+}
+/* button elements seem to need a little more width */
+button.ui-button-icon-only {
+	width: 2.4em;
+}
+.ui-button-icons-only {
+	width: 3.4em;
+}
+button.ui-button-icons-only {
+	width: 3.7em;
+}
+
+/* button text element */
+.ui-button .ui-button-text {
+	display: block;
+	line-height: normal;
+}
+.ui-button-icon-only .ui-button-text,
+.ui-button-icons-only .ui-button-text {
+	padding: .4em;
+	text-indent: -9999999px;
+}
+.ui-button-text-icon-primary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+	padding: .4em 1em .4em 2.1em;
+}
+.ui-button-text-icon-secondary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+	padding: .4em 2.1em .4em 1em;
+}
+.ui-button-text-icons .ui-button-text {
+	padding-left: 2.1em;
+	padding-right: 2.1em;
+}
+/* no icon support for input elements, provide padding by default */
+input.ui-button {
+	padding: .4em 1em;
+}
+
+/* button icon element(s) */
+.ui-button-icon-only .ui-icon,
+.ui-button-text-icon-primary .ui-icon,
+.ui-button-text-icon-secondary .ui-icon,
+.ui-button-text-icons .ui-icon,
+.ui-button-icons-only .ui-icon {
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-button-icon-only .ui-icon {
+	left: 50%;
+	margin-left: -8px;
+}
+.ui-button-text-icon-primary .ui-button-icon-primary,
+.ui-button-text-icons .ui-button-icon-primary,
+.ui-button-icons-only .ui-button-icon-primary {
+	left: .5em;
+}
+.ui-button-text-icon-secondary .ui-button-icon-secondary,
+.ui-button-text-icons .ui-button-icon-secondary,
+.ui-button-icons-only .ui-button-icon-secondary {
+	right: .5em;
+}
+
+/* button sets */
+.ui-buttonset {
+	margin-right: 7px;
+}
+.ui-buttonset .ui-button {
+	margin-left: 0;
+	margin-right: -.3em;
+}
+
+/* workarounds */
+/* reset extra padding in Firefox, see h5bp.com/l */
+input.ui-button::-moz-focus-inner,
+button.ui-button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+.ui-autocomplete {
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: default;
+}
+.ui-menu {
+	list-style: none;
+	padding: 2px;
+	margin: 0;
+	display: block;
+	outline: none;
+}
+.ui-menu .ui-menu {
+	margin-top: -3px;
+	position: absolute;
+}
+.ui-menu .ui-menu-item {
+	margin: 0;
+	padding: 0;
+	font-size: 0.8em;
+	width: 100%;
+}
+.ui-menu .ui-menu-divider {
+	margin: 5px -2px 5px -2px;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border-width: 1px 0 0 0;
+}
+.ui-menu .ui-menu-item a {
+	text-decoration: none;
+	display: block;
+	padding: 2px .4em;
+	line-height: 1.5;
+	min-height: 0; /* support: IE7 */
+	font-weight: normal;
+}
+.ui-menu .ui-menu-item a.ui-state-focus,
+.ui-menu .ui-menu-item a.ui-state-active {
+	font-weight: normal;
+	margin: -1px;
+}
+
+.ui-menu .ui-state-disabled {
+	font-weight: normal;
+	margin: .4em 0 .2em;
+	line-height: 1.5;
+}
+.ui-menu .ui-state-disabled a {
+	cursor: default;
+}
+
+/* icon support */
+.ui-menu-icons {
+	position: relative;
+}
+.ui-menu-icons .ui-menu-item a {
+	position: relative;
+	padding-left: 2em;
+}
+
+/* left-aligned */
+.ui-menu .ui-icon {
+	position: absolute;
+	top: .2em;
+	left: .2em;
+}
+
+/* right-aligned */
+.ui-menu .ui-menu-icon {
+	position: static;
+	float: right;
+}
+
+.containercbo button.ui-state-default   { background-image:none; background-color: #FFFFFF; color: Black;border:1px solid #BABABA; width:18px; }
+.containercbo button.ui-state-default .ui-icon { background-image: url(MetroGreen/jquery/images/ui-icons_222222_256x240.png); }
+.containercbo button.ui-state-hover   { background-image:none; background-color: #F36100; }
+.containercbo button.ui-state-focus   { background-image:none;   }
+
+.ui-button { margin-left: -1px; margin-top: -3px; background-color: Blue }
+/*.ui-button-icon-only .ui-button-text { padding: 0.05em 0.1em; } */
+.ui-button-icon-only .ui-button-text { } 
+.containercbo  { font-size: 0.96em; display: inline; vertical-align : top; } 
+
+.containercbo button.ui-state-default[enabled="false"] { background-color: #EAEAEA; }
+.containercbo input { border: 1px solid #BABABA; }
+.containercbo input[readonly="readonly"] { color: Maroon; background-color: #EAEAEA;  border: 1px solid #BABABA; }
+/*.ui-autocomplete-input { margin: 0; padding: 0.1em 0 0.47em 0.1em; }
+	
+.containercbo button.ui-state-default   { background-image:none; background-color: #FFFFFF; color: Black;border:1px solid #848484; width:18px; }
+.containercbo button.ui-state-default .ui-icon { background-image: url(../../themes/MetroGreen/images/ui-icons_222222_256x240.png); }
+.containercbo button.ui-state-hover   { background-image:none; background-color: #F36100; }
+.containercbo button.ui-state-focus   { background-image:none;   }*/
+/* #endregion */
+
+/* #region Collapse Expand */
+h4.h4collapsed, h4.h4expanded        { cursor: pointer; }
+h4.h4collapsed:before, h4.h4expanded:before { font-weight: 900; text-align: center; font-size: 1.2em; }
+h4.h4collapsed:before                { content:"+";margin: 0px 5px 0 5px;  }
+h4.h4expanded:before                 { content:"-";margin: 0px 8px 0 8px;  }
+h4.h4collapsed + div.containerTblEntryContent   { display: none; }
+/* #endregion */
+
+/*.dxeListBoxItemHover                { background-color: #FFA55A; color: Black; }
+.dxeListBoxItemSelected             { background-color: #F36F00; color: White; }
+
+.dxeDisabled        { color: Maroon !important; background-color: #EAEAEA !important; border: 1px solid #848484; border-right: 1px solid #FAFAFA; border-bottom: 1px solid #FAFAFA; }*/
+
+/* #region ASP.NET Grid */
+/*asp:BoundField HeaderStyle-HorizontalAlign="Left" ItemStyle-HorizontalAlign=Left*/
+/* #endregion */
+
+
+.highlight    {  background-color:#FE5D15; color: White; }     
+        
+.blink { animation: blinker 0.6s linear infinite; }
+.blink-alert {animation: blinker 1s linear infinite; color: red; font-weight: bold;}
+.blink-critical {animation: blinker 2s linear infinite; color: red; font-weight: bold;}
+.blink-abnormal {animation: blinker 4s linear infinite; color: red; font-weight: bold;}
+.blink-medication-overdue {animation: blinker 2s linear infinite; font-weight: bold;}
+.blink-button {animation: blinker 2s linear infinite; color: red; font-weight: bold;}
+.blink-icon {animation: blinker 1s linear infinite;}
+@keyframes blinker { 50% { opacity: 0; }}
+
+.blink-one {animation: blinker-one 1s linear infinite;}
+@keyframes blinker-one { 0% { opacity: 0; }}
+.blink-two {animation: blinker-two 1.4s linear infinite;}
+@keyframes blinker-two {  100% { opacity: 0; }}   
+
+.bpjsItem {background-color: #adff2f; color:Black;}
+.formulariumItem {background-color: #FFFFE0; color:Black;}
+.inhealthItem {background-color: #b0e2ff; color:Black;}
+.employeeFormulariumItem {background-color: #faf0e6; color:Black;}
+
+.templatePatientBodyDiagram {padding: 10px;}
+.templatePatientBodyDiagram .containerImage { float: left; display: table-cell; vertical-align: middle; border: 1px solid #AAA; width: 300px; height: 300px; margin-right: 20px; text-align: center; position: relative; }
+.templatePatientBodyDiagram .containerImage img { max-height: 300px; max-width: 300px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
+.templatePatientBodyDiagram .spLabel { display: inline-block; width: 120px; font-weight: bolder;}
+.templatePatientBodyDiagram .spValue { margin-left: 10px;}
+
+input[class="optForm"]:disabled:checked { outline:1px solid DodgerBlue; }
+input[class="chkForm"]:disabled:checked { outline:1px solid DodgerBlue; }
+input[class="chkNursingProblem"]:disabled:checked { outline:1px solid DodgerBlue; }
+
+.notifbadge { color: white; text-decoration: none; padding: 5px 5px; position: relative; display: inline-block; border-radius: 10px; }
+.notifbadge:hover { background: orange; }
+.notifbadge .badge { position: absolute; top: -5px; right: -5px; padding: 3px 3px; border-radius: 50%; background-color: red; color: white; }
+
+
+div.timeContainer {
+    background-color: transparent;
+    display: inline-flex;
+    border: 1px solid #ccc;
+    color: #555;
+}
+
+  input.timeHourPart {
+    color: #555;
+    text-align: center;
+    width: 35px;
+  }
+
+ /* pagging supaya tidak kebawah  
+ .jPag-pages{width: 29710px !important;}*/
+ 
+.divNavigationPane
+{
+    overflow: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: #097BB3 #DEEAF5; 
+   }
+   .ulNavigationPane li {
+    background-color: #1BA1E2;
+    color: #FFFFFF;
+    list-style-type: none;
+    padding: 3px 5px 5px 5px;
+    height: 32px;
+    width: 125px;
+    display: inline-block;
+    vertical-align: middle;
+    word-break: break-word;
+    white-space: normal;
+    scrollbar-width: thin;
+  
+}
+ 
+#ulTabMenuChild {
+    display: inline-block;
+    overflow: auto;
+    scrollbar-color: #1BA1E2 #DEEAF5; 
+    /*scrollbar-width: thin;*/
+    width: 100%;
+    margin: 0 0 1em;
+    white-space: nowrap;
+    scrollbar-width: thin;
+}
+  .ulNavigationPaneEMR li {
+    cursor: pointer;
+    font-size: 0.87em;
+    background-color: #1FAEFF;
+    color: #FFFFFF;
+    list-style-type: none;
+    padding: 3px 5px 2px 5px;
+    height: 38px;
+    width: 108px;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+}

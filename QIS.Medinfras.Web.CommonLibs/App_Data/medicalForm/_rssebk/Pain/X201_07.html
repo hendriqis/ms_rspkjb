@@ -1,0 +1,266 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+
+    var p1 = 0;
+    var p2 = 0;
+    var p3 = 0;
+    var p4 = 0;
+    var p5 = 0;
+    var p6 = 0;
+    var p7 = 0;
+    var p8 = 0;
+
+    $(function () {
+        $("#ddlFacialExpression").change(function () {
+            $("#txtParamScore1").val($(this).val());
+            p1 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlCry").change(function () {
+            $("#txtParamScore2").val($(this).val());
+            p2 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlBreathing").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            p3 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlArm").change(function () {
+            $("#txtParamScore4").val($(this).val());
+            p4 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlLegs").change(function () {
+            $("#txtParamScore5").val($(this).val());
+            p5 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlStimulation").change(function () {
+            $("#txtParamScore6").val($(this).val());
+            p6 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlHeartRate").change(function () {
+            $("#txtParamScore7").val($(this).val());
+            p7 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlOxygen").change(function () {
+            $("#txtParamScore8").val($(this).val());
+            p8 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlFacialExpression").change();
+        $("#ddlCry").change();
+        $("#ddlBreathing").change();
+        $("#ddlArm").change();
+        $("#ddlLegs").change();
+        $("#ddlStimulation").change();
+        $("#ddlHeartRate").change();
+        $("#ddlOxygen").change();
+    });
+
+    function CalculateTotalScore() {
+        var score = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8;
+        var value = parseInt(score);
+        var scoreType = 'Tidak ada nyeri';
+
+        if (value >= 1 && value <= 2) {
+            scoreType = "Nyeri Ringan";
+        }
+        else if (value >= 3 && value <= 4) {
+            scoreType = "Nyeri Sedang";
+        }
+        else if (value > 4) {
+            scoreType = "Nyeri Berat";
+        }
+        else {
+            scoreType = "Tidak ada Nyeri";
+        }
+
+        var result = score + '|' + scoreType;
+        SetTotalScore(result);
+    }
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <colgroup>
+                <col width="250px" />
+                <col width="600px" />
+                <col width="10px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="3">
+                    <label style="font-weight:bold; text-decoration:underline">NIPS (Neonatal Infant Pain Scale)</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    </br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Ekspresi Wajah</label>
+                </td>
+                <td>
+                    <select id="ddlFacialExpression" style="width:100%" class="ddlForm" controlID = "ddlFacialExpression">
+                        <option value="0" selected>Santai</option>
+                        <option value="1">Meringis</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px" class="txtForm" controlID = "txtParamScore1" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Menangis</label>
+                </td>
+                <td>
+                    <select id="ddlCry" style="width:100%" class="ddlForm" controlID = "ddlCry">
+                        <option value="0" selected>Tidak menangis</option>
+                        <option value="1">Merengek / merintih</option>
+                        <option value="2">Menangis melengking</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px" class="txtForm" controlID = "txtParamScore2" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Pola Bernapas</label>
+                </td>
+                <td>
+                    <select id="ddlBreathing" style="width:100%" class="ddlForm" controlID = "ddlBreathing">
+                        <option value="0" selected>Santai</option>
+                        <option value="1">Perubahan pola bernapas</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px" class="txtForm" controlID = "txtParamScore3" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Lengan</label>
+                </td>
+                <td>
+                    <select id="ddlArm" style="width:100%" class="ddlForm" controlID = "ddlArm">
+                        <option value="0" selected>Santai</option>
+                        <option value="1">Fleksi / extensi</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px" class="txtForm" controlID = "txtParamScore4" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Kaki</label>
+                </td>
+                <td>
+                    <select id="ddlLegs" style="width:100%" class="ddlForm" controlID = "ddlLegs">
+                        <option value="0" selected>Santai</option>
+                        <option value="1">Fleksi / extensi</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px" class="txtForm" controlID = "txtParamScore5" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Keadaan Rangsangan</label>
+                </td>
+                <td>
+                    <select id="ddlStimulation" style="width:100%" class="ddlForm" controlID = "ddlStimulation">
+                        <option value="0" selected>Tertidur / bangun</option>
+                        <option value="1">Rewel</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore6" style="width:50px" class="txtForm" controlID = "txtParamScore6" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <br />
+                    <label>Pada bayi prematur, ditambahkan dua parameter lagi yaitu Heart Rate dan Saturasi Oksigen</label>
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Heart Rate</label>
+                </td>
+                <td>
+                    <select id="ddlHeartRate" style="width:100%" class="ddlForm" controlID = "ddlHeartRate">
+                        <option value="0" selected>≤ 150 x/menit</option>
+                        <option value="1">151 – 170 x/menit</option>
+                        <option value="2">>170 x/menit</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore7" style="width:50px" class="txtForm" controlID = "txtParamScore7" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Saturasi Oksigen</label>
+                </td>
+                <td>
+                    <select id="ddlOxygen" style="width:100%" class="ddlForm" controlID = "ddlOxygen">
+                        <option value="0" selected>Tidak diperlukan oksigen tambahan</option>
+                        <option value="1">Penambahan oksigen diperlukan</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore8" style="width:50px" class="txtForm" controlID = "txtParamScore8" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    </br>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+

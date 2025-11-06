@@ -1,0 +1,21 @@
+﻿^XA
+^LL240
+^LH2,1^MD10
+^CF024,24
+^FO35,30^FD{PatientName} ({cfGenderInitial})^FS
+^CF024,24
+^FO35,65^FD{MedicalNo}^FS
+^CFD
+^FO210,65^FD{DateOfBirthInString}^FS
+^CF0,20 
+^FO35,95^BY2,1,1^BCN,50,Y,N,N^FD{MedicalNo}^FS
+^CF024,24
+^FO450,30^FD{PatientName} ({cfGenderInitial})^FS
+^CF024,24
+^FO450,65^FD{MedicalNo}^FS
+^CFD
+^FO625,65^FD{DateOfBirthInString}^FS
+^CF0,20
+^FO450,95^BY2,1,1^BCN,50,Y,N,N^FD{MedicalNo}^FS
+^PR2
+^XZ

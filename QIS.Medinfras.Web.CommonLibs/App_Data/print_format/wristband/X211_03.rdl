@@ -1,0 +1,18 @@
+﻿^XA
+^LL3352
+^PW361
+^LH10,10
+^FO40,1680
+^BQN,2,7,Q,1
+^FH_
+^FDQA,{MedicalNo}_0A_0D{RegistrationNo}_0A_0D{FirstName}_0A_0D{MiddleName}_0A_0D{LastName}_0A_0D{cfPatientLocation}_0A_0D^FS
+^A0R,53,47
+^FO285,1990^FD{PatientName} ({Gender},{cfPatientAge2})^FS
+^APR,30,27
+^FO245,1990^FDMRN^FS
+^FO245,2150^FD{MedicalNo}^FS
+^FO205,1990^FDREG.NO^FS
+^FO205,2150^FD{RegistrationNo}^FS
+^FO165,1990^FD{ActualVisitDateInString} {ActualVisitTime}  DOB : {DateOfBirthInString}^FS
+"^FO40,1990^BY3,2.0
+^A0N,40,30^BAR,100,N,N,N^FD{cfAlternateRegistrationNo}^FS

@@ -1,0 +1,11 @@
+﻿HealthcareName
+Phone
+Fax
+FixedAssetName
+FixedAssetCode
+FALocationName
+SerialNumber
+ItemName1
+ItemCode
+cfProcurementYear
+QRCodeInformation

@@ -1,0 +1,685 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="11.1.5.0" Ref="1" ControlType="QIS.Medinfras.ReportDesktop.LMorbiditasPasienRawatJalan, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DataSource="#Ref-0" EventsInfo="GroupHeader2,BeforePrint,GroupHeader2_BeforePrint;xrTableCell129,BeforePrint,xrTableCell129_BeforePrint" Font="Tahoma, 9pt" SnappingMode="SnapToGrid" PaperKind="A4" PageWidth="1169" PageHeight="827" Landscape="true" Version="11.1" Margins="25, 25, 25, 25">
+  <Bands>
+    <Item1 Ref="2" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+    <Item2 Ref="3" ControlType="PageHeaderBand" Name="PageHeader" HeightF="200">
+      <Controls>
+        <Item1 Ref="4" Name="xrTable1" ControlType="XRTable" Font="Tahoma, 8pt" SizeF="1112.5,87.5" LocationFloat="0, 112.5" TextAlignment="MiddleCenter">
+          <Rows>
+            <Item1 Ref="5" Name="xrTableRow1" ControlType="XRTableRow" Weight="1.375" Borders="Left, Top" Font="Tahoma, 8pt, style=Bold">
+              <Cells>
+                <Item1 Ref="6" ControlType="XRTableCell" Name="xrTableCell4" Text="No" TextAlignment="BottomCenter" Weight="0.10112359722008865" Multiline="true">
+                  <StylePriority Ref="7" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="8" ControlType="XRTableCell" Name="xrTableCell5" Text="No" TextAlignment="BottomCenter" Weight="0.13483146410309868" Multiline="true">
+                  <StylePriority Ref="9" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="10" ControlType="XRTableCell" Name="xrTableCell8" Text="No. Daftar" TextAlignment="BottomCenter" Weight="0.26966292049107926" Multiline="true">
+                  <StylePriority Ref="11" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="12" ControlType="XRTableCell" Name="xrTableCell1" Text="Golongan Sebab-Sebab Sakit" TextAlignment="BottomCenter" Weight="0.80898877347453269">
+                  <StylePriority Ref="13" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="14" ControlType="XRTableCell" Name="xrTableCell7" Text="Pasien Keluar (Hidup &amp; Mati) Menurut&#xD;&#xA;Golongan Umur" Weight="1.2134832215041258" Multiline="true" />
+                <Item6 Ref="15" ControlType="XRTableCell" Name="xrTableCell6" Text="Pasien keluar&#xD;&#xA;menurut sex" Weight="0.2022470195641678" Font="Tahoma, 7pt, style=Bold" Multiline="true">
+                  <StylePriority Ref="16" UseFont="false" />
+                </Item6>
+                <Item7 Ref="17" ControlType="XRTableCell" Name="xrTableCell2" Text="Jumlah&#xD;&#xA;Kasus" TextAlignment="BottomCenter" Weight="0.13483148810568835" Multiline="true">
+                  <StylePriority Ref="18" UseTextAlignment="false" />
+                </Item7>
+                <Item8 Ref="19" ControlType="XRTableCell" Name="xrTableCell3" Text="Jumlah" TextAlignment="BottomCenter" Borders="Left, Top, Right" Weight="0.13483151553721903" Font="Tahoma, 8pt, style=Bold" Multiline="true">
+                  <StylePriority Ref="20" UseFont="false" UseTextAlignment="false" UseBorders="false" />
+                </Item8>
+              </Cells>
+              <StylePriority Ref="21" UseFont="false" UseBorders="false" />
+            </Item1>
+            <Item2 Ref="22" Name="xrTableRow2" ControlType="XRTableRow" Weight="1.125" Borders="Left" Font="Tahoma, 7pt, style=Bold">
+              <Cells>
+                <Item1 Ref="23" ControlType="XRTableCell" Name="xrTableCell9" Text="Urut" TextAlignment="TopCenter" Weight="0.10112359207667659" Font="Tahoma, 8pt, style=Bold">
+                  <StylePriority Ref="24" UseFont="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="25" ControlType="XRTableCell" Name="xrTableCell10" Text="DTD" TextAlignment="TopCenter" Weight="0.13483145895968665" Font="Tahoma, 8pt, style=Bold">
+                  <StylePriority Ref="26" UseFont="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="27" ControlType="XRTableCell" Name="xrTableCell11" Text="Rinci" TextAlignment="TopCenter" Weight="0.26966293077790338" Font="Tahoma, 8pt, style=Bold">
+                  <StylePriority Ref="28" UseFont="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="29" ControlType="XRTableCell" Name="xrTableCell12" Text=" " TextAlignment="TopCenter" Weight="0.80898877347453269" Font="Tahoma, 8pt, style=Bold">
+                  <StylePriority Ref="30" UseFont="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="31" ControlType="XRTableCell" Name="xrTableCell18" Text="0-6 hr" Borders="Left, Top" Weight="0.1348314795333348">
+                  <StylePriority Ref="32" UseBorders="false" />
+                </Item5>
+                <Item6 Ref="33" ControlType="XRTableCell" Name="xrTableCell17" Text="7-27 hr" Borders="Left, Top" Weight="0.13483147953333485">
+                  <StylePriority Ref="34" UseBorders="false" />
+                </Item6>
+                <Item7 Ref="35" ControlType="XRTableCell" Name="xrTableCell19" Text="28 hr-&lt;1 th" Borders="Left, Top" Weight="0.13483147953333485">
+                  <StylePriority Ref="36" UseBorders="false" />
+                </Item7>
+                <Item8 Ref="37" ControlType="XRTableCell" Name="xrTableCell20" Text="1-4 th" Borders="Left, Top" Weight="0.13483147010374608">
+                  <StylePriority Ref="38" UseBorders="false" />
+                </Item8>
+                <Item9 Ref="39" ControlType="XRTableCell" Name="xrTableCell21" Text="5-14 th" Borders="Left, Top" Weight="0.13483146538895158">
+                  <StylePriority Ref="40" UseBorders="false" />
+                </Item9>
+                <Item10 Ref="41" ControlType="XRTableCell" Name="xrTableCell22" Text="15-24 th" Borders="Left, Top" Weight="0.13483146303155447">
+                  <StylePriority Ref="42" UseBorders="false" />
+                </Item10>
+                <Item11 Ref="43" ControlType="XRTableCell" Name="xrTableCell23" Text="25-44 th" Borders="Left, Top" Weight="0.13483146185285594">
+                  <StylePriority Ref="44" UseBorders="false" />
+                </Item11>
+                <Item12 Ref="45" ControlType="XRTableCell" Name="xrTableCell24" Text="45-64 th" Borders="Left, Top" Weight="0.13483146126350662">
+                  <StylePriority Ref="46" UseBorders="false" />
+                </Item12>
+                <Item13 Ref="47" ControlType="XRTableCell" Name="xrTableCell13" Text="65+ th" Borders="Left, Top" Weight="0.13483146126350665">
+                  <StylePriority Ref="48" UseBorders="false" />
+                </Item13>
+                <Item14 Ref="49" ControlType="XRTableCell" Name="xrTableCell41" Text="LK" Borders="Left, Top" Weight="0.1011235097820839">
+                  <StylePriority Ref="50" UseBorders="false" />
+                </Item14>
+                <Item15 Ref="51" ControlType="XRTableCell" Name="xrTableCell14" Text="PR" Borders="Left, Top" Weight="0.1011235097820839">
+                  <StylePriority Ref="52" UseBorders="false" />
+                </Item15>
+                <Item16 Ref="53" ControlType="XRTableCell" Name="xrTableCell15" Text="Baru" TextAlignment="TopCenter" Weight="0.13483148810568835" Font="Tahoma, 8pt, style=Bold">
+                  <StylePriority Ref="54" UseFont="false" UseTextAlignment="false" />
+                </Item16>
+                <Item17 Ref="55" ControlType="XRTableCell" Name="xrTableCell16" Text="kunjungan" TextAlignment="TopCenter" Borders="Left, Right" Weight="0.13483151553721903" Font="Tahoma, 8pt, style=Bold" Multiline="true">
+                  <StylePriority Ref="56" UseFont="false" UseTextAlignment="false" UseBorders="false" />
+                </Item17>
+              </Cells>
+              <StylePriority Ref="57" UseFont="false" UseBorders="false" />
+            </Item2>
+            <Item3 Ref="58" Name="xrTableRow3" ControlType="XRTableRow" Weight="0.5" Borders="Left" Font="Tahoma, 7pt, style=Bold">
+              <Cells>
+                <Item1 Ref="59" ControlType="XRTableCell" Name="xrTableCell25" Text=" " Weight="0.10112359207667659" />
+                <Item2 Ref="60" ControlType="XRTableCell" Name="xrTableCell26" Text=" " Weight="0.13483145895968665" />
+                <Item3 Ref="61" ControlType="XRTableCell" Name="xrTableCell27" Text=" " Weight="0.26966293077790338" />
+                <Item4 Ref="62" ControlType="XRTableCell" Name="xrTableCell28" Text=" " Weight="0.80898877347453269" />
+                <Item5 Ref="63" ControlType="XRTableCell" Name="xrTableCell42" Text="LK" Borders="Left, Top" Weight="0.0674157397666674">
+                  <StylePriority Ref="64" UseBorders="false" />
+                </Item5>
+                <Item6 Ref="65" ControlType="XRTableCell" Name="xrTableCell29" Text="PR" Borders="Left, Top" Weight="0.0674157397666674">
+                  <StylePriority Ref="66" UseBorders="false" />
+                </Item6>
+                <Item7 Ref="67" ControlType="XRTableCell" Name="xrTableCell43" Text="LK" Borders="Left, Top" Weight="0.067415739766667426">
+                  <StylePriority Ref="68" UseBorders="false" />
+                </Item7>
+                <Item8 Ref="69" ControlType="XRTableCell" Name="xrTableCell30" Text="PR" Borders="Left, Top" Weight="0.067415739766667426">
+                  <StylePriority Ref="70" UseBorders="false" />
+                </Item8>
+                <Item9 Ref="71" ControlType="XRTableCell" Name="xrTableCell44" Text="LK" Borders="Left, Top" Weight="0.067415739766667426">
+                  <StylePriority Ref="72" UseBorders="false" />
+                </Item9>
+                <Item10 Ref="73" ControlType="XRTableCell" Name="xrTableCell31" Text="PR" Borders="Left, Top" Weight="0.067415739766667426">
+                  <StylePriority Ref="74" UseBorders="false" />
+                </Item10>
+                <Item11 Ref="75" ControlType="XRTableCell" Name="xrTableCell45" Text="LK" Borders="Left, Top" Weight="0.067415735051873038">
+                  <StylePriority Ref="76" UseBorders="false" />
+                </Item11>
+                <Item12 Ref="77" ControlType="XRTableCell" Name="xrTableCell32" Text="PR" Borders="Left, Top" Weight="0.067415735051873038">
+                  <StylePriority Ref="78" UseBorders="false" />
+                </Item12>
+                <Item13 Ref="79" ControlType="XRTableCell" Name="xrTableCell46" Text="LK" Borders="Left, Top" Weight="0.067415732694475788">
+                  <StylePriority Ref="80" UseBorders="false" />
+                </Item13>
+                <Item14 Ref="81" ControlType="XRTableCell" Name="xrTableCell33" Text="PR" Borders="Left, Top" Weight="0.067415732694475788">
+                  <StylePriority Ref="82" UseBorders="false" />
+                </Item14>
+                <Item15 Ref="83" ControlType="XRTableCell" Name="xrTableCell47" Text="LK" Borders="Left, Top" Weight="0.067415731515777233">
+                  <StylePriority Ref="84" UseBorders="false" />
+                </Item15>
+                <Item16 Ref="85" ControlType="XRTableCell" Name="xrTableCell34" Text="PR" Borders="Left, Top" Weight="0.067415731515777233">
+                  <StylePriority Ref="86" UseBorders="false" />
+                </Item16>
+                <Item17 Ref="87" ControlType="XRTableCell" Name="xrTableCell48" Text="LK" Borders="Left, Top" Weight="0.067415730926427969">
+                  <StylePriority Ref="88" UseBorders="false" />
+                </Item17>
+                <Item18 Ref="89" ControlType="XRTableCell" Name="xrTableCell35" Text="PR" Borders="Left, Top" Weight="0.067415730926427969">
+                  <StylePriority Ref="90" UseBorders="false" />
+                </Item18>
+                <Item19 Ref="91" ControlType="XRTableCell" Name="xrTableCell49" Text="LK" Borders="Left, Top" Weight="0.067415730631753309">
+                  <StylePriority Ref="92" UseBorders="false" />
+                </Item19>
+                <Item20 Ref="93" ControlType="XRTableCell" Name="xrTableCell36" Text="PR" Borders="Left, Top" Weight="0.067415730631753309">
+                  <StylePriority Ref="94" UseBorders="false" />
+                </Item20>
+                <Item21 Ref="95" ControlType="XRTableCell" Name="xrTableCell50" Text="LK" Borders="Left, Top" Weight="0.067415730631753323">
+                  <StylePriority Ref="96" UseBorders="false" />
+                </Item21>
+                <Item22 Ref="97" ControlType="XRTableCell" Name="xrTableCell37" Text="PR" Borders="Left, Top" Weight="0.067415730631753323">
+                  <StylePriority Ref="98" UseBorders="false" />
+                </Item22>
+                <Item23 Ref="99" ControlType="XRTableCell" Name="xrTableCell51" Text=" " Weight="0.1011235097820839" />
+                <Item24 Ref="100" ControlType="XRTableCell" Name="xrTableCell38" Text=" " Weight="0.1011235097820839" />
+                <Item25 Ref="101" ControlType="XRTableCell" Name="xrTableCell39" Text=" " Weight="0.13483148810568835" />
+                <Item26 Ref="102" ControlType="XRTableCell" Name="xrTableCell40" Text=" " Borders="Left, Right" Weight="0.13483151553721903">
+                  <StylePriority Ref="103" UseBorders="false" />
+                </Item26>
+              </Cells>
+              <StylePriority Ref="104" UseFont="false" UseBorders="false" />
+            </Item3>
+            <Item4 Ref="105" Name="xrTableRow4" ControlType="XRTableRow" Weight="0.5" Borders="Left, Top, Bottom">
+              <Cells>
+                <Item1 Ref="106" ControlType="XRTableCell" Name="xrTableCell52" Text="1" Weight="0.10112359207667659" />
+                <Item2 Ref="107" ControlType="XRTableCell" Name="xrTableCell53" Text="2" Weight="0.13483145895968665" />
+                <Item3 Ref="108" ControlType="XRTableCell" Name="xrTableCell54" Text="3" Weight="0.26966293077790338" />
+                <Item4 Ref="109" ControlType="XRTableCell" Name="xrTableCell55" Text="4" Weight="0.80898877347453269" />
+                <Item5 Ref="110" ControlType="XRTableCell" Name="xrTableCell56" Text="5" Weight="0.0674157397666674" />
+                <Item6 Ref="111" ControlType="XRTableCell" Name="xrTableCell57" Text="6" Weight="0.0674157397666674" />
+                <Item7 Ref="112" ControlType="XRTableCell" Name="xrTableCell58" Text="7" Weight="0.067415739766667426" />
+                <Item8 Ref="113" ControlType="XRTableCell" Name="xrTableCell59" Text="8" Weight="0.067415739766667426" />
+                <Item9 Ref="114" ControlType="XRTableCell" Name="xrTableCell60" Text="9" Weight="0.067415739766667426" />
+                <Item10 Ref="115" ControlType="XRTableCell" Name="xrTableCell61" Text="10" Weight="0.067415739766667426" />
+                <Item11 Ref="116" ControlType="XRTableCell" Name="xrTableCell62" Text="11" Weight="0.067415735051873038" />
+                <Item12 Ref="117" ControlType="XRTableCell" Name="xrTableCell63" Text="12" Weight="0.067415735051873038" />
+                <Item13 Ref="118" ControlType="XRTableCell" Name="xrTableCell64" Text="13" Weight="0.067415732694475788" />
+                <Item14 Ref="119" ControlType="XRTableCell" Name="xrTableCell65" Text="14" Weight="0.067415732694475788" />
+                <Item15 Ref="120" ControlType="XRTableCell" Name="xrTableCell66" Text="15" Weight="0.067415731515777233" />
+                <Item16 Ref="121" ControlType="XRTableCell" Name="xrTableCell67" Text="16" Weight="0.067415731515777233" />
+                <Item17 Ref="122" ControlType="XRTableCell" Name="xrTableCell68" Text="17" Weight="0.067415730926427969" />
+                <Item18 Ref="123" ControlType="XRTableCell" Name="xrTableCell69" Text="18" Weight="0.067415730926427969" />
+                <Item19 Ref="124" ControlType="XRTableCell" Name="xrTableCell70" Text="19" Weight="0.067415730631753309" />
+                <Item20 Ref="125" ControlType="XRTableCell" Name="xrTableCell71" Text="20" Weight="0.067415730631753309" />
+                <Item21 Ref="126" ControlType="XRTableCell" Name="xrTableCell72" Text="21" Weight="0.067415730631753323" />
+                <Item22 Ref="127" ControlType="XRTableCell" Name="xrTableCell73" Text="22" Weight="0.067415730631753323" />
+                <Item23 Ref="128" ControlType="XRTableCell" Name="xrTableCell74" Text="23" Weight="0.1011235097820839" />
+                <Item24 Ref="129" ControlType="XRTableCell" Name="xrTableCell75" Text="24" Weight="0.1011235097820839" />
+                <Item25 Ref="130" ControlType="XRTableCell" Name="xrTableCell76" Text="25" Weight="0.13483148810568835" />
+                <Item26 Ref="131" ControlType="XRTableCell" Name="xrTableCell77" Text="26" Borders="All" Weight="0.13483151553721903">
+                  <StylePriority Ref="132" UseBorders="false" />
+                </Item26>
+              </Cells>
+              <StylePriority Ref="133" UseBorders="false" />
+            </Item4>
+          </Rows>
+          <StylePriority Ref="134" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="135" ControlType="XRLabel" Name="lblReportSubtitle" LocationFloat="0, 100" SizeF="1112.5,12.5" TextAlignment="MiddleCenter" Font="Tahoma, 10pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="136" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="137" ControlType="XRLabel" Name="lblAddressLine2" LocationFloat="62.5, 37.5" SizeF="300,12.5" TextAlignment="MiddleLeft" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="Address Line 2">
+          <StylePriority Ref="138" UseFont="false" UseTextAlignment="false" UsePadding="false" />
+        </Item3>
+        <Item4 Ref="139" Name="xrLogo" ControlType="XRPictureBox" LocationFloat="0, 0" SizeF="62.5,68" Sizing="StretchImage" ImageUrl="/Libs/Images/logo.png" />
+        <Item5 Ref="140" ControlType="XRLabel" Name="lblAddressLine1" LocationFloat="62.5, 25" SizeF="300,12.5" TextAlignment="MiddleLeft" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="Address Line 1">
+          <StylePriority Ref="141" UseFont="false" UseTextAlignment="false" UsePadding="false" />
+        </Item5>
+        <Item6 Ref="142" ControlType="XRLabel" Name="lblPhoneFaxNo" LocationFloat="637.5, 0" SizeF="471.5,17.00001" TextAlignment="MiddleRight" Font="Tahoma, 8pt" Padding="2,2,0,0,100" Text="Phone">
+          <StylePriority Ref="143" UseFont="false" UseTextAlignment="false" UsePadding="false" />
+        </Item6>
+        <Item7 Ref="144" ControlType="XRLabel" Name="lblHealthcareName" LocationFloat="62.5, 0" SizeF="425,25" TextAlignment="MiddleLeft" Font="Tahoma, 9.75pt, style=Bold" Padding="2,2,0,0,100" Text="Healthcare Name">
+          <StylePriority Ref="145" UseFont="false" UseTextAlignment="false" UsePadding="false" />
+        </Item7>
+        <Item8 Ref="146" ControlType="XRLabel" Name="lblReportTitle" LocationFloat="0, 75" SizeF="1112.5,25" TextAlignment="MiddleCenter" Font="Tahoma, 13pt, style=Bold" Padding="2,2,0,0,100" Text="Report Title">
+          <StylePriority Ref="147" UseFont="false" UseTextAlignment="false" />
+        </Item8>
+      </Controls>
+    </Item2>
+    <Item3 Ref="148" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="12.5">
+      <Controls>
+        <Item1 Ref="149" Name="xrTable3" ControlType="XRTable" Font="Tahoma, 8pt" SizeF="1112.5,12.5" LocationFloat="0, 0" TextAlignment="MiddleCenter">
+          <Rows>
+            <Item1 Ref="150" Name="xrTableRow5" ControlType="XRTableRow" Weight="0.5" TextAlignment="TopCenter" Borders="Left" Padding="3,0,0,0,100">
+              <Cells>
+                <Item1 Ref="151" ControlType="XRTableCell" Name="xrTableCell78" Text=" " TextAlignment="TopLeft" Weight="0.10112359207667659">
+                  <StylePriority Ref="152" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="153" ControlType="XRTableCell" Name="xrTableCell79" Text=" " TextAlignment="TopLeft" Weight="0.13483145895968665">
+                  <StylePriority Ref="154" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="155" ControlType="XRTableCell" Name="xrTableCell80" Text="xrTableCell80" TextAlignment="TopLeft" Weight="0.26966293077790338">
+                  <DataBindings>
+                    <Item1 Ref="156" PropertyName="Text" DataMember="DiagnoseID" />
+                  </DataBindings>
+                  <StylePriority Ref="157" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="158" ControlType="XRTableCell" Name="xrTableCell81" Text="xrTableCell81" TextAlignment="TopLeft" Weight="0.80898877347453269">
+                  <DataBindings>
+                    <Item1 Ref="159" PropertyName="Text" DataMember="DiagnoseName" />
+                  </DataBindings>
+                  <StylePriority Ref="160" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="161" ControlType="XRTableCell" Name="xrTableCell82" Text="xrTableCell133" Weight="0.0674157397666674">
+                  <DataBindings>
+                    <Item1 Ref="162" PropertyName="Text" DataMember="mLess6D" />
+                  </DataBindings>
+                  <Summary Ref="163" Running="Group" />
+                </Item5>
+                <Item6 Ref="164" ControlType="XRTableCell" Name="xrTableCell83" Text="xrTableCell134" Weight="0.0674157397666674">
+                  <DataBindings>
+                    <Item1 Ref="165" PropertyName="Text" DataMember="fLess6D" />
+                  </DataBindings>
+                  <Summary Ref="166" Running="Group" />
+                </Item6>
+                <Item7 Ref="167" ControlType="XRTableCell" Name="xrTableCell84" Text="xrTableCell135" Weight="0.067415739766667426">
+                  <DataBindings>
+                    <Item1 Ref="168" PropertyName="Text" DataMember="m7to27D" />
+                  </DataBindings>
+                  <Summary Ref="169" Running="Group" />
+                </Item7>
+                <Item8 Ref="170" ControlType="XRTableCell" Name="xrTableCell85" Text="xrTableCell136" Weight="0.067415739766667426">
+                  <DataBindings>
+                    <Item1 Ref="171" PropertyName="Text" DataMember="f7to27D" />
+                  </DataBindings>
+                  <Summary Ref="172" Running="Group" />
+                </Item8>
+                <Item9 Ref="173" ControlType="XRTableCell" Name="xrTableCell86" Text="xrTableCell137" Weight="0.067415739766667426">
+                  <DataBindings>
+                    <Item1 Ref="174" PropertyName="Text" DataMember="m28Dto1Y" />
+                  </DataBindings>
+                  <Summary Ref="175" Running="Group" />
+                </Item9>
+                <Item10 Ref="176" ControlType="XRTableCell" Name="xrTableCell87" Text="xrTableCell138" Weight="0.067415739766667426">
+                  <DataBindings>
+                    <Item1 Ref="177" PropertyName="Text" DataMember="f28Dto1Y" />
+                  </DataBindings>
+                  <Summary Ref="178" Running="Group" />
+                </Item10>
+                <Item11 Ref="179" ControlType="XRTableCell" Name="xrTableCell88" Text="xrTableCell139" Weight="0.067415735051873038">
+                  <DataBindings>
+                    <Item1 Ref="180" PropertyName="Text" DataMember="m1to4Y" />
+                  </DataBindings>
+                  <Summary Ref="181" Running="Group" />
+                </Item11>
+                <Item12 Ref="182" ControlType="XRTableCell" Name="xrTableCell89" Text="xrTableCell140" Weight="0.067415735051873038">
+                  <DataBindings>
+                    <Item1 Ref="183" PropertyName="Text" DataMember="f1to4Y" />
+                  </DataBindings>
+                  <Summary Ref="184" Running="Group" />
+                </Item12>
+                <Item13 Ref="185" ControlType="XRTableCell" Name="xrTableCell90" Text="xrTableCell141" Weight="0.067415732694475788">
+                  <DataBindings>
+                    <Item1 Ref="186" PropertyName="Text" DataMember="m5to14Y" />
+                  </DataBindings>
+                  <Summary Ref="187" Running="Group" />
+                </Item13>
+                <Item14 Ref="188" ControlType="XRTableCell" Name="xrTableCell91" Text="xrTableCell142" Weight="0.067415732694475788">
+                  <DataBindings>
+                    <Item1 Ref="189" PropertyName="Text" DataMember="f5to14Y" />
+                  </DataBindings>
+                  <Summary Ref="190" Running="Group" />
+                </Item14>
+                <Item15 Ref="191" ControlType="XRTableCell" Name="xrTableCell92" Text="xrTableCell143" Weight="0.067415731515777233">
+                  <DataBindings>
+                    <Item1 Ref="192" PropertyName="Text" DataMember="m15to24Y" />
+                  </DataBindings>
+                  <Summary Ref="193" Running="Group" />
+                </Item15>
+                <Item16 Ref="194" ControlType="XRTableCell" Name="xrTableCell93" Text="xrTableCell144" Weight="0.067415731515777233">
+                  <DataBindings>
+                    <Item1 Ref="195" PropertyName="Text" DataMember="f15to24Y" />
+                  </DataBindings>
+                  <Summary Ref="196" Running="Group" />
+                </Item16>
+                <Item17 Ref="197" ControlType="XRTableCell" Name="xrTableCell94" Text="xrTableCell145" Weight="0.067415730926427969">
+                  <DataBindings>
+                    <Item1 Ref="198" PropertyName="Text" DataMember="m25to44Y" />
+                  </DataBindings>
+                  <Summary Ref="199" Running="Group" />
+                </Item17>
+                <Item18 Ref="200" ControlType="XRTableCell" Name="xrTableCell95" Text="xrTableCell146" Weight="0.067415730926427969">
+                  <DataBindings>
+                    <Item1 Ref="201" PropertyName="Text" DataMember="f25to44Y" />
+                  </DataBindings>
+                  <Summary Ref="202" Running="Group" />
+                </Item18>
+                <Item19 Ref="203" ControlType="XRTableCell" Name="xrTableCell96" Text="xrTableCell147" Weight="0.067415730631753309">
+                  <DataBindings>
+                    <Item1 Ref="204" PropertyName="Text" DataMember="m45to64Y" />
+                  </DataBindings>
+                  <Summary Ref="205" Running="Group" />
+                </Item19>
+                <Item20 Ref="206" ControlType="XRTableCell" Name="xrTableCell97" Text="xrTableCell148" Weight="0.067415730631753309">
+                  <DataBindings>
+                    <Item1 Ref="207" PropertyName="Text" DataMember="f45to64Y" />
+                  </DataBindings>
+                  <Summary Ref="208" Running="Group" />
+                </Item20>
+                <Item21 Ref="209" ControlType="XRTableCell" Name="xrTableCell98" Text="xrTableCell149" Weight="0.067415730631753323">
+                  <DataBindings>
+                    <Item1 Ref="210" PropertyName="Text" DataMember="mMore65Y" />
+                  </DataBindings>
+                  <Summary Ref="211" Running="Group" />
+                </Item21>
+                <Item22 Ref="212" ControlType="XRTableCell" Name="xrTableCell99" Text="xrTableCell150" Weight="0.067415730631753323">
+                  <DataBindings>
+                    <Item1 Ref="213" PropertyName="Text" DataMember="fMore65Y" />
+                  </DataBindings>
+                  <Summary Ref="214" Running="Group" />
+                </Item22>
+                <Item23 Ref="215" ControlType="XRTableCell" Name="xrTableCell100" Text="xrTableCell151" Weight="0.1011235097820839">
+                  <DataBindings>
+                    <Item1 Ref="216" PropertyName="Text" DataMember="sumMale" />
+                  </DataBindings>
+                  <Summary Ref="217" Running="Group" />
+                </Item23>
+                <Item24 Ref="218" ControlType="XRTableCell" Name="xrTableCell101" Text="xrTableCell152" Weight="0.1011235097820839">
+                  <DataBindings>
+                    <Item1 Ref="219" PropertyName="Text" DataMember="sumFemale" />
+                  </DataBindings>
+                  <Summary Ref="220" Running="Group" />
+                </Item24>
+                <Item25 Ref="221" ControlType="XRTableCell" Name="xrTableCell102" Text="xrTableCell102" Weight="0.13483148810568835">
+                  <DataBindings>
+                    <Item1 Ref="222" PropertyName="Text" DataMember="sumNewCase" />
+                  </DataBindings>
+                  <Summary Ref="223" Running="Group" />
+                </Item25>
+                <Item26 Ref="224" ControlType="XRTableCell" Name="xrTableCell103" Text="xrTableCell103" Borders="Left, Right" Weight="0.13483151553721903">
+                  <DataBindings>
+                    <Item1 Ref="225" PropertyName="Text" DataMember="RegistrationNo" />
+                  </DataBindings>
+                  <StylePriority Ref="226" UseBorders="false" />
+                  <Summary Ref="227" Running="Group" Func="Count" />
+                </Item26>
+              </Cells>
+              <StylePriority Ref="228" UseTextAlignment="false" UseBorders="false" UsePadding="false" />
+            </Item1>
+          </Rows>
+          <StylePriority Ref="229" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+      <GroupFields>
+        <Item1 Ref="230" FieldName="DiagnoseCode" />
+      </GroupFields>
+    </Item3>
+    <Item4 Ref="231" ControlType="GroupHeaderBand" Name="GroupHeader2" Level="1" HeightF="12.5">
+      <Controls>
+        <Item1 Ref="232" Name="xrTable2" ControlType="XRTable" Font="Tahoma, 8pt, style=Bold" SizeF="1112.5,12.5" LocationFloat="0, 0" TextAlignment="MiddleCenter">
+          <Rows>
+            <Item1 Ref="233" Name="xrTableRow8" ControlType="XRTableRow" Weight="0.5" TextAlignment="TopCenter" Borders="Left" Padding="3,0,0,0,100">
+              <Cells>
+                <Item1 Ref="234" ControlType="XRTableCell" Name="xrTableCell129" Text="1" TextAlignment="TopLeft" Weight="0.10112359207667659">
+                  <StylePriority Ref="235" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="236" ControlType="XRTableCell" Name="xrTableCell130" Text="xrTableCell130" TextAlignment="TopLeft" Weight="0.13483145895968665">
+                  <DataBindings>
+                    <Item1 Ref="237" PropertyName="Text" DataMember="DTDNo" />
+                  </DataBindings>
+                  <StylePriority Ref="238" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="239" ControlType="XRTableCell" Name="xrTableCell131" Text="xrTableCell131" TextAlignment="TopLeft" Weight="0.26966293077790338">
+                  <DataBindings>
+                    <Item1 Ref="240" PropertyName="Text" DataMember="DTDLabel" />
+                  </DataBindings>
+                  <StylePriority Ref="241" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="242" ControlType="XRTableCell" Name="xrTableCell132" Text="xrTableCell132" TextAlignment="TopLeft" Weight="0.80898877347453269">
+                  <DataBindings>
+                    <Item1 Ref="243" PropertyName="Text" DataMember="DTDName" />
+                  </DataBindings>
+                  <StylePriority Ref="244" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="245" ControlType="XRTableCell" Name="xrTableCell133" Text="xrTableCell133" Weight="0.0674157397666674">
+                  <DataBindings>
+                    <Item1 Ref="246" PropertyName="Text" DataMember="MaleLessThan6" />
+                  </DataBindings>
+                  <Summary Ref="247" Running="Group" />
+                </Item5>
+                <Item6 Ref="248" ControlType="XRTableCell" Name="xrTableCell134" Text="xrTableCell134" Weight="0.0674157397666674">
+                  <DataBindings>
+                    <Item1 Ref="249" PropertyName="Text" DataMember="FemaleLessThan6" />
+                  </DataBindings>
+                  <Summary Ref="250" Running="Group" />
+                </Item6>
+                <Item7 Ref="251" ControlType="XRTableCell" Name="xrTableCell135" Text="xrTableCell135" Weight="0.067415739766667426">
+                  <DataBindings>
+                    <Item1 Ref="252" PropertyName="Text" DataMember="MaleMoreThan6LessThan27" />
+                  </DataBindings>
+                  <Summary Ref="253" Running="Group" />
+                </Item7>
+                <Item8 Ref="254" ControlType="XRTableCell" Name="xrTableCell136" Text="xrTableCell136" Weight="0.067415739766667426">
+                  <DataBindings>
+                    <Item1 Ref="255" PropertyName="Text" DataMember="FemaleMoreThan6LessThan27" />
+                  </DataBindings>
+                  <Summary Ref="256" Running="Group" />
+                </Item8>
+                <Item9 Ref="257" ControlType="XRTableCell" Name="xrTableCell137" Text="xrTableCell137" Weight="0.067415739766667426">
+                  <DataBindings>
+                    <Item1 Ref="258" PropertyName="Text" DataMember="MaleMoreThan28LessThan1Y" />
+                  </DataBindings>
+                  <Summary Ref="259" Running="Group" />
+                </Item9>
+                <Item10 Ref="260" ControlType="XRTableCell" Name="xrTableCell138" Text="xrTableCell138" Weight="0.067415739766667426">
+                  <DataBindings>
+                    <Item1 Ref="261" PropertyName="Text" DataMember="FemaleMoreThan28LessThan1Y" />
+                  </DataBindings>
+                  <Summary Ref="262" Running="Group" />
+                </Item10>
+                <Item11 Ref="263" ControlType="XRTableCell" Name="xrTableCell139" Text="xrTableCell139" Weight="0.067415735051873038">
+                  <DataBindings>
+                    <Item1 Ref="264" PropertyName="Text" DataMember="MaleMoreThan1YThan4Y" />
+                  </DataBindings>
+                  <Summary Ref="265" Running="Group" />
+                </Item11>
+                <Item12 Ref="266" ControlType="XRTableCell" Name="xrTableCell140" Text="xrTableCell140" Weight="0.067415735051873038">
+                  <DataBindings>
+                    <Item1 Ref="267" PropertyName="Text" DataMember="FemaleMoreThan1YThan4Y" />
+                  </DataBindings>
+                  <Summary Ref="268" Running="Group" />
+                </Item12>
+                <Item13 Ref="269" ControlType="XRTableCell" Name="xrTableCell141" Text="xrTableCell141" Weight="0.067415732694475788">
+                  <DataBindings>
+                    <Item1 Ref="270" PropertyName="Text" DataMember="MaleMoreThan5YThan14Y" />
+                  </DataBindings>
+                  <Summary Ref="271" Running="Group" />
+                </Item13>
+                <Item14 Ref="272" ControlType="XRTableCell" Name="xrTableCell142" Text="xrTableCell142" Weight="0.067415732694475788">
+                  <DataBindings>
+                    <Item1 Ref="273" PropertyName="Text" DataMember="FemaleMoreThan5YThan14Y" />
+                  </DataBindings>
+                  <Summary Ref="274" Running="Group" />
+                </Item14>
+                <Item15 Ref="275" ControlType="XRTableCell" Name="xrTableCell143" Text="xrTableCell143" Weight="0.067415731515777233">
+                  <DataBindings>
+                    <Item1 Ref="276" PropertyName="Text" DataMember="MaleMoreThan15YThan24Y" />
+                  </DataBindings>
+                  <Summary Ref="277" Running="Group" />
+                </Item15>
+                <Item16 Ref="278" ControlType="XRTableCell" Name="xrTableCell144" Text="xrTableCell144" Weight="0.067415731515777233">
+                  <DataBindings>
+                    <Item1 Ref="279" PropertyName="Text" DataMember="FemaleMoreThan15YThan24Y" />
+                  </DataBindings>
+                  <Summary Ref="280" Running="Group" />
+                </Item16>
+                <Item17 Ref="281" ControlType="XRTableCell" Name="xrTableCell145" Text="xrTableCell145" Weight="0.067415730926427969">
+                  <DataBindings>
+                    <Item1 Ref="282" PropertyName="Text" DataMember="MaleMoreThan25YThan44Y" />
+                  </DataBindings>
+                  <Summary Ref="283" Running="Group" />
+                </Item17>
+                <Item18 Ref="284" ControlType="XRTableCell" Name="xrTableCell146" Text="xrTableCell146" Weight="0.067415730926427969">
+                  <DataBindings>
+                    <Item1 Ref="285" PropertyName="Text" DataMember="FemaleMoreThan25YThan44Y" />
+                  </DataBindings>
+                  <Summary Ref="286" Running="Group" />
+                </Item18>
+                <Item19 Ref="287" ControlType="XRTableCell" Name="xrTableCell147" Text="xrTableCell147" Weight="0.067415730631753309">
+                  <DataBindings>
+                    <Item1 Ref="288" PropertyName="Text" DataMember="MaleMoreThan45YThan64Y" />
+                  </DataBindings>
+                  <Summary Ref="289" Running="Group" />
+                </Item19>
+                <Item20 Ref="290" ControlType="XRTableCell" Name="xrTableCell148" Text="xrTableCell148" Weight="0.067415730631753309">
+                  <DataBindings>
+                    <Item1 Ref="291" PropertyName="Text" DataMember="FemaleMoreThan45YThan64Y" />
+                  </DataBindings>
+                  <Summary Ref="292" Running="Group" />
+                </Item20>
+                <Item21 Ref="293" ControlType="XRTableCell" Name="xrTableCell149" Text="xrTableCell149" Weight="0.067415730631753323">
+                  <DataBindings>
+                    <Item1 Ref="294" PropertyName="Text" DataMember="MaleMoreThan64Y" />
+                  </DataBindings>
+                  <Summary Ref="295" Running="Group" />
+                </Item21>
+                <Item22 Ref="296" ControlType="XRTableCell" Name="xrTableCell150" Text="xrTableCell150" Weight="0.067415730631753323">
+                  <DataBindings>
+                    <Item1 Ref="297" PropertyName="Text" DataMember="FemaleMoreThan64Y" />
+                  </DataBindings>
+                  <Summary Ref="298" Running="Group" />
+                </Item22>
+                <Item23 Ref="299" ControlType="XRTableCell" Name="xrTableCell151" Text="xrTableCell151" Weight="0.1011235097820839">
+                  <DataBindings>
+                    <Item1 Ref="300" PropertyName="Text" DataMember="sumMale" />
+                  </DataBindings>
+                  <Summary Ref="301" Running="Group" />
+                </Item23>
+                <Item24 Ref="302" ControlType="XRTableCell" Name="xrTableCell152" Text="xrTableCell152" Weight="0.1011235097820839">
+                  <DataBindings>
+                    <Item1 Ref="303" PropertyName="Text" DataMember="sumFemale" />
+                  </DataBindings>
+                  <Summary Ref="304" Running="Group" />
+                </Item24>
+                <Item25 Ref="305" ControlType="XRTableCell" Name="xrTableCell153" Text="xrTableCell153" Weight="0.13483148810568835">
+                  <DataBindings>
+                    <Item1 Ref="306" PropertyName="Text" DataMember="NewCase" />
+                  </DataBindings>
+                  <Summary Ref="307" Running="Group" />
+                </Item25>
+                <Item26 Ref="308" ControlType="XRTableCell" Name="xrTableCell154" Text="xrTableCell154" Borders="Left, Right" Weight="0.13483151553721903">
+                  <DataBindings>
+                    <Item1 Ref="309" PropertyName="Text" DataMember="VisitID" />
+                  </DataBindings>
+                  <StylePriority Ref="310" UseBorders="false" />
+                  <Summary Ref="311" Running="Group" Func="Count" />
+                </Item26>
+              </Cells>
+              <StylePriority Ref="312" UseTextAlignment="false" UseBorders="false" UsePadding="false" />
+            </Item1>
+          </Rows>
+          <StylePriority Ref="313" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+      <GroupFields>
+        <Item1 Ref="314" FieldName="DTDNo" />
+      </GroupFields>
+    </Item4>
+    <Item5 Ref="315" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="0" />
+    <Item6 Ref="316" ControlType="GroupFooterBand" Name="GroupFooter2" HeightF="2" Level="1">
+      <Controls>
+        <Item1 Ref="317" Name="xrTable4" ControlType="XRTable" Font="Tahoma, 8pt" SizeF="1112.5,2" LocationFloat="0, 0" TextAlignment="MiddleCenter">
+          <Rows>
+            <Item1 Ref="318" Name="xrTableRow6" ControlType="XRTableRow" Weight="0.5" TextAlignment="TopCenter" Borders="Left, Bottom" Padding="3,0,0,0,100">
+              <Cells>
+                <Item1 Ref="319" ControlType="XRTableCell" Name="xrTableCell104" Text=" " TextAlignment="TopLeft" Weight="0.10112359207667659">
+                  <StylePriority Ref="320" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="321" ControlType="XRTableCell" Name="xrTableCell105" Text=" " TextAlignment="TopLeft" Weight="0.13483145895968665">
+                  <StylePriority Ref="322" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="323" ControlType="XRTableCell" Name="xrTableCell106" Text=" " TextAlignment="TopLeft" Weight="0.26966293077790338">
+                  <StylePriority Ref="324" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="325" ControlType="XRTableCell" Name="xrTableCell107" Text=" " TextAlignment="TopLeft" Weight="0.80898877347453269">
+                  <StylePriority Ref="326" UseFont="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="327" ControlType="XRTableCell" Name="xrTableCell108" Text=" " Weight="0.0674157397666674" />
+                <Item6 Ref="328" ControlType="XRTableCell" Name="xrTableCell109" Text=" " Weight="0.0674157397666674" />
+                <Item7 Ref="329" ControlType="XRTableCell" Name="xrTableCell110" Text=" " Weight="0.067415739766667426" />
+                <Item8 Ref="330" ControlType="XRTableCell" Name="xrTableCell111" Text=" " Weight="0.067415739766667426" />
+                <Item9 Ref="331" ControlType="XRTableCell" Name="xrTableCell112" Text=" " Weight="0.067415739766667426" />
+                <Item10 Ref="332" ControlType="XRTableCell" Name="xrTableCell113" Text=" " Weight="0.067415739766667426" />
+                <Item11 Ref="333" ControlType="XRTableCell" Name="xrTableCell114" Text=" " Weight="0.067415735051873038" />
+                <Item12 Ref="334" ControlType="XRTableCell" Name="xrTableCell115" Text=" " Weight="0.067415735051873038" />
+                <Item13 Ref="335" ControlType="XRTableCell" Name="xrTableCell116" Text=" " Weight="0.067415732694475788" />
+                <Item14 Ref="336" ControlType="XRTableCell" Name="xrTableCell117" Text=" " Weight="0.067415732694475788" />
+                <Item15 Ref="337" ControlType="XRTableCell" Name="xrTableCell118" Text=" " Weight="0.067415731515777233" />
+                <Item16 Ref="338" ControlType="XRTableCell" Name="xrTableCell119" Text=" " Weight="0.067415731515777233" />
+                <Item17 Ref="339" ControlType="XRTableCell" Name="xrTableCell120" Text=" " Weight="0.067415730926427969" />
+                <Item18 Ref="340" ControlType="XRTableCell" Name="xrTableCell121" Text=" " Weight="0.067415730926427969" />
+                <Item19 Ref="341" ControlType="XRTableCell" Name="xrTableCell122" Text=" " Weight="0.067415730631753309" />
+                <Item20 Ref="342" ControlType="XRTableCell" Name="xrTableCell123" Text=" " Weight="0.067415730631753309" />
+                <Item21 Ref="343" ControlType="XRTableCell" Name="xrTableCell124" Text=" " Weight="0.067415730631753323" />
+                <Item22 Ref="344" ControlType="XRTableCell" Name="xrTableCell125" Text=" " Weight="0.067415730631753323" />
+                <Item23 Ref="345" ControlType="XRTableCell" Name="xrTableCell126" Text=" " Weight="0.1011235097820839" />
+                <Item24 Ref="346" ControlType="XRTableCell" Name="xrTableCell127" Text=" " Weight="0.1011235097820839" />
+                <Item25 Ref="347" ControlType="XRTableCell" Name="xrTableCell128" Text=" " Weight="0.13483148810568835" />
+                <Item26 Ref="348" ControlType="XRTableCell" Name="xrTableCell155" Text=" " Borders="Left, Right, Bottom" Weight="0.13483151553721903">
+                  <StylePriority Ref="349" UseBorders="false" />
+                </Item26>
+              </Cells>
+              <StylePriority Ref="350" UseTextAlignment="false" UseBorders="false" UsePadding="false" />
+            </Item1>
+          </Rows>
+          <StylePriority Ref="351" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+    </Item6>
+    <Item7 Ref="352" ControlType="PageFooterBand" Name="PageFooter" HeightF="29.50002">
+      <Controls>
+        <Item1 Ref="353" Name="xrPageInfo3" ControlType="XRPageInfo" LocationFloat="962.5, 12.5" SizeF="149.9999,12.5" Font="Tahoma, 7pt" Padding="2,2,0,0,100" Format="Page {0} of {1}" TextAlignment="MiddleRight">
+          <StylePriority Ref="354" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="355" Name="lineFooter" ControlType="XRLine" LocationFloat="0, 0" SizeF="1112.5,2" />
+        <Item3 Ref="356" ControlType="XRLabel" Name="lblReportProperties" LocationFloat="0, 12.5" SizeF="451.0417,12.5" TextAlignment="MiddleLeft" Font="Tahoma, 7pt" Padding="2,2,0,0,100" Text="MEDINFRAS - ReportID, Print Date/Time : dd-MMM-yyyy HH:MM:ss, User ID : XXXXX">
+          <StylePriority Ref="357" UseFont="false" UseTextAlignment="false" UsePadding="false" />
+        </Item3>
+      </Controls>
+    </Item7>
+    <Item8 Ref="358" Name="TopMargin" ControlType="TopMarginBand" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+    <Item9 Ref="359" ControlType="ReportFooterBand" Name="ReportFooter">
+      <Controls>
+        <Item1 Ref="360" ControlType="XRLabel" Name="lblParameter6" LocationFloat="737.5, 75" SizeF="375,12.5" Visible="false" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Text="Parameter6 = ParameterValue6">
+          <StylePriority Ref="361" UseFont="false" />
+        </Item1>
+        <Item2 Ref="362" ControlType="XRLabel" Name="lblParameter0" LocationFloat="0, 50" SizeF="375,12.5" Visible="false" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Text="Parameter0 = ParameterValue0">
+          <StylePriority Ref="363" UseFont="false" />
+        </Item2>
+        <Item3 Ref="364" ControlType="XRLabel" Name="lblParameter1" LocationFloat="0, 62.5" SizeF="375,12.5" Visible="false" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Text="Parameter1 = ParameterValue1">
+          <StylePriority Ref="365" UseFont="false" />
+        </Item3>
+        <Item4 Ref="366" ControlType="XRLabel" Name="lblParameter2" LocationFloat="0, 75" SizeF="375,12.5" Visible="false" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Text="Parameter2 = ParameterValue2">
+          <StylePriority Ref="367" UseFont="false" />
+        </Item4>
+        <Item5 Ref="368" ControlType="XRLabel" Name="lblParameter4" LocationFloat="737.5, 50" SizeF="375,12.5" Visible="false" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Text="Parameter4 = ParameterValue4">
+          <StylePriority Ref="369" UseFont="false" />
+        </Item5>
+        <Item6 Ref="370" ControlType="XRLabel" Name="lblParameter5" LocationFloat="737.5, 62.5" SizeF="375,12.5" Visible="false" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Text="Parameter5 = ParameterValue5">
+          <StylePriority Ref="371" UseFont="false" />
+        </Item6>
+        <Item7 Ref="372" ControlType="XRLabel" Name="lblReportParameter" LocationFloat="0, 25" SizeF="150,12.5" Font="Tahoma, 8pt, style=Bold, Underline" Padding="2,2,0,0,100" Text="Report Parameter(s) :">
+          <StylePriority Ref="373" UseFont="false" />
+        </Item7>
+        <Item8 Ref="374" ControlType="XRLabel" Name="lblParameter3" LocationFloat="0, 87.5" SizeF="375,12.5" Visible="false" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Text="Parameter3 = ParameterValue3">
+          <StylePriority Ref="375" UseFont="false" />
+        </Item8>
+        <Item9 Ref="376" ControlType="XRLabel" Name="lblParameter7" LocationFloat="737.5, 87.5" SizeF="375,12.5" Visible="false" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Text="Parameter7 = ParameterValue7">
+          <StylePriority Ref="377" UseFont="false" />
+        </Item9>
+      </Controls>
+    </Item9>
+    <Item10 Ref="378" Name="BottomMargin" ControlType="BottomMarginBand" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+    <Item11 Ref="379" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="0" />
+  </Bands>
+  <CalculatedFields>
+    <Item1 Ref="380" Expression="iif([AgeInYearsByRegistrationDate] = 0 &#xD;&#xA;AND [AgeInMonthsByRegistrationDate] = 0&#xD;&#xA;AND [AgeInDaysByRegistrationDate] &lt;=6&#xD;&#xA;AND [Gender]='L',1,0)" Name="mLess6D" />
+    <Item2 Ref="381" Expression="iif([AgeInYearsByRegistrationDate] = 0 &#xD;&#xA;AND [AgeInMonthsByRegistrationDate] = 0&#xD;&#xA;AND [AgeInDaysByRegistrationDate] &gt;6&#xD;&#xA;AND [AgeInDaysByRegistrationDate] &lt;=27&#xD;&#xA;AND [Gender]='L',1,0)" Name="m7to27D" />
+    <Item3 Ref="382" Expression="iif(([AgeInYearsByRegistrationDate] = 0 &#xA;AND [AgeInMonthsByRegistrationDate] = 0&#xA;AND [AgeInDaysByRegistrationDate] &gt;28)&#xA;OR&#xA;([AgeInYearsByRegistrationDate] = 0 &#xA;AND [AgeInMonthsByRegistrationDate] &gt; 0)&#xA;AND [Gender]='L',1,0)" Name="m28Dto1Y" />
+    <Item4 Ref="383" Expression="iif([AgeInYearsByRegistrationDate]&gt;=1&#xD;&#xA;AND [AgeInYearsByRegistrationDate]&lt;=4&#xD;&#xA;AND [Gender]='L',1,0)" Name="m1to4Y" />
+    <Item5 Ref="384" Expression="iif([AgeInYearsByRegistrationDate]&gt;=5&#xD;&#xA;AND [AgeInYearsByRegistrationDate]&lt;=14&#xD;&#xA;AND [Gender]='L',1,0)" Name="m5to14Y" />
+    <Item6 Ref="385" Expression="iif([AgeInYearsByRegistrationDate]&gt;=15&#xD;&#xA;AND [AgeInYearsByRegistrationDate]&lt;=24&#xD;&#xA;AND [Gender]='L',1,0)" Name="m15to24Y" />
+    <Item7 Ref="386" Expression="iif([AgeInYearsByRegistrationDate]&gt;=25&#xD;&#xA;AND [AgeInYearsByRegistrationDate]&lt;=44&#xD;&#xA;AND [Gender]='L',1,0)" Name="m25to44Y" />
+    <Item8 Ref="387" Expression="iif([AgeInYearsByRegistrationDate]&gt;=45&#xD;&#xA;AND [AgeInYearsByRegistrationDate]&lt;=64&#xD;&#xA;AND [Gender]='L',1,0)" Name="m45to64Y" />
+    <Item9 Ref="388" Expression="iif([AgeInYearsByRegistrationDate]&gt;=65&#xD;&#xA;AND [Gender]='L',1,0)" Name="mMore65Y" />
+    <Item10 Ref="389" Expression="iif([AgeInYearsByRegistrationDate] = 0 &#xD;&#xA;AND [AgeInMonthsByRegistrationDate] = 0&#xD;&#xA;AND [AgeInDaysByRegistrationDate] &lt;=6&#xD;&#xA;AND [Gender]='P',1,0)" Name="fLess6D" />
+    <Item11 Ref="390" Expression="iif([AgeInYearsByRegistrationDate] = 0 &#xD;&#xA;AND [AgeInMonthsByRegistrationDate] = 0&#xD;&#xA;AND [AgeInDaysByRegistrationDate] &gt;6&#xD;&#xA;AND [AgeInDaysByRegistrationDate] &lt;=27&#xD;&#xA;AND [Gender]='P',1,0)" Name="f7to27D" />
+    <Item12 Ref="391" Expression="iif(([AgeInYearsByRegistrationDate] = 0 &#xA;AND [AgeInMonthsByRegistrationDate] = 0&#xA;AND [AgeInDaysByRegistrationDate] &gt;28)&#xA;OR&#xA;([AgeInYearsByRegistrationDate] = 0 &#xA;AND [AgeInMonthsByRegistrationDate] &gt; 0)&#xA;AND [Gender]='P',1,0)" Name="f28Dto1Y" />
+    <Item13 Ref="392" Expression="iif([AgeInYearsByRegistrationDate]&gt;=1&#xD;&#xA;AND [AgeInYearsByRegistrationDate]&lt;=4&#xD;&#xA;AND [Gender]='P',1,0)" Name="f1to4Y" />
+    <Item14 Ref="393" Expression="iif([AgeInYearsByRegistrationDate]&gt;=5&#xD;&#xA;AND [AgeInYearsByRegistrationDate]&lt;=14&#xD;&#xA;AND [Gender]='P',1,0)" Name="f5to14Y" />
+    <Item15 Ref="394" Expression="iif([AgeInYearsByRegistrationDate]&gt;=15&#xD;&#xA;AND [AgeInYearsByRegistrationDate]&lt;=24&#xD;&#xA;AND [Gender]='P',1,0)" Name="f15to24Y" />
+    <Item16 Ref="395" Expression="iif([AgeInYearsByRegistrationDate]&gt;=25&#xD;&#xA;AND [AgeInYearsByRegistrationDate]&lt;=44&#xD;&#xA;AND [Gender]='P',1,0)" Name="f25to44Y" />
+    <Item17 Ref="396" Expression="iif([AgeInYearsByRegistrationDate]&gt;=45&#xD;&#xA;AND [AgeInYearsByRegistrationDate]&lt;=64&#xD;&#xA;AND [Gender]='P',1,0)" Name="f45to64Y" />
+    <Item18 Ref="397" Expression="iif([AgeInYearsByRegistrationDate]&gt;=65&#xD;&#xA;AND [Gender]='P',1,0)" Name="fMore65Y" />
+    <Item19 Ref="398" Expression="iif([IsOldCase],0,1)" Name="sumNewCase" />
+    <Item20 Ref="399" Expression="iif([Gender]='L',1,0)" Name="sumMale" />
+    <Item21 Ref="400" Expression="iif([Gender]='P',1,0)" Name="sumFemale" />
+  </CalculatedFields>
+  <StyleSheet>
+    <Item1 Ref="401" Name="Title" StringFormat="Near;Near;0;None;Character;Default" Padding="0,0,0,0,100" BorderStyle="Inset" Font="Times New Roman, 20pt, style=Bold" />
+    <Item2 Ref="402" Name="FieldCaption" Sides="Top, Bottom" StringFormat="Near;Near;0;None;Character;Default" Padding="0,0,0,0,100" BorderStyle="Inset" Font="Arial, 10pt, style=Bold" />
+    <Item3 Ref="403" Name="PageInfo" StringFormat="Near;Near;0;None;Character;Default" Padding="0,0,0,0,100" BorderStyle="Inset" Font="Arial, 9pt, style=Bold" />
+  </StyleSheet>
+  <ObjectStorage>
+    <Item1 Ref="0" Content="~Xtra#NULL" Type="System.Windows.Forms.BindingSource" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

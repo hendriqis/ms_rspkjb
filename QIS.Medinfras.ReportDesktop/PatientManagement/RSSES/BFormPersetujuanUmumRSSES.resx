@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="bs.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="xrLabel96.Text" xml:space="preserve">
+    <value>Setiap 4 (empat) hari akan diberikan tagihan biaya perawatan, apabila tagihan lebih dari Rp 5.000.000,- (lima juta rupiah) maka keluarga pasien wajib :
+1) Membeli sendiri obat-obatan yang diperlukan.
+2) Membayar sendiri tindakan-tindakan penunjang.
+3) Apabila belum menyelesaikan biaya perawatan, maka dengan terpaksa meminta pasien untuk pindah kamar ke kelas perawatan sebelum meninggalkan rumah sakit.</value>
+  </data>
+  <data name="xrLabel89.Text" xml:space="preserve">
+    <value>Saya dengan ini menyatakan bahwa saya telah menerima informasi dan mengerti tata cara pengajuan dan tindak lanjut bila ada keluhan sebagai pasien terkait pelayanan yang diberikan. Saya setuju untuk mengikuti tata cara pengajuan keluhan sesuai dengan prosedur yang ada.</value>
+  </data>
+  <data name="xrLabel87.Text" xml:space="preserve">
+    <value>Saya menyatakan bahwa RS ST. Elisabeth telah menyarankan untuk tidak membawa barang-barang berharga (seperti perhiasan, elektronik, dll). Apabila barang-barang berharga tersebut tetap dibawa ke lingkungan RS ST. Elisabeth oleh saya atau pihak manapun, maka RS ST. Elisabeth tidak akan bertanggungjawab atas kehilangan, kerusakan atau pencurian atas barang berharga tersebut.</value>
+  </data>
+  <data name="xrLabel83.Text" xml:space="preserve">
+    <value>Saya setuju RS ST. Elisabeth menjamin rahasia kedokteran saya dan hanya menggunakannya untuk kepentingan perawatan / pengobatan, penagihan asuransi, pendidikan maupun penelitian, kecuali saya mengungkapkan sendiri atau orang lain / pihak lain yang saya beri kuasa untuk itu.</value>
+  </data>
+  <data name="xrLabel56.Text" xml:space="preserve">
+    <value>Saya dengan ini memberikan persetujuan kepada RS ST. Elisabeth untuk memberikan informasi tentang hal-hal yang berkaitan dengan kesehatan saya kepada penanggung jawab, keluarga, atau pihak yang menjamin biaya perawatan saya di RS ST. Elisabeth. Saya memberi wewenang kepada RS ST. Elisabeth untuk memberikan informasi tentang diagnosis, hasil pelayanan dan pengobatan bila diperlukan untuk memproses klaim asuransi / perusahaan atau Lembaga pemerintah dan juga kepada anggota keluarga saya :</value>
+  </data>
+  <data name="xrLabel54.Text" xml:space="preserve">
+    <value>Dengan menandatangani dokumen ini saya, pasien / penanggung jawab / wali / keluarga yang menandatangani dokumen ini untuk dan atas nama saya menyatakan bahwa telah memperoleh dan menerima semua informasi mengenai hak-hak, kewajiban dan tanggung jawab sebagai pasien pada saat proses pendaftaran rawat inap dan selama mendapatkan pelayanan medis di RS ST. Elisabeth dipergunakan untuk praktek mahasiswa keperawatan dan tenaga kesehatan lainnya.</value>
+  </data>
+  <data name="xrLabel52.Text" xml:space="preserve">
+    <value>Dalam tindakan kedokteran dapat terjadi adanya kejadian tidak terduga / tidak diharapkan (unanticipated outcome) yang dapat merupakan efek samping dari tindakan kedokteran yang tidak dapat diduga sebelumnya (termasuk antara lain, Steven Johnson Syndrome dan syok anafilatik). Hasil asuhan dan pengobatan termasuk kejadian yang tidak terduga / diharapkan akan diberitahukan kepada pasien dan keluarga oleh Dokter Penanggung Jawab Pelayanan / DPJP.</value>
+  </data>
+  <data name="xrLabel48.Text" xml:space="preserve">
+    <value>Persetujuan yang diberikan dalam mendapatkan pelayanan medis, pemeriksaan fisik, yang dilakukan oleh dokter atau perawat, prosedur diagnostik, atau terapi tatalaksana sesuai pertimbangan dokter yang diperlukan atau disarankan pada pelayanan medis, yang mencakup seluruh pemeriksaan dan diagnostik rutin, termasuk x-ray, pemberian dan atau tindakan kedokteran serta penyuntikan (intramuskular, intravena, dan prosedur invasive lainnya) produk farmasi dan obat-obatan, pemasangan alat medis, dan pengambilan darah untuk pemeriksaan laboratorium atau pemeriksaan patologi yang dibutuhkan untuk pelayanan medis.</value>
+  </data>
+  <data name="xrLabel46.Text" xml:space="preserve">
+    <value>Tindakan kedokteran mempunyai suatu resiko, yang meliputi tindakan medis berupa preventif, diagnostik, terapeutik atau rehabilitatif yang dilakukan oleh dokter atau dokter gigi terhadap pasien. Pelayanan medis yang diberikan sesuai dengan keadaan medis selama mendapatkan pelayanan medis di RS ST. Elisabeth Semarang.</value>
+  </data>
+</root>

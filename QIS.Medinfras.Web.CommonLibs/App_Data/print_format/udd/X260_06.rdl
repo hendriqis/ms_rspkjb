@@ -1,0 +1,25 @@
+^XA
+^LL400
+^PW640
+^LH10,10
+^CF0,25
+^FO400,0^FD{PrescriptionDate}^FS
+^CF0,27
+^FO10,25^FD{ItemName}    Qty : {cfTakenQty}^FS
+^CF0,25
+^FO10,50^FD{ConsumeMethod}^FS
+^CF0,27
+^FO10,70^FD^FDSequence No : {SequenceNo}^FS
+^CF0,25
+^FO400,70^FD^FD{MedicationTime}^FS
+^CF0,25
+^FO10,95^FD{MedicationAdministration}^FS
+^CF0,25
+^FO50,120^FDPro: {PatientFullName}^FS
+^CF0,20
+^FO50,140^FDDOB: {DateOfBirth}   MRN: {MedicalNo}^FS
+^FO50,160^FD{ExpiredDate}^FS
+^FO50,180^FD{HealthcareName}^FS
+^FO50,200^FDTelp:{Phone} Fax:{Fax}^FS
+^PR2
+^XZ

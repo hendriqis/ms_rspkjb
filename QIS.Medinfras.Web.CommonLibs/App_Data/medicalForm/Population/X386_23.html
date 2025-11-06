@@ -1,0 +1,276 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_edinburghpostnataldepressionscale">
+    $(function () {
+
+        $("#ddlParameter1").change(function () {
+            $("#txtParamScore1").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter2").change(function () {
+            $("#txtParamScore2").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter3").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter4").change(function () {
+            $("#txtParamScore4").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter5").change(function () {
+            $("#txtParamScore5").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter6").change(function () {
+            $("#txtParamScore6").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter7").change(function () {
+            $("#txtParamScore7").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter8").change(function () {
+            $("#txtParamScore8").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter9").change(function () {
+            $("#txtParamScore9").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter10").change(function () {
+            $("#txtParamScore10").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter1").change();
+        $("#ddlParameter2").change();
+        $("#ddlParameter3").change();
+        $("#ddlParameter4").change();
+        $("#ddlParameter5").change();
+        $("#ddlParameter6").change();
+        $("#ddlParameter7").change();
+        $("#ddlParameter8").change();
+        $("#ddlParameter9").change();
+        $("#ddlParameter10").change();
+
+        function CalculateTotalScore() {
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+            var p4 = 0;
+            var p5 = 0;
+            var p6 = 0;
+            var p7 = 0;
+            var p8 = 0;
+            var p9 = 0;
+            var p10 = 0;
+
+            if ($("#txtParamScore1").val())
+                p1 = parseInt($("#txtParamScore1").val());
+
+            if ($("#txtParamScore2").val())
+                p2 = parseInt($("#txtParamScore2").val());
+
+            if ($("#txtParamScore3").val())
+                p3 = parseInt($("#txtParamScore3").val());
+
+            if ($("#txtParamScore4").val())
+                p4 = parseInt($("#txtParamScore4").val());
+
+            if ($("#txtParamScore5").val())
+                p5 = parseInt($("#txtParamScore5").val());
+
+            if ($("#txtParamScore6").val())
+                p6 = parseInt($("#txtParamScore6").val());
+
+            if ($("#txtParamScore7").val())
+                p7 = parseInt($("#txtParamScore7").val());
+
+            if ($("#txtParamScore8").val())
+                p8 = parseInt($("#txtParamScore8").val());
+
+            if ($("#txtParamScore9").val())
+                p9 = parseInt($("#txtParamScore9").val());
+
+            if ($("#txtParamScore10").val())
+                p10 = parseInt($("#txtParamScore10").val());
+
+            var total = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10;
+
+            $("#txtEPDSScore").val(total);
+        }
+    });
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+            <colgroup>
+                <col width="350px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="150px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold; text-decoration:underline"><i>EDINBURGH POSTNATAL DEPRESSION SCALE (EPDS)</i></label>
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>I have been able to laugh and see the funny side of things</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter1" style="width:100%" class = "ddlForm" controlID = "ddlParameter1">
+                        <option value="0" selected>As much as I always could</option>
+                        <option value="1">Not quite so much now</option>
+                        <option value="2">Definitely not so much now</option>
+                        <option value="3">Not at all</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore1" />
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>I have looked forward with enjoyment to things</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter2" style="width:100%" class = "ddlForm" controlID = "ddlParameter2">
+                        <option value="0" selected>As much as I ever did</option>
+                        <option value="1">Rather less than I used to</option>
+                        <option value="2">Definitely less than I used to</option>
+                        <option value="3">Hardly at all</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore2" />
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>I have blamed myself unnecessarily when things went wrong</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter3" style="width:100%" class = "ddlForm" controlID = "ddlParameter3">
+                        <option value="3" selected>Yes, most of the time</option>
+                        <option value="2">Yes, some of the time</option>
+                        <option value="1">Not very often</option>
+                        <option value="0">No, never</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore3" />
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>I have been anxious or worried for no good reason</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter4" class="ddlForm" controlID="ddlParameter4" style="width:100%">
+                        <option value="0" selected>No, not at all</option>
+                        <option value="1">Hardly ever</option>
+                        <option value="2">Yes, sometimes</option>
+                        <option value="3">Yes, very often</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore4" />
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>I have felt scared or panicky for no very good reason</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter5" style="width:100%" class = "ddlForm" controlID = "ddlParameter5">
+                        <option value="3" selected>Yes, quite a lot</option>
+                        <option value="2">Yes, sometimes</option>
+                        <option value="1">No, not much</option>
+                        <option value="0">No, not at all</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore5"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>Things have been getting on top of me</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter6" class="ddlForm" controlID="ddlParameter6" style="width:100%">
+                        <option value="3" selected>Yes, most of the time I haven’t been able to cope</option>
+                        <option value="2">Yes, sometimes I haven’t been coping as well as usual</option>
+                        <option value="1">No, most of the time I have coped quite well</option>
+                        <option value="0">No, I have been coping as well as ever</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore6" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore6"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>I have been so unhappy that I have had difficulty sleeping</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter7" class="ddlForm" controlID="ddlParameter7" style="width:100%">
+                        <option value="3" selected>Yes, most of the time</option>
+                        <option value="2">Yes, sometimes</option>
+                        <option value="1">Not very often</option>
+                        <option value="0">No, not at all</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore7" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore7"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>I have felt sad or miserable</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter8" style="width:100%" class = "ddlForm" controlID = "ddlParameter8">
+                        <option value="3" selected>Yes, most of the time</option>
+                        <option value="2">Yes, quite often</option>
+                        <option value="1">Not very often</option>
+                        <option value="0">No, not at all</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore8" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore8"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>I have been so unhappy that I have been crying</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter9" class="ddlForm" controlID="ddlParameter9" style="width:100%">
+                        <option value="3" selected>Yes, most of the time</option>
+                        <option value="2">Yes, quite often</option>
+                        <option value="1">Only occasionally</option>
+                        <option value="0">No, never</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore9" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore9"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>The thought of harming myself has occurred to me</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter10" style="width:100%" class = "ddlForm" controlID = "ddlParameter10">
+                        <option value="3" selected>Yes, quite often</option>
+                        <option value="2">Sometimes</option>
+                        <option value="1">Hardly ever</option>
+                        <option value="0">Never</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore10" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore10" />
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal"><i>EPDS SCORE</i></label></td>      
+                <td><input type="text" style="width: 98%; text-align:right" id="txtEPDSScore" class="txtForm" controlID="txtEPDSScore" readonly="readonly"/></td>                          
+            </tr>
+        </table>
+    </div>
+</div>
+

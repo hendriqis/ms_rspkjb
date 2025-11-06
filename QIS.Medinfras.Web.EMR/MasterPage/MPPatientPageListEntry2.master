@@ -1,0 +1,356 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage/MPPatientPage.Master" AutoEventWireup="true" 
+    CodeBehind="MPPatientPageListEntry2.master.cs" Inherits="QIS.Medinfras.Web.EMR.MasterPage.MPPatientPageListEntry2" %>
+
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="plhMPPatientPage" runat="server">
+    <style type="text/css">
+        #divCloseShortcutPatientPage                { position: absolute;right: 10px;top: 5px;display: none;padding: 0px 5px;background: #CC0000;cursor: pointer;color: #FFFFFF;-webkit-border-radius: 999px;-moz-border-radius: 999px;border-radius: 999px;font-weight:bolder;font-size:12px; }
+        #divOpenShortcutPatientPage                 { cursor:pointer; }
+        #divContainerShortcutPatientPage            { bottom:0;right:100px;position:fixed;height:30px;overflow:hidden; }
+        #divContainerShortcutPatientPage > div      { border:1px solid red;padding:5px; background-color: #FFFFFF; width:250px;height:200px;border-bottom:0px;-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
+    </style>
+    <input type="hidden" runat="server" id="hdnIsAdd" value="0" />
+    <div class="toolbarArea">
+        <div style="float:right;margin-top:20px;">
+            <asp:ContentPlaceHolder ID="plhRightToolbar" runat="server">                
+            </asp:ContentPlaceHolder>
+        </div>
+        <ul id="ulMPListToolbar" runat="server">
+            <asp:ContentPlaceHolder ID="plhCustomButtonToolbar" runat="server">                
+            </asp:ContentPlaceHolder>
+            <li id="btnMPListAdd" runat="server" CRUDMode="C"><img src='<%=ResolveUrl("~/Libs/Images/Icon/tbnew.png")%>' alt="" /><div><%=GetLabel("Add")%></div></li>
+            <li id="btnMPListEdit" runat="server" CRUDMode="U"><img src='<%=ResolveUrl("~/Libs/Images/Icon/tbedit.png")%>' alt="" /><div><%=GetLabel("Edit")%></div></li>
+            <li id="btnMPListDelete" runat="server" CRUDMode="D"><img src='<%=ResolveUrl("~/Libs/Images/Icon/tbdelete.png")%>' alt="" /><div><%=GetLabel("Delete")%></div></li>
+            <asp:ContentPlaceHolder ID="plhRightButtonToolbar" runat="server">                
+            </asp:ContentPlaceHolder>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        function onPatientListEntryAddRecord() {
+            var allow = true;
+            if (typeof onBeforeBasePatientPageListAdd == 'function') {
+                allow = onBeforeBasePatientPageListAdd();
+            }
+            if (allow) {
+                $('#<%=hdnIsAdd.ClientID %>').val('1');
+
+                $('#divPatientPageEntryTitle').html('Add');
+
+                $('#containerPatientPageEntry').show();
+
+                var position = $('#containerPatientPageEntry').position();
+                $('html, body').animate({
+                    scrollTop: position.top
+                }, 1000);
+
+                entityToControl(null);
+            }
+        }
+
+        function onAfterPatientListEntryDeleteRecord() {
+            $('#<%=hdnIsAdd.ClientID %>').val('1');
+            $('#divPatientPageEntryTitle').html('Add');
+            entityToControl(null);
+        }
+
+        function onPatientListEntryEditRecord() {
+            $row = getSelectedRow();
+            if ($row.length > 0) {
+                $('#divPatientPageEntryTitle').html('Edit');
+
+                $('#<%=hdnIsAdd.ClientID %>').val('0');
+
+                var selectedObj = {};
+
+                $row.find('input[type=hidden]').each(function () {
+                    selectedObj[$(this).attr('bindingfield')] = $(this).val();
+                });
+
+                var isAllowEditRecord = true;
+                var errMessage = { text: "" };
+                if (typeof onBeforeEditRecord == 'function') {
+                    isAllowEditRecord = onBeforeEditRecord(selectedObj, errMessage);
+                }
+
+                if (isAllowEditRecord) {
+                    var isAllowUsingCustomEdit = false;
+                    if (typeof onBeforeEditRecordIsUsingCustomEdit == 'function') {
+                        isAllowUsingCustomEdit = onBeforeEditRecordIsUsingCustomEdit(selectedObj);
+                    }
+                    if (!isAllowUsingCustomEdit) {
+                        $('#containerPatientPageEntry').show();
+                        entityToControl(selectedObj);
+
+                        var position = $('#containerPatientPageEntry').position();
+                        $('html, body').animate({
+                            scrollTop: position.top
+                        }, 1000);
+                    }
+                    else {
+                        if (typeof onCustomEditRecord == 'function') {
+                            onCustomEditRecord(selectedObj);
+                        }
+                    }
+                }
+                else {
+                    if (errMessage.text == '')
+                        showToast('Edit Failed', 'Cannot Edit This Record');
+                    else
+                        showToast('Edit Failed', errMessage.text);
+                }
+            }
+        }
+
+        function onPatientListEntryDeleteRecord() {
+            $row = getSelectedRow();
+            if ($row.length > 0) {
+                var selectedObj = {};
+
+                $row.find('input[type=hidden]').each(function () {
+                    selectedObj[$(this).attr('bindingfield')] = $(this).val();
+                });
+
+                var isAllowDeleteRecord = true;
+                var errMessage = { text: "" };
+                if (typeof onBeforeDeleteRecord == 'function') {
+                    isAllowDeleteRecord = onBeforeDeleteRecord(selectedObj, errMessage);
+                }
+
+                if (isAllowDeleteRecord) {
+                    showToastConfirmation('Are You Sure Want To Delete?', function (result) {
+                        if (result) cbpMPListProcess.PerformCallback('delete');
+                    });
+                }
+                else {
+                    if (errMessage.text == '')
+                        showToast('Delete Failed', 'Cannot Delete This Record');
+                    else
+                        showToast('Delete Failed', errMessage.text);
+                }
+            }
+        }
+
+        function onPatientListEntrySaveRecord(evt) {
+            var errMessage = { text: "" };
+            if ($('#containerPatientPageEntry').is(':visible')) {
+                var isAllowSave = true;
+                if (typeof onBeforeSaveRecord == 'function') {
+                    isAllowSave = onBeforeSaveRecord(errMessage);
+                }
+                if (isAllowSave) {
+                    if (IsValid(evt, 'fsPatientPageEntry', 'mpEntryPatientPage'))
+                        cbpMPListProcess.PerformCallback('save');
+                }
+                else {
+                    var errMessageSplit = errMessage.text.split('|');
+                    isAllowSave = false;
+                    if (errMessageSplit[0] == 'showconfirm') {
+                        showToastConfirmation(errMessageSplit[1], function (result) {
+                            if (result) {
+                                isAllowSave = true;
+                                if (IsValid(evt, 'fsPatientPageEntry', 'mpEntryPatientPage'))
+                                    cbpMPListProcess.PerformCallback('save');
+                            }
+                        });
+                    }
+                    else {
+                        var messageBody = errMessage.text;
+                        displayErrorMessageBox('SAVE', messageBody);
+                    }
+                }
+            }
+        }
+
+        function onPatientListEntryCancelEntryRecord(evt) {
+            onButtonCancelClick();
+            $('#containerPatientPageEntry').hide();
+        }
+
+        function onSaveAddRecord(evt) {
+            onPatientListEntrySaveRecord(evt);
+        }
+
+        $(function () {
+            function bodyKeyPress(e) {
+                var charCode = (e.which) ? e.which : e.keyCode;
+                if (e.ctrlKey) {
+                    switch (charCode) {
+                        case 13: onPatientListEntrySaveRecord(e); break; //enter
+                        case 48: onPatientListEntryCancelEntryRecord(); break; //0
+                        //case 33: onSelectedRowChanged(-1); break; //page up  
+                        //case 34: onSelectedRowChanged(1); break; //page down  
+                        case 49: if ($('#<%=btnMPListAdd.ClientID %>').is(":visible")) onPatientListEntryAddRecord(); break; //1
+                        case 50: if ($('#<%=btnMPListEdit.ClientID %>').is(":visible")) onPatientListEntryEditRecord(); break; //2
+                        case 51: if ($('#<%=btnMPListDelete.ClientID %>').is(":visible")) onPatientListEntryDeleteRecord(); break; //3
+                        case 112: $('#divOpenShortcutPatientPage').click(); break; //F1
+                        case 113: $('#divCloseShortcutPatientPage').click(); break; //F2
+                    }
+                }
+                if (e.target.tagName.toUpperCase() != 'INPUT') {
+                    switch (charCode) {
+                        case 38: onSelectedRowChanged(-1); break; // up
+                        case 40: onSelectedRowChanged(1); break; // down
+                    }
+                }
+            }
+
+            if ($.browser.mozilla) {
+                $(document).keypress(bodyKeyPress);
+            } else {
+                $(document).keydown(bodyKeyPress);
+            }
+
+
+            $('#<%=btnMPListAdd.ClientID %>').click(function () {
+                onPatientListEntryAddRecord();
+            });
+            $('#<%=btnMPListEdit.ClientID %>').click(function (evt) {
+                onPatientListEntryEditRecord();
+            });
+            $('#<%=btnMPListDelete.ClientID %>').click(function () {
+                onPatientListEntryDeleteRecord();
+            });
+
+            $('#btnPatientPageEntryCancel').click(function () {
+                onPatientListEntryCancelEntryRecord();
+            });
+
+            $('#btnPatientPageEntrySave').click(function (evt) {
+                onPatientListEntrySaveRecord(evt);
+            });
+
+            $('#divOpenShortcutPatientPage').click(function () {
+                $('#divContainerShortcutPatientPage').animate({ height: 200 }, 400, function () {
+                    $('#divCloseShortcutPatientPage').show();
+                });
+            });
+
+            /*setTimeout(function () {
+            $('#divOpenShortcutPatientPage').click();
+            }, 700);*/
+
+            $('#divCloseShortcutPatientPage').click(function () {
+                $('#divContainerShortcutPatientPage').animate({ height: 30 }, 400, function () {
+                    $('#divCloseShortcutPatientPage').hide();
+                });
+            });
+
+        });
+
+        function onPatientPageListEntryQuickEntrySave(value) {
+            cbpMPListProcess.PerformCallback('savequickentry|' + value);
+        }
+    </script>       
+
+    <asp:ContentPlaceHolder ID="plhScript" runat="server">                
+                
+    </asp:ContentPlaceHolder>
+
+    <asp:Panel ID="pnlQuickEntry" runat="server">
+        <asp:ContentPlaceHolder ID="plhQuickEntry" runat="server">                
+        </asp:ContentPlaceHolder>
+    </asp:Panel>
+
+    <div id="containerPatientPageEntry" style="margin-top:10px;display:none;">
+        <div class="pageTitle" id="divPatientPageEntryTitle"><%=GetLabel("Entry")%></div>
+        <fieldset id="fsPatientPageEntry" style="margin:0">
+            <div class="tblEntryDetail borderBox">
+                <asp:ContentPlaceHolder ID="plhEntry" runat="server">                
+                </asp:ContentPlaceHolder>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="button" class="w3-btn w3-hover-blue" id="btnPatientPageEntrySave" value='<%= GetLabel("Save")%>' style="width:80px" />
+                        </td>
+                        <td>
+                            <input type="button" class="w3-btn w3-hover-blue" id="btnPatientPageEntryCancel" value='<%= GetLabel("Cancel")%>' style="width:80px" />
+                        </td>
+                    </tr>
+                </table>
+            </div> 
+        </fieldset>
+    </div>
+
+    <asp:ContentPlaceHolder ID="plhList" runat="server">                
+    </asp:ContentPlaceHolder>
+
+    <dxcp:ASPxCallbackPanel ID="cbpMPListProcess" runat="server" Width="100%" ClientInstanceName="cbpMPListProcess"
+        ShowLoadingPanel="false" OnCallback="cbpMPListProcess_Callback">
+        <ClientSideEvents BeginCallback="function(s,e){
+            showLoadingPanel();
+        }" EndCallback="function(s,e){
+            var result = s.cpResult.split('|');
+            if(result[0] == 'delete'){
+                if(result[1] == 'success'){
+                    if (typeof onRefreshControl == 'function'){
+                        var filterExpression = '';
+                        onRefreshControl(filterExpression);
+                    }
+                    onAfterPatientListEntryDeleteRecord();
+                }
+                else{
+                    if(result[2] != '')
+                        showToast('Delete Failed', 'Error Message : ' + result[2]);
+                    else
+                        showToast('Delete Failed');
+                }
+            }
+            else if(result[0] == 'save' || result[0] == 'savequickentry'){
+                if(result[1] == 'success'){
+                    if(result[0] == 'save'){
+                        if (typeof onAfterSaveRecord == 'function'){
+                            onAfterSaveRecord(s.cpRetval);
+                        }
+                    }
+                    if(result[0] == 'savequickentry') {
+                        if (typeof onAfterSaveQuickEntryRecord == 'function'){
+                            onAfterSaveQuickEntryRecord(s.cpRetval);
+                        }
+                    }
+
+                    if (result[2] != null) {
+                     showToast('Warning', result[2]);
+                     }
+
+                    if (typeof onRefreshControl == 'function'){
+                        var filterExpression = '';
+                        onRefreshControl(filterExpression);
+                    }
+                    if(result[0] == 'save')
+                        onPatientListEntryAddRecord();
+                }
+                else{
+                    if(result[2] != '')
+                        displayErrorMessageBox('SAVE', result[2]);
+                    else
+                        displayErrorMessageBox('SAVE', 'Terjadi kesalahan pada saat penyimpanan data.');
+                }
+            }
+            hideLoadingPanel();
+        }" />
+    </dxcp:ASPxCallbackPanel>
+
+    <div id="divContainerShortcutPatientPage" style="display:none">
+        <div>
+            <div id="divCloseShortcutPatientPage">X</div>
+            <div id="divOpenShortcutPatientPage"><b>Shortcut:</b></div>
+            <table>
+                <colgroup>
+                    <col style="width:150px"/>
+                </colgroup>
+                <tr><td>Ctrl + 1</td><td>Add</td></tr>
+                <tr><td>Ctrl + 2</td><td>Edit</td></tr>
+                <tr><td>Ctrl + 3</td><td>Delete</td></tr>
+                <tr><td>Ctrl + 0</td><td>Cancel</td></tr>
+                <tr><td>Ctrl + Enter</td><td>Save</td></tr>
+                <tr><td>Up Arrow</td><td>Prev Row</td></tr>
+                <tr><td>Down Arrow</td><td>Next Row</td></tr>
+            </table>
+
+        </div>
+    </div>
+</asp:Content>

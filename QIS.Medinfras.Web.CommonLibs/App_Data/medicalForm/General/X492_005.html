@@ -1,0 +1,283 @@
+<script language="javascript" type="text/javascript" id="dxss_MNA">
+    $(function () {
+        $("#optMNAForm1").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore1").val('0');
+            else $("#txtMNAParamScore1").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm2").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore1").val('1');
+            else $("#txtMNAParamScore1").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm3").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore1").val('2');
+            else $("#txtMNAParamScore1").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm4").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore2").val('0');
+            else $("#txtMNAParamScore2").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm5").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore2").val('1');
+            else $("#txtMNAParamScore2").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm6").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore2").val('2');
+            else $("#txtMNAParamScore2").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm7").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore2").val('3');
+            else $("#txtMNAParamScore2").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm8").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore3").val('0');
+            else $("#txtMNAParamScore3").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm9").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore3").val('1');
+            else $("#txtMNAParamScore3").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm10").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore3").val('2');
+            else $("#txtMNAParamScore3").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm11").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore4").val('0');
+            else $("#txtMNAParamScore4").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm12").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore4").val('2');
+            else $("#txtMNAParamScore4").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm13").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore5").val('0');
+            else $("#txtMNAParamScore5").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm14").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore5").val('1');
+            else $("#txtMNAParamScore5").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm15").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore5").val('2');
+            else $("#txtMNAParamScore5").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm16").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore6").val('0');
+            else $("#txtMNAParamScore6").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm17").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore6").val('1');
+            else $("#txtMNAParamScore6").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm18").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore6").val('2');
+            else $("#txtMNAParamScore6").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm19").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore6").val('3');
+            else $("#txtMNAParamScore6").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm20").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore7").val('0');
+            else $("#txtMNAParamScore7").val('0');
+            CalculateTotalScore();
+        });
+        $("#optMNAForm21").click(function () {
+            if ($(this).is(':checked')) $("#txtMNAParamScore7").val('3');
+            else $("#txtMNAParamScore7").val('0');
+            CalculateTotalScore();
+        });
+
+
+        function CalculateTotalScore() {
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+            var p4 = 0;
+            var p5 = 0;
+            var p6 = 0;
+            var p7 = 0;
+            if ($("#txtMNAParamScore1").val()) p1 = parseInt($("#txtMNAParamScore1").val());
+            if ($("#txtMNAParamScore2").val()) p2 = parseInt($("#txtMNAParamScore2").val());
+            if ($("#txtMNAParamScore3").val()) p3 = parseInt($("#txtMNAParamScore3").val());
+            if ($("#txtMNAParamScore4").val()) p4 = parseInt($("#txtMNAParamScore4").val());
+            if ($("#txtMNAParamScore5").val()) p5 = parseInt($("#txtMNAParamScore5").val());
+            if ($("#txtMNAParamScore6").val()) p6 = parseInt($("#txtMNAParamScore6").val());
+            if ($("#txtMNAParamScore7").val()) p7 = parseInt($("#txtMNAParamScore7").val());
+            var total = p1 + p2 + p3 + p4 + p5 + p6 + p7;
+            $("#txtTotalMNAScore").val(total);
+        }
+    });
+</script>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <table border="1" style="border-style: solid;border-collapse: collapse;">
+        <colgroup>
+          <col style="width:20px" />
+          <col />
+          <col style="width:80px" />
+        </colgroup>
+        <tr>
+          <td colspan="3" style="text-align: center; font-weight: bold">SKRINING GIZI (MINI NUTRITION ASSESMEN/MNA)</td>
+        </tr>
+        <tr>
+          <td colspan="3" style="text-align: left;">
+            <table>
+            <tr>
+              <td colspan="3" style="text-align: left;">Berat badan :</td>
+              <td>
+                    <input type="text" value="" id="txtWeight" style="width:80px;text-align:right" class="txtForm" controlID = "txtWeight" />
+                </td>
+            </tr>
+            <tr>
+              <td colspan="3" style="text-align: left;">Tinggi badan :</td>
+              <td>
+                    <input type="text" value="" id="txtHeight" style="width:80px;text-align:right" class="txtForm" controlID = "txtHeight" />
+                </td>
+            </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center; font-weight:bold">PARAMETER</td>
+          <td style="text-align: center; font-weight:bold">SKOR</td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top; text-align:center"> 01. </td>
+          <td> Apakah asupan makan berkurang selama 3 bulan terakhir karena kehilangan nafsu makan, gangguan pencernaan, kesulitan menguyah atau menelan <br />
+            <div style="padding-top:10px">
+                <input type="radio" class="optForm" id="optMNAForm1" controlID="optMNAForm1" name="004_parameter1"> Sangat berkurang     
+                <input type="radio" class="optForm" id="optMNAForm2" controlID="optMNAForm2" name="004_parameter1"> Agak berkurang
+                <input type="radio" class="optForm" id="optMNAForm3" controlID="optMNAForm3" name="004_parameter1"> Tidak berkurang
+            </div>
+          </td>
+          <td colspan="2" style="text-align:center">
+            <input type="text" readonly="readonly" value="" id="txtMNAParamScore1" style="width:50px" class="txtForm" controlID="txtMNAParamScore1" />
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top; text-align:center"> 02. </td>
+          <td> Penurunan berat badan selama 3 bulan terakhir 
+            <div style="padding-top:10px">
+              <input type="radio" class="optForm" id="optMNAForm4" controlID="optMNAForm4" name="004_parameter2"> Penurunan >3kg 
+              <input type="radio" class="optForm" id="optMNAForm5" controlID="optMNAForm5" name="004_parameter2"> Tidak tahu
+              <input type="radio" class="optForm" id="optMNAForm6" controlID="optMNAForm6" name="004_parameter2"> Penurunan 1-3kg
+              <input type="radio" class="optForm" id="optMNAForm7" controlID="optMNAForm7" name="004_parameter2"> Tidak ada penurunan
+            </div>
+    </td>
+    <td colspan="2" style="text-align:center">
+      <input type="text" readonly="readonly" value="" id="txtMNAParamScore2" style="width:50px" class="txtForm" controlID="txtMNAParamScore2" />
+    </td>
+    </tr>
+        <tr>
+          <td style="vertical-align:top; text-align:center"> 03. </td>
+          <td> Mobilitas <div style="padding-top:10px">
+              <input type="radio" class="optForm" id="optMNAForm8" controlID="optMNAForm8" name="004_parameter3"> Terbatas di tempat tidur atau kursi
+              <br/>
+              <input type="radio" class="optForm" id="optMNAForm9" controlID="optMNAForm9" name="004_parameter3"> Mampu bangun dari tempat tidur / kursi tapi tidak bepergian keluar rumah
+              <br/>
+              <input type="radio" class="optForm" id="optMNAForm10" controlID="optMNAForm10" name="004_parameter3"> Dapat bepergian keluar rumah
+            </div>
+          </td>
+          <td colspan="2" style="text-align:center">
+            <input type="text" readonly="readonly" value="" id="txtMNAParamScore3" style="width:50px" class="txtForm" controlID="txtMNAParamScore3" />
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top; text-align:center"> 04. </td>
+          <td> Menderita tekanan psikologis atau penyakit yang berat dalam 3 bulan terakhir <br>
+            <div style="padding-top:10px">
+              <input type="radio" class="optForm" id="optMNAForm11" controlID="optMNAForm11" name="004_parameter4"> Ya 
+              <input type="radio" class="optForm" id="optMNAForm12" controlID="optMNAForm12" name="004_parameter4"> Tidak
+            </div>
+          </td>
+          <td colspan="2" style="text-align:center">
+            <input type="text" readonly="readonly" value="" id="txtMNAParamScore4" style="width:50px" class="txtForm" controlID="txtMNAParamScore4" />
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top; text-align:center"> 05. </td>
+          <td> Gangguan neuropsikologis <br>
+            <div style="padding-top:10px">
+              <input type="radio" class="optForm" id="optMNAForm13" controlID="optMNAForm13" name="004_parameter5"> Depresi berat atau kepikunan berat <br/>
+              <input type="radio" class="optForm" id="optMNAForm14" controlID="optMNAForm14" name="004_parameter5"> Kepikunan ringan <br/>
+              <input type="radio" class="optForm" id="optMNAForm15" controlID="optMNAForm15" name="004_parameter5"> Tidak ada gangguan psikologis
+            </div>
+          </td>
+          <td colspan="2" style="text-align:center">
+            <input type="text" readonly="readonly" value="" id="txtMNAParamScore5" style="width:50px" class="txtForm" controlID="txtMNAParamScore5" />
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top; text-align:center"> 06a. </td>
+          <td> Indeks Massa Tubuh (IMT) (berat dalam kg)/(tinggi dalam m)2 <br>
+            <div style="padding-top:10px">
+              <input type="radio" class="optForm" id="optMNAForm16" controlID="optMNAForm16" name="004_parameter6"> IMT < 19 <br/>
+              <input type="radio" class="optForm" id="optMNAForm17" controlID="optMNAForm17" name="004_parameter6"> IMT 19 - < 21 <br/>
+              <input type="radio" class="optForm" id="optMNAForm18" controlID="optMNAForm18" name="004_parameter6"> IMT 21 - < 23 <br/>
+              <input type="radio" class="optForm" id="optMNAForm19" controlID="optMNAForm19" name="004_parameter6"> IMT >= 23
+            </div>
+          </td>
+          <td colspan="2" style="text-align:center">
+            <input type="text" readonly="readonly" value="" id="txtMNAParamScore6" style="width:50px" class="txtForm" controlID="txtMNAParamScore6" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" style="text-align: center; font-weight:bold">BILA DATA IMT TIDAK ADA, GANTI PERTANYAAN 6a DENGAN PERTANYAAN 6b <br/> ABAIKAN PERTANYAAN 6b BILA PERTANYAAN 6a SUDAH DAPAT DIISI</td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top; text-align:center"> 06a. </td>
+          <td> Lingkar betis (cm) <br>
+            <div style="padding-top:10px">
+              <input type="radio" class="optForm" id="optMNAForm20" controlID="optMNAForm20" name="004_parameter7"> Lingkar betis < 31 
+              <input type="radio" class="optForm" id="optMNAForm21" controlID="optMNAForm21" name="004_parameter7"> Lingkar betis >= 31
+            </div>
+          </td>
+          <td colspan="2" style="text-align:center">
+            <input type="text" readonly="readonly" value="" id="txtMNAParamScore7" style="width:50px" class="txtForm" controlID="txtMNAParamScore7" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" style="text-align: center; font-weight:bold">TOTAL SKOR MAKSIM L 14</td>
+        </tr>
+        <tr>
+          <td colspan="3" style="text-align: left">Skor 12 - 14 = Status Gizi Normal <br/>
+          Skor 8 - 11 = Beresiko malnutrisi <br/>
+          Skor 0 - 7 = Malnutrisi</td>
+        </tr>
+        <tr>
+          <td colspan="3" style="text-align: left">Sudah dibaca dan diketahui oleh Ahli Gizi (diisi oleh ahli gizi)
+            <input type="radio" class="optForm" id="optMNAForm22" controlID="optMNAForm22" name="004_parameter8"> Tidak
+            <input type="radio" class="optForm" id="optMNAForm23" controlID="optMNAForm23" name="004_parameter8"> Iya, dipukul
+                <input type="text" class="txtForm" controlID="txtForm1" style="width:50px; text-align:center"/>
+          </td>
+        </tr>
+    <tr>
+      <td colspan="2" style="text-align: center; font-weight:bold">TOTAL SCORE</td>
+      <td style="text-align: center; padding-top: 10px; padding-bottom:10px">
+        <input type="text" readonly="readonly" value="" id="txtTotalMNAScore" style="width:50px" class="txtForm" controlID="txtTotalMNAScore" />
+      </td>
+    </tr>
+    </table>
+  </div>
+</div>
+</div>

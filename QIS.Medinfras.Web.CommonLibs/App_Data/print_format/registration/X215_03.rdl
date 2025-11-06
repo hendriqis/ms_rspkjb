@@ -1,0 +1,38 @@
+﻿^XA
+^POI
+^PW840
+^LL1024
+^LH2,1
+^CF036,36
+^FO235,20^FDREGISTRATION RECEIPT^FS
+^FO235,30^FD____________________^FS
+^CF026,26
+^FO195,80^FDRegistration No. : {RegistrationNo}^FS
+^CF028,28
+^FO10,140^FD{PatientName} ({Sex})^FS
+^CF026,26
+^FO10,200^FDNo. RM^FS
+^FO181,200^FD:^FS
+^FO201,200^FD{MedicalNo}^FS
+^FO10,240^FDService Unit^FS
+^FO181,240^FD:^FS
+^FO201,240^FD{ServiceUnitName}^FS
+^FO10,280^FDPhysician^FS
+^FO181,280^FD:^FS
+^FO201,280^FD{ParamedicName}^FS
+^FO10 ,320^FDPayor^FS
+^FO181,320^FD:^FS
+^FO201,320^FD{BusinessPartnerName}^FS
+^FO10 ,380^FDServices / Procedures^FS
+^FO10,420^FD1. ____________ : Rp. _______________ _____^FS
+^FO10,460^FD2. ____________ : Rp. _______________ _____^FS
+^FO10,500^FD3. ____________ : Rp. _______________ _____^FS
+^FO10,540^FD4. ____________ : Rp. _______________ _____^FS
+^FO10,580^FD5. ____________ : Rp. _______________ _____^FS
+^FO10,650^FDDiagnosis^FS
+^FO205,650^FD:^FS
+^FO220,650^FD__________________________________________^FS 
+^FO10,700 ^BQN,2,6,H^FH^FDMM,B0500{MedicalNo}_0D_0A{RegistrationNo}_0D_0A{PatientName}_0D_0A_0D_0A_0D_0A{cfPatientLocation}^FS
+^FO280,700^FDPhysician Notes :^FS
+^FO10,700^A0N,10,10^BAN,80,N,N,N^FDNREG/IP/20160713/00029^FS
+^XZ

@@ -1,0 +1,12 @@
+﻿^XA
+^POI
+^FWR
+^LH0,60
+^FH_
+^FO220,450 ^A0R,35,35^FD{cfPatientNameInLabel}^FS
+^FO180,450 ^A0R,29,29^FD{MedicalNo}^FS
+^APR,30,27
+^FO180,970^FD{DateOfBirthInString} ^FS
+^FO110,450 ^BY3,2.0^A0,40,30^BAR,50,N,N,N^FD{cfAlternateRegistrationNo}^FS
+^FO60,670 ^A0R,35,35^FD*{MedicalNo}*^FS
+^XZ

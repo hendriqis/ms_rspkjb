@@ -1,0 +1,229 @@
+﻿<head>
+    <style type="text/css">
+        .style1
+        {
+            height: 24px;
+        }
+    </style>
+</head>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="0" style="width:100%;">
+            <colgroup>
+                <col width="150px" />
+                <col width="65px" />
+                <col width="65px" />
+                <col width="100px" />
+                <col width="80px" />
+                <col width="20px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5"><label style="font-weight:bold; text-decoration:underline"class="lblGroupTitle" controlID = "lblGroup01">Perencanaan Pemulangan Pasien</label></td>
+                <td />
+                <td><div class="w3-container w3-border peGroup"><label style="font-weight:bold; text-decoration:underline">Masalah Keperawatan</label></div></td>
+            </tr>
+            <tr>
+                <td colspan="3"><label>Transportasi pulang</label></td>
+                <td />
+                <td />
+                <td />
+                <td rowspan="10" style="vertical-align:top">
+                    <div class="w3-container w3-border nursingProblem">
+                        <table border="0" cellpadding="1" cellspacing="0">
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem01" nursingProblemCode=""/> Tidak ada masalah</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem02" nursingProblemCode="D.0054"/> D.0054 Gangguan Mobilitas Fisik</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem03" nursingProblemCode="D.0109"/> D.0109 Defisit Perawatan Diri: Mandi/Berpakaian/Makan/Toileting/Berhias</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem04" nursingProblemCode="D.0136"/> D.0136 Resiko Cedera</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem05" nursingProblemCode="D.0143"/> D.0143 Resiko Jatuh</td></tr>
+                            <tr><td style="padding-left:20px;"> <input type="text" class="txtNursingProblem" controlID="txtNursingProblem01" style="width:100%"/></td></tr>
+                            <tr><td style="padding-left:20px;"><input type="text" class="txtNursingProblem" controlID="txtNursingProblem02" style="width:100%"/></td></tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right"></td>
+                <td />
+                <td colspan="3"><input type="radio" name="group01.01" value="1" class="optForm" controlID="optGroup01_01_01"/><label> Ambulance emergency</label></td>
+                <td />
+            </tr>
+            <tr>
+                <td style="text-align:right"></td>
+                <td />
+                <td colspan="3"><input type="radio" name="group01.01" value="1" class="optForm" controlID="optGroup01_01_02"/><label> Ambulance transport</label></td>
+                <td />
+            </tr>
+            <tr>
+                <td style="text-align:right"></td>
+                <td />
+                <td colspan="3"><input type="radio" name="group01.01" value="1" class="optForm" controlID="optGroup01_01_03"/><label> Kendaraan pribadi</label></td>
+                <td />
+            </tr>
+            <tr>
+                <td colspan="3"><label>Orang yang merawat pasien di rumah</label></td>
+                <td colspan="2"><input type="text" style="width: 100%" class="txtForm" controlID="txtGroup01_01" /></td>
+                <td />
+            </tr>
+            <tr>
+                <td colspan="2"><label>Pelayanan Homecare</label></td>
+                <td><input type="radio" name="group01.02" value="1" class="optForm" controlID="optGroup01_02_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.02" value="0" class="optForm" controlID="optGroup01_02_02"/><label> Tidak</label></td>
+                <td />
+            </tr>
+            <tr>
+                <td colspan="2"><label>Rujukan ke komunitas</label></td>
+                <td><input type="radio" name="group01.03" value="1" class="optForm" controlID="optGroup01_03_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.03" value="0" class="optForm" controlID="optGroup01_03_02"/><label> Tidak</label></td>
+                <td />
+            </tr>
+            <tr>
+                <td style="text-align:right" colspan="2"><label>Dirujuk ke</label></td>
+                <td colspan="3"><input type="text" style="width: 100%" class="txtForm" controlID="txtGroup01_02" /></td>
+                <td />
+            </tr>
+            <tr>
+                <td colspan="6">&nbsp</td>
+            </tr>
+            <tr>
+                <td colspan="6">&nbsp</td>
+            </tr>
+            <tr>
+                <td colspan="6"><label>Pengobatan dengan instruksi khusus</label></td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <table border="1" cellpadding="1" cellspacing="0" style="width:100%">
+                        <colgroup>
+                            <col style="width:10px" />
+                            <col style="width:200px" />
+                            <col style="width:70px" />
+                            <col style="width:70px" />
+                            <col />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <td style="text-align:center"><label>#</label></td>
+                                <td style="text-align:left"><label>Nama Obat</label></td>
+                                <td style="text-align:right"><label>Jumlah/ Dosis</label></td>
+                                <td style="text-align:right"><label>Jam Pemberian</label></td>
+                                <td style="text-align:left"><label>Instruksi Khusus</label></td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td style="text-align:center"><label>1</label></td>
+                            <td><input type="text" style="width: 200px" class="txtForm" controlID="txtGroup01_03" /></td>
+                            <td style="text-align:right"><input type="text" style="width: 70px" class="txtForm" controlID="txtGroup01_04" /></td>
+                            <td style="text-align:right"><input type="text" style="width: 70px" class="txtForm" controlID="txtGroup01_05" /></td>
+                            <td><input type="text" style="width: 98%" class="txtForm" controlID="txtGroup01_06" /></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center"><label>2</label></td>
+                            <td><input type="text" style="width: 200px" class="txtForm" controlID="txtGroup01_07" /></td>
+                            <td style="text-align:right"><input type="text" style="width: 70px" class="txtForm" controlID="txtGroup01_08" /></td>
+                            <td style="text-align:right"><input type="text" style="width: 70px" class="txtForm" controlID="txtGroup01_09" /></td>
+                            <td><input type="text" style="width: 98%" class="txtForm" controlID="txtGroup01_10" /></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center"><label>3</label></td>
+                            <td><input type="text" style="width: 200px" class="txtForm" controlID="txtGroup01_11" /></td>
+                            <td style="text-align:right"><input type="text" style="width: 70px" class="txtForm" controlID="txtGroup01_12" /></td>
+                            <td style="text-align:right"><input type="text" style="width: 70px" class="txtForm" controlID="txtGroup01_13" /></td>
+                            <td><input type="text" style="width: 98%" class="txtForm" controlID="txtGroup01_14" /></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center"><label>4</label></td>
+                            <td><input type="text" style="width: 200px" class="txtForm" controlID="txtGroup01_15" /></td>
+                            <td style="text-align:right"><input type="text" style="width: 70px" class="txtForm" controlID="txtGroup01_16" /></td>
+                            <td style="text-align:right"><input type="text" style="width: 70px" class="txtForm" controlID="txtGroup01_17" /></td>
+                            <td><input type="text" style="width: 98%" class="txtForm" controlID="txtGroup01_18" /></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center"><label>5</label></td>
+                            <td><input type="text" style="width: 200px" class="txtForm" controlID="txtGroup01_19" /></td>
+                            <td style="text-align:right"><input type="text" style="width: 70px" class="txtForm" controlID="txtGroup01_19" /></td>
+                            <td style="text-align:right"><input type="text" style="width: 70px" class="txtForm" controlID="txtGroup01_20" /></td>
+                            <td><input type="text" style="width: 98%" class="txtForm" controlID="txtGroup01_21" /></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><label>Nutrisi khusus pasien</label></td>
+                <td colspan="3"><input type="text" style="width: 100%" class="txtForm" controlID="txtGroup01_02" /></td>
+                <td />
+            </tr>
+            <tr>
+                <td colspan="3" class="style1"><label>Alat medis yang dilanjutkan di rumah</label></td>
+                <td colspan="3" style="padding-left: 15px" class="style1"> <input type="checkbox" class="chkForm" controlID="chkGroup01_01" value="001"/> Oksigen</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="3" style="padding-left: 15px"> <input type="checkbox" class="chkForm" controlID="chkGroup01_02" value="001"/> Tracheostomi tube</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="3" style="padding-left: 15px"> <input type="checkbox" class="chkForm" controlID="chkGroup01_03" value="001"/> Kateter urine</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="3" style="padding-left: 15px"> <input type="checkbox" class="chkForm" controlID="chkGroup01_04" value="001"/> Nasogastric Tube (NGT)</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2" style="padding-left: 15px">
+                    <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                        <tr>
+                            <td style="width:20px"><input type="checkbox" class="chkForm" controlID="chkGroup01_04" value="001"/></td>
+                            <td><input type="text" style="width: 190px" class="txtForm" controlID="txtGroup01_03" /></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="style1"><label>Alat bantu yang dilanjutkan di rumah:</label></td>
+                <td colspan="3" style="padding-left: 15px" class="style1"> <input type="checkbox" class="chkForm" controlID="chkGroup01_05" value="001"/> Kursi roda</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="3" style="padding-left: 15px"> <input type="checkbox" class="chkForm" controlID="chkGroup01_06" value="001"/> Tongkat</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="3" style="padding-left: 15px"> <input type="checkbox" class="chkForm" controlID="chkGroup01_07" value="001"/> Kasur anti dekubitus</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2" style="padding-left: 15px">
+                    <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                        <tr>
+                            <td style="width:20px"><input type="checkbox" class="chkForm" controlID="chkGroup01_08" value="001"/></td>
+                            <td><input type="text" style="width: 190px" class="txtForm" controlID="txtGroup01_04" /></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="style1"><label>Pendidikan kesehatan untuk di rumah</label></td>
+                <td colspan="3" style="padding-left: 15px" class="style1"> <input type="checkbox" class="chkForm" controlID="chkGroup01_09" value="001"/> Pemenuhan activity daily living</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="3" style="padding-left: 15px"> <input type="checkbox" class="chkForm" controlID="chkGroup01_10" value="001"/> Perawatan luka</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2" style="padding-left: 15px">
+                    <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                        <tr>
+                            <td style="width:20px"><input type="checkbox" class="chkForm" controlID="chkGroup01_11" value="001"/></td>
+                            <td><input type="text" style="width: 190px" class="txtForm" controlID="txtGroup01_05" /></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+</script>

@@ -1,0 +1,813 @@
+﻿<head>
+</head>
+<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+
+    var score = 0;
+
+    $(function () {
+        CalculateRisk1();
+        CalculateRisk2();
+        CalculateRisk3();
+        CalculateRisk4();
+        CalculateRisk5();
+        CalculateRisk6();
+        CalculateRisk7();
+        CalculateRisk8();
+        CalculateRisk9();
+        CalculateRisk10();
+        CalculateRisk11();
+        CalculateRisk12();
+        CalculateRisk13();
+        CalculateRisk14();
+        CalculateRisk15();
+        CalculateRisk16();
+
+        $("#opt05Form1").click(function () {
+            CalculateRisk1();
+        });
+        $("#opt05Form2").click(function () {
+            CalculateRisk1();
+        });
+        $("#opt05Form3").click(function () {
+            CalculateRisk2();
+        });
+        $("#opt05Form4").click(function () {
+            CalculateRisk2();
+        });
+        $("#opt05Form5").click(function () {
+            CalculateRisk3();
+        });
+        $("#opt05Form6").click(function () {
+            CalculateRisk3();
+        });
+        $("#opt05Form7").click(function () {
+            CalculateRisk4();
+        });
+        $("#opt05Form8").click(function () {
+            CalculateRisk4();
+        });
+        $("#opt05Form9").click(function () {
+            CalculateRisk5();
+        });
+        $("#opt05Form10").click(function () {
+            CalculateRisk5();
+        });
+        $("#opt05Form11").click(function () {
+            CalculateRisk6();
+        });
+        $("#opt05Form12").click(function () {
+            CalculateRisk6();
+        });
+        $("#opt05Form13").click(function () {
+            CalculateRisk7();
+        });
+        $("#opt05Form14").click(function () {
+            CalculateRisk7();
+        });
+        $("#opt05Form15").click(function () {
+            CalculateRisk8();
+        });
+        $("#opt05Form16").click(function () {
+            CalculateRisk8();
+        });
+        $("#opt05Form17").click(function () {
+            CalculateRisk9();
+        });
+        $("#opt05Form18").click(function () {
+            CalculateRisk9();
+        });
+        $("#opt05Form19").click(function () {
+            CalculateRisk10();
+        });
+        $("#opt05Form20").click(function () {
+            CalculateRisk10();
+        });
+        $("#opt05Form21").click(function () {
+            CalculateRisk11();
+        });
+        $("#opt05Form22").click(function () {
+            CalculateRisk11();
+        });
+        $("#opt05Form23").click(function () {
+            CalculateRisk12();
+        });
+        $("#opt05Form24").click(function () {
+            CalculateRisk12();
+        });
+        $("#opt05Form25").click(function () {
+            CalculateRisk13();
+        });
+        $("#opt05Form26").click(function () {
+            CalculateRisk13();
+        });
+        $("#opt05Form27").click(function () {
+            CalculateRisk14();
+        });
+        $("#opt05Form28").click(function () {
+            CalculateRisk14();
+        });
+        $("#opt05Form29").click(function () {
+            CalculateRisk15();
+        });
+        $("#opt05Form30").click(function () {
+            CalculateRisk15();
+        });
+        $("#opt05Form31").click(function () {
+            CalculateRisk16();
+        });
+        $("#opt05Form32").click(function () {
+            CalculateRisk16();
+        });
+    });
+
+    function CalculateRisk1() {
+        if ($("#opt05Form1").is(':checked')) {
+            $("#txtParamScore1").val('1');
+            $("#divPencegahan1").show();
+        }
+        else {
+            $("#txtParamScore1").val('0');
+            $("#divPencegahan1").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateRisk2() {
+        if ($("#opt05Form3").is(':checked')) {
+            $("#txtParamScore2").val('1');
+            $("#divPencegahan2").show();
+        }
+        else {
+            $("#txtParamScore2").val('0');
+            $("#divPencegahan2").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateRisk3() {
+        if ($("#opt05Form5").is(':checked')) {
+            $("#txtParamScore3").val('1');
+            $("#divPencegahan3").show();
+        }
+        else {
+            $("#txtParamScore3").val('0');
+            $("#divPencegahan3").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateRisk4() {
+        if ($("#opt05Form7").is(':checked')) {
+            $("#txtParamScore4").val('1');
+            $("#divPencegahan4").show();
+        }
+        else {
+            $("#txtParamScore4").val('0');
+            $("#divPencegahan4").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateRisk5() {
+        if ($("#opt05Form9").is(':checked')) {
+            $("#txtParamScore5").val('1');
+            $("#divPencegahan5").show();
+        }
+        else {
+            $("#txtParamScore5").val('0');
+            $("#divPencegahan5").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateRisk6() {
+        if ($("#opt05Form11").is(':checked')) {
+            $("#txtParamScore6").val('1');
+            $("#divPencegahan6").show();
+        }
+        else {
+            $("#txtParamScore6").val('0');
+            $("#divPencegahan6").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateRisk7() {
+        if ($("#opt05Form13").is(':checked')) {
+            $("#txtParamScore7").val('3');
+            $("#divPencegahan7").show();
+        }
+        else {
+            $("#txtParamScore7").val('0');
+            $("#divPencegahan7").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateRisk8() {
+        if ($("#opt05Form15").is(':checked')) {
+            $("#txtParamScore8").val('1');
+            $("#divPencegahan8").show();
+        }
+        else {
+            $("#txtParamScore8").val('0');
+            $("#divPencegahan8").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateRisk9() {
+        if ($("#opt05Form17").is(':checked')) {
+            $("#txtParamScore9").val('1');
+            $("#divPencegahan9").show();
+        }
+        else {
+            $("#txtParamScore9").val('0');
+            $("#divPencegahan9").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateRisk10() {
+        if ($("#opt05Form19").is(':checked')) {
+            $("#txtParamScore10").val('1');
+            $("#divPencegahan10").show();
+        }
+        else {
+            $("#txtParamScore10").val('0');
+            $("#divPencegahan10").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateRisk11() {
+        if ($("#opt05Form21").is(':checked')) {
+            $("#txtParamScore11").val('1');
+            $("#divPencegahan11").show();
+        }
+        else {
+            $("#txtParamScore11").val('0');
+            $("#divPencegahan11").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateRisk12() {
+        if ($("#opt05Form23").is(':checked')) {
+            $("#txtParamScore12").val('1');
+            $("#divPencegahan12").show();
+        }
+        else {
+            $("#txtParamScore12").val('0');
+            $("#divPencegahan12").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateRisk13() {
+        if ($("#opt05Form25").is(':checked')) {
+            $("#txtParamScore13").val('1');
+            $("#divPencegahan13").show();
+        }
+        else {
+            $("#txtParamScore13").val('0');
+            $("#divPencegahan13").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateRisk14() {
+        if ($("#opt05Form27").is(':checked')) {
+            $("#txtParamScore14").val('1');
+            $("#divPencegahan14").show();
+        }
+        else {
+            $("#txtParamScore14").val('0');
+            $("#divPencegahan14").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateRisk15() {
+        if ($("#opt05Form29").is(':checked')) {
+            $("#txtParamScore15").val('1');
+            $("#divPencegahan15").show();
+        }
+        else {
+            $("#txtParamScore15").val('0');
+            $("#divPencegahan15").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateRisk16() {
+        if ($("#opt05Form31").is(':checked')) {
+            $("#txtParamScore16").val('4');
+            $("#divPencegahan16").show();
+        }
+        else {
+            $("#txtParamScore16").val('0');
+            $("#divPencegahan16").hide();
+        }
+        CalculateTotalScore();
+    }
+
+    function CalculateTotalScore() {
+        var p1 = 0;
+        var p2 = 0;
+        var p3 = 0;
+        var p4 = 0;
+        var p5 = 0;
+        var p6 = 0;
+        var p7 = 0;
+        var p8 = 0;
+        var p9 = 0;
+        var p10 = 0;
+        var p11 = 0;
+        var p12 = 0;
+        var p13 = 0;
+        var p14 = 0;
+        var p15 = 0;
+        var p16 = 0;
+
+
+        if ($("#txtParamScore1").val())
+            p1 = parseInt($("#txtParamScore1").val());
+
+        if ($("#txtParamScore2").val())
+            p2 = parseInt($("#txtParamScore2").val());
+
+        if ($("#txtParamScore3").val())
+            p3 = parseInt($("#txtParamScore3").val());
+
+        if ($("#txtParamScore4").val())
+            p4 = parseInt($("#txtParamScore4").val());
+
+        if ($("#txtParamScore5").val())
+            p5 = parseInt($("#txtParamScore5").val());
+
+        if ($("#txtParamScore6").val())
+            p6 = parseInt($("#txtParamScore6").val());
+
+        if ($("#txtParamScore7").val())
+            p7 = parseInt($("#txtParamScore7").val());
+
+        if ($("#txtParamScore8").val())
+            p8 = parseInt($("#txtParamScore8").val());
+
+        if ($("#txtParamScore9").val())
+            p9 = parseInt($("#txtParamScore9").val());
+
+        if ($("#txtParamScore10").val())
+            p10 = parseInt($("#txtParamScore10").val());
+
+        if ($("#txtParamScore11").val())
+            p11 = parseInt($("#txtParamScore11").val());
+
+        if ($("#txtParamScore12").val())
+            p12 = parseInt($("#txtParamScore12").val());
+
+        if ($("#txtParamScore13").val())
+            p13 = parseInt($("#txtParamScore13").val());
+
+        if ($("#txtParamScore14").val())
+            p14 = parseInt($("#txtParamScore14").val());
+
+        if ($("#txtParamScore15").val())
+            p15 = parseInt($("#txtParamScore15").val());
+
+        if ($("#txtParamScore16").val())
+            p16 = parseInt($("#txtParamScore16").val());
+
+        var total = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10 + p11 + p12 + p13 + p14 + p15 + p16;
+
+        SetTotalScore(total);
+    }
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table border="1" style="border-style: solid; border-collapse: collapse;" width="100%">
+                <colgroup>
+                    <col style="width: 20px" />
+                    <col style="width: 350px" />
+                    <col style="width: 80px" />
+                    <col style="width: 80px" />
+                    <col style="width: 70px" />
+                    <col />
+                </colgroup>
+                <tr>
+                    <td colspan="6" style="text-align: center; font-weight: bold">
+                        PENGKAJIAN DAN TINDAKAN PENCEGAHAN RESIKO JATUH PADA NEONATUS
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" />
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; vertical-align: top; text-align: center">
+                        No.
+                    </td>
+                    <td style="font-weight: bold">
+                        Faktor Resiko
+                    </td>
+                    <td style="text-align: center; font-weight: bold">
+                        YA
+                    </td>
+                    <td style="text-align: center; font-weight: bold">
+                        TIDAK
+                    </td>
+                    <td style="text-align: center; font-weight: bold">
+                        SKOR
+                    </td>
+                    <td style="font-weight: bold">
+                        TINDAKAN PENCEGAHAN
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; vertical-align:top">
+                        01.
+                    </td>
+                    <td style="vertical-align:top">
+                        Mengangkat bayi dari box / incubator untuk alasan apapun
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form1" controlid="opt05Form1" name="05_parameter1" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form2" controlid="opt05Form2" name="05_parameter1" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px" class = "txtForm" controlID = "txtParamScore1" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan1" style="font-style:italic">
+                            Memberi edukasi pada ibu tentang resiko jatuh
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top">
+                        02.
+                    </td>
+                    <td style="vertical-align:top">
+                        Pemberian Nutrisi
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form3" controlid="opt05Form3" name="05_parameter2" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form4" controlid="opt05Form4" name="05_parameter2" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px" class = "txtForm" controlID = "txtParamScore2" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan2" style="font-style:italic">
+                            Lantai ruang perawatan bayi dijaga tetap kering
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; text-align: center">
+                        03.
+                    </td>
+                    <td>
+                        Tindakan invasive seperti pengambilan sample darah
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form5" controlid="opt05Form5" name="05_parameter3" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form6" controlid="opt05Form6" name="05_parameter3" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px" class = "txtForm" controlID = "txtParamScore3" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan3" style="font-style:italic">
+                            Tindakan dilakukan tidak boleh dalam kondisi bayi digendong
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; text-align: center">
+                        04.
+                    </td>
+                    <td style="text-align: left; vertical-align: top">
+                        Riwayat jatuh sebelumnya
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form7" controlid="opt05Form7" name="05_parameter4" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form8" controlid="opt05Form8" name="05_parameter4" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px" class = "txtForm" controlID = "txtParamScore4" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan4" style="font-style:italic">
+                            <ul style="padding-left:15px; margin-left:0px">
+                                <li>Memberi edukasi pada ibu dan Keluarga tentang resiko jatuh</li>
+                                <li>Lakukan tindakan preventif terhadap penyebab jatuh sebelumnya</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; text-align: center">
+                        05.
+                    </td>
+                    <td>
+                        Riwayat Kejang (ibu atau Bayi)
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form9" controlid="opt05Form9" name="05_parameter5" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form10" controlid="opt05Form10" name="05_parameter5" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px" class = "txtForm" controlID = "txtParamScore5" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan5" style="font-style:italic">
+                            ibu diberi edukasi bahwa tidak boleh menggendong bayi tanpa didampingi
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; text-align: center">
+                        06.
+                    </td>
+                    <td>
+                        Peralatan invasif dan non invasif yang terpasang pada bayi (kateter urin/kateter vena central dll)
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form11" controlid="opt05Form11" name="05_parameter6" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form12" controlid="opt05Form12" name="05_parameter6" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore6" style="width:50px" class = "txtForm" controlID = "txtParamScore6" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan6" style="font-style:italic">
+                            Pencegahan resiko jatuh dari alat-alat yang terhubung (merapikan selang atau kabel alat yang menjuntai, dsbnya)
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; text-align: center">
+                        07.
+                    </td>
+                    <td style="text-align: left; vertical-align: top">
+                        Bayi ditransfer ke unit lain
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form13" controlid="opt05Form13" name="05_parameter7" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form14" controlid="opt05Form14" name="05_parameter7" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore7" style="width:50px" class = "txtForm" controlID = "txtParamScore7" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan7" style="font-style:italic">
+                            <ul style="padding-left:15px; margin-left:0px">
+                                <li>Lantai dicek apakah dalam kondisi kering</li>
+                                <li>Lakukan pengecekan alat yang dipakai untuk transfer berfungsi dengan baik</li>
+                                <li>Bayi sebaiknya ditransfer dengan Inkubator Transport</li>
+                                <li>Saat bayi dipindahkan dari Inkubator Transport ke tempat lain pastikan posisi sedekat mungkin</li>
+                                <li>Apabila menggunakan Lift, perhatikan perbedaan level perbedaan lift dengan lantai</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; text-align: center">
+                        08.
+                    </td>
+                    <td style="text-align: left; vertical-align: top">
+                        Skor Nyeri > 1
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form15" controlid="opt05Form15" name="05_parameter8" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form16" controlid="opt05Form16" name="05_parameter8" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore8" style="width:50px" class = "txtForm" controlID = "txtParamScore8" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan8" style="font-style:italic">
+                            <ul style="padding-left:15px; margin-left:0px">
+                                <li>Tatalaksana Nyeri</li>
+                                <li>Pintu Inkubator pastikan selalu tertutup</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; text-align: center">
+                        09.
+                    </td>
+                    <td style="text-align: left; vertical-align: top">
+                        Penurunan Kondisi klinis bayi : gelisah, muntah, kembung, dll
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form17" controlid="opt05Form17" name="05_parameter9" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form18" controlid="opt05Form18" name="05_parameter9" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore9" style="width:50px" class = "txtForm" controlID = "txtParamScore9" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan9" style="font-style:italic">
+                            <ul style="padding-left:15px; margin-left:0px">
+                                <li>Menghubungi Dokter</li>
+                                <li>ibu diberi informasi resiko jatuh</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="padding-top:20px; font-weight:bold">RESIKO DARI FAKTOR ibu: </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; text-align: center">
+                        10.
+                    </td>
+                    <td style="text-align: left; vertical-align: top">
+                        Penurunan Kondisi ibu (Hipotensi, Hipoglikemia, dsbnya)
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form19" controlid="opt05Form19" name="05_parameter10" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form20" controlid="opt05Form20" name="05_parameter10" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore10" style="width:50px" class = "txtForm" controlID = "txtParamScore10" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan10" style="font-style:italic">
+                            <ul style="padding-left:15px; margin-left:0px">
+                                <li>Resiko Jatuh ibu dikaji dengan Skor Morse</li>
+                                <li>ibu tidak diperbolehkan menggendong bayi seorang diri</li>
+                                <li>Edukasi Resiko Jatuh pada ibu</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; text-align: center">
+                        11.
+                    </td>
+                    <td style="text-align: left; vertical-align: top">
+                        ibu diabel, terlalu muda atau terlalu tua
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form21" controlid="opt05Form21" name="05_parameter11" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form22" controlid="opt05Form22" name="05_parameter11" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore11" style="width:50px" class = "txtForm" controlID = "txtParamScore11" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan11" style="font-style:italic">
+                            ibu diberi informasi resiko jatuh
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; text-align: center">
+                        12.
+                    </td>
+                    <td style="text-align: left; vertical-align: top">
+                        Penggunaan obat sedative, Hipnotik
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form23" controlid="opt05Form23" name="05_parameter12" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form24" controlid="opt05Form24" name="05_parameter12" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore12" style="width:50px" class = "txtForm" controlID = "txtParamScore12" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan12" style="font-style:italic">
+                            <ul style="padding-left:15px; margin-left:0px">
+                                <li>Dokter anak diberi informasi tentang obat</li>
+                                <li>ibu diperbolehkan menggendong bayi di bawah supervisi</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; text-align: center">
+                        13.
+                    </td>
+                    <td style="text-align: left; vertical-align: top">
+                        Skor Nyeri ibu > 2
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form25" controlid="opt05Form25" name="05_parameter13" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form26" controlid="opt05Form26" name="05_parameter13" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore13" style="width:50px" class = "txtForm" controlID = "txtParamScore13" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan13" style="font-style:italic">
+                            <ul style="padding-left:15px; margin-left:0px">
+                                <li>Edukasi Resiko Jatuh</li>
+                                <li>Bila Skor Nyeri > 4, ibu tidak disarankan menggendong bayi tanpa didampingi</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; text-align: center">
+                        14.
+                    </td>
+                    <td style="text-align: left; vertical-align: top">
+                        Ketidakwaspadaan ibu dan keluarga (Tingkat pendidikan, pemahaman rendah, dsbnya)
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form27" controlid="opt05Form27" name="05_parameter14" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form28" controlid="opt05Form28" name="05_parameter14" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore14" style="width:50px" class = "txtForm" controlID = "txtParamScore14" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan14" style="font-style:italic">
+                            Reedukasi mengenai resiko jatuh kepada keluarga dan ibu (kejadian jatuh tersering pada saat malam dan dini hari)
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; text-align: center">
+                        15.
+                    </td>
+                    <td style="text-align: left; vertical-align: top">
+                        Tidak ada keluarga yang mendampingi
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form29" controlid="opt05Form29" name="05_parameter15" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form29" controlid="opt05Form30" name="05_parameter15" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore15" style="width:50px" class = "txtForm" controlID = "txtParamScore15" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan15" style="font-style:italic">
+                            Ibu diberitahu untuk memberitahu kepada perawat setiap kali akan menyusui, menggendong, atau akan menggunakan toilet
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; text-align: center">
+                        16.
+                    </td>
+                    <td style="text-align: left; vertical-align: top">
+                        Ibu dengan Anestesi Epidural
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form31" controlid="opt05Form31" name="05_parameter16" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top">
+                        <input type="radio" class="optForm" id="opt05Form32" controlid="opt05Form32" name="05_parameter16" />
+                    </td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <input type="text" readonly="readonly" value="" id="txtParamScore16" style="width:50px" class = "txtForm" controlID = "txtParamScore16" />
+                    </td>
+                    <td style="text-align: left; vertical-align: top;">
+                        <div id="divPencegahan16" style="font-style:italic">
+                            Ibu tidak diperbolehkan menggendong bayi tanpa supervisi
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" />
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

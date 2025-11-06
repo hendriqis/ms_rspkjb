@@ -1,0 +1,352 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+    $(function () {
+
+        var isHasMaxValue = "0";
+
+        $("#ddlParameter1").change(function () {
+            var value = $(this).val();
+            if (value == "-") {
+                value = "0";
+            }
+            else {
+                if (value == "3a" || value == "3b") {
+                    value = "3";
+                    isHasMaxValue = "1";
+                }
+            }
+            $("#txtParamScore1").val(value);
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter2").change(function () {
+            $("#txtParamScore2").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter3").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter4").change(function () {
+            var value = $(this).val();
+            if (value == "3a" || value == "3b") {
+                value = "3";
+                isHasMaxValue = "1";
+            }
+            $("#txtParamScore4").val(value);
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter5").change(function () {
+            var value = $(this).val();
+            if (value == "3a" || value == "3b") {
+                value = "3";
+                isHasMaxValue = "1";
+            }
+            $("#txtParamScore5").val(value);
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter6").change(function () {
+            $("#txtParamScore6").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter7").change(function () {
+            var value = $(this).val();
+            if (value == "2a" || value == "2b") {
+                value = "2";
+            }
+            else {
+                if (value == "3a" || value == "3b") {
+                    value = "3";
+                    isHasMaxValue = "1";
+                }
+            }
+            $("#txtParamScore7").val(value);
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter8").change(function () {
+            $("#txtParamScore8").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter9").change(function () {
+            $("#txtParamScore9").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter10").change(function () {
+            $("#txtParamScore10").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter11").change(function () {
+            $("#txtParamScore11").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter1").change();
+        $("#ddlParameter2").change();
+        $("#ddlParameter3").change();
+        $("#ddlParameter4").change();
+        $("#ddlParameter5").change();
+        $("#ddlParameter6").change();
+        $("#ddlParameter7").change();
+        $("#ddlParameter8").change();
+        $("#ddlParameter9").change();
+        $("#ddlParameter10").change();
+        $("#ddlParameter11").change();
+
+        function CalculateTotalScore() {
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+            var p4 = 0;
+            var p5 = 0;
+            var p6 = 0;
+            var p7 = 0;
+            var p8 = 0;
+            var p9 = 0;
+            var p10 = 0;
+            var p11 = 0;
+
+            if ($("#txtParamScore1").val())
+                p1 = parseInt($("#txtParamScore1").val());
+
+            if ($("#txtParamScore2").val())
+                p2 = parseInt($("#txtParamScore2").val());
+
+            if ($("#txtParamScore3").val())
+                p3 = parseInt($("#txtParamScore3").val());
+
+            if ($("#txtParamScore4").val())
+                p4 = parseInt($("#txtParamScore4").val());
+
+            if ($("#txtParamScore5").val())
+                p5 = parseInt($("#txtParamScore5").val());
+
+            if ($("#txtParamScore6").val())
+                p6 = parseInt($("#txtParamScore6").val());
+
+            if ($("#txtParamScore7").val())
+                p7 = parseInt($("#txtParamScore7").val());
+
+            if ($("#txtParamScore8").val())
+                p8 = parseInt($("#txtParamScore8").val());
+
+            if ($("#txtParamScore9").val())
+                p9 = parseInt($("#txtParamScore9").val());
+
+            if ($("#txtParamScore10").val())
+                p10 = parseInt($("#txtParamScore10").val());
+
+            if ($("#txtParamScore11").val())
+                p11 = parseInt($("#txtParamScore11").val());
+
+            var total = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10 + p11;
+
+            $("#txtScore").val(total);
+
+            if (total >= 0 && total <= 4) {
+                $("#ddlScore").val("X396^01");
+            }
+            else if ((total >= 5 && total <= 6) || isHasMaxValue == "1") {
+                $("#ddlScore").val("X396^03");
+            }
+            else {
+                $("#ddlScore").val("X396^04");
+            }
+
+            SetTotalScore(total);
+        }
+    });
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+            <colgroup>
+                <col width="350px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="150px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold; text-decoration:underline">MODIFIED EARLY 
+                    OBSTETRIC WARNING SCORE (MEOWS) </label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Pernafasan</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter1" style="width:100%" class = "ddlForm" controlID = "ddlParameter1">
+                        <option value="-" selected></option>
+                        <option value="3a"><12</option>
+                        <option value="0">12-20</option>
+                        <option value="2">21-25</option> 
+                        <option value="3b">>25</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore1" />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Saturasi Oksigen</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter2" style="width:100%" class = "ddlForm" controlID = "ddlParameter2">
+                        <option value="-" selected></option>
+                        <option value="3"><92</option>
+                        <option value="2">92-95</option>
+                        <option value="0">>95</option> 
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore2" />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Penggunaan Oksigen</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter3" style="width:100%" class = "ddlForm" controlID = "ddlParameter3">
+                        <option value="0" selected>Tidak</option>
+                        <option value="2">Ya</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore3"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Suhu (°C)</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter4" class="ddlForm" controlID="ddlParameter4" style="width:100%">
+                        <option value="0" selected>36.1 - 37.2°C</option>
+                        <option value="3a"><36°C</option>
+                        <option value="2">37.3 - 37.7°C</option> 
+                        <option value="3b">> 37.7°C</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore4"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Tekanan Darah Sistolik (mmhg)</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter5" class="ddlForm" controlID="ddlParameter5" style="width:100%">
+                        <option value="3a"><90</option>
+                        <option value="0" selected>90-140</option>
+                        <option value="1">141 - 150</option>
+                        <option value="2">151 - 160</option>
+                        <option value="3b">>160</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore5"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Tekanan Darah Diastolic (mmhg)</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter6" class="ddlForm" controlID="ddlParameter6" style="width:100%">
+                        <option value="0" selected>60-90</option>
+                        <option value="1">91 - 100</option>
+                        <option value="2">101 - 110</option>
+                        <option value="3">>110</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore6" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore6"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Nadi (x/menit)</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter7" class="ddlForm" controlID="ddlParameter7" style="width:100%">
+                        <option value="3a"><50</option>
+                        <option value="2a">50-60</option>
+                        <option value="0" selected>61-100</option>
+                        <option value="1">101-110</option>
+                        <option value="2b">111-120</option>
+                        <option value="3b">>120</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore7" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore7"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Kesadaran</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter8" class="ddlForm" controlID="ddlParameter8" style="width:100%">
+                        <option value="0" selected>A</option>
+                        <option value="3">V,P,U</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore8" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore8"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Nyeri</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter9" class="ddlForm" controlID="ddlParameter9" style="width:100%">
+                        <option value="0" selected>Normal</option>
+                        <option value="3">Abnormal</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore9" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore9"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Lochea</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter10" class="ddlForm" controlID="ddlParameter10" style="width:100%">
+                        <option value="0" selected>Normal</option>
+                        <option value="3">Abnormal</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore10" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore10"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Proteinuri</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter11" class="ddlForm" controlID="ddlParameter11" style="width:100%">
+                        <option value="0" selected></option>
+                        <option value="2">+</option>
+                        <option value="3">≥++</option≥
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore11" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore11"/>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal">TOTAL SKOR</label></td>      
+                <td><input type="text" style="width: 98%; text-align:right" id="txtScore" class="txtForm" controlID="txtScore" readonly="readonly"/></td>                          
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal">KESIMPULAN</label></td>
+                <td colspan="4">
+                    <select id="ddlScore" class="ddlForm" controlID="ddlScore" style="width:450px">
+                        <option value="" selected></option>
+                        <option value="X396^01">Hijau (0 dan 1-4)</option>
+                        <option value="X396^03">Orange (5-6 atau salah satu parameter score 3)</option>
+                        <option value="X396^04">Merah (≥7 atau kemungkinan perburukan mendadak)</option>
+                    </select>
+                </td> 
+                <td />
+            </tr>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,223 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+    $(function () {
+
+        $("#ddlAgeGroup").change(function () {
+            $("#txtParamScore1").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlGender").change(function () {
+            $("#txtParamScore2").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlDiagnosis").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlCognitiveImpairments").change(function () {
+            $("#txtParamScore4").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlEnvironment").change(function () {
+            $("#txtParamScore5").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlResponseToSurgery").change(function () {
+            $("#txtParamScore6").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlMedicationStatus").change(function () {
+            $("#txtParamScore7").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlAgeGroup").change();
+        $("#ddlGender").change();
+        $("#ddlDiagnosis").change();
+        $("#ddlCognitiveImpairments").change();
+        $("#ddlEnvironment").change();
+        $("#ddlResponseToSurgery").change();
+        $("#ddlMedicationStatus").change();
+
+        function CalculateTotalScore() {
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+            var p4 = 0;
+            var p5 = 0;
+            var p6 = 0;
+            var p7 = 0;
+
+            if ($("#txtParamScore1").val())
+                p1 = parseInt($("#txtParamScore1").val());
+
+            if ($("#txtParamScore2").val())
+                p2 = parseInt($("#txtParamScore2").val());
+
+            if ($("#txtParamScore3").val())
+                p3 = parseInt($("#txtParamScore3").val());
+
+            if ($("#txtParamScore4").val())
+                p4 = parseInt($("#txtParamScore4").val());
+
+            if ($("#txtParamScore5").val())
+                p5 = parseInt($("#txtParamScore5").val());
+
+            if ($("#txtParamScore6").val())
+                p6 = parseInt($("#txtParamScore6").val());
+
+            if ($("#txtParamScore7").val())
+                p7 = parseInt($("#txtParamScore7").val());
+
+            var total = p1 + p2 + p3 + p4 + p5 + p6 + p7;
+
+            SetTotalScore(total);
+        }
+    });
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+            <colgroup>
+                <col width="350px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="150px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold; text-decoration:underline">Humpty Dumpty</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Usia</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlAgeGroup" style="width:100%" class = "ddlForm" controlID = "ddlAgeGroup">
+                        <option value="4">< 3 tahun</option>
+                        <option value="3">3 - 7 tahun</option>
+                        <option value="2">7 - 13 tahun</option>
+                        <option value="1">≥ 13 tahun</option>
+                        <option value="0" selected></option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore1" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Jenis Kelamin</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlGender" class="ddlForm" controlID="ddlGender" style="width:100%" class = "ddlForm" controlID = "ddlGender">
+                        <option value="2">Laki - laki</option>
+                        <option value="1">Perempuan</option>
+                        <option value="0" selected></option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore2"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Diagnosis</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlDiagnosis" class="ddlForm" controlID="ddlDiagnosis" style="width:100%" class = "ddlForm" controlID = "ddlDiagnosis">
+                        <option value="4">Diagnosis neurologi</option>
+                        <option value="3">Perubahan oksigenisasi (respiratorik,dehidrasi,anemia,anoreksia,pusing, dsb.)</option>
+                        <option value="2">Gangguan perilaku / psikiatri</option>
+                        <option value="1">Diagnosis lainnya</option>
+                        <option value="0" selected></option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore3" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Gangguan Kognitif</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlCognitiveImpairments" class="ddlForm" controlID="ddlCognitiveImpairments" style="width:100%">
+                        <option value="3">Tidak menyadari keterbatasan dirinya</option>
+                        <option value="2">Lupa akan adanya keterbatasan</option>
+                        <option value="1">Orientasi baik terhadap diri sendiri</option>
+                        <option value="0" selected></option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore4" class = "txtForm" controlID = "txtParamScore4" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Faktor Lingkungan</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlEnvironment" style="width:100%" class = "ddlForm" controlID = "ddlEnvironment">
+                        <option value="4">Riwayat jatuh / bayi diletakkan di tempat tidur dewasa</option>
+                        <option value="3">Pasien menggunakan alat bantu / bayi diletakkan dalam tempat tidur bayi / perabot rumah</option>
+                        <option value="2">Pasien diletakkan di tempat tidur</option>
+                        <option value="1">Area di luar rumah sakit</option>
+                        <option value="0" selected></option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore5"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Respon terhadap Pembedahan/Sedasi/Anestesi</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlResponseToSurgery" class="ddlForm" controlID="ddlResponseToSurgery" style="width:100%">
+                        <option value="3">Dalam 24 jam</option>
+                        <option value="2">Dalam 48 jam</option>
+                        <option value="1">> 48 jam atau tidak menjalani pembedahan / sedasi / anestesi</option>
+                        <option value="0" selected></option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore6" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore6"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Penggunaan Medikamentosa</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlMedicationStatus" class="ddlForm" controlID="ddlMedicationStatus" style="width:100%">
+                        <option value="3">Penggunaan multipel : sedatif, obat hipnosis, barbiturat, fenotiazin, antidepresan, pencahar, diuretik, narkose</option>
+                        <option value="2">Penggunaan salah satu obat di atas</option>
+                        <option value="1">Penggunaan medikasi lainnya / tidak ada medikasi</option>
+                        <option value="0" selected></option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore7" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore7"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,450 @@
+<head>
+    <style type="text/css">
+        .txtForm:disabled {
+          border-color:#dfe6e9;
+          background-color:#dfe6e9;
+        }          
+    </style>
+</head>
+<script language="javascript" type="text/javascript" id="eForm_anesthesyDiagnosticTest">
+    $(function () {
+        $("#chkHemoglobinDBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtHemoglobin").prop("disabled", true);
+                $("#txtHemoglobin").val("");
+            }
+            else {
+                $("#txtHemoglobin").prop("disabled", false);
+            }
+        });
+
+        $("#chkINRPtDBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtINRPt").prop("disabled", true);
+                $("#txtINRPt").val("");
+            }
+            else {
+                $("#txtINRPt").prop("disabled", false);
+            }
+        });
+
+        $("#chkLeukositDBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtLeukosit").prop("disabled", true);
+                $("#txtLeukosit").val("");
+            }
+            else {
+                $("#txtLeukosit").prop("disabled", false);
+            }
+        });
+
+        $("#chkAPTtDBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtAPTT").prop("disabled", true);
+                $("#txtAPTT").val("");
+            }
+            else {
+                $("#txtAPTT").prop("disabled", false);
+            }
+        });
+
+        $("#chkTrombositDBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtThrombocyte").prop("disabled", true);
+                $("#txtThrombocyte").val("");
+            }
+            else {
+                $("#txtThrombocyte").prop("disabled", false);
+            }
+        });
+
+        $("#chkHematokritDBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtHematokrit").prop("disabled", true);
+                $("#txtHematokrit").val("");
+            }
+            else {
+                $("#txtHematokrit").prop("disabled", false);
+            }
+        });
+
+        $("#chkNaDBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtNa").prop("disabled", true);
+                $("#txtNa").val("");
+            }
+            else {
+                $("#txtNa").prop("disabled", false);
+            }
+        });
+
+        $("#chkClDBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtCl").prop("disabled", true);
+                $("#txtCl").val("");
+            }
+            else {
+                $("#txtCl").prop("disabled", false);
+            }
+        });
+
+        $("#chkKDBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtK").prop("disabled", true);
+                $("#txtK").val("");
+            }
+            else {
+                $("#txtK").prop("disabled", false);
+            }
+        });
+
+        $("#chkKDBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtK").prop("disabled", true);
+                $("#txtK").val("");
+            }
+            else {
+                $("#txtK").prop("disabled", false);
+            }
+        });
+
+        $("#chkCaDBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtCA").prop("disabled", true);
+                $("#txtCA").val("");
+            }
+            else {
+                $("#txtCA").prop("disabled", false);
+            }
+        });
+
+        $("#chkBunDBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtBUN").prop("disabled", true);
+                $("#txtBUN").val("");
+            }
+            else {
+                $("#txtBUN").prop("disabled", false);
+            }
+        });
+
+        $("#chkGlucoseDBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtGlucose").prop("disabled", true);
+                $("#txtGlucose").val("");
+            }
+            else {
+                $("#txtGlucose").prop("disabled", false);
+            }
+        });
+
+        $("#chkCreatinineDBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtCreatinine").prop("disabled", true);
+                $("#txtCreatinine").val("");
+            }
+            else {
+                $("#txtCreatinine").prop("disabled", false);
+            }
+        });
+
+        $("#chkPhDBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtPH").prop("disabled", true);
+                $("#txtPH").val("");
+            }
+            else {
+                $("#txtPH").prop("disabled", false);
+            }
+        });
+
+        $("#chkPCO2DBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtPCO2").prop("disabled", true);
+                $("#txtPCO2").val("");
+            }
+            else {
+                $("#txtPCO2").prop("disabled", false);
+            }
+        });
+
+        $("#chkPO2DBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtPO2").prop("disabled", true);
+                $("#txtPO2").val("");
+            }
+            else {
+                $("#txtPO2").prop("disabled", false);
+            }
+        });
+
+        $("#chkHCO3DBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtHCO3").prop("disabled", true);
+                $("#txtHCO3").val("");
+            }
+            else {
+                $("#txtHCO3").prop("disabled", false);
+            }
+        });
+
+        $("#chkDiagnosistic1DBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtDiagnostic1").prop("disabled", true);
+                $("#txtDiagnostic1").val("");
+            }
+            else {
+                $("#txtDiagnostic1").prop("disabled", false);
+            }
+        });
+
+        $("#chkDiagnosistic2DBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtDiagnostic2").prop("disabled", true);
+                $("#txtDiagnostic2").val("");
+            }
+            else {
+                $("#txtDiagnostic2").prop("disabled", false);
+            }
+        });
+
+        $("#chkDiagnosistic3DBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtDiagnostic3").prop("disabled", true);
+                $("#txtDiagnostic3").val("");
+            }
+            else {
+                $("#txtDiagnostic3").prop("disabled", false);
+            }
+        });
+
+        $("#chkDiagnosistic4DBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtDiagnostic4").prop("disabled", true);
+                $("#txtDiagnostic4").val("");
+            }
+            else {
+                $("#txtDiagnostic4").prop("disabled", false);
+            }
+        });
+
+        $("#chkDiagnosistic5DBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtDiagnostic5").prop("disabled", true);
+                $("#txtDiagnostic5").val("");
+            }
+            else {
+                $("#txtDiagnostic5").prop("disabled", false);
+            }
+        });
+
+        $("#chkDiagnosistic6DBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtDiagnostic6").prop("disabled", true);
+                $("#txtDiagnostic6").val("");
+            }
+            else {
+                $("#txtDiagnostic6").prop("disabled", false);
+            }
+        });
+
+        $("#chkDiagnosistic7DBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtDiagnostic7").prop("disabled", true);
+                $("#txtDiagnostic7").val("");
+            }
+            else {
+                $("#txtDiagnostic7").prop("disabled", false);
+            }
+        });
+
+        $("#chkDiagnosistic8DBN").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtDiagnostic8").prop("disabled", true);
+                $("#txtDiagnostic8").val("");
+            }
+            else {
+                $("#txtDiagnostic8").prop("disabled", false);
+            }
+        });
+
+        $("#chkHemoglobinDBN").change();
+        $("#chkINRPtDBN").change();
+        $("#chkLeukositDBN").change();
+        $("#chkAPTtDBN").change();
+        $("#chkTrombositDBN").change();
+        $("#chkHematokritDBN").change();
+
+        $("#chkNaDBN").change();
+        $("#chkClDBN").change();
+        $("#chkKDBN").change();
+        $("#chkCaDBN").change();
+        $("#chkBunDBN").change();
+        $("#chkGlucoseDBN").change();
+        $("#chkCreatinineDBN").change();
+        $("#chkPhDBN").change();
+        $("#chkPCO2DBN").change();
+        $("#chkPO2DBN").change();
+        $("#chkHCO3DBN").change();
+
+        $("#chkDiagnosistic1DBN").change();
+        $("#chkDiagnosistic2DBN").change();
+        $("#chkDiagnosistic3DBN").change();
+        $("#chkDiagnosistic4DBN").change();
+        $("#chkDiagnosistic5DBN").change();
+        $("#chkDiagnosistic6DBN").change();
+        $("#chkDiagnosistic7DBN").change();
+        $("#chkDiagnosistic8DBN").change();
+    });
+</script>
+<div id="Div1" class="w3-container w3-border w3-animate-left peGroup">
+    <table border="0" cellpadding="1" cellspacing="0" style="width:100%;">
+        <colgroup>
+            <col width="180px" />
+            <col width="70px" />
+            <col width="100px" />
+            <col width="150px" />
+            <col width="70px" />
+            <col />
+        </colgroup>
+        <tr>
+            <td colspan="5"><div style="font-weight:bold">CBC</div></td>
+        </tr>
+        <tr>
+            <td>Hemoglobin (Hb)</td> 
+            <td> <input type="checkbox" id="chkHemoglobinDBN" class="chkForm" controlID="chkHemoglobinDBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtHemoglobin" class="txtForm" controlID="txtHemoglobin" style="width:100px; text-align:right" /></td>
+            <td style="padding-left:5px">INR PT</td>
+            <td> <input type="checkbox" id="chkINRPtDBN" class="chkForm" controlID="chkINRPtDBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtINRPt" class="txtForm" controlID="txtINRPt" style="width:100px; text-align:right" /></td>
+        </tr>
+        <tr>
+            <td>Leukosit (L)</td>
+            <td> <input type="checkbox" id="chkLeukositDBN" class="chkForm" controlID="chkLeukositDBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtLeukosit" class="txtForm" controlID="txtLeukosit" style="width:100px; text-align:right" /></td>
+            <td style="padding-left:5px">aPTT</td>
+            <td> <input type="checkbox" id="chkAPTtDBN" class="chkForm" controlID="chkAPTtDBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtAPTT" class="txtForm" controlID="txtAPTT" style="width:100px; text-align:right" /></td>
+        </tr>
+        <tr>
+            <td>Trombosit (T)</td>
+            <td> <input type="checkbox" id="chkTrombositDBN" class="chkForm" controlID="chkTrombositDBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtThrombocyte" class="txtForm" controlID="txtThrombocyte" style="width:100px; text-align:right" /></td>
+            <td style="padding-left:5px">Gol. Darah</td>
+            <td colspan="2">
+                <table border="0" cellpadding="0" cellspacing="1">
+                    <tr>
+                        <td><input type="radio" class="optForm" name="optBloodType" controlID="optBloodType1"/> O</td>
+                        <td><input type="radio" class="optForm" name="optBloodType" controlID="optBloodType2"/> A</td>
+                        <td><input type="radio" class="optForm" name="optBloodType" controlID="optBloodType3"/> B</td>
+                        <td><input type="radio" class="optForm" name="optBloodType" controlID="optBloodType4"/> AB</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>Hematokrit (Ht)</td>
+            <td> <input type="checkbox" id="chkHematokritDBN" class="chkForm" controlID="chkHematokritDBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtHematokrit" class="txtForm" controlID="txtHematokrit" style="width:100px; text-align:right" /></td>
+            <td style="padding-left:5px">Rhesus</td>
+            <td colspan="2">
+                <table border="0" cellpadding="0" cellspacing="1">
+                    <tr>
+                        <td><input type="radio" class="optForm" name="optBloodRhesus" controlID="optBloodRhesus1"/> Rh+</td>
+                        <td><input type="radio" class="optForm" name="optBloodRhesus" controlID="optBloodRhesus2"/> Rh-</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4"><br /></td>
+        </tr>
+        <tr>
+            <td>Na</td>
+            <td> <input type="checkbox" id="chkNaDBN" class="chkForm" controlID="chkNaDBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtNa" class="txtForm" controlID="txtNa" style="width:100px; text-align:right" /></td>
+            <td style="padding-left:5px">Cl</td>
+            <td> <input type="checkbox" id="chkClDBN" class="chkForm" controlID="chkClDBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtCl" class="txtForm" controlID="txtCl" style="width:100px; text-align:right" /></td>
+        </tr>
+        <tr>
+            <td>K</td>
+            <td> <input type="checkbox" id="chkKDBN" class="chkForm" controlID="chkKDBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtK" class="txtForm" controlID="txtK" style="width:100px; text-align:right" /></td>
+            <td style="padding-left:5px">Ca</td>
+            <td> <input type="checkbox" id="chkCaDBN" class="chkForm" controlID="chkCaDBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtCA" class="txtForm" controlID="txtCA" style="width:100px; text-align:right" /></td>
+        </tr>
+        <tr>
+            <td>BUN</td>
+            <td> <input type="checkbox" id="chkBunDBN"class="chkForm" controlID="chkBunDBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtBUN" class="txtForm" controlID="txtBUN" style="width:100px; text-align:right" /></td>
+            <td style="padding-left:5px">Glucose</td>
+            <td> <input type="checkbox" id="chkGlucoseDBN" class="chkForm" controlID="chkGlucoseDBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtGlucose" class="txtForm" controlID="txtGlucose" style="width:100px; text-align:right" /></td>
+        </tr>
+        <tr>
+            <td>Creatinine</td>
+            <td> <input type="checkbox" id="chkCreatinineDBN" class="chkForm" controlID="chkCreatinineDBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtCreatinine" class="txtForm" controlID="txtCreatinine" style="width:100px; text-align:right" /></td>
+        </tr>
+        <tr>
+            <td>pH</td>
+            <td> <input type="checkbox" id="chkPhDBN" class="chkForm" controlID="chkPhDBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtPH" class="txtForm" controlID="txtPH" style="width:100px; text-align:right" /></td>
+            <td style="padding-left:5px">pCO<sub>2</sub></td>
+            <td> <input type="checkbox" id="chkPCO2DBN" class="chkForm" controlID="chkPCO2DBN" checked="checked" /> DBN</td>
+            <td><input type="text" id="txtPCO2" class="txtForm" controlID="txtPCO2" style="width:100px; text-align:right" /></td>
+        </tr>
+        <tr>
+            <td>pO<sub>2</sub></td>
+            <td> <input type="checkbox" id="chkPO2DBN" class="chkForm" controlID="chkPO2DBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtPO2" class="txtForm" controlID="txtPO2" style="width:100px; text-align:right" /></td>
+            <td style="padding-left:5px">HCO<sub>3</sub></td>
+            <td> <input type="checkbox" id="chkHCO3DBN" class="chkForm" controlID="chkHCO3DBN" checked="checked"/> DBN</td>
+            <td><input type="text" id="txtHCO3" class="txtForm" controlID="txtHCO3" style="width:100px; text-align:right" /></td>
+        </tr>
+        <tr>
+            <td colspan="4"><br /></td>
+        </tr>
+        <tr>
+            <td>Analisa Gas Darah</td>
+            <td> <input type="checkbox" id="chkDiagnosistic1DBN" class="chkForm" controlID="chkDiagnosistic1DBN" checked="checked"/> DBN</td>
+            <td colspan="4"><textarea id="txtDiagnostic1" class="txtForm" controlID="txtDiagnostic1" rows="2" style="width:100%"></textarea></td>
+        </tr>
+        <tr>
+            <td>Tes Fungsi Paru</td>
+            <td> <input type="checkbox" id="chkDiagnosistic2DBN" class="chkForm" controlID="chkDiagnosistic2DBN" checked="checked"/> DBN</td>
+            <td colspan="4"><textarea id="txtDiagnostic2" class="txtForm" controlID="txtDiagnostic2" rows="4" style="width:100%"></textarea></td>
+        </tr>
+        <tr>
+            <td>Thorax Foto</td>
+            <td> <input type="checkbox" id="chkDiagnosistic3DBN" class="chkForm" controlID="chkDiagnosistic3DBN" checked="checked"/> DBN</td>
+            <td colspan="4"><textarea id="txtDiagnostic3" class="txtForm" controlID="txtDiagnostic3" rows="4" style="width:100%"></textarea></td>
+        </tr>
+        <tr>
+            <td>EKG</td>
+            <td> <input type="checkbox" id="chkDiagnosistic4DBN" class="chkForm" controlID="chkDiagnosistic4DBN" checked="checked"/> DBN</td>
+            <td colspan="4"><textarea id="txtDiagnostic4" class="txtForm" controlID="txtDiagnostic4" rows="4" style="width:100%"></textarea></td>
+        </tr>
+        <tr>
+            <td>Echocardiogram</td>
+            <td> <input type="checkbox" id="chkDiagnosistic5DBN" class="chkForm" controlID="chkDiagnosistic5DBN" checked="checked"/> DBN</td>
+            <td colspan="4"><textarea id="txtDiagnostic5"class="txtForm" controlID="txtDiagnostic5" rows="4" style="width:100%"></textarea></td>
+        </tr>
+        <tr>
+            <td>CT-Scan</td>
+            <td> <input type="checkbox" id="chkDiagnosistic6DBN" class="chkForm" controlID="chkDiagnosistic6DBN" checked="checked"/> DBN</td>
+            <td colspan="4"><textarea id="txtDiagnostic6" class="txtForm" controlID="txtDiagnostic6" rows="4" style="width:100%"></textarea></td>
+        </tr>
+        <tr>
+            <td>MRI</td>
+            <td> <input type="checkbox" id="chkDiagnosistic7DBN" class="chkForm" controlID="chkDiagnosistic7DBN" checked="checked"/> DBN</td>
+            <td colspan="4"><textarea id="txtDiagnostic7" class="txtForm" controlID="txtDiagnostic7" rows="4" style="width:100%"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2">Pemeriksaan Lain-lain</td>
+            <td colspan="4"><textarea id="txtDiagnostic8" class="txtForm" controlID="txtDiagnostic8" rows="4" style="width:100%"></textarea></td>
+        </tr>
+    </table>
+</div>

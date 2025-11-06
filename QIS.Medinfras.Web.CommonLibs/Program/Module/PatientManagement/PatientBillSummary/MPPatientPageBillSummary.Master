@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Libs/MasterPage/MPBasePatientPage.Master" AutoEventWireup="true" 
+    CodeBehind="MPPatientPageBillSummary.Master.cs" Inherits="QIS.Medinfras.Web.CommonLibs.Program.MPPatientPageBillSummary" %>
+
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dxpc" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="plhMPPatientPageNavigationPane" runat="server">
+    <ul id="ulPatientPageHeader" class="ulNavigationPane">
+        <li id="liToolbarPatientCharges" runat="server"><%=GetLabel("Patient Charges") %></li>
+        <li id="liToolbarImaging" runat="server"><%=GetLabel("Imaging") %></li>
+        <li id="liToolbarLaboratory" runat="server"><%=GetLabel("Laboratory") %></li>
+        <li id="liToolbarDiagnostic" runat="server"><%=GetLabel("Medical Diagnostic") %></li>
+    </ul>
+</asp:Content>
+    
+<asp:Content ID="Content2" ContentPlaceHolderID="plhMPPatientPage" runat="server">    
+    <asp:ContentPlaceHolder ID="plhMPPatientPage" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>

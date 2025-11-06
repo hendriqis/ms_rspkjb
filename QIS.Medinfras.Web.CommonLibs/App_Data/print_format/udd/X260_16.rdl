@@ -1,0 +1,27 @@
+^XA
+^LL800
+^PW640
+^LH10,10
+^FO70,10^CF0,25^FB500,1,0,C^FD{HealthcareName}^FS
+^FO50,40^GB520,1,2^FS
+^CF0,25
+^FO60,75^FD{PatientFullName} {Salutation}^FS
+^CF0,19
+^FO60,50^FD{PrescriptionNo}^FS
+^FO410,50^FD{PrescriptionDate}^FS
+^FO60,105^FD{MedicalNo}^FS
+^CF0,19
+^FO385,105^FDDOB : {DateOfBirth}^FS
+^FO60,130^FD{PatientLocation}^FS
+^CF0,19
+^FO60,155^FD{PhysicianName}^FS
+^FO50,175^GB530,1,2^FS
+^CF0,28
+^FO60,180^FB500,7,^FD{DoseUnit} {ItemName}^FS
+^CF0,25
+^FO60,240^FD{MedicationRoute}  {MedicationTime}^FS
+^CF0,22
+^FO60,270^FD{MedicationAdministration} ^FS
+^CF0,20
+^FO395,295^FD{ExpiredDate}^FS
+^XZ

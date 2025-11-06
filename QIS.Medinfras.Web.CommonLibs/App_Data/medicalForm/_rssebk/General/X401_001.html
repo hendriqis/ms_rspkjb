@@ -1,0 +1,297 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+    $(function () {
+
+        $("#ddlParameter1").change(function () {
+            $("#txtParamScore1").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter2").change(function () {
+            $("#txtParamScore2").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter3").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter4").change(function () {
+            $("#txtParamScore4").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter5").change(function () {
+            $("#txtParamScore5").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter6").change(function () {
+            $("#txtParamScore6").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter7").change(function () {
+            $("#txtParamScore7").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter8").change(function () {
+            $("#txtParamScore8").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter9").change(function () {
+            $("#txtParamScore9").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter10").change(function () {
+            $("#txtParamScore10").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter1").change();
+        $("#ddlParameter2").change();
+        $("#ddlParameter3").change();
+        $("#ddlParameter4").change();
+        $("#ddlParameter5").change();
+        $("#ddlParameter6").change();
+        $("#ddlParameter7").change();
+        $("#ddlParameter8").change();
+        $("#ddlParameter9").change();
+        $("#ddlParameter10").change();
+
+        function CalculateTotalScore() {
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+            var p4 = 0;
+            var p5 = 0;
+            var p6 = 0;
+            var p7 = 0;
+            var p8 = 0;
+            var p9 = 0;
+            var p10 = 0;
+
+            if ($("#txtParamScore1").val())
+                p1 = parseInt($("#txtParamScore1").val());
+
+            if ($("#txtParamScore2").val())
+                p2 = parseInt($("#txtParamScore2").val());
+
+            if ($("#txtParamScore3").val())
+                p3 = parseInt($("#txtParamScore3").val());
+
+            if ($("#txtParamScore4").val())
+                p4 = parseInt($("#txtParamScore4").val());
+
+            if ($("#txtParamScore5").val())
+                p5 = parseInt($("#txtParamScore5").val());
+
+            if ($("#txtParamScore6").val())
+                p6 = parseInt($("#txtParamScore6").val());
+
+            if ($("#txtParamScore7").val())
+                p7 = parseInt($("#txtParamScore7").val());
+
+            if ($("#txtParamScore8").val())
+                p8 = parseInt($("#txtParamScore8").val());
+
+            if ($("#txtParamScore9").val())
+                p9 = parseInt($("#txtParamScore9").val());
+
+            if ($("#txtParamScore10").val())
+                p10 = parseInt($("#txtParamScore10").val());
+
+            var total = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10;
+
+            $("#txtADLScore").val(total);
+
+            if (total >= 20) {
+                $("#ddlADLScore").val("X400^01");
+            }
+            else if (total >= 12 && total <= 19) {
+                $("#ddlADLScore").val("X400^02");
+            }
+            else if (total >= 9 && total <= 11) {
+                $("#ddlADLScore").val("X400^03");
+            }
+            else if (total >= 5 && total <= 8) {
+                $("#ddlADLScore").val("X400^04");
+            }
+            else {
+                $("#ddlADLScore").val("X096^05");
+            }
+        }
+    });
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+            <colgroup>
+                <col width="350px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="150px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold; text-decoration:underline">INDEKS ACTIVITY DAILY LIVING BARTHEL </label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Mengontrol BAB</label>
+                </td>
+                <td colspan="3">
+                    <select id="ddlParameter1" style="width:100%" class = "ddlForm" controlID = "ddlParameter1">
+                        <option value="0" selected>Tak terkendali/tidak teratur</option>
+                        <option value="1">Kadang-kadang tak terkendali(1x seminggu)</option>
+                        <option value="2">Terkendali/teratur</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore1" />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Mengontrol BAK</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter2" style="width:100%" class = "ddlForm" controlID = "ddlParameter2">
+                        <option value="0" selected>Tidak terkendali atau pakai kateter</option>
+                        <option value="1">Kadang-kadang tak terkendali</option>
+                        <option value="2">Mandiri</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore2" />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Membersihkan Diri</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter3" style="width:100%" class = "ddlForm" controlID = "ddlParameter3">
+                        <option value="0" selected>Butuh pertolongan orang lain</option>
+                        <option value="1">Mandiri</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore3" />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Toileting ((melepaskan,memakai celana,membersihkan)</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter4" class="ddlForm" controlID="ddlParameter4" style="width:100%">
+                        <option value="0" selected>Tergantung pertolongan orang lain</option>
+                        <option value="1">Perlu pertolongan pada beberapa aktivitas tetapi beberapa aktivitas masih bisa dikerjakan sendiri</option>
+                        <option value="2">Mandiri</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore4" />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Makan</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter5" style="width:100%" class = "ddlForm" controlID = "ddlParameter5">
+                        <option value="0" selected>Tidak mampu</option>
+                        <option value="1">Perlu ditolong memotong makanan</option>
+                        <option value="2">Mandiri</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore5"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Berubah sikap dari berbaring ke duduk</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter6" class="ddlForm" controlID="ddlParameter6" style="width:100%">
+                        <option value="0" selected></option>
+                        <option value="1">Perlu bantuan untuk bisa duduk (2 orang)</option>
+                        <option value="2">Bantuan minimal 1 orang</option>
+                        <option value="3">Mandiri</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore6" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore6"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Berpindah/berjalan</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter7" class="ddlForm" controlID="ddlParameter7" style="width:100%">
+                        <option value="0" selected>Tidak mampu</option>
+                        <option value="1">Bisa berpindah/berjalan dengan kursi roda</option>
+                        <option value="2">Berjalan dengan bantuan 1 orang </option>
+                        <option value="3">Mandiri </option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore7" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore7"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Memakai baju</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter8" style="width:100%" class = "ddlForm" controlID = "ddlParameter8">
+                        <option value="0" selected>Tergantung orang lain</option>
+                        <option value="1">Sebagian dibantu (contoh mengancing baju)</option>
+                        <option value="2">Mandiri</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore8" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore8"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Naik-turun tangga</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter9" class="ddlForm" controlID="ddlParameter9" style="width:100%">
+                        <option value="0" selected>Tidak mampu</option>
+                        <option value="1">Butuh pertolongan</option>
+                        <option value="2">Butuh pertolongan orang lain</option>
+                        <option value="3">Mandiri </option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore9" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore9"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Mandi</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter10" style="width:100%" class = "ddlForm" controlID = "ddlParameter10">
+                        <option value="0" selected>Tergantung orang lain</option>
+                        <option value="1">Mandiri</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore10" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore10" />
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal">TOTAL SKOR ADL</label></td>      
+                <td><input type="text" style="width: 98%; text-align:right" id="txtADLScore" class="txtForm" controlID="txtADLScore" readonly="readonly"/></td>                          
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal">KESIMPULAN</label></td>
+                <td colspan="4">
+                    <select id="ddlADLScore" class="ddlForm" controlID="ddlADLScore" style="width:450px">
+                        <option value="X400^05" selected>0-4   : Ketergantungan total</option>
+                        <option value="X400^04">5-8   : Ketergantungan berat</option>
+                        <option value="X400^03">9-11  : Ketergantungan sedang</option>
+                        <option value="X400^02">12-19 : Ketergantungan ringan</option>
+                        <option value="X400^01">>=20  : Mandiri</option>
+                    </select>
+                </td> 
+                <td />
+            </tr>
+        </table>
+    </div>
+</div>
+

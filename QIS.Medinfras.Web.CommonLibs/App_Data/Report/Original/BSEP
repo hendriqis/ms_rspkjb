@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="11.1.5.0" Ref="0" ControlType="QIS.Medinfras.ReportDesktop.BSEP, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Font="Courier New, 10pt" Version="11.1" PageHeight="550" PaperKind="Custom" PageWidth="850" Margins="45, 25, 100, 0">
+  <Bands>
+    <Item1 Ref="1" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="185.2084">
+      <Controls>
+        <Item1 Ref="2" Name="xrLabel42" ControlType="XRLabel" SizeF="250,12.5" LocationFloat="25.98579, 172.7084" Font="Tahoma, 6.75pt, style=Italic" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="*SEP bukan sebagai bukti penjaminan peserta">
+          <StylePriority Ref="3" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="4" Name="xrLabel41" ControlType="XRLabel" SizeF="374.2839,12.5" LocationFloat="25.98579, 160.2084" Font="Tahoma, 6.75pt, style=Italic" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="*Saya Menyetujui BPJS Kesehatan menggunakan Informasi Medis Pasien Jika Diperlukan">
+          <StylePriority Ref="5" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="6" Name="xrLine3" ControlType="XRLine" SizeF="112.1917,7.375" LocationFloat="587.1542, 177.8334" />
+        <Item4 Ref="7" Name="xrLabel40" ControlType="XRLabel" SizeF="112.1917,12.5" LocationFloat="587.1543, 120.5" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Petugas">
+          <StylePriority Ref="8" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="9" Name="xrLabel39" ControlType="XRLabel" SizeF="112.1917,12.5" LocationFloat="587.1542, 133" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="BPJS Kesehatan">
+          <StylePriority Ref="10" UseFont="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="11" Name="xrLabel38" ControlType="XRLabel" SizeF="113.0327,12.5" LocationFloat="462.1958, 120.5" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Pasien/">
+          <StylePriority Ref="12" UseFont="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="13" Name="xrLabel37" ControlType="XRLabel" SizeF="113.0325,12.5" LocationFloat="462.196, 133" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Keluarga Pasien">
+          <StylePriority Ref="14" UseFont="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="15" Name="xrLabel36" ControlType="XRLabel" SizeF="12.05145,12.49999" LocationFloat="542.1575, 85" Font="Microsoft Sans Serif, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text=":">
+          <StylePriority Ref="16" UseFont="false" UseTextAlignment="false" />
+        </Item8>
+        <Item9 Ref="17" Name="lblKlsRawat" ControlType="XRLabel" SizeF="174.6033,12.49999" LocationFloat="554.209, 85.00004" Font="Microsoft Sans Serif, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft">
+          <StylePriority Ref="18" UseFont="false" UseTextAlignment="false" />
+        </Item9>
+        <Item10 Ref="19" Name="xrLabel34" ControlType="XRLabel" SizeF="75.96164,12.5" LocationFloat="466.1958, 85.00001" Font="Microsoft Sans Serif, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Kls.Rawat">
+          <StylePriority Ref="20" UseFont="false" UseTextAlignment="false" />
+        </Item10>
+        <Item11 Ref="21" Name="xrLabel33" ControlType="XRLabel" SizeF="12.05133,12.5" LocationFloat="542.1577, 68.5" Font="Microsoft Sans Serif, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text=":">
+          <StylePriority Ref="22" UseFont="false" UseTextAlignment="false" />
+        </Item11>
+        <Item12 Ref="23" Name="lblJnsRawat" ControlType="XRLabel" SizeF="174.1031,12.5" LocationFloat="554.209, 68.5" Font="Microsoft Sans Serif, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft">
+          <StylePriority Ref="24" UseFont="false" UseTextAlignment="false" />
+        </Item12>
+        <Item13 Ref="25" Name="xrLabel31" ControlType="XRLabel" SizeF="75.96173,12.5" LocationFloat="466.196, 68.5" Font="Microsoft Sans Serif, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Jns. Rawat">
+          <StylePriority Ref="26" UseFont="false" UseTextAlignment="false" />
+        </Item13>
+        <Item14 Ref="27" Name="lblRemarks" ControlType="XRLabel" SizeF="224.3151,12.49999" LocationFloat="154.329, 137.5834" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft">
+          <StylePriority Ref="28" UseFont="false" UseTextAlignment="false" />
+        </Item14>
+        <Item15 Ref="29" Name="xrLabel27" ControlType="XRLabel" SizeF="115.8432,12.49998" LocationFloat="25.98579, 137.5834" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Catatan">
+          <StylePriority Ref="30" UseFont="false" UseTextAlignment="false" />
+        </Item15>
+        <Item16 Ref="31" Name="xrLabel26" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="141.829, 137.5834" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text=":">
+          <StylePriority Ref="32" UseFont="false" UseTextAlignment="false" />
+        </Item16>
+        <Item17 Ref="33" Name="lblDiagnose" ControlType="XRLabel" SizeF="224.3151,12.50001" LocationFloat="154.329, 120.5" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft">
+          <StylePriority Ref="34" UseFont="false" UseTextAlignment="false" />
+        </Item17>
+        <Item18 Ref="35" Name="xrLabel24" ControlType="XRLabel" SizeF="115.8432,12.50002" LocationFloat="25.98579, 120.5" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Diagnosa Awal">
+          <StylePriority Ref="36" UseFont="false" UseTextAlignment="false" />
+        </Item18>
+        <Item19 Ref="37" Name="xrLabel23" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="141.829, 120.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text=":">
+          <StylePriority Ref="38" UseFont="false" UseTextAlignment="false" />
+        </Item19>
+        <Item20 Ref="39" Name="lblAsalFasKes" ControlType="XRLabel" SizeF="224.3151,12.50001" LocationFloat="154.329, 102" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft">
+          <StylePriority Ref="40" UseFont="false" UseTextAlignment="false" />
+        </Item20>
+        <Item21 Ref="41" Name="xrLabel21" ControlType="XRLabel" SizeF="115.8432,12.5" LocationFloat="25.98578, 102" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Asal Faskes Tk. l">
+          <StylePriority Ref="42" UseFont="false" UseTextAlignment="false" />
+        </Item21>
+        <Item22 Ref="43" Name="xrLabel20" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="141.829, 102" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text=":">
+          <StylePriority Ref="44" UseFont="false" UseTextAlignment="false" />
+        </Item22>
+        <Item23 Ref="45" Name="lblPolTujuan" ControlType="XRLabel" SizeF="224.3151,12.49999" LocationFloat="154.329, 85.00001" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft">
+          <StylePriority Ref="46" UseFont="false" UseTextAlignment="false" />
+        </Item23>
+        <Item24 Ref="47" Name="xrLabel18" ControlType="XRLabel" SizeF="115.8432,12.49999" LocationFloat="25.98578, 85.00001" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Poli Tujuan">
+          <StylePriority Ref="48" UseFont="false" UseTextAlignment="false" />
+        </Item24>
+        <Item25 Ref="49" Name="xrLabel17" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="141.829, 85" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text=":">
+          <StylePriority Ref="50" UseFont="false" UseTextAlignment="false" />
+        </Item25>
+        <Item26 Ref="51" Name="lblGender" ControlType="XRLabel" SizeF="224.3151,12.5" LocationFloat="154.329, 68.5" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft">
+          <StylePriority Ref="52" UseFont="false" UseTextAlignment="false" />
+        </Item26>
+        <Item27 Ref="53" Name="xrLabel15" ControlType="XRLabel" SizeF="115.8432,12.5" LocationFloat="25.98578, 68.50002" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Jns. Kelamin">
+          <StylePriority Ref="54" UseFont="false" UseTextAlignment="false" />
+        </Item27>
+        <Item28 Ref="55" Name="xrLabel2" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="141.829, 68.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text=":">
+          <StylePriority Ref="56" UseFont="false" UseTextAlignment="false" />
+        </Item28>
+        <Item29 Ref="57" Name="lblName" ControlType="XRLabel" SizeF="224.3151,12.5" LocationFloat="154.329, 41.5" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft">
+          <StylePriority Ref="58" UseFont="false" UseTextAlignment="false" />
+        </Item29>
+        <Item30 Ref="59" Name="lblDOB" ControlType="XRLabel" SizeF="224.3151,12.5" LocationFloat="154.329, 54.00001" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft">
+          <StylePriority Ref="60" UseFont="false" UseTextAlignment="false" />
+        </Item30>
+        <Item31 Ref="61" Name="lblNHSNo" ControlType="XRLabel" SizeF="224.3151,12.5" LocationFloat="154.329, 29" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft">
+          <StylePriority Ref="62" UseFont="false" UseTextAlignment="false" />
+        </Item31>
+        <Item32 Ref="63" Name="xrLabel14" ControlType="XRLabel" SizeF="12.05127,12.5" LocationFloat="542.1578, 54.00001" Font="Microsoft Sans Serif, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text=":">
+          <StylePriority Ref="64" UseFont="false" UseTextAlignment="false" />
+        </Item32>
+        <Item33 Ref="65" Name="lblNoSEP" ControlType="XRLabel" SizeF="224.3151,12.5" LocationFloat="154.329, 0" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft">
+          <StylePriority Ref="66" UseFont="false" UseTextAlignment="false" />
+        </Item33>
+        <Item34 Ref="67" Name="xrLabel30" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="141.829, 14.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text=":">
+          <StylePriority Ref="68" UseFont="false" UseTextAlignment="false" />
+        </Item34>
+        <Item35 Ref="69" Name="lblSEPDate" ControlType="XRLabel" SizeF="224.3151,12.5" LocationFloat="154.329, 14.5" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft">
+          <StylePriority Ref="70" UseFont="false" UseTextAlignment="false" />
+        </Item35>
+        <Item36 Ref="71" Name="xrLabel29" ControlType="XRLabel" SizeF="115.8432,12.5" LocationFloat="25.98579, 14.50001" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Tgl. SEP">
+          <StylePriority Ref="72" UseFont="false" UseTextAlignment="false" />
+        </Item36>
+        <Item37 Ref="73" Name="lblPeserta" ControlType="XRLabel" SizeF="174.6033,12.5" LocationFloat="554.209, 29" Font="Microsoft Sans Serif, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft">
+          <StylePriority Ref="74" UseFont="false" UseTextAlignment="false" />
+        </Item37>
+        <Item38 Ref="75" Name="lblCOB" ControlType="XRLabel" SizeF="174.1031,12.5" LocationFloat="554.209, 54.00001" Font="Microsoft Sans Serif, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft">
+          <StylePriority Ref="76" UseFont="false" UseTextAlignment="false" />
+        </Item38>
+        <Item39 Ref="77" Name="xrLabel13" ControlType="XRLabel" SizeF="12.05145,12.5" LocationFloat="542.1576, 29" Font="Microsoft Sans Serif, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text=":">
+          <StylePriority Ref="78" UseFont="false" UseTextAlignment="false" />
+        </Item39>
+        <Item40 Ref="79" Name="xrLabel6" ControlType="XRLabel" SizeF="115.8432,12.5" LocationFloat="25.98578, 54.00001" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Tgl. Lahir">
+          <StylePriority Ref="80" UseFont="false" UseTextAlignment="false" />
+        </Item40>
+        <Item41 Ref="81" Name="xrLabel7" ControlType="XRLabel" SizeF="75.96149,12.5" LocationFloat="466.196, 29" Font="Microsoft Sans Serif, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Peserta">
+          <StylePriority Ref="82" UseFont="false" UseTextAlignment="false" />
+        </Item41>
+        <Item42 Ref="83" Name="xrLabel5" ControlType="XRLabel" SizeF="115.8432,12.5" LocationFloat="25.98578, 41.5" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Nama Peserta">
+          <StylePriority Ref="84" UseFont="false" UseTextAlignment="false" />
+        </Item42>
+        <Item43 Ref="85" Name="xrLabel3" ControlType="XRLabel" SizeF="115.8432,12.5" LocationFloat="25.98579, 0" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="No. SEP">
+          <StylePriority Ref="86" UseFont="false" UseTextAlignment="false" />
+        </Item43>
+        <Item44 Ref="87" Name="xrLabel4" ControlType="XRLabel" SizeF="115.8432,12.5" LocationFloat="25.98579, 29" Font="Tahoma, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="No. Kartu">
+          <StylePriority Ref="88" UseFont="false" UseTextAlignment="false" />
+        </Item44>
+        <Item45 Ref="89" Name="xrLabel11" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="141.829, 41.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text=":">
+          <StylePriority Ref="90" UseFont="false" UseTextAlignment="false" />
+        </Item45>
+        <Item46 Ref="91" Name="xrLabel12" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="141.829, 54" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text=":">
+          <StylePriority Ref="92" UseFont="false" UseTextAlignment="false" />
+        </Item46>
+        <Item47 Ref="93" Name="xrLabel10" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="141.829, 29" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text=":">
+          <StylePriority Ref="94" UseFont="false" UseTextAlignment="false" />
+        </Item47>
+        <Item48 Ref="95" Name="xrLabel8" ControlType="XRLabel" SizeF="75.96155,12.5" LocationFloat="466.1962, 53.99999" Font="Microsoft Sans Serif, 10pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="COB">
+          <StylePriority Ref="96" UseFont="false" UseTextAlignment="false" />
+        </Item48>
+        <Item49 Ref="97" Name="xrLabel9" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="141.829, 0" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text=":">
+          <StylePriority Ref="98" UseFont="false" UseTextAlignment="false" />
+        </Item49>
+        <Item50 Ref="99" Name="xrLine2" ControlType="XRLine" SizeF="113.0325,7.375" LocationFloat="462.196, 177.8334" />
+      </Controls>
+    </Item1>
+    <Item2 Ref="100" ControlType="PageFooterBand" Name="PageFooter" HeightF="27.08333" Expanded="false" />
+    <Item3 Ref="101" ControlType="PageHeaderBand" Name="PageHeader" HeightF="68">
+      <Controls>
+        <Item1 Ref="102" Name="xrLogo" ControlType="XRPictureBox" SizeF="210.4167,37.99999" LocationFloat="25.98578, 10.00001" Sizing="StretchImage" ImageUrl="/qislib/images/logo.png" />
+        <Item2 Ref="103" Name="xrLabel1" ControlType="XRLabel" SizeF="251.0415,23" LocationFloat="250, 0" Font="Tahoma, 11.25pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text="SURAT ELEGIBILITAS PESERTA">
+          <StylePriority Ref="104" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="105" Name="lblHealthcareName" ControlType="XRLabel" SizeF="251.0415,23" LocationFloat="250, 25" Font="Tahoma, 11.25pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleCenter">
+          <StylePriority Ref="106" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+      </Controls>
+    </Item3>
+    <Item4 Ref="107" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" />
+    <Item5 Ref="108" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+    <Item6 Ref="109" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="0" />
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="110" Name="Title" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Times New Roman, 20pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item2 Ref="111" Name="FieldCaption" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 10pt, style=Bold" Sides="Top, Bottom" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item3 Ref="112" Name="PageInfo" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 9pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+  </StyleSheet>
+</XtraReportsLayoutSerializer>

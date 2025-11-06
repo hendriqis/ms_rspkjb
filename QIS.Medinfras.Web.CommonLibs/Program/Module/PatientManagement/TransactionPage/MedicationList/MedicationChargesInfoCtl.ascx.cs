@@ -1,0 +1,71 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using QIS.Medinfras.Web.Common.UI;
+using QIS.Medinfras.Data.Service;
+using QIS.Medinfras.Web.Common;
+using DevExpress.Web.ASPxCallbackPanel;
+using System.Web.UI.HtmlControls;
+using QIS.Data.Core.Dal;
+
+namespace QIS.Medinfras.Web.CommonLibs.Program
+{
+    public partial class MedicationChargesInfoCtl : BaseViewPopupCtl
+    {
+        protected int PageCount = 1;
+        protected int CurrPage = 1;
+
+        public override void InitializeDataControl(string param)
+        {
+            //var orderDetailID|itemID|itemName|paramedicName;
+            string[] paramInfo = param.Split('|');
+            hdnItemID.Value = paramInfo[0];
+            hdnItemName.Value = paramInfo[1];
+
+            txtItemName.Text = hdnItemName.Value;
+
+            BindGridView(1, true, ref PageCount);
+        }
+
+        private void BindGridView(int pageIndex, bool isCountPageCount, ref int pageCount)
+        {
+            string filterExpression = string.Empty;
+            filterExpression += string.Format(" VisitID = {0} AND GCItemType = '{1}' AND ItemID = '{2}' AND PrescriptionOrderDetailID IS NULL AND PrescriptionReturnOrderDtID IS NULL", AppSession.RegisteredPatient.VisitID, Constant.ItemType.OBAT_OBATAN, hdnItemID.Value);
+            if (isCountPageCount)
+            {
+                int rowCount = BusinessLayer.GetvPatientChargesDt2RowCount(filterExpression);
+                pageCount = Helper.GetPageCount(rowCount, 10);
+            }
+
+            List<vPatientChargesDt2> lstTransaction = BusinessLayer.GetvPatientChargesDt2List(filterExpression, 10, pageIndex,"TransactionDate");
+            grdPopupView.DataSource = lstTransaction;
+            grdPopupView.DataBind();
+        }
+
+        protected void cbpPopupView_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        {
+            int pageCount = 1;
+            string result = "";
+            if (e.Parameter != null && e.Parameter != "")
+            {
+                string[] param = e.Parameter.Split('|');
+                if (param[0] == "changepage")
+                {
+                    BindGridView(Convert.ToInt32(param[1]), false, ref pageCount);
+                    result = "changepage";
+                }
+                else // refresh
+                {
+                    BindGridView(1, true, ref pageCount);
+                    result = "refresh|" + pageCount;
+                }
+            }
+
+            ASPxCallbackPanel panel = sender as ASPxCallbackPanel;
+            panel.JSProperties["cpResult"] = result;
+        }
+    }
+}

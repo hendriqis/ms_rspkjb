@@ -1,0 +1,195 @@
+<head>
+    <style type="text/css">
+        .tdColumn1
+        {
+            vertical-align:top;
+        }
+        .tdColumn2
+        {
+            vertical-align:middle;
+            padding-left:20px;
+        }   
+        .tdColumn3
+        {
+            width:100px;
+        }     
+        .tdColumn4
+        {
+            width:100px;
+            vertical-align:top;
+        }  
+    </style>
+</head>
+<div>
+    <div id="group01" class="w3-container w3-animate-left peGroup">
+        <table border="1" cellpadding="1" cellspacing="0" style="width:100%;" class="w3-table w3-bordered w3-card-4">
+            <colgroup>
+                <col style="width:25%" />
+                <col style="width:25%" />
+                <col style="width:25%" />
+                <col style="width:25%" />
+            </colgroup>
+            <thead style="font-weight:bold">
+                <tr>
+                    <td style="text-align:left;background-color:#ecf0f1">Induction</td>
+                    <td style="text-align:left;background-color:#ecf0f1">Tube</td>
+                    <td style="text-align:left;background-color:#ecf0f1">Methods</td>
+                    <td style="text-align:left;background-color:#ecf0f1">Confirmation</td>
+                </tr>
+            </thead>
+            <tr>
+                <td class="tdColumn1">
+                    <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkInduction1"/> Mask</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkInduction2"/> Intravenous</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkInduction3"/> Pre O<sub>2</sub></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkInduction4"/> RSI</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkInduction5"/> Cricoid Press</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:left;background-color:#ecf0f1; font-weight:bold">Always</td>                            
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkAlways1"/> Oral</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkAlways2"/> Nasal</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="tdColumn1">
+                    <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td class="tdColumn3">Type</td>
+                            <td colspan="2"> 
+                                <select id="ddlAWTubeType" class="ddlForm" controlID="ddlAWTubeType" style="width:190px">
+                                    <option value="" selected></option>
+                                    <option value="1">Spiral</option>
+                                    <option value="2">Biasa</option>
+                                    <option value="3">Biasa Non Ballon</option>
+                                    <option value="4">Double Lumen</option>
+                                    <option value="5">EZ Blocker</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Size</td>
+                            <td> 
+                                <select id="ddlAWTubeSize" class="ddlForm" controlID="ddlAWTubeSize" style="width:80px">
+                                    <option value="" selected></option>
+                                    <option value="2.5">2.5</option>
+                                    <option value="3">3</option>
+                                    <option value="3.5">3.5</option>
+                                    <option value="4">4</option>
+                                    <option value="4.5">4.5</option>
+                                    <option value="5">5</option>
+                                    <option value="5.5">5.5</option>
+                                    <option value="6">6</option>
+                                    <option value="6.5">6.5</option>
+                                    <option value="7">7</option>
+                                    <option value="7.5">7.5</option>
+                                    <option value="8">8</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Route</td>
+                            <td colspan="2"> 
+                                <select id="ddlAWRoute" class="ddlForm" controlID="ddlAWRoute" style="width:190px">
+                                    <option value="" selected></option>
+                                    <option value="1">Oral</option>
+                                    <option value="2">Nasal</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Depth</td>
+                            <td colspan="2"> <input type="text" class="txtForm" controlID="txtTubeDepth" style="width:80px; text-align: right"> cm</td>
+                        </tr>
+                        <tr>
+                            <td class="tdColumn3">Attempts :</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" class="optForm" name="optAirwayAttemps" controlID="optAirwayAttemps1"/> LMA</td>
+                            <td class="tdColumn3" style="padding-left:7px">Size</td>
+                            <td>
+                                <select id="ddlLMASize" class="ddlForm" controlID="ddlLMASize" style="width:80px">
+                                    <option value="" selected></option>
+                                    <option value="1">1</option>
+                                    <option value="1.5">1.5</option>
+                                    <option value="2">2</option>
+                                    <option value="2.5">2.5</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" class="optForm" name="optAirwayAttemps" controlID="optAirwayAttemps2"/> Face Mask</td>
+                        </tr>
+                        <tr>
+                        </tr>
+                    </table>
+                </td>
+                <td class="tdColumn1">
+                    <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkMethods1"/> Direct Laryngoscopy</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkMethods2"/> Blind Technique</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkMethods3"/> Fiberoptic</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkMethods4"/> Tube Changer Stylet</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkMethods5"/> Wire Stylet</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkMethods6"/> Fastrach LMA</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkMethods7"/> Awake Technique</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkMethods8"/> In Place On Arrival</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="tdColumn1">
+                    <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkConfirmation1"/> ETCO<sub>2</sub></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkConfirmation2"/> Bilateral Breath Sounds</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="chkForm" controlID="chkConfirmation3"/> Tube Secured</td>
+                        </tr>
+                        <tr>
+                            <td style="font-style:italic">Comment :</td>
+                        </tr>
+                        <tr>
+                            <td> <textarea class="txtForm" controlID="txtConfirmationRemarks" rows="8" style="width:98%"></textarea></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</div>

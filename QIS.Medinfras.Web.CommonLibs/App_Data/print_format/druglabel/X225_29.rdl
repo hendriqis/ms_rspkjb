@@ -1,0 +1,64 @@
+^XA
+^LL210
+^PW600
+^LH2,1^MD10
+^A0N,20,20
+^FO2,16^FD{HealthcareName}^FS
+^A0N,20,20
+^FO2,36^FDKontak^FS
+^A0N,20,20
+^FO90,36^FD:^FS
+^A0N,20,20
+^FO100,36^FD0812-2449-8878^FS
+^A0N,20,20
+^FO2,56^FDRuangan^FS
+^A0N,20,20
+^FO90,56^FD:^FS
+^A0N,20,20
+^FO100,56^FD{RoomName}^FS
+^A0N,20,20
+^FO2,76^FDTgl. Resep^FS
+^A0N,20,20
+^FO90,76^FD:^FS
+^A0N,20,20
+^FO100,76^FD{PrescriptionDate} {PrescriptionTime}^FS
+^A0N,20,20
+^FO320,16^FDNo.Resep^FS"
+^A0N,20,20
+^FO400,16^FD:^FS
+^A0N,20,20
+^FO410,16^FD{PrescriptionNo}^FS
+^A0N,20,20
+^FO320,36^FDNo.RM^FS
+^A0N,20,20
+^FO400,36^FD:^FS
+^A0N,20,20
+^FO410,36^FD{MedicalNo}^FS
+^A0N,20,20
+^FO320,56^FDTgl. Lahir^FS
+^A0N,20,20
+^FO400,56^FD:^FS
+^A0N,20,20
+^FO410,56^FD{DateOfBirth}^FS
+^A0N,20,20
+^FO320,76^FDExp. Date^FS
+^A0N,20,20
+^FO400,76^FD:^FS
+^A0N,20,20
+^FO410,76^FD{ExpiredDate}^FS
+^A0N,20,20
+^FO2,80^FD______________________________________________________________________^FS
+^A0N,26,26
+^FO2,105^FDPro: {PatientFullName}  ({Sex})^FS
+^A0N,28,28
+^FO2,135^FD{ItemName} {cfIsUsedDispenseQty1}^FS
+^CFD
+^FO2,170^FB570,7,^FD{MedicationAdministration}^FS
+^A0N,28,28
+^FO2,190^FB570,7,^FD{ConsumeMethod} {cfCoenamRuleLabel}^FS
+^A0N,24,24
+^FO2,215^FD{cfDailyInformation}^FS
+^A0N,24,24
+^FO400,215^FD{ExternalMedication}^FS
+^PR2
+^XZ

@@ -1,0 +1,42 @@
+﻿^XA
+^LL960
+^PW630
+^LH2,1
+^CF036,36
+^FO155,20^FDBUKTI PENDAFTARAN^FS
+^FO155,30^FD__________________^FS
+^CF026,26
+^FO115,80^FDNo. Registrasi : {RegistrationNo}^FS
+^CF028,28
+^FO10,140^FD{PatientName} ({Sex})^FS
+^CF026,26
+^FO10,200^FDNo. RM^FS
+^FO181,200^FD:^FS
+^FO201,200^FD{MedicalNo}^FS
+^FO10,240^FDUnit Pelayanan^FS
+^FO181,240^FD:^FS
+^FO201,240^FD{ServiceUnitName}^FS
+^FO10,280^FDDokter^FS
+^FO181,280^FD:^FS
+^FO201,280^FD{ParamedicName}^FS
+^FO10,320^FDTindakan :^FS
+^FO10,360^FD1. ____________ : Rp. _______________ _____^FS
+^FO10,400^FD2. ____________ : Rp. _______________ _____^FS
+^FO10,440^FD3. ____________ : Rp. _______________ _____^FS
+^FO10,480^FD4. ____________ : Rp. _______________ _____^FS
+^FO10,520^FD5. ____________ : Rp. _______________ _____^FS
+^FO10,560^FDAdministrasi^FS
+^FO205,560^FD:^FS
+^FO220,560^FDRp. _______________ _____^FS 
+^FO10,600^Biaya Kartu^FS
+^FO205,600^FD:^FS
+^FO220,600^FDRp. _______________ _____^FS 
+^FO100,650^FDTOTAL^FS
+^FO205,650^FD:^FS
+^FO220,650^FDRp. _______________ _____^FS
+^FO10,690^FDDiagnosa^FS
+^FO205,690^FD:^FS
+^FO220,690^FD_________________________^FS 
+^FO10,720 ^BQN,2,6,M^FDMA{MedicalNo};{PatientName};{DateOfBirthInString}^FS
+^FO220,720^FDCatatan :^FS
+^XZ

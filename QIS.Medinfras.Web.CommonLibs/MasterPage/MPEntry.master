@@ -1,0 +1,259 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Libs/MasterPage/MPMain.Master" AutoEventWireup="true" 
+    CodeBehind="MPEntry.master.cs" Inherits="QIS.Medinfras.Web.CommonLibs.MasterPage.MPEntry" %>
+
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="plhMPMain" runat="server">
+    <input type="hidden" runat="server" id="hdnIsAdd" value="1" />
+    <div class="toolbarArea">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <colgroup>
+                <col width="70%" />
+                <col width="30%" />
+            </colgroup>
+            <tr>
+                <td>
+                    <ul>
+                        <asp:ContentPlaceHolder ID="plhCustomButtonToolbar" runat="server">                
+                        </asp:ContentPlaceHolder>
+                        <li id="btnMPEntrySaveNew" runat="server"><img src='<%=ResolveUrl("~/Libs/Images/Icon/tbnew.png")%>' alt="" /><div><%=GetLabel("Save & New")%></div></li>
+                        <li id="btnMPEntrySaveClose" runat="server"><img src='<%=ResolveUrl("~/Libs/Images/Icon/tbsave.png")%>' alt="" /><div><%=GetLabel("Save & Close")%></div></li>
+                        <li id="btnMPEntryCancel" runat="server"><img src='<%=ResolveUrl("~/Libs/Images/Icon/tbcancel.png")%>' alt="" /><div><%=GetLabel("Cancel")%></div></li>
+                    </ul>
+                </td>
+                <td style="text-align:right; padding-right:5px">
+                    <asp:ContentPlaceHolder ID="plhMenuTitle" runat="server">                
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="padding:12px;">  
+        <script type="text/javascript">
+            window.setIsAdd = function (isAdd) {
+                if (isAdd)
+                    $('#<%=hdnIsAdd.ClientID %>').val('1');
+                else {
+                    var $group = $('#fsMPEntry');
+                    var result = true;
+                    $group.find(':[IsEditAbleInEditMode=0]').each(function (i, item) {
+                        if ($(item)[0].tagName == 'SELECT')
+                            $(item).attr('disabled', 'disabled');
+                        else if ($(item)[0].tagName == 'SPAN')
+                            $(item).find('input').attr('disabled', 'disabled');
+                        else if ($(item)[0].tagName == 'LABEL')
+                            $(item).attr('class', 'lblDisabled');
+                        else
+                            $(item).attr('readonly', 'readonly');
+                    });
+                    $group.find(':[IsEditAbleInEditMode=1]').each(function (i, item) {
+                        if ($(item)[0].tagName == 'SELECT')
+                            $(item).removeAttr('disabled');
+                        else if ($(item)[0].tagName == 'SPAN')
+                            $(item).find('input').removeAttr('disabled');
+                        else if ($(item)[0].tagName == 'LABEL')
+                            $(item).removeClass('lblDisabled');
+                        else
+                            $(item).removeAttr('readonly');
+                    });
+                    $('#<%=hdnIsAdd.ClientID %>').val('0');
+                }
+            }
+            window.getIsAdd = function () {
+                return ($('#<%=hdnIsAdd.ClientID %>').val() == '1');
+            }
+
+            $(function () {
+                $('#<%=btnMPEntrySaveNew.ClientID %>').click(function (evt) {
+                    var isAllowSave = true;
+                    var errMessage = { text: "" };
+                    var isAllowSavePatientValidation = "";
+                    if (typeof onBeforeSaveNewRecord != 'undefined')
+                        isAllowSave = onBeforeSaveNewRecord(errMessage);
+
+                    if (typeof onBeforeSaveRecordPatientValidation != 'undefined') {
+                        isAllowSavePatientValidation = onBeforeSaveRecordPatientValidation(errMessage);
+                        Methods.getObject('GetvPatientList', isAllowSavePatientValidation, function (result) {
+                            if (result != null) {
+
+                                messageDoublePatient = 'Ditemukan ada pasien dengan data yang sama :\n\r' +
+                                                'No.RM : ' + result.MedicalNo + '\n\rNama Lengkap : ' + result.PatientName + '\n\rNIK : ' + result.SSN + '\n\rTanggal Lahir : ' + Methods.getJSONDateValue(result.DateOfBirth) + '\n\rJenis Kelamin : ' + result.Gender + '\n\rAlamat : ' + result.HomeAddress + '\n\r' +
+                                                'Apakah ingin melanjutkan proses membuat nomor rekam medis baru ?\n\r';
+
+                                var isConfirm = confirm(messageDoublePatient);
+                                if (isConfirm) {
+                                    if (IsValid(evt, 'fsMPEntry', 'mpEntry')) {
+                                        cbpMPEntryProcess.PerformCallback('savenew|' + $('#<%=hdnIsAdd.ClientID %>').val());
+                                    }
+                                }
+                            } else {
+                                if (IsValid(evt, 'fsMPEntry', 'mpEntry'))
+                                    cbpMPEntryProcess.PerformCallback('savenew|' + $('#<%=hdnIsAdd.ClientID %>').val());
+                            }
+
+                        });
+                    }
+                    if (isAllowSavePatientValidation == "") {
+                        if (isAllowSave) {
+                            if (IsValid(evt, 'fsMPEntry', 'mpEntry'))
+                                cbpMPEntryProcess.PerformCallback('savenew|' + $('#<%=hdnIsAdd.ClientID %>').val());
+                        }
+                    }
+                });
+                $('#<%=btnMPEntrySaveClose.ClientID %>').click(function (evt) {
+                    var isAllowSave = true;
+                    var errMessage = { text: "" };
+                    var isAllowSavePatientValidation = "";
+                    if (typeof onBeforeSaveCloseRecord != 'undefined')
+                        isAllowSave = onBeforeSaveCloseRecord(errMessage);
+
+                    if (typeof onBeforeSaveRecordPatientValidation != 'undefined') {
+                        isAllowSavePatientValidation = onBeforeSaveRecordPatientValidation(errMessage);
+                        Methods.getObject('GetvPatientList', isAllowSavePatientValidation, function (result) {
+                            if (result != null) {
+
+                                messageDoublePatient = 'Ditemukan ada pasien dengan data yang sama :\n\r' +
+                                                'No.RM : ' + result.MedicalNo + '\n\rNama Lengkap : ' + result.PatientName + '\n\rNIK : ' + result.SSN + '\n\rTanggal Lahir : ' + Methods.getJSONDateValue(result.DateOfBirth) + '\n\rJenis Kelamin : ' + result.Gender + '\n\rAlamat : ' + result.HomeAddress + '\n\r' +
+                                                'Apakah ingin melanjutkan proses membuat nomor rekam medis baru ?\n\r';
+
+                                var isConfirm = confirm(messageDoublePatient);
+                                if (isConfirm) {
+                                    if (IsValid(evt, 'fsMPEntry', 'mpEntry')) {
+                                        cbpMPEntryProcess.PerformCallback('saveclose|' + $('#<%=hdnIsAdd.ClientID %>').val());
+                                    }
+                                }
+                            } else {
+                                if (IsValid(evt, 'fsMPEntry', 'mpEntry'))
+                                    cbpMPEntryProcess.PerformCallback('saveclose|' + $('#<%=hdnIsAdd.ClientID %>').val());
+                            }
+
+                        });
+                    }
+
+
+                    if (isAllowSavePatientValidation == "") {
+                        if (isAllowSave) {
+                            if (IsValid(evt, 'fsMPEntry', 'mpEntry'))
+                                cbpMPEntryProcess.PerformCallback('saveclose|' + $('#<%=hdnIsAdd.ClientID %>').val());
+                        }
+                    }
+
+                });
+                $('#<%=btnMPEntryCancel.ClientID %>').click(function () {
+                    showLoadingPanel();
+                    setDocumentLocationBackToList();
+                });
+                if (typeof onLoad == 'function') {
+                    onLoad();
+                }
+
+            });
+
+            function setDocumentLocationBackToList() {
+                var mapForm = document.createElement("form");
+                mapForm.method = "POST";
+                mapForm.action = document.referrer;
+
+                if ($('#<%=hdnListID.ClientID %>').val() != '')
+                    mapForm.appendChild(createInputHiddenPost("id", $('#<%=hdnListID.ClientID %>').val()));
+                mapForm.appendChild(createInputHiddenPost("txtSearchView", $('#<%=hdnListTextSearch.ClientID %>').val()));
+                mapForm.appendChild(createInputHiddenPost("filterExpression", $('#<%=hdnListFilterExpression.ClientID %>').val()));
+                if (typeof onBeforeGoToListPage == 'function') {
+                    onBeforeGoToListPage(mapForm);
+                }
+
+                document.body.appendChild(mapForm);
+
+                mapForm.submit();
+
+                $(mapForm).remove();
+                //document.location = document.referrer;
+            }
+
+            function setHdnListIDValue(value) {
+                $('#<%=hdnListID.ClientID %>').val(value);
+            }
+
+            function setHdnListFilterExpressionValue(value) {
+                $('#<%=hdnListFilterExpression.ClientID %>').val(value);
+            }
+
+            function createInputHiddenPost(name, value) {
+                var mapInput = document.createElement("input");
+                mapInput.type = "hidden";
+                mapInput.name = name;
+                mapInput.value = value;
+                return mapInput;
+            }
+        </script>
+        <input type="hidden" runat="server" id="hdnListID" />
+        <input type="hidden" runat="server" id="hdnListTextSearch" />
+        <input type="hidden" runat="server" id="hdnListFilterExpression" />
+        <dxcp:ASPxCallbackPanel ID="cbpMPEntryContent" runat="server" Width="100%" ClientInstanceName="cbpMPEntryContent"
+            ShowLoadingPanel="false" OnCallback="cbpMPEntryContent_Callback">
+            <ClientSideEvents BeginCallback="function(s,e){
+                showLoadingPanel();
+            }" EndCallback="function(s,e){
+                var param = s.cpParam;
+                if(param == 'refresh'){
+                    setIsAdd(true);
+                    if (typeof setRightPanelButtonEnabled == 'function')
+                        setRightPanelButtonEnabled();
+                    if (typeof onLoad == 'function') 
+                        onLoad();
+                }
+                hideLoadingPanel();
+            }" />
+            <PanelCollection>
+                <dx:PanelContent ID="PanelContent1" runat="server">       
+                    <fieldset id="fsMPEntry">                 
+                        <asp:ContentPlaceHolder ID="plhEntry" runat="server">                
+                        </asp:ContentPlaceHolder>
+                    </fieldset>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dxcp:ASPxCallbackPanel>
+
+        <dxcp:ASPxCallbackPanel ID="cbpMPEntryProcess" runat="server" Width="100%" ClientInstanceName="cbpMPEntryProcess"
+            ShowLoadingPanel="false" OnCallback="cbpMPEntryProcess_Callback">
+            <ClientSideEvents BeginCallback="function(s,e){
+                showLoadingPanel();
+            }" EndCallback="function(s,e){
+                var result = s.cpResult.split('|');
+                var param = s.cpRetval;
+                if(result[0] == 'savenew'){
+                    if(result[1] == 'success'){
+                        if (typeof onAfterSaveNewSuccess == 'function')
+                            onAfterSaveNewSuccess(s.cpType, s.cpRetval);
+                        cbpMPEntryContent.PerformCallback('refresh');
+                    }
+                    else
+                        if(result[2] != '')
+                            showToast('Save Failed', 'Error Message : ' + result[2]);
+                        else
+                            showToast('Save Failed', '');
+                }
+                else if(result[0] == 'saveclose'){
+                    if(result[1] == 'success'){
+                        if (typeof onAfterSaveCloseSuccess == 'function')
+                            onAfterSaveCloseSuccess(s.cpType, s.cpRetval);
+                        if(getIsAdd()) {
+                            setHdnListIDValue(result[2]);
+                            setHdnListFilterExpressionValue('');
+                        }
+                        setDocumentLocationBackToList();
+                    }
+                    else
+                        if(result[2] != '')
+                            showToast('Save Failed', 'Error Message : ' + result[2]);
+                        else
+                            showToast('Save Failed', '');
+                }
+                hideLoadingPanel();
+            }" />
+        </dxcp:ASPxCallbackPanel>
+    </div>
+</asp:Content>

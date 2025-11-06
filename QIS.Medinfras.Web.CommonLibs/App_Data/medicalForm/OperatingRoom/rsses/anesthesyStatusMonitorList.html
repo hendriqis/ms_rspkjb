@@ -1,0 +1,101 @@
+<head>
+    <style type="text/css">
+        .txtForm:disabled {
+          border-color:#dfe6e9;
+          background-color:#dfe6e9;
+        }         
+    </style>
+</head>
+<script language="javascript" type="text/javascript" id="eForm_anesthesyInvasiveMonitors">
+    $(function () {
+        $("#chkMonitor12").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtOtherMonitor1").prop("disabled", false);
+            }
+            else {
+                $("#txtOtherMonitor1").prop("disabled", true);
+                $("#txtOtherMonitor1").val("");
+            }
+        });
+        $("#chkMonitor13").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtOtherMonitor2").prop("disabled", false);
+            }
+            else {
+                $("#txtOtherMonitor2").prop("disabled", true);
+                $("#txtOtherMonitor2").val("");
+            }
+        });
+        $("#chkMonitor14").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtOtherMonitor3").prop("disabled", false);
+            }
+            else {
+                $("#txtOtherMonitor3").prop("disabled", true);
+                $("#txtOtherMonitor3").val("");
+            }
+        });
+
+        $("#chkMonitor12").change();
+        $("#chkMonitor13").change();
+        $("#chkMonitor14").change();
+    });
+</script>
+<div>
+    <div id="group01" class="w3-container w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="0" style="width:100%;" class="w3-table w3-bordered w3-card-4">
+            <colgroup>
+                <col width="20px" />
+                <col width="100px" />
+                <col width="20px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td> <input type="checkbox" class="chkForm" controlID="chkMonitor1" checked="checked"/></td>
+                <td> NIBP </td>
+                <td> <input type="checkbox" class="chkForm" controlID="chkMonitor6"/></td>
+                <td> BIS</td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" class="chkForm" controlID="chkMonitor2"/></td>
+                <td>ETCO<sub>2</sub></td>
+                <td> <input type="checkbox" class="chkForm" controlID="chkMonitor7"/></td>
+                <td> Temp</td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" class="chkForm" controlID="chkMonitor3" checked="checked"/></td>
+                <td> ECG</td>
+                <td> <input type="checkbox" class="chkForm" controlID="chkMonitor8"/></td>
+                <td> NMT</td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" class="chkForm" controlID="chkMonitor4"/> </td>
+                <td> Precordial</td>
+                <td> <input type="checkbox" class="chkForm" controlID="chkMonitor9"/></td>
+                <td> IBP</td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" class="chkForm" controlID="chkMonitor5" checked="checked"/> </td>
+                <td> SpO<sub>2</sub></td>
+                <td> <input type="checkbox" class="chkForm" controlID="chkMonitor10"/></td>
+                <td> CVP</td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" class="chkForm" controlID="chkMonitor11"/></td>
+                <td>  Swan Ganz</td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" id="chkMonitor12" class="chkForm" controlID="chkMonitor12"/></td>
+                <td colspan="2"><input type="text" id="txtOtherMonitor1" class="txtForm" controlID="txtOtherMonitor1" style="width:100%" disabled="disabled"/></td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" id="chkMonitor13" class="chkForm" controlID="chkMonitor13"/></td>
+                <td colspan="2"><input type="text" id="txtOtherMonitor2" class="txtForm" controlID="txtOtherMonitor2" style="width:100%" disabled="disabled"/></td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" id="chkMonitor14"  class="chkForm" controlID="chkMonitor14"/></td>
+                <td colspan="2"><input type="text" id="txtOtherMonitor3" class="txtForm" controlID="txtOtherMonitor3" style="width:100%" disabled="disabled"/></td>
+            </tr> 
+        </table>
+    </div>
+</div>

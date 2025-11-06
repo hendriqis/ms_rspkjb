@@ -1,0 +1,83 @@
+<head>
+    <style type="text/css">
+        .txtForm:disabled {
+          border-color:#dfe6e9;
+          background-color:#dfe6e9;
+        }          
+    </style>
+</head>
+<script language="javascript" type="text/javascript" id="eForm_anesthesyPosition">
+    $(function () {
+        $('#chkOtherPosition').die('click');
+        $('#chkOtherPosition').live('change', function (evt) {
+            if ($(this).is(":checked")) {
+                $("#txtOtherPosition").prop("disabled", false);
+            }
+            else {
+                $("#txtOtherPosition").prop("disabled", true);
+                $("#txtOtherPosition").val("");
+            }
+        });
+
+        $("#chkOtherPosition").change();
+    });
+</script>
+<div>
+    <div id="group01" class="w3-container w3-animate-left peGroup">
+        <table border="1" cellpadding="0" cellspacing="0" style="width:100%;" class="w3-table w3-bordered w3-card-4">
+            <colgroup>
+                <col width="480px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                        <colgroup>
+                            <col width="180px" />
+                            <col />
+                        </colgroup>
+                        <tr>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkPosition1"/> Supine</td>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkPosition6"/> Trendelenberg</td>
+                        </tr>
+                        <tr>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkPosition2"/> Semi-Fowler</td>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkPosition7"/> Right Lateral Decubitus</td>
+                        </tr>
+                        <tr>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkPosition3"/> Lithotomy</td>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkPosition8"/> Reserve Trendelenberg</td>
+                        </tr>
+                        <tr>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkPosition4"/> Sitting</td>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkPosition9"/> Prone</td>
+                        </tr>
+                        <tr>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkForm5"/>  Left Lateral Decubitus</td>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkForm10"/> Jacknife</td>
+                        </tr>
+                        <tr>
+                            <td> <input type="checkbox" id="chkOtherPosition" class="chkForm" controlID="chkOtherPosition"/> Lain-lain</td>
+                            <td> <input type="text" id="txtOtherPosition" class="txtForm" controlID="txtOtherPosition" style="width:100%" disabled="disabled"/></td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="vertical-align:top">
+                    <table border="1" cellpadding="1" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td style="background-color:#ecf0f1"><div class="w3-container"><label style="font-weight:bold; text-decoration:underline">Arms:</label></div></td>
+                        </tr>
+                        <tr><td> <input type="checkbox" class="chkForm" controlID="chkArm1"/> < 90 Degrees</td></tr>
+                        <tr><td> <input type="checkbox" class="chkForm" controlID="chkArm2"/> Axillary Roll</td></tr>
+                        <tr>
+                            <td style="background-color:#ecf0f1"><div class="w3-container"><label style="font-weight:bold; text-decoration:underline">Eyes:</label></div></td>
+                        </tr>
+                        <tr><td> <input type="checkbox" class="chkForm" controlID="chkEye1"/> Taped Closed</td></tr>
+                        <tr><td> <input type="checkbox" class="chkForm" controlID="chkEye2"/> Lubrication</td></tr>
+                        <tr><td> <input type="checkbox" class="chkForm" controlID="chkEye3"/> Extra Padding</td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

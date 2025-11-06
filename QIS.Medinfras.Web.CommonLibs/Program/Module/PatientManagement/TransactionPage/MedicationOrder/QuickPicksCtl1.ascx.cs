@@ -1,0 +1,598 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using QIS.Medinfras.Web.Common.UI;
+using QIS.Medinfras.Data.Service;
+using DevExpress.Web.ASPxCallbackPanel;
+using QIS.Medinfras.Web.Common;
+using QIS.Data.Core.Dal;
+using System.Data;
+using System.Globalization;
+using System.Text;
+
+namespace QIS.Medinfras.Web.CommonLibs.Program
+{
+    public partial class QuickPicksCtl1 : BaseEntryPopupCtl
+    {
+        protected int PageCount = 1;
+        private string[] lstSelectedMember = null;
+        private string[] lstDosingUnitValue = null;
+        private string[] lstDosingUnitText = null;
+
+        public override void InitializeDataControl(string param)
+        {
+            IsAdd = true;
+
+            hdnParam.Value = param;
+            string[] temp = param.Split('|');
+            hdnTransactionID.Value = string.IsNullOrEmpty(temp[0]) ? "0" : temp[0];
+            hdnLocationID.Value = temp[1];
+            hdnDefaultGCMedicationRoute.Value = temp[2];
+            hdnParamedicID.Value = temp[3];
+            hdnRegistrationID.Value = temp[4];
+            hdnVisitID.Value = temp[5];
+            hdnChargeClassID.Value = temp[6];
+            txtRemarks.Text = temp[7];
+            hdnDispensaryUnitID.Value = temp[8];
+            
+            hdnPrescriptionDate.Value = temp[9];
+            hdnPrescriptionTime.Value = temp[10];
+            hdnPrescriptionType.Value = temp[11];
+            hdnMenuType.Value = temp[12];
+            
+            SetControlProperties();
+            BindGridView(1, true, ref PageCount);
+        }
+
+        public string GetItemUnitListCode()
+        {
+            return string.Join(",", lstDosingUnitValue);
+        }
+        public string GetItemUnitListText()
+        {
+            return string.Join(",", lstDosingUnitText);
+        }
+
+        private void SetControlProperties()
+        {
+            String filterExpression = string.Format("ParentID IN ('{0}')", Constant.StandardCode.ITEM_UNIT);
+            lstDosingUnitValue = null;
+            lstDosingUnitText = null;
+            List<StandardCode> lstStandardCode = BusinessLayer.GetStandardCodeList(filterExpression);
+
+            List<StandardCode> lstItemUnit = lstStandardCode.Where(sc => sc.ParentID == Constant.StandardCode.ITEM_UNIT && (sc.TagProperty.Contains("PRE") || sc.TagProperty.Contains("1"))).ToList();
+            lstDosingUnitValue = lstItemUnit.Select(lst => lst.StandardCodeID).ToArray();
+            lstDosingUnitText = lstItemUnit.Select(lst => lst.StandardCodeName).ToArray();
+
+            filterExpression = string.Format("HealthcareID = '{0}' AND ParameterCode IN ('{1}','{2}','{3}','{4}','{5}')", 
+                                                    AppSession.UserLogin.HealthcareID, //0
+                                                    Constant.SettingParameter.EM_PEMBATASAN_CPOE_BPJS, //1
+                                                    Constant.SettingParameter.FN_PENJAMIN_BPJS_KESEHATAN, //2
+                                                    Constant.SettingParameter.FN_PENJAMIN_INHEALTH, //3
+                                                    Constant.SettingParameter.EM_PEMBATASAN_CPOE_INHEALTH, //4
+                                                    Constant.SettingParameter.FN_TIPE_CUSTOMER_BPJS //5
+                                                );
+            List<SettingParameterDt> lstParam = BusinessLayer.GetSettingParameterDtList(filterExpression);
+
+            SettingParameterDt oParam1 = lstParam.Where(lst => lst.ParameterCode == Constant.SettingParameter.EM_PEMBATASAN_CPOE_BPJS).FirstOrDefault();
+            SettingParameterDt oParam2 = lstParam.Where(lst => lst.ParameterCode == Constant.SettingParameter.FN_PENJAMIN_BPJS_KESEHATAN).FirstOrDefault();
+            SettingParameterDt oParam3 = lstParam.Where(lst => lst.ParameterCode == Constant.SettingParameter.EM_PEMBATASAN_CPOE_INHEALTH).FirstOrDefault();
+            SettingParameterDt oParam4 = lstParam.Where(lst => lst.ParameterCode == Constant.SettingParameter.FN_PENJAMIN_INHEALTH).FirstOrDefault();
+
+            string oParam5 = lstParam.Where(lst => lst.ParameterCode == Constant.SettingParameter.FN_TIPE_CUSTOMER_BPJS).FirstOrDefault().ParameterValue;
+            string bpjsType = oParam5 != null ? oParam5 : string.Empty;
+            
+            bool isLimitedCPOEItemForBPJS = oParam1 != null ? (oParam1.ParameterValue == "1" ? true : false) : false;
+            int businnessPartnerID1 = oParam2 != null ? Convert.ToInt32(oParam2.ParameterValue) : 0;
+
+            bool isLimitedCPOEItemForInhealth = AppSession.IsLimitedCPOEItemForInhealth;
+
+            switch (AppSession.RegisteredPatient.DepartmentID)
+            {
+                case Constant.Facility.INPATIENT:
+                    isLimitedCPOEItemForInhealth = AppSession.IsLimitedCPOEItemForInhealthIP;
+                    break;
+                case Constant.Facility.OUTPATIENT:
+                    isLimitedCPOEItemForInhealth = AppSession.IsLimitedCPOEItemForInhealthOP;
+                    break;
+                case Constant.Facility.EMERGENCY:
+                    isLimitedCPOEItemForInhealth = AppSession.IsLimitedCPOEItemForInhealthER;
+                    break;
+                case Constant.Facility.DIAGNOSTIC:
+                    isLimitedCPOEItemForInhealth = AppSession.IsLimitedCPOEItemForInhealthMD;
+                    break;
+                case Constant.Facility.PHARMACY:
+                    isLimitedCPOEItemForInhealth = AppSession.IsLimitedCPOEItemForInhealthPH;
+                    break;
+                case Constant.Facility.MEDICAL_CHECKUP:
+                    isLimitedCPOEItemForInhealth = AppSession.IsLimitedCPOEItemForInhealthMC;
+                    break;
+                default:
+                    break;
+            }
+
+            string inhealthCustomerType = oParam4 != null ? oParam4.ParameterValue : string.Empty;
+
+            if (AppSession.RegisteredPatient.GCCustomerType == bpjsType)
+            {
+                rblItemType.SelectedValue = "2";
+                rblItemType.Enabled = !isLimitedCPOEItemForBPJS;
+            }
+
+            if (AppSession.RegisteredPatient.GCCustomerType == inhealthCustomerType)
+            {
+                rblItemType.SelectedValue = "3";
+                rblItemType.Enabled = !isLimitedCPOEItemForInhealth;
+            }
+
+            BindCboLocation();
+        }
+
+        private void BindCboLocation()
+        {
+            if (Convert.ToInt32(hdnLocationID.Value) > 0)
+            {
+                Location loc = BusinessLayer.GetLocation(Convert.ToInt32(hdnLocationID.Value));
+                List<Location> lstLocation = null;
+                if (loc.IsHeader)
+                    lstLocation = BusinessLayer.GetLocationList(string.Format("ParentID = {0}", loc.LocationID));
+                else
+                {
+                    lstLocation = new List<Location>();
+                    lstLocation.Add(loc);
+                }
+                Methods.SetComboBoxField<Location>(cboPopupLocation, lstLocation, "LocationName", "LocationID");
+                cboPopupLocation.SelectedIndex = 0;
+            }
+        }
+
+        protected void cboPopupLocation_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        {
+            BindCboLocation();
+        }
+
+        protected void cbpPopup_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        {
+            int pageCount = 1;
+            string result = "";
+            if (e.Parameter != null && e.Parameter != "")
+            {
+                string[] param = e.Parameter.Split('|');
+                if (param[0] == "changepage")
+                {
+                    BindGridView(Convert.ToInt32(param[1]), false, ref pageCount);
+                    result = "changepage";
+                }
+                else // refresh
+                {
+                    BindGridView(1, true, ref pageCount);
+                    result = "refresh|" + pageCount;
+                }
+            }
+
+            ASPxCallbackPanel panel = sender as ASPxCallbackPanel;
+            panel.JSProperties["cpResult"] = result;
+        }
+
+        private string GetFilterExpression()
+        {
+            string filterExpression = "";
+
+            if (hdnItemGroupDrugLogisticID.Value == "")
+            {
+                filterExpression += string.Format("LocationID = '{0}' AND IsDeleted = 0 AND (ItemName1 LIKE '%{1}%' OR GenericName LIKE '%{1}%') AND IsDeleted = 0", cboPopupLocation.Value, hdnFilterItem.Value);
+            }
+            else
+            {
+                filterExpression += string.Format("LocationID = '{0}' AND IsDeleted = 0 AND (ItemName1 LIKE '%{1}%' OR GenericName LIKE '%{1}%') AND ItemGroupID IN(SELECT ItemGroupID FROM vItemGroupMaster WHERE DisplayPath LIKE '%/{2}/%') AND IsDeleted = 0", cboPopupLocation.Value, hdnFilterItem.Value, hdnItemGroupDrugLogisticID.Value);
+            }
+
+            if (hdnMenuType.Value == "al")
+            {
+                filterExpression += string.Format(" AND GCItemType = '{0}'", Constant.ItemType.BARANG_MEDIS);
+            }
+            else
+            {
+                filterExpression += string.Format(" AND GCItemType IN ('{0}','{1}')", Constant.ItemType.OBAT_OBATAN, Constant.ItemType.BARANG_MEDIS);
+            }
+
+            if (rblItemSource.SelectedValue == "2")
+            {
+                // From History
+                filterExpression += string.Format(" AND ItemID IN (SELECT ItemID FROM vPrescriptionOrderDt5 WHERE MRN = {0} AND IsRFlag = 1 AND IsCompound = 0)",AppSession.RegisteredPatient.MRN);
+            }
+
+            switch (rblItemType.SelectedValue)
+            {
+                case "1":
+                    filterExpression += " AND IsFormularium = 1 ";
+                    break;
+                case "2":
+                    filterExpression += " AND IsBPJSFormularium = 1 ";
+                    break;
+                case "3":
+                    filterExpression += " AND IsInhealthFormularium = 1 ";
+                    break;
+                case "4":
+                    filterExpression += " AND IsEmployeeFormularium = 1 ";
+                    break;
+                default:
+                    break;
+            }
+
+            filterExpression += string.Format(" AND GCItemStatus = '{0}'",Constant.ItemStatus.ACTIVE);
+
+            return filterExpression;
+        }
+
+        protected void grdView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                vItemBalanceQuickPick1 entity = e.Row.DataItem as vItemBalanceQuickPick1;
+                CheckBox chkIsSelected = e.Row.FindControl("chkIsSelected") as CheckBox;
+                if (lstSelectedMember.Contains(entity.ItemID.ToString()))
+                    chkIsSelected.Checked = true;
+                System.Drawing.Color foreColor = System.Drawing.Color.Black;
+                System.Drawing.Color backColor = System.Drawing.Color.White;
+
+                if (entity.IsBPJSFormularium)
+                {
+                    backColor = System.Drawing.Color.LightGreen;
+                    foreColor = System.Drawing.Color.Black;
+                }
+                if (entity.QuantityEND == 0)
+                    foreColor = System.Drawing.Color.Red;
+
+                e.Row.Cells[2].BackColor = backColor;
+                e.Row.Cells[3].BackColor = backColor;
+                e.Row.Cells[4].BackColor = backColor;
+                e.Row.Cells[5].BackColor = backColor;
+                e.Row.Cells[2].ForeColor = foreColor;
+                e.Row.Cells[3].ForeColor = foreColor;
+                e.Row.Cells[4].ForeColor = foreColor;
+                e.Row.Cells[5].ForeColor = foreColor;
+
+            }
+        }
+
+        private void BindGridView(int pageIndex, bool isCountPageCount, ref int pageCount)
+        {
+            string filterExpression = GetFilterExpression();
+            if (isCountPageCount)
+            {
+                int rowCount = BusinessLayer.GetvItemBalanceQuickPick1RowCount(filterExpression);
+                pageCount = Helper.GetPageCount(rowCount, 10);
+            }
+            lstSelectedMember = hdnSelectedMember.Value.Split(',');
+            List<vItemBalanceQuickPick1> lstEntity = BusinessLayer.GetvItemBalanceQuickPick1List(filterExpression, 10, pageIndex, "ItemName1 ASC");
+            grdView.DataSource = lstEntity;
+            grdView.DataBind();
+        }
+
+        private bool IsValidated(string lstDispenseQty, ref string result)
+        {
+            StringBuilder tempMsg = new StringBuilder();
+
+            string message = string.Empty;
+
+            if (string.IsNullOrEmpty(message))
+            {
+                #region Validate DispenseQty
+                string[] selectedDispenseQty = lstDispenseQty.Split(',');
+                foreach (string dispenseQty in selectedDispenseQty)
+                {
+                    if (string.IsNullOrEmpty(dispenseQty))
+                    {
+                        tempMsg.AppendLine("There is medication with empty dispense quantity. \n");
+                        break;
+                    }
+                    else
+                    {
+                        Decimal value;
+                        if (!Decimal.TryParse(dispenseQty, out value))
+                        {
+                            tempMsg.AppendLine(string.Format("There is medication with invalid dispense quantity {0} \n", dispenseQty));
+                            break;
+                        }
+                        else
+                        {
+                            if (value <= 0)
+                            {
+                                tempMsg.AppendLine(string.Format("There is medication with invalid dispense quantity {0} \n", dispenseQty));
+                                break;
+                            }
+                        }
+                    }
+                }
+                #endregion
+            }
+
+            message = tempMsg.ToString();
+
+            if (!string.IsNullOrEmpty(message))
+            {
+                result = message;
+            }
+            return message == string.Empty;
+        }
+
+        protected override bool OnSaveAddRecord(ref string errMessage, ref string retval)
+        {
+            bool result = true;
+
+            if (!IsValidated(hdnSelectedMemberDispenseQty.Value,  ref errMessage))
+            {
+                result = false;
+                retval = "0";
+                return result;
+            }
+
+            IDbContext ctx = DbFactory.Configure(true);
+            PrescriptionOrderHdDao entityOrderHdDao = new PrescriptionOrderHdDao(ctx);
+            PrescriptionOrderDtDao entityOrderDtDao = new PrescriptionOrderDtDao(ctx);
+
+            try
+            {
+                lstSelectedMember = hdnSelectedMember.Value.Split(',');
+                string[] lstSelectedMemberSigna = hdnSelectedMemberSigna.Value.Split(',');
+                string[] lstSelectedMemberCoenam = hdnSelectedMemberCoenam.Value.Split(',');
+                string[] lstSelectedMemberPRN = hdnSelectedMemberPRN.Value.Split(',');
+                string[] lstSelectedMemberQty = hdnSelectedMemberQty.Value.Split(',');
+                string[] lstSelectedMemberDosingUnit = hdnSelectedMemberDosingUnit.Value.Split(',');
+                string[] lstSelectedMemberDispenseQty = hdnSelectedMemberDispenseQty.Value.Split(',');
+                string[] lstSelectedMemberRemarks = hdnSelectedMemberRemarks.Value.Split('|');
+                string[] lstSelectedMemberStartTime = hdnSelectedMemberStartTime.Value.Split(',');
+                string[] lstSelectedMemberRoute = hdnSelectedMemberRoute.Value.Split(',');
+
+                int prescriptionOrderID = 0;
+                int transactionID = 0;
+                string transactionNo = string.Empty;
+
+                if (hdnTransactionID.Value == "" || hdnTransactionID.Value == "0")
+                {
+                    PrescriptionOrderHd entityHd = new PrescriptionOrderHd();
+
+                    DateTime prescriptionDate = Helper.DateInStringToDateTime(hdnPrescriptionDate.Value);
+                    string prescriptionTime = hdnPrescriptionTime.Value;
+
+                    entityHd.VisitHealthcareServiceUnitID = AppSession.RegisteredPatient.HealthcareServiceUnitID;
+                    entityHd.ParamedicID = Convert.ToInt32(hdnParamedicID.Value);
+                    entityHd.VisitID = Convert.ToInt32(hdnVisitID.Value);
+                    entityHd.PrescriptionDate = prescriptionDate;
+                    entityHd.PrescriptionTime = prescriptionTime;
+                    entityHd.ClassID = Convert.ToInt32(hdnChargeClassID.Value);
+                    entityHd.GCTransactionStatus = Constant.TransactionStatus.OPEN;
+                    entityHd.LocationID = Convert.ToInt32(cboPopupLocation.Value);
+                    entityHd.GCOrderStatus = Constant.OrderStatus.OPEN;
+                    entityHd.GCPrescriptionType = hdnPrescriptionType.Value;
+                    switch (AppSession.RegisteredPatient.DepartmentID)
+                    {
+                        case Constant.Facility.EMERGENCY:
+                            entityHd.TransactionCode = Constant.TransactionCode.ER_MEDICATION_ORDER;
+                            break;
+                        case Constant.Facility.OUTPATIENT:
+                            entityHd.TransactionCode = Constant.TransactionCode.OP_MEDICATION_ORDER;
+                            break;
+                        case Constant.Facility.INPATIENT:
+                            entityHd.TransactionCode = Constant.TransactionCode.IP_MEDICATION_ORDER;
+                            break;
+                        case Constant.Facility.DIAGNOSTIC:
+                            entityHd.TransactionCode = Constant.TransactionCode.OTHER_MEDICATION_ORDER;
+                            break;
+                        default:
+                            entityHd.TransactionCode = Constant.TransactionCode.OP_MEDICATION_ORDER;
+                            break;
+                    }
+                    entityHd.PrescriptionOrderNo = BusinessLayer.GenerateTransactionNo(entityHd.TransactionCode, entityHd.PrescriptionDate, ctx);
+                    ctx.CommandType = CommandType.Text;
+                    ctx.Command.Parameters.Clear();
+                    if (hdnDispensaryUnitID.Value != "" && hdnDispensaryUnitID.Value != null)
+                        entityHd.DispensaryServiceUnitID = Convert.ToInt32(hdnDispensaryUnitID.Value);
+                    else
+                        entityHd.DispensaryServiceUnitID = 0;
+
+                    //entityOrderHd.LocationID = Convert.ToInt32(cboLocation.Value);
+                    entityHd.Remarks = txtRemarks.Text;
+                    entityHd.CreatedBy = AppSession.UserLogin.UserID;
+                    entityHd.LastUpdatedBy = AppSession.UserLogin.UserID;
+                    entityHd.LastUpdatedDate = DateTime.Now;
+                    entityHd.IsCreatedBySystem = false;
+                    prescriptionOrderID = entityOrderHdDao.InsertReturnPrimaryKeyID(entityHd);
+                    transactionID = prescriptionOrderID;
+                    transactionNo = entityHd.PrescriptionOrderNo;
+                }
+                else
+                {
+                    prescriptionOrderID = Convert.ToInt32(hdnTransactionID.Value);
+                    PrescriptionOrderHd orderHd1 = entityOrderHdDao.Get(prescriptionOrderID);
+                    if (!string.IsNullOrEmpty(txtRemarks.Text))
+                    {
+                        orderHd1.Remarks = txtRemarks.Text;
+                        entityOrderHdDao.Update(orderHd1);
+                    }
+                }
+                
+                PrescriptionOrderHd orderHd = entityOrderHdDao.Get(prescriptionOrderID);
+                if (orderHd.GCTransactionStatus == Constant.TransactionStatus.OPEN)
+                {
+                    List<vDrugInfo> lstDrugInfo = BusinessLayer.GetvDrugInfoList(string.Format("ItemID IN ({0})", hdnSelectedMember.Value), ctx);
+                    int ct = 0;
+                    foreach (String itemID in lstSelectedMember)
+                    {
+                        vDrugInfo drugInfo = lstDrugInfo.FirstOrDefault(p => p.ItemID == Convert.ToInt32(itemID));
+
+                        PrescriptionOrderDt entity = new PrescriptionOrderDt();
+                        #region PrescriptionOrderDt
+                        entity.IsRFlag = true;
+                        entity.ItemID = Convert.ToInt32(itemID);
+                        entity.DrugName = drugInfo.ItemName1;
+                        entity.GenericName = drugInfo.GenericName;
+                        if (drugInfo.GCDrugForm != null)
+                        {
+                            entity.GCDrugForm = drugInfo.GCDrugForm;
+                        }
+                        entity.SignaID = null;
+                        entity.Dose = drugInfo.Dose;
+                        if (!String.IsNullOrEmpty(drugInfo.GCDoseUnit))
+                        {
+                            entity.GCDoseUnit = drugInfo.GCDoseUnit;
+                        }
+
+                        bool isDay = true;
+                        #region Default Frequency
+                        string frequency = "1";
+                        entity.GCDosingFrequency = Constant.DosingFrequency.DAY;
+                        #endregion
+
+                        bool isTwoDigit = (lstSelectedMemberSigna[ct].Substring(0, 2).Contains('q') || lstSelectedMemberSigna[ct].Substring(0, 2).Contains('d')) ? false : true;
+                        if (isTwoDigit)
+                            frequency = lstSelectedMemberSigna[ct].Substring(0, 2);
+                        else
+                            frequency = lstSelectedMemberSigna[ct].Substring(0, 1);
+
+                        if (lstSelectedMemberSigna[ct].ToLower().Contains("qh"))
+                        {
+                            isDay = false;
+                            entity.GCDosingFrequency = Constant.DosingFrequency.HOUR;
+                        }
+                        else
+                        {
+                            entity.GCDosingFrequency = Constant.DosingFrequency.DAY;
+                        }
+                        entity.Frequency = Convert.ToInt16(frequency);
+
+                        switch (entity.Frequency)
+                        {
+                            case 1:
+                                entity.IsMorning = true;
+                                break;
+                            case 2:
+                                entity.IsMorning = true;
+                                entity.IsNoon = true;
+                                break;
+                            case 3:
+                                entity.IsMorning = true;
+                                entity.IsNoon = true;
+                                entity.IsNight = true;
+                                break;
+                            case 4:
+                                entity.IsMorning = true;
+                                entity.IsNoon = true;
+                                entity.IsEvening = true;
+                                entity.IsNight = true;
+                                break;
+                            default:
+                                entity.IsMorning = true;
+                                entity.IsNoon = true;
+                                entity.IsEvening = true;
+                                entity.IsNight = true;
+                                break;
+                        }
+
+                        entity.NumberOfDosage = Convert.ToDecimal(lstSelectedMemberQty[ct]);
+
+                        entity.GCDosingUnit = lstSelectedMemberDosingUnit[ct];
+
+                        if (lstSelectedMemberCoenam[ct] != "-")
+                        {
+                            switch (lstSelectedMemberCoenam[ct])
+                            {
+                                case "ac":
+                                    entity.GCCoenamRule = Constant.CoenamRule.AC;
+                                    break;
+                                case "dc":
+                                    entity.GCCoenamRule = Constant.CoenamRule.DC;
+                                    break;
+                                case "pc":
+                                    entity.GCCoenamRule = Constant.CoenamRule.PC;
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+
+                        entity.IsAsRequired = lstSelectedMemberPRN[ct] == "1";
+                        entity.StartDate = DateTime.Now.Date;
+                        string[] medicationTime = Methods.GetMedicationSequenceTime(entity.Frequency).Split('|');
+                        entity.Sequence1Time = medicationTime[0];
+                        entity.Sequence2Time = medicationTime[1];
+                        entity.Sequence3Time = medicationTime[2];
+                        entity.Sequence4Time = medicationTime[3];
+                        entity.Sequence5Time = medicationTime[4];
+                        entity.Sequence6Time = medicationTime[5];
+                        if (medicationTime[0] != "-")
+                        {
+                            entity.StartTime = medicationTime[0];
+                        }
+                        else
+                        {
+                            entity.StartTime = "00:00";
+                            entity.Sequence1Time = "00:00";
+                        }
+                        entity.DispenseQty = Convert.ToDecimal(lstSelectedMemberDispenseQty[ct]);
+
+                        if (!entity.IsUsingUDD)
+                        {
+                            if (isDay)
+                            {
+                                entity.DosingDuration = Math.Ceiling((decimal)(entity.DispenseQty / (entity.Frequency * entity.NumberOfDosage)));
+                            }
+                            else
+                            {
+                                decimal numberOfTaken = Math.Ceiling(Convert.ToDecimal(24 / entity.Frequency));
+                                entity.DosingDuration = Math.Ceiling((decimal)(entity.DispenseQty / (numberOfTaken * entity.NumberOfDosage)));
+                            }
+                            entity.TakenQty = entity.ResultQty = entity.ChargeQty = entity.DispenseQty;
+                        }
+                        else
+                        {
+                            entity.DispenseQty = 0;
+                            entity.TakenQty = 0;
+                        }
+
+                        entity.GCRoute = lstSelectedMemberRoute[ct];
+                        entity.MedicationPurpose = drugInfo.MedicationPurpose;
+                        entity.MedicationAdministration = lstSelectedMemberRemarks[ct];
+                        entity.EmbalaceID = null;
+                        entity.EmbalaceQty = 0;
+                        entity.GCPrescriptionOrderStatus = Constant.OrderStatus.OPEN;
+                        entity.IsCreatedFromOrder = true;
+                        #endregion
+
+                        entity.PrescriptionOrderID = prescriptionOrderID;
+                        entity.CreatedBy = AppSession.UserLogin.UserID;
+                        entityOrderDtDao.Insert(entity);
+
+                        ct++;
+                    }
+                }
+                else
+                {
+                    errMessage = "Transaksi Sudah Diproses. Tidak Bisa Ditambahkan Item";
+                    result = false;
+                }
+                if (result == true)
+                {
+                    retval = prescriptionOrderID.ToString();
+                    ctx.CommitTransaction();  
+                }
+            }
+            catch (Exception ex)
+            {
+                result = false;
+                errMessage = ex.Message;
+                ctx.RollBackTransaction();
+                Helper.InsertErrorLog(ex);
+            }
+            finally
+            {
+                ctx.Close();
+            }
+            return result;
+        }
+    }
+}

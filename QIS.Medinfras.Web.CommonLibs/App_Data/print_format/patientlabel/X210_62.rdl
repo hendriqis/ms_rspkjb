@@ -1,0 +1,54 @@
+﻿^XA
+^LL200
+^LH5,10
+^A0N,20,20
+^FO20,10
+^FB150,50,0,L
+^FDNo. RM
+^FS
+^A0N,30,30
+^FO125,10
+^FB250,50,0,L
+^FD{MedicalNo}
+^FS
+^A0N,20,20
+^FO450,10
+^FB150,50,0,L
+^FDNo. RM
+^FS
+^A0N,30,30
+^FO560,10
+^FB250,50,0,L
+^FD{MedicalNo}
+^FS
+^A0N,35,35
+^FO20,50
+^FB400,2,0,L,0
+^FD{PatientName}{PatientName}
+^FS
+^A0N,35,35
+^FO450,50
+^FB400,2,0,L,0
+^FD{PatientName}
+^FS
+^A0N,20,20
+^FO20,120
+^FB150,50,0,L
+^FDTgl. Lahir
+^FS
+^A0N,20,20
+^FO125,120
+^FB250,50,0,L
+^FD{DateOfBirthInString}
+^FS
+^A0N,20,20
+^FO450,120
+^FB150,50,0,L
+^FDTgl. Lahir
+^FS
+^A0N,20,20
+^FO560,120
+^FB250,50,0,L
+^FD{DateOfBirthInString}
+^FS
+^XZ

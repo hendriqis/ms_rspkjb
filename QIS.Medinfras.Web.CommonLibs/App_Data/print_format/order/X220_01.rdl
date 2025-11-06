@@ -1,0 +1,28 @@
+﻿^XA
+^LL960
+^PW630
+^LH2,1
+^CF036,36
+^FO155,20^FDBUKTI ORDER PENUNJANG^FS
+^FO155,30^FD_____________________^FS
+^CF026,26
+^FO115,80^FDNo. Registrasi : {RegistrationNo}^FS
+^CF028,28
+^FO10,140^FD{PatientName} ({Sex})^FS
+^CF026,26
+^FO10,200^FDNo. RM^FS
+^FO181,200^FD:^FS
+^FO201,200^FD{MedicalNo}^FS
+^FO10,240^FDUnit Pelayanan^FS
+^FO181,240^FD:^FS
+^FO201,240^FD{ServiceUnitName}^FS
+^FO10,280^FDDokter^FS
+^FO181,280^FD:^FS
+^FO201,280^FD{ParamedicName}^FS
+^FO10,320^FDItem Pelayanan  :^FS
+^FO10,360^FD1. __________________________________ _____^FS
+^FO10,400^FD2. __________________________________ _____^FS
+^FO10,440^FD3. __________________________________ _____^FS
+^FO10,480^FD4. __________________________________ _____^FS
+^FO10,520^FD5. __________________________________ _____^FS
+^XZ

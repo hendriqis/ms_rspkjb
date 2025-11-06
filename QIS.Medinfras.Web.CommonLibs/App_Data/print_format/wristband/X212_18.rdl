@@ -1,0 +1,13 @@
+﻿^XA
+^POI
+^LL3452
+^PW361
+^LH10,10
+^A0R,28,26
+^FO195,100^FD{MedicalNo}^FS
+^A0R,28,26
+^FO155,100^FD{cfPatientNameSalutation}^FS
+^A0R,28,26
+^FO115,100^FD{DateOfBirthInString}^FS
+^A0R,24,22
+^XZ

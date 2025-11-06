@@ -1,0 +1,360 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+
+    var p1 = 0;
+    var p2 = 0;
+    var p3 = 0;
+    var p4 = 0;
+    var p5 = 0;
+    var p6 = 0;
+    var p7 = 0;
+    var p8 = 0;
+    var p9 = 0;
+
+    $(function () {
+        $("#ddlForm1").change(function () {
+            $("#txtParamScore1").val($(this).val());
+            p1 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm2").change(function () {
+            $("#txtParamScore2").val($(this).val());
+            p2 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm3").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            p3 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm4").change(function () {
+            $("#txtParamScore4").val($(this).val());
+            p4 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm5").change(function () {
+            $("#txtParamScore5").val($(this).val());
+            p5 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm6").change(function () {
+            $("#txtParamScore6").val($(this).val());
+            p6 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm7").change(function () {
+            $("#txtParamScore7").val($(this).val());
+            p7 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm8").change(function () {
+            $("#txtParamScore8").val($(this).val());
+            p8 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+
+        $("#ddlForm1").change();
+        $("#ddlForm2").change();
+        $("#ddlForm3").change();
+        $("#ddlForm4").change();
+        $("#ddlForm5").change();
+        $("#ddlForm6").change();
+        $("#ddlForm7").change();
+        $("#ddlForm8").change();
+    });
+
+    function CalculateTotalScore() {
+        var score = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8;
+        $("#txtScore").val(score);
+
+        CalculateRisk();
+    }
+
+    function CalculateRisk() {
+        var isConfirmed = false;
+        var totalScore = parseInt($("#txtScore").val());
+
+        if (totalScore < 6 && $("#ddlForm1").val() == "3") {
+            isConfirmed = true;
+        }
+        else if (totalScore >= 6) {
+            isConfirmed = true;
+        }
+        else {
+            isConfirmed = false;         
+        }
+
+        if (isConfirmed)
+            $("#opt05Result1").prop('checked', true);
+        else
+            $("#opt05Result2").prop('checked', true);
+
+    }
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <colgroup>
+                <col width="250px" />
+                <col width="600px" />
+                <col width="10px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="4" style="font-weight:bold">
+                    PERHITUNGAN SKOR TB ANAK</td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    </br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Kontak TB</label>
+                </td>
+                <td>
+                    <select id="ddlForm1" style="width:100%" class="ddlForm" controlID = "ddlForm1">
+                        <option value="0" selected></option>
+                        <option value="0">Tidak Jelas</option>
+                        <option value="2">Laporan Keluarga, BTA (-)/BTA Tidak Jelas/Tidak Tahu</option>
+                        <option value="3">BTA (+)/ terkonfirmasi bakteriologis</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px; text-align:right" class="txtForm" controlID = "txtParamScore1"  />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Uji Tuberkulin</label>
+                </td>
+                <td>
+                    <select id="ddlForm2" style="width:100%" class="ddlForm" controlID = "ddlForm2">
+                        <option value="0" selected></option>
+                        <option value="0">Negatif</option>
+                        <option value="3">Positif (&ge;10 mm atau &ge;5 mm pada pasien imunokompromais)</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px ;text-align:right" class="txtForm" controlID = "txtParamScore2" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Berat Badan/Keadaan Gizi</label>
+                </td>
+                <td>
+                    <select id="ddlForm3" style="width:100%" class="ddlForm" controlID = "ddlForm3">
+                        <option value="0" selected></option>
+                        <option value="0">Gizi Baik</option>
+                        <option value="1">BB/TB&le;90% atau BB/U &le;60%</option>
+                        <option value="2">Klinis gizi buruk atau BB/TB <70% atau BB/U <60%</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px;text-align:right" class="txtForm" controlID = "txtParamScore3" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Demam yang tidak diketahui sebabnya</label>
+                </td>
+                <td>
+                    <select id="ddlForm4" style="width:100%" class="ddlForm" controlID = "ddlForm4">
+                        <option value="0" selected></option>
+                        <option value="0">Tidak ada</option>
+                        <option value="1">&ge;2 minggu</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px;text-align:right" class="txtForm" controlID = "txtParamScore4" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Batuk kronis yang tidak diketahui sebabnya</label>
+                </td>
+                <td>
+                    <select id="ddlForm5" style="width:100%" class="ddlForm" controlID = "ddlForm5">
+                        <option value="0" selected></option>
+                        <option value="0">Tidak ada</option>
+                        <option value="1">&ge;2 minggu</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px;text-align:right" class="txtForm" controlID = "txtParamScore5" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Pembesaran kelenjar limfe kolli, aksila, inguinal</label>
+                </td>
+                <td>
+                    <select id="ddlForm6" style="width:100%" class="ddlForm" controlID = "ddlForm6">
+                        <option value="0" selected></option>
+                        <option value="0">Tidak ada</option>
+                        <option value="1">&ge;1 cm, lebih dari 1 KGB, tidak nyeri</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore6" style="width:50px;text-align:right" class="txtForm" controlID = "txtParamScore6" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Pembengkakan tulang/ sendi panggul, lutut, falang</label>
+                </td>
+                <td>
+                    <select id="ddlForm7" style="width:100%" class="ddlForm" controlID = "ddlForm7">
+                        <option value="0" selected></option>
+                        <option value="0">Tidak ada</option>
+                        <option value="1">Ada Pembengkakan</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore7" style="width:50px;text-align:right" class="txtForm" controlID = "txtParamScore7" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Foto thorax</label>
+                </td>
+                <td>
+                    <select id="ddlForm8" style="width:100%" class="ddlForm" controlID = "ddlForm8">
+                        <option value="0" selected></option>
+                        <option value="0">Normal/ kelainan tidak jelas</option>
+                        <option value="1">Gambaran sugestif (mendukung TB)</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore8" style="width:50px;text-align:right" class="txtForm" controlID = "txtParamScore8" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    </br>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal">TOTAL SKOR</label></td>      
+                <td colspan="3"><input type="text" style="width: 100px; text-align:right" id="txtScore" class="txtForm" controlID="txtScore" readonly="readonly"/></td>                         
+            </tr>
+            <tr>
+                <td colspan="4">
+                    </br>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; vertical-align: top; text-align: left; background-color: Silver"
+                    colspan="4">
+                    Berdasarkan kondisi di atas maka skor TB Anak adalah :
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="width: 100%">
+                    <table border="1" cellpadding="1" cellspacing="0" style="width:100%">
+                        <tr>
+                            <td style="font-weight: bold; background-color: Silver">
+                            </td>
+                            <td style="font-weight: bold; background-color: Silver; width: 120px">
+                                Kesimpulan
+                            </td>
+                            <td style="font-weight: bold; background-color: Silver; width: 180px; padding-left: 10px">
+                                Kriteria
+                            </td>
+                            <td style="font-weight: bold; background-color: Silver; padding-left: 10px">
+                                Tindak Lanjut
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align: top; background-color: #dfe6e9">
+                                <input type="radio" class="optForm" id="opt05Result1" controlid="opt05Result1" name="05_Result"
+                                    disabled />
+                            </td>
+                            <td style="font-weight: bold;vertical-align: top;  background-color: #dfe6e9;">
+                                TB Anak Klinis
+                            </td>
+                            <td style="font-style: italic; background-color: #dfe6e9;">
+                                <ul>
+                                    <li>Bila skor ≥6</li>
+                                    <li>Bila skor <6 dengan uji tuberkulin positif dan/atau ada kontak TB paru terkonfrmasi bakteriologis</li>
+                                </ul>
+                            </td>
+                            <td style="background-color: #dfe6e9; padding-left: 10px; vertical-align: top; ">
+                                Terapi OAT
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; vertical-align: top; background-color: #ffeaa7;">
+                                <input type="radio" class="optForm" id="opt05Result2" controlid="opt05Result2" name="05_Result"
+                                    disabled />
+                            </td>
+                            <td style="font-weight: bold; background-color: #ffeaa7; vertical-align: top; ">
+                                Tidak memenuhi kriteria TB anak klinis
+                            </td>
+                            <td style="font-style: italic; background-color: #ffeaa7; vertical-align: top; ">
+                                <ul>
+                                    <li>Bila skor <6 tanpa adanya uji tuberkulin positif dan tidak ada kontak TB paru terkonfirmasi bakteriologis</li>
+                                </ul>
+                            </td>
+                            <td style="background-color: #ffeaa7; padding-left: 10px; vertical-align: top; ">
+                                Observasi gejala selama 2 minggu. Bila keluhan menghilang maka bukan TB. Jika keluhan menetap, dapat didiagnosis sebagai TB anak klinis dan diberikan terapi OAT.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; vertical-align: top; text-align: left; background-color: Silver"
+                                colspan="4">
+                                Catatan :
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top; text-align: left; background-color: Silver"
+                                colspan="4">
+                                •	Kontak dengan pasien TB paru dewasa adalah kontak serumah ataupun kontak erat, misalnya di sekolah, pengasuh, tempat bermain, dan sebagainya
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top; text-align: left; background-color: Silver"
+                                colspan="4">
+                                •	Terkonfirmasi bakteriologis adalah bila didapatkan hasil BTA (+) atau hasil TCM (+)
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,141 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_hamiltondepressionratingscale">
+    $(function () {
+
+        $("#ddlParameter1").change(function () {
+            $("#txtParamScore1").val($(this).val());
+        });
+
+        $("#ddlParameter2").change(function () {
+            $("#txtParamScore2").val($(this).val());
+        });
+
+        $("#ddlParameter3").change(function () {
+            $("#txtParamScore3").val($(this).val());
+        });
+
+        $("#ddlParameter4").change(function () {
+            $("#txtParamScore4").val($(this).val());
+        });
+
+        $("#ddlParameter5").change(function () {
+            $("#txtParamScore5").val($(this).val());
+        });
+
+        $("#ddlParameter1").change();
+        $("#ddlParameter2").change();
+        $("#ddlParameter3").change();
+        $("#ddlParameter4").change();
+        $("#ddlParameter5").change();
+    });
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+            <colgroup>
+                <col width="350px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="150px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold; text-decoration:underline"><i>POSITIVE AND NEGATIVE SYNDROME SCALE - EXCITED COMPONENT (PANSS - EC)</i></label>
+                </td>
+            </tr>
+			<tr>
+				<td><b>Skala Positif</b></td>
+			</tr>	
+            <tr>
+                <td><label>P 4. Gaduh Gelisah <i>(Excitement)</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter1" class="ddlForm" controlID="ddlParameter1" style="width:100%">
+                        <option value="1" selected>Tidak ada</option>
+                        <option value="2">Minimal</option>
+                        <option value="3">Ringan</option>
+                        <option value="4">Sedang</option>
+                        <option value="5">Agak Berat</option>
+                        <option value="6">Berat</option>
+                        <option value="7">Sangat Berat</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore1" />
+                </td>
+            </tr>
+            <tr>
+                <td><label>P 7. Permusuhan</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter2" class="ddlForm" controlID="ddlParameter2" style="width:100%">
+                        <option value="1" selected>Tidak ada</option>
+                        <option value="2">Minimal</option>
+                        <option value="3">Ringan</option>
+                        <option value="4">Sedang</option>
+                        <option value="5">Agak Berat</option>
+                        <option value="6">Berat</option>
+                        <option value="7">Sangat Berat</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore2"/>
+                </td>
+            </tr>
+			<tr>
+				<td><b>Skala Psikopatologi Umum (G)</b></td>
+			</tr>	
+            <tr>
+                <td><label>G 4. Ketegangan</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter3" style="width:100%" class = "ddlForm" controlID = "ddlParameter3">
+                        <option value="1" selected>Tidak ada</option>
+                        <option value="2">Minimal</option>
+                        <option value="3">Ringan</option>
+                        <option value="4">Sedang</option>
+                        <option value="5">Agak Berat</option>
+                        <option value="6">Berat</option>
+                        <option value="7">Sangat Berat</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore3" />
+                </td>
+            </tr>
+            <tr>
+                <td><label>G 8. Ketidakkooperatifan</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter4" style="width:100%" class = "ddlForm" controlID = "ddlParameter4">
+                        <option value="1" selected>Tidak ada</option>
+                        <option value="2">Minimal</option>
+                        <option value="3">Ringan</option>
+                        <option value="4">Sedang</option>
+                        <option value="5">Agak Berat</option>
+                        <option value="6">Berat</option>
+                        <option value="7">Sangat Berat</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore4" />
+                </td>
+            </tr>
+            <tr>
+                <td><label>G 14. Pengendalian Impuls yang Buruk</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter5" style="width:100%" class = "ddlForm" controlID = "ddlParameter5">
+                        <option value="1" selected>Tidak ada</option>
+                        <option value="2">Minimal</option>
+                        <option value="3">Ringan</option>
+                        <option value="4">Sedang</option>
+                        <option value="5">Agak Berat</option>
+                        <option value="6">Berat</option>
+                        <option value="7">Sangat Berat</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore5" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,10 @@
+﻿^XA
+^LL270
+^PW500
+^LH2,1^MD10
+^CF032,32
+^FO2,30^FD{MedicalNo}^FS
+^FO2,70^FD{cfPatientNameSalutation} ({cfGenderInitial})^FS
+^FO100,110^BCN,70,N,N,N^FD{MedicalNo}^FS
+^PR2
+^XZ

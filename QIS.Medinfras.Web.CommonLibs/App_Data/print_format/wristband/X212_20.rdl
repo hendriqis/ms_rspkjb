@@ -1,0 +1,9 @@
+﻿^XA
+^POI
+^FWR
+^LH0,30
+^FO320,465^A0,25,25^FD{cfPatientNameSalutation} ({cfGenderInitial1})^FS
+^FO280,465^A0,25,25^FD{MedicalNo}^FS
+^FO250,465^A0,25,25^FDNo. Reg : {RegistrationNo}^FS
+^FO220,465^A0,25,25^FDDOB : {DateOfBirthInString}^FS
+^XZ

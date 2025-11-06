@@ -1,0 +1,31 @@
+^XA
+^LL800
+^PW640
+^LH10,10
+^FO70,15^CF0,25^FB500,1,0,C^FD{HealthcareName}^FS
+^FO50,40^GB520,1,2^FS
+^CF0,20
+^FO55,50^FDApoterker :{Pharmacist}^FS
+^CF0,20
+^FO55,70^FD{PharmacistLicenseNo}^FS
+^CF0,20
+^FO55,90^FDTgl Lahir:{DateOfBirth}^FS
+^CF0,20
+^FO405,50^FD{PrescriptionNo}^FS
+^CF0,20
+^FO405,70^FD{MedicalNo}^FS
+^CF0,20
+^FO405,90^FD{PrescriptionDate}^FS
+^FO50,110^GB520,1,2^FS
+^CF0,28
+^FO65,125^FDPro : {PatientFullName} {Salutation}^FS
+^CF0,28
+^FO65,160^FD{ItemName} {cfIsUsedDispenseQty1}^FS
+^CF0,28
+^FO65,195^FD{MedicationRoute} {ConsumeMethod2}^FS
+^FO65,230^FD{cfCoenamRuleLabel} ^FS
+^FO65,265^FD{MedicationAdministration}^FS
+^FO65,300^FB500,50,0,L^FD{MedicationPurpose}^FS
+^FO60,245^AQN,28,24
+^FO420,360^FDED:{ExpiredDate}^FS
+^XZ

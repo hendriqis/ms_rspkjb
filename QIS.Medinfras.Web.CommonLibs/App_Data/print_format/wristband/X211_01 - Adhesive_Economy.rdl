@@ -1,0 +1,10 @@
+﻿^XA
+^POI
+^FWR
+^LH0,236
+^FO80,100 ^BY1,2.0,200^BCN,200,Y,N,N^FD{MedicalNo}^FS
+^FO160,340 ^A0,38,38^FD{PatientName} ({Gender})^FS
+^FO120,340 ^A0,33,33^FD{RegistrationNo} / {MedicalNo}^FS
+^FO80,340 ^A0,33,33^FD{DateOfBirthInString} ({AgeInYear} thn {AgeInMonth} bln {AgeInDay} hari)^FS
+^FO40,340 ^A0,33,33^FD{ParamedicName}^FS
+^XZ

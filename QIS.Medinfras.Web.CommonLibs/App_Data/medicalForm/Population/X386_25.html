@@ -1,0 +1,301 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_hamiltondepressionratingscale">
+    $(function () {
+
+        $("#ddlParameter1").change(function () {
+            $("#txtParamScore1").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter2").change(function () {
+            $("#txtParamScore2").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter3").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter4").change(function () {
+            $("#txtParamScore4").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter5").change(function () {
+            $("#txtParamScore5").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter6").change(function () {
+            $("#txtParamScore6").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter7").change(function () {
+            $("#txtParamScore7").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter8").change(function () {
+            $("#txtParamScore8").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter9").change(function () {
+            $("#txtParamScore9").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter10").change(function () {
+            $("#txtParamScore10").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter1").change();
+        $("#ddlParameter2").change();
+        $("#ddlParameter3").change();
+        $("#ddlParameter4").change();
+        $("#ddlParameter5").change();
+        $("#ddlParameter6").change();
+        $("#ddlParameter7").change();
+        $("#ddlParameter8").change();
+        $("#ddlParameter9").change();
+        $("#ddlParameter10").change();
+
+        function CalculateTotalScore() {
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+            var p4 = 0;
+            var p5 = 0;
+            var p6 = 0;
+            var p7 = 0;
+            var p8 = 0;
+            var p9 = 0;
+            var p10 = 0;
+
+            if ($("#txtParamScore1").val())
+                p1 = parseInt($("#txtParamScore1").val());
+
+            if ($("#txtParamScore2").val())
+                p2 = parseInt($("#txtParamScore2").val());
+
+            if ($("#txtParamScore3").val())
+                p3 = parseInt($("#txtParamScore3").val());
+
+            if ($("#txtParamScore4").val())
+                p4 = parseInt($("#txtParamScore4").val());
+
+            if ($("#txtParamScore5").val())
+                p5 = parseInt($("#txtParamScore5").val());
+
+            if ($("#txtParamScore6").val())
+                p6 = parseInt($("#txtParamScore6").val());
+
+            if ($("#txtParamScore7").val())
+                p7 = parseInt($("#txtParamScore7").val());
+
+            if ($("#txtParamScore8").val())
+                p8 = parseInt($("#txtParamScore8").val());
+
+            if ($("#txtParamScore9").val())
+                p9 = parseInt($("#txtParamScore9").val());
+
+            if ($("#txtParamScore10").val())
+                p10 = parseInt($("#txtParamScore10").val());
+
+            var total = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10;
+
+            $("#txtMADRSScore").val(total);
+
+            if (total >= 35 && total <= 60) {
+                $("#ddlMADRSScore").val("X400^01");
+            }
+            else if (total >= 18 && total <= 34) {
+                $("#ddlMADRSScore").val("X400^02");
+            }
+            else if (total >= 9 && total <= 17) {
+                $("#ddlMADRSScore").val("X400^03");
+            }
+            else if (total >= 0 && total <= 8) {
+                $("#ddlMADRSScore").val("X400^04");
+            }
+        }
+    });
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+            <colgroup>
+                <col width="350px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="150px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold; text-decoration:underline"><i>MONTGOMERY-ASBERG DEPRESSION RATING SCALE (MADRS)</i></label>
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>Apparent sadness</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter1" style="width:100%" class = "ddlForm" controlID = "ddlParameter1">
+                        <option value="0" selected>No sadness</option>
+                        <option value="2">Looks dispirited but brightens up without difficulty</option>
+                        <option value="4">Appears sad and unhappy most of the time</option>
+                        <option value="6">Looks miserable all the time; extremely despondent</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore1" />
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>Reported sadness</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter2" style="width:100%" class = "ddlForm" controlID = "ddlParameter2">
+                        <option value="0" selected>Occasional sadness in keeping with circumstances</option>
+                        <option value="2">Sad or low but brightens up without difficulty</option>
+                        <option value="4">Pervasive feelings of sadness or gloominess; mood still influenced by external circumstances</option>
+                        <option value="6">Continuous or unvarying sadness, misery, or despondency</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore2" />
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>Inner tension</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter3" style="width:100%" class = "ddlForm" controlID = "ddlParameter3">
+                        <option value="0" selected>Placid; only fleeting inner tension</option>
+                        <option value="2">Occasional feelings of edginess and ill-defined discomfort</option>
+                        <option value="4">Continuous feelings of inner tension or intermittent panic which the patient can only master with some difficulty</option>
+                        <option value="6">Unrelenting dread or anguish; overwhelming panic</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore3" />
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>Reduced sleep</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter4" class="ddlForm" controlID="ddlParameter4" style="width:100%">
+                        <option value="0" selected>Sleeps as normal</option>
+                        <option value="2">Slight difficulty dropping off to sleep, or slightly reduced, light, or fitful sleep</option>
+                        <option value="4">Sleep reduced or broken by at least two hours</option>
+                        <option value="6"><2-3 hours of sleep</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore4" />
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>Reduced appetite</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter5" style="width:100%" class = "ddlForm" controlID = "ddlParameter5">
+                        <option value="0" selected>Normal or increased appetite</option>
+                        <option value="2">Slightly reduced appetite</option>
+                        <option value="4">No appetite; food is tasteless</option>
+                        <option value="6">Needs persuasion to eat</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore5"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>Concentration difficulty</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter6" class="ddlForm" controlID="ddlParameter6" style="width:100%">
+                        <option value="0" selected>No difficulties in concentrating</option>
+                        <option value="2">Occasional difficulties in collecting one’s thoughts</option>
+                        <option value="4">Difficulties in concentrating and sustaining thought which reduces ability to read or hold a conversation</option>
+                        <option value="6">Unable to read or converse without great initiative</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore6" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore6"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>Lassitude</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter7" class="ddlForm" controlID="ddlParameter7" style="width:100%">
+                        <option value="0" selected>Hardly any difficulty getting started in daily activities; no sluggishness</option>
+                        <option value="2">Difficulty in starting activities</option>
+                        <option value="4">Difficulty starting simple routine activities, which are carried out with effort</option>
+                        <option value="6">Complete lassitude; unable to do anything without help</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore7" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore7"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>Inability to feel</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter8" style="width:100%" class = "ddlForm" controlID = "ddlParameter8">
+                        <option value="0" selected>Normal interest in surroundings/other people</option>
+                        <option value="2">Reduced ability to enjoy usual interests</option>
+                        <option value="4">Loss of interest in surroundings; loss of feelings for friends/acquaintances</option>
+                        <option value="6">Emotionally paralyzed, unable to feel anger, grief, or pleasure; complete failure to feel for close relatives and friends</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore8" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore8"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>Pessimistic thoughts</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter9" class="ddlForm" controlID="ddlParameter9" style="width:100%">
+                        <option value="0" selected>No pessimistic thoughts</option>
+                        <option value="2">Fluctuating ideas of failure, self reproach, or self depreciation</option>
+                        <option value="4">Persistent self accusations or definite but still rational ideas of guilt; increasingly pessimistic about the future</option>
+                        <option value="6">Delusions of ruin, remorse, or irredeemable sin; absurd and unshakable self accusations</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore9" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore9"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label><i>Suicidal thoughts</i></label></td>
+                <td colspan="3">
+                    <select id="ddlParameter10" style="width:100%" class = "ddlForm" controlID = "ddlParameter10">
+                        <option value="0" selected>Enjoys life</option>
+                        <option value="2">Weary of life; only fleeting suicidal thoughts</option>
+                        <option value="4">Feels better off dead; suicidal thoughts common and considered as possible solution but no specific plans/intention</option>
+                        <option value="6">Explicit plans for suicide</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore10" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore10" />
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal"><i>MADRS SCORE</i></label></td>      
+                <td><input type="text" style="width: 98%; text-align:right" id="txtMADRSScore" class="txtForm" controlID="txtMADRSScore" readonly="readonly"/></td>                          
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal"><i>SUMMARY</i></label></td>
+                <td colspan="4">
+                    <select id="ddlMADRSScore" class="ddlForm" controlID="ddlMADRSScore" style="width:450px">
+                        <option value="X400^04" selected>0-8 : Depressive symptoms absent</option>
+                        <option value="X400^03">9-17 : Mild</option>
+                        <option value="X400^02">18-34 : Moderate</option>
+                        <option value="X400^01">35-60 : Severe</option>
+                    </select>
+                </td> 
+                <td />
+            </tr>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using QIS.Medinfras.Web.Common;
+using QIS.Medinfras.Web.Common.UI;
+using QIS.Medinfras.Data.Service;
+using DevExpress.Web.ASPxCallbackPanel;
+
+namespace QIS.Medinfras.Web.EMR.Program
+{
+    public partial class MedicalHistoryFrm : BasePage
+    {
+        protected int PageCount = 1;
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!Page.IsPostBack)
+            {
+                BindGridView(1, true, ref PageCount);
+            }
+        }
+
+        private void BindGridView(int pageIndex, bool isCountPageCount, ref int pageCount)
+        {
+            //// ditutup oleh RN 20191122 : agar semua history muncul (req dr.Sam RSSBB)
+            ////string filterExpression = string.Format("MRN = {0} AND VisitID != {1}", AppSession.RegisteredPatient.MRN, AppSession.RegisteredPatient.VisitID);
+            
+            string filterExpression = string.Format("MRN = {0}", AppSession.RegisteredPatient.MRN);
+
+            if (isCountPageCount)
+            {
+                int rowCount = BusinessLayer.GetvPreviousMedicalHistoryRowCount(filterExpression);
+                pageCount = Helper.GetPageCount(rowCount, Constant.GridViewPageSize.GRID_MASTER);
+            }
+
+            List<vPreviousMedicalHistory> lstEntity = BusinessLayer.GetvPreviousMedicalHistoryList(filterExpression, Constant.GridViewPageSize.GRID_MASTER, pageIndex, "VisitDate DESC");
+            grdView.DataSource = lstEntity;
+            grdView.DataBind();
+        }
+
+        protected void cbpView_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        {
+            int pageCount = 1;
+            string result = "";
+            if (e.Parameter != null && e.Parameter != "")
+            {
+                string[] param = e.Parameter.Split('|');
+                if (param[0] == "changepage")
+                {
+                    BindGridView(Convert.ToInt32(param[1]), false, ref pageCount);
+                    result = "changepage";
+                }
+                else // refresh
+                {
+
+                    BindGridView(1, true, ref pageCount);
+                    result = "refresh|" + pageCount;
+                }
+            }
+
+            ASPxCallbackPanel panel = sender as ASPxCallbackPanel;
+            panel.JSProperties["cpResult"] = result;
+        }
+    }
+}

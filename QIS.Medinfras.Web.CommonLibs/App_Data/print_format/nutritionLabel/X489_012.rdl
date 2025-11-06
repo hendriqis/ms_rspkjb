@@ -1,0 +1,11 @@
+﻿^XA
+^CF0,20
+^FO250,25^FD{MealTime}^FS
+^FO20,80^FD{MedicalNo} ({DateOfBirthInString})^FS
+^FO20,110^FD{cfPatientNameSalutation}^FS
+^FO20,140^FD{ServiceUnitName}^FS
+^FO20,170^FD{RoomName} - {BedCode}^FS
+^FO20,200^FDDiet   :  {MealPlanName}^FS
+^FO20,230^FD{Remarks}^FS
+^FO1,280^CF0,20^FB450,1,0,C^FDSegera dikonsumsi^FS
+^XZ

@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="11.1.5.0" Ref="1" ControlType="QIS.Medinfras.ReportDesktop.BTransaksiKeperawatan, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DataSource="#Ref-0" Font="Tahoma, 9pt" Version="11.1" SnappingMode="SnapToGrid" PageHeight="827" PageWidth="1169" PaperKind="A4" Margins="25, 25, 25, 25" Landscape="true">
+  <Bands>
+    <Item1 Ref="2" ControlType="PageHeaderBand" Name="PageHeader" HeightF="171.8752">
+      <Controls>
+        <Item1 Ref="3" Name="xrLabel28" ControlType="XRLabel" SizeF="125,12.5" LocationFloat="662.5, 150" Padding="2,2,0,0,100" Text="Diagnosa Medis" />
+        <Item2 Ref="4" Name="xrLabel29" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="787.5, 150" Padding="2,2,0,0,100" Text=":" />
+        <Item3 Ref="5" Name="xrLabel30" ControlType="XRLabel" SizeF="312.5,12.5" LocationFloat="800, 150" Padding="2,2,0,0,100" Text="[DiagnoseText]" />
+        <Item4 Ref="6" Name="xrLabel26" ControlType="XRLabel" SizeF="125,12.5" LocationFloat="662.5, 137.5" Padding="2,2,0,0,100" Text="Dokter" />
+        <Item5 Ref="7" Name="xrLabel27" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="787.5, 137.5" Padding="2,2,0,0,100" Text=":" />
+        <Item6 Ref="8" Name="lblParamedicName" ControlType="XRLabel" SizeF="262.5,12.5" LocationFloat="800, 137.5" Padding="2,2,0,0,100" Text="lblNamaPasien" />
+        <Item7 Ref="9" Name="xrLabel24" ControlType="XRLabel" SizeF="125,12.5" LocationFloat="0, 150" Padding="2,2,0,0,100" Text="Tempat, Tgl Lahir" />
+        <Item8 Ref="10" Name="xrLabel25" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="125, 150" Padding="2,2,0,0,100" Text=":" />
+        <Item9 Ref="11" Name="lblTmptTglLahir" ControlType="XRLabel" SizeF="412.5,12.5" LocationFloat="137.5, 150" Padding="2,2,0,0,100" Text="lblNamaPasien" />
+        <Item10 Ref="12" Name="lblServiceUnit" ControlType="XRLabel" SizeF="212.5,12.5" LocationFloat="800, 125" Padding="2,2,0,0,100" Text="lblServiceUnit" />
+        <Item11 Ref="13" Name="lblNamaPasien" ControlType="XRLabel" SizeF="412.5,12.5" LocationFloat="137.5, 137.5" Padding="2,2,0,0,100" Text="lblNamaPasien" />
+        <Item12 Ref="14" Name="xrLabel16" ControlType="XRLabel" SizeF="200,12.5" LocationFloat="137.5, 125" Padding="2,2,0,0,100" Text="[RegistrationNo]" />
+        <Item13 Ref="15" Name="xrLabel15" ControlType="XRLabel" SizeF="212.5,12.5" LocationFloat="800, 112.5" Padding="2,2,0,0,100" Text="xrLabel15">
+          <DataBindings>
+            <Item1 Ref="16" PropertyName="Text" DataMember="TransactionDateTimeInString" />
+          </DataBindings>
+        </Item13>
+        <Item14 Ref="17" Name="xrLabel14" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="787.5, 125" Padding="2,2,0,0,100" Text=":" />
+        <Item15 Ref="18" Name="xrLabel13" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="787.5, 112.5" Padding="2,2,0,0,100" Text=":" />
+        <Item16 Ref="19" Name="xrLabel12" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="125, 137.5" Padding="2,2,0,0,100" Text=":" />
+        <Item17 Ref="20" Name="xrLabel11" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="125, 125" Padding="2,2,0,0,100" Text=":" />
+        <Item18 Ref="21" Name="xrLabel10" ControlType="XRLabel" SizeF="12.5,12.5" LocationFloat="125, 112.5" Padding="2,2,0,0,100" Text=":" />
+        <Item19 Ref="22" Name="xrLabel9" ControlType="XRLabel" SizeF="125,12.5" LocationFloat="662.5, 125" Padding="2,2,0,0,100" Text="Ruang" />
+        <Item20 Ref="23" Name="xrLabel8" ControlType="XRLabel" SizeF="125,12.5" LocationFloat="662.5, 112.5" Padding="2,2,0,0,100" Text="Tgl Transaksi" />
+        <Item21 Ref="24" Name="xrLabel7" ControlType="XRLabel" SizeF="125,12.5" LocationFloat="0, 137.5" Padding="2,2,0,0,100" Text="Nama Pasien " />
+        <Item22 Ref="25" Name="xrLabel6" ControlType="XRLabel" SizeF="125,12.5" LocationFloat="0, 125" Padding="2,2,0,0,100" Text="No Registrasi" />
+        <Item23 Ref="26" Name="xrLabel5" ControlType="XRLabel" SizeF="200,12.5" LocationFloat="137.5, 112.5" Padding="2,2,0,0,100" Text="xrLabel5">
+          <DataBindings>
+            <Item1 Ref="27" PropertyName="Text" DataMember="TransactionNo" />
+          </DataBindings>
+        </Item23>
+        <Item24 Ref="28" Name="xrLabel4" ControlType="XRLabel" SizeF="125,12.5" LocationFloat="0, 112.5" Padding="2,2,0,0,100" Text="No Transaksi" />
+        <Item25 Ref="29" Name="lblReportSubtitle" ControlType="XRLabel" SizeF="1112.5,12.5" LocationFloat="0, 100" Font="Tahoma, 10pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleCenter">
+          <StylePriority Ref="30" UseFont="false" UseTextAlignment="false" />
+        </Item25>
+        <Item26 Ref="31" Name="lblPhoneFaxNo" ControlType="XRLabel" SizeF="471.5,17.00001" LocationFloat="637.5, 0" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleRight" Text="Phone">
+          <StylePriority Ref="32" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item26>
+        <Item27 Ref="33" Name="lblReportTitle" ControlType="XRLabel" SizeF="1112.5,25" LocationFloat="0, 75" Font="Tahoma, 13pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text="Report Title">
+          <StylePriority Ref="34" UseFont="false" UseTextAlignment="false" />
+        </Item27>
+        <Item28 Ref="35" Name="lblAddressLine2" ControlType="XRLabel" SizeF="300,12.5" LocationFloat="62.5, 37.5" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Address Line 2">
+          <StylePriority Ref="36" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item28>
+        <Item29 Ref="37" Name="xrLogo" ControlType="XRPictureBox" SizeF="62.5,68" LocationFloat="0, 0" Sizing="StretchImage" ImageUrl="/Libs/Images/logo.png" />
+        <Item30 Ref="38" Name="lblAddressLine1" ControlType="XRLabel" SizeF="300,12.5" LocationFloat="62.5, 25" Font="Tahoma, 8pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Address Line 1">
+          <StylePriority Ref="39" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item30>
+        <Item31 Ref="40" Name="lblHealthcareName" ControlType="XRLabel" SizeF="425,25" LocationFloat="62.5, 0" Font="Tahoma, 9.75pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Healthcare Name">
+          <StylePriority Ref="41" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item31>
+      </Controls>
+    </Item1>
+    <Item2 Ref="42" ControlType="PageFooterBand" Name="PageFooter" HeightF="29.50002">
+      <Controls>
+        <Item1 Ref="43" Name="xrPageInfo3" ControlType="XRPageInfo" SizeF="149.9999,12.5" Font="Tahoma, 7pt" Padding="2,2,0,0,100" LocationFloat="962.5, 12.5" TextAlignment="MiddleRight" Format="Page {0} of {1}">
+          <StylePriority Ref="44" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="45" Name="lineFooter" ControlType="XRLine" SizeF="1112.5,2" LocationFloat="0, 0" />
+        <Item3 Ref="46" Name="lblReportProperties" ControlType="XRLabel" SizeF="451.0417,12.5" LocationFloat="0, 12.5" Font="Tahoma, 7pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="MEDINFRAS - ReportID, Print Date/Time : dd-MMM-yyyy HH:MM:ss, User ID : XXXXX">
+          <StylePriority Ref="47" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item3>
+      </Controls>
+    </Item2>
+    <Item3 Ref="48" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+    <Item4 Ref="49" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+    <Item5 Ref="50" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+    <Item6 Ref="51" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="0" />
+    <Item7 Ref="52" ControlType="GroupHeaderBand" Name="GroupHeader1">
+      <Controls>
+        <Item1 Ref="53" Name="xrSubreport4" ControlType="XRSubreport" LockedInUserDesigner="true" SizeF="212.5,100" LocationFloat="675, 0">
+          <ReportSource Ref="55" ControlType="QIS.Medinfras.ReportDesktop.BNursingImplementationSubRpt, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DataSource="#Ref-54" Version="11.1" SnappingMode="SnapToGrid" PageHeight="1100" PageWidth="218" PaperKind="Custom" Margins="2, 2, 25, 25">
+            <Bands>
+              <Item1 Ref="56" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="12.5">
+                <Controls>
+                  <Item1 Ref="57" Name="xrLabel2" ControlType="XRLabel" SizeF="50,12.5" LocationFloat="0, 0" Padding="2,2,0,0,100" Text="xrLabel2">
+                    <DataBindings>
+                      <Item1 Ref="58" PropertyName="Text" DataMember="JournalTime" />
+                    </DataBindings>
+                  </Item1>
+                  <Item2 Ref="59" Name="xrLabel3" ControlType="XRLabel" SizeF="162.5,12.5" LocationFloat="50, 0" Padding="2,2,0,0,100" Text="xrLabel3">
+                    <DataBindings>
+                      <Item1 Ref="60" PropertyName="Text" DataMember="Remarks" />
+                    </DataBindings>
+                  </Item2>
+                </Controls>
+              </Item1>
+              <Item2 Ref="61" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+              <Item3 Ref="62" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+              <Item4 Ref="63" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="0" />
+              <Item5 Ref="64" ControlType="PageFooterBand" Name="PageFooter" HeightF="0" />
+              <Item6 Ref="65" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="23.95833">
+                <Controls>
+                  <Item1 Ref="66" Name="xrLine1" ControlType="XRLine" SizeF="212.5,12.5" LocationFloat="0, 0" LineStyle="Dot" />
+                </Controls>
+              </Item6>
+              <Item7 Ref="67" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="12.5">
+                <Controls>
+                  <Item1 Ref="68" Name="xrLabel1" ControlType="XRLabel" SizeF="212.5,12.5" LocationFloat="0, 0" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" Text="xrLabel1">
+                    <DataBindings>
+                      <Item1 Ref="69" PropertyName="Text" DataMember="JournalDateInStringDatePickerFormat" />
+                    </DataBindings>
+                    <StylePriority Ref="70" UseFont="false" />
+                  </Item1>
+                </Controls>
+                <GroupFields>
+                  <Item1 Ref="71" FieldName="JournalDate" />
+                </GroupFields>
+              </Item7>
+            </Bands>
+            <StyleSheet>
+              <Item1 Ref="72" Name="Title" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Times New Roman, 20pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+              <Item2 Ref="73" Name="FieldCaption" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 10pt, style=Bold" Sides="Top, Bottom" StringFormat="Near;Near;0;None;Character;Default" />
+              <Item3 Ref="74" Name="PageInfo" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 9pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+            </StyleSheet>
+          </ReportSource>
+        </Item1>
+        <Item2 Ref="75" Name="xrSubreport3" ControlType="XRSubreport" LockedInUserDesigner="true" SizeF="212.5,100" LocationFloat="900, 0">
+          <ReportSource Ref="77" ControlType="QIS.Medinfras.ReportDesktop.BNursingSOAPSubRpt, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DataSource="#Ref-76" EventsInfo="Detail,BeforePrint,Detail_BeforePrint;GroupHeader2,BeforePrint,xrLabel4_BeforePrint;xrLabel4,BeforePrint,xrLabel4_BeforePrint" Version="11.1" SnappingMode="SnapToGrid" PageHeight="1100" PageWidth="239" PaperKind="Custom" Margins="12, 12, 25, 25">
+            <Bands>
+              <Item1 Ref="78" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="12.5">
+                <Controls>
+                  <Item1 Ref="79" Name="xrLabel3" ControlType="XRLabel" SizeF="212.5,12.5" LocationFloat="0, 0" Padding="2,2,0,0,100" Text="xrLabel3">
+                    <DataBindings>
+                      <Item1 Ref="80" FormatString="- {0}" PropertyName="Text" DataMember="SOAPGroup2" />
+                    </DataBindings>
+                  </Item1>
+                </Controls>
+              </Item1>
+              <Item2 Ref="81" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+              <Item3 Ref="82" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+              <Item4 Ref="83" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="0" />
+              <Item5 Ref="84" ControlType="PageFooterBand" Name="PageFooter" HeightF="0" />
+              <Item6 Ref="85" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="12.5">
+                <Controls>
+                  <Item1 Ref="86" Name="xrLabel2" ControlType="XRLabel" SizeF="212.5,12.5" LocationFloat="0, 0" Padding="2,2,0,0,100" Text="xrLabel2">
+                    <DataBindings>
+                      <Item1 Ref="87" PropertyName="Text" DataMember="SOAPGroup1" />
+                    </DataBindings>
+                  </Item1>
+                </Controls>
+                <GroupFields>
+                  <Item1 Ref="88" FieldName="SOAPGroup1" />
+                </GroupFields>
+              </Item6>
+              <Item7 Ref="89" ControlType="GroupHeaderBand" Name="GroupHeader2" Level="1" HeightF="25">
+                <Controls>
+                  <Item1 Ref="90" Name="xrLabel4" ControlType="XRLabel" SizeF="212.5,25" LocationFloat="0, 0" Padding="2,2,0,0,100" Text="Masalah belum teratasi dengan indikator" />
+                </Controls>
+                <GroupFields>
+                  <Item1 Ref="91" FieldName="SOAPType" />
+                </GroupFields>
+              </Item7>
+              <Item8 Ref="92" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="0" />
+              <Item9 Ref="93" ControlType="GroupFooterBand" Name="GroupFooter2" Level="1" HeightF="21.875">
+                <Controls>
+                  <Item1 Ref="94" Name="xrLine2" ControlType="XRLine" SizeF="212.5,12.5" LocationFloat="0, 0" LineStyle="Dot" />
+                </Controls>
+              </Item9>
+              <Item10 Ref="95" ControlType="GroupHeaderBand" Name="GroupHeader3" Level="2" HeightF="12.5">
+                <Controls>
+                  <Item1 Ref="96" Name="xrLabel1" ControlType="XRLabel" SizeF="212.5,12.5" LocationFloat="0, 0" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" Text="xrLabel1">
+                    <DataBindings>
+                      <Item1 Ref="97" PropertyName="Text" DataMember="SOAPTypeName" />
+                    </DataBindings>
+                    <StylePriority Ref="98" UseFont="false" />
+                  </Item1>
+                </Controls>
+                <GroupFields>
+                  <Item1 Ref="99" FieldName="SOAPType" />
+                </GroupFields>
+              </Item10>
+            </Bands>
+            <StyleSheet>
+              <Item1 Ref="100" Name="Title" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Times New Roman, 20pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+              <Item2 Ref="101" Name="FieldCaption" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 10pt, style=Bold" Sides="Top, Bottom" StringFormat="Near;Near;0;None;Character;Default" />
+              <Item3 Ref="102" Name="PageInfo" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 9pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+            </StyleSheet>
+          </ReportSource>
+        </Item2>
+        <Item3 Ref="103" Name="xrSubreport2" ControlType="XRSubreport" SizeF="212.5,100" LocationFloat="450, 0">
+          <ReportSource Ref="105" ControlType="QIS.Medinfras.ReportDesktop.BNursingInterventionItemSubRpt, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DataSource="#Ref-104" Version="11.1" SnappingMode="SnapToGrid" PageHeight="1100" PageWidth="226" PaperKind="Custom" Margins="6, 6, 25, 25">
+            <Bands>
+              <Item1 Ref="106" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="17.70833">
+                <Controls>
+                  <Item1 Ref="107" Name="xrLabel4" ControlType="XRLabel" SizeF="37.5,12.5" LocationFloat="0, 0" Padding="2,2,0,0,100" Text="xrLabel4">
+                    <DataBindings>
+                      <Item1 Ref="108" PropertyName="Text" DataMember="DisplayOrder" />
+                    </DataBindings>
+                    <Summary Ref="109" FormatString="{0}." Func="RecordNumber" />
+                  </Item1>
+                  <Item2 Ref="110" Name="xrLabel3" ControlType="XRLabel" SizeF="175,12.5" LocationFloat="37.5, 0" Padding="2,2,0,0,100" Text="[NursingItemText]" />
+                </Controls>
+              </Item1>
+              <Item2 Ref="111" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+              <Item3 Ref="112" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+              <Item4 Ref="113" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="0" />
+              <Item5 Ref="114" ControlType="PageFooterBand" Name="PageFooter" HeightF="0" />
+              <Item6 Ref="115" ControlType="GroupHeaderBand" Name="GroupHeader1" Font="Times New Roman, 9.75pt, style=Bold" HeightF="13">
+                <Controls>
+                  <Item1 Ref="116" Name="xrLabel2" ControlType="XRLabel" SizeF="212.4999,13" LocationFloat="6.357829E-05, 0" Padding="2,2,0,0,100" Text="xrLabel2">
+                    <DataBindings>
+                      <Item1 Ref="117" PropertyName="Text" DataMember="NurseInterventionName" />
+                    </DataBindings>
+                  </Item1>
+                </Controls>
+                <StylePriority Ref="118" UseFont="false" />
+                <GroupFields>
+                  <Item1 Ref="119" FieldName="NursingInterventionID" />
+                </GroupFields>
+              </Item6>
+              <Item7 Ref="120" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="23.95833">
+                <Controls>
+                  <Item1 Ref="121" Name="xrLine1" ControlType="XRLine" SizeF="212.5,12.5" LocationFloat="0, 0" LineStyle="Dot" />
+                </Controls>
+              </Item7>
+            </Bands>
+            <StyleSheet>
+              <Item1 Ref="122" Name="Title" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Times New Roman, 20pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+              <Item2 Ref="123" Name="FieldCaption" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 10pt, style=Bold" Sides="Top, Bottom" StringFormat="Near;Near;0;None;Character;Default" />
+              <Item3 Ref="124" Name="PageInfo" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 9pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+            </StyleSheet>
+          </ReportSource>
+        </Item3>
+        <Item4 Ref="125" Name="xrSubreport1" ControlType="XRSubreport" SizeF="212.5,100" LocationFloat="225, 0">
+          <ReportSource Ref="127" ControlType="QIS.Medinfras.ReportDesktop.BNursingOutcomeItemSubRpt, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DataSource="#Ref-126" Version="11.1" SnappingMode="SnapToGrid" PageHeight="1100" PageWidth="240" PaperKind="Custom" Margins="12, 12, 25, 25">
+            <Bands>
+              <Item1 Ref="128" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="12.5">
+                <Controls>
+                  <Item1 Ref="129" Name="xrLabel1" ControlType="XRLabel" SizeF="37.5,12.5" LocationFloat="175, 0" Padding="2,2,0,0,100" TextAlignment="TopCenter" Text="xrLabel1">
+                    <DataBindings>
+                      <Item1 Ref="130" PropertyName="Text" DataMember="ScaleScore" />
+                    </DataBindings>
+                    <StylePriority Ref="131" UseTextAlignment="false" />
+                  </Item1>
+                  <Item2 Ref="132" Name="xrLabel3" ControlType="XRLabel" SizeF="174.9999,12.5" LocationFloat="7.947286E-05, 0" Padding="2,2,0,0,100" Text="xrLabel3">
+                    <DataBindings>
+                      <Item1 Ref="133" FormatString="- {0}" PropertyName="Text" DataMember="NursingIndicatorText" />
+                    </DataBindings>
+                  </Item2>
+                </Controls>
+              </Item1>
+              <Item2 Ref="134" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+              <Item3 Ref="135" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+              <Item4 Ref="136" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="25">
+                <Controls>
+                  <Item1 Ref="137" Name="lblNOCHeader" ControlType="XRLabel" SizeF="212.5,25" LocationFloat="0, 0" Padding="2,2,0,0,100" Text="lblNOCHeader" />
+                </Controls>
+              </Item4>
+              <Item5 Ref="138" ControlType="PageFooterBand" Name="PageFooter" HeightF="0" />
+              <Item6 Ref="139" ControlType="GroupHeaderBand" Name="GroupHeader1" Font="Times New Roman, 9.75pt, style=Bold" HeightF="13">
+                <Controls>
+                  <Item1 Ref="140" Name="xrLabel2" ControlType="XRLabel" SizeF="212.4999,13" LocationFloat="6.357829E-05, 0" Padding="2,2,0,0,100" Text="xrLabel2">
+                    <DataBindings>
+                      <Item1 Ref="141" PropertyName="Text" DataMember="NursingDiagnoseItemText" />
+                    </DataBindings>
+                  </Item1>
+                </Controls>
+                <StylePriority Ref="142" UseFont="false" />
+                <GroupFields>
+                  <Item1 Ref="143" FieldName="NursingDiagnoseItemID" />
+                </GroupFields>
+              </Item6>
+              <Item7 Ref="144" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="25">
+                <Controls>
+                  <Item1 Ref="145" Name="xrLine1" ControlType="XRLine" SizeF="212.5,12.5" LocationFloat="0, 0" LineStyle="Dot" />
+                </Controls>
+              </Item7>
+            </Bands>
+            <StyleSheet>
+              <Item1 Ref="146" Name="Title" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Times New Roman, 20pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+              <Item2 Ref="147" Name="FieldCaption" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 10pt, style=Bold" Sides="Top, Bottom" StringFormat="Near;Near;0;None;Character;Default" />
+              <Item3 Ref="148" Name="PageInfo" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 9pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+            </StyleSheet>
+          </ReportSource>
+        </Item4>
+        <Item5 Ref="149" Name="sbrNursingDiagnoseItem" ControlType="XRSubreport" SizeF="212.5,100" LocationFloat="0, 0">
+          <ReportSource Ref="151" ControlType="QIS.Medinfras.ReportDesktop.BNursingDiagnoseItemSubRpt, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DataSource="#Ref-150" Version="11.1" SnappingMode="SnapToGrid" PageHeight="1100" PageWidth="236" PaperKind="Custom" Margins="11, 11, 25, 25">
+            <Bands>
+              <Item1 Ref="152" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="13">
+                <Controls>
+                  <Item1 Ref="153" Name="xrLabel3" ControlType="XRLabel" SizeF="212.4999,13" LocationFloat="0, 0" Padding="2,2,0,0,100" Text="[NursingItemText]" />
+                </Controls>
+              </Item1>
+              <Item2 Ref="154" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+              <Item3 Ref="155" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+              <Item4 Ref="156" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="17.70833">
+                <Controls>
+                  <Item1 Ref="157" Name="lblDiagnoseName" ControlType="XRLabel" SizeF="212.5,12.5" LocationFloat="0, 0" Padding="2,2,0,0,100" Text="lblDiagnoseName" />
+                </Controls>
+              </Item4>
+              <Item5 Ref="158" ControlType="PageFooterBand" Name="PageFooter" HeightF="0" />
+              <Item6 Ref="159" ControlType="GroupHeaderBand" Name="GroupHeader1" Font="Times New Roman, 9.75pt, style=Bold" HeightF="13">
+                <Controls>
+                  <Item1 Ref="160" Name="lblItemSubGroup" ControlType="XRLabel" SizeF="212.4999,13" LocationFloat="6.357829E-05, 0" Font="Times New Roman, 9.75pt, style=Bold, Italic" Padding="2,2,0,0,100" Text="[NursingItemGroupSubGroupCaption]">
+                    <StylePriority Ref="161" UseFont="false" />
+                  </Item1>
+                </Controls>
+                <StylePriority Ref="162" UseFont="false" />
+                <GroupFields>
+                  <Item1 Ref="163" FieldName="NursingItemGroupSubGroupOrder" />
+                  <Item2 Ref="164" FieldName="NursingItemGroupSubGroupText" />
+                </GroupFields>
+              </Item6>
+              <Item7 Ref="165" ControlType="GroupHeaderBand" Name="GroupHeader2" Font="Times New Roman, 9.75pt, style=Bold" Level="1" HeightF="16.75002">
+                <Controls>
+                  <Item1 Ref="166" Name="xrLabel1" ControlType="XRLabel" SizeF="212.4999,12.5" LocationFloat="6.357829E-05, 0" Padding="2,2,0,0,100" Text="[NursingItemGroupSubGroupParentCaption]" />
+                </Controls>
+                <StylePriority Ref="167" UseFont="false" />
+                <GroupFields>
+                  <Item1 Ref="168" FieldName="NursingItemGroupSubGroupParentOrder" />
+                  <Item2 Ref="169" FieldName="NursingItemGroupSubGroupParentID" />
+                </GroupFields>
+              </Item7>
+              <Item8 Ref="170" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="0" />
+              <Item9 Ref="171" ControlType="GroupFooterBand" Name="GroupFooter2" Level="1" HeightF="25">
+                <Controls>
+                  <Item1 Ref="172" Name="xrLabel4" ControlType="XRLabel" SizeF="212.5,12.5" LocationFloat="0, 0" Padding="2,2,0,0,100" Text=" " />
+                </Controls>
+              </Item9>
+            </Bands>
+            <StyleSheet>
+              <Item1 Ref="173" Name="Title" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Times New Roman, 20pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+              <Item2 Ref="174" Name="FieldCaption" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 10pt, style=Bold" Sides="Top, Bottom" StringFormat="Near;Near;0;None;Character;Default" />
+              <Item3 Ref="175" Name="PageInfo" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 9pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+            </StyleSheet>
+          </ReportSource>
+        </Item5>
+      </Controls>
+    </Item7>
+    <Item8 Ref="176" ControlType="GroupHeaderBand" Name="GroupHeader2" Level="1" RepeatEveryPage="true">
+      <Controls>
+        <Item1 Ref="177" Name="xrLabel22" ControlType="XRLabel" SizeF="212.5,37.5" LocationFloat="675, 62.5" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" Borders="Top, Bottom" TextAlignment="MiddleCenter" Text="Implementasi">
+          <StylePriority Ref="178" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="179" Name="xrLabel17" ControlType="XRLabel" SizeF="1112.5,25" LocationFloat="0, 25" Padding="2,2,0,0,100" Text="[NursingDiagnoseDescription]" />
+        <Item3 Ref="180" Name="xrLabel2" ControlType="XRLabel" SizeF="12.5,25" LocationFloat="125, 0" Padding="2,2,0,0,100" Text=":" />
+        <Item4 Ref="181" Name="xrLabel3" ControlType="XRLabel" SizeF="400,25" LocationFloat="137.5, 0" Padding="2,2,0,0,100" Text="xrLabel3">
+          <DataBindings>
+            <Item1 Ref="182" PropertyName="Text" DataMember="NurseDiagnoseName" />
+          </DataBindings>
+        </Item4>
+        <Item5 Ref="183" Name="xrLabel1" ControlType="XRLabel" SizeF="125,25" LocationFloat="0, 0" Font="Tahoma, 9pt, style=Bold" Padding="2,2,0,0,100" Text="NANDA-I">
+          <StylePriority Ref="184" UseFont="false" />
+        </Item5>
+        <Item6 Ref="185" Name="xrLabel18" ControlType="XRLabel" SizeF="212.5,37.5" LocationFloat="900, 62.5" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" Borders="Top, Bottom" TextAlignment="MiddleCenter" Text="Evaluasi">
+          <StylePriority Ref="186" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="187" Name="xrLabel20" ControlType="XRLabel" SizeF="175,37.5" LocationFloat="225, 62.5" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" Borders="Top, Bottom" TextAlignment="MiddleCenter" Text="NOC ( Nursing Outcome Classification )">
+          <StylePriority Ref="188" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="189" Name="xrLabel19" ControlType="XRLabel" SizeF="37.5,37.5" LocationFloat="400, 62.5" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" Borders="Left, Top, Bottom" TextAlignment="MiddleCenter" Text="Nilai">
+          <StylePriority Ref="190" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item8>
+        <Item9 Ref="191" Name="xrLabel21" ControlType="XRLabel" SizeF="212.5,37.5" LocationFloat="450, 62.5" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" Borders="Top, Bottom" TextAlignment="MiddleCenter" Text="NIC ( Nursing Intervention Classification )">
+          <StylePriority Ref="192" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item9>
+        <Item10 Ref="193" Name="xrLabel23" ControlType="XRLabel" SizeF="212.5,37.5" LocationFloat="0, 62.5" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" Borders="Top, Bottom" TextAlignment="MiddleCenter" Text="Diagnosis Keperawatan">
+          <StylePriority Ref="194" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item10>
+      </Controls>
+    </Item8>
+    <Item9 Ref="195" ControlType="ReportFooterBand" Name="ReportFooter">
+      <Controls>
+        <Item1 Ref="196" Name="lblParameter6" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="737.5, 75" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter6 = ParameterValue6">
+          <StylePriority Ref="197" UseFont="false" />
+        </Item1>
+        <Item2 Ref="198" Name="lblParameter0" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 50" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter0 = ParameterValue0">
+          <StylePriority Ref="199" UseFont="false" />
+        </Item2>
+        <Item3 Ref="200" Name="lblParameter1" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 62.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter1 = ParameterValue1">
+          <StylePriority Ref="201" UseFont="false" />
+        </Item3>
+        <Item4 Ref="202" Name="lblParameter2" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 75" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter2 = ParameterValue2">
+          <StylePriority Ref="203" UseFont="false" />
+        </Item4>
+        <Item5 Ref="204" Name="lblParameter4" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="737.5, 50" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter4 = ParameterValue4">
+          <StylePriority Ref="205" UseFont="false" />
+        </Item5>
+        <Item6 Ref="206" Name="lblParameter5" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="737.5, 62.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter5 = ParameterValue5">
+          <StylePriority Ref="207" UseFont="false" />
+        </Item6>
+        <Item7 Ref="208" Name="lblReportParameter" ControlType="XRLabel" SizeF="150,12.5" LocationFloat="0, 25" Font="Tahoma, 8pt, style=Bold, Underline" Padding="2,2,0,0,100" Text="Report Parameter(s) :">
+          <StylePriority Ref="209" UseFont="false" />
+        </Item7>
+        <Item8 Ref="210" Name="lblParameter3" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="0, 87.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter3 = ParameterValue3">
+          <StylePriority Ref="211" UseFont="false" />
+        </Item8>
+        <Item9 Ref="212" Name="lblParameter7" ControlType="XRLabel" SizeF="375,12.5" LocationFloat="737.5, 87.5" Font="Tahoma, 8pt, style=Bold" Padding="2,2,0,0,100" Visible="false" Text="Parameter7 = ParameterValue7">
+          <StylePriority Ref="213" UseFont="false" />
+        </Item9>
+      </Controls>
+    </Item9>
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="214" Name="Title" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Times New Roman, 20pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item2 Ref="215" Name="FieldCaption" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 10pt, style=Bold" Sides="Top, Bottom" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item3 Ref="216" Name="PageInfo" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 9pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+  </StyleSheet>
+  <ObjectStorage>
+    <Item1 Ref="54" Content="~Xtra#NULL" Type="System.Windows.Forms.BindingSource" />
+    <Item2 Ref="76" Content="~Xtra#NULL" Type="System.Windows.Forms.BindingSource" />
+    <Item3 Ref="104" Content="~Xtra#NULL" Type="System.Windows.Forms.BindingSource" />
+    <Item4 Ref="126" Content="~Xtra#NULL" Type="System.Windows.Forms.BindingSource" />
+    <Item5 Ref="150" Content="~Xtra#NULL" Type="System.Windows.Forms.BindingSource" />
+    <Item6 Ref="0" Content="~Xtra#NULL" Type="System.Windows.Forms.BindingSource" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

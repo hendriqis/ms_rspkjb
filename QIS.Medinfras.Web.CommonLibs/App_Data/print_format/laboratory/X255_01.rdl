@@ -1,0 +1,15 @@
+﻿^XA
+^LL200
+^PW400
+^LH5,10
+^A0N,28,33
+^FO20,30^FD{PatientName}^FS
+^A0N,28,24
+^FO20,80^FD{MedicalNo}^FS 
+^AQN,28,24
+^FO20,120^FD{DateOfBirthInString} ({Sex})^FS
+^AQN,28,24
+^FO20,160^FD{VisitDateInString}   {BedCode}^FS
+^FO20,200^FD{ServiceUnitName}^FS
+^PR2
+^XZ

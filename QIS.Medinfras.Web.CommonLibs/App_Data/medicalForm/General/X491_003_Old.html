@@ -1,0 +1,288 @@
+<div class="header" style="margin-bottom: 2%">
+    <h3 style="margin-left: 10%">Asesmen Nutrisi Berdasarkan Malnutrition Screening Tool (MST)</h3>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<ul>
+				<li style="list-style-type: decimal;">Apakah pasien mengalami penurunan BB yang tidak diinginkan dalam waktu 6 bulan terakhir :</li>
+						<table style="width: 50%">
+							<tr>
+								<td>
+									<input type="checkbox" class="chkForm" controlID="chkForm01">
+										Tidak ada penurunan BB
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="chkForm" controlID="chkForm02">
+										Tidak yakin / tidak tahu / terasa baju lebih longgar
+								</td>
+							</tr>
+							<tr>
+								<td>
+										Jika YA, berapa penurunan BB tersebut ? <br>
+									<input type="checkbox" class="chkForm" controlID="chkForm03"> 1 - 5 kg <br>
+									<input type="checkbox" class="chkForm" controlID="chkForm04"> 6 - 10 kg <br>
+									<input type="checkbox" class="chkForm" controlID="chkForm05"> 11 - 15 kg <br>
+									<input type="checkbox" class="chkForm" controlID="chkForm06"> > 15 kg
+								</td>
+							</tr>
+						</table>
+				<li style="list-style-type: decimal;">Apakah asupan makan berkurang karena tidak nafsu makan ?</li>
+					<table>
+						<tr>
+							<td>
+								<input type="radio" class="optForm" controlID="optForm01">Tidak
+							</td>
+						</tr>
+							<td>
+								<input type="radio" class="optForm" controlID="optForm02">Ya
+							</td>
+						</tr>
+							<tr>
+								<td>
+									<b>Total Skor
+									<input type="text" class="txtForm" controlID="txtForm01"  
+									style="width: 50%; border-bottom-style: dotted; 
+									border-top-style: none; border-right-style: none; 
+									border-left-style: none;"></b> 
+								</td>
+							</tr>
+						</table>
+
+				<li style="list-style-type: decimal;">
+					Pasien dengan diagnosa khusus :
+					<input type="radio" class="optForm" controlID="optForm03">
+					Ya
+
+					<input type="radio" class="optForm" controlID="optForm04">
+					Tidak
+				</li>
+				<li style="list-style-type: none;">(DM / Kemoterapi / Hemodialisa / Geriatri / Immunitas menurun / 
+					<input type="text" class="txtForm" controlID="txtForm02"  
+					style="width: 15%; border-bottom-style: dotted; 
+					border-top-style: none; border-right-style: none; 
+					border-left-style: none;">
+				</li>
+				<li style="list-style-type: none; margin-top: 1%">
+					Pasien memerlukan konsultasi Gizi 
+					<input type="radio" class="optForm" controlID="optForm05"> Ya
+					<input type="radio" class="optForm" controlID="optForm06"> Tidak
+					<br>
+					<i><b>Keterangan : </b></i> Total skor nilai gizi <br>
+					0-1 : tidak beresiko malnutrisi <br>
+					>2 : beresiko malnutrisi <br>
+					(Bila beresiko malnutrisi : konsul dengan ahli gizi)
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col" style="margin-left:3% ">
+			<b>Status Fungsional</b>
+			<table border="1" style="border-style: solid;border-collapse: collapse;width: 60%;">
+				<tr>
+					<td>No</td>
+					<td>Item yang dinilai</td>
+					<td>Skor</td>
+					<td>Sebelum sakit</td>
+					<td>Sebelum sakit</td>
+				</tr>
+				<tr>
+					<td>1.</td>
+					<td>Makan (Fooding)</td>
+					<td>
+						0 = Tidak mampu <br>
+						1 = Butuh bantuan memotong, menoles mentega dll <br>
+						2 = Mandiri
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm03"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm04"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+				</tr>
+				<tr>
+					<td>2.</td>
+					<td>Mandi (Bathing)</td>
+					<td>
+						0 = Tergantung orang lain<br>
+						1 = Mandiri	
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm05"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm06"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+				</tr>
+				<tr>
+					<td>3.</td>
+					<td>Perawatan diri (Grooming)</td>
+					<td>
+						0 = Membutuhkan bantuan orang lain<br>
+						1 = Mandiri dalam perawatan muka, rambut, gigi dan bercukur
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm07"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm08"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+				</tr>
+				<tr>
+					<td>4.</td>
+					<td>Berpakaian (Dressing)</td>
+					<td>
+						0 = Tergantung orang lain<br>
+						1 = Sebagian dibantu (misal mengancing baju) <br>
+						2 = Mandiri
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm09"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm10"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+				</tr>
+				<tr>
+					<td>5.</td>
+					<td>Buang air kecil (Bowel)</td>
+					<td>
+						0 = Inkontinensia atau pakai kateter dan tidak terkontrol <br>
+						1 = Kadang inkontinensia (maks, 1x24 jam) <br>
+						2 = Kontinensia (teratur untuk lebih dari 7 hari)
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm11"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm12"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+				</tr>
+				<tr>
+					<td>6.</td>
+					<td>Buang air besar (Bladder)</td>
+					<td>
+						0 = Inkontinensia (tidak teratur atau perlu enema)<br>
+						1 = Kadang inkontinensia (sekali seminggu)
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm13"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm14"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+				</tr>
+				<tr>
+					<td>7.</td>
+					<td>Penggunaan toilet</td>
+					<td>
+						0 = Tergantung bantuan orang lain<br>
+						1 = Membutuhkan bantuan, tapi dapat melakukan beberapa hal sendiri <br>
+						2 = Mandiri
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm15"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm16"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+				</tr>
+				<tr>
+					<td>8.</td>
+					<td>Transfer</td>
+					<td>
+						0 = Tidak mampu<br>
+						1 = Butuh bantuan untuk bisa duduk (2 orang) <br>
+						2 = Bantuan kecil (1 orang) <br>
+						3 = Mandiri
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm17"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm18"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+				</tr>
+				<tr>
+					<td>9.</td>
+					<td>Mobilitas</td>
+					<td>
+						0 = Immobile (tidak mampu)<br>
+						1 = Menggunakan kursi roda <br>
+						2 = Berjalan dengan bantuan satu orang <br>
+						3 = Mandiri (meskipun menggunakan alat bantu seperti, tongkat)
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm19"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+					<td>
+						<input type="text" class="txtForm" controlID="txtForm20"  
+						style="width: 87px; border-bottom-style: dotted; 
+						border-top-style: none; border-right-style: none; 
+						border-left-style: none;">
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+

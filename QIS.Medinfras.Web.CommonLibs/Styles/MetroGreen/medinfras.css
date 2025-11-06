@@ -1,0 +1,159 @@
+﻿*                               {  }
+body                            { background-color: #E6F7B5; color: #000; }
+
+input                                                                   { color: #000; }
+input[type="text"], input[type="password"], textarea                    { border: 1px solid #BABABA; }
+input[type="text"].error, input[type="password"].error, textarea.error, select.error  { border: 1px solid red; }
+input[readonly="readonly"], input[disabled="disabled"], 
+textarea[readonly="readonly"], select[disabled="disabled"]              { color: Maroon; background-color: #EAEAEA; border: 1px solid #848484; border-right: 1px solid #FAFAFA; border-bottom: 1px solid #FAFAFA; }
+input[type="button"], input[type="submit"]                              { cursor: pointer; color: #FFF; background-color: #F36F00; border: 0px;   }
+
+hr                              { border: 1px solid #73BE32; }
+
+.containerUlTabPage             { background-color: #E1F4B9; border-bottom: 1px solid #BBE661; }
+.ulTabPage li:hover             { border: 1px solid #BBE661; border-bottom: 0px; }
+.ulTabPage li.selected          { background-color: White; border: 1px solid #BBE661; border-bottom: 0px; }
+
+.containerUlTabPage2             { background-color: #E1F4B9; border-bottom: 1px solid #BBE661; }
+.ulTabPage2 li:hover             { border: 1px solid #BBE661; border-bottom: 0px; }
+.ulTabPage2 li.selected          { background-color: White; border: 1px solid #BBE661; border-bottom: 0px; }
+
+.lblComponent                   { background-color: #9CC525; }
+
+.elmSelected                    { background-color: #F39200; color: #FFF; }
+
+.containerPaging                { /*background-color: #1BA1E2;*/ background-color: #225FB4; border: 1px solid #fff; color: #a5a5a5; }
+
+.applicationTopBar              { background-color: #426D1D; border: 1px solid White; }
+
+.dxpgControl tr td                          { background-color: #FFFFFF; }
+.dxpgControl tr td tr:first-child td        { background-color: #9CC525; }     
+
+/* #region Toolbar Area */      
+.toolbarArea                { background-color: #57A700; color:#FFFFFF; }
+
+#leftNavPanel          { border:1px solid #6E6E6E; width:100%;height:100%; position: relative; }    
+#leftNavPanel > ul       { margin:0; padding:2px; border-bottom:1px groove black; }
+#leftNavPanel > ul > li    { list-style-type: none; font-size: 15px; display:list-item; border: 1px solid #fdf5e6!important; padding: 5px 8px; cursor: pointer; background-color:#87CEEB!important; }
+#leftNavPanel > ul > li.selected { background-color: #ff5722!important; color: White; }   
+.divNavContent { padding-left: 3px; min-height:490px;} 
+.toolbarArea ul li:hover    { background-color: #F39200; }
+/* #endregion */    
+
+/* #region Content Page */  
+.hospitalName               { color: #FFF; }
+.userlogininfo              { color: #FFF; }
+.userlogininfodetail        { background-color: #DB4B03; }
+.userlogininfodetail a      { color: White; text-decoration: none; font-size: 0.9em; }
+.userlogininfodetail a:hover { text-decoration: underline; }
+.userlogininfo:hover,.userlogininfo.opened        { background-color: #F4921B; }  
+ 
+div.pageTitle               { background-color: #999999; color: #FFFFFF; }
+.tblContentArea             { background-color: #FFF; border: 1px solid #EAEAEA; }
+        
+h4                          { background-color: #73BE32; color: White; }   
+        
+.lblLink                    { color: #5200FD; }
+.tdValue                    { color: #5200FD; }
+.lblDisabled                { color: #A3A2B0; }
+.lblInfo                    { color: #A425D9; }
+.lblWarning                 { color: Red; font-size: 1.3em; font-weight:bold;}
+/* #endregion */ 
+
+/* #region Grid */
+.trFooter td                    { background-color: #DDD; height: 30px; border:1px solid #D7EEF7; }
+
+.grdView th                     { background-color: #9CC525; border:1px solid #F3F3F3; }
+.grdView > tbody > tr:nth-child(odd)      { background-color: #FFFFFF; }
+.grdView > tbody > tr:nth-child(even)     { background-color: #F9F9F9; }
+.grdView:not(.notAllowSelect) tr:not(.trEmpty):hover { background-color: #F39200; }
+.grdView tr.trEmpty             { cursor: default; height: 50px; vertical-align: middle; text-align: center; }
+.grdView > tbody > tr > td      { border:1px solid #E3E2E3; color: #000; }
+.grdView:not(.notAllowSelect) tr:not(.trEmpty):hover td { color: #FFF; }
+/*.grdView tr:hover, .grdView tr:hover + tr.trDetail      { background-color: #F39200; color: #FFF; }*/
+
+.grdCollapsible th                     { background-color: #9CC525; border:1px solid #F3F3F3; }
+.grdCollapsible > tbody > tr:nth-child(4n-3),
+.grdCollapsible > tbody > tr:nth-child(4n-4)     { background-color: #FFFFFF; }
+.grdCollapsible > tbody > tr:nth-child(4n-1),
+.grdCollapsible > tbody > tr:nth-child(4n-2)     { background-color: #F9F9F9; }
+.grdCollapsible tr.trEmpty             { cursor: default; height: 50px; vertical-align: middle; text-align: center; }
+.grdCollapsible > tbody > tr > td                  { border:1px solid #D7EEF7; color: #000; }
+.grdCollapsible:not(.notAllowSelect) > tbody > tr:not(.trEmpty):not(.trDetail):hover { background-color: #F39200; }
+.grdCollapsible:not(.notAllowSelect) > tbody > tr:not(.trEmpty):not(.trDetail):hover > td { color: #FFF; }
+
+.grdSelected th                     { background-color: #9CC525; border:1px solid #F3F3F3; }
+.grdSelected > tbody > tr:not(.trDetail):nth-child(odd)      { background-color: #FFFFFF; }
+.grdSelected > tbody > tr:not(.trDetail):nth-child(even)     { background-color: #F9F9F9; }
+.grdSelected > tbody > tr.trEmpty             { cursor: default; height: 50px; vertical-align: middle; text-align: center; }
+.grdSelected > tbody > tr > td                  { border:1px solid #E3E2E3; color: #000; }
+.grdSelected > tbody > tr:not(.trDetail).selected            { background-color: #F39200; }
+.grdSelected > tbody > tr.selected > td         { color: White; }
+.grdSelected > tbody > tr:not(.trDetail).focus              { border:2px dotted #F36F00 !important; }
+.grdSelected > tbody > tr:not(.trDetail).focus > td              {  }
+
+.grdLabResultDt th                     { background-color: #2585F3; color: White; border:1px solid #F3F3F3; }
+.grdLabResultDt > tbody > tr:not(.trDetail):nth-child(odd)      { background-color: #DDDDDD; }
+.grdLabResultDt > tbody > tr:not(.trDetail):nth-child(even)     { background-color: #EEEEEE; }
+.grdLabResultDt > tbody > tr.trEmpty             { cursor: default; height: 50px; vertical-align: middle; text-align: center; }
+.grdLabResultDt > tbody > tr > td                  { border:1px solid #D7EEF7; color: #000; }
+.grdLabResultDt > tbody > tr:not(.trDetail).selected            { background-color: #ffeaa7; }
+.grdLabResultDt > tbody > tr.selected > td         { color: Black; }
+.grdLabResultDt > tbody > tr:not(.trDetail).focus              { background-color: #F4921B; }
+.grdLabResultDt > tbody > tr:not(.trDetail).focus > td              {  }
+
+.grdNormal th               { background-color: #9CC525; border:1px solid #F3F3F3; }
+.grdNormal > tbody > tr               { background-color: #FFFFFF; }
+/*.grdNormal > tbody > tr:nth-child(odd)      { background-color: #FFFFFF; }
+.grdNormal > tbody > tr:nth-child(even)     { background-color: #F9F9F9; }*/
+.grdNormal > tbody > tr > td            { border:1px solid #D7EEF7; color: #000; }
+.grdNormal > tbody > tr.trEmpty             { cursor: default; height: 50px; vertical-align: middle; text-align: center; }
+
+.gridCheckBoxSelectedItem { background-color: #FE5D15; color: White; }
+/* #endregion */
+
+/* #region Search Dialog */  
+.dxpcHeader                     { background-color: #CDD8C3; padding: 5px !important; color: #F00 !important; }
+.dxpcHeader td                  { color: #000 !important; }
+/* #endregion */ 
+
+/* #region Drop Down Menu */
+.containerDropDownMenu  { background: #E5F3D8; }
+.sf-menu li.liHeader    { border-top:1px solid #CBE7B1; border-bottom:1px solid #CBE7B1; }
+.sf-menu li.liHeader:first-child { border-left:1px solid #CBE7B1; }
+.sf-menu li.liHeader:last-child  { border-right:1px solid #CBE7B1; }
+.sf-menu li             { background: #E5F3D8; }
+.sf-menu li li          { background: #FFF; }
+.sf-menu li li li       { background: #FFF; }
+.sf-menu a, .sf-menu a:visited  { color: #000; }
+.sf-menu li:hover, .sf-menu li.sfHover,
+.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active { background:	#CBE7B1; }
+.sf-menu a:hover, .sf-menu li:hover { color:#333333; }
+.sf-menu a              { border-left: 1px solid #CCCCCC; }
+/* #endregion */
+
+/* #region Right Panel */
+#divListRightPanel                                      { color: #FFF; background-color: #383839; }
+#divListRightPanel .rightPanelContent                   { border-bottom: 1px solid #FFF; }
+#divListRightPanel .rightPanelContent a                 { color: #FFF; background-color: #F36F00; }
+#divListRightPanel .rightPanelContent div.qmtitle       { color: #FFF !important; }
+#divListRightPanel .rightPanelContent div.qmdescription { color: #AAA; }
+/* #endregion */
+
+/* #region Login */
+.loginContainerLoginInfo    { background-color: #57A700; color: White; }
+.loginBg                    {   }
+/* #endregion */
+
+/* #region EMR */
+div.headerHistoryContent  { background-color: #9CC525; }
+/* #endregion */
+
+/* #region Detail Page : Left Navigation Panel */
+    #leftPageNavPanel          { border:1px solid #6E6E6E; width:100%;height:100%; position: relative; }    
+    #leftPageNavPanel > ul       { margin:0; padding:2px; border-bottom:1px groove black; }
+    #leftPageNavPanel > ul > li    { list-style-type: none; font-size: 15px; display:list-item; border: 1px solid #fdf5e6!important; padding: 5px 8px; cursor: pointer; background-color:#87CEEB!important; }
+    #leftPageNavPanel > ul > li.selected { background-color: #ff5722!important; color: White; }   
+    .divPageNavPanelContent { padding-left: 3px; min-height:490px;} 
+    .divPageNavPanel1Content { padding-left: 1px; min-height:400px;}     
+/* #region Detail Page : Left Navigation Panel */    

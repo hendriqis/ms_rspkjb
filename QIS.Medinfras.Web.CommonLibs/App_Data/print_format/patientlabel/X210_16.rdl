@@ -1,0 +1,19 @@
+﻿^XA
+^LL200
+^PW400
+^LH5,10
+^AQN,28,24
+^FO15 ,5^FDMRN^FS
+^AQN,28,24
+^FO160,5^FD:^FS 
+^AQN,28,24
+^FO170,5^FD{MedicalNo}^FS 
+^A0N,28,33
+^FO15 , 40^FB380,7,^FD{cfPatientNameSalutation} ({cfGenderInitial})^FS
+^AQN,28,24
+^FO15 , 105^FB380,7,^FDREG : {RegistrationNo}^FS
+^AQN,28,24
+^FO15 , 130^FB380,7,^FD{DateOfBirthInString} ({PatientAge})^FS
+^AQN,28,24
+^FO15 , 160^FB380,7,^FD{MobilePhoneNo}^FS
+^XZ

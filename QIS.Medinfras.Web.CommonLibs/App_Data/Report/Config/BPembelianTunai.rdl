@@ -1,0 +1,20 @@
+{
+	'Sources':[
+		{
+			'DataSource' : 'GetvDirectPurchaseHdList',
+			'ConditionType' : 'Param',
+			'Condition' : 'DirectPurchaseID IN (SELECT DirectPurchaseID FROM vDirectPurchaseDt WHERE {0})',
+			'ParamSkip' : 0,
+			'ConditionParams': 1,
+			'UsedData' : ['TransactionAmount','FinalDiscount','VATPercentage','CreatedByUserName']
+		}
+	],
+	'Fields':[
+		{'LabelName':'lblFinalDiscount', 'Name' : 'finalDiscount', 'Source' : ['E.TransactionAmount','E.FinalDiscount','100'], 'Operator' : ['*','/'], 'Format' : 'N'},
+		{'LabelName':'lblPPN', 'Name' : 'ppn', 'Source' : ['E.TransactionAmount','finalDiscount','E.VATPercentage','100'], 'Operator' : ['-','*','/'], 'Format' : 'N'},
+		{'LabelName':'lblTotal', 'Name' : '-', 'Source' : ['E.TransactionAmount','finalDiscount','ppn'], 'Operator' : ['-','+'], 'Format' : 'N'},
+		{'LabelName':'lblCreatedByName', 'Name' : '-', 'Source' : ['E.CreatedByUserName'], 'Operator' : []},
+	],
+	'Methods':[
+	]
+}

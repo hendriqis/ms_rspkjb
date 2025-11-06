@@ -1,0 +1,986 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_RAPUHAssessment">
+    $(function () {
+        $("#optGroup01_01_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore1").val('2');
+            else
+                $("#txtParamScore1").val('1');
+            calculateTotalScore();
+        });
+        $("#optGroup01_01_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore1").val('1');
+            else
+                $("#txtParamScore1").val('2');
+            calculateTotalScore();
+        });
+        $("#optGroup01_02_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore2").val('2');
+            else
+                $("#txtParamScore2").val('1');
+            calculateTotalScore();
+        });
+        $("#optGroup01_02_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore2").val('1');
+            else
+                $("#txtParamScore2").val('2');
+            calculateTotalScore();
+        });
+        $("#optGroup01_03_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore3").val('2');
+            else
+                $("#txtParamScore3").val('1');
+            calculateTotalScore();
+        });
+        $("#optGroup01_03_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore3").val('1');
+            else
+                $("#txtParamScore3").val('2');
+            calculateTotalScore();
+        });
+        $("#optGroup01_04_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore4").val('2');
+            else
+                $("#txtParamScore4").val('1');
+            calculateTotalScore();
+        });
+        $("#optGroup01_04_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore4").val('1');
+            else
+                $("#txtParamScore4").val('2');
+            calculateTotalScore();
+        });
+        $("#optGroup01_05_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore5").val('2');
+            else
+                $("#txtParamScore5").val('1');
+            calculateTotalScore();
+        });
+        $("#optGroup01_05_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore5").val('1');
+            else
+                $("#txtParamScore5").val('2');
+            calculateTotalScore();
+        });
+        $("#optGroup01_06_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore6").val('2');
+            else
+                $("#txtParamScore6").val('1');
+            calculateTotalScore();
+        });
+        $("#optGroup01_06_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore6").val('1');
+            else
+                $("#txtParamScore6").val('2');
+            calculateTotalScore();
+        });
+
+        $("#optGroup01_07_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore7").val('1');
+            else
+                $("#txtParamScore7").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_07_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore7").val('0');
+            else
+                $("#txtParamScore7").val('1');
+            calculateTotalScore();
+        });
+        $("#optGroup01_08_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore8").val('1');
+            else
+                $("#txtParamScore8").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_08_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore8").val('0');
+            else
+                $("#txtParamScore8").val('1');
+            calculateTotalScore();
+        });
+        $("#optGroup01_09_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore9").val('1');
+            else
+                $("#txtParamScore9").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_09_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore9").val('0');
+            else
+                $("#txtParamScore9").val('1');
+            calculateTotalScore();
+        });
+        $("#optGroup01_10_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore10").val('1');
+            else
+                $("#txtParamScore10").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_10_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore10").val('0');
+            else
+                $("#txtParamScore10").val('1');
+            calculateTotalScore();
+        });
+        $("#optGroup01_11_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore11").val('1');
+            else
+                $("#txtParamScore11").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_11_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore11").val('0');
+            else
+                $("#txtParamScore11").val('1');
+            calculateTotalScore();
+        });
+        $("#optGroup01_12_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore12").val('1');
+            else
+                $("#txtParamScore12").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_12_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore12").val('0');
+            else
+                $("#txtParamScore12").val('1');
+            calculateTotalScore();
+        });
+
+        $("#optGroup01_13_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore15").val('1');
+            else
+                $("#txtParamScore15").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_13_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore15").val('0');
+            else
+                $("#txtParamScore15").val('1');
+            calculateTotalScore();
+        });
+
+        $("#optGroup01_14_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore16").val('1');
+            else
+                $("#txtParamScore16").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_14_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore16").val('0');
+            else
+                $("#txtParamScore16").val('1');
+            calculateTotalScore();
+        });
+
+        $("#optGroup01_15_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore17").val('1');
+            else
+                $("#txtParamScore17").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_15_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore17").val('0');
+            else
+                $("#txtParamScore17").val('1');
+            calculateTotalScore();
+        });
+
+        $("#optGroup01_16_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore18").val('1');
+            else
+                $("#txtParamScore18").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_16_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore18").val('0');
+            else
+                $("#txtParamScore18").val('1');
+            calculateTotalScore();
+        });
+
+        $("#optGroup01_17_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore19").val('1');
+            else
+                $("#txtParamScore19").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_17_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore19").val('0');
+            else
+                $("#txtParamScore19").val('1');
+            calculateTotalScore();
+        });
+
+        $("#optGroup01_18_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore20").val('1');
+            else
+                $("#txtParamScore20").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_18_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore20").val('0');
+            else
+                $("#txtParamScore20").val('1');
+            calculateTotalScore();
+        });
+
+        $("#optGroup01_19_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore21").val('1');
+            else
+                $("#txtParamScore21").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_19_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore21").val('0');
+            else
+                $("#txtParamScore21").val('1');
+            calculateTotalScore();
+        });
+
+        $("#optGroup01_20_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore22").val('1');
+            else
+                $("#txtParamScore22").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_20_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore22").val('0');
+            else
+                $("#txtParamScore22").val('1');
+            calculateTotalScore();
+        });
+
+        $("#optGroup01_21_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore23").val('1');
+            else
+                $("#txtParamScore23").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_21_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore23").val('0');
+            else
+                $("#txtParamScore23").val('1');
+            calculateTotalScore();
+        });
+
+        $("#optGroup01_22_01").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore24").val('1');
+            else
+                $("#txtParamScore24").val('0');
+            calculateTotalScore();
+        });
+        $("#optGroup01_22_02").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtParamScore24").val('0');
+            else
+                $("#txtParamScore24").val('1');
+            calculateTotalScore();
+        });
+
+
+        function calculateTotalScore() {
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+            var p4 = 0;
+            var p5 = 0;
+            var p6 = 0;
+            var p7 = 0;
+            var p8 = 0;
+            var p9 = 0;
+            var p10 = 0;
+            var p11 = 0;
+            var p12 = 0;
+            var p13 = 0;
+            var p14 = 0;
+            var p15 = 0;
+            var p16 = 0;
+            var p17 = 0;
+            var p18 = 0;
+            var p19 = 0;
+            var p20 = 0;
+            var p21 = 0;
+            var p22 = 0;
+            var p23 = 0;
+            var p24 = 0;
+
+            if ($("#txtParamScore1").val())
+                p1 = parseInt($("#txtParamScore1").val());
+
+            if ($("#txtParamScore2").val())
+                p2 = parseInt($("#txtParamScore2").val());
+
+            if ($("#txtParamScore3").val())
+                p3 = parseInt($("#txtParamScore3").val());
+
+            if ($("#txtParamScore4").val())
+                p4 = parseInt($("#txtParamScore4").val());
+
+            if ($("#txtParamScore5").val())
+                p5 = parseInt($("#txtParamScore5").val());
+
+            if ($("#txtParamScore6").val())
+                p6 = parseInt($("#txtParamScore6").val());
+
+            if ($("#txtParamScore7").val())
+                p7 = parseInt($("#txtParamScore7").val());
+
+            if ($("#txtParamScore8").val())
+                p8 = parseInt($("#txtParamScore8").val());
+
+            if ($("#txtParamScore9").val())
+                p9 = parseInt($("#txtParamScore9").val());
+
+            if ($("#txtParamScore10").val())
+                p10 = parseInt($("#txtParamScore10").val());
+
+            if ($("#txtParamScore11").val())
+                p11 = parseInt($("#txtParamScore11").val());
+
+            if ($("#txtParamScore12").val())
+                p12 = parseInt($("#txtParamScore12").val());
+
+            if ($("#txtParamScore13").val())
+                p13 = parseInt($("#txtParamScore13").val());
+
+            if ($("#txtParamScore14").val())
+                p14 = parseInt($("#txtParamScore14").val());
+
+            if ($("#txtParamScore15").val())
+                p15 = parseInt($("#txtParamScore15").val());
+
+            if ($("#txtParamScore16").val())
+                p16 = parseInt($("#txtParamScore16").val());
+
+            if ($("#txtParamScore17").val())
+                p17 = parseInt($("#txtParamScore17").val());
+
+            if ($("#txtParamScore18").val())
+                p18 = parseInt($("#txtParamScore18").val());
+
+            if ($("#txtParamScore19").val())
+                p19 = parseInt($("#txtParamScore19").val());
+
+            if ($("#txtParamScore20").val())
+                p20 = parseInt($("#txtParamScore20").val());
+
+            if ($("#txtParamScore21").val())
+                p21 = parseInt($("#txtParamScore21").val());
+
+            if ($("#txtParamScore22").val())
+                p22 = parseInt($("#txtParamScore22").val());
+
+            if ($("#txtParamScore23").val())
+                p23 = parseInt($("#txtParamScore23").val());
+
+            if ($("#txtParamScore24").val())
+                p24 = parseInt($("#txtParamScore24").val());
+
+
+
+            var total = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10 + p11 + p12 + p13 + p14 + p15 + p16 + p17 + p18 + p19 + p20 + p21 + p22 + p23 + p24;
+            $("#txtTotalScore").val(total);
+        }
+    });
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="0" style="width:100%;">
+            <colgroup>
+                <col width="150px" />
+                <col width="65px" />
+                <col width="65px" />
+                <col width="100px" />
+                <col width="80px" />
+                <col width="20px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5"><label style="font-weight:bold; text-decoration:underline"class="lblGroupTitle" controlID = "lblGroup01">Paliatif</label></td>
+                <td />
+                <td><div class="w3-container w3-border peGroup"><label style="font-weight:bold; text-decoration:underline">Masalah Keperawatan</label></div></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="font-weight:bold"><label>Penapisan :</label></td>
+                <td colspan="3"></td>
+                <td rowspan="8" style="vertical-align:top">
+                    <div class="w3-container w3-border nursingProblem">
+                        <table border="0" cellpadding="1" cellspacing="0">
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem01" nursingProblemCode="000"/> Tidak ada masalah</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem02" nursingProblemCode="Ansietas Kematian"/> Ansietas Kematian</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem03" nursingProblemCode="Ketakutan"/> Ketakutan</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem04" nursingProblemCode="Penurunan koping keluarga"/> Penurunan koping keluarga</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem05" nursingProblemCode="Ketidakmampuan koping keluarga"/> Ketidakmampuan koping keluarga</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem05" nursingProblemCode="Kesiapan koping keluarga"/> Kesiapan koping keluarga</td></tr>
+                            <tr><td style="padding-left:20px;"> <input type="text" class="txtNursingProblem" controlID="txtNursingProblem01" style="width:100%"/></td></tr>
+                            <tr><td style="padding-left:20px;"><input type="text" class="txtNursingProblem" controlID="txtNursingProblem02" style="width:100%"/></td></tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" style="font-weight:bold"><label>a. Penyakit Dasar: Bila "Ya" Skor 2  "Tidak" Skor 1 </label></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Kanker</label></td>
+                <td><input type="radio" name="group01.01" value="1" class="optForm" id="optGroup01_01_01" controlID="optGroup01_01_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.01" value="0" class="optForm" id="optGroup01_01_02" controlID="optGroup01_01_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore1" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>PPOK Lanjut</label></td>
+                <td><input type="radio" name="group01.02" value="1" class="optForm" id="optGroup01_02_01" controlID="optGroup01_02_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.02" value="0" class="optForm" id="optGroup01_02_02" controlID="optGroup01_02_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore2" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Stroke (penurunan fungsional > 50%)</label></td>
+                <td><input type="radio" name="group01.03" value="1" class="optForm" id="optGroup01_03_01" controlID="optGroup01_03_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.03" value="0" class="optForm" id="optGroup01_03_02" controlID="optGroup01_03_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore3" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Penyakit Jantung Berat : CHF, Severe CAD, CM 9 LVEF ,25 %</label></td>
+                <td><input type="radio" name="group01.04" value="1" class="optForm" id="optGroup01_04_01" controlID="optGroup01_04_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.04" value="0" class="optForm" id="optGroup01_04_02" controlID="optGroup01_04_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore4" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>HIV/AIDS</label></td>
+                <td><input type="radio" name="group01.05" value="1" class="optForm" id="optGroup01_05_01" controlID="optGroup01_05_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.05" value="0" class="optForm" id="optGroup01_05_02" controlID="optGroup01_05_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore5" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Penyakit Ginjal Kronis</label></td>
+                <td><input type="radio" name="group01.06" value="1" class="optForm" id="optGroup01_06_01" controlID="optGroup01_06_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.06" value="0" class="optForm" id="optGroup01_06_02" controlID="optGroup01_06_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore6" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore6" /></td>
+            </tr>
+            <tr>
+                <td colspan="7" style="font-weight:bold"><label>b. Penyakit Ko Morbiditas (Penyakit  Penyerta Diagnosis): Bila 'Ya" skor 1  "Tidak" 0 </label></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Penyakit hati kronis</label></td>
+                <td><input type="radio" name="group01.07" value="1" class="optForm" id="optGroup01_07_01" controlID="optGroup01_07_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.07" value="0" class="optForm" id="optGroup01_07_02" controlID="optGroup01_07_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore7" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore7" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Penyakit ginjal moderat</label></td>
+                <td><input type="radio" name="group01.08" value="1" class="optForm" id="optGroup01_08_01" controlID="optGroup01_08_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.08" value="0" class="optForm" id="optGroup01_08_02" controlID="optGroup01_08_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore8" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore8" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>PPOK Moderat</label></td>
+                <td><input type="radio" name="group01.09" value="1" class="optForm" id="optGroup01_09_01" controlID="optGroup01_09_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.09" value="0" class="optForm" id="optGroup01_09_02" controlID="optGroup01_09_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore9" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore9" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Gagal Jantung Kongestif</label></td>
+                <td><input type="radio" name="group01.10" value="1" class="optForm" id="optGroup01_10_01" controlID="optGroup01_10_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.10" value="0" class="optForm" id="optGroup01_10_02" controlID="optGroup01_10_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore10" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore10" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Kondisi/komplain lain</label></td>
+                <td><input type="radio" name="group01.11" value="1" class="optForm" id="optGroup01_11_01" controlID="optGroup01_11_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.11" value="0" class="optForm" id="optGroup01_11_02" controlID="optGroup01_11_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore11" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore11" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Penyakit ginjal kronis</label></td>
+                <td><input type="radio" name="group01.12" value="1" class="optForm" id="optGroup01_12_01" controlID="optGroup01_12_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.12" value="0" class="optForm" id="optGroup01_12_02" controlID="optGroup01_12_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore12" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore12" /></td>
+            </tr>
+            <tr>
+                <td colspan="6" style="font-weight:bold"><label>c. Status Fungsional Pasien </label></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="padding-left:30px"><label>Barthel Index</label></td>
+                <td><input type="text" value="" id="txtParamScore13" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore13" /></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="padding-left:30px"><label>Eastern Cooperative Oncology Group (ECOG)</label></td>
+                <td><input type="text" value="" id="txtParamScore14" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore14" /></td>
+            </tr>
+            <tr>
+                <td colspan="7" style="font-weight:bold"><label>d. Kriteria lain yang perlu dipertimbangkan, pasien : Bila "Ya" skor 1  "Tidak" Skor 0  </label></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Tidak akan menjalani pengobatan kuratif</label></td>
+                <td><input type="radio" name="group01.13" value="1" class="optForm" id="optGroup01_13_01" controlID="optGroup01_13_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.13" value="0" class="optForm" id="optGroup01_13_02" controlID="optGroup01_13_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore15" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore15" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Kondisi penyakit berat dan memilih untuk tidak melanjutkan terapi</label></td>
+                <td><input type="radio" name="group01.14" value="1" class="optForm" id="optGroup01_14_01" controlID="optGroup01_14_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.14" value="0" class="optForm" id="optGroup01_14_02" controlID="optGroup01_14_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore16" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore16" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Nyeri tidak teratasi lebih dari 24 jam</label></td>
+                <td><input type="radio" name="group01.15" value="1" class="optForm" id="optGroup01_15_01" controlID="optGroup01_15_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.15" value="0" class="optForm" id="optGroup01_15_02" controlID="optGroup01_15_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore17" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore17" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Memiliki keluhan yang tidak terkontrol (contoh: mual dan muntah)</label></td>
+                <td><input type="radio" name="group01.16" value="1" class="optForm" id="optGroup01_16_01" controlID="optGroup01_16_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.16" value="0" class="optForm" id="optGroup01_16_02" controlID="optGroup01_16_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore18" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore18" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Memiliki kondisi psikososial dan spiritual yang perlu perhatian</label></td>
+                <td><input type="radio" name="group01.17" value="1" class="optForm" id="optGroup01_17_01" controlID="optGroup01_17_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.17" value="0" class="optForm" id="optGroup01_17_02" controlID="optGroup01_17_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore19" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore19" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Sering berkunjung ke unit gawat darurat/dirawat di rumah sakit (lebih dari 1 kali/bulan untuk diagnosis yang sama)</label></td>
+                <td><input type="radio" name="group01.18" value="1" class="optForm" id="optGroup01_18_01" controlID="optGroup01_18_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.18" value="0" class="optForm" id="optGroup01_18_02" controlID="optGroup01_18_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore20" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore20" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Lebih dari satu kali untuk diagnosis yang sama dalam 30 hari</label></td>
+                <td><input type="radio" name="group01.19" value="1" class="optForm" id="optGroup01_19_01" controlID="optGroup01_19_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.19" value="0" class="optForm" id="optGroup01_19_02" controlID="optGroup01_19_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore21" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore21" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Memiliki lama perawatan tanpa kemajuan yang bermakna</label></td>
+                <td><input type="radio" name="group01.20" value="1" class="optForm" id="optGroup01_20_01" controlID="optGroup01_20_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.20" value="0" class="optForm" id="optGroup01_20_02" controlID="optGroup01_20_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore22" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore22" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Lama rawat yang panjang di ICU tanpa kemajuan</label></td>
+                <td><input type="radio" name="group01.21" value="1" class="optForm" id="optGroup01_21_01" controlID="optGroup01_21_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.21" value="0" class="optForm" id="optGroup01_21_02" controlID="optGroup01_21_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore23" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore23" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:30px"><label>Memiliki prognosis yang jelek</label></td>
+                <td><input type="radio" name="group01.22" value="1" class="optForm" id="optGroup01_22_01" controlID="optGroup01_22_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.22" value="0" class="optForm" id="optGroup01_22_02" controlID="optGroup01_22_02"/><label> Tidak</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtParamScore24" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore24" /></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label>TOTAL SKOR</label></td>
+                <td><input type="text" readonly="readonly" value="" id="txtTotalScore" style="width:100%; text-align:right" class = "txtForm" controlID = "txtTotalScore" /></td>
+                <td />
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label>Skor 1 - 3</label></td>
+                <td colspan="3"> <input type="checkbox" class="chkForm" controlID="chkGroup01_01"/> Screening ulang 7 hari</td>
+                <td />
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label>Skor 4 - 6</label></td>
+                <td colspan="3"> <input type="checkbox" class="chkForm" controlID="chkGroup01_02"/> Screening ulang 3 hari</td>
+                <td />
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label>Skor >= 7</label></td>
+                <td colspan="3"> <input type="checkbox" class="chkForm" controlID="chkGroup01_03"/> Konsul ke tim paliatif</td>
+                <td />
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="font-weight:bold"><label>Hasil Rekomendasi dari Tim Paliatif</label></td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <table border="0" cellpadding="0" cellspacing="1">
+                        <colgroup>
+                            <col style="width:130px" />
+                            <col style="width:130px" />
+                            <col style="width:130px" />
+                            <col style="width:30px" />
+                            <col />
+                        </colgroup>
+                        <tr>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkGroup01_04"/> Home Care</td>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkGroup01_05"/> Klinik Nyeri</td>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkGroup01_06"/> Fisioterapi</td>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkGroup01_07"/></td>
+                            <td> <input type="text" class="txtForm" controlID="txtGroup01_01" style="width:200px"/></td>
+                        </tr>
+                        <tr>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkGroup01_08"/> Passosmed</td>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkGroup01_09"/> Ahli Gizi</td>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkGroup01_10"/> Farmasi</td>
+                            <td> <input type="checkbox" class="chkForm" controlID="chkGroup01_11"/></td>
+                            <td> <input type="text" class="txtForm" controlID="txtGroup01_02" style="width:200px"/></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="5"><label style="font-weight:bold;">Pengkajian :</label></td>
+                <td />
+            </tr>
+            <tr>
+                <td colspan="5"><label style="font-weight:bold;">Respon Psikologis :</label></td>
+                <td />
+            </tr>
+            <tr>
+                <td style="padding-left:30px" colspan="6"><label>1. Pengetahuan terhadap penyakit</label></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:80px"><label>Pasien</label></td>
+                <td colspan="5"><input type="text" value="" id="txtGroup01_03" style="width:405px; text-align:right" class = "txtForm" controlID = "txtGroup01_03" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:80px"><label>Keluarga</label></td>
+                <td colspan="5"><input type="text" value="" id="txtGroup01_04" style="width:405px; text-align:right" class = "txtForm" controlID = "txtGroup01_04" /></td>
+            </tr>
+            <tr>
+                <td style="padding-left:30px" colspan="6"><label>2. Pandangan positif terhadap penyakit</label></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:80px"><label>Pasien</label></td>
+                <td colspan="5"><input type="text" value="" id="txtGroup01_05" style="width:405px; text-align:right" class = "txtForm" controlID = "txtGroup01_05" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:80px"><label>Keluarga</label></td>
+                <td colspan="5"><input type="text" value="" id="txtGroup01_06" style="width:405px; text-align:right" class = "txtForm" controlID = "txtGroup01_06" /></td>
+            </tr>
+            <tr>
+                <td style="padding-left:30px" colspan="6"><label>3. Penerimaan terhadap penyakit</label></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:80px"><label>Pasien</label></td>
+                <td colspan="5"><input type="text" value="" id="txtGroup01_07" style="width:405px; text-align:right" class = "txtForm" controlID = "txtGroup01_07" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left:80px"><label>Keluarga</label></td>
+                <td colspan="5"><input type="text" value="" id="txtGroup01_08" style="width:405px; text-align:right" class = "txtForm" controlID = "txtGroup01_08" /></td>
+            </tr>
+            <tr>
+                <td style="padding-left:30px" colspan="6"><label>4. Respon</label></td>
+            </tr>
+            <tr>
+                <td style="padding-left:50px" colspan="6"><label>Pasien</label></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Tidak menerima</label></td>
+                <td><input type="radio" name="group01.23" value="1" class="optForm" controlID="optGroup01_23_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.23" value="0" class="optForm" controlID="optGroup01_23_02"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Cemas</label></td>
+                <td><input type="radio" name="group01.24" value="1" class="optForm" controlID="optGroup01_24_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.24" value="0" class="optForm" controlID="optGroup01_24_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Takut</label></td>
+                <td><input type="radio" name="group01.25" value="1" class="optForm" controlID="optGroup01_25_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.25" value="0" class="optForm" controlID="optGroup01_25_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Sedih</label></td>
+                <td><input type="radio" name="group01.26" value="1" class="optForm" controlID="optGroup01_26_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.26" value="0" class="optForm" controlID="optGroup01_26_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Menghindar</label></td>
+                <td><input type="radio" name="group01.27" value="1" class="optForm" controlID="optGroup01_27_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.27" value="0" class="optForm" controlID="optGroup01_27_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Marah</label></td>
+                <td><input type="radio" name="group01.28" value="1" class="optForm" controlID="optGroup01_28_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.28" value="0" class="optForm" controlID="optGroup01_28_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Labil</label></td>
+                <td><input type="radio" name="group01.29" value="1" class="optForm" controlID="optGroup01_29_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.29" value="0" class="optForm" controlID="optGroup01_29_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Iritabilitas</label></td>
+                <td><input type="radio" name="group01.30" value="1" class="optForm" controlID="optGroup01_30_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.30" value="0" class="optForm" controlID="optGroup01_30_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Berduka</label></td>
+                <td><input type="radio" name="group01.31" value="1" class="optForm" controlID="optGroup01_31_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.31" value="0" class="optForm" controlID="optGroup01_31_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Lain-lain</label></td>
+                <td><input type="radio" name="group01.32" value="1" class="optForm" controlID="optGroup01_32_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.32" value="0" class="optForm" controlID="optGroup01_32_02"/><label> Tidak</label></td>
+                <td style="padding-left:30px; padding-right: 10px"><label>Sebutkan</label></td>
+                <td><input type="text" value="" id="txtGroup01_09" style="width:150px; text-align:right" class = "txtForm" controlID = "txtGroup01_09" /></td>
+            </tr>
+            <tr>
+                <td style="padding-left:50px" colspan="6"><label>Keluarga</label></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Tidak menerima</label></td>
+                <td><input type="radio" name="group01.33" value="1" class="optForm" controlID="optGroup01_33_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.33" value="0" class="optForm" controlID="optGroup01_33_02"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Cemas</label></td>
+                <td><input type="radio" name="group01.34" value="1" class="optForm" controlID="optGroup01_34_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.34" value="0" class="optForm" controlID="optGroup01_34_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Takut</label></td>
+                <td><input type="radio" name="group01.35" value="1" class="optForm" controlID="optGroup01_35_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.35" value="0" class="optForm" controlID="optGroup01_35_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Sedih</label></td>
+                <td><input type="radio" name="group01.36" value="1" class="optForm" controlID="optGroup01_36_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.36" value="0" class="optForm" controlID="optGroup01_36_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Menghindar</label></td>
+                <td><input type="radio" name="group01.37" value="1" class="optForm" controlID="optGroup01_37_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.37" value="0" class="optForm" controlID="optGroup01_37_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Marah</label></td>
+                <td><input type="radio" name="group01.38" value="1" class="optForm" controlID="optGroup01_38_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.38" value="0" class="optForm" controlID="optGroup01_38_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Labil</label></td>
+                <td><input type="radio" name="group01.39" value="1" class="optForm" controlID="optGroup01_39_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.39" value="0" class="optForm" controlID="optGroup01_39_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Iritabilitas</label></td>
+                <td><input type="radio" name="group01.40" value="1" class="optForm" controlID="optGroup01_40_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.40" value="0" class="optForm" controlID="optGroup01_40_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Berduka</label></td>
+                <td><input type="radio" name="group01.41" value="1" class="optForm" controlID="optGroup01_41_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.41" value="0" class="optForm" controlID="optGroup01_41_02"/><label> Tidak</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:130px"><label>Lain-lain</label></td>
+                <td><input type="radio" name="group01.42" value="1" class="optForm" controlID="optGroup01_42_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.42" value="0" class="optForm" controlID="optGroup01_42_02"/><label> Tidak</label></td>
+                <td style="padding-left:30px; padding-right: 10px"><label>Sebutkan</label></td>
+                <td><input type="text" value="" id="txtGroup01_10" style="width:150px; text-align:right" class = "txtForm" controlID = "txtGroup01_10" /></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="font-weight:bold"><label>Pengambilan Keputusan</label></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Tergantung orang lain</label></td>
+                <td><input type="radio" name="group01.43" value="1" class="optForm" controlID="optGroup01_43_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.43" value="0" class="optForm" controlID="optGroup01_43_02"/><label> Tidak</label></td>
+                <td style="padding-left:30px; padding-right: 10px"><label>Sebutkan</label></td>
+                <td><input type="text" value="" id="txtGroup01_11" style="width:150px; text-align:right" class = "txtForm" controlID = "txtGroup01_11" /></td>
+            </tr>
+            <tr>
+                <td colspan="7" style="font-weight:bold"><label>Support Sistem</label></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Tipe komunikasi tertutup</label></td>
+                <td><input type="radio" name="group01.44" value="1" class="optForm" controlID="optGroup01_44_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.44" value="0" class="optForm" controlID="optGroup01_44_02"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Tidak ada teman sharing / berbagi masalah</label></td>
+                <td><input type="radio" name="group01.45" value="1" class="optForm" controlID="optGroup01_45_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.45" value="0" class="optForm" controlID="optGroup01_45_02"/><label> Tidak</label></td>
+            </tr>
+            <tr>
+                <td colspan="7" style="font-weight:bold"><label>Dampak penyakit terhadap :</label></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Pasien</label></td>
+                <td colspan="4"><input type="text" class="txtForm" controlID="txtGroup01_12" style="width:440px"/></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Pekerjaan</label></td>
+                <td colspan="4"><input type="text" class="txtForm" controlID="txtGroup01_13" style="width:440px"/></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Keuangan</label></td>
+                <td colspan="4"><input type="text" class="txtForm" controlID="txtGroup01_14" style="width:440px"/></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Rekreasi</label></td>
+                <td colspan="4"><input type="text" class="txtForm" controlID="txtGroup01_15" style="width:440px"/></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Keluarga</label></td>
+                <td colspan="4"><input type="text" class="txtForm" controlID="txtGroup01_16" style="width:440px"/></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Pekerjaan</label></td>
+                <td colspan="4"><input type="text" class="txtForm" controlID="txtGroup01_17" style="width:440px"/></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Keuangan</label></td>
+                <td colspan="4"><input type="text" class="txtForm" controlID="txtGroup01_18" style="width:440px"/></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Rekreasi</label></td>
+                <td colspan="4"><input type="text" class="txtForm" controlID="txtGroup01_19" style="width:440px"/></td>
+            </tr>
+            <tr>
+                <td colspan="7" style="font-weight:bold"><label>Spiritual</label></td>
+            </tr>
+            <tr>
+                <td colspan="7" style="padding-left:30px"><label>Pasien</label></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Pandangan positif terhadap kematian</label></td>
+                <td colspan="4"><input type="text" class="txtForm" controlID="txtGroup01_20" style="width:440px"/></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Kesiapan menghadapi kematian</label></td>
+                <td colspan="4"><input type="text" class="txtForm" controlID="txtGroup01_21" style="width:440px"/></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Kebutuhan pelayanan kerohanian</label></td>
+                <td colspan="4"><input type="text" class="txtForm" controlID="txtGroup01_22" style="width:440px"/></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="padding-left:30px"><label>Keluarga</label></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Pandangan positif terhadap kematian</label></td>
+                <td colspan="4"><input type="text" class="txtForm" controlID="txtGroup01_23" style="width:440px"/></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Kesiapan menghadapi kematian</label></td>
+                <td colspan="4"><input type="text" class="txtForm" controlID="txtGroup01_24" style="width:440px"/></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-left:30px"><label>Kebutuhan pelayanan kerohanian</label></td>
+                <td colspan="4"><input type="text" class="txtForm" controlID="txtGroup01_25" style="width:440px"/></td>
+            </tr>
+        </table>    
+    </div>
+</div>
+<script type="text/javascript">
+</script>

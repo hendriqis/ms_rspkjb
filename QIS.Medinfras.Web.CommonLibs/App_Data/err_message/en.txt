@@ -1,0 +1,27 @@
+101;There are opened transaction(s) for this visit.
+102;This Bed Cannot Be Used.
+103;This Patient Has Opened Registration.
+104;Registration Had Been Closed.
+105;Please Discharge Patient First.
+106;Please Finish Transaction First.
+107;There are opened transaction(s) for this registration.
+108;This Appointment Has Completed, Cannot Be Edited.
+109;Please Select Appointment First.
+110;Please Select Registration First.
+111;Registration Is Opened.
+112;Please Select Medical Number First.
+113;Please Select Transaction First.
+114;Uang yang dibayarkan tidak boleh kurang dari jumlah tagihan.
+115;Uang yang dibayarkan tidak boleh lebih dari jumlah tagihan.
+116;This Patient Doesnt Have Medical Number, Please Entry Patient Data First.
+117;This Slot Cannot Be Used.
+118;This Registration Had Been Transferred To Inpatient. Cannot Be Opened.
+119;Already have Revenue Sharing Transaction, cannot be edited.
+120;Already have Settlement Payment, cannot be void.
+123;Sorry, this Payment can not be cancelled because the Payment Receipt has been Created.
+124;Sorry, this Payment can not be cancelled because AR Invoice already created.
+125;Sorry, this Registration can not be cancelled because it already has transaction / payment.
+126;Sorry, this Registration can not be cancelled because it already has chief complaint / anamnesa.
+127;Sorry, this Registration can not be cancelled because it already has charges transfered.
+128;Already have Test Partner Transaction, cannot be edited.
+129;Sorry, this Registration can not be cancelled because it already has linked registration.

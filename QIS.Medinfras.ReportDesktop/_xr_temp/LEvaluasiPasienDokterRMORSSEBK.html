@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Document</title>
+	<meta HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+	<style type="text/css">
+		.cs5971619E {color:#000000;background-color:#000000;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:Times New Roman; font-size:13px; font-weight:normal; font-style:normal; }
+		.cs2B201CB2 {color:#000000;background-color:#FFFFFF;border-left-style: none;border-top:#000000 1px solid;border-right-style: none;border-bottom:#000000 1px solid;font-family:Tahoma; font-size:12px; font-weight:bold; font-style:normal; padding-left:2px;padding-right:2px;}
+		.cs43A780DF {color:#000000;background-color:#FFFFFF;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:Tahoma; font-size:13px; font-weight:bold; font-style:normal; padding-left:2px;padding-right:2px;}
+		.cs519E6457 {color:#000000;background-color:transparent;border-left:#000000 1px dotted;border-top:#000000 1px dotted;border-right:#000000 1px dotted;border-bottom:#000000 1px dotted;font-family:Tahoma; font-size:12px; font-weight:normal; font-style:normal; padding-left:2px;padding-right:2px;}
+		.cs2B750389 {color:#000000;background-color:transparent;border-left:#000000 1px dotted;border-top-style: none;border-right:#000000 1px dotted;border-bottom:#000000 1px dotted;font-family:Tahoma; font-size:12px; font-weight:normal; font-style:normal; padding-left:2px;padding-right:2px;}
+		.csFBB83D75 {color:#000000;background-color:transparent;border-left:#000000 1px solid;border-top:#000000 1px solid;border-right:#000000 1px solid;border-bottom-style: none;font-family:Tahoma; font-size:15px; font-weight:bold; font-style:normal; padding-left:2px;padding-right:2px;}
+		.cs100A4FFF {color:#000000;background-color:transparent;border-left:#000000 1px solid;border-top-style: none;border-right:#000000 1px solid;border-bottom:#000000 1px solid;font-family:Tahoma; font-size:12px; font-weight:bold; font-style:normal; padding-left:2px;padding-right:2px;}
+		.cs10186B00 {color:#000000;background-color:transparent;border-left-style: none;border-top:#000000 1px dotted;border-right:#000000 1px dotted;border-bottom:#000000 1px dotted;font-family:Tahoma; font-size:12px; font-weight:normal; font-style:normal; padding-left:2px;padding-right:2px;}
+		.cs5409C5E7 {color:#000000;background-color:transparent;border-left-style: none;border-top-style: none;border-right:#000000 1px dotted;border-bottom:#000000 1px dotted;font-family:Tahoma; font-size:12px; font-weight:normal; font-style:normal; padding-left:2px;padding-right:2px;}
+		.cs9D4FFE8E {color:#000000;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:Tahoma; font-size:12px; font-weight:bold; font-style:normal; padding-left:2px;padding-right:2px;}
+		.cs7EC6D243 {color:#000000;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:Tahoma; font-size:12px; font-weight:normal; font-style:normal; }
+		.csFA284726 {color:#000000;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:Tahoma; font-size:13px; font-weight:bold; font-style:normal; padding-left:2px;padding-right:2px;}
+		.cs46E42BA0 {color:#000000;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:Tahoma; font-size:16px; font-weight:bold; font-style:normal; }
+		.cs65C94B59 {color:#000000;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:Tahoma; font-size:9px; font-weight:normal; font-style:normal; padding-left:2px;padding-right:2px;}
+		.cs101A94F7 {color:#000000;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:Times New Roman; font-size:13px; font-weight:normal; font-style:normal; }
+		.csBD97B2AA {color:#808080;background-color:#FFFFFF;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:Times New Roman; font-size:19px; font-weight:normal; font-style:normal; }
+		.csF7D3565D {height:0px;width:0px;overflow:hidden;font-size:0px;line-height:0px;}
+	</style>
+</head>
+<body leftMargin=10 topMargin=10 rightMargin=10 bottomMargin=10 style="background-color:#FFFFFF">
+<script type="text/javascript">
+// <![CDATA[
+
+var __aspxAgent = navigator.userAgent.toLowerCase();
+var __aspxOpera = (__aspxAgent.indexOf("opera") > -1);
+var __aspxIE = (__aspxAgent.indexOf("msie") > -1 && !__aspxOpera);
+window.xr_NavigateUrl = function (url, target) {
+ if (__aspxIE)
+  xr_NavigateUrlForIE(url, target);
+ else
+  xr_NavigateUrlForNonIE(url, target);
+}
+function xr_NavigateUrlForIE(url, target) {
+ if(url==null) 
+  return;
+ var a = document.createElement("a");
+ a.setAttribute('href',url);
+ if(target != null) 
+  a.setAttribute('target',target);
+ document.body.appendChild(a);
+ a.click();
+ document.body.removeChild(a);
+}
+function xr_NavigateUrlForNonIE(url, target) {
+ var javascriptPrefix = "javascript:";
+ if(url == "")
+  return;
+ else if(url.indexOf(javascriptPrefix) != -1) 
+  eval(url.substr(javascriptPrefix.length));
+ else {
+  if(target != "")
+   _aspxNavigateTo(url, target);
+  else
+   location.href = url;
+ }
+}
+function _aspxNavigateTo(url, target) {
+ var lowerCaseTarget = target.toLowerCase();
+ if("_top" == lowerCaseTarget)
+  top.location.href = url;
+ else if("_self" == lowerCaseTarget)
+  location.href = url;
+ else if("_search" == lowerCaseTarget)
+  window.open(url, 'blank');
+ else if("_media" == lowerCaseTarget)
+  window.open(url, 'blank');
+ else if("_parent" == lowerCaseTarget)
+  window.parent.location.href = url;
+ else if("_blank" == lowerCaseTarget)
+  window.open(url, 'blank');
+ else {
+  var frame = _aspxGetFrame(top.frames, target);
+  if(frame != null)
+   frame.location.href = url;
+  else
+   window.open(url, 'blank');
+ }
+}
+function _aspxGetFrame(frames, name) {
+ if(frames[name])
+  return frames[name];
+ for(var i = 0; i < frames.length; i++) {
+  try {
+   var frame = frames[i];
+   if(frame.name == name) 
+    return frame; 
+   frame = _aspxGetFrame(frame.frames, name);
+   if(frame != null)   
+    return frame; 
+  } catch(e) {
+  } 
+ }
+ return null;
+}
+
+// ]]>
+</script>
+<table cellpadding="0" cellspacing="0" border="0" style="border-width:0px;empty-cells:show;width:1064px;height:541px;">
+	<tr>
+		<td style="width:0px;height:0px;"></td>
+		<td style="height:0px;width:12px;"></td>
+		<td style="height:0px;width:37px;"></td>
+		<td style="height:0px;width:49px;"></td>
+		<td style="height:0px;width:10px;"></td>
+		<td style="height:0px;width:52px;"></td>
+		<td style="height:0px;width:11px;"></td>
+		<td style="height:0px;width:22px;"></td>
+		<td style="height:0px;width:143px;"></td>
+		<td style="height:0px;width:141px;"></td>
+		<td style="height:0px;width:4px;"></td>
+		<td style="height:0px;width:49px;"></td>
+		<td style="height:0px;width:95px;"></td>
+		<td style="height:0px;width:63px;"></td>
+		<td style="height:0px;width:56px;"></td>
+		<td style="height:0px;width:24px;"></td>
+		<td style="height:0px;width:57px;"></td>
+		<td style="height:0px;width:41px;"></td>
+		<td style="height:0px;width:37px;"></td>
+		<td style="height:0px;width:10px;"></td>
+		<td style="height:0px;width:3px;"></td>
+		<td style="height:0px;width:51px;"></td>
+		<td style="height:0px;width:10px;"></td>
+		<td style="height:0px;width:81px;"></td>
+		<td style="height:0px;width:6px;"></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:68px;"></td>
+		<td class="csBD97B2AA" colspan="9" style="width:477px;height:68px;text-align:left;vertical-align:top;"><nobr style="line-height:1.2">This&nbsp;application&nbsp;was&nbsp;created&nbsp;using&nbsp;the&nbsp;trial&nbsp;version</nobr><br/><nobr style="line-height:1.2">of&nbsp;the&nbsp;XtraReports.</nobr></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:9px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:15px;"></td>
+		<td></td>
+		<td class="cs101A94F7" colspan="2" rowspan="8" style="width:86px;height:86px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+		<td class="cs46E42BA0" colspan="7" style="width:422px;height:15px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+		<td></td>
+		<td class="csFBB83D75" colspan="10" rowspan="3" style="width:364px;height:38px;text-align:center;vertical-align:middle;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:14px;"></td>
+		<td></td>
+		<td></td>
+		<td class="cs7EC6D243" colspan="7" style="width:422px;height:14px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:10px;"></td>
+		<td></td>
+		<td></td>
+		<td class="cs7EC6D243" colspan="7" rowspan="2" style="width:422px;height:14px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:4px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td class="cs100A4FFF" colspan="10" rowspan="3" style="width:364px;height:23px;text-align:center;vertical-align:middle;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:15px;"></td>
+		<td></td>
+		<td></td>
+		<td class="cs7EC6D243" style="width:52px;height:15px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs7EC6D243" style="width:11px;height:15px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs7EC6D243" colspan="5" style="width:359px;height:15px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:5px;"></td>
+		<td></td>
+		<td></td>
+		<td class="cs7EC6D243" rowspan="2" style="width:52px;height:14px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs7EC6D243" rowspan="2" style="width:11px;height:14px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs7EC6D243" colspan="5" rowspan="2" style="width:359px;height:14px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:9px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:14px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:7px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:7px;"></td>
+		<td></td>
+		<td class="cs101A94F7" colspan="23" style="width:1052px;height:7px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:1px;"></td>
+		<td></td>
+		<td class="cs5971619E" colspan="23" style="width:1052px;height:1px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:7px;"></td>
+		<td></td>
+		<td class="cs101A94F7" colspan="23" style="width:1052px;height:7px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:18px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:18px;"></td>
+		<td></td>
+		<td class="csFA284726" colspan="22" style="width:1042px;height:18px;text-align:center;vertical-align:middle;"><nobr style="line-height:1.2">Periode&nbsp;:</nobr></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:9px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:17px;"></td>
+		<td></td>
+		<td class="cs43A780DF" colspan="22" style="width:1042px;height:17px;text-align:left;vertical-align:middle;"><nobr style="line-height:1.2">Dokter&nbsp;RMO&nbsp;:</nobr></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:23px;"></td>
+		<td></td>
+		<td class="cs2B201CB2" style="width:33px;height:21px;text-align:center;vertical-align:middle;"><nobr style="line-height:1.2">No</nobr></td>
+		<td class="cs2B201CB2" colspan="5" style="width:140px;height:21px;text-align:left;vertical-align:middle;"><nobr style="line-height:1.2">Patient</nobr></td>
+		<td class="cs2B201CB2" style="width:139px;height:21px;text-align:left;vertical-align:middle;"><nobr style="line-height:1.2">Registration</nobr></td>
+		<td class="cs2B201CB2" colspan="2" style="width:141px;height:21px;text-align:left;vertical-align:middle;"><nobr style="line-height:1.2">S</nobr></td>
+		<td class="cs2B201CB2" colspan="2" style="width:140px;height:21px;text-align:left;vertical-align:middle;"><nobr style="line-height:1.2">O</nobr></td>
+		<td class="cs2B201CB2" colspan="3" style="width:139px;height:21px;text-align:left;vertical-align:middle;"><nobr style="line-height:1.2">A</nobr></td>
+		<td class="cs2B201CB2" colspan="4" style="width:141px;height:21px;text-align:left;vertical-align:middle;"><nobr style="line-height:1.2">P</nobr></td>
+		<td class="cs2B201CB2" colspan="4" style="width:141px;height:21px;text-align:left;vertical-align:middle;"><nobr style="line-height:1.2">DPJP</nobr></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:12px;"></td>
+		<td></td>
+		<td class="cs9D4FFE8E" colspan="13" style="width:728px;height:12px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+		<td></td>
+		<td class="cs9D4FFE8E" colspan="5" rowspan="2" style="width:138px;height:17px;text-align:right;vertical-align:middle;"><nobr style="line-height:1.2">Jumlah&nbsp;Pasien&nbsp;:</nobr></td>
+		<td></td>
+		<td class="cs9D4FFE8E" rowspan="2" style="width:77px;height:17px;text-align:right;vertical-align:middle;"><nobr style="line-height:1.2">0</nobr></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:5px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:2px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:91px;"></td>
+		<td></td>
+		<td class="cs519E6457" style="width:31px;height:89px;text-align:center;vertical-align:top;"><nobr style="line-height:1.2">0</nobr></td>
+		<td class="cs10186B00" colspan="5" style="width:139px;height:89px;text-align:left;vertical-align:top;"><br/><nobr style="line-height:1.2">()&nbsp;/</nobr><br/><br/><nobr style="line-height:1.2">(&nbsp;yr&nbsp;mnth&nbsp;day&nbsp;)</nobr></td>
+		<td class="cs10186B00" style="width:138px;height:89px;text-align:left;vertical-align:top;"><br/><br/><nobr style="line-height:1.2">LOS&nbsp;:&nbsp;day&nbsp;hour&nbsp;minute</nobr></td>
+		<td class="cs10186B00" colspan="2" style="width:140px;height:89px;text-align:left;vertical-align:top;"><nobr style="line-height:1.2">Anamnesa&nbsp;:</nobr><br/></td>
+		<td class="cs10186B00" colspan="2" style="width:139px;height:89px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs10186B00" colspan="3" style="width:138px;height:89px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs10186B00" colspan="5" style="width:143px;height:89px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs10186B00" colspan="3" style="width:137px;height:89px;text-align:left;vertical-align:top;"><br/><br/><br/><br/><br/></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:18px;"></td>
+		<td></td>
+		<td class="cs2B750389" style="width:31px;height:17px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="5" style="width:139px;height:17px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" style="width:138px;height:17px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="2" style="width:140px;height:17px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="2" style="width:139px;height:17px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="3" style="width:138px;height:17px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="5" style="width:143px;height:17px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="3" style="width:137px;height:17px;text-align:left;vertical-align:top;"><nobr style="line-height:1.2">xrTableCell28</nobr></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:32px;"></td>
+		<td></td>
+		<td class="cs2B750389" style="width:31px;height:31px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="5" style="width:139px;height:31px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" style="width:138px;height:31px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="2" style="width:140px;height:31px;text-align:left;vertical-align:top;"><nobr style="line-height:1.2">Pengobatan</nobr><br/><nobr style="line-height:1.2">Seebelumnya:</nobr></td>
+		<td class="cs5409C5E7" colspan="2" style="width:139px;height:31px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="3" style="width:138px;height:31px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="5" style="width:143px;height:31px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="3" style="width:137px;height:31px;text-align:left;vertical-align:top;"><nobr style="line-height:1.2">xrTableCell36</nobr></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:18px;"></td>
+		<td></td>
+		<td class="cs2B750389" style="width:31px;height:17px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="5" style="width:139px;height:17px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" style="width:138px;height:17px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="2" style="width:140px;height:17px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="2" style="width:139px;height:17px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="3" style="width:138px;height:17px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="5" style="width:143px;height:17px;text-align:left;vertical-align:top;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5409C5E7" colspan="3" style="width:137px;height:17px;text-align:left;vertical-align:top;"><nobr style="line-height:1.2">xrTableCell20</nobr></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:69px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:5px;"></td>
+		<td></td>
+		<td class="cs101A94F7" colspan="22" style="width:1046px;height:5px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:1px;"></td>
+		<td></td>
+		<td class="cs5971619E" colspan="22" style="width:1046px;height:1px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:6px;"></td>
+		<td></td>
+		<td class="cs101A94F7" colspan="22" style="width:1046px;height:6px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:12px;"></td>
+		<td></td>
+		<td class="cs65C94B59" colspan="16" style="width:850px;height:12px;text-align:left;vertical-align:middle;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+		<td class="cs65C94B59" colspan="5" style="width:151px;height:12px;text-align:right;vertical-align:middle;"><nobr style="line-height:1.2">1/1</nobr></td>
+		<td></td>
+	</tr>
+</table>
+</body>
+</html>

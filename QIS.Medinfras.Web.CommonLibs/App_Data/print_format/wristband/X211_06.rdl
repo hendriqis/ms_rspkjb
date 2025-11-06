@@ -1,0 +1,8 @@
+﻿^XA
+^POI
+^FWR
+^LH0,236
+^FO190,30 ^A0,38,38^FD{PatientName} ^FS
+^FO140,30 ^A0,33,33^FD{MedicalNo} ({Gender})^FS
+^FO90,30 ^A0,33,33^FDTgl.Lahir : {DateOfBirthInString}^FS
+^XZ

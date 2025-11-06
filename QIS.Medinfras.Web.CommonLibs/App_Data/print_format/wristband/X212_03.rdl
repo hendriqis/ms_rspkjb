@@ -1,0 +1,11 @@
+﻿^XA
+^POI
+^FWR
+^LH0,236
+^FO95,80 ^BQN,2,8,M^FDMA{QRCode}^FS
+^FO250,400 ^A0,38,38^FD{PatientName} ({Gender},{AgeInYear} yo)^FS
+^FO200,400 ^A0,33,33^FDMRN    {MedicalNo}^FS
+^FO160,400 ^A0,33,33^FDREG.NO {RegistrationNo}^FS
+^FO120,400 ^A0,33,33^FD{ActualVisitDateInString} {ActualVisitTime} DOB : {DateOfBirthInString}^FS
+^FO80 ,400 ^BY2,3.0,70^BCN,700,N,N,N^FD{0}^FS
+^XZ	

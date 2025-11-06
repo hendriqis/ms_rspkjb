@@ -1,0 +1,14 @@
+﻿^XA
+^LL200
+^PW400
+^LH5,10
+^CF024,24
+^FO15 ,15^FDREG.NO^FS
+^FO110,15^FD{RegistrationNo}^FS 
+^FO15,40^FD{MedicalNo}^FS 
+^FO15, 65^FD{PatientName} / {cfGenderInitial}^FS
+^FO15, 90^FD{DateOfBirthInString}^FS 
+^FO15 ,115^^BY2,2,0
+^A0N,40,30^BAN,40,N,N,N^FD{cfAlternateRegistrationNo}^FS
+^PR2
+^XZ

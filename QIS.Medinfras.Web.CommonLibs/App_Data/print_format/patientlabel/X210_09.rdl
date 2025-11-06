@@ -1,0 +1,16 @@
+﻿^XA
+^LL200
+^PW640
+^LH10,10^MD10
+^CF030,30
+^FO130,0^FD{MedicalNo}^FS
+^CF025,25
+^BY1,2,30^FO355,0^BAN,30,N,N,N^FD{MedicalNo}^FS
+^CF020,20
+^FO130,50^FD{PatientName}^FS
+^FO130,70^FD{DateOfBirthInString} ({Gender}) {PatientAge}^FS
+^FO130,90^FDNo. ID : {SSN}^FS
+^FO130,110^FDJaminan : {BusinessPartnerName}^FS
+^FO130,130^FD{StreetName}^FS
+^PR2
+^XZ

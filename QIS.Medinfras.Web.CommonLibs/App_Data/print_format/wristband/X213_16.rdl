@@ -1,0 +1,18 @@
+﻿^XA
+^LL2100
+^PW300
+^LH10,10
+^FO85,700
+^FH_
+^FDQA,
+^A0R,53,47
+^FO230,700^FD{cfPatientNameInLabel}^FS
+^APR,30,27
+^FO195,830^FD{MedicalNo}^FS
+^APR,30,27
+^FO155,550^FD{cfPatientNameInLabel}^FS
+^APR,30,27
+^FO115,550^FD{MedicalNo}  {DateOfBirthInString} ^FS
+^FO35,555^BY2,2.0
+^A0N,40,30^BAR,80,Y,N,N^FD{MedicalNo}^FS
+^XZ

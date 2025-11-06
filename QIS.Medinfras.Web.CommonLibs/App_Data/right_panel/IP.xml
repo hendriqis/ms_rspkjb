@@ -1,0 +1,970 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- #Region IP010200 -->
+  <page menucode="IP010200">
+    <tasks>
+      <task code="patientIdentity" title="Data Pasien" description="Pendataan Identitas dan Data Sosial Pasien" url="~/Libs/Program/Module/PatientManagement/Registration/PatientEntryCtl.ascx" width="980" height="600" />
+
+      <task code="uploadDocument" title="Upload Dokumen" description="Upload Dokumen Data Sosial Pasien" url="~/Libs/Program/Module/PatientManagement/TransactionPage/PatientDocument/NewPatientDocumentCtl1.ascx" id="btnUploadDocument" width="980" height="600" />
+
+      <task code="printLabelRegistration" title="Print Label Pasien Registrasi" description="Print label pasien registrasi baru" url="~/Libs/Program/Controls/PrintPatientLabelCtl.ascx" id="btnPrintLabelPatientRegistration" width="350" height="150" />
+
+      <task code="patientPhoto" title="Foto Pasien" description="Ambil Foto Pasien" url="~/Libs/Controls/EditPatientPhotoCtl.ascx" id="btnTakePictures" width="650" height="350" />
+
+      <task code="patientFamily" title="Keluarga Pasien" description="Pendataan Informasi Keluarga Pasien" url="~/Libs/Program/Module/PatientManagement/Registration/PatientFamilyCtl.ascx" id="btnPatientFamily" width="900" height="500" />
+
+      <task code="EmergencyContact" title="Penanggung Jawab Pasien" description="Informasi Pengantar dan Penanggung Jawab Pasien" url="~/Libs/Program/Module/PatientManagement/Registration/EmergencyContactEntryCtl.ascx" id="btnEmergencyContact" width="1200" height="550" />
+
+      <task code="patientAccompany" title="Penunggu Pasien" description="Informasi Penunggu Pasien" url="~/Program/Registration/PatientAccompanyEntryCtl.ascx" id="btnAccompanyData" width="1100" height="450" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="paramedicTeam" title="Tim Dokter" description="Tim Dokter" url="~/Libs/Program/Module/PatientManagement/Registration/ParamedicTeamEntryCtl.ascx" id="btnParamedicTeam" width="900" height="500" />
+
+      <task code="payerDetail" title="Pembayar Pasien" description="Pendataan Penjamin Bayar Pasien" url="~/Libs/Program/Module/PatientManagement/Registration/PayerDetailEntryCtl.ascx" id="btnPayerDetail" width="1250" height="500" />
+
+      <task code="registrationEdit" title="Ubah Dokter dan Rujukan" description="Ubah Dokter" url="~/Libs/Program/Module/PatientManagement/Registration/RegistrationEditCtl.ascx" id="btnRegistrationEdit" width="700" height="450" />
+
+      <task code="temporaryBedChange" title="Ubah Pasien Titipan" description="Ubah Pasien Titipan" url="~/Libs/Program/Module/PatientManagement/Registration/TemporaryBedChangeCtl.ascx" id="btnTemporaryBedChange" width="1000" height="450" />
+
+      <task code="bedChange" title="Ubah Tempat Tidur" description="Ubah Tempat Tidur" url="~/Libs/Program/Module/PatientManagement/Registration/BedChangeCtl.ascx" id="btnBedChange" width="1000" height="450" />
+
+      <task code="generateDataRujukan" title="Data Rujukan" description="Data Rujukan" url="~/Libs/Program/Module/PatientManagement/Registration/SearchBPJSReferralCtl2.ascx" id="btnGenerateDataRujukan" width="900" height="500" />
+
+      <task code="generateSEP" title="Surat Eligibilitas Peserta (SEP)" description="Pembuatan dan Pencetakan SEP" url="~/Libs/Program/Module/PatientManagement/Registration/GenerateSEPCtl.ascx" id="btnGenerateSEP" width="900" height="550" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="generateSEPManual" title="Surat Eligibilitas Peserta (SEP) Manual" description="Pengisian Data SEP Manual" url="~/Libs/Program/Module/PatientManagement/Registration/GenerateSEPManualCtl.ascx" id="btnGenerateSEPManual" width="700" height="300" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="bpjsPatientHistory" title="History Kunjungan Pasien BPJS" description="History Kunjungan Pasien BPJS" url="~/Libs/Program/Module/PatientManagement/Registration/HistoryPatientBPJSCtl.ascx" id="btnGetHistoryPatient" width="900" height="550" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="changeReferralManual" title="Ubah Rujukan Registrasi Manual" description="Ubah Rujukan Registrasi Manual" url="~/Libs/Program/Module/PatientManagement/Registration/ChangeReferralManualCtl.ascx" id="btnChangeReferralManual" width="700" height="300" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="changeBusinessPartner" title="Ubah Penjamin Bayar" description="Ubah penjamin bayar selama belum ada transaksi / pembayaran" url="~/Libs/Program/Module/PatientManagement/Registration/RegistrationEditBusinessPartnerCtl.ascx" id="btnBusinessPartnerEdit" width="700" height="450" />
+
+      <task code="chargeClassEdit" title="Ubah Kelas Tagihan" description="Ubah Kelas Tagihan" url="~/Libs/Program/Module/PatientManagement/Registration/RegistrationEditChargeClassCtl.ascx" id="btnChargeClassEdit" width="700" height="450" />
+
+      <task code="registrationNotes" title="Catatan Kunjungan Pasien" description="Catatan khusus mengenai pendaftaran pasien" url="~/Libs/Program/Module/PatientManagement/Registration/RegistrationNotesCtl.ascx" id="btnRegistrationNotes" width="900" height="550" />
+
+      <task code="referrer" title="Rujukan" description="Data Rujukan Pasien" url="~/Libs/Program/Module/PatientManagement/Registration/ReferralCtl.ascx" id="btnReferrer" width="900" height="550" />
+
+      <task code="referrerNotes" title="Catatan Rujukan" description="Catatan Rujukan Pasien" url="~/Libs/Program/Module/PatientManagement/Registration/ReferralNotesCtl.ascx" id="btnReferrerNotes" width="900" height="550" />
+
+    </tasks>
+    <informations>
+      <information code="infoRegistration" title="Informasi Registrasi" description="Informasi Registrasi" url="~/Libs/Program/Controls/InfoRegistrationCtl.ascx" width="1100" height="500" />
+      <information code="infoPatientDocument" title="Informasi Dokumen Pasien" description="Informasi Dokumen Pasien" url="~/Libs/Program/Module/PatientManagement/TransactionPage/PatientDocument/PatientDocumentListCtl.ascx" id="btnInfoPatientDocument" width="1030" height="500" />
+      <information code="infoCustomerContract" title="Informasi Status Instansi" description="Informasi Status Instansi" url="~/Libs/Program/Controls/InfoContractCustomerCtl.ascx" width="1100" height="500" />
+      <information code="infoOutstandingPiutangPribadi" title="Informasi Outstanding Piutang Pribadi" description="Informasi Outstanding Piutang Pribadi" url="~/Libs/Program/Controls/InfoOutstandingPiutangPribadiCtl.ascx" id="btnInfoOutstandingInvoice" width="1100" height="500" />
+      <information code="infoHistoryRegistration" title="Informasi History Registrasi" description="Informasi History Registrasi" url="~/Libs/Program/Controls/InfoHistoryRegistrationCtl.ascx" width="1100" height="500" />
+    </informations>
+    <prints>
+      <print title="Bukti Pendaftaran" reportcode="PM-00101" isDisplayPrintCount="0" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Kartu Pasien" reportcode="PM-00106" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Label Rekam Medis" reportcode="PM-00105" isDisplayPrintCount="1" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Lembar Identitas Pasien" reportcode="PM-00117" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Lembar Masuk dan Keluar (RM : 1A)" reportcode="PM-00110" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <!-- <print title="Ringkasan Masuk dan Keluar (RM Ranap 1)" reportcode="PM-90083" isByHealthcare="1" healthcareName="RSPKSB"/> -->
+
+      <print title="Ringkasan Masuk dan Keluar (RM Ranap 1) v2" reportcode="PM-90083" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Sebab Kematian (RM Ranap 1)" reportcode="PM-00133" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Surat Jaminan Pelayanan Rawat Inap" reportcode="PM-00112" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Surat Keterangan Rawat Inap" reportcode="PM-00566" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Formulir RM 1" reportcode="MR000031" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Laporan Medis Awal" reportcode="MR000065" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Gelang Pasien Dewasa" reportcode="PM-00107" isDisplayPrintCount="1" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Gelang Pasien Anak" reportcode="PM-00108" isDisplayPrintCount="1" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="SURAT PERMINTAAN ROHANI" reportcode="PM-00843"  isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+    <utilities>
+      <utility code="generateSEP" title="Surat Eligibilitas Peserta (SEP)" description="Pembuatan dan Pencetakan SEP" url="~/Libs/Program/Module/PatientManagement/Registration/GenerateSEPCtl.ascx" id="btnGenerateSEP" width="900" height="550" />
+    </utilities>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP010442 -->
+  <page menucode="IP010442">
+    <tasks>
+      <task code="generateCPPT" title="Catatan Terintegrasi" description="Pencatatan terintegrasi untuk Proses Evaluasi Asuhan Keperawatan" url="~/Libs/Program/Module/PatientManagement/TransactionPage/Nursing/Assessment/Process/NursingEvaluationIntegratedNotesEntryCtl1.ascx" id="btngenerateCPPT" width="700" height="400" />
+    </tasks>
+    <prints>
+      <print title="Asuhan Keperawatan" reportcode="NR-00001" visible="1" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP010451 -->
+  <page menucode="IP010451">
+    <tasks>
+
+      <task code="physicianTransfer" title="Alih DPJP Utama" description="Proses pemindahan/alih Dokter DPJP Utama" url="~/Libs/Program/Module/PatientManagement/Registration/PhysicianTransferCtl.ascx" id="btnPhysicianTransfer" width="700" height="350" />
+
+      <task code="SuratKeranganDirawat" title="Surat Keterangan Dirawat" description="Cetak Surat Keterangan Dirawat" url="~/Libs/Program/Controls/NursingDateCtl.ascx" width="700" height="350" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <task code="keteranganIstirahat" title="Surat Keterangan Istirahat" description="Cetak Surat Keterangan Istirahat" url="~/Libs/Program/Controls/SuratKeteranganIstirahatCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB"/>
+      <task code="keteranganIstirahat1" title="Surat Keterangan Istirahat (Diagnosa)" description="Cetak Surat Keterangan Istirahat dengan Diagnosa" url="~/Libs/Program/Controls/SuratKeteranganIstirahat1Ctl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="medicalSickLeaveBilingual" title="Surat Keterangan Sakit" description="Cetak Surat Keterangan Sakit (Bilingual)" url="~/Libs/Program/Controls/MedicalSickLeaveBilingualCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <task code="keteranganButaWarna" title="Surat Keterangan Buta Warna" description="Cetak Surat Keterangan Buta Warna" url="~/Libs/Program/Controls/SuratKeteranganButaWarnaCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="keteranganKematian" title="Surat Keterangan Kematian" description="Cetak Surat Keterangan Kematian" url="~/Libs/Program/Controls/SuratKeteranganKematianCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <task code="registrationEdit" title="Ubah Dokter dan Rujukan" description="Ubah Dokter" url="~/Libs/Program/Module/PatientManagement/Registration/RegistrationEditCtl.ascx" id="btnRegistrationEdit" width="700" height="450" isByHealthcare="1" healthcareName="RSPKSB" />
+    </tasks>
+    <prints>
+      <print title="Kajian Awal Medis Pasien Rawat Inap" reportcode="MR000064" />
+
+      <print title="Cetak Catatan Perawat (Semua Tanggal)" reportcode="MR000007" />
+
+      <print title="Ringkasan Pasien Pulang (Discharge Summary)" reportcode="MR000014" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Konsultasi/Rawat Bersama/Alih Rawat" reportcode="PM-00146" />
+
+      <print title="Jawaban - Konsultasi/Rawat Bersama/Alih Rawat" reportcode="PM-00147" />
+
+      <print title="Surat Keterangan Medis" reportcode="MR000017" isByHealthcare="1" healthcareName="RSPKSB"/>
+																														  
+																												  
+
+      <!-- <print title="Surat Perintah Rawat Inap" reportcode="PM-00524" isByHealthcare="1" healthcareName="RSPKSB"/> -->
+
+      <print title="Surat Pengantar Rawat Inap" reportcode="PM-00847" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Resume Medis Rawat Jalan" reportcode="PM-90117" isByHealthcare="1" healthcareName="RSPKSB"/>
+      <print title="Resume Medis Rawat Inap" reportcode="PM-90118" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Ringkasan Masuk dan Keluar (RM Ranap 1) v2" reportcode="PM-90083" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP010452 -->
+  <page menucode="IP010452">
+    <prints>
+      <print title="Integrated Notes Format 1" reportcode="MR000005" />
+      <print title="Integrated Notes Format 2" reportcode="MR000007" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP010455 -->
+  <page menucode="IP010455">
+    <prints>
+      <print title="Resume Medis Rawat Inap" reportcode="PM-90118" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP020200 -->
+  <page menucode="IP020200">
+    <prints>
+      <print title="Bukti Pasien Pindah Kelas" reportcode="PM-00249" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP030101 -->
+  <page menucode="IP030101">
+    <tasks>
+      <task code="transactionNotes" title="Catatan Transaksi" description="Catatan mengenai transaksi pasien" url="~/Libs/Program/Module/PatientManagement/Transaction/BillingNotesEntry.ascx" id="btnBillingNotes" width="1200" height="550" />
+      <task code="paramedicTeam" title="Tim Dokter (Rawat Bersama)" description="Daftar Dokter yang tergabung dalam Tim Dokter (Rawat Bersama)" url="~/Libs/Program/Module/PatientManagement/Registration/ParamedicTeamEntryCtl.ascx" id="btnParamedicTeam" width="900" height="500" />
+    </tasks>
+    <prints>
+      <print title="Bukti Transaksi" reportcode="PM-00201" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (A6)" reportcode="PM-00236" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (1/3 F4)" reportcode="PM-00239" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP030109 -->
+  <page menucode="IP030109">
+    <tasks>
+      <task code="paramedicTeam" title="Tim Dokter (Rawat Bersama)" description="Daftar Dokter yang tergabung dalam Tim Dokter (Rawat Bersama)" url="~/Libs/Program/Module/PatientManagement/Registration/ParamedicTeamEntryCtl.ascx" id="btnParamedicTeam" width="900" height="500" isByHealthcare="1" healthcareName="NHS" />
+      <task code="registrationNotes" title="Catatan Kunjungan Pasien" description="Catatan khusus mengenai pendaftaran pasien" url="~/Libs/Program/Module/PatientManagement/Registration/RegistrationNotesCtl.ascx" id="btnRegistrationNotes" width="900" height="550" isByHealthcare="1" healthcareName="NHS" />
+    </tasks>
+    <prints>
+      <print title="Cetak Catatan Perawat" reportcode="PM-00221" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP030181 -->
+  <page menucode="IP030181">
+    <prints>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031503 -->
+  <page menucode="IP031503">
+    <prints>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060200 -->
+  <page menucode="IP060200">
+    <prints>
+      <print title="Bukti Pemakaian Barang Pasien" reportcode="IP-00206" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031702 -->
+  <page menucode="IP031702">
+    <prints>
+      <print title="Bukti Pemakaian Barang Pasien" reportcode="IP-00206" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031703 -->
+  <page menucode="IP031703">
+    <prints>
+      <print title="Laporan Operasi (Versi Lengkap)" reportcode="PM-90128" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Formulir Penandaan Lokasi Operasi" reportcode="PM-00569" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031801 -->
+  <page menucode="IP031801">
+    <tasks>
+      <task code="patientBirth" title="Data Bayi" description="Data Bayi" url="~/Libs/Program/Module/PatientManagement/Transaction/PatientBirthCtl.ascx" id="btnPatientBirth" width="1200" height="550" />
+    </tasks>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031306 -->
+  <page menucode="IP031306">
+    <prints>
+      <print title="Slip Bangsal Harian" reportcode="IP-00101" />
+
+      <print title="Slip Bangsal Harian Rekap" reportcode="IP-00103" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031032 -->
+  <page menucode="IP031032">
+    <tasks>
+      <task code="generateCPPT" title="Catatan Terintegrasi" description="Pencatatan terintegrasi untuk Proses Evaluasi Asuhan Keperawatan" url="~/Libs/Program/Module/PatientManagement/TransactionPage/Nursing/Assessment/Process/NursingEvaluationIntegratedNotesEntryCtl1.ascx" id="btngenerateCPPT" width="700" height="400" />
+
+    </tasks>
+    <prints>
+      <print title="Asuhan Keperawatan" reportcode="NR-00001" visible="1" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031204 -->
+  <page menucode="IP031204">
+    <prints>
+      <print title="Integrated Notes Format 1" reportcode="MR000005" />
+
+      <print title="Integrated Notes Format 2" reportcode="MR000007" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031212 -->
+  <page menucode="IP031212">
+    <prints>
+      <print title="Resume Medis Rawat Inap" reportcode="PM-90118" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031213 -->
+  <page menucode="IP031213">
+    <prints>
+      <print title="Resume Keperawatan" reportcode="PM-90018" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP030181 -->
+  <page menucode="IP030181">
+    <prints>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031209 -->
+  <page menucode="IP031209">
+    <prints>
+      <print title="Konsultasi/Rawat Bersama/Alih Rawat" reportcode="PM-00146" />
+
+      <print title="Jawaban - Konsultasi/Rawat Bersama/Alih Rawat" reportcode="PM-00147" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP030300 -->
+  <page menucode="IP030300">
+    <tasks>
+      <task code="registrationEdit" title="Ubah Dokter dan Rujukan" description="Ubah Dokter" url="~/Libs/Program/Module/PatientManagement/Registration/RegistrationEditCtl.ascx" id="btnRegistrationEdit" width="700" height="450" isByHealthcare="1" healthcareName="RSPKSB" />
+    </tasks>
+    <prints>
+      <print title="Surat Keterangan Kelahiran" reportcode="PM-90084" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Sertifikat Kelahiran" reportcode="PM-00161" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031201 -->
+  <page menucode="IP031201">
+    <tasks>
+      <task code="paramedicTeam" title="Tim Dokter (Rawat Bersama)" description="Daftar Dokter yang tergabung dalam Tim Dokter (Rawat Bersama)" url="~/Libs/Program/Module/PatientManagement/Registration/ParamedicTeamEntryCtl.ascx" id="btnParamedicTeam" width="900" height="500" />
+
+      <task code="nursingNotesPerDate" title="Cetak Catatan Perawat (Pilih Tanggal)" description="Cetak Catatan Perawat Per Tanggal" url="~/Libs/Program/Controls/NusingNotesPerDateCtl.ascx" width="550" height="200" />
+
+      <task code="physicianTransfer" title="Alih DPJP Utama" description="Proses pemindahan/alih Dokter DPJP Utama" url="~/Libs/Program/Module/PatientManagement/Registration/PhysicianTransferCtl.ascx" id="btnPhysicianTransfer" width="700" height="350" />
+
+      <task code="keteranganIstirahat" title="Surat Keterangan Istirahat" description="Cetak Surat Keterangan Istirahat" url="~/Libs/Program/Controls/SuratKeteranganIstirahatCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB"/>
+      <task code="keteranganIstirahat1" title="Surat Keterangan Istirahat (Diagnosa)" description="Cetak Surat Keterangan Istirahat dengan Diagnosa" url="~/Libs/Program/Controls/SuratKeteranganIstirahat1Ctl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="SuratKeranganDirawat" title="Surat Keterangan Dirawat" description="Cetak Surat Keterangan Dirawat" url="~/Libs/Program/Controls/NursingDateCtl.ascx" width="700" height="350" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <task code="keteranganButaWarna" title="Surat Keterangan Buta Warna" description="Cetak Surat Keterangan Buta Warna" url="~/Libs/Program/Controls/SuratKeteranganButaWarnaCtl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="kontrolKesehatan" title="Surat Keterangan Kontrol" description="Cetak Surat Keterangan Kontrol" url="~/Libs/Program/Controls/SuratKeteranganKontrolCtl.ascx" width="700" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="kesehatanJiwa" title="Surat Keterangan Kesehatan Jiwa" description="Cetak Surat Keterangan Kesehatan Jiwa" url="~/Libs/Program/Controls/SuratKeteranganKesehatanJiwaCtl.ascx" width="700" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <task code="generateControlLetter" title="Pembuatan Surat Rencana Kontrol BPJS" description="Pembuatan Surat Rencana Kontrol " url="~/Libs/Program/Module/PatientManagement/Registration/BPJSGenerateControlLetter.ascx" id="btnGenerateControlLetter" width="700" height="250" visible="1" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </tasks>
+    <prints>
+      <print title="Integrated Notes Format 1" reportcode="MR000005" />
+      <print title="Integrated Notes Format 2 - NHS" reportcode="MR000025" isByHealthcare="0" healthcareName="NHS" />
+      <print title="Integrated Notes With Digital Signature" reportcode="MR000021" isByHealthcare="0" healthcareName="RSSEBK" />
+      <print title="Kajian Awal Medis Pasien Rawat Inap" reportcode="MR000064" />
+
+      <print title="Cetak Catatan Perawat (Semua Tanggal)" reportcode="MR000007" />
+
+      <print title="Ringkasan Pasien Pulang (Discharge Summary)" reportcode="MR000014" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Konsultasi/Rawat Bersama/Alih Rawat" reportcode="PM-00146" />
+
+      <print title="Jawaban - Konsultasi/Rawat Bersama/Alih Rawat" reportcode="PM-00147" />
+
+      <print title="Formulir Transfer Pasien Antar Ruang" reportcode="PM-00572" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <!-- <print title="Surat Perintah Rawat Inap" reportcode="PM-00524" isByHealthcare="1" healthcareName="RSPKSB"/> -->
+
+      <print title="Surat Pengantar Rawat Inap" reportcode="PM-00847" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Surat Keterangan Medis" reportcode="MR000017" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Sebab Kematian (RM Ranap 1)" reportcode="PM-00133" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Surat Keterangan Kematian" reportcode="PM-00564" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Resume Medis Rawat Inap" reportcode="PM-90118" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Surat Permintaan Serah Terima Jenazah" reportcode="PM-00184" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Laporan Medis Awal" reportcode="MR000065" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <!-- <print title="Ringkasan Masuk dan Keluar (RM Ranap 1)" reportcode="PM-90083" isByHealthcare="1" healthcareName="RSPKSB"/> -->
+
+      <print title="Ringkasan Masuk dan Keluar (RM Ranap 1) v2" reportcode="PM-90083" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031301 -->
+  <page menucode="IP031301">
+    <tasks>
+      <task code="paramedicTeam" title="Tim Dokter (Rawat Bersama)" description="Daftar Dokter yang tergabung dalam Tim Dokter (Rawat Bersama)" url="~/Libs/Program/Module/PatientManagement/Registration/ParamedicTeamEntryCtl.ascx" id="btnParamedicTeam" width="900" height="500" isByHealthcare="1" healthcareName="RSPKSB" />
+      <task code="registrationNotes" title="Catatan Kunjungan Pasien" description="Catatan khusus mengenai pendaftaran pasien" url="~/Libs/Program/Module/PatientManagement/Registration/RegistrationNotesCtl.ascx" id="btnRegistrationNotes" width="900" height="550" />
+      <task code="keteranganIstirahat1" title="Surat Keterangan Istirahat" description="Cetak Surat Keterangan Istirahat" url="~/Libs/Program/Controls/SuratKeteranganIstirahat1Ctl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+    </tasks>
+    <prints>
+      <print title="Bukti Transaksi" reportcode="PM-00201" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (A6)" reportcode="PM-00236" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (1/3 F4)" reportcode="PM-00239" isByHealthcare="1" healthcareName="RSPKSB" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031302 -->
+  <page menucode="IP031302">
+    <tasks>
+      <task code="paramedicTeam" title="Tim Dokter (Rawat Bersama)" description="Daftar Dokter yang tergabung dalam Tim Dokter (Rawat Bersama)" url="~/Libs/Program/Module/PatientManagement/Registration/ParamedicTeamEntryCtl.ascx" id="btnParamedicTeam" width="900" height="500" isByHealthcare="1" healthcareName="RSPKSB" />
+      <task code="registrationNotes" title="Catatan Kunjungan Pasien" description="Catatan khusus mengenai pendaftaran pasien" url="~/Libs/Program/Module/PatientManagement/Registration/RegistrationNotesCtl.ascx" id="btnRegistrationNotes" width="900" height="550" />
+    </tasks>
+    <prints>
+      <print title="Bukti Transaksi" reportcode="PM-00201" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (A6)" reportcode="PM-00236" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (1/3 F4)" reportcode="PM-00239" isByHealthcare="1" healthcareName="RSPKSB" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031401 -->
+  <page menucode="IP031401">
+    <tasks>
+      <task code="specimenInfo" title="Pendataan Pengambilan Sampel Pemeriksaan" description="Pendataan informasi pengambilan sampel pemeriksaan laboratorium oleh perawat" url="~/Libs/Controls/Process/SpecimenEntryCtl1.ascx" id="btnSpecimenData" width="800" height="550" healthcareName="QISJKT"/>
+      <task code="specimenDeliveryInfo" title="Pendataan Pengiriman Sampel Pemeriksaan" description="Pendataan informasi pengiriman sampel pemeriksaan laboratorium oleh perawat" url="~/Libs/Controls/Process/SpecimenDeliveryEntryCtl1.ascx" id="btnSpecimenDeliveryInfo" width="800" height="550" healthcareName="QISJKT" />
+    </tasks>
+    <prints>
+      <print title="Bukti Order" reportcode="PM-00529" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031402 -->
+  <page menucode="IP031402">
+    <informations>
+      <information code="prescriptionOrderChangesLogNotes" title="Catatan Perubahan Order" description="Catatan Perubahan Order Dokter oleh Farmasi" url="~/Libs/Controls/ViewNotes/ViewPrescriptionOrderChangesLogCtl.ascx" id="btnViewPrescriptionOrderLogNotes" width="900" height="500" />
+    </informations>
+    <prints>
+      <print title="Bukti Order" reportcode="PM-00529" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031403 -->
+  <page menucode="IP031403">
+    <prints>
+      <print title="Bukti Order" reportcode="PM-00532" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031404 -->
+  <page menucode="IP031404">
+    <prints>
+      <print title="Bukti Order" reportcode="PM-00530" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031405 -->
+  <page menucode="IP031405">
+    <prints>
+      <print title="Bukti Order" reportcode="PM-00533" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031406 -->
+  <page menucode="IP031406">
+    <prints>
+      <print title="Bukti Order" reportcode="PM-00531" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031602 -->
+  <page menucode="IP031602">
+    <prints>
+      <print title="Resume Medis" reportcode="MR000008" />
+      <print title="Surat Rujukan Eksternal" reportcode="PM-00545" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060111 -->
+  <page menucode="IP060111">
+    <tasks>
+      <task code="transactionNotes" title="Catatan Transaksi" description="Catatan mengenai transaksi pasien" url="~/Libs/Program/Module/PatientManagement/Transaction/BillingNotesEntry.ascx" id="btnBillingNotes" width="1200" height="550" />
+    </tasks>
+    <prints>
+      <print title="Bukti Transaksi" reportcode="PM-00201" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (A6)" reportcode="PM-00236" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (1/3 F4)" reportcode="PM-00239" isByHealthcare="1" healthcareName="RSPKSB" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060112 -->
+  <page menucode="IP060112">
+    <tasks>
+      <task code="transactionNotes" title="Catatan Transaksi" description="Catatan mengenai transaksi pasien" url="~/Libs/Program/Module/PatientManagement/Transaction/BillingNotesEntry.ascx" id="btnBillingNotes" width="1200" height="550" />
+    </tasks>
+    <prints>
+      <print title="Bukti Transaksi" reportcode="PM-00201" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (A6)" reportcode="PM-00236" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (1/3 F4)" reportcode="PM-00239" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060113 -->
+  <page menucode="IP060113">
+    <tasks>
+      <task code="transactionNotes" title="Catatan Transaksi" description="Catatan mengenai transaksi pasien" url="~/Libs/Program/Module/PatientManagement/Transaction/BillingNotesEntry.ascx" id="btnBillingNotes" width="1200" height="550" />
+    </tasks>
+    <prints>
+      <print title="Bukti Transaksi" reportcode="PM-00201" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (A6)" reportcode="PM-00236" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (1/3 F4)" reportcode="PM-00239" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060114 -->
+  <page menucode="IP060114">
+    <tasks>
+      <task code="transactionNotes" title="Catatan Transaksi" description="Catatan mengenai transaksi pasien" url="~/Libs/Program/Module/PatientManagement/Transaction/BillingNotesEntry.ascx" id="btnBillingNotes" width="1200" height="550" />
+    </tasks>
+    <prints>
+      <print title="Bukti Transaksi" reportcode="PM-00201" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (A6)" reportcode="PM-00236" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (1/3 F4)" reportcode="PM-00239" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060115 -->
+  <page menucode="IP060115">
+    <tasks>
+      <task code="transactionNotes" title="Catatan Transaksi" description="Catatan mengenai transaksi pasien" url="~/Libs/Program/Module/PatientManagement/Transaction/BillingNotesEntry.ascx" id="btnBillingNotes" width="1200" height="550" />
+    </tasks>
+    <prints>
+      <print title="Bukti Transaksi" reportcode="PM-00201" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (A6)" reportcode="PM-00236" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (1/3 F4)" reportcode="PM-00239" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060116 -->
+  <page menucode="IP060116">
+    <tasks>
+      <task code="transactionNotes" title="Catatan Transaksi" description="Catatan mengenai transaksi pasien" url="~/Libs/Program/Module/PatientManagement/Transaction/BillingNotesEntry.ascx" id="btnBillingNotes" width="1200" height="550" />
+    </tasks>
+    <prints>
+      <print title="Bukti Transaksi" reportcode="PM-00201" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (A6)" reportcode="PM-00236" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (1/3 F4)" reportcode="PM-00239" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060117 -->
+  <page menucode="IP060117">
+    <tasks>
+      <task code="transactionNotes" title="Catatan Transaksi" description="Catatan mengenai transaksi pasien" url="~/Libs/Program/Module/PatientManagement/Transaction/BillingNotesEntry.ascx" id="btnBillingNotes" width="1200" height="550" />
+    </tasks>
+    <prints>
+      <print title="Bukti Transaksi" reportcode="PM-00201" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (A6)" reportcode="PM-00236" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (1/3 F4)" reportcode="PM-00239" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060118 -->
+  <page menucode="IP060118">
+    <tasks>
+      <task code="transactionNotes" title="Catatan Transaksi" description="Catatan mengenai transaksi pasien" url="~/Libs/Program/Module/PatientManagement/Transaction/BillingNotesEntry.ascx" id="btnBillingNotes" width="1200" height="550" />
+    </tasks>
+    <prints>
+      <print title="Bukti Transaksi" reportcode="PM-00201" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (A6)" reportcode="PM-00236" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Transaksi (1/3 F4)" reportcode="PM-00239" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!--#Region IP060121-->
+  <page menucode="IP060121">
+    <tasks>
+      <task code="transactionNotes" title="Catatan Transaksi" description="Catatan mengenai transaksi pasien" url="~/Libs/Program/Module/PatientManagement/Transaction/BillingNotesEntry.ascx" id="btnBillingNotes" width="1200" height="550" />
+    </tasks>
+    <informations>
+      <information code="infoHistoryLockDown" title="History Lock Down" description="History Lock Down" url="~/Libs/Program/Information/InfoHistoryLockDownCtl.ascx" id="btnHistoryLockDown" width="1200" height="500" />
+      <information code="infoHistoryCloseBilling" title="History Close Billing" description="History Close Billing" url="~/Libs/Program/Information/InfoHistoryCloseBillingCtl.ascx" id="btnHistoryLockDown" width="1200" height="500" />
+      <information code="infoHistoryBilling" title="History Billing" description="History nomor tagihan dari registrasi ini dan link registrasinya" url="~/Libs/Program/Module/PatientManagement/PatientBillSummary/GenerateBill/BillHistory.ascx" id="btnHistoryBilling" width="1200" height="500" />
+    </informations>
+    <prints>
+      <print title="1.D. Invoice (Detail) - All Bill" reportcode="PM-00829" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="1.S. Invoice (Summary) - All Bill" reportcode="PM-00830" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="2.D. Invoice (Detail)" reportcode="PM-00856" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="2.D. Invoice (Detail) sob" reportcode="PM-002137" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="2.D. Invoice (Detail) sob v2" reportcode="PM-002179" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="2.D. Invoice (Detail) - Rincian Komponen" reportcode="PM-00851" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="2.S. Invoice (Summary)" reportcode="PM-00263" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="3.D. Invoice (Detail - Patient)" reportcode="PM-00282" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="3.S. Invoice (Summary - Patient)" reportcode="PM-00283" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="4.D. Invoice (Detail - Payer)" reportcode="PM-00284" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="4.S. Invoice (Summary - Payer)" reportcode="PM-00285" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="5.D. Invoice - Doctor Fee (Detail)" reportcode="PM-00294" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="5.S. Invoice - Doctor Fee (Summary)" reportcode="PM-00295" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="6.D. Invoice (Detail - per Item)" reportcode="PM-00287" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Rawat Jalan (Detail)" reportcode="PM-00254" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Rawat Jalan (Detail) - Patient" reportcode="PM-00273" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Rawat Jalan (Detail) - Payer" reportcode="PM-00272" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Rawat Jalan (Rekap)" reportcode="PM-00255" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Rawat Jalan (Rekap) - Patient" reportcode="PM-00275" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Rawat Jalan (Rekap) - Payer" reportcode="PM-00274" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice (Detail) Diskon" reportcode="PM-00690" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice (Summary) Diskon" reportcode="PM-00626" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] Invoice (Transaction Detail)" reportcode="PM-00601" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Rekap Penggunaan Obat dan Alkes" reportcode="PM-00248" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="Rincian Biaya Laboratorium" reportcode="PM-00207" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="Rincian Biaya Radiologi" reportcode="PM-00208" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="Rincian Biaya Penunjang Lainnya" reportcode="PM-00209" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Laporan Medis Awal" reportcode="MR000065" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Surat Keterangan Medis" reportcode="MR000017" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Surat Keterangan Kematian" reportcode="PM-00523" isDisplayPrintCount="1" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060123 -->
+  <page menucode="IP060123">
+    <tasks>
+    </tasks>
+    <informations>
+      <information code="infoInvoice" title="Informasi Penagihan Piutang" description="Informasi Penagihan Piutang" url="~/Libs/Program/Module/PatientManagement/PatientBillSummary/Payment/ARInvoiceReceivingInformationCtl.ascx" id="btninfoInvoice" width="1100" height="500" />
+    </informations>
+    <prints>
+      <print title="Bukti Penerimaan Uang Muka" reportcode="PM-00345" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Pengembalian Uang" reportcode="PM-00344" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Bukti Pengembalian Uang Muka" reportcode="PM-00346" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Form Pengembalian Uang Muka Pasien" reportcode="PM-00322" />
+
+      <print title="Surat Izin Pulang" reportcode="PM-00187" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Piutang Pribadi - Kelompok Pelayanan" reportcode="PM-00310" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Piutang Pribadi - Detail" reportcode="PM-00304" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Piutang Instansi - Kelompok Pelayanan" reportcode="PM-00311" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Piutang Instansi - Detail" reportcode="PM-00306" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Deposit IN" reportcode="PM-00619" />
+
+      <print title="Bukti Deposit OUT" reportcode="PM-00620" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060124 -->
+  <page menucode="IP060124">
+    <prints>
+      <print title="Rincian Biaya" reportcode="PM-00621" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060127 -->
+  <page menucode="IP060127">
+    <prints>
+      <print title="Bukti Penerimaan Uang Muka" reportcode="PM-00345" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Pengembalian Uang" reportcode="PM-00344" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Bukti Pengembalian Uang Muka" reportcode="PM-00346" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Form Pengembalian Uang Muka Pasien" reportcode="PM-00322" />
+
+      <print title="Surat Izin Pulang" reportcode="PM-00187" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Deposit IN" reportcode="PM-00619" />
+
+      <print title="Bukti Deposit OUT" reportcode="PM-00620" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060128 -->
+  <page menucode="IP060128">
+    <informations>
+      <information code="infoInvoice" title="Informasi Penagihan Piutang" description="Informasi Penagihan Piutang" url="~/Libs/Program/Module/PatientManagement/PatientBillSummary/Payment/ARInvoiceReceivingInformationCtl.ascx" id="btninfoInvoice" width="1100" height="500" />
+    </informations>
+    <prints>
+      <print title="Bukti Piutang Pribadi - Kelompok Pelayanan" reportcode="PM-00310" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Piutang Pribadi - Detail" reportcode="PM-00304" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Piutang Instansi - Kelompok Pelayanan" reportcode="PM-00311" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Piutang Instansi - Detail" reportcode="PM-00306" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060142 -->
+  <page menucode="IP060142">
+    <tasks>
+      <task code="payerDetail" title="Pembayar Pasien" description="Pendataan Penjamin Bayar Pasien" url="~/Libs/Program/Module/PatientManagement/Registration/PayerDetailEntryCtl.ascx" id="btnPayerDetail" width="1250" height="500" />
+
+      <task code="bpjsProcessData" title="Proses Data BPJS" description="Proses Data BPJS" url="~/Libs/Program/Module/PatientManagement/Registration/RegistrationBPJSUpdateCtl.ascx" id="btnBPJSProcessData" width="500" height="150" isByHealthcare="1" healthcareName="RSPKSB" />
+    </tasks>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060144 -->
+  <page menucode="IP060144">
+    <tasks>
+      <task code="linkedFromOtherRegistration" title="Link dari Registrasi Lain" description="Menyambungkan dari registrasi asal lain" url="~/Libs/Program/Module/PatientManagement/PatientBillSummary/TransferBill/LinkedFromOtherRegistrationCtl.ascx" id="btnPayerDetail" width="1100" height="500" isByHealthcare="1" healthcareName="RSPKSB" />
+    </tasks>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060147 -->
+  <page menucode="IP060147">
+    <prints>
+      <print title="Cetak Informasi Visitee (Attending Notes)" reportcode="IP-00114" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060149 -->
+  <page menucode="IP060149">
+    <prints>
+      <print title="[Jatah Kelas] 1.D. Invoice (Detail) - All Bill" reportcode="PM-00296" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[Jatah Kelas] 1.S. Invoice (Summary) - All Bill" reportcode="PM-00297" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[Jatah Kelas] 2.D. Invoice (Detail)" reportcode="PM-00298" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[Jatah Kelas] 2.S. Invoice (Summary)" reportcode="PM-00299" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[Jatah Kelas] 3.D. Invoice (Detail - Patient)" reportcode="PM-002100" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[Jatah Kelas] 3.S. Invoice (Summary - Patient)" reportcode="PM-002101" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[Jatah Kelas] 4.D. Invoice (Detail - Payer)" reportcode="PM-002102" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[Jatah Kelas] 4.S. Invoice (Summary - Payer)" reportcode="PM-002103" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[Jatah Kelas] 5.D. Invoice - Doctor Fee (Detail)" reportcode="PM-002104" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[Jatah Kelas] 5.S. Invoice - Doctor Fee (Summary)" reportcode="PM-002105" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060159 -->
+  <page menucode="IP060159">
+    <prints>
+      <print title="Bukti Transaksi Tempat Tidur" reportcode="IP-00207" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!--#Region IP060191-->
+  <page menucode="IP060191">
+    <prints>
+      <print title="[per Billing] 1.D. Invoice (Detail)" reportcode="PM-00607" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] 1.S. Invoice (Summary)" reportcode="PM-00608" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] 2.D. Invoice (Detail - Patient)" reportcode="PM-00609" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] 2.S. Invoice (Summary - Patient)" reportcode="PM-00610" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] 3.D. Invoice (Detail - Payer)" reportcode="PM-00611" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] 3.S. Invoice (Summary - Payer)" reportcode="PM-00612" isByHealthcare="1" healthcareName="RSPKSB" />
+
+    </prints>
+  </page>
+  <!-- #Region IP060194 -->
+  <page menucode="IP060194">
+    <prints>
+      <print title="Bukti Mutasi Pasien" reportcode="PM-00249" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP060199 -->
+  <page menucode="IP060199">
+    <prints>
+      <print title="Konsultasi/Rawat Bersama/Alih Rawat" reportcode="PM-00146" />
+
+      <print title="Jawaban - Konsultasi/Rawat Bersama/Alih Rawat" reportcode="PM-00147" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #EndRegion -->
+  <!--#Region IP070110-->
+  <page menucode="IP070110">
+    <tasks>
+      <task code="transactionNotes" title="Catatan Transaksi" description="Catatan mengenai transaksi pasien" url="~/Libs/Program/Module/PatientManagement/Transaction/BillingNotesEntry.ascx" id="btnBillingNotes" width="1200" height="550" />
+    </tasks>
+    <prints>
+      <print title="1.D. Invoice (Detail) - All Bill" reportcode="PM-00829" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="1.S. Invoice (Summary) - All Bill" reportcode="PM-00830" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="2.D. Invoice (Detail)" reportcode="PM-00856" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="2.D. Invoice (Detail) sob" reportcode="PM-002137" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="2.D. Invoice (Detail) sob v2" reportcode="PM-002179" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="2.D. Invoice (Detail) - Rincian Komponen" reportcode="PM-00851" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="2.S. Invoice (Summary)" reportcode="PM-00263" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="3.D. Invoice (Detail - Patient)" reportcode="PM-00282" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="3.S. Invoice (Summary - Patient)" reportcode="PM-00283" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="4.D. Invoice (Detail - Payer)" reportcode="PM-00284" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="4.S. Invoice (Summary - Payer)" reportcode="PM-00285" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="5.D. Invoice - Doctor Fee (Detail)" reportcode="PM-00294" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="5.S. Invoice - Doctor Fee (Summary)" reportcode="PM-00295" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="6.D. Invoice (Detail - per Item)" reportcode="PM-00287" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Rawat Jalan (Detail)" reportcode="PM-00254" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Rawat Jalan (Detail) - Patient" reportcode="PM-00273" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Rawat Jalan (Detail) - Payer" reportcode="PM-00272" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Rawat Jalan (Rekap)" reportcode="PM-00255" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Rawat Jalan (Rekap) - Patient" reportcode="PM-00275" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice Rawat Jalan (Rekap) - Payer" reportcode="PM-00274" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice (Detail) Diskon" reportcode="PM-00690" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Invoice (Summary) Diskon" reportcode="PM-00626" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Rekap Penggunaan Obat dan Alkes" reportcode="PM-00248" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!--#Region IP070121-->
+  <page menucode="IP070121">
+    <prints>
+      <print title="[per Service Unit] 2.D. Invoice (Detail)" reportcode="PM-00224" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Service Unit] 2.S. Invoice (Summary)" reportcode="PM-00262" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Service Unit] 3.D. Invoice (Detail) - Patient" reportcode="PM-00265" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Service Unit] 3.S. Invoice (Summary) - Patient" reportcode="PM-00271" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Service Unit] 4.D. Invoice (Detail) - Payer" reportcode="PM-00264" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Service Unit] 4.S. Invoice (Summary) - Payer" reportcode="PM-00269" isByHealthcare="1" healthcareName="RSPKSB" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP070141 -->
+  <page menucode="IP070141">
+    <prints>
+      <print title="[per Billing] 1.D. Invoice (Detail)" reportcode="PM-00607" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] 1.S. Invoice (Summary)" reportcode="PM-00608" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] 2.D. Invoice (Detail - Patient)" reportcode="PM-00609" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] 2.S. Invoice (Summary - Patient)" reportcode="PM-00610" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] 3.D. Invoice (Detail - Payer)" reportcode="PM-00611" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] 3.S. Invoice (Summary - Payer)" reportcode="PM-00612" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] Invoice (Transaction Detail)" reportcode="PM-00601" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] Invoice (Transaction Summary)" reportcode="PM-00602" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] Invoice (Transaction Detail) - Patient" reportcode="PM-00603" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] Invoice (Transaction Summary) - Patient" reportcode="PM-00604" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] Invoice (Transaction Detail) - Payer" reportcode="PM-00605" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="[per Billing] Invoice (Transaction Summary) - Payer" reportcode="PM-00606" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!--#Region IP070301-->
+  <page menucode="IP070301">
+    <prints>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP080120-->
+  <page menucode="IP080120">
+    <prints>
+      <print title="Daftar Pasien Dirawat" reportcode="PM-00439"/>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP010503-->
+  <page menucode="IP010503">
+    <tasks>
+      <task code="SuratKeranganDirawat" title="Surat Keterangan Dirawat" description="Cetak Surat Keterangan Dirawat" url="~/Libs/Program/Controls/NursingDateCtl.ascx" width="700" height="350" isByHealthcare="1" healthcareName="RSPKSB"/>
+      <task code="SuratKeranganDirawat" title="Surat Keterangan Dirawat" description="Cetak Surat Keterangan Dirawat" url="~/Libs/Program/Controls/NursingDateCtl.ascx" width="700" height="350" isByHealthcare="1" healthcareName="NHS"/>
+      <task code="SuratKeranganDirawat" title="Surat Keterangan Dirawat" description="Cetak Surat Keterangan Dirawat" url="~/Libs/Program/Controls/NursingDateCtl.ascx" width="700" height="350" isByHealthcare="1" healthcareName="RSSBB"/>
+      <task code="SuratKeranganDirawat" title="Surat Keterangan Dirawat" description="Cetak Surat Keterangan Dirawat" url="~/Libs/Program/Controls/NursingDateCtl.ascx" width="700" height="350" isByHealthcare="1" healthcareName="RSPKSB"/>
+      <task code="SuratKeranganDirawat" title="Surat Keterangan Dirawat" description="Cetak Surat Keterangan Dirawat" url="~/Libs/Program/Controls/NursingDateCtl.ascx" width="700" height="350" isByHealthcare="1" healthcareName="RSSC"/>
+      <task code="SuratKeranganDirawat" title="Surat Keterangan Dirawat" description="Cetak Surat Keterangan Dirawat" url="~/Libs/Program/Controls/NursingDateCtl.ascx" width="700" height="350" isByHealthcare="1" healthcareName="rsdo-ska"/>
+      <task code="SuratKeranganDirawat" title="Surat Keterangan Dirawat" description="Cetak Surat Keterangan Dirawat" url="~/Libs/Program/Controls/NursingDateCtl.ascx" width="700" height="350" isByHealthcare="1" healthcareName="rsdo-soba"/>
+      <task code="SuratKeranganDirawat" title="Surat Keterangan Dirawat" description="Cetak Surat Keterangan Dirawat" url="~/Libs/Program/Controls/NursingDateCtl.ascx" width="700" height="350" isByHealthcare="1" healthcareName="BROS"/>
+      <task code="SuratKeranganDirawat" title="Surat Keterangan Dirawat" description="Cetak Surat Keterangan Dirawat" url="~/Libs/Program/Controls/NursingDateCtl.ascx" width="700" height="350" isByHealthcare="1" healthcareName="RSPBT"/>
+
+      <task code="keteranganIstirahat1" title="Surat Keterangan Istirahat" description="Cetak Surat Keterangan Istirahat" url="~/Libs/Program/Controls/SuratKeteranganIstirahat1Ctl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="rsdo-soba" />
+
+      <task code="keteranganIstirahat2" title="Surat Keterangan Istirahat" description="Cetak Surat Keterangan Istirahat v3" url="~/Libs/Program/Controls/SuratKeteranganIstirahat2Ctl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="RSPKSB" />
+      <task code="keteranganIstirahat2" title="Surat Keterangan Istirahat" description="Cetak Surat Keterangan Istirahat" url="~/Libs/Program/Controls/SuratKeteranganIstirahat2Ctl.ascx" width="550" height="200" isByHealthcare="1" healthcareName="BROS" />
+    </tasks>
+    <prints>
+      <print title="Surat Keterangan Kematian" reportcode="PM-00523" />
+      <print title="Surat Keterangan Medis" reportcode="MR000024" />
+      <print title="Resume Medis" reportcode="MR000019" visible="1" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP031207-->
+  <page menucode="IP031207">
+    <prints>
+      <print title="Cetak Catatan Perawat" reportcode="MR000026" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP010454-->
+  <page menucode="IP010454">
+    <prints>
+      <print title="Cetak Catatan Perawat V1" reportcode="MR000026" />
+
+      <print title="Cetak Catatan Perawat V2" reportcode="PM-00221" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IP010471 -->
+  <page menucode="IP010471">
+    <prints>
+      <print title="Laporan Operasi (Versi Lengkap)" reportcode="PM-90128" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+</root>

@@ -1,0 +1,23 @@
+﻿^XA
+^LL270
+^PW500
+^LH1,1^MD5
+^CFA20,20
+^FO2,18^FDNo. RM^FS
+^FO115,18^FD:^FS
+^FO130,18^FD{MedicalNo}^FS
+^FO2,43^FDNama^FS
+^FO115,43^FD:^FS
+^FO130,43^FD{cfPatientNameSalutation} ({cfGenderInitial})^FS
+^FO2,68^FDTgl Lahir^FS
+^FO115,68^FD:^FS
+^FO130,68^FD{DateOfBirthInString}^FS
+^FO2,93^FDUmur^FS
+^FO115,93^FD:^FS
+^FO130,93^FD{PatientAge}^FS
+^FO2,118^FDTgl Masuk^FS
+^FO115,118^FD:^FS
+^FO130,118^FD{ActualVisitDateInString}^FS
+^FO100,148^BCN,60,N,N,N^FD{MedicalNo}^FS
+^PR2
+^XZ

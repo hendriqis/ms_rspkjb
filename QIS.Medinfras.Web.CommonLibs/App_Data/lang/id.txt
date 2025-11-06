@@ -1,0 +1,107 @@
+Additional Information;Informasi Tambahan
+Add Data;Tambah Data
+Address;Alamat
+Age;Umur
+Appointment No;No Perjanjian
+Back;Kembali
+Birth Place;Tempat Lahir
+Billing Information;Informasi Billing
+Billing No;No Billing
+Blood Type;Golongan Darah
+Card Fee;Biaya Kartu
+Cashback Amount;Kembalian
+Change Password;Ubah Password
+City;Kota
+Clinic;Klinik
+Clinic Transaction;Transaksi Klinik
+Close;Tutup;
+Company;Instansi
+Confirm Password;Konfirm Password
+Contact Information;Informasi Kontak
+Day;Hari
+Date;Date
+Drugs;Obat
+DOB;Tanggal Lahir
+Education;Pendidikan
+Ethnic;Suku
+Every 10 Minutes;Setiap 10 Menit
+Family Name;Nama Keluarga
+Gender;Jenis Kelamin
+Hour;Jam
+Identity Card Type;Tipe Kartu Identitas
+Identity Card No;No Kartu Identitas
+Job;Pekerjaan
+Logistics;Logistik
+Marital Status;Status Perkawinan
+Medical Supplies;Penunjang Medis
+Mobile Phone;Ponsel
+mo;bln
+Month;Bulan
+MRN;No RM
+Nationality;Kewarganegaraan
+New;Baru
+New Password;Password Baru
+Office;Kantor
+Office Address;Alamat Kantor
+Office Telephone;Telepon Kantor
+Old Password;Password Lama
+Other Information;Informasi Lain
+Outpatient;Rawat Jalan
+Outpatient Registration;Registrasi Rawat Jalan
+Participant No;No Peserta
+Patient Address Data;Data Alamat Pasien
+Patient Bill Summary;Ringkasan Tagihan Pasien
+Patient Category;Kategori Pasien
+Patient Contact Data;Data Kontak Pasien
+Patient Data;Data Pasien
+Patient Identity;Identitas Pasien
+Patient Information;Informasi Pasien
+Patient Job Data;Data Pekerjaan Pasien
+Patient Payer Data;Data Pembayar
+Patient Name;Nama Pasien
+Patient Status;Status Pasien
+Payer;Instansi
+Payer Data;Data Pembayar
+Payment Date / Time;Tanggal / Jam Pembayaran
+Payment Detail;Detil Pembayaran
+Payment Information;Informasi Pembayaran
+Payment No;No Pembayaran
+Payment Total;Total Pembayaran
+Payment Type;Tipe Pembayaran
+Physician;Dokter
+Preferred Name;Nama Panggilan
+Pregnant;Hamil
+Process;Proses
+Province;Provinsi
+Queue No;No Antrian
+Receipt Name;Kuitansi Atas Nama
+Referral;Pengirim
+Referral Description;Deskripsi Pengirim
+Registrar;Petugas
+Registration Date;Tanggal Registrasi
+Registration Date / Time;Tanggal / Jam Registrasi
+Registration No;No Registrasi
+Religion;Agama
+Remarks;Catatan
+Salutation;Sapaan
+Save;Simpan
+Select Patient;Pilih Pasien
+Services;Pelayanan
+Sign Out;Keluar
+Specialty;Spesialisasi
+Telephone;Telepon
+Time;Hour
+Title;Gelar
+This Page Will;Halaman Ini Akan
+Total Payer;Total Instansi
+Total Patient;Total Pasien
+Transaction No;No Transaksi
+Service Unit;Unit Pelayanan
+Visit Data;Data Kunjungan
+Visit Information;Informasi Kunjungan
+Visit Notes;Keterangan Kunjungan
+Visit Type;Jenis Kunjungan
+Welcome;Selamat Datang
+Year;Tahun
+yr;thn
+ZipCode;Kode Pos

@@ -1,0 +1,35 @@
+^XA
+^LL300
+^PW640
+^LH10,5^MD10
+^CF020,20
+^FO20,51^FD{HealthcareName}^FS
+^FO20,71^FDApoteker^FS
+^FO110,71^FD:^FS
+^FO122,71^FD{Pharmacist}^FS
+^FO340,71^FDNo.Resep^FS"
+^FO420,71^FD:^FS
+^FO430,71^FD{PrescriptionNo}^FS
+^FO20,91^FD{PharmacistLicenseNo}^FS
+^FO340,91^FDTanggal^FS
+^FO420,91^FD:^FS
+^FO430,91^FD{PrescriptionDate}^FS
+^FO20,101^FD______________________________________________________________________^FS
+^CF026,26
+^FO20,140^FDNama: {PatientFullName}  ({Sex})^FS
+^FO20,170^FDNo.RM: {MedicalNo}  Tg.Lahir: {DateOfBirth}^FS
+^CF028,28
+^FO20,220^FD{ItemName}^FS
+^CF028,28
+^FO20,260^FD{ConsumeMethod}^FS
+^FO20,300^FD{MedicationAdministration}^FS
+^FO20,330^FD{AdditionalConsumeMethod}^FS
+^CF024,24
+^FO20,350^FD{CoenamRuleLabel}^FS
+^CF024,24
+^FO400,220^FD{ExternalMedication}^FS
+^FO400,350^FD{ExpiredDate}^FS
+^CF024,24
+^FO20,380^FD{PhysicianName} | {PatientLocation}^FS
+^PR2
+^XZ

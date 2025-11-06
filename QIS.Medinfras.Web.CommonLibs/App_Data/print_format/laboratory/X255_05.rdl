@@ -1,0 +1,14 @@
+﻿^XA
+LL200
+^PW350
+^LH5,0
+^CF024,24
+^FO10 ,20^FD{RegistrationNo}^FS 
+^FO10 ,45^FD{cfPatientNameInLabel} / ({cfSexInitial})^FS 
+^FO10 ,70^FD{MedicalNo} ^FS
+^FO10 ,95^FD{DateOfBirthInString}  / {PatientAgeThn}^FS
+^FO10 ,120^FD{OrderDetail}^FS
+^FO10 ,145^^BY2,2,0
+^A0N,40,30^BAN,40,N,N,N^FD{cfTransactionNo}^FS
+^PR2
+^XZ

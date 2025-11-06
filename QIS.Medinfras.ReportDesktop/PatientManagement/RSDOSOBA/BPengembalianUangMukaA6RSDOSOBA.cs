@@ -1,0 +1,38 @@
+﻿using System;
+using System.Drawing;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using DevExpress.XtraReports.UI;
+using QIS.Medinfras.Data.Service;
+using QIS.Medinfras.Web.Common;
+
+namespace QIS.Medinfras.ReportDesktop
+{
+    public partial class BPengembalianUangMukaA6RSDOSOBA : BaseA6Rpt
+    {
+
+        public BPengembalianUangMukaA6RSDOSOBA()
+        {
+            InitializeComponent();
+        }
+        public override void InitializeReport(string[] param)
+        {
+            vHealthcare entityHealthcare = BusinessLayer.GetvHealthcareList(String.Format("HealthcareID = '{0}'", appSession.HealthcareID)).FirstOrDefault();
+
+            lblHealthcareName.Text = entityHealthcare.HealthcareName;
+
+            vPatientPaymentHd entityPayment = BusinessLayer.GetvPatientPaymentHdList(string.Format("{0}", param[0])).FirstOrDefault();
+            lblLastUpdatedDate.Text = entityHealthcare.City + ", " + entityPayment.PaymentDate.ToString(Constant.FormatString.DATE_FORMAT);
+            lblTotalAmountString.Text = "# " + entityPayment.TotalPaymentAmountOUTInString + " #";
+
+            vRegistration entityReg = BusinessLayer.GetvRegistrationList(string.Format("RegistrationID = {0}", entityPayment.RegistrationID)).FirstOrDefault();
+            lblUnitPelayanan1.Text = entityReg.ServiceUnitName;
+            lblPatientAddress.Text = entityReg.StreetName + " " + entityReg.County + " " + entityReg.District + " " + entityReg.City;
+
+            base.InitializeReport(param);
+        }
+        
+    }
+}

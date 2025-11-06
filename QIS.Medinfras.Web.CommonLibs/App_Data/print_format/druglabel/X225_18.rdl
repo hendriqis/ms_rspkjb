@@ -1,0 +1,23 @@
+^XA
+^LL800
+^PW640
+^LH10,10
+^FO80,25^CF0,25^FB500,1,0,C^FD{HealthcareName}^FS
+^FO60,50^GB520,1,2^FS
+^CF0,28
+^FO75,60^FD{PatientFullName} {Salutation}^FS
+^CF0,20
+^FO75,90^FD{MedicalNo}^FS
+^FO430,90^FD{PrescriptionDate}^FS
+^FO60,110^GB520,1,2^FS
+^CF0,24
+^FO75,123^FD{ItemName} ({cfIsUsedDispenseQty1})^FS
+^CF0,20
+^FO75,150^AQN,28,24^FD{ConsumeMethod}^FS
+^FO75,182^FB500,1,0,C^FD^FD{MedicationAdministration}^FS
+^FO75,208^FB500,1,0,C^FD^FD{cfCoenamRuleLabel}^FS
+^CF0,20
+^FO75,235^FB500,1,0,C^FD^FD{cfDailyInformation}^FS
+^FO75,270^FDED : {ExpiredDate}^FS
+^FO80,300^CF0,25^FB500,1,0,C^FD{cfIsExternalMedication}^FS
+^XZ

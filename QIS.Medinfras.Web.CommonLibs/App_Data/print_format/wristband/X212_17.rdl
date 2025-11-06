@@ -1,0 +1,7 @@
+﻿^XA
+^FWR
+^LH0,1220
+^FO225,20^A0,28,28^FD{MedicalNo}^FS
+^FO190,20^A0,28,28^FD{cfPatientNameSalutation}^FS
+^FO155,20^A0,28,28^FDTgl Masuk : {ActualVisitDateInString}^FS
+^XZ

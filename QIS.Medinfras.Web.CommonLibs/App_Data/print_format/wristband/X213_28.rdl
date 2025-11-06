@@ -1,0 +1,16 @@
+﻿^XA
+^POI
+^LL3452
+^PW361
+^LH10,10
+^FO25, 500
+^BQN,2,5,Q,1
+^FH_
+^FDQA,{MedicalNo}_0A_0D{RegistrationNo}_0A_0D{FirstName}_0A_0D{MiddleName}_0A_0D{LastName}_0A_0D{cfPatientLocation}_0A_0D^FS
+^A0R,70,64
+^FO195,1000^FD{cfPatientNameSalutation} ({Gender}, {cfPatientAgeInYear} thn)^FS
+^A0R,50,44
+^FO140,1000^FDNo. RM: {MedicalNo}^FS
+^A0R,50,44
+^FO80,1000^FDDate of Birth: {DateOfBirthInString}^FS
+^XZ

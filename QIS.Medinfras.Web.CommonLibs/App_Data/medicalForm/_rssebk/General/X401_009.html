@@ -1,0 +1,287 @@
+﻿<head>
+    <style type="text/css">
+        .style1
+        {
+            height: 27px;
+        }
+        .style2
+        {
+            height: 25px;
+        }
+        .style3
+        {
+            height: 51px;
+        }
+        .style4
+        {
+            height: 47px;
+        }
+    </style>
+</head>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+            <colgroup>
+                <col width="350px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold; text-decoration:underline">MONITORING PASIEN TRANSFUSI </label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <table border="0" cellpadding="1" cellspacing="1" style="width:100%; border-style: inset">
+                        <colgroup>
+                            <col width="360px" />
+                            <col width="120px" />
+                            <col width="80px" />
+                            <col />
+                        </colgroup>     
+                        <tr>
+                            <td style="border-top-style:inset; border-bottom-style: inset; border-left-style: inset; border-right-style:inset; border-width:thin; font-weight:bold">Waktu Monitoring</td>
+                            <td style="border-top-style:inset; border-right-style:inset; border-bottom-style:inset; border-width:thin; font-weight:bold"><label>Akses IV</label></td>
+                            <td style="border-top-style:inset; border-bottom-style:inset; border-right-style:inset; border-width:thin"><input type="radio" name="optGroup01" value="1" class="optForm" controlID="optForm1" /><label> Baik</label></td>
+                            <td style="border-top-style:inset; border-bottom-style:inset; border-right-style:inset; border-width:thin"><input type="radio" name="optGroup01" value="0" class="optForm" controlID="optForm2" /><label> Tidak Baik</label></td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom-style: inset; border-left-style: inset; border-right-style:inset; border-width:thin">
+                                <table border="0" cellpadding="1" cellspacing="1" style="width="100%">
+                                    <colgroup>
+                                        <col width="130px" />
+                                        <col width="240px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td><input type="radio" name="optTiming" value="1" class="optForm" controlID="optForm1" /><label>Saat Pasang</label></td>
+                                        <td><input type="radio" name="optTiming" value="1" class="optForm" controlID="optForm2" /><label>15 Menit</label></td>    
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" name="optTiming" value="1" class="optForm" controlID="optForm3" /><label>30 Menit</label></td>    
+                                        <td><input type="radio" name="optTiming" value="1" class="optForm" controlID="optForm4" /><label>60 Menit</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" name="optTiming" value="1" class="optForm" controlID="optForm5" /><label>Saat Selesai</label></td>
+                                        <td><input type="radio" name="optTiming" value="1" class="optForm" controlID="optForm6" /><label>60 Menit Setelah Selesai</label></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="border-right-style:inset; border-bottom-style:inset; border-width:thin; vertical-align:top; font-weight:bold"><label>TTV</label></td>
+                            <td style="border-right-style:inset; border-bottom-style:inset; border-width:thin" colspan="2">
+                                <table border="0" cellpadding="1" cellspacing="1">
+                                    <colgroup>
+                                        <col width="50px" />
+                                        <col width="60px" />
+                                        <col width="10px" />
+                                        <col width="60px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td><label>TD</label></td>
+                                        <td><label><input type="text" class="txtForm" controlID="txtBloodPressure1" style="width:99%; text-align: right"/></label></td>
+                                        <td><label>/</label></td>
+                                        <td><label><input type="text" class="txtForm" controlID="txtBloodPressure2" style="width:99%; text-align: left"/></label></td>
+                                        <td><label>mmHg</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Nadi</label></td>
+                                        <td><label><input type="text" class="txtForm" controlID="txtPulse" style="width:99%; text-align: right"/></label></td>
+                                        <td colspan="3"><label>x/mnt</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Respirasi</label></td>
+                                        <td><label><input type="text" class="txtForm" controlID="txtRespiration" style="width:99%; text-align: right"/></label></td>
+                                        <td colspan="3"><label>x/mnt</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Suhu</label></td>
+                                        <td><label><input type="text" class="txtForm" controlID="txtTemperature" style="width:99%; text-align: right"/></label></td>
+                                        <td colspan="3"><label>&#7506;C</label></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>      
+                        <tr>
+                            <td style="border-bottom-style: inset; border-left-style: inset; border-right-style:inset; border-width:thin; font-weight:bold">Jenis Darah</td>
+                            <td style="border-right-style:inset; border-bottom-style:inset; border-width:thin; font-weight:bold"><label>Reaksi Alergi</label></td>
+                            <td style="border-right-style:inset; border-bottom-style:inset; border-width:thin"><input type="radio" name="optAllergy" value="1" class="optForm" controlID="optAllergy1" /><label> Ada</label></td>
+                            <td style="border-right-style:inset; border-bottom-style:inset; border-width:thin"><input type="radio" name="optAllergy" value="0" class="optForm" controlID="optAllergy2" /><label> Tidak Ada</label></td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom-style: inset; border-left-style: inset; border-right-style:inset; border-width:thin">
+                                <table border="0" cellpadding="1" cellspacing="1">
+                                    <colgroup>
+                                        <col width="130px" />
+                                        <col width="240px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td><input type="radio" name="optBloodGroup" value="WB" class="optForm" controlID="optForm7" /><label>WB</label></td>
+                                        <td><input type="radio" name="optBloodGroup" value="WRC" class="optForm" controlID="optForm8" /><label>WRC</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" name="optBloodGroup" value="TC" class="optForm" controlID="optForm9" /><label>TC</label></td>
+                                        <td><input type="radio" name="optBloodGroup" value="TA" class="optForm" controlID="optForm10" /><label>Trombosit Apheresis</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" name="optBloodGroup" value="PRC" class="optForm" controlID="optForm11" /><label>PRC</label></td>
+                                        <td><input type="radio" name="optBloodGroup" value="PRC-O" class="optForm" controlID="optForm12" /><label>PRC-Optipress</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" name="optBloodGroup" value="FPP" class="optForm" controlID="optForm13" /><label>FPP</label></td>
+                                        <td><input type="radio" name="optBloodGroup" value="CRYO" class="optForm" controlID="optForm14" /><label>Cryo</label></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="border-right-style:inset; border-bottom-style:inset; border-width:thin; vertical-align:top" rowspan="11" colspan="3">
+                                <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                                    <colgroup>
+                                        <col width="120px" />
+                                        <col width="116px" />
+                                        <col  />
+                                    </colgroup>
+                                    <tr>
+                                        <td style="border-right-style:inset; border-bottom-style:inset; border-width:thin;font-weight:bold;"><label>Kemerahan</label></td>
+                                        <td style="border-right-style:inset; border-bottom-style:inset; border-width:thin"><input type="radio" name="optAllergyReaction1" value="1" class="optForm" controlID="optAllergyReaction11" /><label> Ada</label></td>
+                                        <td style="border-bottom-style:inset; border-width:thin"><input type="radio" name="optAllergyReaction1" value="0" class="optForm" controlID="optAllergyReaction12" /><label> Tidak Ada</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right-style:inset; border-bottom-style:inset; border-width:thin;font-weight:bold;"><label>Menggigil</label></td>
+                                        <td style="border-right-style:inset; border-bottom-style:inset; border-width:thin"><input type="radio" name="optAllergyReaction2" value="1" class="optForm" controlID="optAllergyReaction21" /><label> Ada</label></td>
+                                        <td style="border-bottom-style:inset; border-width:thin"><input type="radio" name="optAllergyReaction2" value="0" class="optForm" controlID="optAllergyReaction22" /><label> Tidak Ada</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"><br /></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"><label style="font-weight:bold">KESIMPULAN</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                                                <colgroup>
+                                                    <col width="50px" />
+                                                    <col />
+                                                </colgroup>
+                                                <tr>
+                                                    <td><input type="checkbox" class="chkForm" controlID="chkResult1"/></td>
+                                                    <td><label>Tidak ada reaksi alergi setelah pemberian transfusi</label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="chkForm" controlID="chkResult2"/></td>
+                                                    <td><label style="color:Red">Ada reaksi alergi setelah pemberian transfusi</label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td />
+                                                    <td><input type="checkbox" class="chkForm" controlID="chkResult21"/><label style="color:Red">Urtikaria di seluruh tubuh</label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td />
+                                                    <td><input type="checkbox" class="chkForm" controlID="chkResult22"/><label style="color:Red; font-style:italic">Facial Flushing</label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td />
+                                                    <td><input type="checkbox" class="chkForm" controlID="chkResult23"/><label style="color:Red">Pruritus</label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td />
+                                                    <td><input type="checkbox" class="chkForm" controlID="chkResult23"/><label style="color:Red">Demam lebih dari 38 &#7506;C / Kenaikan suhu > 1 &#7506;C disertai menggigil</label></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>  
+                        <tr>
+                            <td style="border-bottom-style: inset; border-left-style: inset; border-right-style:inset; border-width:thin; font-weight:bold">No. Labu Darah</td>
+                        </tr>                          
+                        <tr>
+                            <td style="border-top-style:inset; border-bottom-style:inset; border-width:thin"><input type="text" class="txtForm" controlID="txtForm1" style="width:99%"/></td>
+                        </tr>    
+                        <tr>
+                            <td style="border-bottom-style: inset; border-left-style: inset; border-right-style:inset; border-width:thin; font-weight:bold">Golongan Darah Labu</td>
+                        </tr> 
+                        <tr>
+                            <td style="border-bottom-style: inset; border-left-style: inset; border-right-style:inset; border-width:thin">
+                                <table border="0" cellpadding="1" cellspacing="1">
+                                    <colgroup>
+                                        <col width="60" />
+                                        <col width="60" />
+                                        <col width="60" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td><input type="radio"  name="optBloodLabu" value="A" class="optForm" controlID="optBloodType1" /><label>A</label></td>
+                                        <td><input type="radio"  name="optBloodLabu" value="B" class="optForm" controlID="optBloodType2" /><label>B</label></td>
+                                        <td><input type="radio"  name="optBloodLabu" value="AB" class="optForm" controlID="optBloodType3" /><label>AB</label></td>
+                                        <td><input type="radio"  name="optBloodLabu" value="O" class="optForm" controlID="optBloodType4" /><label>O</label></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>    
+                        <tr>
+                            <td style="border-bottom-style: inset; border-left-style: inset; border-right-style:inset; border-width:thin; font-weight:bold">Rhesus Labu</td>
+                        </tr>                                              
+                        <tr>
+                            <td style="border-bottom-style: inset; border-left-style: inset; border-right-style:inset; border-width:thin">
+                                <table border="0" cellpadding="1" cellspacing="1">
+                                    <colgroup>
+                                        <col width="60" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td><input type="radio" name="optBloodRhesus" value="+" class="optForm" controlID="optBloodType5" /><label>+</label></td>
+                                        <td><input type="radio" name="optBloodRhesus" value="-" class="optForm" controlID="optBloodType6" /><label>-</label></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>                          
+                        <tr>
+                            <td style="border-bottom-style: inset; border-left-style: inset; border-right-style:inset; border-width:thin; font-weight:bold">Golongan Darah Pasien</td>
+                        </tr> 
+                        <tr>
+                            <td style="border-bottom-style: inset; border-left-style: inset; border-right-style:inset; border-width:thin">
+                                <table border="0" cellpadding="1" cellspacing="1">
+                                    <colgroup>
+                                        <col width="60" />
+                                        <col width="60" />
+                                        <col width="60" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td><input type="radio" name="optPatientBloodType" value="A" class="optForm" controlID="optPatientBloodType7" /><label>A</label></td>
+                                        <td><input type="radio" name="optPatientBloodType" value="B" class="optForm" controlID="optPatientBloodType8" /><label>B</label></td>
+                                        <td><input type="radio" name="optPatientBloodType" value="AB" class="optForm" controlID="optPatientBloodType9" /><label>AB</label></td>
+                                        <td><input type="radio" name="optPatientBloodType" value="O" class="optForm" controlID="optPatientBloodType10" /><label>O</label></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>  
+                        <tr>
+                            <td style="border-bottom-style: inset; border-left-style: inset; border-right-style:inset; border-width:thin; font-weight:bold">Rhesus Pasien</td>
+                        </tr>                                              
+                        <tr>
+                            <td style="border-bottom-style: inset; border-left-style: inset; border-right-style:inset; border-width:thin">
+                                <table border="0" cellpadding="1" cellspacing="1">
+                                    <colgroup>
+                                        <col width="60" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td><input type="radio" name="optPatientBloodRhesus" value="+" class="optForm" controlID="optPatientBloodRhesus11" /><label>+</label></td>
+                                        <td><input type="radio" name="optPatientBloodRhesus" value="-" class="optForm" controlID="optPatientBloodRhesus12" /><label>-</label></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>                                                                                                 
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,38 @@
+^XA
+^AQN,28,24
+^FO30,30^FDNo. Trx^FS
+^AQN,28,24
+^FO480,30^FDNo. RM : {MedicalNo}^FS
+^AQN,28,24
+^FO30,120^FDTgl Lahir^FS
+^AQN,28,24
+^FO30,60^FDNama^FS
+^AQN,28,24
+^FO30,90^FDAlamat^FS
+^AQN,28,24
+^FO30,150^FDRuang^FS
+^AQN,28,24
+^FO550,150^FDKelas : {ClassName}^FS
+^AQN,28,24
+^FO150,30^FD: {TransactionNo}^FS
+^AQN,28,24
+^FO150,120^FD: {DateOfBirthInString}^FS
+^AQN,28,24
+^FO150,60^FD: {cfPatientName}^FS
+^AQN,28,24
+^FO150,90^FD: {StreetName}^FS
+^AQN,28,24
+^FO150,150^FD: {VisitServiceUnitName}^FS
+^AQN,28,24
+^FO30,180^FDTgl Pemeriksaan^FS
+^AQN,28,24
+^FO30,240^FDJenis Pemeriksaan :^FS
+^AQN,28,24
+^FO30,210^FDDokter Pengirim^FS
+^CF0,20
+^FO233,180^FD: {cfTransactionDateInString}^FS
+^CF0,20
+^FO60,270^FB680,7,^FD{ItemName}^FS
+^CF0,20
+^FO233,210^FD: {DokterRujukan}^FS
+^XZ

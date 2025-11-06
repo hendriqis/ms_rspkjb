@@ -1,0 +1,8 @@
+﻿^XA
+^LL1050
+^PW840
+^LH10,10
+^FO375,430^A0B,25,25^FB900,1,0,C^FD{PatientName} ({cfWristbandGender})^FS
+^FO405,635^GB1,450,3^FS
+^FO415,685^A0B,20,20^FDDOB:{DateOfBirthInString} MR:{MedicalNo} (RI)^FS
+^XZ

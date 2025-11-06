@@ -1,0 +1,5 @@
+PAYMENT_RECEIPT_DESCRIPTION;Pembayaran untuk pasien a.n [PatientName]
+REFUND_DOWN_PAYMENT_DESCRIPTION;Pengembalian uang muka untuk pasien a.n [PatientName]
+AR_PATIENT_DESCRIPTION;Piutang pribadi untuk pasien a.n [PatientName]
+AR_PAYER_DESCRIPTION;Piutang instansi untuk pasien a.n [PatientName]
+DOWN_PAYMENT_RECEIPT_DESCRIPTION;Penerimaan uang muka untuk pasien a.n [PatientName]

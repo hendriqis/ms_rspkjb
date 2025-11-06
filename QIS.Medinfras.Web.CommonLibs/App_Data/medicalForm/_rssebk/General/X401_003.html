@@ -1,0 +1,248 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+    $(function () {
+
+        $("#ddlParameter1").change(function () {
+            $("#txtParamScore1").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter2").change(function () {
+            $("#txtParamScore2").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter3").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#chkForm401_003_1").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtParamScore4").val("2");
+            }
+            else {
+                $("#txtParamScore4").val("0");
+            }
+        });
+
+        $("#chkForm401_003_2").change(function () {
+            if ($(this).is(":checked")) {
+                $("#txtParamScore5").val("2");
+            }
+            else {
+                $("#txtParamScore5").val("0");
+            }
+        });
+
+        $("#ddlParameter1").change();
+        $("#ddlParameter2").change();
+        $("#ddlParameter3").change();
+        $("#chkForm401_003_1").change();
+        $("#chkForm401_003_2").change();
+
+        function CalculateTotalScore() {
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+            var p4 = 0;
+            var p5 = 0;
+
+            if ($("#txtParamScore1").val())
+                p1 = parseInt($("#txtParamScore1").val());
+
+            if ($("#txtParamScore2").val())
+                p2 = parseInt($("#txtParamScore2").val());
+
+            if ($("#txtParamScore3").val())
+                p3 = parseInt($("#txtParamScore3").val());
+
+            if ($("#txtParamScore4").val())
+                p4 = parseInt($("#txtParamScore4").val());
+
+            if ($("#txtParamScore3").val())
+                p5 = parseInt($("#txtParamScore5").val());
+
+            var isHasRedIndicatator = false;
+            isHasRedIndicatator
+            if (p1 == 3 || p2 == 3 || p3 == 3) {
+                isHasRedIndicatator = true;
+            }
+
+            var total = p1 + p2 + p3 + p4 + p5;
+
+            $("#txtScore").val(total);
+
+            if (!isHasRedIndicatator) {
+                if (total <= 0) {
+                    $("#ddlScore").val("0");
+                    $("#div4").show();
+                    $("#div5").hide();
+                    $("#div3").hide();
+                    $("#div2").hide();
+                    $("#div1").hide();
+                }
+                else if (total >= 1 && total <= 2) {
+                    $("#ddlScore").val("3");
+                    $("#div3").show();
+                    $("#div5").hide();
+                    $("#div4").hide();
+                    $("#div2").hide();
+                    $("#div1").hide();
+                }
+                else if (total >= 3 && total <= 4) {
+                    $("#ddlScore").val("2");
+                    $("#div5").show();
+                    $("#div4").hide();
+                    $("#div3").hide();
+                    $("#div2").hide();
+                    $("#div1").hide();
+                }
+                else {
+                    $("#ddlScore").val("1");
+                    $("#div1").show();
+                    $("#div5").hide();
+                    $("#div4").hide();
+                    $("#div3").hide();
+                    $("#div2").hide();
+                }
+            }
+            else {
+                $("#ddlScore").val("1");
+                $("#div1").show();
+                $("#div5").hide();
+                $("#div4").hide();
+                $("#div3").hide();
+                $("#div2").hide();
+            }
+        }
+    });
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+            <colgroup>
+                <col width="280px" />
+                <col width="400px" />
+                <col width="100px" />
+                <col width="150px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold; text-decoration:underline">PEDIATRIC EARLY WARNING SCORE (BRIGHTON PEWS) </label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Perilaku</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter1" style="width:100%" class = "ddlForm" controlID = "ddlParameter1">
+                        <option value="0" selected>Bermain/sesuai</option>
+                        <option value="1">Tidur</option> 
+                        <option value="2">Iritabel</option>
+                        <option value="3">Letargi/bingung, atau berkurangnya respons terhadap nyeri</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore1" />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Kardiovaskuler</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter2" style="width:100%" class = "ddlForm" controlID = "ddlParameter2">
+                        <option value="0" selected>Merah jambu atau waktu pengisian kapiler 1-2 detik</option>
+                        <option value="1">Pucat atau waktu pengisian kapiler 3 detik</option>
+                        <option value="2">Abu-abu atau waktu pengisian kapiler 4 detik atau takikardia > 20 laju normal</option>
+                        <option value="3">Abu-abu atau mottled atau waktu pengisian kapiler >= 5 detik atau takikardia > 30 laju normal atau bradikardia</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore2"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Respirasi</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter3" class="ddlForm" controlID="ddlParameter3" style="width:100%">
+                        <option value="0" selected>Normal, tidak ada retraksi</option>
+                        <option value="1">>10 Di atas normal, penggunaan otot bantu nafas atau fiO2 30% atau 3L/menit</option>
+                        <option value="2">>20 Di atas normal, retraksi atau fiO2 40% atau 6L/menit</option>
+                        <option value="3">>=5 Di bawah normal dengan retraksi, merintih atau fiO2 50% atau 8L/menit</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore3"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><input type="checkbox" class="chkForm" id="chkForm401_003_1" controlID="chkForm401_003_1"/> &#188; jam nebulisasi (terus menerus) </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore4"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><input type="checkbox" class="chkForm" id="chkForm401_003_2" controlID="chkForm401_003_2"/> Muntah persisten setelah operasi </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore5"/>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal">TOTAL SKOR</label></td>      
+                <td><input type="text" style="width: 80px; text-align:right" id="txtScore" class="txtForm" controlID="txtScore" readonly="readonly"/></td>                          
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal">FREKUENSI PENGAWASAN</label></td>
+                <td colspan="4">
+                    <select id="ddlScore" class="ddlForm" controlID="ddlScore" style="width:450px">
+                        <option value="0" selected>Minimal setiap shift/12 jam</option>
+                        <option value="1">Monitoring Kontinyu</option>
+                        <option value="2">1 jam</option>
+                        <option value="3">Minimal setiap 4-6 jam</option>
+                    </select>
+                </td> 
+                <td />
+            </tr> 
+            <tr>
+                <td style="font-weight:bold; vertical-align:middle"><label class="lblNormal">RESPON KLINIS</label></td>
+                <td colspan="5" style="vertical-align:top">
+                    <div id="div1" style="display:none">
+                        <ul>
+                            <li>Perawat menghubungi dokter jaga PICU/NICU/Neoristi, koordinasi dengan DPJP</li>
+                            <li>Kemungkinan besar perlu transfer ruang PICU/NICU/Neoristi</li>
+                            <li>Pengawasan Kontinyu (dapat dengan<i> bed side monitor </i> bila ada)</li>
+                        </ul>
+                    </div>
+                    <div id="div2" style="display:none">
+                        <ul>
+                            <li>Perawat menghubungi dokter jaga</li>
+                            <li>Asesmen oleh dokter jaga bersama perawat ruangan</li>
+                            <li>Koordinasi dengan DPJP</li>
+                            <li>Dapat memerlukan ruang pengawasan</li>
+                        </ul>
+                    </div>
+                    <div id="div3" style="display:none">
+                        <ul>
+                            <li>Asesmen oleh perawat ruangan (perawat penanggung jawab pasien) bersama perawat Kepala Shift</li>
+                            <li>Bersama-sama menentukan frekuensi pengawasan</li>
+                        </ul>
+                    </div>
+                    <div id="div4">
+                        <ul>
+                            <li>Asesmen oleh perawat ruangan (perawat penanggung jawab pasien)</li>
+                            <li>Monitoring PEWS rutin</li>
+                        </ul>
+                    </div>
+                    <div id="div5" style="display:none">
+                        <ul>
+                            <li>Asesmen dan intervensi oleh Dokter Jaga bersama perawat ruangan</li>
+                            <li>Koordinasi dengan DPJP</li>
+                            <li>Dapat memerlukan ruang pengawasan</li>
+                        </ul>
+                    </div>
+                </td> 
+            </tr>                                 
+        </table>
+    </div>
+</div>
+

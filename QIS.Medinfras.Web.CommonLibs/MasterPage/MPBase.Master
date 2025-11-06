@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MPBase.master.cs" Inherits="QIS.Medinfras.Web.CommonLibs.MasterPage.MPBase" %>
+
+<%@ Register Src="~/Libs/Controls/GeneralCtl.ascx" TagName="GeneralCtl" TagPrefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MEDINFRAS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="../Images/qisicon.ico" rel="icon" type="image/gif" />
+    <link href='../Styles/common.css' rel="stylesheet" type="text/css" />
+    <link href='../Styles/w3.css' rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href='../Styles/jquery/jquery.ui.core.css' type="text/css" />
+    <link rel="stylesheet" href='../Styles/jquery/jquery.ui.datepicker.css' type="text/css" />
+    <link rel="stylesheet" href='../Styles/HoverMaster/css/hover.css' type="text/css" />
+    <style type="text/css">
+        .imgHidden
+        {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm" runat="server">
+        <uc1:GeneralCtl ID="ctlGeneral" runat="server" />  
+        <asp:ContentPlaceHolder ID="plhMPBase" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </form>
+
+    <style type="text/css">
+        .dxeListBoxItemHover                { background-color: #FFA55A; color: Black; }
+        .dxeListBoxItemSelected             { background-color: #F36F00; color: White; }
+
+        .dxeDisabled        { color: Maroon !important; background-color: #EAEAEA !important; border: 1px solid #848484; border-right: 1px solid #FAFAFA; border-bottom: 1px solid #FAFAFA; }
+    </style>
+</body>
+</html>

@@ -1,0 +1,9 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Libs/MasterPage/MPBase.Master" AutoEventWireup="true" CodeBehind="MPFrame.master.cs" Inherits="QIS.Medinfras.Web.CommonLibs.MasterPage.MPFrame" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="plhMPBase" runat="server">
+    <style type="text/css">
+        body       { background-color: #FFF; }
+    </style>
+    <asp:ContentPlaceHolder ID="plhMPFrame" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>

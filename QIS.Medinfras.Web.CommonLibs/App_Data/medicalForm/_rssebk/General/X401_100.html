@@ -1,0 +1,337 @@
+<html>
+<table border="1">
+<th colspan="4"><center>TRANSFER ANTAR RUANG </center></th>
+	<tr>
+		<td>Tanggal / Jam Masuk : <br>
+			<input type="date" class="txtForm" controlid="textform1" > <br>
+			<input type="time" class="txtForm" controlid="textform2" > 
+		</td>
+	
+		<td>Tanggal / Jam Pindah : <br>
+			<input type="date" class="txtForm" controlid="textform3" > <br>
+			<input type="time" class="txtForm" controlid="textform4" > 
+		</td>
+	
+		<td> Asal Ruang / Unit : <br>
+			<input type="text" class="txtForm" controlid="textform5" placeholder="Asal Ruang / Unit" style="width:200px;"> 
+		</td>
+	
+		<td> Ruang / Unit yang Dituju : <br>
+			<input type="text" class="txtForm" controlid="textform6" placeholder="Ruang / Unit yang Dituju" style="width:200px;"> 
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">Dokter Penanggung Jawa Pelayanan (DPJP) : <input type="text" class="txtForm" controlid="textform7" placeholder="DPJP" style="width:550px;"> 
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">Diagnosa Utama : <br>
+			<textarea class="txtForm" controlid="textform8" placeholder="Diagnosa Utama" style="width:400px;height:100px;"></textarea>
+		</td >
+		<td colspan="2">Perlu menjadi perhatian : <br>
+			<input type="checkbox" class="chkForm" controlid="textform9" > Alergi, sebutkan 
+			<input type="text" class="txtForm" controlid="textform10" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" placeholder="sebutkan alergi bila ada">
+			<br>
+			<input type="checkbox" class="chkForm" controlid="textform11"> MRSA
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">Diagnosa Sekunder : <br>
+			<textarea class="txtForm" controlid="textform106" placeholder="Diagnosa Sekunder" style="width:400px;height:100px;"></textarea>
+		</td >
+		<td colspan="2" rowspan="2">Alasan Pemindahan Pasien : <br>
+			1. Kondisi Pasien : <br>
+			<input type="radio" class="optForm" controlid="textform12" name="optgroup1" value="1"> Memburuk <br>
+			<input type="radio" class="optForm" controlid="textform13" name="optgroup1" value="0"> Stabil <br>
+			<input type="radio" class="optForm" controlid="textform14" name="optgroup1" value="0"> Tidak Ada Perubahan <br>
+			2. Fasilitas : <br>
+			<input type="radio" class="optForm" controlid="textform15" name="optgroup2" value="1"> Kurang Memadai <br>
+			<input type="radio" class="optForm" controlid="textform16" name="optgroup2" value="0"> Membutuhkan Peralatan Yang Lebih Baik <br>
+			3. Tenaga : <br>
+			<input type="radio" class="optForm" controlid="textform17" name="optgroup3" value="1"> Membutuhkan Tenaga Yang Lebih Ahli <br>
+			<input type="radio" class="optForm" controlid="textform18" name="optgroup3" value="0"> Jumlah Tenaga Kurang <br>
+			4. Lain - lain : Sebutkan <br>
+			<textarea class="txtForm" controlid="textform19" style="width:400px;height:100px;"></textarea>
+			
+		</td>
+	</tr>
+	<tr>
+		<td>Metode Pemindahan Pasien : <br>
+			<input type="checkbox" class="chkForm" controlid="textform20" > Kursi Roda <br>
+			<input type="checkbox" class="chkForm" controlid="textform21" > Tempat Tidur <br>
+			<input type="checkbox" class="chkForm" controlid="textform22" > Brankar
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">Pasien / Keluarga mengetahui dan menyetujui mengenai <br>
+			alasan pemindahan : <br>
+			<input type="radio" class="optForm" controlid="textform23" name="optgroup4" value="0"> Ya &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" class="optForm" controlid="textform24" name="optgroup4" value="0"> Tidak <br><br>
+			Bila pemberi persetujuan adalah keluarga, lengkapi isian berikut : <br>
+			Nama Keluarga : <input type="text" class="txtForm" controlid="textform25" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" > \
+			<br>
+			Hubungan : <input type="text" class="txtForm" controlid="textform26" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" > 
+			
+		</td >
+		<td colspan="2">Peralatan yang menyertai pasien saat pindah : <br>
+			<input type="checkbox" class="chkForm" controlid="textform27" > Portable Oksigen 
+			<input type="text" class="txtForm" controlid="textform28" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >L/menit  <br>
+			<input type="checkbox" class="chkForm" controlid="textform29" > Alat Pengisap <br>
+			<input type="checkbox" class="chkForm" controlid="textform30" > Bagging <br>
+			<input type="checkbox" class="chkForm" controlid="textform31" > NGT <br>
+			<input type="checkbox" class="chkForm" controlid="textform32" > Kateter Urin <br>
+			<input type="checkbox" class="chkForm" controlid="textform33" > Pompa Nafas <br><br>
+			
+		</td >
+	<tr>
+		<td colspan="4"> Keadaan Pasien saat pindah : <input type="text" class="txtForm" controlid="textform34" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" ><br>
+		Keadaan Umum :  <br>
+		Kesadaran<input type="text" class="txtForm" controlid="textform35" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >
+		GCS<input type="text" class="txtForm" controlid="textform36" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >
+		TD<input type="text" class="txtForm" controlid="textform37" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >
+		Nadi<input type="text" class="txtForm" controlid="textform38" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >
+		<br>
+		Pernafasan<input type="text" class="txtForm" controlid="textform39" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >
+		SPO2<input type="text" class="txtForm" controlid="textform40" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >
+		Suhu<input type="text" class="txtForm" controlid="textform41" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >
+		Skala Nyeri<input type="text" class="txtForm" controlid="textform42" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >
+		
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+		Tindakan Medis Yang Sudah Dilakukan : <br>
+		1. <input type="text" class="txtForm" controlid="textform43" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >
+		3. <input type="text" class="txtForm" controlid="textform44" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >
+		<br>
+		2. <input type="text" class="txtForm" controlid="textform45" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >
+		4. <input type="text" class="txtForm" controlid="textform46" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >
+		<td>
+	</tr>
+	<tr>
+		<td colspan="4">
+		pemeriksaan Penunjang yang sudah dilakukan hari ini : <br>
+		1. Laboratorium <input type="text" class="txtForm" controlid="textform47" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;width:500px;" >
+		DPJP sudah tahu <input type="radio" class="optForm" controlid="textform48" name="optgroup5" value="0"> Ya
+		<input type="radio" class="optForm" controlid="textform49" name="optgroup5" value="0"> Tidak 
+		<br>
+		2. Radiologi <input type="text" class="txtForm" controlid="textform50" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;width:525px;" >
+		DPJP sudah tahu <input type="radio" class="optForm" controlid="textform51" name="optgroup6" value="0"> Ya
+		<input type="radio" class="optForm" controlid="textform52" name="optgroup6" value="0"> Tidak </td>
+	</tr>
+	<tr>
+	<td colspan="4">Hal-hal yang harus diperhatikan<br>
+	Terapi Saat Pindah : <br>
+	<table border="1">
+		<th>Nama Obat</th>
+		<th>Jumlah</th>
+		<th>Dosis</th>
+		<th>Frekuensi</th>
+		<th>Cara Pemberian</th>
+	<tr>
+		<td>
+		<input type="text" class="txtForm" controlid="textform53" style="width:300px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform54" style="width:60px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform55" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform56" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform57" >
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<input type="text" class="txtForm" controlid="textform58" style="width:300px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform59" style="width:60px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform60" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform61" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform62" >
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<input type="text" class="txtForm" controlid="textform63" style="width:300px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform64" style="width:60px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform65" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform66" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform67" >
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<input type="text" class="txtForm" controlid="textform68" style="width:300px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform69" style="width:60px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform70" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform71" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform72" >
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<input type="text" class="txtForm" controlid="textform73" style="width:300px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform74" style="width:60px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform75 >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform76" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform77" >
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<input type="text" class="txtForm" controlid="textform78" style="width:300px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform79" style="width:60px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform80" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform81" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform82" >
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<input type="text" class="txtForm" controlid="textform83" style="width:300px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform84" style="width:60px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform85" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform86" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform87" >
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<input type="text" class="txtForm" controlid="textform88" style="width:300px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform89" style="width:60px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform90" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform91" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform92" >
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<input type="text" class="txtForm" controlid="textform93" style="width:300px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform94" style="width:60px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform95" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform96" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform97" >
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<input type="text" class="txtForm" controlid="textform98" style="width:300px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform99" style="width:60px;" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform100" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform101" >
+		</td>
+		<td>
+		<input type="text" class="txtForm" controlid="textform102" >
+		</td>
+	</table>
+	</tr>	
+</table>
+<center>
+Batam,<input type="text" class="txtForm" controlid="textform103" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >Jam
+<input type="text" class="txtForm" controlid="textform104" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;width:50px;" >WIB
+</center>
+<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Perawat / Bidan Yang Menhyerahkan 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Perawat / Bidan Yang Menerima 
+
+<br>
+<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(<input type="text" class="txtForm" controlid="textform1" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(<input type="text" class="txtForm" controlid="textform105" style="border-bottom:dotted;border-left:none;border-right:none;border-top:none;" >) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Nama Lengkap &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Nama Lengkap 
+
+
+</html>

@@ -1,0 +1,127 @@
+﻿using System;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using DevExpress.XtraReports.UI;
+using QIS.Data.Core.Dal;
+using QIS.Medinfras.Data.Service;
+using QIS.Medinfras.Web.Common;
+
+namespace QIS.Medinfras.ReportDesktop
+{
+    public partial class BNewPaymentReceipt_RSRT : BaseRpt
+    {
+        private string HealthcareName = "";
+        private string Address = "";
+        private string City = "";
+
+        public BNewPaymentReceipt_RSRT()
+        {
+            InitializeComponent();
+        }
+
+        public override void InitializeReport(string[] param)
+        {
+
+            String HealthcareID = appSession.HealthcareID;
+            vHealthcare oHealthcare = BusinessLayer.GetvHealthcareList(String.Format("HealthcareID = '{0}'", HealthcareID)).FirstOrDefault();
+
+            //xrLogo.ImageUrl = ResolveUrl("~/SystemSetup/Libs/Images/logo.png");
+
+            //HealthcareName = oHealthcare.HealthcareName;
+            //Address = oHealthcare.StreetName;
+            City = oHealthcare.City;
+
+            //lblHealthcareName.Text = HealthcareName;
+            //lblAddress.Text = Address;
+            //lblCity.Text = City;
+            //lblWarning.Text = string.Format("Kwitansi ini sah bila ada tanda tangan Kasir, ada cap RS {0} / Bank, dan hanya terbit satu kali.", oHealthcare.HealthcareName);
+
+            List<GetPaymentReceiptCustom> lstEntity = BusinessLayer.GetPaymentReceiptCustomList(Convert.ToInt32(param[0]));
+
+            string tglttd = "";
+            if (lstEntity.FirstOrDefault() != null) {
+                tglttd = lstEntity.FirstOrDefault().CreatedDate.ToString(Constant.FormatString.DATE_FORMAT);
+                lblTTD.Text = lstEntity.FirstOrDefault().CreatedByName;
+            }
+
+            lblTanggal.Text = string.Format("{0},{1}", City, tglttd);
+            short cetakanke = lstEntity.FirstOrDefault().PrintNumber;
+            lblprint.Text = string.Format("Print by {0} | {1} - {2}", appSession.UserFullName, DateTime.Now.ToString(Constant.FormatString.DATE_TIME_FORMAT_2), cetakanke);
+
+            string remarks = string.Empty;
+            if (lstEntity.Count > 0) {
+                GetPaymentReceiptCustom oPayment = lstEntity.FirstOrDefault();
+                if (!string.IsNullOrEmpty(oPayment.MedicalNo))
+                {
+                    //([MedicalNo]) [PatientName] | [RegistrationNo]
+                    remarks = string.Format("({0}) {1} | {2}", oPayment.MedicalNo, oPayment.PatientName, oPayment.RegistrationNo);
+                }
+                else {
+                    remarks = string.Format("{0} | {1}", oPayment.PatientName, oPayment.RegistrationNo);
+                }
+
+                lblRemarks.Text = remarks;
+            }
+
+            this.DataSource = lstEntity;
+        }
+
+        //private void lblTanggal_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        //{
+        //    //string receiptDate = Convert.ToDateTime(GetCurrentColumnValue("ReceiptDate")).ToString(Constant.FormatString.DATE_FORMAT);
+        //    //string createdDate = Convert.ToDateTime(GetCurrentColumnValue("CreatedDate")).ToString(Constant.FormatString.DATE_FORMAT);
+
+        //    //if (receiptDate != "01-Jan-1900")
+        //    //{
+        //    //    lblTanggal.Text = string.Format("{0}, {1}", City, receiptDate);
+        //    //}
+        //    //else
+        //    //{
+        //    //    lblTanggal.Text = string.Format("{0}, {1}", City, createdDate);
+        //    //}
+        //}
+
+        //private void lblPrintNumber_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        //{
+        ////    SettingParameterDt Param = BusinessLayer.GetSettingParameterDt(appSession.HealthcareID, Constant.SettingParameter.FN_IS_USE_COUNTER_IN_PAYMENT_RECEIPT);
+        ////    if (Param.ParameterValue == "1")
+        ////    {
+        ////        Int32 PrintNumber = Convert.ToInt32((GetCurrentColumnValue("PrintNumber")).ToString());
+
+        ////        if (PrintNumber > 0)
+        ////        {
+
+        ////            lblPrintNumber.Text = string.Format("{0}", GetCurrentColumnValue("PrintNumber").ToString());
+        ////        }
+        ////        else
+        ////        {
+        ////            lblPrintNumber.Text = "";
+        ////        }
+        ////    }
+        ////    else
+        ////    {
+        ////        lblPrintNumber.Text = "";
+        ////    }
+        //}
+
+        //private void lblDiagnosa_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        //{
+        //    if (GetCurrentColumnValue("Diagnose1").ToString() != "" && GetCurrentColumnValue("Diagnose2").ToString() != "")
+        //    {
+        //        lblDiagnosa.Text = string.Format("Diagnosa = {0}, {1}", GetCurrentColumnValue("Diagnose1").ToString(), GetCurrentColumnValue("Diagnose2").ToString());
+        //    }
+        //    else if (GetCurrentColumnValue("Diagnose1").ToString() != "")
+        //    {
+        //        lblDiagnosa.Text = string.Format("Diagnosa = {0}", GetCurrentColumnValue("Diagnose1").ToString());
+        //    }
+        //    else
+        //    {
+        //        lblDiagnosa.Text = "";
+        //    }
+        //}
+    }
+}

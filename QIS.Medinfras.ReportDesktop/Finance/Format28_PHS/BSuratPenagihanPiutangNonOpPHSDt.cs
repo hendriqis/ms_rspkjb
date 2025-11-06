@@ -1,0 +1,28 @@
+﻿using System;
+using System.Drawing;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using DevExpress.XtraReports.UI;
+using QIS.Medinfras.Data.Service;
+using QIS.Medinfras.Web.Common;
+
+namespace QIS.Medinfras.ReportDesktop
+{
+    public partial class BSuratPenagihanPiutangNonOpPHSDt : DevExpress.XtraReports.UI.XtraReport
+    {
+        public BSuratPenagihanPiutangNonOpPHSDt()
+        {
+            InitializeComponent();
+        }
+
+        public void InitializeReport(int ARInvoiceID)
+        {
+            List<vARInvoiceDtNonOperational> lst = BusinessLayer.GetvARInvoiceDtNonOperationalList(string.Format(
+                                        "ARInvoiceID = {0} AND IsDeleted = 0", ARInvoiceID));
+
+            this.DataSource = lst;
+        }
+    }
+}

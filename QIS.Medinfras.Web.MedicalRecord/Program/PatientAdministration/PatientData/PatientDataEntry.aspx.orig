@@ -1,0 +1,1462 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/libs/MasterPage/MPEntry.master" AutoEventWireup="true"
+    CodeBehind="PatientDataEntry.aspx.cs" Inherits="QIS.Medinfras.Web.MedicalRecord.Program.PatientDataEntry" %>
+
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
+<asp:content id="Content2" contentplaceholderid="plhMenuTitle" runat="server">
+    <div class="menuTitle">
+        <%=HttpUtility.HtmlEncode(GetPageTitle())%></div>
+</asp:content>
+<asp:content id="Content1" contentplaceholderid="plhEntry" runat="server">
+    <script type="text/javascript">
+        function onLoad() {
+            setDatePicker('<%=txtDOB.ClientID %>');
+            $('#<%=txtDOB.ClientID %>').datepicker('option', 'maxDate', '0');
+
+            //#region DOB
+            $('#<%=txtDOB.ClientID %>').change(function () {
+                var age = Methods.getAgeFromDatePickerFormat($(this).val());
+                $('#<%=txtAgeInYear.ClientID %>').val(age.years);
+                $('#<%=txtAgeInMonth.ClientID %>').val(age.months);
+                $('#<%=txtAgeInDay.ClientID %>').val(age.days);
+            });
+
+            $('#<%=txtAgeInYear.ClientID %>').change(function () {
+                getDOBFromAge();
+            });
+
+            $('#<%=txtAgeInMonth.ClientID %>').change(function () {
+                getDOBFromAge();
+            });
+
+            $('#<%=txtAgeInDay.ClientID %>').change(function () {
+                getDOBFromAge();
+            });
+
+            function getDOBFromAge() {
+                var now = Methods.stringToDate('<%=GetTodayDate() %>');
+                var ageInYear = parseInt($('#<%=txtAgeInYear.ClientID %>').val());
+                var ageInMonth = parseInt($('#<%=txtAgeInMonth.ClientID %>').val());
+                var ageInDay = parseInt($('#<%=txtAgeInDay.ClientID %>').val());
+
+                now.setYear(now.getFullYear() - ageInYear);
+                now.setMonth(now.getMonth() - ageInMonth);
+                now.setDate(now.getDate() - ageInDay);
+
+                var dateStr = Methods.dateToDatePickerFormat(now);
+                $('#<%=txtDOB.ClientID %>').val(dateStr);
+            }
+            //#endregion
+
+            //#region Popup Search
+            //#region Ethnic
+            function onGetSCEthnicFilterExpression() {
+                var filterExpression = "<%:OnGetSCEthnicFilterExpression() %>";
+                return filterExpression;
+            }
+
+            $('#lblEthnic.lblLink').click(function () {
+                openSearchDialog('stdcode', onGetSCEthnicFilterExpression(), function (value) {
+                    $('#<%=txtEthnicCode.ClientID %>').val(value);
+                    onTxtEthnicCodeChanged(value);
+                });
+            });
+
+            $('#<%=txtEthnicCode.ClientID %>').change(function () {
+                onTxtEthnicCodeChanged($(this).val());
+            });
+
+            function onTxtEthnicCodeChanged(value) {
+                var filterExpression = onGetSCEthnicFilterExpression() + " AND StandardCodeID LIKE '%^" + value + "'";
+                Methods.getObject('GetStandardCodeList', filterExpression, function (result) {
+                    if (result != null)
+                        $('#<%=txtEthnicName.ClientID %>').val(result.StandardCodeName);
+                    else {
+                        $('#<%=txtEthnicCode.ClientID %>').val('');
+                        $('#<%=txtEthnicName.ClientID %>').val('');
+                    }
+                });
+            }
+            //#endregion
+
+            //#region Employee
+            function getEmployeeFilterExpression() {
+                var filterExpression = "IsDeleted = 0";
+                return filterExpression;
+            }
+
+            $('#lblEmployee.lblLink').die('click');
+            $('#lblEmployee.lblLink').live('click', function () {
+                openSearchDialog('employee', getEmployeeFilterExpression(), function (value) {
+                    $('#<%=txtEmployeeCode.ClientID %>').val(value);
+                    onPatientEntryTxtEmployeeCodeChanged(value);
+                });
+            });
+
+            $('#<%=txtEmployeeCode.ClientID %>').change(function () {
+                onPatientEntryTxtEmployeeCodeChanged($(this).val());
+            });
+
+            function onPatientEntryTxtEmployeeCodeChanged(value) {
+                var filterExpression = getEmployeeFilterExpression() + " AND EmployeeCode = '" + value + "'";
+                Methods.getObject('GetEmployeeList', filterExpression, function (result) {
+                    if (result != null) {
+                        $('#<%=hdnEmployeeID.ClientID %>').val(result.EmployeeID);
+                        $('#<%=txtEmployeeName.ClientID %>').val(result.FullName);
+                    }
+                    else {
+                        $('#<%=hdnEmployeeID.ClientID %>').val('');
+                        $('#<%=txtEmployeeCode.ClientID %>').val('');
+                        $('#<%=txtEmployeeName.ClientID %>').val('');
+                    }
+                });
+            }
+            //#endregion
+
+            //#region Province
+            function onGetSCProvinceFilterExpression() {
+                var filterExpression = "<%:OnGetSCProvinceFilterExpression() %>";
+                return filterExpression;
+            }
+
+            $('#lblProvince.lblLink').click(function () {
+                openSearchDialog('stdcode', onGetSCProvinceFilterExpression(), function (value) {
+                    $('#<%=txtProvinceCode.ClientID %>').val(value);
+                    onTxtProvinceCodeChanged(value);
+                });
+            });
+
+            $('#<%=txtProvinceCode.ClientID %>').change(function () {
+                onTxtProvinceCodeChanged($(this).val());
+            });
+
+            function onTxtProvinceCodeChanged(value) {
+                var filterExpression = onGetSCProvinceFilterExpression() + " AND StandardCodeID LIKE '%^" + value + "'";
+                Methods.getObject('GetStandardCodeList', filterExpression, function (result) {
+                    if (result != null)
+                        $('#<%=txtProvinceName.ClientID %>').val(result.StandardCodeName);
+                    else {
+                        $('#<%=txtProvinceCode.ClientID %>').val('');
+                        $('#<%=txtProvinceName.ClientID %>').val('');
+                    }
+                });
+            }
+            //#endregion
+
+            //#region Office Province
+            $('#lblOfficeProvince.lblLink').click(function () {
+                openSearchDialog('stdcode', onGetSCProvinceFilterExpression(), function (value) {
+                    $('#<%=txtPatientJobOfficeProvinceCode.ClientID %>').val(value);
+                    onTxtOfficeProvinceCodeChanged(value);
+                });
+            });
+
+            $('#<%=txtPatientJobOfficeProvinceCode.ClientID %>').change(function () {
+                onTxtOfficeProvinceCodeChanged($(this).val());
+            });
+
+            function onTxtOfficeProvinceCodeChanged(value) {
+                var filterExpression = onGetSCProvinceFilterExpression() + " AND StandardCodeID LIKE '%^" + value + "'";
+                Methods.getObject('GetStandardCodeList', filterExpression, function (result) {
+                    if (result != null)
+                        $('#<%=txtPatientJobOfficeProvinceName.ClientID %>').val(result.StandardCodeName);
+                    else {
+                        $('#<%=txtPatientJobOfficeProvinceCode.ClientID %>').val('');
+                        $('#<%=txtPatientJobOfficeProvinceName.ClientID %>').val('');
+                    }
+                });
+            }
+            //#endregion
+
+            //#region Zip Code
+            $('#lblZipCode.lblLink').click(function () {
+                openSearchDialog('zipcodes', 'IsDeleted = 0', function (value) {
+                    $('#<%=txtZipCode.ClientID %>').val(value);
+                    onTxtZipCodeChanged(value);
+                });
+            });
+
+            $('#<%=txtZipCode.ClientID %>').change(function () {
+                onTxtZipCodeChanged($(this).val());
+            });
+
+            function onTxtZipCodeChanged(value) {
+                var filterExpression = "ZipCode = '" + value + "' AND IsDeleted = 0";
+                Methods.getObject('GetvZipCodesList', filterExpression, function (result) {
+                    if (result != null) {
+                        $('#<%=hdnZipCode.ClientID %>').val(result.ID);
+                        $('#<%=txtCity.ClientID %>').val(result.City);
+                        $('#<%=txtCounty.ClientID %>').val(result.County);
+                        $('#<%=txtDistrict.ClientID %>').val(result.District);
+                        $('#<%=txtProvinceCode.ClientID %>').val(result.GCProvince.split('^')[1]);
+                        $('#<%=txtProvinceName.ClientID %>').val(result.Province);
+                    }
+                    else {
+                        $('#<%=hdnZipCode.ClientID %>').val('');
+                        $('#<%=txtZipCode.ClientID %>').val('');
+                        $('#<%=txtCity.ClientID %>').val('');
+                        $('#<%=txtCounty.ClientID %>').val('');
+                        $('#<%=txtDistrict.ClientID %>').val('');
+                        $('#<%=txtProvinceCode.ClientID %>').val('');
+                        $('#<%=txtProvinceName.ClientID %>').val('');
+                    }
+                });
+            }
+            //#endregion
+
+            //#region Office Zip Code
+            $('#lblOfficeZipCode.lblLink').click(function () {
+                openSearchDialog('zipcodes', 'IsDeleted = 0', function (value) {
+                    $('#<%=txtPatientJobOfficeZipCode.ClientID %>').val(value);
+                    onTxtOfficeZipCodeChanged(value);
+                });
+            });
+
+            $('#<%=txtPatientJobOfficeZipCode.ClientID %>').change(function () {
+                onTxtOfficeZipCodeChanged($(this).val());
+            });
+
+            function onTxtOfficeZipCodeChanged(value) {
+                var filterExpression = "ZipCode = '" + value + "' AND IsDeleted = 0";
+                Methods.getObject('GetvZipCodesList', filterExpression, function (result) {
+                    if (result != null) {
+                        $('#<%=hdnOfficeZipCode.ClientID %>').val(result.ID);
+                        $('#<%=txtPatientJobOfficeCity.ClientID %>').val(result.City);
+                        $('#<%=txtPatientJobOfficeCounty.ClientID %>').val(result.County);
+                        $('#<%=txtPatientJobOfficeDistrict.ClientID %>').val(result.District);
+                        $('#<%=txtPatientJobOfficeProvinceCode.ClientID %>').val(result.GCProvince.split('^')[1]);
+                        $('#<%=txtPatientJobOfficeProvinceName.ClientID %>').val(result.Province);
+                    }
+                    else {
+                        $('#<%=hdnOfficeZipCode.ClientID %>').val('');
+                        $('#<%=txtPatientJobOfficeZipCode.ClientID %>').val('');
+                        $('#<%=txtPatientJobOfficeCity.ClientID %>').val('');
+                        $('#<%=txtPatientJobOfficeCounty.ClientID %>').val('');
+                        $('#<%=txtPatientJobOfficeDistrict.ClientID %>').val('');
+                        $('#<%=txtPatientJobOfficeProvinceCode.ClientID %>').val('');
+                        $('#<%=txtPatientJobOfficeProvinceName.ClientID %>').val('');
+                    }
+                });
+            }
+            //#endregion
+
+            //#region Education
+            function onGetSCEducationFilterExpression() {
+                var filterExpression = "<%:OnGetSCEducationFilterExpression() %>";
+                return filterExpression;
+            }
+
+            $('#lblEducation.lblLink').click(function () {
+                openSearchDialog('stdcode', onGetSCEducationFilterExpression(), function (value) {
+                    $('#<%=txtEducationCode.ClientID %>').val(value);
+                    onTxtEducationCodeChanged(value);
+                });
+            });
+
+            $('#<%=txtEducationCode.ClientID %>').change(function () {
+                onTxtEducationCodeChanged($(this).val());
+            });
+
+            function onTxtEducationCodeChanged(value) {
+                var filterExpression = onGetSCEducationFilterExpression() + " AND StandardCodeID LIKE '%^" + value + "'";
+                Methods.getObject('GetStandardCodeList', filterExpression, function (result) {
+                    if (result != null)
+                        $('#<%=txtEducationName.ClientID %>').val(result.StandardCodeName);
+                    else {
+                        $('#<%=txtEducationCode.ClientID %>').val('');
+                        $('#<%=txtEducationName.ClientID %>').val('');
+                    }
+                });
+            }
+            //#endregion
+
+            //#region Religion
+            function onGetSCReligionFilterExpression() {
+                var filterExpression = "<%:OnGetSCReligionFilterExpression() %>";
+                return filterExpression;
+            }
+
+            $('#lblReligion.lblLink').click(function () {
+                openSearchDialog('stdcode', onGetSCReligionFilterExpression(), function (value) {
+                    $('#<%=txtReligionCode.ClientID %>').val(value);
+                    onTxtReligionCodeChanged(value);
+                });
+            });
+
+            $('#<%=txtReligionCode.ClientID %>').change(function () {
+                onTxtReligionCodeChanged($(this).val());
+            });
+
+            function onTxtReligionCodeChanged(value) {
+                var filterExpression = onGetSCReligionFilterExpression() + " AND StandardCodeID LIKE '%^" + value + "'";
+                Methods.getObject('GetStandardCodeList', filterExpression, function (result) {
+                    if (result != null)
+                        $('#<%=txtReligionName.ClientID %>').val(result.StandardCodeName);
+                    else {
+                        $('#<%=txtReligionName.ClientID %>').val('');
+                        $('#<%=txtReligionCode.ClientID %>').val('');
+                    }
+                });
+            }
+            //#endregion
+
+            //#region Nationality
+            function onGetSCNationalityFilterExpression() {
+                var filterExpression = "<%:OnGetSCNationalityFilterExpression() %>";
+                return filterExpression;
+            }
+
+            $('#lblNationality.lblLink').click(function () {
+                openSearchDialog('stdcode', onGetSCNationalityFilterExpression(), function (value) {
+                    $('#<%=txtNationalityCode.ClientID %>').val(value);
+                    onTxtNationalityCodeChanged(value);
+                });
+            });
+
+            $('#<%=txtNationalityCode.ClientID %>').change(function () {
+                onTxtNationalityCodeChanged($(this).val());
+            });
+
+            function onTxtNationalityCodeChanged(value) {
+                var filterExpression = onGetSCNationalityFilterExpression() + " AND StandardCodeID LIKE '%^" + value + "'";
+                Methods.getObject('GetStandardCodeList', filterExpression, function (result) {
+                    if (result != null)
+                        $('#<%=txtNationalityName.ClientID %>').val(result.StandardCodeName);
+                    else {
+                        $('#<%=txtNationalityCode.ClientID %>').val('');
+                        $('#<%=txtNationalityName.ClientID %>').val('');
+                    }
+                });
+            }
+            //#endregion
+
+            //#region Marital Status
+            function onGetSCMaritalStatusFilterExpression() {
+                var filterExpression = "<%:OnGetSCMaritalStatusFilterExpression() %>";
+                return filterExpression;
+            }
+
+            $('#lblMaritalStatus.lblLink').click(function () {
+                openSearchDialog('stdcode', onGetSCMaritalStatusFilterExpression(), function (value) {
+                    $('#<%=txtMaritalStatusCode.ClientID %>').val(value);
+                    onTxtMaritalStatusCodeChanged(value);
+                });
+            });
+
+            $('#<%=txtMaritalStatusCode.ClientID %>').change(function () {
+                onTxtMaritalStatusCodeChanged($(this).val());
+            });
+
+            function onTxtMaritalStatusCodeChanged(value) {
+                var filterExpression = onGetSCMaritalStatusFilterExpression() + " AND StandardCodeID LIKE '%^" + value + "'";
+                Methods.getObject('GetStandardCodeList', filterExpression, function (result) {
+                    if (result != null)
+                        $('#<%=txtMaritalStatusName.ClientID %>').val(result.StandardCodeName);
+                    else {
+                        $('#<%=txtMaritalStatusCode.ClientID %>').val('');
+                        $('#<%=txtMaritalStatusName.ClientID %>').val('');
+                    }
+                });
+            }
+            //#endregion
+
+            //#region Patient Category
+            function onGetSCPatientCategoryFilterExpression() {
+                var filterExpression = "<%:OnGetSCPatientCategoryFilterExpression() %>";
+                return filterExpression;
+            }
+
+            $('#lblPatientCategory.lblLink').click(function () {
+                openSearchDialog('stdcode', onGetSCPatientCategoryFilterExpression(), function (value) {
+                    $('#<%=txtPatientCategoryCode.ClientID %>').val(value);
+                    onTxtPatientCategoryCodeChanged(value);
+                });
+            });
+
+            $('#<%=txtPatientCategoryCode.ClientID %>').change(function () {
+                onTxtPatientCategoryCodeChanged($(this).val());
+            });
+
+            function onTxtPatientCategoryCodeChanged(value) {
+                var filterExpression = onGetSCPatientCategoryFilterExpression() + " AND StandardCodeID LIKE '%^" + value + "'";
+                Methods.getObject('GetStandardCodeList', filterExpression, function (result) {
+                    if (result != null)
+                        $('#<%=txtPatientCategoryName.ClientID %>').val(result.StandardCodeName);
+                    else {
+                        $('#<%=txtPatientCategoryCode.ClientID %>').val('');
+                        $('#<%=txtPatientCategoryName.ClientID %>').val('');
+                    }
+                    setTxtEmployeeEnabled();
+                });
+            }
+            setTxtEmployeeEnabled();
+
+            function setTxtEmployeeEnabled() {
+                if ($('#<%=txtPatientCategoryCode.ClientID %>').val() == '001') {
+                    $('#<%=txtEmployeeCode.ClientID %>').removeAttr('readonly');
+                    $('#lblEmployee').attr('class', 'lblLink');
+                }
+                else {
+                    $('#<%=txtEmployeeCode.ClientID %>').attr('readonly', 'readonly');
+
+                    $('#lblEmployee').attr('class', 'lblDisabled');
+                    $('#<%=hdnEmployeeID.ClientID %>').val('');
+                    $('#<%=txtEmployeeCode.ClientID %>').val('');
+                    $('#<%=txtEmployeeName.ClientID %>').val('');
+                }
+            }
+            //#endregion
+
+            //#region Payer Company
+            function getPayerCompanyFilterExpression() {
+                var filterExpression = "GCCustomerType = '" + cboPayer.GetValue() + "' AND IsDeleted = 0";
+                return filterExpression;
+            }
+
+            $('#lblPayerCompany.lblLink').click(function () {
+                openSearchDialog('payer', getPayerCompanyFilterExpression(), function (value) {
+                    $('#<%=txtPayerCompanyCode.ClientID %>').val(value);
+                    onPatientEntryTxtPayerCompanyCodeChanged(value);
+                });
+            });
+
+            $('#<%=txtPayerCompanyCode.ClientID %>').change(function () {
+                onPatientEntryTxtPayerCompanyCodeChanged($(this).val());
+            });
+
+            function onPatientEntryTxtPayerCompanyCodeChanged(value) {
+                var filterExpression = getPayerCompanyFilterExpression() + " AND BusinessPartnerCode = '" + value + "'";
+                Methods.getObject('GetvCustomerList', filterExpression, function (result) {
+                    if (result != null) {
+                        $('#<%=hdnPayerID.ClientID %>').val(result.BusinessPartnerID);
+                        $('#<%=txtPayerCompanyName.ClientID %>').val(result.BusinessPartnerName);
+                    }
+                    else {
+                        $('#<%=hdnPayerID.ClientID %>').val('');
+                        $('#<%=txtPayerCompanyCode.ClientID %>').val('');
+                        $('#<%=txtPayerCompanyName.ClientID %>').val('');
+                    }
+                });
+            }
+            //#endregion
+
+            //#region Patient Job
+            function onGetSCPatientJobFilterExpression() {
+                var filterExpression = "<%:OnGetSCPatientJobFilterExpression() %>";
+                return filterExpression;
+            }
+
+            $('#lblPatientJob.lblLink').click(function () {
+                openSearchDialog('stdcode', onGetSCPatientJobFilterExpression(), function (value) {
+                    $('#<%=txtPatientJobCode.ClientID %>').val(value);
+                    onTxtPatientJobCodeChanged(value);
+                });
+            });
+
+            $('#<%=txtPatientJobCode.ClientID %>').change(function () {
+                onTxtPatientJobCodeChanged($(this).val());
+            });
+
+            function onTxtPatientJobCodeChanged(value) {
+                var filterExpression = onGetSCPatientJobFilterExpression() + " AND StandardCodeID LIKE '%^" + value + "'";
+                Methods.getObject('GetStandardCodeList', filterExpression, function (result) {
+                    if (result != null)
+                        $('#<%=txtPatientJobName.ClientID %>').val(result.StandardCodeName);
+                    else {
+                        $('#<%=txtPatientJobCode.ClientID %>').val('');
+                        $('#<%=txtPatientJobName.ClientID %>').val('');
+                    }
+                });
+            }
+            //#endregion
+            //#endregion
+
+            registerCollapseExpandHandler();
+        }
+
+        function onCboPayerValueChanged(s) {
+            setTblPayerCompanyVisibility();
+            $('#<%=hdnPayerID.ClientID %>').val('');
+            $('#<%=txtPayerCompanyCode.ClientID %>').val('');
+            $('#<%=txtPayerCompanyName.ClientID %>').val('');
+        }
+
+        function setTblPayerCompanyVisibility() {
+            if (cboPayer.GetValue() == Constant.CustomerType.PERSONAL)
+                $('#<%=trPayerCompany.ClientID %>').hide();
+            else
+                $('#<%=trPayerCompany.ClientID %>').show();
+        }
+
+        $('#<%:chkIsVIP.ClientID %>').live('change', function () {
+            if ($(this).is(':checked')) {
+                $('#<%=tdVIPGroup.ClientID %>').removeAttr('style');
+            }
+            else {
+                $('#<%=tdVIPGroup.ClientID %>').attr('style', 'display:none');
+                $('#<%=trVIPGroupOther.ClientID %>').attr('style', 'display:none');
+            }
+        });
+
+        function oncboVIPGroupChanged() {
+            if (cboVIPGroup.GetValue() != 'X289^999') {
+                $('#<%=trVIPGroupOther.ClientID %>').attr('style', 'display:none');
+                $('#<%=txtOtherVIPGroup.ClientID %>').val('');
+            }
+            else {
+                $('#<%=trVIPGroupOther.ClientID %>').removeAttr('style');
+            }
+        }
+    </script>
+    <input type="hidden" id="hdnPageTitle" runat="server" />
+    <input type="hidden" runat="server" id="hdnMRN" value="" />
+    <input type="hidden" runat="server" id="hdnZipCode" value="" />
+    <input type="hidden" runat="server" id="hdnOfficeZipCode" value="" />
+    <input type="hidden" id="hdnPayerID" value="" runat="server" />
+    <table class="tblContentArea">
+        <colgroup>
+            <col style="width: 49%" />
+            <col style="width: 3px" />
+            <col style="width: 49%" />
+        </colgroup>
+        <tr>
+            <td style="padding: 5px; vertical-align: top;">
+                <h4 class="h4expanded">
+                    <%=GetLabel("Data Pasien")%></h4>
+                <div class="containerTblEntryContent">
+                    <table class="tblEntryContent" style="width: 100%">
+                        <colgroup>
+                            <col style="width: 35%" />
+                            <col style="width: 65%" />
+                        </colgroup>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("No.RM")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtMRN" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Sapaan")%></label>
+                            </td>
+                            <td>
+                                <dxe:ASPxComboBox ID="cboSalutation" Width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Gelar Depan")%></label>
+                            </td>
+                            <td>
+                                <dxe:ASPxComboBox ID="cboTitle" Width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Nama Pasien")%></label>
+                            </td>
+                            <td>
+                                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width: 49%" />
+                                        <col style="width: 3px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <asp:textbox id="txtFirstName" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:textbox id="txtMiddleName" width="100%" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Nama 2")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtName2" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblMandatory">
+                                    <%=GetLabel("Nama Belakang")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtFamilyName" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Nama Panggilan")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtPreferredName" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Gelar Belakang")%></label>
+                            </td>
+                            <td>
+                                <dxe:ASPxComboBox ID="cboSuffix" Width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Jenis Kelamin")%></label>
+                            </td>
+                            <td>
+                                <dxe:ASPxComboBox ID="cboGender" Width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label id="lblEthnic" class="lblLink">
+                                    <%=GetLabel("Suku")%></label>
+                            </td>
+                            <td>
+                                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width: 30%" />
+                                        <col style="width: 3px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <asp:textbox id="txtEthnicCode" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:textbox id="txtEthnicName" width="100%" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Golongan Darah")%></label>
+                            </td>
+                            <td>
+                                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width: 49%" />
+                                        <col style="width: 3px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <dxe:ASPxComboBox ID="cboBloodType" Width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <dxe:ASPxComboBox ID="cboBloodRhesus" Width="100%" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Tempat Lahir")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtBirthPlace" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblMandatory">
+                                    <%=GetLabel("Tanggal Lahir")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtDOB" width="120px" runat="server" cssclass="datepicker" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblMandatory">
+                                    <%=GetLabel("Umur")%>
+                                    (yyyy-MM-dd)</label>
+                            </td>
+                            <td>
+                                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width: 32%" />
+                                        <col style="width: 3px" />
+                                        <col style="width: 32%" />
+                                        <col style="width: 3px" />
+                                        <col style="width: 32%" />
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <asp:textbox id="txtAgeInYear" cssclass="number" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:textbox id="txtAgeInMonth" cssclass="number" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:textbox id="txtAgeInDay" cssclass="number" width="100%" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <h4 class="h4expanded">
+                    <%=GetLabel("Data Alamat Pasien")%></h4>
+                <div class="containerTblEntryContent">
+                    <table class="tblEntryContent" style="width: 100%">
+                        <colgroup>
+                            <col style="width: 35%" />
+                            <col style="width: 65%" />
+                        </colgroup>
+                        <tr>
+                            <td class="tdLabel" style="vertical-align: top; padding-top: 5px;">
+                                <label class="lblMandatory">
+                                    <%=GetLabel("Jalan")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtAddress" width="100%" runat="server" textmode="MultiLine" rows="2" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblLink" id="lblZipCode">
+                                    <%=GetLabel("Kode Pos")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtZipCode" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Desa / Kabupaten")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtCounty" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Kecamatan")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtDistrict" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Kota")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtCity" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblLink" id="lblProvince">
+                                    <%=GetLabel("Provinsi")%></label>
+                            </td>
+                            <td>
+                                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width: 30%" />
+                                        <col style="width: 3px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <asp:textbox id="txtProvinceCode" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:textbox id="txtProvinceName" width="100%" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <h4 class="h4expanded">
+                    <%=GetLabel("Data Kontak Pasien")%></h4>
+                <div class="containerTblEntryContent">
+                    <table class="tblEntryContent" style="width: 100%">
+                        <colgroup>
+                            <col style="width: 35%" />
+                            <col style="width: 65%" />
+                        </colgroup>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblMandatory">
+                                    <%=GetLabel("No Telepon 1")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtTelephoneNo1" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("No Telepon 2")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtTelephoneNo2" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("No HP 1")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtMobilePhone1" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("No HP 2")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtMobilePhone2" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Email")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtEmail" cssclass="email" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Tipe Kartu Identitas")%></label>
+                            </td>
+                            <td>
+                                <dxe:ASPxComboBox ID="cboIdentityCardType" Width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("No Kartu Identitas")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtIdentityCardNo" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td style="padding: 5px; vertical-align: top;">
+                <h4 class="h4expanded">
+                    <%=GetLabel("Data Pembayar")%></h4>
+                <div class="containerTblEntryContent">
+                    <table class="tblEntryContent" style="width: 100%">
+                        <colgroup>
+                            <col style="width: 35%" />
+                            <col style="width: 65%" />
+                        </colgroup>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Instansi")%></label>
+                            </td>
+                            <td>
+                                <dxe:ASPxComboBox ID="cboPayer" ClientInstanceName="cboPayer" Width="100%" runat="server">
+                                    <ClientSideEvents ValueChanged="function(s){ onCboPayerValueChanged(s); }" />
+                                </dxe:ASPxComboBox>
+                            </td>
+                        </tr>
+                        <tr id="trPayerCompany" runat="server">
+                            <td class="tdLabel">
+                                <label class="lblLink" id="lblPayerCompany">
+                                    <%=GetLabel("Perusahaan")%></label>
+                            </td>
+                            <td>
+                                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width: 30%" />
+                                        <col style="width: 3px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <asp:textbox id="txtPayerCompanyCode" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:textbox id="txtPayerCompanyName" width="100%" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <h4 class="h4expanded">
+                    <%=GetLabel("Data Pekerjaan Pasien")%></h4>
+                <div class="containerTblEntryContent">
+                    <table class="tblEntryContent" style="width: 100%">
+                        <colgroup>
+                            <col style="width: 35%" />
+                            <col style="width: 65%" />
+                        </colgroup>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblLink" id="lblPatientJob">
+                                    <%=GetLabel("Pekerjaan")%></label>
+                            </td>
+                            <td>
+                                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width: 30%" />
+                                        <col style="width: 3px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <asp:textbox id="txtPatientJobCode" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:textbox id="txtPatientJobName" width="100%" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Nama Kantor")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtPatientJobOffice" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel" style="vertical-align: top; padding-top: 5px;">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Alamat Kantor")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtPatientJobOfficeAddress" width="100%" runat="server" textmode="MultiLine"
+                                    rows="2" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblLink" id="lblOfficeZipCode">
+                                    <%=GetLabel("Kode Pos [Kantor]")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtPatientJobOfficeZipCode" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Desa / Kelurahan [Kantor]")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtPatientJobOfficeCounty" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Kecamatan [Kantor]")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtPatientJobOfficeDistrict" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Kota [Kantor]")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtPatientJobOfficeCity" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblLink" id="lblOfficeProvince">
+                                    <%=GetLabel("Provinsi [Kantor]")%></label>
+                            </td>
+                            <td>
+                                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width: 30%" />
+                                        <col style="width: 3px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <asp:textbox id="txtPatientJobOfficeProvinceCode" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:textbox id="txtPatientJobOfficeProvinceName" width="100%" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("No Telepon [Kantor]")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtPatientJobOfficeTelephone" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Email [Kantor]")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtPatientJobOfficeEmail" cssclass="email" width="100%" runat="server" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <h4 class="h4expanded">
+                    <%=GetLabel("Informasi Tambahan")%></h4>
+                <div class="containerTblEntryContent">
+                    <table class="tblEntryContent" style="width: 100%">
+                        <colgroup>
+                            <col style="width: 35%" />
+                            <col style="width: 65%" />
+                        </colgroup>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblLink" id="lblEducation">
+                                    <%=GetLabel("Pendidikan")%></label>
+                            </td>
+                            <td>
+                                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width: 30%" />
+                                        <col style="width: 3px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <asp:textbox id="txtEducationCode" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:textbox id="txtEducationName" width="100%" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblMandatory lblLink" id="lblReligion">
+                                    <%=GetLabel("Agama")%></label>
+                            </td>
+                            <td>
+                                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width: 30%" />
+                                        <col style="width: 3px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <asp:textbox id="txtReligionCode" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:textbox id="txtReligionName" width="100%" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblLink" id="lblMaritalStatus">
+                                    <%=GetLabel("Status Pernikahan")%></label>
+                            </td>
+                            <td>
+                                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width: 30%" />
+                                        <col style="width: 3px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <asp:textbox id="txtMaritalStatusCode" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:textbox id="txtMaritalStatusName" width="100%" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblLink" id="lblNationality">
+                                    <%=GetLabel("Kewarganegaraan")%></label>
+                            </td>
+                            <td>
+                                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width: 30%" />
+                                        <col style="width: 3px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <asp:textbox id="txtNationalityCode" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:textbox id="txtNationalityName" width="100%" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblLink" id="lblPatientCategory">
+                                    <%=GetLabel("Kategori Pasien")%></label>
+                            </td>
+                            <td>
+                                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width: 30%" />
+                                        <col style="width: 3px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <asp:textbox id="txtPatientCategoryCode" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:textbox id="txtPatientCategoryName" width="100%" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblLink" id="lblEmployee">
+                                    <%=GetLabel("Pegawai")%></label>
+                            </td>
+                            <td>
+                                <input type="hidden" runat="server" id="hdnEmployeeID" value="" />
+                                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col style="width: 30%" />
+                                        <col style="width: 3px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <asp:textbox id="txtEmployeeCode" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:textbox id="txtEmployeeName" width="100%" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <h4 class="h4expanded">
+                    <%=GetLabel("Status Pasien")%></h4>
+                <div class="containerTblEntryContent">
+                    <table class="tblEntryContent" style="width: 100%">
+                        <colgroup>
+                            <col style="width: 35%" />
+                            <col style="width: 65%" />
+                        </colgroup>
+                        <tr>
+                            <td class="tdLabel">
+                                <label class="lblMandatory">
+                                    <%=GetLabel("Status Pasien")%></label>
+                            </td>
+                            <td>
+                                <dxe:ASPxComboBox ID="cboPatientStatus" ClientInstanceName="cboPatientStatus" Width="100%"
+                                    runat="server">
+                                </dxe:ASPxComboBox>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="tblEntryContent" style="width: 100%">
+                        <colgroup>
+                            <col style="width: 50%" />
+                        </colgroup>
+                        <tr>
+                            <td valign="top">
+                                <table width="100%">
+                                    <colgroup>
+                                        <col style="width: 10px" />
+                                    </colgroup>
+                                    <tr>
+                                        <td colspan="2" style="font-weight: bold;">
+                                            <%=GetLabel("Klinis") %>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:checkbox id="chkIsHasAllergy" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            <%=GetLabel("Has Allergy")%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:checkbox id="chkIsFallRisk" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            <%=GetLabel("Fall Risk")%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:checkbox id="chkIsAllowResuscitate" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            <%=GetLabel("DNR")%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:checkbox id="chkIsG6PD" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            <%=GetLabel("G6PD")%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:checkbox id="chkIsAlive" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            <%=GetLabel("Hidup")%>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td valign="top">
+                                <table width="100%">
+                                    <colgroup>
+                                        <col style="width: 10px" />
+                                    </colgroup>
+                                    <tr>
+                                        <td colspan="3" style="font-weight: bold;">
+                                            <%=GetLabel("Sosial") %>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:checkbox id="chkIsSmoking" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            <%=GetLabel("Merokok")%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:checkbox id="chkIsIlliteracy" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            <%=GetLabel("Buta Huruf")%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:checkbox id="chkIsDonor" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            <%=GetLabel("Donor")%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:checkbox id="chkIsBlackList" width="100%" runat="server" />
+                                        </td>
+                                        <td>
+                                            <%=GetLabel("Black List")%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+<<<<<<< HEAD
+                                            <asp:CheckBox ID="chkIsVIP" Width="100%" runat="server" />
+=======
+                                            <asp:checkbox id="chkIsVIP" width="100%" runat="server" />
+>>>>>>> 405976819fc17c35b40068ac1e51030682bfe415
+                                        </td>
+                                        <td>
+                                            <%=GetLabel("VIP")%>
+                                        </td>
+<<<<<<< HEAD
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <dxe:ASPxComboBox ID="cboVIPGroup" ClientInstanceName="cboVIPGroup" Width="100%" runat="server">
+=======
+                                        <td id="tdVIPGroup" runat="server" style="display: none">
+                                            <dxe:ASPxComboBox runat="server" ID="cboVIPGroup" ClientInstanceName="cboVIPGroup"
+                                                Width="100px">
+                                                <ClientSideEvents ValueChanged="function(s,e){ oncboVIPGroupChanged(); }" />
+>>>>>>> 405976819fc17c35b40068ac1e51030682bfe415
+                                            </dxe:ASPxComboBox>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr id="trVIPGroupOther" runat="server" style="display: none">
+                            <td class="tdLabel">
+                                <label class="lblNormal" id="lblOtherReason">
+                                    <%=GetLabel("VIP Group (Other) : ")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtOtherVIPGroup" width="180px" runat="server" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <h4 class="h4expanded">
+                    <%=GetLabel("Informasi Lainnya")%></h4>
+                <div class="containerTblEntryContent">
+                    <table class="tblEntryContent" style="width: 100%">
+                        <colgroup>
+                            <col style="width: 35%" />
+                            <col style="width: 65%" />
+                        </colgroup>
+                        <tr>
+                            <td class="tdLabel" style="vertical-align: top; padding-top: 5px;">
+                                <label class="lblNormal">
+                                    <%=GetLabel("No RM Lama")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtOldMedicalNo" width="100%" runat="server" readonly="true" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLabel" style="vertical-align: top; padding-top: 5px;">
+                                <label class="lblNormal">
+                                    <%=GetLabel("Catatan")%></label>
+                            </td>
+                            <td>
+                                <asp:textbox id="txtNotes" width="100%" runat="server" textmode="MultiLine" rows="2" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <asp:panel id="pnlCustomAttribute" runat="server">
+                    <h4 class="h4expanded">
+                        <%=GetLabel("Custom Attribute")%></h4>
+                    <asp:repeater id="rptCustomAttribute" runat="server">
+                        <headertemplate>
+                            <div class="containerTblEntryContent">
+                                <table class="tblEntryContent" style="width: 100%">
+                                    <colgroup>
+                                        <col style="width: 30%" />
+                                    </colgroup>
+                        </headertemplate>
+                        <itemtemplate>
+                            <tr>
+                                <td class="tdLabel">
+                                    <label class="lblNormal">
+                                        <%#: Eval("Value") %></label>
+                                </td>
+                                <td>
+                                    <input type="hidden" value='<%#: Eval("Code") %>' runat="server" id="hdnTagFieldCode" />
+                                    <asp:TextBox ID="txtTagField" Width="300px" runat="server" />
+                                </td>
+                            </tr>
+                        </itemtemplate>
+                        <footertemplate>
+    </table> </div>
+                        </FooterTemplate>
+                    </asp:Repeater>
+                </asp:Panel>
+            </td>
+        </tr>
+    </table>
+</asp:content>

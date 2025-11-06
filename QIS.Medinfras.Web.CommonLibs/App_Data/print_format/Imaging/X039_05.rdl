@@ -1,0 +1,22 @@
+﻿^XA
+^CF0,28
+^FO30,15^FDNo. RM^FS
+^FO440,15^FDNo Rad : {TransactionNo}^FS
+^FO30,60^FDPasien^FS
+^FO30,105^FDTgl. Lahir^FS
+^FO30,145^FDAlamat^FS
+^FO30,215^FDTanggal^FS
+^FO30,257^FDPemeriksaan^FS
+^FO30,325^FDRujukan^FS
+^FO30,365^FDPemeriksa^FS
+
+^FO200,15^FD: {MedicalNo}^FS
+^FO200,60^FD: {Salutation} {PatientName}^FS
+^FO200,105^FD: {cfDateOfBirth}^FS
+^FO200,145^FB600,5,^FD: {StreetName}^FS
+^FO200,215^FD: {RegistrationDate}^FS
+^FO500,215^FDHp : {PhoneNo}^FS
+^FO200,257^FB600,5,^FD: {ItemName}^FS
+^FO200,325^FD: {RegistrationPhysicianName}^FS
+^FO200,365^FD: {PhysicianOrder}^FS
+^XZ

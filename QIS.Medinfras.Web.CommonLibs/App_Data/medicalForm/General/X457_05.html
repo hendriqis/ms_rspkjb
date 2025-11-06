@@ -1,0 +1,130 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_StewardScore">
+
+    var p1 = 0;
+    var p2 = 0;
+    var p3 = 0;
+
+    $(function () {
+        $("#ddlForm1").change(function () {
+            $("#txtParamScore1").val($(this).val());
+            p1 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm2").change(function () {
+            $("#txtParamScore2").val($(this).val());
+            p2 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm3").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            p3 = parseInt($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlForm1").change();
+        $("#ddlForm2").change();
+        $("#ddlForm3").change();
+    });
+
+    function CalculateTotalScore() {
+        var score = p1 + p2 + p3;
+        var value = parseInt(score);
+
+        $("#txtParamScore4").val(value);
+    }
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <colgroup>
+                <col width="250px" />
+                <col width="600px" />
+                <col width="10px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="3">
+                    <label style="font-weight:bold; text-decoration:underline">STEWARD SCORE</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    </br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Aktifitas</label>
+                </td>
+                <td>
+                    <select id="ddlForm1" style="width:100%" class="ddlForm" controlID = "ddlForm1">
+                        <option value="0" selected></option>
+                        <option value="2">Bangun</option>
+                        <option value="1">Respon terhadap rangsang</option>
+                        <option value="0">Tidak ada respon</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px; text-align:right" class="txtForm" controlID = "txtParamScore1"  />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Respirasi</label>
+                </td>
+                <td>
+                    <select id="ddlForm2" style="width:100%" class="ddlForm" controlID = "ddlForm2">
+                        <option value="0" selected></option>
+                        <option value="2">Batuk/menangis</option>
+                        <option value="1">Pertahankan jalan nafas</option>
+                        <option value="0">Perlu bantuan nafas</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px ;text-align:right" class="txtForm" controlID = "txtParamScore2" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Motorik</label>
+                </td>
+                <td>
+                    <select id="ddlForm3" style="width:100%" class="ddlForm" controlID = "ddlForm3">
+                        <option value="0" selected></option>
+                        <option value="2">Gerakan bertujuan</option>
+                        <option value="1">Gerakan tanpa tujuan</option>
+                        <option value="0">Tidak bergerak</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px;text-align:right" class="txtForm" controlID = "txtParamScore3" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"><br /></td>
+            </tr>
+            <tr>
+                <td>
+                    <label style="font-weight: bold">
+                        TOTAL SKOR</label>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4" style="width:80px;text-align:right" class="txtForm" controlID = "txtParamScore4" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+

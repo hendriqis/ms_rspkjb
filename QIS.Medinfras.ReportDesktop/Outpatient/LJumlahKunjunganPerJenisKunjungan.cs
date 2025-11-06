@@ -1,0 +1,33 @@
+﻿using System;
+using System.Drawing;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Web;
+using System.Web.UI;
+using DevExpress.XtraReports.UI;
+using QIS.Medinfras.Data.Service;
+using QIS.Medinfras.Web.Common;
+using ThoughtWorks.QRCode.Codec;
+
+namespace QIS.Medinfras.ReportDesktop
+{
+    public partial class LJumlahKunjunganPerJenisKunjungan : BaseCustomDailyPotraitRpt
+    {
+        public LJumlahKunjunganPerJenisKunjungan()
+        {
+            InitializeComponent();
+        }
+
+        public override void InitializeReport(string[] param)
+        {
+            string[] temp = param[0].Split(';');
+            lblPeriod.Text = string.Format("Periode Registrasi : {0} s/d {1}", Helper.YYYYMMDDToDate(temp[0]).ToString(Constant.FormatString.DATE_FORMAT), Helper.YYYYMMDDToDate(temp[1]).ToString(Constant.FormatString.DATE_FORMAT));
+            base.InitializeReport(param);
+        }
+
+    }
+}

@@ -1,0 +1,411 @@
+
+<html>
+<script language="javascript" type="text/javascript">
+	// let body = document.body
+	// 	 let ddl1 = document.getElementById('txtddl1')
+		// let ddl2 = document.getElementById('ddl2').value
+		// let ddl3 = document.getElementById('ddl3').value
+		// let ddl4 = document.getElementById('ddl4').value
+		// let ddl5 = document.getElementById('ddl5').value
+		// let ddl6 = document.getElementById('ddl6').value
+
+
+// console.log(ddl1)
+// function test(sel) {
+	// alert(sel.options[sel.selectedIndex].text);
+	// ddl1.innerHTML = 'sel.options[sel.selectedIndex].text'
+	// body.append(ddl1)
+// }
+
+	// 	ddl1.onchange = () => calculate()
+	// 	ddl2.onchange = () => calculate()
+	// 	ddl3.onchange = () => calculate()
+	// 	ddl4.onchange = () => calculate()
+	// 	ddl5.onchange = () => calculate()
+	// 	ddl6.onchange = () => calculate()
+
+	// function calculateThis(){
+	// 	ddl1value = ddl1.value
+	// 	ddl2value = ddl2.value
+	// 	ddl3value = ddl3.value
+	// 	ddl4value = ddl4.value
+	// 	ddl5value = ddl5.value
+	// 	ddl6value = ddl6.value
+
+	// 	let sum = 0
+	// 	let a = +ddl1value
+	// 	let b = +ddl2value
+	// 	let c = +ddl3value
+	// 	let d = +ddl4value
+	// 	let e = +ddl5value
+	// 	let f = +ddl6value
+
+	// 	sum = a+b+c+d+e+f
+	// 	// document.getElementById('txtddl') = sum	
+	// 	console.log(sum)
+	// }
+	// calculateThis()
+
+	</script>
+<head>
+	<!-- <meta charset="utf-8">
+	<meta name="viewport" conte nt="width=device-width, initial-scale=1"> -->
+	<title>MPP</title>
+	
+</head>
+<body>
+	<h2 style="text-align:center;">FORMULIR ASSESMEN KEBUTUHAN PERENCANAAN PEMULANGAN PASIEN</h2>
+	<table border="1" width="100%">
+		<div>
+			<thead>
+				<tr>
+					<td><b>Parameter Penilaian</b></td>
+					<td><b>YA</b></td>
+					<td><b>TIDAK</b></td>
+				</tr> 
+			</thead>
+			<tbody>
+					<tr>
+						<td>1.) Usia >65 Tahun</td>
+						<td>
+							<input type="radio" class="chkForm"  name="checkbox01" id="checkbox01" controlid="checkbox01"  value="true"/>
+						</td>
+						<td>
+							<input type="radio" class="chkForm" name="checkbox01"  id="checkbox02" controlid="checkbox02"  value="false" />
+						</td>
+					</tr>
+					<tr>
+						<td>2.) Pasien dengan resiko jatuh sedang - tinggi pada saat dipulangkan </td>
+						<td>
+							<input type="radio" class="chkForm"  name="checkbox03" id="checkbox03" controlid="checkbox03"  value="true"/>
+						</td>
+						<td>
+							<input type="radio" class="chkForm" name="checkbox03"  id="checkbox04" controlid="checkbox04"  value="false" />
+						</td>
+					</tr>
+					<tr>
+						<td>3.) Keterbatasan mobilisasi fisik (Stroke ,Paraplegia, Lumpuh,dll)</td>
+						<td>
+							<input type="radio" class="chkForm"  name="checkbox05" id="checkbox05" controlid="checkbox05"  value="true"/>
+						</td>
+						<td>
+							<input type="radio" class="chkForm" name="checkbox05"  id="checkbox06" controlid="checkbox06"  value="false" />
+						</td>
+					</tr>
+					<tr>
+						<td>4.) Gangguan Kognitif menetap (Alzeimer,Demensia,Skizofrenia,Pasca koma,dll)</td>
+						<td>
+							<input type="radio" class="chkForm"  name="checkbox07" id="checkbox07" controlid="checkbox07"  value="true"/>
+						</td>
+						<td>
+							<input type="radio" class="chkForm" name="checkbox07"  id="checkbox08" controlid="checkbox08"  value="false" />
+						</td>
+					</tr>
+					<tr>
+						<td>5.) Tinggal Sendiri sebelum di rawat di rs</td>
+						<td>
+							<input type="radio" class="chkForm"  name="checkbox09" id="checkbox09" controlid="checkbox09"  value="true"/>
+						</td>
+						<td>
+							<input type="radio" class="chkForm" name="checkbox09"  id="checkbox10" controlid="checkbox10"  value="false" />
+						</td>
+					</tr>
+					<tr>
+						<td><p>6.) Tinggal Sendiri setelah di rawat di RS , Bila ya lakukan assesmen</p>
+							<b style="margin-left: 5%;">INSTRUMENTAL ACTIVITY DAILY LIVING (IADL) sebagai berikut</b>
+							<div>
+								<table border="1" style="margin-left: 5%;">
+									<tr>
+										<td>
+											Jenis IADL 
+										</td>
+										<td>
+											Mampu/Tidak
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Kemampuan Komunikasi dengan alat
+										</td>
+										<td>
+											<input type="checkbox" class="chkForm" name="cekbox01"  id="cekbox01" controlid="cekform01">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Bertransportasi, Baik sendiri atau via public transaport
+										</td>
+										<td>
+											<input type="checkbox" class="chkForm" name="cekbox02"  id="cekbox02" controlid="cekform02">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Menyiapkan makanan 
+										</td>
+										<td>
+											<input type="checkbox" class="chkForm" name="cekbox03"  id="cekbox03" controlid="cekform03">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Belanja kebutuhan hidup
+										</td>
+										<td>
+											<input type="checkbox" class="chkForm" name="cekbox04"  id="cekbox04" controlid="cekform04">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Mengerjakan pekerjaan rumah tangga 
+										</td>
+										<td>
+											<input type="checkbox" class="chkForm" name="cekbox05"  id="cekbox05" controlid="cekform05">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Mengatur penggunaan obat obatan 
+										</td>
+										<td>
+											<input type="checkbox" class="chkForm" name="cekbox06"  id="cekbox06" controlid="cekform06">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Mengatur keuangan
+										</td>
+										<td>
+											<input type="checkbox" class="chkForm" name="cekbox07"  id="cekbox07" controlid="cekform07">
+										</td>
+									</tr>
+								</table>
+							</div>	
+							<b style="margin-left:5%">Bila salah satu aktivitas tidak mampu mandiri, maka perlu discharge planning</b>
+						</td>
+						<td>
+							<input type="radio" class="chkForm"  name="checkbox11" id="checkbox11" controlid="checkbox11"  value="true"/>
+						</td>
+						<td>
+							<input type="radio" class="chkForm" name="checkbox11"  id="checkbox12" controlid="checkbox12"  value="false" />
+						</td>
+					</tr>
+					<tr>
+						<td>7). Pasien dengan alamat tidak dikenal atau pasien luar kota</td>
+						<td>
+							<input type="radio" class="chkForm"  name="checkbox13" id="checkbox13" controlid="checkbox13"  value="true"/>
+						</td>
+						<td>
+							<input type="radio" class="chkForm" name="checkbox13"  id="checkbox14" controlid="checkbox14"  value="false" />
+						</td>
+					</tr>
+					<tr>
+						<td>8). Percobaan Bunuh Diri</td>
+						<td>
+							<input type="radio" class="chkForm"  name="checkbox15" id="checkbox15" controlid="checkbox15"  value="true"/>
+						</td>
+						<td>
+							<input type="radio" class="chkForm" name="checkbox15"  id="checkbox16" controlid="checkbox16"  value="false" />
+						</td>
+					</tr>
+					<tr>
+						<td>9). Korban tindak kekerasan</td>
+						<td>
+							<input type="radio" class="chkForm"  name="checkbox17" id="checkbox17" controlid="checkbox17"  value="true"/>
+						</td>
+						<td>
+							<input type="radio" class="chkForm" name="checkbox17"  id="checkbox18" controlid="checkbox18"  value="false" />
+						</td>
+					</tr>
+					<tr>
+						<td>10). Trauma multiple</td>
+						<td>
+							<input type="radio" class="chkForm"  name="checkbox19" id="checkbox19" controlid="checkbox19"  value="true"/>
+						</td>
+						<td>
+							<input type="radio" class="chkForm" name="checkbox19"  id="checkbox20" controlid="checkbox20"  value="false" />
+						</td>
+					</tr>
+					<tr>
+						<td>11). Membutuhkan perawatan lanjutan setelah pulang</td>
+						<td>
+							<input type="radio" class="chkForm"  name="checkbox21" id="checkbox21" controlid="checkbox21"  value="true"/>
+						</td>
+						<td>
+							<input type="radio" class="chkForm" name="checkbox21"  id="checkbox22" controlid="checkbox22"  value="false" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>12). Pelaksanaan activity daily living butuh pengawasan atau dibantu, dengan assesmen sebagai berikut:</p>
+							<p>Assesmen kemampuan pelaksanaan <b>Activity Daily Living (ADL)
+							</b>
+								<br>
+								<b>Skor 0=mandiri, 1=butuh pengawasan,2=butuh sedikit dibantu,3=butuh banyak dibantu,4=dibantu total,5=tidak dapat dilaksanakan</b>
+							</p>
+							<div>
+								<table border="1" style="margin-left:5%">
+									<tr>
+										<td>Jenis ADL</td>
+										<td>
+											SKOR
+										</td>
+									</tr>
+									<tr>
+										<td>Mandi/Personal Hygiene</td>
+										<td>
+											<select id="ddl1" name="ddl1" class="ddl1" controlID = "ddl1" >
+												<option value="0" selected>0</option>
+												<option value="1" >1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<!-- <option value="6">6</option> -->
+											</select>
+									</tr>
+									<tr>
+										<td>Menjaga penampilan dan rawat diri/grooming</td> 
+										<td>
+											<select id="ddl2" name="ddl2">
+												<option value="0" selected>0</option>
+												<option value="1" >1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<!-- <option value="6">6</option> -->
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>Berpakaian</td>
+										<td>
+											<select id="ddl3" name="ddl3">
+												<option value="0" selected>0</option>
+												<option value="1" >1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<!-- <option value="6">6</option> -->
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>Makan dan Minum</td>
+										<td>
+											<select id="ddl4" name="ddl4">
+												<option value="0" selected>0</option>
+												<option value="1" >1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<!-- <option value="6">6</option> -->
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>Mengatur BAK & BAB / Toilet Hygiene</td>
+										<td>
+											<select id="ddl5" name="ddl5">
+												<option value="0" selected>0</option>
+												<option value="1" >1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<!-- <option value="6">6</option> -->
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>Mobilisasi, perpindahan antar ruangan/transfering</td>
+										<td>
+											<select id="ddl6" name="ddl6">
+												<option value="0" selected>0</option>
+												<option value="1" >1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<!-- <option value="6">6</option> -->
+											</select>
+										</td>
+									</tr>
+								</table>
+							</div>
+								<div style="margin-left: 5%;">
+									<p>Bila ada salah satu aktivitas skornya >1, maka perlu discharge planning</p>
+								</div>
+						</td>
+						<td>
+							<input type="radio" class="chkForm"  name="checkbox23" id="checkbox23" controlid="checkbox23"  value="true"/>
+						</td>
+						<td>
+							<input type="radio" class="chkForm" name="checkbox23"  id="checkbox24" controlid="checkbox24"  value="false" />
+						</td>
+					</tr>
+					<tr>
+						<td>13). Menggunakan peralatan  medis (misalnya kateter urin) setelah keluar dari rumah sakit.</td>
+						<td>
+							<input type="radio" class="chkForm"  name="checkbox25" id="checkbox25" controlid="checkbox25"  value="true"/>
+						</td>
+						<td>
+							<input type="radio" class="chkForm" name="checkbox25"  id="checkbox26" controlid="checkbox26"  value="false" />
+						</td>
+					</tr>
+					<tr>
+						<td>14). Pasien memerlukan alat bantu (misalnya alat bantu dengar) setelah keluar dari rumah sakit.</td>
+						<td>
+							<input type="radio" class="chkForm"  name="checkbox27" id="checkbox27" controlid="checkbox27"  value="true"/>
+						</td>
+						<td>
+							<input type="radio" class="chkForm" name="checkbox27"  id="checkbox28" controlid="checkbox28"  value="false" />
+						</td>
+					</tr>
+					<tr>
+						<td>15). Pasien Memerlukan dukungan komunitas setelah keluar dari RS (misalnya pada pasien gagal ginjal,DM).</td>
+					<td>
+						<input type="radio" class="chkForm"  name="checkbox29" id="checkbox29" controlid="checkbox29"  value="true"/>
+						</td>
+						<td>
+							<input type="radio" class="chkForm" name="checkbox29"  id="checkbox30" controlid="checkbox30"  value="false" />
+					</td>
+					</tr>
+					<tr>
+						<td>16). Pasien memerlukan dukungan edukasi lanjutan setelah keluar dari RS.</td>
+					<td>
+						<input type="radio" class="chkForm"  name="checkbox31" id="checkbox31" controlid="checkbox31"  value="true"/>
+					</td>
+					<td>
+							<input type="radio" class="chkForm" name="checkbox31"  id="checkbox32" controlid="checkbox32"  value="false" />
+					</td>
+					</tr>
+					<tr>
+						<td>17). Pasien memerlukan perawatan lanjutan setelah digunakan.</td>
+					<td>
+						<input type="radio" class="chkForm"  name="checkbox33" id="checkbox33" controlid="checkbox33"  value="true"/>
+					</td>
+					<td>
+						<input type="radio" class="chkForm" name="checkbox33"  id="checkbox34" controlid="checkbox34"  value="false" />
+					</td>
+					</tr>
+			</tbody>
+		</div>
+	</table>
+		<!-- <td> Bila terdapat satu poin dimana penilaian menunjukan adanya temuan (kolom ya/ada) maka dibutuhkan perencanaan pulang</td>
+	<br>
+		<td>Kesimpulan: <input type="text" name="txtform01" controlID = "txtform01" style="width:30%"></td>
+	<br> -->
+	<!-- <table border="0" style="width:100%">
+		<tr>
+			<td style="width:19%">Membutuhkan Perencanaan Pemulangan? 
+				ya <input type="radio" name="checkbox8" controlID = "checkbox8" value="true">
+			</td>
+			<td>tidak <input type="radio" name="checkbox8" controlID = "checkbox8" value="false"></td>
+		</tr>
+	</table> -->
+</body>
+</html>

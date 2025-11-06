@@ -1,0 +1,193 @@
+<script language="javascript" type="text/javascript" id="dxss_strongkids">
+    $(function () {
+        $("#optStrongKidsForm1").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtStrongKidsParamScore1").val('1');
+            else
+                $("#txtStrongKidsParamScore1").val('0');
+
+            CalculateTotalScore();
+        });
+
+        $("#optStrongKidsForm2").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtStrongKidsParamScore1").val('0');
+            else
+                $("#txtStrongKidsParamScore1").val('1');
+            CalculateTotalScore();
+        });
+
+        $("#optStrongKidsForm3").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtStrongKidsParamScore2").val('1');
+            else
+                $("#txtStrongKidsParamScore2").val('0');
+            CalculateTotalScore();
+        });
+
+        $("#optStrongKidsForm4").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtStrongKidsParamScore2").val('0');
+            else
+                $("#txtStrongKidsParamScore2").val('2');
+            CalculateTotalScore();
+        });
+
+        $("#optStrongKidsForm5").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtStrongKidsParamScore3").val('1');
+            else
+                $("#txtStrongKidsParamScore3").val('0');
+            CalculateTotalScore();
+        });
+
+        $("#optStrongKidsForm6").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtStrongKidsParamScore3").val('0');
+            else
+                $("#txtStrongKidsParamScore3").val('1');
+            CalculateTotalScore();
+        });
+
+        $("#optStrongKidsForm7").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtStrongKidsParamScore4").val('2');
+            else
+                $("#txtStrongKidsParamScore4").val('0');
+            CalculateTotalScore();
+        });
+
+        $("#optStrongKidsForm8").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtStrongKidsParamScore4").val('0');
+            else
+                $("#txtStrongKidsParamScore4").val('2');
+            CalculateTotalScore();
+        });
+
+        function CalculateTotalScore() {
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+            var p4 = 0;
+
+            if ($("#txtStrongKidsParamScore1").val())
+                p1 = parseInt($("#txtStrongKidsParamScore1").val());
+
+            if ($("#txtStrongKidsParamScore2").val())
+                p2 = parseInt($("#txtStrongKidsParamScore2").val());
+
+            if ($("#txtStrongKidsParamScore3").val())
+                p3 = parseInt($("#txtStrongKidsParamScore3").val());
+
+            if ($("#txtStrongKidsParamScore4").val())
+                p4 = parseInt($("#txtStrongKidsParamScore4").val());
+
+
+            var total = p1 + p2 + p3 + p4;
+
+            $("#txtTotalStrongKidsScore").val(total);
+        }
+    });
+
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table border="1" style="border-style: solid;border-collapse: collapse;">
+                <colgroup>
+                    <col style="width:20px" />
+                    <col />
+                    <col style="width:80px" />
+                </colgroup>
+                <tr>
+                    <td colspan="3" style="text-align: center; font-weight: bold">SKRINING GIZI ANAK (STRONG - KIDS)</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center;">Berdasarkan Adaptasi STRONG - KIDS, Untuk Anak Usia 1 Bulan - 18 Tahun</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; font-weight:bold">PARAMETER</td>
+                    <td style="text-align: center; font-weight:bold">SKOR</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        01.
+                    </td>
+                    <td>
+                        Apakah pasien tampak kurus ?
+                        <br />
+                        <div style="padding-top:10px">
+                            <input type="radio" class="optForm" id="optStrongKidsForm1" controlID="optStrongKidsForm1" name="004_parameter1"> Ya
+                            <input type="radio" class="optForm" id="optStrongKidsForm2" controlID="optStrongKidsForm2" name="004_parameter1"> Tidak
+                        </div>
+                    </td>
+                    <td colspan="2" style="text-align:center" >
+                         <input type="text" readonly="readonly" value="" id="txtStrongKidsParamScore1" style="width:50px" class = "txtForm" controlID = "txtStrongKidsParamScore1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        02.
+                    </td>
+                    <td>
+                        Apakah terdapat penurunan Berat Badan selama satu bulan terakhir ? 
+                        <br />
+                        <b>ATAU</b>
+                        <br />
+                        Untuk bayi < 1 tahun BB tidak naik selama 3 bulan terakhir
+                        <div style="padding-top:10px">
+                            <input type="radio" class="optForm" id="optStrongKidsForm3" controlID="optStrongKidsForm3" name="004_parameter2"> Ya
+                            <input type="radio" class="optForm" id="optStrongKidsForm4" controlID="optStrongKidsForm4" name="004_parameter2"> Tidak
+                        </div>
+                    </td>
+                    <td colspan="2" style="text-align:center">
+                         <input type="text" readonly="readonly" value="" id="txtStrongKidsParamScore2" style="width:50px" class = "txtForm" controlID = "txtStrongKidsParamScore2" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        03.
+                    </td>
+                    <td>
+                        Apakah terdapat <b>SALAH SATU</b> dari kondisi berikut?
+                        <br />
+                        - Diare &ge; 5 kali/hari dan atau muntah > 3 kali/hari dalam seminggu terakhir 
+                        <br />
+                        - Asupan makan berkurang selama 1 minggu terakhir
+                        <div style="padding-top:10px">
+                            <input type="radio" class="optForm" id="optStrongKidsForm5" controlID="optStrongKidsForm5" name="004_parameter3"> Ya
+                            <input type="radio" class="optForm" id="optStrongKidsForm6" controlID="optStrongKidsForm6" name="004_parameter3"> Tidak
+                        </div>
+                    </td>
+                    <td colspan="2" style="text-align:center">
+                         <input type="text" readonly="readonly" value="" id="txtStrongKidsParamScore3" style="width:50px" class = "txtForm" controlID = "txtStrongKidsParamScore3" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top; text-align:center">
+                        04.
+                    </td>
+                    <td>
+                        Apakah terdapat penyakit atau keadaaan yang mengakibatkan 
+                        pasien beresiko mengalami malnutrisi
+                        <br>
+                        <div style="padding-top:10px">
+                            <input type="radio" class="optForm" id="optStrongKidsForm7" controlID="optStrongKidsForm7" name="004_parameter4"> Ya
+                            <input type="radio" class="optForm" id="optStrongKidsForm8" controlID="optStrongKidsForm8" name="004_parameter4"> Tidak
+                        </div>
+                    </td>
+                    <td colspan="2" style="text-align:center">
+                         <input type="text" readonly="readonly" value="" id="txtStrongKidsParamScore4" style="width:50px" class = "txtForm" controlID = "txtStrongKidsParamScore4" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; font-weight:bold">TOTAL SCORE</td>
+                    <td style="text-align: center; padding-top: 10px; padding-bottom:10px">
+                         <input type="text" readonly="readonly" value="" id="txtTotalStrongKidsScore" style="width:50px" class = "txtForm" controlID = "txtTotalStrongKidsScore" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

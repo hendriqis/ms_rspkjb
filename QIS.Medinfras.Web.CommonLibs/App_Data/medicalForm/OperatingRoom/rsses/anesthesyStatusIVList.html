@@ -1,0 +1,326 @@
+<head>
+    <style type="text/css">
+        .tdColumn1
+        {
+            vertical-align:middle;
+        }
+        .tdColumn2
+        {
+            vertical-align:middle;
+            padding-left:20px;
+            padding-top:10px;
+        }    
+    </style>
+</head>
+<script language="javascript" type="text/javascript" id="eForm_anesthesyIVList">
+    $(function () {
+        $("#chkIV1").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkIVGroup1").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkIVGroup1").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkIV2").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkIVGroup2").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkIVGroup2").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkIV3").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkIVGroup3").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkIVGroup3").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkIV4").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkIVGroup4").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkIVGroup4").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkIV5").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkIVGroup5").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkIVGroup5").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkIV6").change(function () {
+            if ($(this).is(":checked")) {
+                $(".chkIVGroup6").each(function () {
+                    $(this).prop("disabled", false);
+                });
+            }
+            else {
+                $(".chkIVGroup6").each(function () {
+                    $(this).prop("disabled", true);
+                    $(this).prop("checked", false);
+                    $(this).val("");
+                });
+            }
+        });
+
+        $("#chkIV1").change();
+        $("#chkIV2").change();
+        $("#chkIV3").change();
+        $("#chkIV4").change();
+        $("#chkIV5").change();
+        $("#chkIV6").change();                                                      
+    });
+</script>
+<div>
+    <div id="group01" class="w3-container w3-animate-left peGroup">
+        <table cellpadding="1" cellspacing="0" style="width:100%;" class="w3-table w3-bordered w3-card-4">
+            <colgroup>
+                <col style="width:200px" />
+                <col style="width:130px" />
+                <col style="width:200px" />
+                <col style="width:200px"/>
+                <col style= "vertical-align:middle" />
+            </colgroup>
+            <thead style="font-weight:bold">
+                <tr>
+                    <td style="text-align:left">Line</td>
+                    <td style="text-align:center">Size</td>
+                    <td style="text-align:center">Site</td>
+                    <td style="text-align:center">Side</td>
+                    <td style="text-align:left">Catatan</td>
+                </tr>
+            </thead>
+            <tr>
+                <td class="tdColumn1"> <input type="checkbox" id="chkIV1" class="chkForm" controlID="chkIV1"/> IV #1</td>
+                <td class="tdColumn2"> 
+                    <select id="ddlIV1Size" class="ddlForm chkIVGroup1" controlID="ddlIV1Size" style="width:80px">
+                        <option value="" selected></option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                        <option value="22">22</option>
+                        <option value="24">24</option>
+                        <option value="26">26</option>
+                    </select>
+                    G
+                </td>
+                <td class="tdColumn1"> 
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td><input type="radio" class="optForm chkIVGroup1" name="optIV1Site" controlID="optIV1Site1" disabled="disabled"/> Tangan</td>
+                            <td><input type="radio" class="optForm chkIVGroup1" name="optIV1Site" controlID="optIV1Site2" disabled="disabled"/> Kaki</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="tdColumn1"> 
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td><input type="radio" class="optForm chkIVGroup1" name="optIV1Side" controlID="optIV1Side1" disabled="disabled"/> Kiri</td>
+                            <td><input type="radio" class="optForm chkIVGroup1" name="optIV1Side" controlID="optIV1Side2" disabled="disabled"/> Kanan</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="tdColumn1"> <input type="text" class="txtForm chkIVGroup1" controlID="txtIV1Remarks" style="width:300px" disabled="disabled"/></td>
+            </tr>
+            <tr>
+                <td class="tdColumn1"> <input type="checkbox" id="chkIV2" class="chkForm" controlID="chkIV2"/> IV #2</td>
+                <td class="tdColumn2"> 
+                    <select id="ddlIV2Size" class="ddlForm chkIVGroup2" controlID="ddlIV2Size" style="width:80px">
+                        <option value="" selected></option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                        <option value="22">22</option>
+                        <option value="24">24</option>
+                        <option value="26">26</option>
+                    </select>
+                    G
+                </td>
+                <td class="tdColumn1"> 
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td><input type="radio" class="optForm chkIVGroup2" name="optIV2Site" controlID="optIV2Site1" disabled="disabled"/> Tangan</td>
+                            <td><input type="radio" class="optForm chkIVGroup2" name="optIV2Site" controlID="optIV2Site2" disabled="disabled"/> Kaki</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="tdColumn1"> 
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td><input type="radio" class="optForm chkIVGroup2" name="optIV2Side" controlID="optIV2Side1" disabled="disabled"/> Kiri</td>
+                            <td><input type="radio" class="optForm chkIVGroup2" name="optIV2Side" controlID="optIV2Side2" disabled="disabled"/> Kanan</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="style1"> <input type="text" class="txtForm chkIVGroup2" controlID="txtIV2Remarks" style="width:300px" disabled="disabled"/></td>
+            </tr>
+            <tr>
+                <td class="tdColumn1"> <input type="checkbox" id="chkIV3" class="chkForm" controlID="chkIV3"/> IV #3</td>
+                <td class="tdColumn2"> 
+                    <select id="ddlIV3Size" class="ddlForm chkIVGroup3" controlID="ddlIV3Size" style="width:80px">
+                        <option value="" selected></option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                        <option value="22">22</option>
+                        <option value="24">24</option>
+                        <option value="26">26</option>
+                    </select>
+                    G
+                </td>
+                <td class="tdColumn1"> 
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td><input type="radio" class="optForm chkIVGroup3" name="optIV3Site" controlID="optIV3Site1" disabled="disabled"/> Tangan</td>
+                            <td><input type="radio" class="optForm chkIVGroup3" name="optIV3Site" controlID="optIV3Site2" disabled="disabled"/> Kaki</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="tdColumn1"> 
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td><input type="radio" class="optForm chkIVGroup3" name="optIV3Side" controlID="optIV3Side1" disabled="disabled"/> Kiri</td>
+                            <td><input type="radio" class="optForm chkIVGroup3" name="optIV3Side" controlID="optIV3Side2" disabled="disabled"/> Kanan</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="tdColumn1"> <input type="text" class="txtForm chkIVGroup3" controlID="txtIV3Remarks" style="width:300px" disabled="disabled"/></td>
+            </tr>
+            <tr>
+                <td class="tdColumn1"> <input type="checkbox" id="chkIV4" class="chkForm" controlID="chkIV4"/> CVC</td>
+                <td class="tdColumn2"> 
+                    <select id="ddlCVC" class="ddlForm chkIVGroup4" controlID="ddlCVC" style="width:80px">
+                        <option value="" selected></option>
+                        <option value="1">Jugular Interna</option>
+                        <option value="2">Brachio Cephalica</option>
+                        <option value="3">Subclavia</option>
+                        <option value="4">Femoral</option>
+                    </select>
+                </td>
+                <td class="tdColumn1"> 
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td><input type="radio" class="optForm chkIVGroup4" name="optIV4Site" controlID="optIV4Site1" disabled="disabled"/> Tangan</td>
+                            <td><input type="radio" class="optForm chkIVGroup4" name="optIV4Site" controlID="optIV4Site2" disabled="disabled"/> Kaki</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="tdColumn1"> 
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td><input type="radio" class="optForm chkIVGroup4" name="optIV4Side" controlID="optIV4Side1" disabled="disabled"/> Kiri</td>
+                            <td><input type="radio" class="optForm chkIVGroup4" name="optIV4Side" controlID="optIV4Side2" disabled="disabled"/> Kanan</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="tdColumn1"> <input type="text" class="txtForm chkIVGroup4" controlID="txtIV4Remarks" style="width:300px" disabled="disabled"/></td>
+            </tr>
+            <tr>
+                <td class="tdColumn1"> <input type="checkbox" id="chkIV5" class="chkForm" controlID="chkIV5"/> IBP</td>
+               <td class="tdColumn2"> 
+                    <select id="ddlIBP" class="ddlForm chkIVGroup5" controlID="ddlIBP" style="width:80px">
+                        <option value="" selected></option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                        <option value="22">22</option>
+                        <option value="24">24</option>
+                        <option value="26">26</option>
+                    </select>
+                    G
+                </td>
+                <td class="tdColumn1"> 
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td><input type="radio" class="optForm chkIVGroup5" name="optIV5Site" controlID="optIV5Site1" disabled="disabled"/> Tangan</td>
+                            <td><input type="radio" class="optForm chkIVGroup5" name="optIV5Site" controlID="optIV5Site2" disabled="disabled"/> Kaki</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="tdColumn1"> 
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td><input type="radio" class="optForm chkIVGroup5" name="optIV5Side" controlID="optIV5Side1" disabled="disabled"/> Kiri</td>
+                            <td><input type="radio" class="optForm chkIVGroup5" name="optIV5Side" controlID="optIV5Side2" disabled="disabled"/> Kanan</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="tdColumn1"> <input type="text" class="txtForm chkIVGroup5" controlID="txtIV5Remarks" style="width:300px" disabled="disabled"/></td>
+            </tr>
+            <tr>
+                <td class="tdColumn1"> <input type="checkbox" id="chkIV6" class="chkForm" controlID="chkIV6"/> Swan Ganz</td>
+                <td class="tdColumn2"> 
+                    <select id="ddlSwanGanz" class="ddlForm chkIVGroup4" controlID="ddlSwanGanz" style="width:80px">
+                        <option value="" selected></option>
+                        <option value="1">Jugular Interna</option>
+                        <option value="2">Brachio Cephalica</option>
+                        <option value="3">Subclavia</option>
+                        <option value="4">Femoral</option>
+                    </select>
+                </td>
+                <td class="tdColumn1"> 
+                    <table border="0" cellpadding="0" cellspacing="1">
+                        <tr>
+                            <td><input type="radio" class="optForm chkIVGroup6" name="optIV6Site" controlID="optIV6Site1" disabled="disabled"/> Tangan</td>
+                            <td><input type="radio" class="optForm chkIVGroup6" name="optIV6Site" controlID="optIV6Site2" disabled="disabled"/> Kaki</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="tdColumn1"> 
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td><input type="radio" class="optForm chkIVGroup6" name="optIV6Side" controlID="optIV6Side1" disabled="disabled"/> Kiri</td>
+                            <td><input type="radio" class="optForm chkIVGroup6" name="optIV6Side" controlID="optIV6Side2" disabled="disabled"/> Kanan</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="tdColumn1"> <input type="text" class="txtForm chkIVGroup6" controlID="txtIV6Remarks" style="width:300px" disabled="disabled"/></td>
+            </tr>
+        </table>
+    </div>
+</div>

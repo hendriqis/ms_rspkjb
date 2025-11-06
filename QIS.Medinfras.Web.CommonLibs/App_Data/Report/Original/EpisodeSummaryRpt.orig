@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="11.1.5.0" Ref="0" ControlType="QIS.Medinfras.ReportDesktop.EpisodeSummaryRpt, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Version="11.1" PageHeight="1100" PageWidth="850" Margins="25, 25, 25, 25">
+  <Bands>
+    <Item1 Ref="1" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="496.9583">
+      <Controls>
+        <Item1 Ref="2" Name="sbrPrescription" ControlType="XRSubreport" SizeF="639.9999,19" LocationFloat="0, 447.3749">
+          <ReportSource Ref="3" ControlType="QIS.Medinfras.ReportDesktop.EpisodeSummaryPrescriptionRpt, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Version="11.1" PageHeight="20" PaperKind="Custom" PageWidth="739" Margins="0, 0, 0, 0">
+            <Bands>
+              <Item1 Ref="4" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="23">
+                <Controls>
+                  <Item1 Ref="5" Name="xrLabel9" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="479.1668, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="6" UseFont="false" UseTextAlignment="false" />
+                  </Item1>
+                  <Item2 Ref="7" Name="xrLabel7" ControlType="XRLabel" SizeF="78.125,23" LocationFloat="401.0418, 0" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="Order">
+                    <StylePriority Ref="8" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                  </Item2>
+                  <Item3 Ref="9" Name="xrLabel3" ControlType="XRLabel" SizeF="222.9167,23" LocationFloat="490.6252, 0" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="[ServiceUnitName]">
+                    <StylePriority Ref="10" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                  </Item3>
+                  <Item4 Ref="11" Name="xrLabel8" ControlType="XRLabel" SizeF="241.6667,23" LocationFloat="159.3751, 0" Font="Arial, 9.75pt" ForeColor="Black" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[PrescriptionOrderDateInString] / [PrescriptionOrderTime]">
+                    <StylePriority Ref="12" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item4>
+                  <Item5 Ref="13" Name="xrLabel5" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="147.9167, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="14" UseFont="false" UseTextAlignment="false" />
+                  </Item5>
+                  <Item6 Ref="15" Name="xrLabel2" ControlType="XRLabel" SizeF="147.9167,23" LocationFloat="0, 0" Font="Arial, 9.75pt" ForeColor="Blue" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text="Date/Time">
+                    <StylePriority Ref="16" UseFont="false" UseForeColor="false" UsePadding="false" UseTextAlignment="false" />
+                  </Item6>
+                </Controls>
+              </Item1>
+              <Item2 Ref="17" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+              <Item3 Ref="18" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+              <Item4 Ref="19" ControlType="DetailReportBand" Name="DetailReport" Padding="0,0,0,0,100" Level="0">
+                <Bands>
+                  <Item1 Ref="20" ControlType="DetailBand" Name="Detail1" HeightF="23">
+                    <Controls>
+                      <Item1 Ref="21" Name="xrLabel1" ControlType="XRLabel" SizeF="258.3334,23" LocationFloat="10, 0" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="[PrescriptionOrderDts.InformationLine]">
+                        <StylePriority Ref="22" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                      </Item1>
+                    </Controls>
+                  </Item1>
+                </Bands>
+              </Item4>
+            </Bands>
+          </ReportSource>
+        </Item1>
+        <Item2 Ref="23" Name="xrLabel20" ControlType="XRLabel" SizeF="650,23" LocationFloat="0, 424.375" StyleName="EpisodeSummaryHeader" Padding="2,2,0,0,100" Text="Prescription" />
+        <Item3 Ref="24" Name="xrLabel19" ControlType="XRLabel" SizeF="650,23" LocationFloat="0, 367.7083" StyleName="EpisodeSummaryHeader" Padding="2,2,0,0,100" Text="Test Order" />
+        <Item4 Ref="25" Name="sbrTestOrder" ControlType="XRSubreport" SizeF="639.9999,19" LocationFloat="0, 390.7083">
+          <ReportSource Ref="26" ControlType="QIS.Medinfras.ReportDesktop.EpisodeSummaryTestOrderRpt, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Version="11.1" PageHeight="20" PaperKind="Custom" PageWidth="734" Margins="0, 0, 0, 0">
+            <Bands>
+              <Item1 Ref="27" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="23">
+                <Controls>
+                  <Item1 Ref="28" Name="xrLabel9" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="478.1252, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="29" UseFont="false" UseTextAlignment="false" />
+                  </Item1>
+                  <Item2 Ref="30" Name="xrLabel7" ControlType="XRLabel" SizeF="78.125,23" LocationFloat="400.0002, 0" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="Order">
+                    <StylePriority Ref="31" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                  </Item2>
+                  <Item3 Ref="32" Name="xrLabel1" ControlType="XRLabel" SizeF="222.9167,23" LocationFloat="489.5836, 0" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="[ServiceUnitName]">
+                    <StylePriority Ref="33" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                  </Item3>
+                  <Item4 Ref="34" Name="xrLabel8" ControlType="XRLabel" SizeF="240.6251,23" LocationFloat="159.3751, 0" Font="Arial, 9.75pt" ForeColor="Black" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[TestOrderDateInString] / [TestOrderTime]">
+                    <StylePriority Ref="35" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item4>
+                  <Item5 Ref="36" Name="xrLabel5" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="147.9167, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="37" UseFont="false" UseTextAlignment="false" />
+                  </Item5>
+                  <Item6 Ref="38" Name="xrLabel2" ControlType="XRLabel" SizeF="147.9167,23" LocationFloat="0, 0" Font="Arial, 9.75pt" ForeColor="Blue" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text="Test Order Date/Time">
+                    <StylePriority Ref="39" UseFont="false" UseForeColor="false" UsePadding="false" UseTextAlignment="false" />
+                  </Item6>
+                </Controls>
+              </Item1>
+              <Item2 Ref="40" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+              <Item3 Ref="41" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+              <Item4 Ref="42" ControlType="DetailReportBand" Name="DetailReport" Padding="0,0,0,0,100" Level="0">
+                <Bands>
+                  <Item1 Ref="43" ControlType="DetailBand" Name="Detail1" HeightF="23">
+                    <Controls>
+                      <Item1 Ref="44" Name="xrLabel6" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="147.9167, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                        <StylePriority Ref="45" UseFont="false" UseTextAlignment="false" />
+                      </Item1>
+                      <Item2 Ref="46" Name="xrLabel3" ControlType="XRLabel" SizeF="147.9167,23" LocationFloat="0, 0" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="Item">
+                        <StylePriority Ref="47" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                      </Item2>
+                      <Item3 Ref="48" Name="xrLabel4" ControlType="XRLabel" SizeF="258.3334,23" LocationFloat="159.3751, 0" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="[TestOrderDts.ItemName1]">
+                        <StylePriority Ref="49" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                      </Item3>
+                    </Controls>
+                  </Item1>
+                </Bands>
+              </Item4>
+            </Bands>
+          </ReportSource>
+        </Item4>
+        <Item5 Ref="50" Name="sbrBodyDiagram" ControlType="XRSubreport" SizeF="639.9999,19" LocationFloat="0, 333.5833">
+          <ReportSource Ref="51" ControlType="QIS.Medinfras.ReportDesktop.EpisodeSummaryBodyDiagramRpt, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" EventsInfo="sbrBodyDiagramDt,BeforePrint,sbrBodyDiagramDt_BeforePrint;xrPictureBox1,BeforePrint,xrPictureBox1_BeforePrint" Version="11.1" PageHeight="1100" PageWidth="850">
+            <Bands>
+              <Item1 Ref="52" ControlType="DetailBand" Name="Detail" KeepTogether="true" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="172.625">
+                <Controls>
+                  <Item1 Ref="53" Name="xrLabel11" ControlType="XRLabel" SizeF="288.5417,23" LocationFloat="351.4583, 124.2916" Font="Arial, 9.75pt" ForeColor="Black" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[DisplayObservationDateTime]">
+                    <StylePriority Ref="54" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item1>
+                  <Item2 Ref="55" Name="xrLabel10" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="340, 124.2916" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="56" UseFont="false" UseTextAlignment="false" />
+                  </Item2>
+                  <Item3 Ref="57" Name="xrLabel9" ControlType="XRLabel" SizeF="108.3334,23" LocationFloat="231.6666, 124.2917" Font="Arial, 9.75pt" ForeColor="Black" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Date / Time">
+                    <StylePriority Ref="58" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item3>
+                  <Item4 Ref="59" Name="xrLabel7" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="340, 101.2917" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="60" UseFont="false" UseTextAlignment="false" />
+                  </Item4>
+                  <Item5 Ref="61" Name="xrLabel6" ControlType="XRLabel" SizeF="108.3334,23" LocationFloat="231.6666, 101.2917" Font="Arial, 9.75pt" ForeColor="Black" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Physician">
+                    <StylePriority Ref="62" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item5>
+                  <Item6 Ref="63" Name="xrLabel4" ControlType="XRLabel" SizeF="288.5417,23" LocationFloat="351.4583, 101.2916" Font="Arial, 9.75pt" ForeColor="Black" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[ParamedicName]">
+                    <StylePriority Ref="64" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item6>
+                  <Item7 Ref="65" Name="xrLabel3" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="340, 22.99999" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="66" UseFont="false" UseTextAlignment="false" />
+                  </Item7>
+                  <Item8 Ref="67" Name="xrLabel1" ControlType="XRLabel" SizeF="108.3334,23" LocationFloat="231.6666, 22.99999" Font="Arial, 9.75pt" ForeColor="Black" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Remarks">
+                    <StylePriority Ref="68" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item8>
+                  <Item9 Ref="69" Name="sbrBodyDiagramDt" ControlType="XRSubreport" SizeF="358.3333,55.29167" LocationFloat="243.1249, 45.99997" CanShrink="true">
+                    <ReportSource Ref="70" ControlType="QIS.Medinfras.ReportDesktop.EpisodeSummaryBodyDiagramDtRpt, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" EventsInfo="xrPictureBox1,BeforePrint,xrPictureBox1_BeforePrint" Version="11.1" PageHeight="20" PaperKind="Custom" PageWidth="250" Margins="0, 0, 0, 0">
+                      <Bands>
+                        <Item1 Ref="71" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="23">
+                          <Controls>
+                            <Item1 Ref="72" Name="xrLabel4" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="24.99993, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                              <StylePriority Ref="73" UseFont="false" UseTextAlignment="false" />
+                            </Item1>
+                            <Item2 Ref="74" Name="xrPictureBox1" ControlType="XRPictureBox" SizeF="23.95827,23" LocationFloat="0, 0" Sizing="StretchImage" />
+                            <Item3 Ref="75" Name="xrLabel3" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="146.875, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                              <StylePriority Ref="76" UseFont="false" UseTextAlignment="false" />
+                            </Item3>
+                            <Item4 Ref="77" Name="xrLabel1" ControlType="XRLabel" SizeF="91.66667,23" LocationFloat="158.3333, 0" Font="Arial, 9.75pt" ForeColor="Black" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[Remarks]">
+                              <StylePriority Ref="78" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                            </Item4>
+                            <Item5 Ref="79" Name="xrLabel8" ControlType="XRLabel" SizeF="68.75,23" LocationFloat="78.12497, 0" Font="Arial, 9.75pt" ForeColor="Black" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[SymbolName]">
+                              <StylePriority Ref="80" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                            </Item5>
+                            <Item6 Ref="81" Name="xrLabel5" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="66.66663, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                              <StylePriority Ref="82" UseFont="false" UseTextAlignment="false" />
+                            </Item6>
+                            <Item7 Ref="83" Name="xrLabel2" ControlType="XRLabel" SizeF="30.20836,23" LocationFloat="36.45827, 0" Font="Arial, 9.75pt" ForeColor="Blue" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text="[SymbolCode]">
+                              <StylePriority Ref="84" UseFont="false" UseForeColor="false" UsePadding="false" UseTextAlignment="false" />
+                            </Item7>
+                          </Controls>
+                        </Item1>
+                        <Item2 Ref="85" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+                        <Item3 Ref="86" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+                      </Bands>
+                    </ReportSource>
+                    <Scripts Ref="87" OnBeforePrint="sbrBodyDiagramDt_BeforePrint" />
+                  </Item9>
+                  <Item10 Ref="88" Name="xrPictureBox1" ControlType="XRPictureBox" SizeF="197.9167,172.625" LocationFloat="10.00001, 0" Borders="All" Sizing="Squeeze" ImageUrl="[FileImageUrl]">
+                    <StylePriority Ref="89" UseBorders="false" />
+                  </Item10>
+                  <Item11 Ref="90" Name="lblDiagramName" ControlType="XRLabel" SizeF="108.3334,23" LocationFloat="231.6666, 0" Font="Arial, 9.75pt" ForeColor="Black" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Diagram Name">
+                    <StylePriority Ref="91" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item11>
+                  <Item12 Ref="92" Name="xrLabel8" ControlType="XRLabel" SizeF="288.5417,23" LocationFloat="351.4583, 0" Font="Arial, 9.75pt" ForeColor="Black" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[DiagramName]">
+                    <StylePriority Ref="93" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item12>
+                  <Item13 Ref="94" Name="xrLabel5" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="340, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="95" UseFont="false" UseTextAlignment="false" />
+                  </Item13>
+                </Controls>
+              </Item1>
+              <Item2 Ref="96" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" />
+              <Item3 Ref="97" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" />
+              <Item4 Ref="98" ControlType="DetailReportBand" Name="DetailReport" Level="0">
+                <Bands>
+                  <Item1 Ref="99" ControlType="DetailBand" Name="Detail1" KeepTogether="true" HeightF="23" />
+                </Bands>
+              </Item4>
+            </Bands>
+          </ReportSource>
+        </Item5>
+        <Item6 Ref="100" Name="lblBodyDiagram" ControlType="XRLabel" SizeF="650,23" LocationFloat="0, 310.5833" StyleName="EpisodeSummaryHeader" Padding="2,2,0,0,100" Text="Body Diagram" />
+        <Item7 Ref="101" Name="cbrReviewOfSystem" ControlType="XRSubreport" SizeF="639.9999,19" LocationFloat="0, 277.1667">
+          <ReportSource Ref="102" ControlType="QIS.Medinfras.ReportDesktop.EpisodeSummaryReviewOfSystemRpt, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Version="11.1" PageHeight="1100" PageWidth="850">
+            <Bands>
+              <Item1 Ref="103" ControlType="DetailBand" Name="Detail" KeepTogether="true" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="23.24994">
+                <Controls>
+                  <Item1 Ref="104" Name="xrLabel8" ControlType="XRLabel" SizeF="288.5417,23" LocationFloat="303.125, 0" Font="Arial, 9.75pt" ForeColor="Black" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[ObservationDateInString] / [ObservationTime]">
+                    <StylePriority Ref="105" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item1>
+                  <Item2 Ref="106" Name="xrLabel5" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="291.6667, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="107" UseFont="false" UseTextAlignment="false" />
+                  </Item2>
+                  <Item3 Ref="108" Name="xrLabel2" ControlType="XRLabel" SizeF="291.6666,23" LocationFloat="0, 0" Font="Arial, 9.75pt" ForeColor="Blue" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text="Observation Date/Time">
+                    <StylePriority Ref="109" UseFont="false" UseForeColor="false" UsePadding="false" UseTextAlignment="false" />
+                  </Item3>
+                </Controls>
+              </Item1>
+              <Item2 Ref="110" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" />
+              <Item3 Ref="111" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" />
+              <Item4 Ref="112" ControlType="DetailReportBand" Name="DetailReport" Level="0">
+                <Bands>
+                  <Item1 Ref="113" ControlType="DetailBand" Name="Detail1" KeepTogether="true" HeightF="23">
+                    <Controls>
+                      <Item1 Ref="114" Name="xrLabel4" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="291.6667, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                        <StylePriority Ref="115" UseFont="false" UseTextAlignment="false" />
+                      </Item1>
+                      <Item2 Ref="116" Name="xrLabel3" ControlType="XRLabel" SizeF="291.6667,23" LocationFloat="0, 0" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="[ReviewOfSystemDts.ROSystem]">
+                        <StylePriority Ref="117" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                      </Item2>
+                      <Item3 Ref="118" Name="xrLabel1" ControlType="XRLabel" SizeF="216.6667,23" LocationFloat="303.125, 0" Font="Arial, 9.75pt" ForeColor="OrangeRed" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="[cfRemarks]">
+                        <StylePriority Ref="119" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                      </Item3>
+                    </Controls>
+                  </Item1>
+                </Bands>
+              </Item4>
+            </Bands>
+          </ReportSource>
+        </Item7>
+        <Item8 Ref="120" Name="xrLabel17" ControlType="XRLabel" SizeF="650,23" LocationFloat="0, 254.1667" StyleName="EpisodeSummaryHeader" Padding="2,2,0,0,100" Text="Review Of System" />
+        <Item9 Ref="121" Name="cbrVitalSign" ControlType="XRSubreport" SizeF="639.9999,19" LocationFloat="0, 218.8334">
+          <ReportSource Ref="122" ControlType="QIS.Medinfras.ReportDesktop.EpisodeSummaryVitalSignRpt, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Version="11.1" PageHeight="20" PaperKind="Custom" PageWidth="450" Margins="0, 0, 0, 0">
+            <Bands>
+              <Item1 Ref="123" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="23">
+                <Controls>
+                  <Item1 Ref="124" Name="xrLabel8" ControlType="XRLabel" SizeF="288.5417,23" LocationFloat="159.3751, 0" Font="Arial, 9.75pt" ForeColor="Black" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[ObservationDateInString] / [ObservationTime]">
+                    <StylePriority Ref="125" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item1>
+                  <Item2 Ref="126" Name="xrLabel5" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="147.9167, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="127" UseFont="false" UseTextAlignment="false" />
+                  </Item2>
+                  <Item3 Ref="128" Name="xrLabel2" ControlType="XRLabel" SizeF="147.9167,23" LocationFloat="0, 0" Font="Arial, 9.75pt" ForeColor="Blue" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text="Observation Date/Time">
+                    <StylePriority Ref="129" UseFont="false" UseForeColor="false" UsePadding="false" UseTextAlignment="false" />
+                  </Item3>
+                </Controls>
+              </Item1>
+              <Item2 Ref="130" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+              <Item3 Ref="131" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+              <Item4 Ref="132" ControlType="DetailReportBand" Name="DetailReport" Padding="0,0,0,0,100" Level="0">
+                <Bands>
+                  <Item1 Ref="133" ControlType="DetailBand" Name="Detail1" HeightF="23">
+                    <Controls>
+                      <Item1 Ref="134" Name="xrLabel1" ControlType="XRLabel" SizeF="77.08337,23" LocationFloat="159.3751, 0" Font="Arial, 9.75pt" ForeColor="OrangeRed" Padding="2,2,0,0,100" TextAlignment="MiddleRight" Multiline="true" Text="[VitalSignDts.VitalSignValue]">
+                        <StylePriority Ref="135" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                      </Item1>
+                      <Item2 Ref="136" Name="xrLabel6" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="147.9167, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                        <StylePriority Ref="137" UseFont="false" UseTextAlignment="false" />
+                      </Item2>
+                      <Item3 Ref="138" Name="xrLabel3" ControlType="XRLabel" SizeF="147.9167,23" LocationFloat="0, 0" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="[VitalSignDts.VitalSignLabel]">
+                        <StylePriority Ref="139" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                      </Item3>
+                      <Item4 Ref="140" Name="xrLabel4" ControlType="XRLabel" SizeF="80.20834,23" LocationFloat="236.4585, 0" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="[VitalSignDts.ValueUnit]">
+                        <StylePriority Ref="141" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                      </Item4>
+                    </Controls>
+                  </Item1>
+                </Bands>
+              </Item4>
+            </Bands>
+          </ReportSource>
+        </Item9>
+        <Item10 Ref="142" Name="xrLabel16" ControlType="XRLabel" SizeF="650,23" LocationFloat="0, 195.8333" StyleName="EpisodeSummaryHeader" Padding="2,2,0,0,100" Text="Vital Signs and Indicators" />
+        <Item11 Ref="143" Name="cbrAllergy" ControlType="XRSubreport" SizeF="503.5799,23" LocationFloat="135.4166, 148" CanShrink="true">
+          <ReportSource Ref="144" ControlType="QIS.Medinfras.ReportDesktop.EpisodeSummaryAllergyRpt, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Version="11.1" PageHeight="30" PaperKind="Custom" PageWidth="500" Margins="0, 0, 0, 0">
+            <Bands>
+              <Item1 Ref="145" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="81.58327">
+                <Controls>
+                  <Item1 Ref="146" Name="xrLabel16" ControlType="XRLabel" SizeF="129.1667,23" LocationFloat="358.75, 0" Font="Arial, 9.75pt" ForeColor="OrangeRed" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[AllergySource]">
+                    <StylePriority Ref="147" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item1>
+                  <Item2 Ref="148" Name="xrLabel13" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="347.2917, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="149" UseFont="false" UseTextAlignment="false" />
+                  </Item2>
+                  <Item3 Ref="150" Name="xrLabel1" ControlType="XRLabel" SizeF="98.95821,23" LocationFloat="248.3334, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="Allergy Source">
+                    <StylePriority Ref="151" UseFont="false" UseTextAlignment="false" />
+                  </Item3>
+                  <Item4 Ref="152" Name="xrLabel17" ControlType="XRLabel" SizeF="129.1667,23" LocationFloat="358.7501, 22.99999" Font="Arial, 9.75pt" ForeColor="OrangeRed" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[AllergySeverity]">
+                    <StylePriority Ref="153" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item4>
+                  <Item5 Ref="154" Name="xrLabel18" ControlType="XRLabel" SizeF="129.1667,23" LocationFloat="358.7502, 45.99997" Font="Arial, 9.75pt" ForeColor="OrangeRed" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[Reaction]">
+                    <StylePriority Ref="155" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item5>
+                  <Item6 Ref="156" Name="xrLabel15" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="347.2918, 45.99997" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="157" UseFont="false" UseTextAlignment="false" />
+                  </Item6>
+                  <Item7 Ref="158" Name="xrLabel12" ControlType="XRLabel" SizeF="98.95821,23" LocationFloat="248.3334, 45.99997" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="Reaction">
+                    <StylePriority Ref="159" UseFont="false" UseTextAlignment="false" />
+                  </Item7>
+                  <Item8 Ref="160" Name="xrLabel11" ControlType="XRLabel" SizeF="98.95824,23" LocationFloat="248.3334, 22.99999" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Severity">
+                    <StylePriority Ref="161" UseFont="false" UseTextAlignment="false" />
+                  </Item8>
+                  <Item9 Ref="162" Name="xrLabel14" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="347.2916, 22.99999" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="163" UseFont="false" UseTextAlignment="false" />
+                  </Item9>
+                  <Item10 Ref="164" Name="xrLabel10" ControlType="XRLabel" SizeF="129.1667,23" LocationFloat="114.5833, 45.99997" Font="Arial, 9.75pt" ForeColor="OrangeRed" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[DisplayDate]">
+                    <StylePriority Ref="165" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item10>
+                  <Item11 Ref="166" Name="xrLabel9" ControlType="XRLabel" SizeF="129.1667,23" LocationFloat="114.5833, 22.99999" Font="Arial, 9.75pt" ForeColor="OrangeRed" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[Allergen]">
+                    <StylePriority Ref="167" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item11>
+                  <Item12 Ref="168" Name="xrLabel8" ControlType="XRLabel" SizeF="129.1667,23" LocationFloat="114.5833, 0" Font="Arial, 9.75pt" ForeColor="OrangeRed" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[AllergenType]">
+                    <StylePriority Ref="169" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item12>
+                  <Item13 Ref="170" Name="xrLabel7" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="103.125, 45.99997" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="171" UseFont="false" UseTextAlignment="false" />
+                  </Item13>
+                  <Item14 Ref="172" Name="xrLabel6" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="103.125, 22.99999" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="173" UseFont="false" UseTextAlignment="false" />
+                  </Item14>
+                  <Item15 Ref="174" Name="xrLabel5" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="103.125, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="175" UseFont="false" UseTextAlignment="false" />
+                  </Item15>
+                  <Item16 Ref="176" Name="xrLabel4" ControlType="XRLabel" SizeF="103.125,23" LocationFloat="0, 45.99997" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="Known Date">
+                    <StylePriority Ref="177" UseFont="false" UseTextAlignment="false" />
+                  </Item16>
+                  <Item17 Ref="178" Name="xrLabel3" ControlType="XRLabel" SizeF="103.125,23" LocationFloat="0, 22.99999" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="Allergen Name">
+                    <StylePriority Ref="179" UseFont="false" UseTextAlignment="false" />
+                  </Item17>
+                  <Item18 Ref="180" Name="xrLabel2" ControlType="XRLabel" SizeF="103.125,23" LocationFloat="0, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Allergen Type">
+                    <StylePriority Ref="181" UseFont="false" UseTextAlignment="false" />
+                  </Item18>
+                </Controls>
+              </Item1>
+              <Item2 Ref="182" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+              <Item3 Ref="183" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+            </Bands>
+          </ReportSource>
+        </Item11>
+        <Item12 Ref="184" Name="xrLabel15" ControlType="XRLabel" SizeF="15.625,23" LocationFloat="119.7916, 148" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+          <StylePriority Ref="185" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item12>
+        <Item13 Ref="186" Name="xrLabel14" ControlType="XRLabel" SizeF="119.7916,23" LocationFloat="0, 148" Font="Arial, 9.75pt" ForeColor="Blue" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text="Allergies">
+          <StylePriority Ref="187" UseFont="false" UseForeColor="false" UsePadding="false" UseTextAlignment="false" />
+        </Item13>
+        <Item14 Ref="188" Name="sbrChiefComplaint" ControlType="XRSubreport" SizeF="503.58,22.99999" LocationFloat="135.4166, 125" CanShrink="true">
+          <ReportSource Ref="189" ControlType="QIS.Medinfras.ReportDesktop.EpisodeSummaryChiefComplaintRpt, QIS.Medinfras.ReportDesktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Version="11.1" PageHeight="30" PaperKind="Custom" PageWidth="500" Margins="0, 0, 0, 0">
+            <Bands>
+              <Item1 Ref="190" ControlType="DetailBand" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="96.16661">
+                <Controls>
+                  <Item1 Ref="191" Name="xrLabel17" ControlType="XRLabel" SizeF="129.1667,23" LocationFloat="340, 22.99999" Font="Arial, 9.75pt" ForeColor="OrangeRed" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[DisplaySeverity]">
+                    <StylePriority Ref="192" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item1>
+                  <Item2 Ref="193" Name="xrLabel18" ControlType="XRLabel" SizeF="129.1667,23" LocationFloat="340, 45.99997" Font="Arial, 9.75pt" ForeColor="OrangeRed" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[DisplayCourse]">
+                    <StylePriority Ref="194" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item2>
+                  <Item3 Ref="195" Name="xrLabel15" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="328.5417, 45.99997" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="196" UseFont="false" UseTextAlignment="false" />
+                  </Item3>
+                  <Item4 Ref="197" Name="xrLabel12" ControlType="XRLabel" SizeF="66.66663,23" LocationFloat="261.875, 45.99997" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="Time">
+                    <StylePriority Ref="198" UseFont="false" UseTextAlignment="false" />
+                  </Item4>
+                  <Item5 Ref="199" Name="xrLabel11" ControlType="XRLabel" SizeF="66.66666,23" LocationFloat="261.875, 22.99999" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Severity">
+                    <StylePriority Ref="200" UseFont="false" UseTextAlignment="false" />
+                  </Item5>
+                  <Item6 Ref="201" Name="xrLabel14" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="328.5417, 22.99999" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="202" UseFont="false" UseTextAlignment="false" />
+                  </Item6>
+                  <Item7 Ref="203" Name="xrLabel10" ControlType="XRLabel" SizeF="129.1667,23" LocationFloat="103.125, 68.99995" Font="Arial, 9.75pt" ForeColor="OrangeRed" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[DisplayRelieved]">
+                    <StylePriority Ref="204" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item7>
+                  <Item8 Ref="205" Name="xrLabel9" ControlType="XRLabel" SizeF="129.1667,23" LocationFloat="103.125, 45.99997" Font="Arial, 9.75pt" ForeColor="OrangeRed" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[DisplaySeverity]">
+                    <StylePriority Ref="206" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item8>
+                  <Item9 Ref="207" Name="xrLabel8" ControlType="XRLabel" SizeF="129.1667,23" LocationFloat="103.125, 22.99999" Font="Arial, 9.75pt" ForeColor="OrangeRed" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[DisplayQuality]">
+                    <StylePriority Ref="208" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                  </Item9>
+                  <Item10 Ref="209" Name="xrLabel7" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="91.66663, 68.99995" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="210" UseFont="false" UseTextAlignment="false" />
+                  </Item10>
+                  <Item11 Ref="211" Name="xrLabel6" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="91.66665, 45.99997" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="212" UseFont="false" UseTextAlignment="false" />
+                  </Item11>
+                  <Item12 Ref="213" Name="xrLabel5" ControlType="XRLabel" SizeF="11.45834,23" LocationFloat="91.66665, 22.99999" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+                    <StylePriority Ref="214" UseFont="false" UseTextAlignment="false" />
+                  </Item12>
+                  <Item13 Ref="215" Name="xrLabel4" ControlType="XRLabel" SizeF="91.66666,23" LocationFloat="0, 68.99995" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="Relieved By">
+                    <StylePriority Ref="216" UseFont="false" UseTextAlignment="false" />
+                  </Item13>
+                  <Item14 Ref="217" Name="xrLabel3" ControlType="XRLabel" SizeF="91.66666,23" LocationFloat="0, 45.99997" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Multiline="true" Text="Provocation&#xD;&#xA;">
+                    <StylePriority Ref="218" UseFont="false" UseTextAlignment="false" />
+                  </Item14>
+                  <Item15 Ref="219" Name="xrLabel2" ControlType="XRLabel" SizeF="91.66666,23" LocationFloat="0, 22.99999" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="Quality">
+                    <StylePriority Ref="220" UseFont="false" UseTextAlignment="false" />
+                  </Item15>
+                  <Item16 Ref="221" Name="xrLabel1" ControlType="XRLabel" SizeF="500,23" LocationFloat="0, 0" Font="Arial, 9.75pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="[ChiefComplaintText]">
+                    <StylePriority Ref="222" UseFont="false" UseTextAlignment="false" />
+                  </Item16>
+                </Controls>
+              </Item1>
+              <Item2 Ref="223" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+              <Item3 Ref="224" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="0" />
+            </Bands>
+          </ReportSource>
+        </Item14>
+        <Item15 Ref="225" Name="xrLabel13" ControlType="XRLabel" SizeF="15.625,23" LocationFloat="119.7916, 125" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+          <StylePriority Ref="226" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item15>
+        <Item16 Ref="227" Name="xrLabel10" ControlType="XRLabel" SizeF="119.7916,23" LocationFloat="0, 125" Font="Arial, 9.75pt" ForeColor="Blue" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text="Chief Complaint">
+          <StylePriority Ref="228" UseFont="false" UseForeColor="false" UsePadding="false" UseTextAlignment="false" />
+        </Item16>
+        <Item17 Ref="229" Name="lblVisitType" ControlType="XRLabel" SizeF="170.8333,23" LocationFloat="135.4166, 102" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+          <StylePriority Ref="230" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item17>
+        <Item18 Ref="231" Name="xrLabel12" ControlType="XRLabel" SizeF="15.625,23" LocationFloat="119.7916, 102" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+          <StylePriority Ref="232" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item18>
+        <Item19 Ref="233" Name="xrLabel11" ControlType="XRLabel" SizeF="119.7916,23" LocationFloat="0, 102" Font="Arial, 9.75pt" ForeColor="Blue" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text="Visit Type">
+          <StylePriority Ref="234" UseFont="false" UseForeColor="false" UsePadding="false" UseTextAlignment="false" />
+        </Item19>
+        <Item20 Ref="235" Name="lblServiceUnitName" ControlType="XRLabel" SizeF="170.8333,23" LocationFloat="135.4166, 78.99996" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+          <StylePriority Ref="236" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item20>
+        <Item21 Ref="237" Name="xrLabel9" ControlType="XRLabel" SizeF="15.625,23" LocationFloat="119.7916, 78.99996" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+          <StylePriority Ref="238" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item21>
+        <Item22 Ref="239" Name="xrLabel8" ControlType="XRLabel" SizeF="119.7916,23" LocationFloat="0, 78.99996" Font="Arial, 9.75pt" ForeColor="Blue" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text="Unit Name">
+          <StylePriority Ref="240" UseFont="false" UseForeColor="false" UsePadding="false" UseTextAlignment="false" />
+        </Item22>
+        <Item23 Ref="241" Name="lblLOS" ControlType="XRLabel" SizeF="170.8333,23" LocationFloat="135.4166, 56.00001" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+          <StylePriority Ref="242" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item23>
+        <Item24 Ref="243" Name="xrLabel7" ControlType="XRLabel" SizeF="15.625,23" LocationFloat="119.7916, 56.00001" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+          <StylePriority Ref="244" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item24>
+        <Item25 Ref="245" Name="xrLabel6" ControlType="XRLabel" SizeF="119.7916,23" LocationFloat="0, 56.00001" Font="Arial, 9.75pt" ForeColor="Blue" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text="LOS">
+          <StylePriority Ref="246" UseFont="false" UseForeColor="false" UsePadding="false" UseTextAlignment="false" />
+        </Item25>
+        <Item26 Ref="247" Name="lblRegistrationDateTime" ControlType="XRLabel" SizeF="170.8333,23" LocationFloat="135.4166, 32.99999" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+          <StylePriority Ref="248" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item26>
+        <Item27 Ref="249" Name="xrLabel5" ControlType="XRLabel" SizeF="15.625,23" LocationFloat="119.7916, 32.99999" Font="Arial, 9.75pt" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text=":">
+          <StylePriority Ref="250" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item27>
+        <Item28 Ref="251" Name="xrLabel4" ControlType="XRLabel" SizeF="119.7916,23" LocationFloat="0, 32.99999" Font="Arial, 9.75pt" ForeColor="Blue" Padding="5,2,0,0,100" TextAlignment="MiddleLeft" Text="Visit Date / Time">
+          <StylePriority Ref="252" UseFont="false" UseForeColor="false" UsePadding="false" UseTextAlignment="false" />
+        </Item28>
+        <Item29 Ref="253" Name="xrLabel3" ControlType="XRLabel" SizeF="650,23" LocationFloat="0, 10.00001" StyleName="EpisodeSummaryHeader" Padding="2,2,0,0,100" Text="Episode Information" />
+      </Controls>
+    </Item1>
+    <Item2 Ref="254" ControlType="PageFooterBand" Name="PageFooter" HeightF="34.37501">
+      <Controls>
+        <Item1 Ref="255" Name="lineFooter" ControlType="XRLine" SizeF="650,12.49997" LocationFloat="0, 0" />
+        <Item2 Ref="256" Name="lblReportProperties" ControlType="XRLabel" SizeF="451.0417,17.00002" LocationFloat="0, 12.49997" Font="Arial, 8.25pt" Padding="2,2,0,0,100" TextAlignment="MiddleLeft" Text="MEDINFRAS - ReportID, Print Date/Time : dd-MMM-yyyy HH:MM:ss, User ID : XXXXX">
+          <StylePriority Ref="257" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="258" Name="xrPageInfo3" ControlType="XRPageInfo" SizeF="150,13.99999" Font="Arial, 8.25pt" Padding="2,2,0,0,100" LocationFloat="499.9999, 15.5" TextAlignment="MiddleRight" Format="Page {0} of {1}">
+          <StylePriority Ref="259" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+      </Controls>
+    </Item2>
+    <Item3 Ref="260" ControlType="PageHeaderBand" Name="PageHeader" HeightF="303.9583">
+      <Controls>
+        <Item1 Ref="261" Name="xrTable1" ControlType="XRTable" LocationFloat="100.7916, 101.1667" SizeF="598.9583,182.7083">
+          <Rows>
+            <Item1 Ref="262" Name="xrTableRow1" ControlType="XRTableRow" Weight="1">
+              <Cells>
+                <Item1 Ref="263" ControlType="XRTableCell" Name="tdRegistrationDateTime" Text="tdRegistrationDateTime" TextAlignment="MiddleLeft" Font="Arial, 9.75pt" BackColor="LightGray" Padding="5,0,0,0,100" Borders="All" Weight="1.874999731506461">
+                  <StylePriority Ref="264" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="265" ControlType="XRTableCell" Name="xrTableCell2" BackColor="LightGray" Borders="All" Weight="2.3333336954949204">
+                  <StylePriority Ref="266" UseBackColor="false" UseBorders="false" />
+                </Item2>
+<<<<<<< HEAD
+                <Item3 Ref="267" ControlType="XRTableCell" Name="tdPatientAge" Text="tdPatientAge" TextAlignment="MiddleLeft" Font="Arial, 9.75pt" BackColor="LightGray" Padding="5,0,0,0,100" Borders="All" Weight="1.7812498681874232">
+                  <StylePriority Ref="268" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+=======
+                <Item3 Ref="267" ControlType="XRTableCell" Name="tdPatientAge" Text="tdPatientAge" TextAlignment="MiddleLeft" Borders="All" Weight="1.7812498681874231" Font="Arial, 9.75pt" Padding="5,0,0,0,100" BackColor="LightGray">
+                  <StylePriority Ref="268" UseFont="false" UseTextAlignment="false" UseBorders="false" UseBackColor="false" UsePadding="false" />
+>>>>>>> 7307129c24f28fe3af6770ffa8e8ee29d568db7d
+                </Item3>
+              </Cells>
+            </Item1>
+            <Item2 Ref="269" Name="xrTableRow2" ControlType="XRTableRow" Weight="6.3083331298828123">
+              <Cells>
+                <Item1 Ref="270" ControlType="XRTableCell" Name="tdMRN" Text="tdMRN" Borders="All" Weight="1.874999731506461">
+                  <Controls>
+                    <Item1 Ref="271" Name="lblMRN" ControlType="XRLabel" SizeF="175.5,23" LocationFloat="1.999994, 2" Font="Arial, 9.75pt" Padding="5,2,0,0,100" Borders="None" TextAlignment="MiddleLeft" Text="MRN ">
+                      <StylePriority Ref="272" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="273" Name="lblRegistrationNoCover" ControlType="XRLabel" SizeF="167.5,23" LocationFloat="9.999974, 132.71" Font="Arial, 9.75pt" Padding="5,2,0,0,100" Borders="None" TextAlignment="MiddleCenter" Text="RegistrationNo">
+                      <StylePriority Ref="274" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="275" Name="xrLine1" ControlType="XRLine" SizeF="183.5,7.375" Borders="None" LocationFloat="2, 125.335">
+                      <StylePriority Ref="276" UseBorders="false" />
+                    </Item3>
+                  </Controls>
+                  <StylePriority Ref="277" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="278" ControlType="XRTableCell" Name="xrTableCell5" Text="xrTableCell5" Borders="All" Weight="2.3333333903191309">
+                  <Controls>
+                    <Item1 Ref="279" Name="lblPhysicianName" ControlType="XRLabel" SizeF="213.3333,23" LocationFloat="10.00001, 125.335" Font="Arial, 9.75pt" Padding="5,2,0,0,100" Borders="None" TextAlignment="MiddleCenter" Text="Physician Name">
+                      <StylePriority Ref="280" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="281" Name="lblDiagnose" ControlType="XRLabel" SizeF="213.3333,23" LocationFloat="10, 35.4167" Font="Arial, 9.75pt" Padding="5,2,0,0,100" Borders="None" TextAlignment="MiddleCenter" Text="Diagnose">
+                      <StylePriority Ref="282" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="283" Name="lblPatientName" ControlType="XRLabel" SizeF="216.6666,22.99998" LocationFloat="6.666719, 2.000015" Font="Arial, 9.75pt" Padding="5,2,0,0,100" Borders="None" TextAlignment="MiddleCenter" Text="Patient Name">
+                      <StylePriority Ref="284" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item3>
+                  </Controls>
+                  <StylePriority Ref="285" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="286" ControlType="XRTableCell" Name="xrTableCell6" Text="xrTableCell6" Borders="All" Weight="1.7812501733632127">
+                  <Controls>
+                    <Item1 Ref="287" Name="imgPatientPicture" ControlType="XRPictureBox" SizeF="160.6251,145.71" LocationFloat="9.999987, 10" Sizing="StretchImage" />
+                  </Controls>
+                  <StylePriority Ref="288" UseBorders="false" />
+                </Item3>
+              </Cells>
+            </Item2>
+          </Rows>
+        </Item1>
+        <Item2 Ref="289" Name="xrLabel2" ControlType="XRLabel" SizeF="800,23" LocationFloat="0, 60.49998" Font="Arial, 12pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text="Summary">
+          <StylePriority Ref="290" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="291" Name="lblRegistrationNo" ControlType="XRLabel" SizeF="800,23" LocationFloat="0, 37.5" Font="Arial, 12pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text="Registration No :">
+          <StylePriority Ref="292" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="293" Name="xrLabel1" ControlType="XRLabel" SizeF="800,23" LocationFloat="0, 10.00001" Font="Arial, 13pt, style=Bold" Padding="2,2,0,0,100" TextAlignment="MiddleCenter" Text="Episode Summary Report">
+          <StylePriority Ref="294" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+      </Controls>
+    </Item3>
+    <Item4 Ref="295" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+    <Item5 Ref="296" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" HeightF="25" />
+    <Item6 Ref="297" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="0" />
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="298" Name="Title" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Times New Roman, 20pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item2 Ref="299" Name="FieldCaption" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 10pt, style=Bold" Sides="Top, Bottom" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item3 Ref="300" Name="PageInfo" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 9pt, style=Bold" StringFormat="Near;Near;0;None;Character;Default" />
+    <Item4 Ref="301" Name="EpisodeSummaryHeader" BorderStyle="Inset" Padding="5,0,0,0,100" Font="Arial, 11.25pt, style=Bold" BackColor="LightGray" StringFormat="Near;Near;0;None;Character;Default" TextAlignment="MiddleLeft" />
+  </StyleSheet>
+</XtraReportsLayoutSerializer>

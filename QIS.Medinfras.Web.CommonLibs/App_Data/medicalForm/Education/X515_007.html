@@ -1,0 +1,81 @@
+﻿<head>
+    <style type="text/css">   
+       .txtForm { background-color:#dfe6e9;}
+        </style>
+</head>
+<div>
+    <div id="groupEducation" class="w3-container w3-animate-left peGroup" style="padding:2px">
+        <label style="font-weight:bold; text-decoration:underline">KONTROL</label>
+        <br />
+        <br />
+        <table border="0" cellpadding="1" cellspacing="0" style="width:100%; border-style:inset">
+            <colgroup>
+                <col />
+            </colgroup>
+            <tr>
+                <td><input type="checkbox" id="chk515_007_01" class="chkForm" controlID="chk515_007_01"/> Pasien tidak perlu kontrol</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="chk515_007_02" class="chkForm" controlID="chk515_007_02"/> Pasien Kontrol</td>
+            </tr>
+            <tr>
+                <td>
+                    <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                            <colgroup>
+                                <col style="width:200px"/>
+                                <col />
+                            </colgroup>
+                        <tr>
+                            <td><input type="checkbox" id="chk515_007_03" class="chkForm" controlID="chk515_007_03"/> Tanggal-Jam Kontrol</td>
+                            <td style="margin:10px"> <input type="datetime-local" class="txtForm" controlID="txt515_007_01" style="width:210px"/></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:right; padding-right:10px; vertical-align:top"><label>Tempat Kontrol</label></td>
+                            <td>
+                                <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                                    <colgroup>
+                                        <col style="width:210px" />
+                                        <col />
+                                    </colgroup>
+                                    <tr>
+                                        <td><input type="radio" name="group01.01" value="01" class="optForm" controlID="optGroup01_01_01"/><label> Poli Spesialis RS</label></td>
+                                        <td style="padding-left:20px;"> <input type="text" class="txtForm" controlID="txt515_007_02" style="width:150px"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><input type="radio" name="group01.01" value="02" class="optForm" controlID="optGroup01_01_02"/><label> Klinik BPJS</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><input type="radio" name="group01.01" value="03" class="optForm" controlID="optGroup01_01_03"/><label> Puskesmas</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><input type="radio" name="group01.01" value="04" class="optForm" controlID="optGroup01_01_04"/><label> Praktek Pribadi</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" name="group01.01" value="99" class="optForm" controlID="optGroup01_01_99"/><label> Lain-lain</label></td>
+                                        <td style="padding-left:20px;"> <input type="text" class="txtForm" controlID="txt515_007_99" style="width:150px"/></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="chk515_007_04" class="chkForm" controlID="chk515_007_04"/> Sisa obat di rumah dibawa pada saat kontrol </td>
+            </tr>
+            <tr>
+                <td><hr /></td>
+            </tr>
+            <tr>
+                <td colspan="5"><label style="font-weight:bold; text-decoration:underline">CATATAN PENTING </label></td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <textarea class="txtForm" controlID="txtFormRemarks" rows="5" style="width:99%;border-style:none"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+</script>

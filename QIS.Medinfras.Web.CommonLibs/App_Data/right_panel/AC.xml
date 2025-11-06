@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- #Region AC010404 -->
+  <page menucode="AC010404">
+    <tasks>
+      <task code="FAItemChangeAfterAcceptance" title="Ubah Master Setelah Berita Acara" description="Digunakan untuk perubahan beberapa komponen di master saat sudah terbentuk berita acara aset dan inventaris." url="~/Program/Master/FAItem/FAItemChangeAfterAcceptanceCtl.ascx"  width="800" height="400" />
+    </tasks>
+    <prints>
+      <print title="Label Asset" reportcode="AC-00004" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region AC040101 -->
+  <page menucode="AC040101">
+    <prints>
+      <print title="Bukti Mutasi Aset dan Inventaris" reportcode="AC-00005" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region AC040102 -->
+  <page menucode="AC040102">
+    <prints>
+      <print title="Bukti Pemusnahan Aset dan Inventaris" reportcode="AC-00006" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region AC040301 -->
+  <page menucode="AC040301">
+    <prints>
+      <print title="Bukti Mutasi Gabungan Aset dan Inventaris v1" reportcode="AC-00007" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Mutasi Gabungan Aset dan Inventaris v2" reportcode="AC-00008" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region AC040500 -->
+  <page menucode="AC040500">
+    <prints>
+      <print title="Berita Serah Terima Barang dan Inventaris" reportcode="AC-00010" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Label Asset per Berita Acara" reportcode="AC-00013" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region AC040301 -->
+  <page menucode="AC040301">
+    <prints>
+      <print title="Bukti Mutasi Gabungan Aset dan Inventaris" reportcode="AC-00007" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region AC050100 -->
+  <page menucode="AC050100">
+    <prints>
+      <print title="Journal Voucher" reportcode="AC-00001" visible="1" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region AC050300 -->
+  <page menucode="AC050300">
+    <prints>
+      <print title="Journal Voucher" reportcode="AC-00001" visible="1" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+</root>

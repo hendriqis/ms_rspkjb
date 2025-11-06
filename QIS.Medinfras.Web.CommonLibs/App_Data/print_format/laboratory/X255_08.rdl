@@ -1,0 +1,11 @@
+﻿^XA
+LL200
+^PW350
+^LH5,0
+^CF024,24
+^FO10,20^FDKpd Yth.^FS 
+^FO10,45^FD{PatientName}^FS 
+^FO10,70^FD{MedicalNo} ({TransactionDateInString}) ^FS
+^FO10,95^FD{HomeAddress}^FS
+^PR2
+^XZ

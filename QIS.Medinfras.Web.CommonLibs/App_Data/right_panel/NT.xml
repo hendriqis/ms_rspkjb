@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- #Region NT020200 -->
+  <page menucode="NT020200">
+    <prints>
+      <print title="Bon Pemesanan Makanan" reportcode="NT090104" visible="1" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region NT033000 -->
+  <page menucode="NT033000">
+    <prints>
+      <print title="Form Permintaan Makanan" reportcode="NT090103" visible="1" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+</root>

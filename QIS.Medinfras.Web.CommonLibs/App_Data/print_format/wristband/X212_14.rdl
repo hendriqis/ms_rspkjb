@@ -1,0 +1,20 @@
+﻿^XA
+^POI
+^LL500
+^PW300
+^LH10,10
+^FO70,650
+^BQN,2,3,Q,1
+^FH_
+^FDQA,{MedicalNo}_0A_0D{RegistrationNo}_0A_0D{FirstName}_0A_0D{MiddleName}_0A_0D{LastName}_0A_0D{cfPatientLocation}_0A_0D^FS
+^A0R,50,50
+^FO170,850^FD{MedicalNo}^FS
+^A0R,50,50
+^FO170,1200^FDRS. Santo Borromeus^FS
+^A0R,30,30
+^FO130,850^FD{cfPatientNameSalutation}^FS
+^A0R,30,30
+^FO90,850^FD{DateOfBirthInString}^FS
+^A0R,30,30
+^FO50,850^FDNIK : {SSN}^FS
+^XZ

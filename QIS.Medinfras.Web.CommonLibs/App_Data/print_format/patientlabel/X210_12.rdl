@@ -1,0 +1,24 @@
+﻿^XA
+^PW800
+^CFD
+^FO15,25^FDNama Pasien^FS
+^FO160,25^FD:^FS
+^CF024,24
+^FO180,25^FD{cfPatientNameInLabel}^FS
+^CFD
+^FO15,60^FDNo.RM^FS 
+^FO160,60^FD:^FS
+^CF024,24
+^FO180,60^FD{MedicalNo}^FS 
+^CFD
+^FO15,90^FDTgl.Lahir/JK^FS 
+^FO160,90^FD:^FS
+^CF024,24
+^FO180,90^FD{DateOfBirthInString} / {cfGenderInitial}^FS 
+^CFD
+^FO15,120^FDPenjamin^FS 
+^FO160,120^FD:^FS
+^CF024,24
+^FO180,120^FD{BusinessPartnerName}^FS 
+^FO560,25^BY1,1,1^BCN,50,Y,N,N^FD{MedicalNo}^FS
+^XZ

@@ -1,0 +1,197 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_RAPUHAssessment">
+    $(function () {
+        $("#optRAPUH_R1").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtRAPUH_R").val('1');
+            else
+                $("#txtRAPUH_R").val('0');
+            calculateRAPUHScore();
+        });
+        $("#optRAPUH_R2").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtRAPUH_R").val('0');
+            else
+                $("#txtRAPUH_R").val('1');
+            calculateRAPUHScore();
+        });
+
+        $("#ddlRAPUH_A").change(function () {
+            $("#txtRAPUH_A").val($(this).val());
+            calculateRAPUHScore();
+        });
+        $("#ddlRAPUH_P").change(function () {
+            $("#txtRAPUH_P").val($(this).val());
+            calculateRAPUHScore();
+        });
+
+        $("#optRAPUH_U1").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtRAPUH_U").val('1');
+            else
+                $("#txtRAPUH_U").val('0');
+        });
+        $("#optRAPUH_U2").click(function () {
+            if ($(this).is(':checked'))
+                $("#txtRAPUH_U").val('0');
+            else
+                $("#txtRAPUH_U").val('1');
+            calculateRAPUHScore();
+        });
+
+        $("#ddlRAPUH_H").change(function () {
+            $("#txtRAPUH_H").val($(this).val());
+            calculateRAPUHScore();
+        });
+
+        $("#ddlRAPUH_A").change();
+        $("#ddlRAPUH_P").change();
+        $("#ddlRAPUH_H").change();
+
+        function calculateRAPUHScore() {
+
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+            var p4 = 0;
+            var p5 = 0;
+
+            if ($("#txtRAPUH_R").val())
+                p1 = parseInt($("#txtRAPUH_R").val());
+
+            if ($("#txtRAPUH_A").val())
+                p2 = parseInt($("#txtRAPUH_A").val());
+
+            if ($("#txtRAPUH_P").val())
+                p3 = parseInt($("#txtRAPUH_P").val());
+
+            if ($("#txtRAPUH_U").val())
+                p4 = parseInt($("#txtRAPUH_U").val());
+
+            if ($("#txtRAPUH_H").val())
+                p5 = parseInt($("#txtRAPUH_H").val());
+
+            var total = p1 + p2 + p3 + p4 + p5;
+            $("#txtRAPUHScore").val(total);
+
+            if (total <= 0) {
+                $("#ddlRAPUHScore").val("X096^01");
+            }
+            else if (total >= 1 && total <= 2) {
+                $("#ddlRAPUHScore").val("X096^02");
+            }
+            else {
+                $("#ddlRAPUHScore").val("X096^03");
+            }
+        }
+    });
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="0" style="width:100%;">
+            <colgroup>
+                <col width="150px" />
+                <col width="65px" />
+                <col width="65px" />
+                <col width="100px" />
+                <col width="80px" />
+                <col width="20px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5"><label style="font-weight:bold; text-decoration:underline"class="lblGroupTitle" controlID = "lblGroup01">Geriatri</label></td>
+                <td />
+                <td><div class="w3-container w3-border peGroup"><label style="font-weight:bold; text-decoration:underline">Masalah Keperawatan</label></div></td>
+            </tr>
+            <tr>
+                <td><label class="lblNormal" title="Dengan diri sendiri atau tanpa bantuan alat mengalami kesulitan untuk naik 10 anak tangga dan tanpa istirahat diantaranya?">Resistensi</label></td>
+                <td><input type="radio" name="group01.01" value="1" id="optRAPUH_R1" class="optForm" controlID="optGroup01_01_01"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.01" value="0" id="optRAPUH_R2" class="optForm" controlID="optGroup01_01_02"/><label> Tidak</label></td>
+                <td style="text-align:right"><label>Skor</label></td>
+                <td><input type="text" style="width: 98%; text-align:right" id="txtRAPUH_R" class="txtForm" controlID="txtRAPUH_R" readonly="readonly"/></td>
+                <td />
+                <td rowspan="12" style="vertical-align:top">
+                    <div class="w3-container w3-border nursingProblem">
+                        <table border="0" cellpadding="1" cellspacing="0">
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem01" nursingProblemCode=""/> Tidak ada masalah</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem02" nursingProblemCode="D.0040"/> D.0040 Gangguan Eliminasi Urin</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem03" nursingProblemCode="D.0057"/> D.0057 Keletihan</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem04" nursingProblemCode="D.0054"/> D.0054 Gangguan Mobilitas Fisik</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem05" nursingProblemCode="D.0062"/> D.0062 Gangguan Memori</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem06" nursingProblemCode="D.0085"/> D.0085 Gangguan Persepsi Sensori</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem07" nursingProblemCode="D.0109"/> D.0109 Defisit Perawatan Diri : Mandi/Berpakaian/Toileting/Berhias</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem08" nursingProblemCode="D.0136"/> D.0136 Resiko Cedera</td></tr>
+                            <tr><td> <input type="checkbox" class="chkNursingProblem" controlID="chkNursingProblem09" nursingProblemCode="D.0143"/> D.0143 Resiko Jatuh</td></tr>
+                            <tr><td style="padding-left:20px;"> <input type="text" class="txtNursingProblem" controlID="txtNursingProblem01" style="width:100%"/></td></tr>
+                            <tr><td style="padding-left:20px;"><input type="text" class="txtNursingProblem" controlID="txtNursingProblem02" style="width:100%"/></td></tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="lblNormal" title="Seberapa sering dalam 4 minggu anda merasa kelelahan">Aktivitas</label></td>
+                <td colspan="2">
+                    <select id="ddlRAPUH_A" class="ddlForm" controlID="ddlRAPUH_A" style="width:100%">
+                        <option value="1">Sepanjang waktu</option>
+                        <option value="1">Sebagian besar waktu</option>
+                        <option value="0">Kadang - kadang</option>
+                        <option value="0" selected>Jarang</option>
+                    </select>
+                </td>                
+                <td style="text-align:right"><label>Skor</label></td>
+                <td><input type="text" style="width: 98%; text-align:right" id="txtRAPUH_A" class="txtForm" controlID="txtRAPUH_A" readonly="readonly"/></td>
+                <td />
+            </tr>
+            <tr>
+                <td><label class="lblNormal" title="Apakah dokter pernah mengatakan kepada anda mempunyai hipertensi, diabetes, kanker (selain kanker kulit kecil), penyakit paru kronis, serangan jantung, gagal jantung kongestif, nyeri dada, asma, nyeri sendi, stroke dan penyakit ginjal.">Penyakit</label></td>
+                <td colspan="2">
+                    <select id="ddlRAPUH_P" class="ddlForm" controlID="ddlRAPUH_P" style="width:100%">
+                        <option value="0">0-4 penyakit</option>
+                        <option value="1">5-11 penyakit</option>
+                    </select>
+                </td>                
+                <td style="text-align:right"><label>Skor</label></td>
+                <td><input type="text" style="width: 98%; text-align:right" class="txtForm" id="txtRAPUH_P" controlID="txtRAPUH_P" readonly="readonly"/></td>
+                <td />
+            </tr>
+            <tr>
+                <td><label class="lblNormal" title="Dengan diri sendiri dan tanpa bantuan, apakah anda mengalami kesullitan  berjalan sejauh 100-200 meter?">Usaha Berjalan</label></td>
+                <td><input type="radio" name="group01.02" value="1" id="optRAPUH_U1" class="optForm" controlID="optRAPUH_U1"/><label> Ya</label></td>
+                <td><input type="radio" name="group01.02" value="0" id="optRAPUH_U2" class="optForm" controlID="optRAPUH_U2"/><label> Tidak</label></td>
+                <td style="text-align:right"><label>Skor</label></td>
+                <td><input type="text" style="width: 98%; text-align:right" id="txtRAPUH_U" class="txtForm" controlID="txtRAPUH_U" readonly="readonly"/></td>
+                <td />
+            </tr>
+            <tr>
+                <td><label class="lblNormal" title="Berapa berat badan saudara dengan mengenakan baju tanpa alas kaki saat ini Satu tahun yang lalu, berapa berat badan anda dengan menggenakan baju tanpa alas kaki?">Hilangnya Berat Badan</label></td>
+                <td colspan="2">
+                    <select id="ddlRAPUH_H" class="ddlForm" controlID="ddlRAPUH_H" style="width:100%">
+                        <option value="0">< 5%</option>
+                        <option value="1">> 5%</option>
+                    </select>
+                </td> 
+                <td style="text-align:right"><label>Skor</label></td>
+                <td><input type="text" style="width: 98%; text-align:right" class="txtForm" id="txtRAPUH_H" controlID="txtRAPUH_H" readonly="readonly"/></td>
+                <td />
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal">TOTAL SKOR</label></td>      
+                <td><input type="text" style="width: 98%; text-align:right" id="txtRAPUHScore" class="txtForm" controlID="txtRAPUHScore" readonly="readonly"/></td>                          
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal">KESIMPULAN</label></td>
+                <td colspan="4">
+                    <select id="ddlRAPUHScore" class="ddlForm" controlID="ddlRAPUHScore" style="width:100%">
+                        <option value="" selected></option>
+                        <option value="X096^01">0   : Tidak ada Sindroma Kerapuhan</option>
+                        <option value="X096^02">1-2 : Sindroma pra Kerapuhan (Pre-Frailty Sindrome)</option>
+                        <option value="X096^03">>=3 : Sindroma Kerapuhan (Frailty Sindrome)</option>
+                    </select>
+                </td> 
+                <td />
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+</script>

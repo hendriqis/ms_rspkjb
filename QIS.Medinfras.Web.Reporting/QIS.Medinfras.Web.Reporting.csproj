@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{869275EF-21DA-4CA5-9003-32ADFD393D9E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QIS.Medinfras.Web.Reporting</RootNamespace>
+    <AssemblyName>QIS.Medinfras.Web.Reporting</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>qisicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Data.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Printing.v11.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxEditors.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.XtraReports.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Design, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.XtraReports.v11.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Extensions, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.XtraReports.v11.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Service, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.XtraReports.v11.1.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Web, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.XtraReports.v11.1.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.3.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dllpendukung\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dllpendukung\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dllpendukung\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dllpendukung\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dllpendukung\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dllpendukung\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\QIS.Medinfras.Web.CommonLibs\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dllpendukung\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="QIS.Data.Core, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QIS.Medinfras.Web.CommonLibs\bin\QIS.Data.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="QIS.Medinfras.Common, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QIS.Medinfras.Web.CommonLibs\bin\QIS.Medinfras.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="QIS.Medinfras.ReportDesktop, Version=20.21.12.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QIS.Medinfras.ReportDesktop\bin\Debug\QIS.Medinfras.ReportDesktop.dll</HintPath>
+    </Reference>
+    <Reference Include="QIS.Medinfras.Web.CustomControl, Version=20.21.12.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QIS.Medinfras.Web.CommonLibs\bin\QIS.Medinfras.Web.CustomControl.dll</HintPath>
+    </Reference>
+    <Reference Include="QISEncryption, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dllpendukung\QISEncryption.dll</HintPath>
+    </Reference>
+    <Reference Include="QISEncryptionPasswordUser, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\QISEncryptionPasswordUser.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.4268.27806, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralCtl.ascx">
+      <Link>SharedLibs\Controls\GeneralCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralDashboardCtl.ascx">
+      <Link>SharedLibs\Controls\GeneralDashboardCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MatrixCtl.ascx">
+      <Link>SharedLibs\Controls\MatrixCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MatrixWithParameterCtl.ascx">
+      <Link>SharedLibs\Controls\MatrixWithParameterCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Default.aspx">
+      <Link>SharedLibs\Default.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\ErrorPage.aspx">
+      <Link>SharedLibs\ErrorPage.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Login.aspx">
+      <Link>SharedLibs\Login.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Main.aspx">
+      <Link>SharedLibs\Program\Main.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\RemoteLogon.aspx">
+      <Link>SharedLibs\Program\RemoteLogon.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportPage.aspx">
+      <Link>SharedLibs\Program\ReportPage.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewer.aspx">
+      <Link>SharedLibs\Program\ReportViewer.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewerExport.aspx">
+      <Link>SharedLibs\Program\ReportViewerExport.aspx</Link>
+    </Content>
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="qisicon.ico" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralCtl.ascx.cs">
+      <Link>SharedLibs\Controls\GeneralCtl.ascx.cs</Link>
+      <DependentUpon>GeneralCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\GeneralCtl.ascx.designer.cs</Link>
+      <DependentUpon>GeneralCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralDashboardCtl.ascx.cs">
+      <Link>SharedLibs\Controls\GeneralDashboardCtl.ascx.cs</Link>
+      <DependentUpon>GeneralDashboardCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralDashboardCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\GeneralDashboardCtl.ascx.designer.cs</Link>
+      <DependentUpon>GeneralDashboardCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MatrixCtl.ascx.cs">
+      <Link>SharedLibs\Controls\MatrixCtl.ascx.cs</Link>
+      <DependentUpon>MatrixCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MatrixCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\MatrixCtl.ascx.designer.cs</Link>
+      <DependentUpon>MatrixCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MatrixWithParameterCtl.ascx.cs">
+      <Link>SharedLibs\Controls\MatrixWithParameterCtl.ascx.cs</Link>
+      <DependentUpon>MatrixWithParameterCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MatrixWithParameterCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\MatrixWithParameterCtl.ascx.designer.cs</Link>
+      <DependentUpon>MatrixWithParameterCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Default.aspx.cs">
+      <Link>SharedLibs\Default.aspx.cs</Link>
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Default.aspx.designer.cs">
+      <Link>SharedLibs\Default.aspx.designer.cs</Link>
+      <DependentUpon>Default.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\ErrorPage.aspx.cs">
+      <Link>SharedLibs\ErrorPage.aspx.cs</Link>
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\ErrorPage.aspx.designer.cs">
+      <Link>SharedLibs\ErrorPage.aspx.designer.cs</Link>
+      <DependentUpon>ErrorPage.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Login.aspx.cs">
+      <Link>SharedLibs\Login.aspx.cs</Link>
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Login.aspx.designer.cs">
+      <Link>SharedLibs\Login.aspx.designer.cs</Link>
+      <DependentUpon>Login.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBase.Master.cs">
+      <Link>SharedLibs\MasterPage\MPBase.Master.cs</Link>
+      <DependentUpon>MPBase.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBase.Master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPBase.Master.designer.cs</Link>
+      <DependentUpon>MPBase.Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBaseDashboard.Master.cs">
+      <Link>SharedLibs\MasterPage\MPBaseDashboard.Master.cs</Link>
+      <DependentUpon>MPBaseDashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBaseDashboard.Master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPBaseDashboard.Master.designer.cs</Link>
+      <DependentUpon>MPBaseDashboard.Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPEntry.master.cs">
+      <Link>SharedLibs\MasterPage\MPEntry.master.cs</Link>
+      <DependentUpon>MPEntry.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPEntry.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPEntry.master.designer.cs</Link>
+      <DependentUpon>MPEntry.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPFrame.master.cs">
+      <Link>SharedLibs\MasterPage\MPFrame.master.cs</Link>
+      <DependentUpon>MPFrame.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPFrame.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPFrame.master.designer.cs</Link>
+      <DependentUpon>MPFrame.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPList.master.cs">
+      <Link>SharedLibs\MasterPage\MPList.master.cs</Link>
+      <DependentUpon>MPList.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPList.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPList.master.designer.cs</Link>
+      <DependentUpon>MPList.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPListEntry.master.cs">
+      <Link>SharedLibs\MasterPage\MPListEntry.master.cs</Link>
+      <DependentUpon>MPListEntry.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPListEntry.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPListEntry.master.designer.cs</Link>
+      <DependentUpon>MPListEntry.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMain.master.cs">
+      <Link>SharedLibs\MasterPage\MPMain.master.cs</Link>
+      <DependentUpon>MPMain.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMain.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPMain.master.designer.cs</Link>
+      <DependentUpon>MPMain.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMainDashboard.master.cs">
+      <Link>SharedLibs\MasterPage\MPMainDashboard.master.cs</Link>
+      <DependentUpon>MPMainDashboard.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMainDashboard.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPMainDashboard.master.designer.cs</Link>
+      <DependentUpon>MPMainDashboard.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx.master.cs">
+      <Link>SharedLibs\MasterPage\MPTrx.master.cs</Link>
+      <DependentUpon>MPTrx.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPTrx.master.designer.cs</Link>
+      <DependentUpon>MPTrx.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Main.aspx.cs">
+      <Link>SharedLibs\Program\Main.aspx.cs</Link>
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Main.aspx.designer.cs">
+      <Link>SharedLibs\Program\Main.aspx.designer.cs</Link>
+      <DependentUpon>Main.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\RemoteLogon.aspx.cs">
+      <Link>SharedLibs\Program\RemoteLogon.aspx.cs</Link>
+      <DependentUpon>RemoteLogon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\RemoteLogon.aspx.designer.cs">
+      <Link>SharedLibs\Program\RemoteLogon.aspx.designer.cs</Link>
+      <DependentUpon>RemoteLogon.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportPage.aspx.cs">
+      <Link>SharedLibs\Program\ReportPage.aspx.cs</Link>
+      <DependentUpon>ReportPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportPage.aspx.designer.cs">
+      <Link>SharedLibs\Program\ReportPage.aspx.designer.cs</Link>
+      <DependentUpon>ReportPage.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewer.aspx.cs">
+      <Link>SharedLibs\Program\ReportViewer.aspx.cs</Link>
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewer.aspx.designer.cs">
+      <Link>SharedLibs\Program\ReportViewer.aspx.designer.cs</Link>
+      <DependentUpon>ReportViewer.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewerExport.aspx.cs">
+      <Link>SharedLibs\Program\ReportViewerExport.aspx.cs</Link>
+      <DependentUpon>ReportViewerExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewerExport.aspx.designer.cs">
+      <Link>SharedLibs\Program\ReportViewerExport.aspx.designer.cs</Link>
+      <DependentUpon>ReportViewerExport.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Program\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBase.Master">
+      <Link>SharedLibs\MasterPage\MPBase.Master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPEntry.master">
+      <Link>SharedLibs\MasterPage\MPEntry.master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPFrame.master">
+      <Link>SharedLibs\MasterPage\MPFrame.master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPList.master">
+      <Link>SharedLibs\MasterPage\MPList.master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPListEntry.master">
+      <Link>SharedLibs\MasterPage\MPListEntry.master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMain.master">
+      <Link>SharedLibs\MasterPage\MPMain.master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx.master">
+      <Link>SharedLibs\MasterPage\MPTrx.master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\AppSetting.config">
+      <Link>AppSetting.config</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\ConnectionString.config">
+      <Link>ConnectionString.config</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBaseDashboard.Master">
+      <Link>SharedLibs\MasterPage\MPBaseDashboard.Master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMainDashboard.master">
+      <Link>SharedLibs\MasterPage\MPMainDashboard.master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QIS.Medinfras.Data.Service\QIS.Medinfras.Data.Service.csproj">
+      <Project>{E8019F76-DE58-43A7-984C-A1272D62EA45}</Project>
+      <Name>QIS.Medinfras.Data.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.Web.Common\QIS.Medinfras.Web.Common.csproj">
+      <Project>{12E5AAFD-04A7-4D8F-8840-C8CB4E0B23DC}</Project>
+      <Name>QIS.Medinfras.Web.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6936</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/medinfrasv2.1/ms_rspkjb_202403-01/Reporting</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

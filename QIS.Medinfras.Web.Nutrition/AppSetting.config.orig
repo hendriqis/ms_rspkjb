@@ -1,0 +1,53 @@
+﻿<?xml version="1.0"?>
+<appSettings>
+<<<<<<< HEAD
+	<add key="QISVirtualDirectory" value="http://localhost/medinfrasv2.1/appdata/dev/" />
+	<add key="QISPhysicalDirectory" value="E:\_app\_appdata\dev\" />
+	<add key="QISAppVirtualDirectory" value="http://localhost/medinfrasv2.1/dev" />
+	<add key="QISLibsPhysicalDirectory" value="D:\_src\medinfrasv2.1\medinfrasv2.1\QIS.Medinfras.Web.CommonLibs" />
+	<add key="QISHealthcareName" value="QUANTUM INFRA SOLUSINDO" />
+	<add key="QISNameFormat" value="FirstName MiddleName LastName" />
+	<add key="QISPatientImagePath" value="Patient/#MRN/" />
+	<add key="QISBodyDiagramImagePath" value="BodyDiagram/" />
+	<add key="QISPatientBodyDiagramImagePath" value="Patient/#MRN/Image/BodyDiagram/" />
+	<add key="QISPatientImagingImagePath" value="Patient/#MRN/Image/Imaging/" />
+	<add key="QISPatientDocumentsPath" value="Patient/#MRN/Image/" />
+	<add key="QISParamedicImagePath" value="Paramedic/" />
+	<add key="QISMRNFormat" value="**-**-**-**" />
+	<add key="QISWristbandType" value="ECONOMY" />
+	<add key="QISInfantWristbandType" value="SOFT" />
+	<add key="QISMRLabelType" value="Label_8x3" />
+	<add key="DrugLabelSize" value="Label_8x3" />
+	<add key="BPJSUrl" value="http://api.asterix.co.id/SepWebRest" />
+=======
+  <add key="QISVirtualDirectory" value="http://192.168.90.4/appdata/workshop/" />
+  <add key="QISPhysicalDirectory" value="D:\_app\appData\medinfrasv2.1\rspb\" />
+  <add key="QISAppVirtualDirectory" value="http://192.168.90.4/medinfrasv2.1/rspb" />
+  <add key="QISLibsPhysicalDirectory" value="D:\_app\medinfrasv2.1\RSPB\CommonLibs" />
+  <add key="QISHealthcareName" value="RUMAH SAKIT PANTI BHAKTININGSIH - CHARITAS BELITANG" />
+  <add key="QISNameFormat" value="FirstName MiddleName LastName" />
+  <add key="QISPatientImagePath" value="Patient/#MRN/" />
+  <add key="QISBodyDiagramImagePath" value="BodyDiagram/" />
+  <add key="QISPatientBodyDiagramImagePath" value="Patient/#MRN/Image/BodyDiagram/" />
+  <add key="QISPatientImagingImagePath" value="Patient/#MRN/Image/Imaging/" />
+  <add key="QISPatientDocumentsPath" value="Patient/#MRN/Image/" />
+  <add key="QISParamedicImagePath" value="Paramedic/" />
+  <add key="QISMRNFormat" value="**-**-**-**" />
+  <add key="QISWristbandType" value="ECONOMY" />
+  <add key="QISInfantWristbandType" value="SOFT" />
+  <add key="QISMRLabelType" value="Label_8x3" />
+  <add key="DrugLabelSize" value="Label_8x3" />
+  <add key="BPJSUrl" value="http://api.asterix.co.id/SepWebRest" />
+>>>>>>> 2d1dec3210ea8a0a0d3c97858b439507bc0588a9
+  <add key="BPJSConsID" value="11359" />
+  <add key="BPJSPass" value="9uC9C73629" />
+	<add key="BPJSCode" value="0070R017"/>
+
+	<add key="ErrorReportEmail" />
+	<add key="ErrorReportEmailServer" />
+	<add key="SimpleErrorReportPage" value=" " />
+	<add key="RichErrorReportPage" value="Error.aspx" />
+	<add key="EnableDiagnosticActions" value="False" />
+	<add key="URLOnlineHelp" value="file:///D:/XPO%20Manual/HTML/index.html" />
+	<add key="DXEnableThemesAssembly" value="False"/>
+</appSettings>

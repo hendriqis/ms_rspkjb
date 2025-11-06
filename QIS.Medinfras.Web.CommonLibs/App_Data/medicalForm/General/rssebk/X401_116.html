@@ -1,0 +1,135 @@
+﻿<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+    $(function () {
+
+        $("#ddlParameter1").change(function () {
+            $("#txtParamScore1").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter2").change(function () {
+            $("#txtParamScore2").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter3").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            CalculateTotalScore();
+        });
+
+
+        $("#ddlParameter1").change();
+        $("#ddlParameter2").change();
+        $("#ddlParameter3").change();
+
+        function CalculateTotalScore() {
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+
+            if ($("#txtParamScore1").val())
+                p1 = parseInt($("#txtParamScore1").val());
+
+            if ($("#txtParamScore2").val())
+                p2 = parseInt($("#txtParamScore2").val());
+
+            if ($("#txtParamScore3").val())
+                p3 = parseInt($("#txtParamScore3").val());
+
+
+            var total = p1 + p2 + p3;
+
+            $("#txtScore").val(total);
+
+            if (total >= 0 && total <= 1) {
+                $("#ddlScore").val("X373^01");
+            }
+            else if (total >= 2 && total <= 3) {
+                $("#ddlScore").val("X373^02");
+            }
+            else if (total >= 4 && total <= 5) {
+                $("#ddlScore").val("X373^03");
+            }
+            else {
+                $("#ddlScore").val("X373^04");
+            }
+        }
+    });
+
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+            <colgroup>
+                <col width="350px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="150px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold; text-decoration:underline">PEDIATRIC EARLY WARNING SCORE (PEWS) </label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Perilaku</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter1" style="width:100%" class = "ddlForm" controlID = "ddlParameter1">
+                        <option value="0" selected>Bermain, waspada</option>
+                        <option value="1">Tidur, rewel</option> 
+                        <option value="2">Sangat mudah rewel</option>
+                        <option value="3">Lesu, respon untuk nyeri berkurang</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore1" />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Kardiovaskuler</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter2" style="width:100%" class = "ddlForm" controlID = "ddlParameter2">
+                        <option value="0" selected>Kemerahan (CRT 1-2s)</option>
+                        <option value="1">Pucat/Agak gelap (CRT 3s)</option>
+                        <option value="2">Keabu-abuan/cyanosis/takikardi (CRT 4s, Rate 20x/m)</option>
+                        <option value="3">Keabu-abuan/cyanosis/takikardi/bradikardia (CRT>5s, Rate 30x/m)</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore2"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Respirasi</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter3" class="ddlForm" controlID="ddlParameter3" style="width:100%">
+                        <option value="0" selected>Dalam batas normal</option>
+                        <option value="1">>10 Di atas nilai normal</option>
+                        <option value="2">>20 Di atas nilai normal</option>
+                        <option value="3">>=5 Di bawah nilai</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore3"/>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal">TOTAL SKOR</label></td>      
+                <td><input type="text" style="width: 98%; text-align:right" id="txtScore" class="txtForm" controlID="txtScore" readonly="readonly"/></td>                          
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal">KESIMPULAN</label></td>
+                <td colspan="4">
+                    <select id="ddlScore" class="ddlForm" controlID="ddlScore" style="width:450px" disabled>
+                        <option value="X373^01" selected>0-1 : STABIL - Evaluasi Berkala</option>
+                        <option value="X373^02">2-3 : WASPADA - perketat evaluasi</option>
+                        <option value="X373^03">4-5 : SIAGA - Lapor Dokter Jaga</option>
+                        <option value="X373^04">>=6 : BAHAYA</option>
+                    </select>
+                </td> 
+                <td />
+            </tr>
+        </table>
+    </div>
+</div>
+

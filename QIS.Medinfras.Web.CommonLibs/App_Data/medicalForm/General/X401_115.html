@@ -1,0 +1,361 @@
+﻿<head>
+    <style type="text/css">
+        .style1
+        {
+            height: 25px;
+        }
+    </style>
+</head>
+<script language="javascript" type="text/javascript" id="dxss_fallriskAssessment">
+    $(function () {
+        $("#opt401_115Form1").change(function () {
+            if ($(this).is(':checked')) {
+                $("#trPhysician1").show();
+                $("#trPhysician2").hide();
+
+                $("#trFinancing1").show();
+                $("#trFinancing2").hide();
+            }
+            else {
+                $("#trPhysician2").show();
+                $("#trPhysician1").hide();
+
+                $("#trFinancing2").show();
+                $("#trFinancing1").hide();
+            }
+        });
+
+        $("#opt401_115Form2").change(function () {
+            if ($(this).is(':checked')) {
+                $("#trPhysician2").show();
+                $("#trPhysician1").hide();
+
+                $("#trFinancing2").show();
+                $("#trFinancing1").hide();
+            }
+            else {
+                $("#trPhysician1").show();
+                $("#trPhysician2").hide();
+
+                $("#trFinancing1").show();
+                $("#trFinancing2").hide();
+            }
+        });
+
+        $("#ddlParameter1a").change(function () {
+            $("#txtParamScore1a").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter1b").change(function () {
+            $("#txtParamScore1b").val($(this).val());
+            CalculateTotalScore();
+        });
+
+
+        $("#ddlParameter2").change(function () {
+            $("#txtParamScore2").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter3").change(function () {
+            $("#txtParamScore3").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter4a").change(function () {
+            $("#txtParamScore4a").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter4b").change(function () {
+            $("#txtParamScore4b").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter5").change(function () {
+            $("#txtParamScore5").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#ddlParameter6").change(function () {
+            $("#txtParamScore6").val($(this).val());
+            CalculateTotalScore();
+        });
+
+        $("#opt401_115Form1").change();
+        $("#ddlParameter1a").change();
+        $("#ddlParameter1b").change();
+        $("#ddlParameter2").change();
+        $("#ddlParameter3").change();
+        $("#ddlParameter4a").change();
+        $("#ddlParameter4b").change();
+        $("#ddlParameter5").change();
+        $("#ddlParameter6").change();
+
+
+        function CalculateTotalScore() {
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+            var p4 = 0;
+            var p5 = 0;
+            var p6 = 0;
+
+            if ($("#opt401_115Form1").is(':checked')) {
+                p1 = parseInt($("#txtParamScore1a").val());
+            }
+            else {
+                p1 = parseInt($("#txtParamScore1b").val());
+            }
+
+            if ($("#txtParamScore2").val())
+                p2 = parseInt($("#txtParamScore2").val());
+
+            if ($("#txtParamScore3").val())
+                p3 = parseInt($("#txtParamScore3").val());
+
+            if ($("#opt401_115Form1").is(':checked')) {
+                p4 = parseInt($("#txtParamScore4a").val());
+            }
+            else {
+                p4 = parseInt($("#txtParamScore4b").val());
+            }
+
+            if ($("#txtParamScore5").val())
+                p5 = parseInt($("#txtParamScore5").val());
+
+            if ($("#txtParamScore6").val())
+                p6 = parseInt($("#txtParamScore6").val());
+
+            var total = p1 + p2 + p3 + p4 + p5 + p6;
+
+            $("#txtScore").val(total);
+        }
+    });
+</script>
+<div>
+    <div id="group01" class="w3-container w3-border w3-animate-left peGroup">
+        <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+            <colgroup>
+                <col width="200px" />
+                <col width="450px" />
+                <col width="100px" />
+                <col width="150px" />
+                <col />
+            </colgroup>
+            <tr>
+                <td colspan="5">
+                    <label style="font-weight:bold; text-decoration:underline">PENAPISAN PENANGANAN MANAJER PELAYANAN PASIEN </label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Jenis Pasien</label></td>
+                <td colspan="5">
+                    <table border="0" cellpadding="1" cellspacing="0">
+                        <tr>
+                            <td style="text-align:center; vertical-align:top" >
+                                <input type="radio" value = "0" class="optForm" id="opt401_115Form1" controlID="opt401_115Form1" name="401_115_parameter1" checked="checked" /> Pasien Umum
+                            </td>
+                            <td style="text-align:center; vertical-align:top">
+                                <input type="radio" value = "1" class="optForm" id="opt401_115Form2" controlID="opt401_115Form2" name="401_115_parameter1"/> JKN
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr id="trPhysician1">
+                <td><label>Jumlah DPJP</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter1a" style="width:100%" class = "ddlForm" controlID = "ddlParameter1a">
+                        <option value="1" selected>1-2</option>
+                        <option value="2">3-4</option> 
+                        <option value="3">&#8805;5</option> 
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1a" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore1" />
+                </td>
+            </tr>
+            <tr id="trPhysician2" style="display:none">
+                <td><label>Jumlah DPJP</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter1b" style="width:100%" class = "ddlForm" controlID = "ddlParameter1b">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option> 
+                        <option value="3">3</option> 
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore1b" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore1b" />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Perkiraan LOS</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter2" style="width:100%" class = "ddlForm" controlID = "ddlParameter2">
+                        <option value="1" selected>&#8804;3 hari</option>
+                        <option value="2">4-7 hari</option>
+                        <option value="3">&#8805;8 hari</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore2" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore2"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Potensi Komplain</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter3" class="ddlForm" controlID="ddlParameter3" style="width:100%">
+                        <option value="1">Risiko Rendah</option>
+                        <option value="2">Risiko Sedang</option>
+                        <option value="3">Risiko Tinggi</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore3" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore3"/>
+                </td>
+            </tr>
+            <tr id="trFinancing1">
+                <td><label>Pembiayaan</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter4a" class="ddlForm" controlID="ddlParameter4a" style="width:100%">
+                        <option value="1" selected>Pemenuhan deposit awal tidak sesuai ketentuan</option>
+                        <option value="2">Pemenuhan deposit < 75% biaya perawatan berjalan atau Pemenuhan deposit biaya operasi terencana < 50% dari biaya estimasi </option>
+                        <option value="3">Pemenuhan biaya < 85% dari total biaya</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4a" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore4a"/>
+                </td>
+            </tr>
+            <tr id="trFinancing2" style="display:none">
+                <td><label>Pembiayaan</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter4b" class="ddlForm" controlID="ddlParameter4b" style="width:100%">
+                        <option value="1" selected>Biaya sudah mencapai 60% INACBGs</option>
+                        <option value="2">Biaya sudah mencapai 70% INACBGs</option>
+                        <option value="3">Biaya sudah mencapai 80% INACBGs</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore4b" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore4b"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Gangguan struktur/fungsi</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter5" class="ddlForm" controlID="ddlParameter5" style="width:100%">
+                        <option value="1" selected>Tidak ada cacat struktur/gangguan fungsi kronis</option>
+                        <option value="2">Cacat struktur/gangguan fungsi kronis</option>
+                        <option value="3">Cacat berat/gagal organ/ancaman kematian</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore5" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore5"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Risiko Tindakan</label></td>
+                <td colspan="3">
+                    <select id="ddlParameter6" class="ddlForm" controlID="ddlParameter6" style="width:100%">
+                        <option value="1" selected>Tindakan ringan/tindakan dasar</option>
+                        <option value="2">Tindakan sedang/operasi ringan sedang</option>
+                        <option value="3">Tindakan berat/operasi berat/terapi intensif</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" readonly="readonly" value="" id="txtParamScore6" style="width:50px; text-align:right" class = "txtForm" controlID = "txtParamScore6"/>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label class="lblNormal">TOTAL SKOR</label></td>      
+                <td colspan="4"><input type="text" style="width: 100px; text-align:right" id="txtScore" class="txtForm" controlID="txtScore" readonly="readonly"/></td>                          
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold"><label>KESIMPULAN</label></td>
+                <td colspan="3">
+                    <select id="ddlScoring" class="ddlForm" controlID="ddlScoring" style="width:100%">
+                        <option value="0" selected></option>
+                        <option value="1">High Risk</option>
+                        <option value="2">Middle Risk</option>
+                        <option value="3">Low Risk</option>
+                    </select>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <center>
+                        <table border="0" cellpadding="1" cellspacing="0" style="width:100%">
+                            <colgroup>
+                                <col width="450px" />
+                                <col />
+                                <col width="450px" />
+                            </colgroup>
+                            <tr>
+                                <td>
+                                    <table border="1" cellpadding="1" cellspacing="0" style="width:100%">
+                                        <colgroup>
+                                            <col width="60px" />
+                                            <col />
+                                        </colgroup>
+                                        <tr>
+                                            <td colspan="2" style="text-align:center; font-weight:bold; background-color: Silver">RUANG RAWAT INAP</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="background-color: #fdcb6e;">> 10</td>
+                                            <td style="padding-left: 10px;background-color: #fdcb6e;"><b>High Risk</b> (membutuhkan MPP)</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="background-color: #ffeaa7">8 - 10</td>
+                                            <td style="padding-left: 10px;background-color: #ffeaa7">Middle Risk</td>
+                                        </tr>
+                                        <tr>
+                                            <td>< 8</td>
+                                            <td style="padding-left: 10px">Low Risk</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    <table border="1" cellpadding="1" cellspacing="0" style="width:100%">
+                                        <colgroup>
+                                            <col width="60px" />
+                                            <col />
+                                        </colgroup>
+                                        <tr>
+                                            <td colspan="2" style="text-align:center; font-weight:bold; background-color: Silver">RUANG RAWAT INTENSIF</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="background-color: #fdcb6e;">> 14</td>
+                                            <td style="padding-left: 10px;background-color: #fdcb6e;"><b>High Risk</b> (membutuhkan MPP)</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="background-color: #ffeaa7">10 - 14</td>
+                                            <td style="padding-left: 10px;background-color: #ffeaa7">Middle Risk</td>
+                                        </tr>
+                                        <tr>
+                                            <td>< 10</td>
+                                            <td style="padding-left: 10px">Low Risk</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+

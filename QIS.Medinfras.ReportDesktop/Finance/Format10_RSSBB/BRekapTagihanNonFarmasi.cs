@@ -1,0 +1,49 @@
+﻿using System;
+using System.Drawing;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using DevExpress.XtraReports.UI;
+using QIS.Medinfras.Data.Service;
+using QIS.Medinfras.Web.Common;
+
+namespace QIS.Medinfras.ReportDesktop
+{
+    public partial class BRekapTagihanNonFarmasi : BaseCustomDailyPotraitRpt
+    {
+        public BRekapTagihanNonFarmasi()
+        {
+            InitializeComponent();
+        }
+
+        public override void InitializeReport(string[] param)
+        {
+            vARInvoiceHd1 entity = BusinessLayer.GetvARInvoiceHd1List(param[0]).FirstOrDefault();
+            SettingParameter entitySetPar = BusinessLayer.GetSettingParameter(Constant.SettingParameter.FN_KEPALABAGIAN_KEUANGAN);
+
+            ////cBusinessPartnerName.Text = entity.CustomerBillToName;
+            ////cBusinessPartnerAddressLine1.Text = entity.CustomerBillToStreetName;
+            ////cBusinessPartnerAddressLine2.Text = entity.CustomerBillToCity + " " + entity.CustomerBillToState;
+
+            cARInvoiceNo.Text = entity.ARInvoiceNo;
+            cARInvoiceDate.Text = entity.ARInvoiceDateInString;
+            cDueDate.Text = entity.DueDateInString;
+
+            cRemarks.Text = entity.Remarks;
+
+            ////cBankName.Text = entity.BankName;
+            ////cBankAccountNoCaption.Text = entity.BankAccountNoCaption;
+            ////cBankAccountNo.Text = entity.BankAccountNo;
+            ////cBankAccountName.Text = entity.BankAccountName;
+
+            vHealthcare h = BusinessLayer.GetvHealthcareList(string.Format("HealthcareID = {0}", appSession.HealthcareID)).FirstOrDefault();
+            lblTanggalTTD.Text = string.Format("{0}, {1}", h.City, entity.SignatureDateInString);
+            lblNamaTTD.Text = entitySetPar.ParameterValue;
+            lblNamaJabatanTTD.Text = entitySetPar.ParameterName;
+
+            base.InitializeReport(param);
+        }
+
+    }
+}

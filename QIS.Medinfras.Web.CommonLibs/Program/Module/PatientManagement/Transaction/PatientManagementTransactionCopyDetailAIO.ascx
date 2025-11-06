@@ -1,0 +1,420 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PatientManagementTransactionCopyDetailAIO.ascx.cs"
+    Inherits="QIS.Medinfras.Web.CommonLibs.Program.PatientManagementTransactionCopyDetailAIO" %>
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+<script type="text/javascript" id="dxss_servicecopyaioctl">
+    var physicianID = getPhysicianID();
+    if (physicianID != '') {
+        $('#<%=hdnParamedicID.ClientID %>').val(physicianID);
+        $('#<%=txtParamedicCode.ClientID %>').val(getPhysicianCode());
+        $('#<%=txtParamedicName.ClientID %>').val(getPhysicianName());
+    }
+
+    function addItemFilterRow() {
+        $trHeader = $('#<%=grdView.ClientID %> tr:eq(0)');
+        $trFilter = $("<tr><td></td><td></td></tr>");
+
+        $input = $("<input type='text' id='txtFilterItem' style='width:100%;height:20px' />").val($('#<%=hdnFilterItem.ClientID %>').val());
+        $trFilter.find('td').eq(1).append($input);
+        $trFilter.insertAfter($trHeader);
+    }
+
+    $('#txtFilterItem').live('keypress', function (e) {
+        var code = (e.keyCode ? e.keyCode : e.which);
+        if (code == 13) {
+            getCheckedMember();
+            $('#<%=hdnFilterItem.ClientID %>').val($(this).val());
+            e.preventDefault();
+            cbpView.PerformCallback('refresh');
+        }
+    });
+
+    $(function () {
+        hideLoadingPanel();
+        addItemFilterRow();
+    });
+
+    var pageCount = parseInt('<%=PageCount %>');
+    $(function () {
+        setPaging($("#pagingPopUp"), pageCount, function (page) {
+            getCheckedMember();
+            cbpView.PerformCallback('changepage|' + page);
+        });
+    });
+
+    function onBeforeSaveRecord(errMessage) {
+        if (IsValid(null, 'fsServiceQuickPicks', 'mpServiceQuickPicks')) {
+
+            getCheckedMember();
+            if ($('#<%=hdnSelectedMember.ClientID %>').val() != '') {
+                var isAllowSave = "1";
+
+                var today = new Date();
+                var dd = String(today.getDate()).padStart(2, '0');
+                var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+                var yyyy = today.getFullYear();
+                today = yyyy + mm + dd;
+
+                var oTransactionDate = today;
+                if (oTransactionDate != null && oTransactionDate != "") {
+                    var oCountData = 0;
+                    var oVisitID = $('#<%=hdnVisitIDCtl.ClientID %>').val();
+                    var filterChargesDt = "VisitID = " + oVisitID + " AND CONVERT(VARCHAR(10), TransactionDate, 112) = '" + oTransactionDate + "' AND ItemID IN (" + $('#<%=hdnSelectedMember.ClientID %>').val() + ")";
+                    Methods.getObject('GetvPatientChargesDtCheckItemDoubleList', filterChargesDt, function (resultDouble) {
+                        if (resultDouble != null) {
+                            oCountData = parseInt(resultDouble.CountDt);
+                        } else {
+                            oCountData = 0;
+                        }
+                    });
+
+                    if (oCountData > 0) {
+                        var isConfirm = confirm("Item yang dipilih sudah ada dibuat di tanggal " + dd + "-" + mm + "-" + yyyy + ", lanjutkan proses simpan?");
+                        if (isConfirm == false) {
+                            isAllowSave = "0";
+                        }
+                    }
+                }
+
+                if (isAllowSave == "1") {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            else {
+                errMessage.text = 'Please Select Item First';
+                return false;
+            }
+        }
+        return false;
+    }
+
+    function getCheckedMember() {
+        var lstSelectedMember = [];
+        var lstSelectedMemberQty = [];
+        var lstSelectedMemberChargeClassID = [];
+        var result = '';
+        $('#tblSelectedItem .trSelectedItem').each(function () {
+            var key = $(this).find('.keyField').val();
+            var qty = $(this).find('.txtQty').val();
+            var chargeClassID = $(this).find('.ddlChargeClassList').val();
+            lstSelectedMember.push(key);
+            lstSelectedMemberQty.push(qty);
+            lstSelectedMemberChargeClassID.push(chargeClassID);
+        });
+        $('#<%=hdnSelectedMember.ClientID %>').val(lstSelectedMember.join(','));
+        $('#<%=hdnSelectedMemberQty.ClientID %>').val(lstSelectedMemberQty.join(','));
+        $('#<%=hdnSelectedMemberChargeClassID.ClientID %>').val(lstSelectedMemberChargeClassID.join(','));
+    }
+
+    function onCbpViewEndCallback(s) {
+        hideLoadingPanel();
+
+        var param = s.cpResult.split('|');
+        if (param[0] == 'refresh') {
+            var pageCount = parseInt(param[1]);
+            setPaging($("#pagingPopUp"), pageCount, function (page) {
+                getCheckedMember();
+                cbpView.PerformCallback('changepage|' + page);
+            });
+        }
+        addItemFilterRow();
+    }
+
+    $('#<%=grdView.ClientID %> .chkIsSelected input').die('change');
+    $('#<%=grdView.ClientID %> .chkIsSelected input').live('change', function () {
+        if ($(this).is(':checked')) {
+            $selectedTr = $(this).closest('tr');
+
+            $newTr = $('#tmplSelectedTestItem').html();
+            $newTr = $newTr.replace(/\$\{ItemName1}/g, $selectedTr.find('.tdItemName1').html());
+            $newTr = $newTr.replace(/\$\{ItemID}/g, $selectedTr.find('.keyField').html());
+
+            // Populate Item Unit Drop Down List
+            var unitCodes = ('<%=GetListChargeClassID() %>').split(",");
+            var unitText = ('<%=GetListChargeClassText() %>').split(",");
+            var htmlText = '<select class="ddlChargeClassList" style="width:100px">';
+            var visitChargeClassID = $('#<%=hdnChargeClassVisit.ClientID %>').val();
+            for (var i = 0; i < unitCodes.length; i++) {
+                if (unitCodes[i] == visitChargeClassID) {
+                    htmlText += '<option selected value="' + unitCodes[i] + '">' + unitText[i] + '</option>';
+                }
+                else {
+                    htmlText += '<option value="' + unitCodes[i] + '">' + unitText[i] + '</option>';
+                }
+            }
+            htmlText += '</select>';
+            $newTr = $newTr.replace(/\$\{ddlChargeClass}/g, htmlText);
+
+            $newTr = $($newTr);
+            $newTr.insertBefore($('#trFooter'));
+        }
+        else {
+            var id = $(this).closest('tr').find('.keyField').html();
+            $('#tblSelectedItem tr').each(function () {
+                if ($(this).find('.keyField').val() == id) {
+                    $(this).remove();
+                }
+            });
+        }
+    });
+
+    $('#tblSelectedItem .chkIsSelected2').die('change');
+    $('#tblSelectedItem .chkIsSelected2').live('change', function () {
+        if ($(this).is(':checked')) {
+            $selectedTr = $(this).closest('tr');
+            var id = $selectedTr.find('.keyField').val();
+            var isFound = false;
+            $('#<%=grdView.ClientID %> tr').each(function () {
+                if (id == $(this).find('.keyField').html()) {
+                    $(this).find('.chkIsSelected').find('input').prop('checked', false);
+                    isFound = true;
+                }
+            });
+            if (!isFound) {
+                var lstSelectedMember = $('#<%=hdnSelectedMember.ClientID %>').val().split(',');
+                lstSelectedMember.splice(lstSelectedMember.indexOf(id), 1);
+                $('#<%=hdnSelectedMember.ClientID %>').val(lstSelectedMember.join(','));
+            }
+            $(this).closest('tr').remove();
+        }
+    });
+
+    //#region Physician
+    $('#lblQuickPicksPhysician.lblLink').live('click', function () {
+        openSearchDialog('paramedic', onGetPhysicianFilterExpression(), function (value) {
+            $('#<%=txtParamedicCode.ClientID %>').val(value);
+            onTxtQuickPicksPhysicianCodeChanged(value);
+        });
+    });
+
+    $('#<%=txtParamedicCode.ClientID %>').live('change', function () {
+        onTxtQuickPicksPhysicianCodeChanged($(this).val());
+    });
+
+    function onTxtQuickPicksPhysicianCodeChanged(value) {
+        var filterExpression = onGetPhysicianFilterExpression() + " AND ParamedicCode = '" + value + "'";
+        Methods.getObject('GetvParamedicMasterList', filterExpression, function (result) {
+            if (result != null) {
+                $('#<%=hdnParamedicID.ClientID %>').val(result.ParamedicID);
+                $('#<%=txtParamedicName.ClientID %>').val(result.ParamedicName);
+            }
+            else {
+                $('#<%=hdnParamedicID.ClientID %>').val('');
+                $('#<%=txtParamedicCode.ClientID %>').val('');
+                $('#<%=txtParamedicName.ClientID %>').val('');
+            }
+        });
+    }
+    //#endregion
+
+    //#region Item Group
+    $('#lblItemGroup.lblLink').live('click', function () {
+        var filterExpression = "GCItemType = '" + $('#<%=hdnGCItemType.ClientID %>').val() + "' AND IsDeleted = 0";
+        openSearchDialog('itemgroup', filterExpression, function (value) {
+            $('#<%=txtItemGroupCode.ClientID %>').val(value);
+            onTxtItemGroupCodeChanged(value);
+        });
+    });
+
+    $('#<%=txtItemGroupCode.ClientID %>').live('change', function () {
+        onTxtItemGroupCodeChanged($(this).val());
+    });
+
+    function onTxtItemGroupCodeChanged(value) {
+        var filterExpression = "ItemGroupCode = '" + value + "'";
+        Methods.getObject('GetItemGroupMasterList', filterExpression, function (result) {
+            if (result != null) {
+                $('#<%=hdnItemGroupID.ClientID %>').val(result.ItemGroupID);
+                $('#<%=txtItemGroupName.ClientID %>').val(result.ItemGroupName1);
+            }
+            else {
+                $('#<%=hdnItemGroupID.ClientID %>').val('');
+                $('#<%=txtItemGroupCode.ClientID %>').val('');
+                $('#<%=txtItemGroupName.ClientID %>').val('');
+            }
+            getCheckedMember();
+            cbpView.PerformCallback('refresh');
+        });
+    }
+    //#endregion
+
+</script>
+<div style="padding: 10px;">
+    <script id="tmplSelectedTestItem" type="text/x-jquery-tmpl">
+        <tr class="trSelectedItem">
+            <td align="center">
+                <input type="checkbox" class="chkIsSelected2" />
+                <input type="hidden" class="keyField" value='${ItemID}' />
+            </td>
+            <td>${ItemName1}</td>
+            <td style="text-align:right">
+                <table border="0" cellpadding="0" cellspacing="1" style="width:100%">
+                    <tr>
+                        <td>
+                             ${ddlChargeClass}   
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td><input type="text" validationgroup="mpServiceQuickPicks" class="txtQty number min" min="0.1" value="1" style="width:60px" /></td>
+        </tr>
+    </script>
+    <input type="hidden" id="hdnSelectedMember" runat="server" value="" />
+    <input type="hidden" id="hdnTransactionID" runat="server" value="" />
+    <input type="hidden" id="hdnTransactionDateQuickPicksCtl" runat="server" value="" />
+    <input type="hidden" id="hdnTestOrderID" runat="server" value="" />
+    <input type="hidden" id="hdnHealthcareServiceUnitID" runat="server" value="" />
+    <input type="hidden" id="hdnParam" runat="server" value="" />
+    <input type="hidden" id="hdnImagingServiceUnitID" runat="server" value="" />
+    <input type="hidden" id="hdnLaboratoryServiceUnitID" runat="server" value="" />
+    <input type="hidden" id="hdnFilterItem" runat="server" />
+    <input type="hidden" id="hdnSelectedMemberQty" runat="server" value="" />
+    <input type="hidden" id="hdnSelectedMemberChargeClassID" runat="server" value="" />
+    <input type="hidden" id="hdnDepartmentID" runat="server" value="" />
+    <input type="hidden" id="hdnGCItemType" runat="server" value="" />
+    <input type="hidden" id="hdnIsAccompany" runat="server" value="" />
+    <input type="hidden" id="hdnRegistrationID" runat="server" value="" />
+    <input type="hidden" id="hdnIsBPJSRegistration" runat="server" value="" />
+    <input type="hidden" id="hdnVisitIDCtl" runat="server" value="" />
+    <input type="hidden" id="hdnChargeClassVisit" runat="server" value="" />
+    <fieldset id="fsEntryPopup" style="margin: 0">
+        <table>
+            <colgroup>
+                <col style="width: 150px" />
+                <col style="width: 400px" />
+            </colgroup>
+            <tr>
+                <td class="tdLabel">
+                    <label class="lblLink lblMandatory" id="lblQuickPicksPhysician">
+                        <%=GetLabel("Dokter / Paramedis")%></label>
+                </td>
+                <td>
+                    <input type="hidden" id="hdnParamedicID" value="" runat="server" />
+                    <table style="width: 100%" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col style="width: 120px" />
+                            <col style="width: 3px" />
+                            <col style="width: 600px" />
+                        </colgroup>
+                        <tr>
+                            <td>
+                                <asp:TextBox ID="txtParamedicCode" Width="100%" runat="server" />
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                <asp:TextBox ID="txtParamedicName" Width="100%" runat="server" ReadOnly="true" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="tdLabel">
+                    <label class="lblLink" id="lblItemGroup">
+                        <%=GetLabel("Kelompok Pelayanan")%></label>
+                </td>
+                <td>
+                    <input type="hidden" id="hdnItemGroupID" value="" runat="server" />
+                    <table style="width: 100%" cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col style="width: 120px" />
+                            <col style="width: 3px" />
+                            <col style="width: 600px" />
+                        </colgroup>
+                        <tr>
+                            <td>
+                                <asp:TextBox ID="txtItemGroupCode" Width="100%" runat="server" />
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                <asp:TextBox ID="txtItemGroupName" Width="100%" runat="server" ReadOnly="true" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <div style="height: 400px; overflow-y: scroll;">
+        <table style="width: 100%">
+            <colgroup>
+                <col style="width: 50%" />
+                <col style="width: 50%" />
+            </colgroup>
+            <tr>
+                <td style="padding: 5px; vertical-align: top">
+                    <dxcp:ASPxCallbackPanel ID="cbpView" runat="server" Width="100%" ClientInstanceName="cbpView"
+                        ShowLoadingPanel="false" OnCallback="cbpView_Callback">
+                        <ClientSideEvents BeginCallback="function(s,e){ showLoadingPanel();}" EndCallback="function(s,e){ onCbpViewEndCallback(s); }" />
+                        <PanelCollection>
+                            <dx:PanelContent ID="PanelContent1" runat="server">
+                                <asp:Panel runat="server" ID="pnlView" Style="width: 100%; margin-left: auto; margin-right: auto;
+                                    position: relative;">
+                                    <asp:GridView ID="grdView" runat="server" CssClass="grdView notAllowSelect" AutoGenerateColumns="false"
+                                        ShowHeaderWhenEmpty="true" EmptyDataRowStyle-CssClass="trEmpty" OnRowDataBound="grdView_RowDataBound">
+                                        <Columns>
+                                            <asp:BoundField DataField="DtItemID" HeaderStyle-CssClass="keyField" ItemStyle-CssClass="keyField" />
+                                            <asp:TemplateField HeaderStyle-Width="40px" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+                                                <ItemTemplate>
+                                                    <asp:CheckBox ID="chkIsSelected" runat="server" CssClass="chkIsSelected" />
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                            <asp:BoundField DataField="DtItemName1" HeaderText="Pelayanan yang tersedia :" ItemStyle-CssClass="tdItemName1"
+                                                HeaderStyle-HorizontalAlign="Left" />
+                                            <asp:BoundField DataField="BalanceEND" HeaderText="Qty" ItemStyle-CssClass="tdBalanceEND"
+                                                HeaderStyle-HorizontalAlign="Right" ItemStyle-HorizontalAlign="Right" />
+                                        </Columns>
+                                        <EmptyDataTemplate>
+                                            <%=GetLabel("No Data To Display")%>
+                                        </EmptyDataTemplate>
+                                    </asp:GridView>
+                                </asp:Panel>
+                            </dx:PanelContent>
+                        </PanelCollection>
+                    </dxcp:ASPxCallbackPanel>
+                    <div class="containerPaging">
+                        <div class="wrapperPaging">
+                            <div id="pagingPopUp">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td style="padding: 5px; vertical-align: top">
+                    <fieldset id="fsServiceQuickPicks">
+                        <table id="tblSelectedItem" class="grdView notAllowSelect" cellspacing="0" rules="all">
+                            <tr id="trHeader2">
+                                <th style="width: 40px">
+                                    &nbsp;
+                                </th>
+                                <th align="left">
+                                    <%=GetLabel("Pelayanan yang telah dipilih :")%>
+                                </th>
+                                <th align="right" style="width: 60px">
+                                    <%=GetLabel("Kelas Tagihan")%>
+                                </th>
+                                <th align="right" style="width: 60px">
+                                    <%=GetLabel("Jumlah")%>
+                                </th>
+                            </tr>
+                            <tr id="trFooter">
+                            </tr>
+                        </table>
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="imgLoadingGrdView" id="containerImgLoadingView">
+        <img src='<%= ResolveUrl("~/Libs/Images/loading_small.gif")%>' alt='' />
+    </div>
+</div>

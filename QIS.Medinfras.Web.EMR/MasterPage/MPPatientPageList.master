@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage/MPPatientPage.Master" AutoEventWireup="true"
+    CodeBehind="MPPatientPageList.master.cs" Inherits="QIS.Medinfras.Web.EMR.MasterPage.MPPatientPageList" %>
+
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="plhMPPatientPage" runat="server">
+    <div class="toolbarArea" id="toolbarPatientPageListArea">
+        <div style="float: right; margin-top: 10px; margin-right: 5px">
+            <asp:ContentPlaceHolder ID="plhRightToolbar" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <ul id="ulMPListToolbar" runat="server">
+            <li id="btnMPListAdd" runat="server" crudmode="C">
+                <img src='<%=ResolveUrl("~/Libs/Images/Icon/tbnew.png")%>' alt="" /><div>
+                    <%=GetLabel("Add")%></div>
+            </li>
+            <li id="btnMPListEdit" runat="server" crudmode="U">
+                <img src='<%=ResolveUrl("~/Libs/Images/Icon/tbedit.png")%>' alt="" /><div>
+                    <%=GetLabel("Edit")%></div>
+            </li>
+            <li id="btnMPListDelete" runat="server" crudmode="D">
+                <img src='<%=ResolveUrl("~/Libs/Images/Icon/tbdelete.png")%>' alt="" /><div>
+                    <%=GetLabel("Delete")%></div>
+            </li>
+            <asp:ContentPlaceHolder ID="plhCustomButtonToolbar" runat="server">
+            </asp:ContentPlaceHolder>
+        </ul>
+    </div>
+    <input type="hidden" id="hdnIsEntryUsePopup" value="1" runat="server" />
+    <input type="hidden" id="hdnIsPromptDeleteReason" value="0" runat="server" />
+    <script type="text/javascript">
+        $(function () {
+            $('#<%=btnMPListAdd.ClientID %>').click(function () {
+                var allow = true;
+                if (typeof onBeforeBasePatientPageListAdd == 'function') {
+                    allow = onBeforeBasePatientPageListAdd();
+                }
+                if (allow) cbpMPListProcess.PerformCallback('add');
+            });
+            $('#<%=btnMPListEdit.ClientID %>').click(function (evt) {
+                var allow = true;
+                if (typeof onBeforeBasePatientPageListEdit == 'function') {
+                    allow = onBeforeBasePatientPageListEdit();
+                }
+                if (allow) cbpMPListProcess.PerformCallback('edit');
+            });
+            $('#<%=btnMPListDelete.ClientID %>').click(function () {
+                displayConfirmationMessageBox("DELETE RECORD", "Are you sure want to delete the record?", function (result) {
+                    if (result) cbpMPListProcess.PerformCallback('delete');
+                });
+            });
+
+            var isToolbarVisible = false;
+            $('#toolbarPatientPageListArea li').each(function () {
+                if ($(this).is(":visible"))
+                    isToolbarVisible = true;
+            });
+            if (!isToolbarVisible)
+                $('#toolbarPatientPageListArea').hide();
+        });
+
+        function onCustomButtonClick(type) {
+            cbpMPListProcess.PerformCallback('customclick|' + type);
+        }
+
+        function onCbpMPListProcessEndCallback(s, e) {
+            var isEntryUsePopup = ($('#<%=hdnIsEntryUsePopup.ClientID %>').val() == '1');
+            var result = s.cpResult.split('|');
+            if (result[0] == 'delete') {
+                if (result[1] == 'success') {
+                    if (typeof onRefreshControl == 'function') {
+                        var filterExpression = '';
+                        onRefreshControl(filterExpression);
+                    }
+                }
+                else {
+                    if (result[2] != '') {
+                        var messageBody = result[2];
+                        displayErrorMessageBox('DELETE', messageBody);
+                    }
+                    else {
+                        var messageBody = 'An error occured in your process.';
+                        displayErrorMessageBox('DELETE', messageBody);
+                    }
+                }
+            }
+            else if (result[0] == 'add') {
+                if (result[1] == 'success') {
+                    if (isEntryUsePopup) {
+                        var size = s.cpSize.split('|');
+                        openUserControlPopup(s.cpURL, s.cpQueryString, s.cpHeaderText, size[0], size[1]);
+                    }
+                    else
+                        document.location = s.cpURL;
+                }
+                else {
+                    if (result[2] != '') {
+                        var messageBody = result[2];
+                        displayErrorMessageBox('ADD', messageBody);
+                    }
+                    else {
+                        var messageBody = 'An error occured in your process.';
+                        displayErrorMessageBox('ADD', messageBody);
+                    }
+                }
+            }
+            else if (result[0] == 'edit') {
+                if (result[1] == 'success') {
+                    if (isEntryUsePopup) {
+                        var size = s.cpSize.split('|');
+                        openUserControlPopup(s.cpURL, s.cpQueryString, s.cpHeaderText, size[0], size[1]);
+                    }
+                    else
+                        document.location = s.cpURL;
+                }
+                else {
+                    if (result[2] != '') {
+                        var messageBody = result[2];
+                        displayErrorMessageBox('EDIT', messageBody);
+                    }
+                    else {
+                        var messageBody = 'An error occured in your process.';
+                        displayErrorMessageBox('EDIT', messageBody);
+                    }
+                }
+            }
+            else if (result[0] == 'customclick') {
+                if (result[1] == 'success') {
+                    if (typeof onAfterCustomClickSuccess == 'function')
+                        onAfterCustomClickSuccess(s.cpType, result[2]);
+
+                    var retVal = s.cpRetValue;
+
+                    if (typeof onGetLocalHiddenFieldValue == 'function') {
+                        onGetLocalHiddenFieldValue(retVal);
+                    }
+                }
+                else {
+                    if (result[2] != '') {
+                        var messageBody = result[2];
+                        displayErrorMessageBox('PROCESS', messageBody);
+                    }
+                    else {
+                        var messageBody = 'An error occured in your process.';
+                        displayErrorMessageBox('PROCESS', messageBody);
+                    }
+                }
+            }
+            hideLoadingPanel();
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="plhList" runat="server">
+    </asp:ContentPlaceHolder>
+    <dxcp:ASPxCallbackPanel ID="cbpMPListProcess" runat="server" Width="100%" ClientInstanceName="cbpMPListProcess"
+        ShowLoadingPanel="false" OnCallback="cbpMPListProcess_Callback">
+        <ClientSideEvents BeginCallback="function(s,e){
+                showLoadingPanel();
+            }" EndCallback="function(s,e){
+                var result = s.cpResult.split('|');
+                if(result[0] == 'delete'){
+                    if(result[1] == 'success'){
+                        if (typeof onAfterDeleteClickSuccess == 'function'){
+                            onAfterDeleteClickSuccess();
+                        }
+                    }
+                    onCbpMPListProcessEndCallback(s,e);
+                } else {
+                    onCbpMPListProcessEndCallback(s,e);
+                }
+            }" />
+    </dxcp:ASPxCallbackPanel>
+</asp:Content>

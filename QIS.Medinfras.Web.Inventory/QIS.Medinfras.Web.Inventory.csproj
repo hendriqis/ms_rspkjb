@@ -1,0 +1,2862 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{304A8014-326C-46D8-AC2C-B5B048CFFD5B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QIS.Medinfras.Web.Inventory</RootNamespace>
+    <AssemblyName>QIS.Medinfras.Web.Inventory</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>qisicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v11.1.Export, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Design, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Extensions, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Service, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Web, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dllpendukung\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dllpendukung\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dllpendukung\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\dllpendukung\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\dllpendukung\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="QISEncryption, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dllpendukung\QISEncryption.dll</HintPath>
+    </Reference>
+    <Reference Include="QISEncryptionPasswordUser">
+      <HintPath>..\dllpendukung\QISEncryptionPasswordUser.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\ChangePasswordCtl.ascx">
+      <Link>SharedLibs\Controls\ChangePasswordCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\DeleteConfirmationCtl.ascx">
+      <Link>SharedLibs\Controls\DeleteConfirmationCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\EditPatientPhotoCtl.ascx">
+      <Link>SharedLibs\Controls\EditPatientPhotoCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralCtl.ascx">
+      <Link>SharedLibs\Controls\GeneralCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralDashboardCtl.ascx">
+      <Link>SharedLibs\Controls\GeneralDashboardCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MatrixCtl.ascx">
+      <Link>SharedLibs\Controls\MatrixCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MatrixWithParameterCtl.ascx">
+      <Link>SharedLibs\Controls\MatrixWithParameterCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MPEntryPopupCtl.ascx">
+      <Link>SharedLibs\Controls\MPEntryPopupCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MPProcessPopupCtl.ascx">
+      <Link>SharedLibs\Controls\MPProcessPopupCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientBannerCtl.ascx">
+      <Link>SharedLibs\Controls\PatientBannerCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PeriodeCtl.ascx">
+      <Link>SharedLibs\Controls\PeriodeCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Default.aspx">
+      <Link>SharedLibs\Default.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\ErrorPage.aspx">
+      <Link>SharedLibs\ErrorPage.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Login.aspx">
+      <Link>SharedLibs\Login.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Controls\CSSDHandoverCtl.ascx">
+      <Link>SharedLibs\Controls\CSSDHandoverCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Controls\DocumentNotesCtl.ascx">
+      <Link>SharedLibs\Program\Controls\DocumentNotesCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Information\TariffEstimation.aspx">
+      <Link>SharedLibs\Program\Information\TariffEstimation.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Main.aspx">
+      <Link>SharedLibs\Program\Main.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupClassEntryCtl.ascx">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupClassEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupEntryCtl.ascx">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupServiceUnitEntryCtl.ascx">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupServiceUnitEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupClassServiceUnitEntryCtl.ascx">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupClassServiceUnitEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitbyClassbyParamedicCtl.ascx">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitbyClassbyParamedicCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicCtl.ascx">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitbyClassCtl.ascx">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitbyClassCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitCtl.ascx">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitCustomerLineCtl.ascx">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitCustomerLineCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\ItemGroupDetailListCtl.ascx">
+      <Link>SharedLibs\Program\Master\ItemGroup\ItemGroupDetailListCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\ItemGroupEntry.aspx">
+      <Link>SharedLibs\Program\Master\ItemGroup\ItemGroupEntry.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\ItemGroupList.aspx">
+      <Link>SharedLibs\Program\Master\ItemGroup\ItemGroupList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\ItemGroupListV2.aspx">
+      <Link>SharedLibs\Program\Master\ItemGroup\ItemGroupListV2.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterClassEntryCtl.ascx">
+      <Link>SharedLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterClassEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterEntryCtl.ascx">
+      <Link>SharedLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterServiceUnitEntryCtl.ascx">
+      <Link>SharedLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterServiceUnitEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemService\ItemServiceItemCostEntryCtl.ascx">
+      <Link>SharedLibs\Program\Master\ItemService\ItemServiceItemCostEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ProductLine\ProductLineEntry.aspx">
+      <Link>SharedLibs\Program\Master\ProductLine\ProductLineEntry.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ProductLine\ProductLineList.aspx">
+      <Link>SharedLibs\Program\Master\ProductLine\ProductLineList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\StandardCode\StandardCodeEntry.aspx">
+      <Link>SharedLibs\Program\Master\StandardCode\StandardCodeEntry.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\StandardCode\StandardCodeList.aspx">
+      <Link>SharedLibs\Program\Master\StandardCode\StandardCodeList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\Supplier\SupplierEntry.aspx">
+      <Link>SharedLibs\Program\Master\Supplier\SupplierEntry.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\Supplier\SupplierItemEntryCtl.ascx">
+      <Link>SharedLibs\Program\Master\Supplier\SupplierItemEntryCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\Supplier\SupplierList.aspx">
+      <Link>SharedLibs\Program\Master\Supplier\SupplierList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\SystemTool\Bridging\Centerback\SendInventoryNotificationCtl.ascx">
+      <Link>SharedLibs\Program\Module\SystemTool\Bridging\Centerback\SendInventoryNotificationCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\RemoteLogon.aspx">
+      <Link>SharedLibs\Program\RemoteLogon.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportPage.aspx">
+      <Link>SharedLibs\Program\ReportPage.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewer.aspx">
+      <Link>SharedLibs\Program\ReportViewer.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewerExport.aspx">
+      <Link>SharedLibs\Program\ReportViewerExport.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Service\InventoryService.asmx">
+      <Link>SharedLibs\Service\InventoryService.asmx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Service\MedinfrasAPIService.asmx">
+      <Link>SharedLibs\Service\MedinfrasAPIService.asmx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Service\MethodService.asmx">
+      <Link>SharedLibs\Service\MethodService.asmx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Service\UploadPatientPhoto.aspx">
+      <Link>SharedLibs\Service\UploadPatientPhoto.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\Service\UploadService.asmx">
+      <Link>SharedLibs\Service\UploadService.asmx</Link>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderAddFromReceiveCtl.ascx" />
+    <Content Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderReopenList.aspx" />
+    <Content Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderAddFromReceivePerItemCtl.ascx" />
+    <Content Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderInvoiceInfoCtl.ascx" />
+    <Content Include="Program\Consignment\ConsignmentReceive\ConsignmentReceive.aspx" />
+    <Content Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveApprovalDetailList.aspx" />
+    <Content Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveApprovalList.aspx" />
+    <Content Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveConfirmedDetailList.aspx" />
+    <Content Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveConfirmedList.aspx" />
+    <Content Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveDetailCtl.ascx" />
+    <Content Include="Program\Consignment\ConsignmentOrder\ApprovedConsignmentOrderDetailList.aspx" />
+    <Content Include="Program\Consignment\ConsignmentOrder\ApprovedConsignmentOrderList.aspx" />
+    <Content Include="Program\Consignment\ConsignmentOrder\ConsignmentOrder.aspx" />
+    <Content Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderApprovalDetailList.aspx" />
+    <Content Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderApprovalList.aspx" />
+    <Content Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveQuickPicksCtl.ascx" />
+    <Content Include="Program\Consignment\ConsignmentReceive\UpdateReferenceInfoConsignmentCtl.ascx" />
+    <Content Include="Program\CSSD\CSSDDistribution\CSSDDistributionConfirmationList.aspx" />
+    <Content Include="Program\CSSD\CSSDDistribution\CSSDDistributionDetailListCtl.ascx" />
+    <Content Include="Program\CSSD\CSSDDistribution\CSSDDistributionList.aspx" />
+    <Content Include="Program\CSSD\CSSDDistribution\CSSDServiceDetailListCtl.ascx" />
+    <Content Include="Program\CSSD\CSSDProcess\CSSDConsumptionEntryQuickPickCtl.ascx" />
+    <Content Include="Program\CSSD\CSSDProcess\CSSDHandoverConfirmationDetailInfoList.aspx" />
+    <Content Include="Program\CSSD\CSSDProcess\CSSDHandoverConfirmationDetailList.aspx" />
+    <Content Include="Program\CSSD\CSSDProcess\CSSDHandoverConfirmationList.aspx" />
+    <Content Include="Program\CSSD\CSSDProcess\CSSDProcessList.aspx" />
+    <Content Include="Program\CSSD\CSSDProcess\CSSDStorageDetailList.aspx" />
+    <Content Include="Program\CSSD\CSSDProcess\CSSDStorageList.aspx" />
+    <Content Include="Program\CSSD\CSSDRequest\CSSDHandoverList.aspx" />
+    <Content Include="Program\CSSD\CSSDRequest\CSSDRequestEntry.aspx" />
+    <Content Include="Program\CSSD\CSSDRequest\CSSDRequestEntryPackageQuickPickCtl.ascx" />
+    <Content Include="Program\CSSD\CSSDRequest\CSSDRequestEntryQuickPickCtl.ascx" />
+    <Content Include="Program\CSSD\Master\CSSDPackageDetailEntryCtl.ascx" />
+    <Content Include="Program\CSSD\Master\CSSDPackageEntry.aspx" />
+    <Content Include="Program\CSSD\Master\CSSDPackageList.aspx" />
+    <Content Include="Program\Information\LocationItemExpiredDateInfoCtl.ascx" />
+    <Content Include="Program\Master\ItemProduct\ItemProductPlanningEntryEditCtl.ascx" />
+    <Content Include="Program\Master\ItemProduct\ItemPlanningList.aspx" />
+    <Content Include="Program\Master\ItemProduct\ItemAlternateUnitCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseOrder\CopyPurchaseRequestItemCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseOrder\StockInformationPerLocationCtl.ascx" />
+    <Content Include="Program\Information\ItemNonMovement.aspx" />
+    <Content Include="Program\Information\MovementDt\ChargesInfoCtl.ascx" />
+    <Content Include="Program\Information\MovementDt\AdjustmentInfoCtl.ascx" />
+    <Content Include="Program\Information\MovementDt\ConsumptionInfoCtl.ascx" />
+    <Content Include="Program\Information\MovementDt\PriceChangedInfoCtl.ascx" />
+    <Content Include="Program\Information\MovementDt\PurchaseReceiveVoidInfoCtl.ascx" />
+    <Content Include="Program\Information\MovementDt\ReturnInfoCtl.ascx" />
+    <Content Include="Program\Information\OutstandingPurchaseReceive.aspx" />
+    <Content Include="Program\Information\OutstandingPurchaseReceiveCtl.ascx" />
+    <Content Include="Program\Information\OutstandingItemDistributionConfirmedCtl.ascx" />
+    <Content Include="Program\Information\DrugsStock.aspx" />
+    <Content Include="Program\Information\OutstandingItemDistributionConfirmed.aspx" />
+    <Content Include="Program\Information\PurchaseOrderInfoDetailCtl2.ascx" />
+    <Content Include="Program\Information\OutstandingPurchaseOrder.aspx" />
+    <Content Include="Program\Information\PurchaseReceiveInfoDetailCtl.ascx" />
+    <Content Include="Program\Information\QtyDetailInfo\ItemExpiredCtl.ascx" />
+    <Content Include="Program\Information\QtyDetailInfo\ItemOnHandAllQtyDtCtl.ascx" />
+    <Content Include="Program\Master\ItemProduct\ItemAlternateUnitHistoryCtl.ascx" />
+    <Content Include="Program\Procurement\DirectPurchase\DirectPurchaseReturnApprovalDetailList.aspx" />
+    <Content Include="Program\Procurement\DirectPurchase\DirectPurchaseReturnApprovalList.aspx" />
+    <Content Include="Program\Procurement\DirectPurchase\DirectPurchaseApprovalList.aspx" />
+    <Content Include="Program\Procurement\DirectPurchase\DirectPurchaseApprovalDetailList.aspx" />
+    <Content Include="Program\Procurement\PurchaseOrder\PurchaseOrderTermEntryCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseOrder\PurchaseOrderCloseAndNewCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseOrder\PurchaseOrderCloseCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseOrder\PurchaseOrderCloseNewCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseRequest\PurchaseRequestSearchCtl2.ascx" />
+    <Content Include="Program\Procurement\PurchaseRequest\PurchaseRequestDtReceivedClosedCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseRequest\LinkingInventoryInformationCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseRequest\PurchaseRequestEntryPackageCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseRequest\ReorderPurchaseRequest2.aspx" />
+    <Content Include="Program\Procurement\PurchaseRequest\PurchaseRequestRegistrationCtl.ascx" />
+    <Content Include="Program\Warehouse\Donation\DonationReturn\DonationReturn.aspx" />
+    <Content Include="Program\Warehouse\ItemDistribution\ItemDistributionExpiredDateCtl.ascx" />
+    <Content Include="Program\Warehouse\ItemDistribution\ItemDistributionVerificationDetailCtl.ascx" />
+    <Content Include="Program\Warehouse\ItemDistribution\ItemDistributionVerificationList.aspx" />
+    <Content Include="Program\Warehouse\ItemOrder\ItemRequestClosedCtl.ascx" />
+    <Content Include="Program\Warehouse\ItemOrder\ItemRequestDeclineCtl.ascx" />
+    <Content Include="Program\Warehouse\ItemOrder\PrintApprovedItemRequestList.aspx" />
+    <Content Include="Program\Warehouse\ItemOrder\ItemRequestPurchaseRequestCtl.ascx" />
+    <Content Include="Program\Warehouse\ItemOrder\ItemRequestConsumptionCtl.ascx" />
+    <Content Include="Program\Warehouse\ItemOrder\CopyItemRequestCtl.ascx" />
+    <Content Include="Program\Warehouse\PurchaseReceiveVoid\PurchaseReceiveVoidV2List.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\PurchaseReceivedDtOrderCtl.ascx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveApprovalInfoPORFullCtl.ascx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\DonationApprovalList.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\RecalculatePurchaseReceive.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\PhysicalCountChecked\PhysicalCountUncheckedDetailList.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\PhysicalCountChecked\PhysicalCountUncheckedList.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\PhysicalCountChecked\PhysicalCountCheckedDetailList.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\PhysicalCountChecked\PhysicalCountCheckedList.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveApprovalList2.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveInvoiceInfoCtl.ascx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveInvoiceInfoWithoutPriceCtl.ascx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\RecalculatePurchaseReceiveDetailCtl.ascx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\UpdateTaxInfoCtl.ascx" />
+    <Content Include="Program\Consignment\ConsignmentReturn\ConsignmentReturn.aspx" />
+    <Content Include="Program\Consignment\ConsignmentReturn\ConsignmentReturnApprovalDetailList.aspx" />
+    <Content Include="Program\Consignment\ConsignmentReturn\ConsignmentReturnApprovalList.aspx" />
+    <Content Include="Program\Information\DrugsStockPerItem.aspx" />
+    <Content Include="Program\Information\PurchaseReceiveExpiredDtCtl.ascx" />
+    <Content Include="Program\Information\ItemBalanceInformation.aspx" />
+    <Content Include="Program\Information\ItemDistributionInfoPerItemDetailCtl.ascx" />
+    <Content Include="Program\Information\MovementDt\DistributionInfoCtl.ascx" />
+    <Content Include="Program\Information\MovementDt\PurchaseReceiveInfoCtl.ascx" />
+    <Content Include="Program\Information\OutstandingItemRequest.aspx" />
+    <Content Include="Program\Information\OutstandingItemRequestCtl.ascx" />
+    <Content Include="Program\Information\QtyDetailInfo\DeliveryQtyDtCtl.ascx" />
+    <Content Include="Program\Information\QtyDetailInfo\DistributionInQtyDtCtl.ascx" />
+    <Content Include="Program\Information\QtyDetailInfo\ItemRequestQtyDtCtl.ascx" />
+    <Content Include="Program\Information\QtyDetailInfo\PurchaseOrderQtyDtCtl.ascx" />
+    <Content Include="Program\Information\QtyDetailInfo\PurchaseReceiveQtyDtCtl.ascx" />
+    <Content Include="Program\Information\QtyDetailInfo\ItemPurchaseRequestQtyDtCtl.ascx" />
+    <Content Include="Program\Information\StockDetailInfoDtCtl.ascx" />
+    <Content Include="Program\Master\BinLocation\BinLocationEntry.aspx" />
+    <Content Include="Program\Master\BinLocation\BinLocationList.aspx" />
+    <Content Include="Program\Master\ItemProduct\ItemPriceHistoryDetailCtl.ascx" />
+    <Content Include="Program\Master\ItemProduct\InformationItemSupplierCtl.ascx" />
+    <Content Include="Program\Master\Location\LocationItemQuickPicksCtl.ascx" />
+    <Content Include="Program\Master\Location\LocationDetailListCtl.ascx" />
+    <Content Include="Program\Procurement\DirectPurchase\DirectPurchaseQuickPicksCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseOrder\ApprovedPurchaseOrderList.aspx" />
+    <Content Include="Program\Procurement\PurchaseOrder\PurchaseOrderSupplierInfoCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseOrder\PurchaseOrderReopenList.aspx" />
+    <Content Include="Program\Procurement\PurchaseOrder\PrintPurchaseOrderList.aspx" />
+    <Content Include="Program\Procurement\PurchaseOrder\PurchaseOrderDtReceivedCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseOrder\PurchaseOrderVoid\PurchaseOrderVoidDetailList.aspx" />
+    <Content Include="Program\Procurement\PurchaseOrder\PurchaseOrderVoid\PurchaseOrderVoidList.aspx" />
+    <Content Include="Program\Procurement\PurchaseRequest\PurchaseRequestDtReceivedHeaderCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseRequest\PurchaseRequestDtReceivedDeclineCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseRequest\ItemDetailInfoCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseRequest\PurchaseRequestDtReceivedDetailCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseRequest\PurchaseRequestQtyDtCtl.ascx" />
+    <Content Include="Program\Procurement\RecalculateMinMax\RecalculateMinMax.aspx" />
+    <Content Include="Program\Warehouse\Donation\DonationReceive\DonationReceive.aspx" />
+    <Content Include="Program\Warehouse\Donation\DonationReceive\DonationReceiveApprovalDetailList.aspx" />
+    <Content Include="Program\Warehouse\Donation\DonationReceive\DonationReceiveApprovalList.aspx" />
+    <Content Include="Program\Warehouse\Donation\DonationReceive\DonationReceiveConfirmedDetailList.aspx" />
+    <Content Include="Program\Warehouse\Donation\DonationReceive\DonationReceiveConfirmedList.aspx" />
+    <Content Include="Program\Warehouse\Donation\DonationReceive\DonationReceiveDetailCtl.ascx" />
+    <Content Include="Program\Information\StockDetailInfo.aspx" />
+    <Content Include="Program\Information\ItemDistributionInfoPerItem.aspx" />
+    <Content Include="Program\Information\PurchaseReceiveInfoPerSupplier.aspx" />
+    <Content Include="Program\Information\PurchaseReceiveInfoPerItem.aspx" />
+    <Content Include="Program\Information\ItemDistributionInfo.aspx" />
+    <Content Include="Program\Information\DrugExpiredDate.aspx" />
+    <Content Include="Program\Information\PivotOptionCtl.ascx" />
+    <Content Include="Program\Information\PivotDrugsAnalysis.aspx" />
+    <Content Include="Program\Master\ItemBOM\ItemBOMList.aspx" />
+    <Content Include="Program\Master\ItemBOM\ItemBOMEntryCtl.ascx" />
+    <Content Include="Program\Master\ItemProduct\ItemDrugDetailCtl.ascx" />
+    <Content Include="Program\Master\ItemProduct\ItemDrugList.aspx" />
+    <Content Include="Program\Master\ItemProduct\ItemProductEntry.aspx" />
+    <Content Include="Program\Master\ItemProduct\ItemProductList.aspx" />
+    <Content Include="Program\Master\ItemProduct\ItemProductPlanningEntryCtl.ascx" />
+    <Content Include="Program\Master\LocationPermissionStatus\LocationPermissionEntry.aspx" />
+    <Content Include="Program\Master\LocationPermissionStatus\LocationPermissionList.aspx" />
+    <Content Include="Program\Master\Location\LocationItemList.aspx" />
+    <Content Include="Program\Master\Location\LocationEntry.aspx" />
+    <Content Include="Program\Master\Location\LocationItemEntryCtl.ascx" />
+    <Content Include="Program\Master\Location\LocationList.aspx" />
+    <Content Include="Program\Master\Location\LocationItemExpiredDateCtl.ascx" />
+    <Content Include="Program\Master\Manufacturer\ManufacturerEntry.aspx" />
+    <Content Include="Program\Master\Manufacturer\ManufacturerList.aspx" />
+    <Content Include="Program\Master\ProductBrand\ProductBrandEntry.aspx" />
+    <Content Include="Program\Master\ProductBrand\ProductBrandList.aspx" />
+    <Content Include="Program\Procurement\PurchaseRequest\PurchaseRequestSearchCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseRequest\ApprovedPurchaseRequestAddToPOCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseRequest\ApprovedPurchaseRequestDetail2.aspx" />
+    <Content Include="Program\Procurement\PurchaseRequest\PurchaseRequestQuickPicksCtl.ascx" />
+    <Content Include="Program\Warehouse\ItemDistribution\ReorderItemDistributionList.aspx" />
+    <Content Include="Program\Warehouse\ItemDistribution\ReorderItemDistributionList2.aspx" />
+    <Content Include="Program\Warehouse\ItemOrder\ItemRequestDistributionCtl.ascx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\ExpiredDatePerItemCtl.ascx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\UpdateEDAndBatchNoCtl.ascx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\UpdateReferenceInfoCtl.ascx" />
+    <Content Include="Program\Consignment\ConsignmentReceive\UpdateTaxInfoConsignmentCtl.ascx" />
+    <Content Include="Program\Warehouse\PurchaseReturnVoid\PurchaseReturnDtCtl.ascx" />
+    <Content Include="Program\Warehouse\PurchaseReturnVoid\PurchaseReturnVoidList.aspx" />
+    <Content Include="Program\Warehouse\ItemDistribution\ItemDistributionQuickPicksCtl.ascx" />
+    <Content Include="Program\Warehouse\ItemOrder\ItemRequestQuickPicksCtl.ascx" />
+    <Content Include="Program\Warehouse\ItemOrder\ItemRequestProcessedDtCtl.ascx" />
+    <Content Include="Program\Warehouse\ItemProduction\ItemProductionEntry.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReceiveVoid\PurchaseReceiveDtCtl.ascx" />
+    <Content Include="Program\Warehouse\PurchaseReceiveVoid\PurchaseReceiveVoidList.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\PurchaseReceive.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReplacement\PurchaseReplacementEntry.aspx" />
+    <Content Include="Program\Warehouse\CreditNote\CreditNoteEntry.aspx" />
+    <Content Include="Program\Procurement\DirectPurchase\DirectPurchase.aspx" />
+    <Content Include="Program\Procurement\DirectPurchase\DirectPurchaseReturn.aspx" />
+    <Content Include="Program\Procurement\DirectPurchase\DirectPurchaseReturnEntryCtl.ascx" />
+    <Content Include="Program\Procurement\PurchaseOrder\ApprovedPurchaseOrderDetailList.aspx" />
+    <Content Include="Program\Procurement\PurchaseOrder\PurchaseOrder.aspx" />
+    <Content Include="Program\Procurement\PurchaseOrder\PurchaseOrderApprovalList.aspx" />
+    <Content Include="Program\Procurement\PurchaseOrder\PurchaseOrderApprovalDetailList.aspx" />
+    <Content Include="Program\Procurement\PurchaseOrder\ReorderPurchaseOrder.aspx" />
+    <Content Include="Program\Procurement\PurchaseRequest\ApprovedPurchaseRequestDetailList.aspx" />
+    <Content Include="Program\Procurement\PurchaseRequest\ApprovedPurchaseRequestList.aspx" />
+    <Content Include="Program\Procurement\PurchaseRequest\PurchaseRequestApprovalDetailList.aspx" />
+    <Content Include="Program\Procurement\PurchaseRequest\PurchaseRequestApprovalList.aspx" />
+    <Content Include="Program\Procurement\PurchaseRequest\ReorderPurchaseRequest.aspx" />
+    <Content Include="Program\Warehouse\ItemDistribution\ItemDistributionApprovalDetailList.aspx" />
+    <Content Include="Program\Warehouse\ItemDistribution\ItemDistributionApprovalList.aspx" />
+    <Content Include="Program\Warehouse\ItemDistribution\ItemDistributionConfirmedList.aspx" />
+    <Content Include="Program\Warehouse\ItemDistribution\ItemDistributionConfirmedDetailCtl.ascx" />
+    <Content Include="Program\Warehouse\ItemOrder\ApprovedItemRequestList.aspx" />
+    <Content Include="Program\Warehouse\ItemOrder\ApprovedItemRequestDetailList.aspx" />
+    <Content Include="Program\Warehouse\ItemOrder\ReorderItemRequest.aspx" />
+    <Content Include="Program\Warehouse\ItemOrder\ItemRequest.aspx" />
+    <Content Include="Program\Warehouse\ItemOrder\ItemRequestApprovalDetailList.aspx" />
+    <Content Include="Program\Warehouse\ItemOrder\ItemRequestApprovalList.aspx" />
+    <Content Include="Program\Procurement\PurchaseRequest\PurchaseRequest.aspx" />
+    <Content Include="Program\Warehouse\ItemDistribution\ItemDistribution.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveConfirmedDetailList.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveConfirmedList.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveApprovalList.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveDetailCtl.ascx" />
+    <Content Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveApprovalDetailList.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReturn\PurchaseReturnInfoCtl.ascx" />
+    <Content Include="Program\Warehouse\PurchaseReturn\PurchaseReturnApprovalDetailList.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReturn\PurchaseReturnApprovalList.aspx" />
+    <Content Include="Program\Warehouse\PurchaseReturn\PurchaseReturn.aspx" />
+    <Content Include="Program\Warehouse\StockAdjustment\Approval\StockAdjustmentApprovalDetail.aspx" />
+    <Content Include="Program\Warehouse\StockAdjustment\Approval\StockAdjustmentApprovalList.aspx" />
+    <Content Include="Program\Warehouse\StockAdjustment\StockAdjustmentEntry.aspx" />
+    <Content Include="Program\Warehouse\StockConsumption\Approval\StockConsumptionApprovalDetail.aspx" />
+    <Content Include="Program\Warehouse\StockConsumption\Approval\StockConsumptionApprovalList.aspx" />
+    <Content Include="Program\Warehouse\StockConsumption\StockConsumptionQuickPicksCtl.ascx" />
+    <Content Include="Program\Warehouse\StockConsumption\StockConsumptionEntry.aspx" />
+    <Content Include="Program\Warehouse\StockTaking\StockTakingApprovalDetailList.aspx" />
+    <Content Include="Program\Warehouse\StockTaking\StockTakingApprovalList.aspx" />
+    <Content Include="Program\Warehouse\StockTaking\StockTakingV3Entry.aspx" />
+    <Content Include="Program\Warehouse\StockTaking\StockTakingV2Entry.aspx" />
+    <Content Include="Program\Warehouse\StockTaking\StockTakingExpiredDateCtl.ascx" />
+    <Content Include="Program\Warehouse\StockTaking\StockTakingEntry.aspx" />
+    <Content Include="Program\Warehouse\SupplierCreditNoteVoid\SupplierCreditNoteVoidList.aspx" />
+    <Content Include="qisicon.ico" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\ChangePasswordCtl.ascx.cs">
+      <Link>SharedLibs\Controls\ChangePasswordCtl.ascx.cs</Link>
+      <DependentUpon>ChangePasswordCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\ChangePasswordCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\ChangePasswordCtl.ascx.designer.cs</Link>
+      <DependentUpon>ChangePasswordCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\DeleteConfirmationCtl.ascx.cs">
+      <Link>SharedLibs\Controls\DeleteConfirmationCtl.ascx.cs</Link>
+      <DependentUpon>DeleteConfirmationCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\DeleteConfirmationCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\DeleteConfirmationCtl.ascx.designer.cs</Link>
+      <DependentUpon>DeleteConfirmationCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\EditPatientPhotoCtl.ascx.cs">
+      <Link>SharedLibs\Controls\EditPatientPhotoCtl.ascx.cs</Link>
+      <DependentUpon>EditPatientPhotoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\EditPatientPhotoCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\EditPatientPhotoCtl.ascx.designer.cs</Link>
+      <DependentUpon>EditPatientPhotoCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralCtl.ascx.cs">
+      <Link>SharedLibs\Controls\GeneralCtl.ascx.cs</Link>
+      <DependentUpon>GeneralCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\GeneralCtl.ascx.designer.cs</Link>
+      <DependentUpon>GeneralCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralDashboardCtl.ascx.cs">
+      <Link>SharedLibs\Controls\GeneralDashboardCtl.ascx.cs</Link>
+      <DependentUpon>GeneralDashboardCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\GeneralDashboardCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\GeneralDashboardCtl.ascx.designer.cs</Link>
+      <DependentUpon>GeneralDashboardCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MatrixCtl.ascx.cs">
+      <Link>SharedLibs\Controls\MatrixCtl.ascx.cs</Link>
+      <DependentUpon>MatrixCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MatrixCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\MatrixCtl.ascx.designer.cs</Link>
+      <DependentUpon>MatrixCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MatrixWithParameterCtl.ascx.cs">
+      <Link>SharedLibs\Controls\MatrixWithParameterCtl.ascx.cs</Link>
+      <DependentUpon>MatrixWithParameterCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MatrixWithParameterCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\MatrixWithParameterCtl.ascx.designer.cs</Link>
+      <DependentUpon>MatrixWithParameterCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MPEntryPopupCtl.ascx.cs">
+      <Link>SharedLibs\Controls\MPEntryPopupCtl.ascx.cs</Link>
+      <DependentUpon>MPEntryPopupCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MPEntryPopupCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\MPEntryPopupCtl.ascx.designer.cs</Link>
+      <DependentUpon>MPEntryPopupCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MPProcessPopupCtl.ascx.cs">
+      <Link>SharedLibs\Controls\MPProcessPopupCtl.ascx.cs</Link>
+      <DependentUpon>MPProcessPopupCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\MPProcessPopupCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\MPProcessPopupCtl.ascx.designer.cs</Link>
+      <DependentUpon>MPProcessPopupCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientBannerCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PatientBannerCtl.ascx.cs</Link>
+      <DependentUpon>PatientBannerCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PatientBannerCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PatientBannerCtl.ascx.designer.cs</Link>
+      <DependentUpon>PatientBannerCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PeriodeCtl.ascx.cs">
+      <Link>SharedLibs\Controls\PeriodeCtl.ascx.cs</Link>
+      <DependentUpon>PeriodeCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Controls\PeriodeCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\PeriodeCtl.ascx.designer.cs</Link>
+      <DependentUpon>PeriodeCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Default.aspx.cs">
+      <Link>SharedLibs\Default.aspx.cs</Link>
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Default.aspx.designer.cs">
+      <Link>SharedLibs\Default.aspx.designer.cs</Link>
+      <DependentUpon>Default.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\ErrorPage.aspx.cs">
+      <Link>SharedLibs\ErrorPage.aspx.cs</Link>
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\ErrorPage.aspx.designer.cs">
+      <Link>SharedLibs\ErrorPage.aspx.designer.cs</Link>
+      <DependentUpon>ErrorPage.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Login.aspx.cs">
+      <Link>SharedLibs\Login.aspx.cs</Link>
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Login.aspx.designer.cs">
+      <Link>SharedLibs\Login.aspx.designer.cs</Link>
+      <DependentUpon>Login.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBase.Master.cs">
+      <Link>SharedLibs\MasterPage\MPBase.Master.cs</Link>
+      <DependentUpon>MPBase.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBase.Master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPBase.Master.designer.cs</Link>
+      <DependentUpon>MPBase.Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBaseDashboard.Master.cs">
+      <Link>SharedLibs\MasterPage\MPBaseDashboard.Master.cs</Link>
+      <DependentUpon>MPBaseDashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBaseDashboard.Master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPBaseDashboard.Master.designer.cs</Link>
+      <DependentUpon>MPBaseDashboard.Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPEntry.master.cs">
+      <Link>SharedLibs\MasterPage\MPEntry.master.cs</Link>
+      <DependentUpon>MPEntry.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPEntry.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPEntry.master.designer.cs</Link>
+      <DependentUpon>MPEntry.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPList.master.cs">
+      <Link>SharedLibs\MasterPage\MPList.master.cs</Link>
+      <DependentUpon>MPList.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPList.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPList.master.designer.cs</Link>
+      <DependentUpon>MPList.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPListEntry.master.cs">
+      <Link>SharedLibs\MasterPage\MPListEntry.master.cs</Link>
+      <DependentUpon>MPListEntry.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPListEntry.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPListEntry.master.designer.cs</Link>
+      <DependentUpon>MPListEntry.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMain.master.cs">
+      <Link>SharedLibs\MasterPage\MPMain.master.cs</Link>
+      <DependentUpon>MPMain.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMain.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPMain.master.designer.cs</Link>
+      <DependentUpon>MPMain.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMainDashboard.master.cs">
+      <Link>SharedLibs\MasterPage\MPMainDashboard.master.cs</Link>
+      <DependentUpon>MPMainDashboard.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMainDashboard.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPMainDashboard.master.designer.cs</Link>
+      <DependentUpon>MPMainDashboard.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx.master.cs">
+      <Link>SharedLibs\MasterPage\MPTrx.master.cs</Link>
+      <DependentUpon>MPTrx.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPTrx.master.designer.cs</Link>
+      <DependentUpon>MPTrx.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx2.master.cs">
+      <Link>SharedLibs\MasterPage\MPTrx2.master.cs</Link>
+      <DependentUpon>MPTrx2.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx2.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPTrx2.master.designer.cs</Link>
+      <DependentUpon>MPTrx2.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx4.master.cs">
+      <Link>SharedLibs\MasterPage\MPTrx4.master.cs</Link>
+      <DependentUpon>MPTrx4.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx4.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPTrx4.master.designer.cs</Link>
+      <DependentUpon>MPTrx4.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Controls\CSSDHandoverCtl.ascx.cs">
+      <Link>SharedLibs\Controls\CSSDHandoverCtl.ascx.cs</Link>
+      <DependentUpon>CSSDHandoverCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Controls\CSSDHandoverCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\CSSDHandoverCtl.ascx.designer.cs</Link>
+      <DependentUpon>CSSDHandoverCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Controls\DocumentNotesCtl.ascx.cs">
+      <Link>SharedLibs\Program\Controls\DocumentNotesCtl.ascx.cs</Link>
+      <DependentUpon>DocumentNotesCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Controls\DocumentNotesCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Controls\DocumentNotesCtl.ascx.designer.cs</Link>
+      <DependentUpon>DocumentNotesCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Information\TariffEstimation.aspx.cs">
+      <Link>SharedLibs\Program\Information\TariffEstimation.aspx.cs</Link>
+      <DependentUpon>TariffEstimation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Information\TariffEstimation.aspx.designer.cs">
+      <Link>SharedLibs\Program\Information\TariffEstimation.aspx.designer.cs</Link>
+      <DependentUpon>TariffEstimation.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Main.aspx.cs">
+      <Link>SharedLibs\Program\Main.aspx.cs</Link>
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Main.aspx.designer.cs">
+      <Link>SharedLibs\Program\Main.aspx.designer.cs</Link>
+      <DependentUpon>Main.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupClassEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupClassEntryCtl.ascx.cs</Link>
+      <DependentUpon>GLMappingItemGroupClassEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupClassEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupClassEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>GLMappingItemGroupClassEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupEntryCtl.ascx.cs</Link>
+      <DependentUpon>GLMappingItemGroupEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>GLMappingItemGroupEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupServiceUnitEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupServiceUnitEntryCtl.ascx.cs</Link>
+      <DependentUpon>GLMappingItemGroupServiceUnitEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupServiceUnitEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLMappingItemGroupServiceUnitEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>GLMappingItemGroupServiceUnitEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupClassServiceUnitEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupClassServiceUnitEntryCtl.ascx.cs</Link>
+      <DependentUpon>GLRevenueItemGroupClassServiceUnitEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupClassServiceUnitEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupClassServiceUnitEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>GLRevenueItemGroupClassServiceUnitEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitbyClassbyParamedicCtl.ascx.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitbyClassbyParamedicCtl.ascx.cs</Link>
+      <DependentUpon>GLRevenueItemGroupServiceUnitbyClassbyParamedicCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitbyClassbyParamedicCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitbyClassbyParamedicCtl.ascx.designer.cs</Link>
+      <DependentUpon>GLRevenueItemGroupServiceUnitbyClassbyParamedicCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicCtl.ascx.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicCtl.ascx.cs</Link>
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicCtl.ascx.designer.cs</Link>
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitbyClassbyParamedicCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitbyClassCtl.ascx.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitbyClassCtl.ascx.cs</Link>
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitbyClassCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitbyClassCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitbyClassCtl.ascx.designer.cs</Link>
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitbyClassCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitCtl.ascx.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitCtl.ascx.cs</Link>
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitBySourceUnitCtl.ascx.designer.cs</Link>
+      <DependentUpon>GLRevenueItemGroupServiceUnitBySourceUnitCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitCustomerLineCtl.ascx.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitCustomerLineCtl.ascx.cs</Link>
+      <DependentUpon>GLRevenueItemGroupServiceUnitCustomerLineCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitCustomerLineCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\GLRevenue\GLRevenueItemGroupServiceUnitCustomerLineCtl.ascx.designer.cs</Link>
+      <DependentUpon>GLRevenueItemGroupServiceUnitCustomerLineCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\ItemGroupDetailListCtl.ascx.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\ItemGroupDetailListCtl.ascx.cs</Link>
+      <DependentUpon>ItemGroupDetailListCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\ItemGroupDetailListCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\ItemGroupDetailListCtl.ascx.designer.cs</Link>
+      <DependentUpon>ItemGroupDetailListCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\ItemGroupEntry.aspx.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\ItemGroupEntry.aspx.cs</Link>
+      <DependentUpon>ItemGroupEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\ItemGroupEntry.aspx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\ItemGroupEntry.aspx.designer.cs</Link>
+      <DependentUpon>ItemGroupEntry.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\ItemGroupList.aspx.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\ItemGroupList.aspx.cs</Link>
+      <DependentUpon>ItemGroupList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\ItemGroupList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\ItemGroupList.aspx.designer.cs</Link>
+      <DependentUpon>ItemGroupList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\ItemGroupListV2.aspx.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\ItemGroupListV2.aspx.cs</Link>
+      <DependentUpon>ItemGroupListV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemGroup\ItemGroupListV2.aspx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemGroup\ItemGroupListV2.aspx.designer.cs</Link>
+      <DependentUpon>ItemGroupListV2.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterClassEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterClassEntryCtl.ascx.cs</Link>
+      <DependentUpon>GLMappingItemMasterClassEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterClassEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterClassEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>GLMappingItemMasterClassEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterEntryCtl.ascx.cs</Link>
+      <DependentUpon>GLMappingItemMasterEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>GLMappingItemMasterEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterServiceUnitEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterServiceUnitEntryCtl.ascx.cs</Link>
+      <DependentUpon>GLMappingItemMasterServiceUnitEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterServiceUnitEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemService\GLRevenue\GLMappingItemMasterServiceUnitEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>GLMappingItemMasterServiceUnitEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemService\ItemServiceItemCostEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Master\ItemService\ItemServiceItemCostEntryCtl.ascx.cs</Link>
+      <DependentUpon>ItemServiceItemCostEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ItemService\ItemServiceItemCostEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Master\ItemService\ItemServiceItemCostEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>ItemServiceItemCostEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ProductLine\ProductLineEntry.aspx.cs">
+      <Link>SharedLibs\Program\Master\ProductLine\ProductLineEntry.aspx.cs</Link>
+      <DependentUpon>ProductLineEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ProductLine\ProductLineEntry.aspx.designer.cs">
+      <Link>SharedLibs\Program\Master\ProductLine\ProductLineEntry.aspx.designer.cs</Link>
+      <DependentUpon>ProductLineEntry.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ProductLine\ProductLineList.aspx.cs">
+      <Link>SharedLibs\Program\Master\ProductLine\ProductLineList.aspx.cs</Link>
+      <DependentUpon>ProductLineList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\ProductLine\ProductLineList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Master\ProductLine\ProductLineList.aspx.designer.cs</Link>
+      <DependentUpon>ProductLineList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\StandardCode\StandardCodeEntry.aspx.cs">
+      <Link>SharedLibs\Program\Master\StandardCode\StandardCodeEntry.aspx.cs</Link>
+      <DependentUpon>StandardCodeEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\StandardCode\StandardCodeEntry.aspx.designer.cs">
+      <Link>SharedLibs\Program\Master\StandardCode\StandardCodeEntry.aspx.designer.cs</Link>
+      <DependentUpon>StandardCodeEntry.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\StandardCode\StandardCodeList.aspx.cs">
+      <Link>SharedLibs\Program\Master\StandardCode\StandardCodeList.aspx.cs</Link>
+      <DependentUpon>StandardCodeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\StandardCode\StandardCodeList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Master\StandardCode\StandardCodeList.aspx.designer.cs</Link>
+      <DependentUpon>StandardCodeList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\Supplier\SupplierEntry.aspx.cs">
+      <Link>SharedLibs\Program\Master\Supplier\SupplierEntry.aspx.cs</Link>
+      <DependentUpon>SupplierEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\Supplier\SupplierEntry.aspx.designer.cs">
+      <Link>SharedLibs\Program\Master\Supplier\SupplierEntry.aspx.designer.cs</Link>
+      <DependentUpon>SupplierEntry.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\Supplier\SupplierItemEntryCtl.ascx.cs">
+      <Link>SharedLibs\Program\Master\Supplier\SupplierItemEntryCtl.ascx.cs</Link>
+      <DependentUpon>SupplierItemEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\Supplier\SupplierItemEntryCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Master\Supplier\SupplierItemEntryCtl.ascx.designer.cs</Link>
+      <DependentUpon>SupplierItemEntryCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\Supplier\SupplierList.aspx.cs">
+      <Link>SharedLibs\Program\Master\Supplier\SupplierList.aspx.cs</Link>
+      <DependentUpon>SupplierList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Master\Supplier\SupplierList.aspx.designer.cs">
+      <Link>SharedLibs\Program\Master\Supplier\SupplierList.aspx.designer.cs</Link>
+      <DependentUpon>SupplierList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\SystemTool\Bridging\Centerback\SendInventoryNotificationCtl.ascx.cs">
+      <Link>SharedLibs\Program\Module\SystemTool\Bridging\Centerback\SendInventoryNotificationCtl.ascx.cs</Link>
+      <DependentUpon>SendInventoryNotificationCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\Module\SystemTool\Bridging\Centerback\SendInventoryNotificationCtl.ascx.designer.cs">
+      <Link>SharedLibs\Program\Module\SystemTool\Bridging\Centerback\SendInventoryNotificationCtl.ascx.designer.cs</Link>
+      <DependentUpon>SendInventoryNotificationCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\RemoteLogon.aspx.cs">
+      <Link>SharedLibs\Program\RemoteLogon.aspx.cs</Link>
+      <DependentUpon>RemoteLogon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\RemoteLogon.aspx.designer.cs">
+      <Link>SharedLibs\Program\RemoteLogon.aspx.designer.cs</Link>
+      <DependentUpon>RemoteLogon.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportPage.aspx.cs">
+      <Link>SharedLibs\Program\ReportPage.aspx.cs</Link>
+      <DependentUpon>ReportPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportPage.aspx.designer.cs">
+      <Link>SharedLibs\Program\ReportPage.aspx.designer.cs</Link>
+      <DependentUpon>ReportPage.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewer.aspx.cs">
+      <Link>SharedLibs\Program\ReportViewer.aspx.cs</Link>
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewer.aspx.designer.cs">
+      <Link>SharedLibs\Program\ReportViewer.aspx.designer.cs</Link>
+      <DependentUpon>ReportViewer.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewerExport.aspx.cs">
+      <Link>SharedLibs\Program\ReportViewerExport.aspx.cs</Link>
+      <DependentUpon>ReportViewerExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Program\ReportViewerExport.aspx.designer.cs">
+      <Link>SharedLibs\Program\ReportViewerExport.aspx.designer.cs</Link>
+      <DependentUpon>ReportViewerExport.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Service\InventoryService.asmx.cs">
+      <Link>SharedLibs\Service\InventoryService.asmx.cs</Link>
+      <DependentUpon>InventoryService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Service\MedinfrasAPIService.asmx.cs">
+      <Link>SharedLibs\Service\MedinfrasAPIService.asmx.cs</Link>
+      <DependentUpon>MedinfrasAPIService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Service\MethodService.asmx.cs">
+      <Link>SharedLibs\Service\MethodService.asmx.cs</Link>
+      <DependentUpon>MethodService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Service\signalR\BroadcastMessage.cs">
+      <Link>SharedLibs\Service\signalR\BroadcastMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Service\UploadPatientPhoto.aspx.cs">
+      <Link>SharedLibs\Service\UploadPatientPhoto.aspx.cs</Link>
+      <DependentUpon>UploadPatientPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Service\UploadPatientPhoto.aspx.designer.cs">
+      <Link>SharedLibs\Service\UploadPatientPhoto.aspx.designer.cs</Link>
+      <DependentUpon>UploadPatientPhoto.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Medinfras.Web.CommonLibs\Service\UploadService.asmx.cs">
+      <Link>SharedLibs\Service\UploadService.asmx.cs</Link>
+      <DependentUpon>UploadService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderAddFromReceiveCtl.ascx.cs">
+      <DependentUpon>ConsignmentOrderAddFromReceiveCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderAddFromReceiveCtl.ascx.designer.cs">
+      <DependentUpon>ConsignmentOrderAddFromReceiveCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderReopenList.aspx.cs">
+      <DependentUpon>ConsignmentOrderReopenList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderReopenList.aspx.designer.cs">
+      <DependentUpon>ConsignmentOrderReopenList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderAddFromReceivePerItemCtl.ascx.cs">
+      <DependentUpon>ConsignmentOrderAddFromReceivePerItemCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderAddFromReceivePerItemCtl.ascx.designer.cs">
+      <DependentUpon>ConsignmentOrderAddFromReceivePerItemCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderInvoiceInfoCtl.ascx.cs">
+      <DependentUpon>ConsignmentOrderInvoiceInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderInvoiceInfoCtl.ascx.designer.cs">
+      <DependentUpon>ConsignmentOrderInvoiceInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\ConsignmentReceive.aspx.cs">
+      <DependentUpon>ConsignmentReceive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\ConsignmentReceive.aspx.designer.cs">
+      <DependentUpon>ConsignmentReceive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveApprovalDetailList.aspx.cs">
+      <DependentUpon>ConsignmentReceiveApprovalDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveApprovalDetailList.aspx.designer.cs">
+      <DependentUpon>ConsignmentReceiveApprovalDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveApprovalList.aspx.cs">
+      <DependentUpon>ConsignmentReceiveApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveApprovalList.aspx.designer.cs">
+      <DependentUpon>ConsignmentReceiveApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveConfirmedDetailList.aspx.cs">
+      <DependentUpon>ConsignmentReceiveConfirmedDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveConfirmedDetailList.aspx.designer.cs">
+      <DependentUpon>ConsignmentReceiveConfirmedDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveConfirmedList.aspx.cs">
+      <DependentUpon>ConsignmentReceiveConfirmedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveConfirmedList.aspx.designer.cs">
+      <DependentUpon>ConsignmentReceiveConfirmedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveDetailCtl.ascx.cs">
+      <DependentUpon>ConsignmentReceiveDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveDetailCtl.ascx.designer.cs">
+      <DependentUpon>ConsignmentReceiveDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ApprovedConsignmentOrderDetailList.aspx.cs">
+      <DependentUpon>ApprovedConsignmentOrderDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ApprovedConsignmentOrderDetailList.aspx.designer.cs">
+      <DependentUpon>ApprovedConsignmentOrderDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ApprovedConsignmentOrderList.aspx.cs">
+      <DependentUpon>ApprovedConsignmentOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ApprovedConsignmentOrderList.aspx.designer.cs">
+      <DependentUpon>ApprovedConsignmentOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ConsignmentOrder.aspx.cs">
+      <DependentUpon>ConsignmentOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ConsignmentOrder.aspx.designer.cs">
+      <DependentUpon>ConsignmentOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderApprovalDetailList.aspx.cs">
+      <DependentUpon>ConsignmentOrderApprovalDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderApprovalDetailList.aspx.designer.cs">
+      <DependentUpon>ConsignmentOrderApprovalDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderApprovalList.aspx.cs">
+      <DependentUpon>ConsignmentOrderApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentOrder\ConsignmentOrderApprovalList.aspx.designer.cs">
+      <DependentUpon>ConsignmentOrderApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveQuickPicksCtl.ascx.cs">
+      <DependentUpon>ConsignmentReceiveQuickPicksCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\ConsignmentReceiveQuickPicksCtl.ascx.designer.cs">
+      <DependentUpon>ConsignmentReceiveQuickPicksCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\UpdateReferenceInfoConsignmentCtl.ascx.cs">
+      <DependentUpon>UpdateReferenceInfoConsignmentCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\UpdateReferenceInfoConsignmentCtl.ascx.designer.cs">
+      <DependentUpon>UpdateReferenceInfoConsignmentCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDDistribution\CSSDDistributionConfirmationList.aspx.cs">
+      <DependentUpon>CSSDDistributionConfirmationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDDistribution\CSSDDistributionConfirmationList.aspx.designer.cs">
+      <DependentUpon>CSSDDistributionConfirmationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDDistribution\CSSDDistributionDetailListCtl.ascx.cs">
+      <DependentUpon>CSSDDistributionDetailListCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDDistribution\CSSDDistributionDetailListCtl.ascx.designer.cs">
+      <DependentUpon>CSSDDistributionDetailListCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDDistribution\CSSDDistributionList.aspx.cs">
+      <DependentUpon>CSSDDistributionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDDistribution\CSSDDistributionList.aspx.designer.cs">
+      <DependentUpon>CSSDDistributionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDDistribution\CSSDServiceDetailListCtl.ascx.cs">
+      <DependentUpon>CSSDServiceDetailListCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDDistribution\CSSDServiceDetailListCtl.ascx.designer.cs">
+      <DependentUpon>CSSDServiceDetailListCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDProcess\CSSDConsumptionEntryQuickPickCtl.ascx.cs">
+      <DependentUpon>CSSDConsumptionEntryQuickPickCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDProcess\CSSDConsumptionEntryQuickPickCtl.ascx.designer.cs">
+      <DependentUpon>CSSDConsumptionEntryQuickPickCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDProcess\CSSDHandoverConfirmationDetailInfoList.aspx.cs">
+      <DependentUpon>CSSDHandoverConfirmationDetailInfoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDProcess\CSSDHandoverConfirmationDetailInfoList.aspx.designer.cs">
+      <DependentUpon>CSSDHandoverConfirmationDetailInfoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDProcess\CSSDHandoverConfirmationDetailList.aspx.cs">
+      <DependentUpon>CSSDHandoverConfirmationDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDProcess\CSSDHandoverConfirmationDetailList.aspx.designer.cs">
+      <DependentUpon>CSSDHandoverConfirmationDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDProcess\CSSDHandoverConfirmationList.aspx.cs">
+      <DependentUpon>CSSDHandoverConfirmationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDProcess\CSSDHandoverConfirmationList.aspx.designer.cs">
+      <DependentUpon>CSSDHandoverConfirmationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDProcess\CSSDProcessList.aspx.cs">
+      <DependentUpon>CSSDProcessList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDProcess\CSSDProcessList.aspx.designer.cs">
+      <DependentUpon>CSSDProcessList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDProcess\CSSDStorageDetailList.aspx.cs">
+      <DependentUpon>CSSDStorageDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDProcess\CSSDStorageDetailList.aspx.designer.cs">
+      <DependentUpon>CSSDStorageDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDProcess\CSSDStorageList.aspx.cs">
+      <DependentUpon>CSSDStorageList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDProcess\CSSDStorageList.aspx.designer.cs">
+      <DependentUpon>CSSDStorageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDRequest\CSSDHandoverList.aspx.cs">
+      <DependentUpon>CSSDHandoverList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDRequest\CSSDHandoverList.aspx.designer.cs">
+      <DependentUpon>CSSDHandoverList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDRequest\CSSDRequestEntry.aspx.cs">
+      <DependentUpon>CSSDRequestEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDRequest\CSSDRequestEntry.aspx.designer.cs">
+      <DependentUpon>CSSDRequestEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDRequest\CSSDRequestEntryPackageQuickPickCtl.ascx.cs">
+      <DependentUpon>CSSDRequestEntryPackageQuickPickCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDRequest\CSSDRequestEntryPackageQuickPickCtl.ascx.designer.cs">
+      <DependentUpon>CSSDRequestEntryPackageQuickPickCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDRequest\CSSDRequestEntryQuickPickCtl.ascx.cs">
+      <DependentUpon>CSSDRequestEntryQuickPickCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\CSSDRequest\CSSDRequestEntryQuickPickCtl.ascx.designer.cs">
+      <DependentUpon>CSSDRequestEntryQuickPickCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\Master\CSSDPackageDetailEntryCtl.ascx.cs">
+      <DependentUpon>CSSDPackageDetailEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\Master\CSSDPackageDetailEntryCtl.ascx.designer.cs">
+      <DependentUpon>CSSDPackageDetailEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\Master\CSSDPackageEntry.aspx.cs">
+      <DependentUpon>CSSDPackageEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\Master\CSSDPackageEntry.aspx.designer.cs">
+      <DependentUpon>CSSDPackageEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CSSD\Master\CSSDPackageList.aspx.cs">
+      <DependentUpon>CSSDPackageList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CSSD\Master\CSSDPackageList.aspx.designer.cs">
+      <DependentUpon>CSSDPackageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\LocationItemExpiredDateInfoCtl.ascx.cs">
+      <DependentUpon>LocationItemExpiredDateInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\LocationItemExpiredDateInfoCtl.ascx.designer.cs">
+      <DependentUpon>LocationItemExpiredDateInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemProductPlanningEntryEditCtl.ascx.cs">
+      <DependentUpon>ItemProductPlanningEntryEditCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemProductPlanningEntryEditCtl.ascx.designer.cs">
+      <DependentUpon>ItemProductPlanningEntryEditCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemPlanningList.aspx.cs">
+      <DependentUpon>ItemPlanningList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemPlanningList.aspx.designer.cs">
+      <DependentUpon>ItemPlanningList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemAlternateUnitCtl.ascx.cs">
+      <DependentUpon>ItemAlternateUnitCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemAlternateUnitCtl.ascx.designer.cs">
+      <DependentUpon>ItemAlternateUnitCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\CopyPurchaseRequestItemCtl.ascx.cs">
+      <DependentUpon>CopyPurchaseRequestItemCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\CopyPurchaseRequestItemCtl.ascx.designer.cs">
+      <DependentUpon>CopyPurchaseRequestItemCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\StockInformationPerLocationCtl.ascx.cs">
+      <DependentUpon>StockInformationPerLocationCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\StockInformationPerLocationCtl.ascx.designer.cs">
+      <DependentUpon>StockInformationPerLocationCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\ItemNonMovement.aspx.cs">
+      <DependentUpon>ItemNonMovement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\ItemNonMovement.aspx.designer.cs">
+      <DependentUpon>ItemNonMovement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\ChargesInfoCtl.ascx.cs">
+      <DependentUpon>ChargesInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\ChargesInfoCtl.ascx.designer.cs">
+      <DependentUpon>ChargesInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\AdjustmentInfoCtl.ascx.cs">
+      <DependentUpon>AdjustmentInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\AdjustmentInfoCtl.ascx.designer.cs">
+      <DependentUpon>AdjustmentInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\ConsumptionInfoCtl.ascx.cs">
+      <DependentUpon>ConsumptionInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\ConsumptionInfoCtl.ascx.designer.cs">
+      <DependentUpon>ConsumptionInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\PriceChangedInfoCtl.ascx.cs">
+      <DependentUpon>PriceChangedInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\PriceChangedInfoCtl.ascx.designer.cs">
+      <DependentUpon>PriceChangedInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\PurchaseReceiveVoidInfoCtl.ascx.cs">
+      <DependentUpon>PurchaseReceiveVoidInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\PurchaseReceiveVoidInfoCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseReceiveVoidInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\ReturnInfoCtl.ascx.cs">
+      <DependentUpon>ReturnInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\ReturnInfoCtl.ascx.designer.cs">
+      <DependentUpon>ReturnInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\OutstandingPurchaseReceive.aspx.cs">
+      <DependentUpon>OutstandingPurchaseReceive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\OutstandingPurchaseReceive.aspx.designer.cs">
+      <DependentUpon>OutstandingPurchaseReceive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\OutstandingPurchaseReceiveCtl.ascx.cs">
+      <DependentUpon>OutstandingPurchaseReceiveCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\OutstandingPurchaseReceiveCtl.ascx.designer.cs">
+      <DependentUpon>OutstandingPurchaseReceiveCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\OutstandingItemDistributionConfirmedCtl.ascx.cs">
+      <DependentUpon>OutstandingItemDistributionConfirmedCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\OutstandingItemDistributionConfirmedCtl.ascx.designer.cs">
+      <DependentUpon>OutstandingItemDistributionConfirmedCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\OutstandingItemDistributionConfirmed.aspx.cs">
+      <DependentUpon>OutstandingItemDistributionConfirmed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\OutstandingItemDistributionConfirmed.aspx.designer.cs">
+      <DependentUpon>OutstandingItemDistributionConfirmed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\DrugsStock.aspx.cs">
+      <DependentUpon>DrugsStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\DrugsStock.aspx.designer.cs">
+      <DependentUpon>DrugsStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\PurchaseOrderInfoDetailCtl2.ascx.cs">
+      <DependentUpon>PurchaseOrderInfoDetailCtl2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\PurchaseOrderInfoDetailCtl2.ascx.designer.cs">
+      <DependentUpon>PurchaseOrderInfoDetailCtl2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\OutstandingPurchaseOrder.aspx.cs">
+      <DependentUpon>OutstandingPurchaseOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\OutstandingPurchaseOrder.aspx.designer.cs">
+      <DependentUpon>OutstandingPurchaseOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\PurchaseReceiveInfoDetailCtl.ascx.cs">
+      <DependentUpon>PurchaseReceiveInfoDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\PurchaseReceiveInfoDetailCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseReceiveInfoDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\ItemExpiredCtl.ascx.cs">
+      <DependentUpon>ItemExpiredCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\ItemExpiredCtl.ascx.designer.cs">
+      <DependentUpon>ItemExpiredCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\ItemOnHandAllQtyDtCtl.ascx.cs">
+      <DependentUpon>ItemOnHandAllQtyDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\ItemOnHandAllQtyDtCtl.ascx.designer.cs">
+      <DependentUpon>ItemOnHandAllQtyDtCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemAlternateUnitHistoryCtl.ascx.cs">
+      <DependentUpon>ItemAlternateUnitHistoryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemAlternateUnitHistoryCtl.ascx.designer.cs">
+      <DependentUpon>ItemAlternateUnitHistoryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchaseReturnApprovalDetailList.aspx.cs">
+      <DependentUpon>DirectPurchaseReturnApprovalDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchaseReturnApprovalDetailList.aspx.designer.cs">
+      <DependentUpon>DirectPurchaseReturnApprovalDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchaseReturnApprovalList.aspx.cs">
+      <DependentUpon>DirectPurchaseReturnApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchaseReturnApprovalList.aspx.designer.cs">
+      <DependentUpon>DirectPurchaseReturnApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchaseApprovalList.aspx.cs">
+      <DependentUpon>DirectPurchaseApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchaseApprovalList.aspx.designer.cs">
+      <DependentUpon>DirectPurchaseApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchaseApprovalDetailList.aspx.cs">
+      <DependentUpon>DirectPurchaseApprovalDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchaseApprovalDetailList.aspx.designer.cs">
+      <DependentUpon>DirectPurchaseApprovalDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderTermEntryCtl.ascx.cs">
+      <DependentUpon>PurchaseOrderTermEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderTermEntryCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseOrderTermEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderCloseAndNewCtl.ascx.cs">
+      <DependentUpon>PurchaseOrderCloseAndNewCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderCloseAndNewCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseOrderCloseAndNewCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderCloseCtl.ascx.cs">
+      <DependentUpon>PurchaseOrderCloseCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderCloseCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseOrderCloseCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderCloseNewCtl.ascx.cs">
+      <DependentUpon>PurchaseOrderCloseNewCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderCloseNewCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseOrderCloseNewCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestSearchCtl2.ascx.cs">
+      <DependentUpon>PurchaseRequestSearchCtl2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestSearchCtl2.ascx.designer.cs">
+      <DependentUpon>PurchaseRequestSearchCtl2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestDtReceivedClosedCtl.ascx.cs">
+      <DependentUpon>PurchaseRequestDtReceivedClosedCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestDtReceivedClosedCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseRequestDtReceivedClosedCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\LinkingInventoryInformationCtl.ascx.cs">
+      <DependentUpon>LinkingInventoryInformationCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\LinkingInventoryInformationCtl.ascx.designer.cs">
+      <DependentUpon>LinkingInventoryInformationCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestEntryPackageCtl.ascx.cs">
+      <DependentUpon>PurchaseRequestEntryPackageCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestEntryPackageCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseRequestEntryPackageCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\ReorderPurchaseRequest2.aspx.cs">
+      <DependentUpon>ReorderPurchaseRequest2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\ReorderPurchaseRequest2.aspx.designer.cs">
+      <DependentUpon>ReorderPurchaseRequest2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestRegistrationCtl.ascx.cs">
+      <DependentUpon>PurchaseRequestRegistrationCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestRegistrationCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseRequestRegistrationCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\Donation\DonationReturn\DonationReturn.aspx.cs">
+      <DependentUpon>DonationReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\Donation\DonationReturn\DonationReturn.aspx.designer.cs">
+      <DependentUpon>DonationReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionExpiredDateCtl.ascx.cs">
+      <DependentUpon>ItemDistributionExpiredDateCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionExpiredDateCtl.ascx.designer.cs">
+      <DependentUpon>ItemDistributionExpiredDateCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionVerificationDetailCtl.ascx.cs">
+      <DependentUpon>ItemDistributionVerificationDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionVerificationDetailCtl.ascx.designer.cs">
+      <DependentUpon>ItemDistributionVerificationDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionVerificationList.aspx.cs">
+      <DependentUpon>ItemDistributionVerificationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionVerificationList.aspx.designer.cs">
+      <DependentUpon>ItemDistributionVerificationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestClosedCtl.ascx.cs">
+      <DependentUpon>ItemRequestClosedCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestClosedCtl.ascx.designer.cs">
+      <DependentUpon>ItemRequestClosedCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestDeclineCtl.ascx.cs">
+      <DependentUpon>ItemRequestDeclineCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestDeclineCtl.ascx.designer.cs">
+      <DependentUpon>ItemRequestDeclineCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\PrintApprovedItemRequestList.aspx.cs">
+      <DependentUpon>PrintApprovedItemRequestList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\PrintApprovedItemRequestList.aspx.designer.cs">
+      <DependentUpon>PrintApprovedItemRequestList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestPurchaseRequestCtl.ascx.cs">
+      <DependentUpon>ItemRequestPurchaseRequestCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestPurchaseRequestCtl.ascx.designer.cs">
+      <DependentUpon>ItemRequestPurchaseRequestCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestConsumptionCtl.ascx.cs">
+      <DependentUpon>ItemRequestConsumptionCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestConsumptionCtl.ascx.designer.cs">
+      <DependentUpon>ItemRequestConsumptionCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\CopyItemRequestCtl.ascx.cs">
+      <DependentUpon>CopyItemRequestCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\CopyItemRequestCtl.ascx.designer.cs">
+      <DependentUpon>CopyItemRequestCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceiveVoid\PurchaseReceiveVoidV2List.aspx.cs">
+      <DependentUpon>PurchaseReceiveVoidV2List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceiveVoid\PurchaseReceiveVoidV2List.aspx.designer.cs">
+      <DependentUpon>PurchaseReceiveVoidV2List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceivedDtOrderCtl.ascx.cs">
+      <DependentUpon>PurchaseReceivedDtOrderCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceivedDtOrderCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseReceivedDtOrderCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveApprovalInfoPORFullCtl.ascx.cs">
+      <DependentUpon>PurchaseReceiveApprovalInfoPORFullCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveApprovalInfoPORFullCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseReceiveApprovalInfoPORFullCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\DonationApprovalList.aspx.cs">
+      <DependentUpon>DonationApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\DonationApprovalList.aspx.designer.cs">
+      <DependentUpon>DonationApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\RecalculatePurchaseReceive.aspx.cs">
+      <DependentUpon>RecalculatePurchaseReceive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\RecalculatePurchaseReceive.aspx.designer.cs">
+      <DependentUpon>RecalculatePurchaseReceive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PhysicalCountChecked\PhysicalCountUncheckedDetailList.aspx.cs">
+      <DependentUpon>PhysicalCountUncheckedDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PhysicalCountChecked\PhysicalCountUncheckedDetailList.aspx.designer.cs">
+      <DependentUpon>PhysicalCountUncheckedDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PhysicalCountChecked\PhysicalCountUncheckedList.aspx.cs">
+      <DependentUpon>PhysicalCountUncheckedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PhysicalCountChecked\PhysicalCountUncheckedList.aspx.designer.cs">
+      <DependentUpon>PhysicalCountUncheckedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PhysicalCountChecked\PhysicalCountCheckedDetailList.aspx.cs">
+      <DependentUpon>PhysicalCountCheckedDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PhysicalCountChecked\PhysicalCountCheckedDetailList.aspx.designer.cs">
+      <DependentUpon>PhysicalCountCheckedDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PhysicalCountChecked\PhysicalCountCheckedList.aspx.cs">
+      <DependentUpon>PhysicalCountCheckedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PhysicalCountChecked\PhysicalCountCheckedList.aspx.designer.cs">
+      <DependentUpon>PhysicalCountCheckedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveApprovalList2.aspx.cs">
+      <DependentUpon>PurchaseReceiveApprovalList2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveApprovalList2.aspx.designer.cs">
+      <DependentUpon>PurchaseReceiveApprovalList2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveInvoiceInfoCtl.ascx.cs">
+      <DependentUpon>PurchaseReceiveInvoiceInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveInvoiceInfoCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseReceiveInvoiceInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveInvoiceInfoWithoutPriceCtl.ascx.cs">
+      <DependentUpon>PurchaseReceiveInvoiceInfoWithoutPriceCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveInvoiceInfoWithoutPriceCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseReceiveInvoiceInfoWithoutPriceCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\RecalculatePurchaseReceiveDetailCtl.ascx.cs">
+      <DependentUpon>RecalculatePurchaseReceiveDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\RecalculatePurchaseReceiveDetailCtl.ascx.designer.cs">
+      <DependentUpon>RecalculatePurchaseReceiveDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\UpdateTaxInfoCtl.ascx.cs">
+      <DependentUpon>UpdateTaxInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\UpdateTaxInfoCtl.ascx.designer.cs">
+      <DependentUpon>UpdateTaxInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReturn\ConsignmentReturn.aspx.cs">
+      <DependentUpon>ConsignmentReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReturn\ConsignmentReturn.aspx.designer.cs">
+      <DependentUpon>ConsignmentReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReturn\ConsignmentReturnApprovalDetailList.aspx.cs">
+      <DependentUpon>ConsignmentReturnApprovalDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReturn\ConsignmentReturnApprovalDetailList.aspx.designer.cs">
+      <DependentUpon>ConsignmentReturnApprovalDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReturn\ConsignmentReturnApprovalList.aspx.cs">
+      <DependentUpon>ConsignmentReturnApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReturn\ConsignmentReturnApprovalList.aspx.designer.cs">
+      <DependentUpon>ConsignmentReturnApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\DrugsStockPerItem.aspx.cs">
+      <DependentUpon>DrugsStockPerItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\DrugsStockPerItem.aspx.designer.cs">
+      <DependentUpon>DrugsStockPerItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\PurchaseReceiveExpiredDtCtl.ascx.cs">
+      <DependentUpon>PurchaseReceiveExpiredDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\PurchaseReceiveExpiredDtCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseReceiveExpiredDtCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\ItemBalanceInformation.aspx.cs">
+      <DependentUpon>ItemBalanceInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\ItemBalanceInformation.aspx.designer.cs">
+      <DependentUpon>ItemBalanceInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\ItemDistributionInfoPerItemDetailCtl.ascx.cs">
+      <DependentUpon>ItemDistributionInfoPerItemDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\ItemDistributionInfoPerItemDetailCtl.ascx.designer.cs">
+      <DependentUpon>ItemDistributionInfoPerItemDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\DistributionInfoCtl.ascx.cs">
+      <DependentUpon>DistributionInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\DistributionInfoCtl.ascx.designer.cs">
+      <DependentUpon>DistributionInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\PurchaseReceiveInfoCtl.ascx.cs">
+      <DependentUpon>PurchaseReceiveInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\MovementDt\PurchaseReceiveInfoCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseReceiveInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\OutstandingItemRequest.aspx.cs">
+      <DependentUpon>OutstandingItemRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\OutstandingItemRequest.aspx.designer.cs">
+      <DependentUpon>OutstandingItemRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\OutstandingItemRequestCtl.ascx.cs">
+      <DependentUpon>OutstandingItemRequestCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\OutstandingItemRequestCtl.ascx.designer.cs">
+      <DependentUpon>OutstandingItemRequestCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\DeliveryQtyDtCtl.ascx.cs">
+      <DependentUpon>DeliveryQtyDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\DeliveryQtyDtCtl.ascx.designer.cs">
+      <DependentUpon>DeliveryQtyDtCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\DistributionInQtyDtCtl.ascx.cs">
+      <DependentUpon>DistributionInQtyDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\DistributionInQtyDtCtl.ascx.designer.cs">
+      <DependentUpon>DistributionInQtyDtCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\ItemRequestQtyDtCtl.ascx.cs">
+      <DependentUpon>ItemRequestQtyDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\ItemRequestQtyDtCtl.ascx.designer.cs">
+      <DependentUpon>ItemRequestQtyDtCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\PurchaseOrderQtyDtCtl.ascx.cs">
+      <DependentUpon>PurchaseOrderQtyDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\PurchaseOrderQtyDtCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseOrderQtyDtCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\PurchaseReceiveQtyDtCtl.ascx.cs">
+      <DependentUpon>PurchaseReceiveQtyDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\PurchaseReceiveQtyDtCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseReceiveQtyDtCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\ItemPurchaseRequestQtyDtCtl.ascx.cs">
+      <DependentUpon>ItemPurchaseRequestQtyDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\QtyDetailInfo\ItemPurchaseRequestQtyDtCtl.ascx.designer.cs">
+      <DependentUpon>ItemPurchaseRequestQtyDtCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\StockDetailInfoDtCtl.ascx.cs">
+      <DependentUpon>StockDetailInfoDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\StockDetailInfoDtCtl.ascx.designer.cs">
+      <DependentUpon>StockDetailInfoDtCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\BinLocation\BinLocationEntry.aspx.cs">
+      <DependentUpon>BinLocationEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\BinLocation\BinLocationEntry.aspx.designer.cs">
+      <DependentUpon>BinLocationEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\BinLocation\BinLocationList.aspx.cs">
+      <DependentUpon>BinLocationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\BinLocation\BinLocationList.aspx.designer.cs">
+      <DependentUpon>BinLocationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemPriceHistoryDetailCtl.ascx.cs">
+      <DependentUpon>ItemPriceHistoryDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemPriceHistoryDetailCtl.ascx.designer.cs">
+      <DependentUpon>ItemPriceHistoryDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\InformationItemSupplierCtl.ascx.cs">
+      <DependentUpon>InformationItemSupplierCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\InformationItemSupplierCtl.ascx.designer.cs">
+      <DependentUpon>InformationItemSupplierCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Location\LocationItemQuickPicksCtl.ascx.cs">
+      <DependentUpon>LocationItemQuickPicksCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Location\LocationItemQuickPicksCtl.ascx.designer.cs">
+      <DependentUpon>LocationItemQuickPicksCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Location\LocationDetailListCtl.ascx.cs">
+      <DependentUpon>LocationDetailListCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Location\LocationDetailListCtl.ascx.designer.cs">
+      <DependentUpon>LocationDetailListCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchaseQuickPicksCtl.ascx.cs">
+      <DependentUpon>DirectPurchaseQuickPicksCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchaseQuickPicksCtl.ascx.designer.cs">
+      <DependentUpon>DirectPurchaseQuickPicksCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\ApprovedPurchaseOrderList.aspx.cs">
+      <DependentUpon>ApprovedPurchaseOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\ApprovedPurchaseOrderList.aspx.designer.cs">
+      <DependentUpon>ApprovedPurchaseOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderSupplierInfoCtl.ascx.cs">
+      <DependentUpon>PurchaseOrderSupplierInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderSupplierInfoCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseOrderSupplierInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderReopenList.aspx.cs">
+      <DependentUpon>PurchaseOrderReopenList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderReopenList.aspx.designer.cs">
+      <DependentUpon>PurchaseOrderReopenList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PrintPurchaseOrderList.aspx.cs">
+      <DependentUpon>PrintPurchaseOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PrintPurchaseOrderList.aspx.designer.cs">
+      <DependentUpon>PrintPurchaseOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderDtReceivedCtl.ascx.cs">
+      <DependentUpon>PurchaseOrderDtReceivedCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderDtReceivedCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseOrderDtReceivedCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderVoid\PurchaseOrderVoidDetailList.aspx.cs">
+      <DependentUpon>PurchaseOrderVoidDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderVoid\PurchaseOrderVoidDetailList.aspx.designer.cs">
+      <DependentUpon>PurchaseOrderVoidDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderVoid\PurchaseOrderVoidList.aspx.cs">
+      <DependentUpon>PurchaseOrderVoidList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderVoid\PurchaseOrderVoidList.aspx.designer.cs">
+      <DependentUpon>PurchaseOrderVoidList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestDtReceivedHeaderCtl.ascx.cs">
+      <DependentUpon>PurchaseRequestDtReceivedHeaderCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestDtReceivedHeaderCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseRequestDtReceivedHeaderCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestDtReceivedDeclineCtl.ascx.cs">
+      <DependentUpon>PurchaseRequestDtReceivedDeclineCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestDtReceivedDeclineCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseRequestDtReceivedDeclineCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\ItemDetailInfoCtl.ascx.cs">
+      <DependentUpon>ItemDetailInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\ItemDetailInfoCtl.ascx.designer.cs">
+      <DependentUpon>ItemDetailInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestDtReceivedDetailCtl.ascx.cs">
+      <DependentUpon>PurchaseRequestDtReceivedDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestDtReceivedDetailCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseRequestDtReceivedDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestQtyDtCtl.ascx.cs">
+      <DependentUpon>PurchaseRequestQtyDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestQtyDtCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseRequestQtyDtCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\RecalculateMinMax\RecalculateMinMax.aspx.cs">
+      <DependentUpon>RecalculateMinMax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\RecalculateMinMax\RecalculateMinMax.aspx.designer.cs">
+      <DependentUpon>RecalculateMinMax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\Donation\DonationReceive\DonationReceive.aspx.cs">
+      <DependentUpon>DonationReceive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\Donation\DonationReceive\DonationReceive.aspx.designer.cs">
+      <DependentUpon>DonationReceive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\Donation\DonationReceive\DonationReceiveApprovalDetailList.aspx.cs">
+      <DependentUpon>DonationReceiveApprovalDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\Donation\DonationReceive\DonationReceiveApprovalDetailList.aspx.designer.cs">
+      <DependentUpon>DonationReceiveApprovalDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\Donation\DonationReceive\DonationReceiveApprovalList.aspx.cs">
+      <DependentUpon>DonationReceiveApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\Donation\DonationReceive\DonationReceiveApprovalList.aspx.designer.cs">
+      <DependentUpon>DonationReceiveApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\Donation\DonationReceive\DonationReceiveConfirmedDetailList.aspx.cs">
+      <DependentUpon>DonationReceiveConfirmedDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\Donation\DonationReceive\DonationReceiveConfirmedDetailList.aspx.designer.cs">
+      <DependentUpon>DonationReceiveConfirmedDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\Donation\DonationReceive\DonationReceiveConfirmedList.aspx.cs">
+      <DependentUpon>DonationReceiveConfirmedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\Donation\DonationReceive\DonationReceiveConfirmedList.aspx.designer.cs">
+      <DependentUpon>DonationReceiveConfirmedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\Donation\DonationReceive\DonationReceiveDetailCtl.ascx.cs">
+      <DependentUpon>DonationReceiveDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\Donation\DonationReceive\DonationReceiveDetailCtl.ascx.designer.cs">
+      <DependentUpon>DonationReceiveDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\StockDetailInfo.aspx.cs">
+      <DependentUpon>StockDetailInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\StockDetailInfo.aspx.designer.cs">
+      <DependentUpon>StockDetailInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\ItemDistributionInfoPerItem.aspx.cs">
+      <DependentUpon>ItemDistributionInfoPerItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\ItemDistributionInfoPerItem.aspx.designer.cs">
+      <DependentUpon>ItemDistributionInfoPerItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\PurchaseReceiveInfoPerSupplier.aspx.cs">
+      <DependentUpon>PurchaseReceiveInfoPerSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\PurchaseReceiveInfoPerSupplier.aspx.designer.cs">
+      <DependentUpon>PurchaseReceiveInfoPerSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\PurchaseReceiveInfoPerItem.aspx.cs">
+      <DependentUpon>PurchaseReceiveInfoPerItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\PurchaseReceiveInfoPerItem.aspx.designer.cs">
+      <DependentUpon>PurchaseReceiveInfoPerItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\ItemDistributionInfo.aspx.cs">
+      <DependentUpon>ItemDistributionInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\ItemDistributionInfo.aspx.designer.cs">
+      <DependentUpon>ItemDistributionInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\DrugExpiredDate.aspx.cs">
+      <DependentUpon>DrugExpiredDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\DrugExpiredDate.aspx.designer.cs">
+      <DependentUpon>DrugExpiredDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\PivotOptionCtl.ascx.cs">
+      <DependentUpon>PivotOptionCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\PivotOptionCtl.ascx.designer.cs">
+      <DependentUpon>PivotOptionCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Information\PivotDrugsAnalysis.aspx.cs">
+      <DependentUpon>PivotDrugsAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Information\PivotDrugsAnalysis.aspx.designer.cs">
+      <DependentUpon>PivotDrugsAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ItemBOM\ItemBOMList.aspx.cs">
+      <DependentUpon>ItemBOMList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ItemBOM\ItemBOMList.aspx.designer.cs">
+      <DependentUpon>ItemBOMList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ItemBOM\ItemBOMEntryCtl.ascx.cs">
+      <DependentUpon>ItemBOMEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ItemBOM\ItemBOMEntryCtl.ascx.designer.cs">
+      <DependentUpon>ItemBOMEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemDrugDetailCtl.ascx.cs">
+      <DependentUpon>ItemDrugDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemDrugDetailCtl.ascx.designer.cs">
+      <DependentUpon>ItemDrugDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemDrugList.aspx.cs">
+      <DependentUpon>ItemDrugList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemDrugList.aspx.designer.cs">
+      <DependentUpon>ItemDrugList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemProductEntry.aspx.cs">
+      <DependentUpon>ItemProductEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemProductEntry.aspx.designer.cs">
+      <DependentUpon>ItemProductEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemProductList.aspx.cs">
+      <DependentUpon>ItemProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemProductList.aspx.designer.cs">
+      <DependentUpon>ItemProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemProductPlanningEntryCtl.ascx.cs">
+      <DependentUpon>ItemProductPlanningEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ItemProduct\ItemProductPlanningEntryCtl.ascx.designer.cs">
+      <DependentUpon>ItemProductPlanningEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\LocationPermissionStatus\LocationPermissionEntry.aspx.cs">
+      <DependentUpon>LocationPermissionEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\LocationPermissionStatus\LocationPermissionEntry.aspx.designer.cs">
+      <DependentUpon>LocationPermissionEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\LocationPermissionStatus\LocationPermissionList.aspx.cs">
+      <DependentUpon>LocationPermissionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\LocationPermissionStatus\LocationPermissionList.aspx.designer.cs">
+      <DependentUpon>LocationPermissionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Location\LocationItemList.aspx.cs">
+      <DependentUpon>LocationItemList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Location\LocationItemList.aspx.designer.cs">
+      <DependentUpon>LocationItemList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Location\LocationEntry.aspx.cs">
+      <DependentUpon>LocationEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Location\LocationEntry.aspx.designer.cs">
+      <DependentUpon>LocationEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Location\LocationItemEntryCtl.ascx.cs">
+      <DependentUpon>LocationItemEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Location\LocationItemEntryCtl.ascx.designer.cs">
+      <DependentUpon>LocationItemEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Location\LocationList.aspx.cs">
+      <DependentUpon>LocationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Location\LocationList.aspx.designer.cs">
+      <DependentUpon>LocationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Location\LocationItemExpiredDateCtl.ascx.cs">
+      <DependentUpon>LocationItemExpiredDateCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Location\LocationItemExpiredDateCtl.ascx.designer.cs">
+      <DependentUpon>LocationItemExpiredDateCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Manufacturer\ManufacturerEntry.aspx.cs">
+      <DependentUpon>ManufacturerEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Manufacturer\ManufacturerEntry.aspx.designer.cs">
+      <DependentUpon>ManufacturerEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\Manufacturer\ManufacturerList.aspx.cs">
+      <DependentUpon>ManufacturerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\Manufacturer\ManufacturerList.aspx.designer.cs">
+      <DependentUpon>ManufacturerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ProductBrand\ProductBrandEntry.aspx.cs">
+      <DependentUpon>ProductBrandEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ProductBrand\ProductBrandEntry.aspx.designer.cs">
+      <DependentUpon>ProductBrandEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Master\ProductBrand\ProductBrandList.aspx.cs">
+      <DependentUpon>ProductBrandList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Master\ProductBrand\ProductBrandList.aspx.designer.cs">
+      <DependentUpon>ProductBrandList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestSearchCtl.ascx.cs">
+      <DependentUpon>PurchaseRequestSearchCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestSearchCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseRequestSearchCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\ApprovedPurchaseRequestAddToPOCtl.ascx.cs">
+      <DependentUpon>ApprovedPurchaseRequestAddToPOCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\ApprovedPurchaseRequestAddToPOCtl.ascx.designer.cs">
+      <DependentUpon>ApprovedPurchaseRequestAddToPOCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\ApprovedPurchaseRequestDetail2.aspx.cs">
+      <DependentUpon>ApprovedPurchaseRequestDetail2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\ApprovedPurchaseRequestDetail2.aspx.designer.cs">
+      <DependentUpon>ApprovedPurchaseRequestDetail2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestQuickPicksCtl.ascx.cs">
+      <DependentUpon>PurchaseRequestQuickPicksCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestQuickPicksCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseRequestQuickPicksCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ReorderItemDistributionList.aspx.cs">
+      <DependentUpon>ReorderItemDistributionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ReorderItemDistributionList.aspx.designer.cs">
+      <DependentUpon>ReorderItemDistributionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ReorderItemDistributionList2.aspx.cs">
+      <DependentUpon>ReorderItemDistributionList2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ReorderItemDistributionList2.aspx.designer.cs">
+      <DependentUpon>ReorderItemDistributionList2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestDistributionCtl.ascx.cs">
+      <DependentUpon>ItemRequestDistributionCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestDistributionCtl.ascx.designer.cs">
+      <DependentUpon>ItemRequestDistributionCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\ExpiredDatePerItemCtl.ascx.cs">
+      <DependentUpon>ExpiredDatePerItemCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\ExpiredDatePerItemCtl.ascx.designer.cs">
+      <DependentUpon>ExpiredDatePerItemCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\UpdateEDAndBatchNoCtl.ascx.cs">
+      <DependentUpon>UpdateEDAndBatchNoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\UpdateEDAndBatchNoCtl.ascx.designer.cs">
+      <DependentUpon>UpdateEDAndBatchNoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\UpdateReferenceInfoCtl.ascx.cs">
+      <DependentUpon>UpdateReferenceInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\UpdateReferenceInfoCtl.ascx.designer.cs">
+      <DependentUpon>UpdateReferenceInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\UpdateTaxInfoConsignmentCtl.ascx.cs">
+      <DependentUpon>UpdateTaxInfoConsignmentCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Consignment\ConsignmentReceive\UpdateTaxInfoConsignmentCtl.ascx.designer.cs">
+      <DependentUpon>UpdateTaxInfoConsignmentCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReturnVoid\PurchaseReturnDtCtl.ascx.cs">
+      <DependentUpon>PurchaseReturnDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReturnVoid\PurchaseReturnDtCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseReturnDtCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReturnVoid\PurchaseReturnVoidList.aspx.cs">
+      <DependentUpon>PurchaseReturnVoidList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReturnVoid\PurchaseReturnVoidList.aspx.designer.cs">
+      <DependentUpon>PurchaseReturnVoidList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionQuickPicksCtl.ascx.cs">
+      <DependentUpon>ItemDistributionQuickPicksCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionQuickPicksCtl.ascx.designer.cs">
+      <DependentUpon>ItemDistributionQuickPicksCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestQuickPicksCtl.ascx.cs">
+      <DependentUpon>ItemRequestQuickPicksCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestQuickPicksCtl.ascx.designer.cs">
+      <DependentUpon>ItemRequestQuickPicksCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestProcessedDtCtl.ascx.cs">
+      <DependentUpon>ItemRequestProcessedDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestProcessedDtCtl.ascx.designer.cs">
+      <DependentUpon>ItemRequestProcessedDtCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemProduction\ItemProductionEntry.aspx.cs">
+      <DependentUpon>ItemProductionEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemProduction\ItemProductionEntry.aspx.designer.cs">
+      <DependentUpon>ItemProductionEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceiveVoid\PurchaseReceiveDtCtl.ascx.cs">
+      <DependentUpon>PurchaseReceiveDtCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceiveVoid\PurchaseReceiveDtCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseReceiveDtCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceiveVoid\PurchaseReceiveVoidList.aspx.cs">
+      <DependentUpon>PurchaseReceiveVoidList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceiveVoid\PurchaseReceiveVoidList.aspx.designer.cs">
+      <DependentUpon>PurchaseReceiveVoidList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceive.aspx.cs">
+      <DependentUpon>PurchaseReceive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceive.aspx.designer.cs">
+      <DependentUpon>PurchaseReceive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReplacement\PurchaseReplacementEntry.aspx.cs">
+      <DependentUpon>PurchaseReplacementEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReplacement\PurchaseReplacementEntry.aspx.designer.cs">
+      <DependentUpon>PurchaseReplacementEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\CreditNote\CreditNoteEntry.aspx.cs">
+      <DependentUpon>CreditNoteEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\CreditNote\CreditNoteEntry.aspx.designer.cs">
+      <DependentUpon>CreditNoteEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchase.aspx.cs">
+      <DependentUpon>DirectPurchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchase.aspx.designer.cs">
+      <DependentUpon>DirectPurchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchaseReturn.aspx.cs">
+      <DependentUpon>DirectPurchaseReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchaseReturn.aspx.designer.cs">
+      <DependentUpon>DirectPurchaseReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchaseReturnEntryCtl.ascx.cs">
+      <DependentUpon>DirectPurchaseReturnEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\DirectPurchase\DirectPurchaseReturnEntryCtl.ascx.designer.cs">
+      <DependentUpon>DirectPurchaseReturnEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\ApprovedPurchaseOrderDetailList.aspx.cs">
+      <DependentUpon>ApprovedPurchaseOrderDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\ApprovedPurchaseOrderDetailList.aspx.designer.cs">
+      <DependentUpon>ApprovedPurchaseOrderDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrder.aspx.cs">
+      <DependentUpon>PurchaseOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrder.aspx.designer.cs">
+      <DependentUpon>PurchaseOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderApprovalList.aspx.cs">
+      <DependentUpon>PurchaseOrderApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderApprovalList.aspx.designer.cs">
+      <DependentUpon>PurchaseOrderApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderApprovalDetailList.aspx.cs">
+      <DependentUpon>PurchaseOrderApprovalDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\PurchaseOrderApprovalDetailList.aspx.designer.cs">
+      <DependentUpon>PurchaseOrderApprovalDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\ReorderPurchaseOrder.aspx.cs">
+      <DependentUpon>ReorderPurchaseOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseOrder\ReorderPurchaseOrder.aspx.designer.cs">
+      <DependentUpon>ReorderPurchaseOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\ApprovedPurchaseRequestDetailList.aspx.cs">
+      <DependentUpon>ApprovedPurchaseRequestDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\ApprovedPurchaseRequestDetailList.aspx.designer.cs">
+      <DependentUpon>ApprovedPurchaseRequestDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\ApprovedPurchaseRequestList.aspx.cs">
+      <DependentUpon>ApprovedPurchaseRequestList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\ApprovedPurchaseRequestList.aspx.designer.cs">
+      <DependentUpon>ApprovedPurchaseRequestList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestApprovalDetailList.aspx.cs">
+      <DependentUpon>PurchaseRequestApprovalDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestApprovalDetailList.aspx.designer.cs">
+      <DependentUpon>PurchaseRequestApprovalDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestApprovalList.aspx.cs">
+      <DependentUpon>PurchaseRequestApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequestApprovalList.aspx.designer.cs">
+      <DependentUpon>PurchaseRequestApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\ReorderPurchaseRequest.aspx.cs">
+      <DependentUpon>ReorderPurchaseRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\ReorderPurchaseRequest.aspx.designer.cs">
+      <DependentUpon>ReorderPurchaseRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionApprovalDetailList.aspx.cs">
+      <DependentUpon>ItemDistributionApprovalDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionApprovalDetailList.aspx.designer.cs">
+      <DependentUpon>ItemDistributionApprovalDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionApprovalList.aspx.cs">
+      <DependentUpon>ItemDistributionApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionApprovalList.aspx.designer.cs">
+      <DependentUpon>ItemDistributionApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionConfirmedList.aspx.cs">
+      <DependentUpon>ItemDistributionConfirmedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionConfirmedList.aspx.designer.cs">
+      <DependentUpon>ItemDistributionConfirmedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionConfirmedDetailCtl.ascx.cs">
+      <DependentUpon>ItemDistributionConfirmedDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistributionConfirmedDetailCtl.ascx.designer.cs">
+      <DependentUpon>ItemDistributionConfirmedDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ApprovedItemRequestList.aspx.cs">
+      <DependentUpon>ApprovedItemRequestList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ApprovedItemRequestList.aspx.designer.cs">
+      <DependentUpon>ApprovedItemRequestList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ApprovedItemRequestDetailList.aspx.cs">
+      <DependentUpon>ApprovedItemRequestDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ApprovedItemRequestDetailList.aspx.designer.cs">
+      <DependentUpon>ApprovedItemRequestDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ReorderItemRequest.aspx.cs">
+      <DependentUpon>ReorderItemRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ReorderItemRequest.aspx.designer.cs">
+      <DependentUpon>ReorderItemRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequest.aspx.cs">
+      <DependentUpon>ItemRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequest.aspx.designer.cs">
+      <DependentUpon>ItemRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestApprovalDetailList.aspx.cs">
+      <DependentUpon>ItemRequestApprovalDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestApprovalDetailList.aspx.designer.cs">
+      <DependentUpon>ItemRequestApprovalDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestApprovalList.aspx.cs">
+      <DependentUpon>ItemRequestApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemOrder\ItemRequestApprovalList.aspx.designer.cs">
+      <DependentUpon>ItemRequestApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequest.aspx.cs">
+      <DependentUpon>PurchaseRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Procurement\PurchaseRequest\PurchaseRequest.aspx.designer.cs">
+      <DependentUpon>PurchaseRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistribution.aspx.cs">
+      <DependentUpon>ItemDistribution.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\ItemDistribution\ItemDistribution.aspx.designer.cs">
+      <DependentUpon>ItemDistribution.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveConfirmedDetailList.aspx.cs">
+      <DependentUpon>PurchaseReceiveConfirmedDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveConfirmedDetailList.aspx.designer.cs">
+      <DependentUpon>PurchaseReceiveConfirmedDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveConfirmedList.aspx.cs">
+      <DependentUpon>PurchaseReceiveConfirmedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveConfirmedList.aspx.designer.cs">
+      <DependentUpon>PurchaseReceiveConfirmedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveApprovalList.aspx.cs">
+      <DependentUpon>PurchaseReceiveApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveApprovalList.aspx.designer.cs">
+      <DependentUpon>PurchaseReceiveApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveDetailCtl.ascx.cs">
+      <DependentUpon>PurchaseReceiveDetailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveDetailCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseReceiveDetailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveApprovalDetailList.aspx.cs">
+      <DependentUpon>PurchaseReceiveApprovalDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReceive\PurchaseReceiveApprovalDetailList.aspx.designer.cs">
+      <DependentUpon>PurchaseReceiveApprovalDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReturn\PurchaseReturnInfoCtl.ascx.cs">
+      <DependentUpon>PurchaseReturnInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReturn\PurchaseReturnInfoCtl.ascx.designer.cs">
+      <DependentUpon>PurchaseReturnInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReturn\PurchaseReturnApprovalDetailList.aspx.cs">
+      <DependentUpon>PurchaseReturnApprovalDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReturn\PurchaseReturnApprovalDetailList.aspx.designer.cs">
+      <DependentUpon>PurchaseReturnApprovalDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReturn\PurchaseReturnApprovalList.aspx.cs">
+      <DependentUpon>PurchaseReturnApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReturn\PurchaseReturnApprovalList.aspx.designer.cs">
+      <DependentUpon>PurchaseReturnApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReturn\PurchaseReturn.aspx.cs">
+      <DependentUpon>PurchaseReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\PurchaseReturn\PurchaseReturn.aspx.designer.cs">
+      <DependentUpon>PurchaseReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockAdjustment\Approval\StockAdjustmentApprovalDetail.aspx.cs">
+      <DependentUpon>StockAdjustmentApprovalDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockAdjustment\Approval\StockAdjustmentApprovalDetail.aspx.designer.cs">
+      <DependentUpon>StockAdjustmentApprovalDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockAdjustment\Approval\StockAdjustmentApprovalList.aspx.cs">
+      <DependentUpon>StockAdjustmentApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockAdjustment\Approval\StockAdjustmentApprovalList.aspx.designer.cs">
+      <DependentUpon>StockAdjustmentApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockAdjustment\StockAdjustmentEntry.aspx.cs">
+      <DependentUpon>StockAdjustmentEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockAdjustment\StockAdjustmentEntry.aspx.designer.cs">
+      <DependentUpon>StockAdjustmentEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockConsumption\Approval\StockConsumptionApprovalDetail.aspx.cs">
+      <DependentUpon>StockConsumptionApprovalDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockConsumption\Approval\StockConsumptionApprovalDetail.aspx.designer.cs">
+      <DependentUpon>StockConsumptionApprovalDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockConsumption\Approval\StockConsumptionApprovalList.aspx.cs">
+      <DependentUpon>StockConsumptionApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockConsumption\Approval\StockConsumptionApprovalList.aspx.designer.cs">
+      <DependentUpon>StockConsumptionApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockConsumption\StockConsumptionQuickPicksCtl.ascx.cs">
+      <DependentUpon>StockConsumptionQuickPicksCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockConsumption\StockConsumptionQuickPicksCtl.ascx.designer.cs">
+      <DependentUpon>StockConsumptionQuickPicksCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockConsumption\StockConsumptionEntry.aspx.cs">
+      <DependentUpon>StockConsumptionEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockConsumption\StockConsumptionEntry.aspx.designer.cs">
+      <DependentUpon>StockConsumptionEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockTaking\StockTakingApprovalDetailList.aspx.cs">
+      <DependentUpon>StockTakingApprovalDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockTaking\StockTakingApprovalDetailList.aspx.designer.cs">
+      <DependentUpon>StockTakingApprovalDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockTaking\StockTakingApprovalList.aspx.cs">
+      <DependentUpon>StockTakingApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockTaking\StockTakingApprovalList.aspx.designer.cs">
+      <DependentUpon>StockTakingApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockTaking\StockTakingV3Entry.aspx.cs">
+      <DependentUpon>StockTakingV3Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockTaking\StockTakingV3Entry.aspx.designer.cs">
+      <DependentUpon>StockTakingV3Entry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockTaking\StockTakingV2Entry.aspx.cs">
+      <DependentUpon>StockTakingV2Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockTaking\StockTakingV2Entry.aspx.designer.cs">
+      <DependentUpon>StockTakingV2Entry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockTaking\StockTakingExpiredDateCtl.ascx.cs">
+      <DependentUpon>StockTakingExpiredDateCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockTaking\StockTakingExpiredDateCtl.ascx.designer.cs">
+      <DependentUpon>StockTakingExpiredDateCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockTaking\StockTakingEntry.aspx.cs">
+      <DependentUpon>StockTakingEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\StockTaking\StockTakingEntry.aspx.designer.cs">
+      <DependentUpon>StockTakingEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Warehouse\SupplierCreditNoteVoid\SupplierCreditNoteVoidList.aspx.cs">
+      <DependentUpon>SupplierCreditNoteVoidList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Warehouse\SupplierCreditNoteVoid\SupplierCreditNoteVoidList.aspx.designer.cs">
+      <DependentUpon>SupplierCreditNoteVoidList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\AppSetting.config">
+      <Link>AppSetting.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\ConnectionString.config">
+      <Link>ConnectionString.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBase.Master">
+      <Link>SharedLibs\MasterPage\MPBase.Master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPEntry.master">
+      <Link>SharedLibs\MasterPage\MPEntry.master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPList.master">
+      <Link>SharedLibs\MasterPage\MPList.master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPListEntry.master">
+      <Link>SharedLibs\MasterPage\MPListEntry.master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMain.master">
+      <Link>SharedLibs\MasterPage\MPMain.master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx.master">
+      <Link>SharedLibs\MasterPage\MPTrx.master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QIS.Data.Core\QIS.Data.Core.csproj">
+      <Project>{CAC7A3D3-E6BB-4C97-B728-B87D395EB688}</Project>
+      <Name>QIS.Data.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.Data.Service\QIS.Medinfras.Data.Service.csproj">
+      <Project>{E8019F76-DE58-43A7-984C-A1272D62EA45}</Project>
+      <Name>QIS.Medinfras.Data.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.ReportDesktop\QIS.Medinfras.ReportDesktop.csproj">
+      <Project>{9B194471-A1D2-47DF-A29A-D0BFA091489F}</Project>
+      <Name>QIS.Medinfras.ReportDesktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.Web.Common\QIS.Medinfras.Web.Common.csproj">
+      <Project>{12E5AAFD-04A7-4D8F-8840-C8CB4E0B23DC}</Project>
+      <Name>QIS.Medinfras.Web.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Medinfras.Web.Control\QIS.Medinfras.Web.CustomControl.csproj">
+      <Project>{A61E72CD-A2CE-42EF-BBD5-9657CC3C8E9E}</Project>
+      <Name>QIS.Medinfras.Web.CustomControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx2.master">
+      <Link>SharedLibs\MasterPage\MPTrx2.master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPBaseDashboard.Master">
+      <Link>SharedLibs\MasterPage\MPBaseDashboard.Master</Link>
+    </Content>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPMainDashboard.master">
+      <Link>SharedLibs\MasterPage\MPMainDashboard.master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Medinfras.Web.CommonLibs\MasterPage\MPTrx4.master">
+      <Link>SharedLibs\MasterPage\MPTrx4.master</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2970</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/medinfrasv2.1/ms_rspkjb_202403-01/Inventory</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>COPY "$(TargetDir)*.config" "$(ProjectDir)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

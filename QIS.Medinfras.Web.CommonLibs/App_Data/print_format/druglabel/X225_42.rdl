@@ -1,0 +1,27 @@
+^XA
+^LL800
+^PW640
+^LH10,10
+^FO70,10^CF0,25^FB500,1,0,C^FD{HealthcareName}^FS
+^FO50,40^GB520,1,2^FS
+^CF0,25
+^FO65,70^FD{PatientFullName} {Salutation}^FS
+^CF0,19
+^FO65,50^FD{PrescriptionNo}^FS
+^FO410,50^FD{PrescriptionDate}^FS
+^CF0,19
+^FO65,95^FD{MedicalNo}^FS
+^FO400,95^FDDOB:{DateOfBirth}^FS
+^CF0,19
+^FO65,115^FD{PhysicianName}^FS
+^FO400,115^FDUmur : {PatientAge}^FS
+^FO50,140^GB520,1,2^FS
+^CF0,27
+^FO65,150^FB500,7,^FD{cfIsUsedDispenseQty1} {ItemName}^FS
+^CF0,20
+^FO65,205^FD{MedicationRoute} {ConsumeMethod2}^FS
+^FO65,230^FD{cfCoenamRuleLabel} ^FS
+^FO65,255^FB500,7,^FD{MedicationAdministration}^FS
+^FO40,240
+^FO390,185^FDED:{ExpiredDate}^FS
+^XZ

@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- #Region IM010400 -->
+  <page menucode="IM010400">
+    <prints>
+    </prints>
+  </page>
+  <!-- #Region IM010500 -->
+  <page menucode="IM010500">
+    <prints>
+    </prints>
+  </page>
+  <!-- #Region IM010600 -->
+  <page menucode="IM010600">
+    <prints>
+    </prints>
+  </page>
+  <!-- #Region IM020102 -->
+  <page menucode="IM020102">
+    <tasks>
+      <!--<task code="purchaseRequestRegistration" title="Permintaan Pembelian Untuk Pasien" description="Permintaan Pembelian Untuk Pasien Rawat Inap" url="~/Program/Procurement/PurchaseRequest/PurchaseRequestRegistrationCtl.ascx" id="btnpurchaseRequestRegistration" width="980" height="600" />-->
+    </tasks>
+    <informations>
+      <information code="infoPurchaseRequest" title="Informasi Pemesanan Barang Rekap" description="Informasi Pemesanan Barang Rekap" url="~/Program/Procurement/PurchaseRequest/PurchaseRequestDtReceivedHeaderCtl.ascx" id="btnInfoHeader" width="1100" height="550" />
+      <information code="infoPurchaseRequestDetail" title="Informasi Pemesanan Barang Detail" description="Informasi Pemesanan Barang Detail" url="~/Program/Procurement/PurchaseRequest/PurchaseRequestDtReceivedDetailCtl.ascx" id="btnInfoDetail" width="1100" height="550" />
+      <information code="infoPurchaseRequestVoid" title="Informasi Permintaan Pembelian (Decline)" description="Informasi Permintaan Pembelian Decline " url="~/Program/Procurement/PurchaseRequest/PurchaseRequestDtReceivedDeclineCtl.ascx" id="btnInfoDecline" width="1200" height="550" />
+      <information code="infoPurchaseRequestClosed" title="Informasi Permintaan Pembelian (Closed)" description="Informasi Permintaan Pembelian Closed " url="~/Program/Procurement/PurchaseRequest/PurchaseRequestDtReceivedClosedCtl.ascx" id="btnInfoClosed" width="1200" height="550" />
+
+    </informations>
+    <prints>
+      <print title="Bukti Permintaan Pembelian" reportcode="IM-00262" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Draft Permintaan Pembelian" reportcode="IM-00140" isByHealthcare="1" healthcareName="RSPKSB" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM020103 -->
+  <page menucode="IM020103">
+    <prints>
+      <print title="Daftar Permintaan Pembelian" reportcode="IM-00062" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM020104 -->
+  <page menucode="IM020104">
+    <informations>
+      <information code="infolinkingInventory" title="Informasi Linking Inventory" description="Linking Inventory" url="~/Program/Procurement/PurchaseRequest/LinkingInventoryInformationCtl.ascx" id="btnLinkingInventory" width="1100" height="500"/>
+    </informations>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM020202 -->
+  <page menucode="IM020202">
+    <tasks>
+      <task code="termPO" title="Termin PO" description="Form Termin Pemesanan Barang" url="~/Program/Procurement/PurchaseOrder/PurchaseOrderTermEntryCtl.ascx" id="btnEntryTermPO" width="1200" height="500" />
+      <task code="documentNotes" title="Catatan Pemesanan Barang" description="Catatan Pemesanan Barang" url="~/Libs/Program/Controls/DocumentNotesCtl.ascx" id="btnDocumentNotes" width="900" height="550" />
+    </tasks>
+    <informations>
+      <information code="infoStockPerLocation" title="Informasi Stock Per Lokasi" description="Informasi Stock Per Lokasi" url="~/Program/Procurement/PurchaseOrder/StockInformationPerLocationCtl.ascx" id="btnInfoStockPerLocation" width="900" height="550" />
+      <information code="infoSupplier" title="Informasi Supplier" description="Informasi Supplier" url="~/Program/Procurement/PurchaseOrder/PurchaseOrderSupplierInfoCtl.ascx" id="btnInfoSupplier" width="1100" height="500" />
+      <information code="infoReceived" title="Informasi Penerimaan Barang" description="Informasi Penerimaan Barang" url="~/Program/Procurement/PurchaseOrder/PurchaseOrderDtReceivedCtl.ascx" id="btnInfoPurchaseOrder" width="1100" height="550" />
+      <information code="infoCloseAndNew" title="Informasi Close And New" description="Informasi Close And New" url="~/Program/Procurement/PurchaseOrder/PurchaseOrderCloseAndNewCtl.ascx" id="btnInfoPurchaseOrderCloseNew" width="1100" height="550" />
+    </informations>
+    <prints>
+      <print title="Bukti Pemesanan Barang Dengan Nilai" reportcode="IM-00258" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Pemesanan Barang Dengan Nilai DRAFT" reportcode="IM-00139" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <!-- <print title="Bukti Pemesanan Barang Tanpa Nilai" reportcode="IM-00051" isByHealthcare="1" healthcareName="RSPKSB" />
+	  
+      <print title="Bukti Pemesanan Barang Tanpa Nilai DRAFT" reportcode="IM-00139" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Pemesanan Barang Dengan Nilai (NON RUTIN) - RSCK" reportcode="IM-00141" isByHealthcare="1" healthcareName="RSPKSB" />
+      
+      <print title="Bukti Pemesanan Barang Dengan Nilai (NON RUTIN) DRAFT - RSCK" reportcode="IM-00142" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Pemesanan Barang Tanpa Nilai (NON RUTIN) - RSCK" reportcode="IM-00096" isByHealthcare="1" healthcareName="RSPKSB" />
+	  
+      <print title="Bukti Pemesanan Barang Tanpa Nilai (NON RUTIN) DRAFT - RSCK" reportcode="IM-00127" isByHealthcare="1" healthcareName="RSPKSB" /> -->
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM020301 -->
+  <page menucode="IM020301">
+    <prints>
+      <print title="Bukti Pembelian Tunai" reportcode="IM-00005" isByHealthcare="1" healthcareName="RSPKSB" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM020302 -->
+  <page menucode="IM020302">
+    <prints>
+      <print title="Bukti Retur Pembelian Tunai Dengan Nilai" reportcode="IM-00010" />
+      <print title="Bukti Retur Pembelian Tunai Tanpa Nilai" reportcode="IM-00011" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM030102 -->
+  <page menucode="IM030102">
+    <informations>
+      <information code="infoDistribution" title="Informasi Distribusi Barang" description="Informasi Distribusi Barang" url="~/Program/Warehouse/ItemOrder/ItemRequestDistributionCtl.ascx" id="btnInfoDistribution" width="1100" height="550" />
+      <information code="infoComsumption" title="Informasi Pemakaian Barang" description="Informasi Pemakaian Barang" url="~/Program/Warehouse/ItemOrder/ItemRequestConsumptionCtl.ascx" id="btnInfoConsumption" width="1100" height="550" />
+      <information code="infoPurchaseRequest" title="Informasi Permintaan Pembelian Barang" description="Informasi Permintaan Pembelian Barang" url="~/Program/Warehouse/ItemOrder/ItemRequestPurchaseRequestCtl.ascx" id="btnInfoPurchaseRequest" width="1100" height="550" />
+
+      <information code="infoItemRequestDecline" title="Informasi Permintaan Barang (DECLINE)" description="Informasi Permintaan Barang yang sudah DECLINE" url="~/Program/Warehouse/ItemOrder/ItemRequestDeclineCtl.ascx" id="btnInfoItemRequestDecline" width="1100" height="550" />
+      <information code="infoItemRequestClosed" title="Informasi Permintaan Barang (CLOSED)" description="Informasi Permintaan Barang yang sudah CLOSED" url="~/Program/Warehouse/ItemOrder/ItemRequestClosedCtl.ascx" id="btnInfoItemRequestClosed" width="1100" height="550" />
+    </informations>
+    <prints>
+      <print title="Bukti Permintaan Barang" reportcode="IM-00217" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Draf Permintaan Barang" reportcode="IM-00098" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM030103 -->
+  <page menucode="IM030103">
+    <tasks>
+    </tasks>
+    <informations>
+      <information code="infoDistribution" title="Informasi Distribusi Barang" description="Informasi Distribusi Barang" url="~/Program/Warehouse/ItemOrder/ItemRequestDistributionCtl.ascx" id="btnInfoDistribution" width="1100" height="550" />
+      <information code="infoComsumption" title="Informasi Pemakaian Barang" description="Informasi Pemakaian Barang" url="~/Program/Warehouse/ItemOrder/ItemRequestConsumptionCtl.ascx" id="btnInfoConsumption" width="1100" height="550" />
+      <information code="infoPurchaseRequest" title="Informasi Permintaan Pembelian Barang" description="Informasi Permintaan Pembelian Barang" url="~/Program/Warehouse/ItemOrder/ItemRequestPurchaseRequestCtl.ascx" id="btnInfoPurchaseRequest" width="1100" height="550" />
+    </informations>
+    <prints>
+      <print title="Bukti Permintaan Barang" reportcode="IM-00217" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Draf Permintaan Barang" reportcode="IM-00098" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM030202 -->
+  <page menucode="IM030202">
+    <prints>
+      <print title="Bukti Distribusi Barang" reportcode="IM-00137" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM030302 -->
+  <page menucode="IM030302">
+
+    <informations>
+      <information code="infoReturn" title="Informasi Tukar Faktur" description="Informasi Tukar Faktur" url="~/Program/Warehouse/PurchaseReturn/PurchaseReturnInfoCtl.ascx" id="btnReturnInvoice" width="1100" height="550" />
+    </informations>
+
+    <prints>
+      <print title="Bukti Retur Pembelian dengan Nilai" reportcode="IM-00012" />
+      <print title="Bukti Retur Pembelian tanpa Nilai" reportcode="IM-00013" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM030301 -->
+  <page menucode="IM030301">
+    <informations>
+      <information code="infoInvoice" title="Informasi Tukar Faktur" description="Informasi Tukar Faktur" url="~/Program/Warehouse/PurchaseReceive/PurchaseReceiveInvoiceInfoCtl.ascx" id="btnInvoiceInfo" width="1100" height="550" />
+    </informations>
+    <tasks>
+      <task code="updateReference" id="btnUpdateReference" title="Data Faktur Kirim" description="Ubah Data Faktur Kirim" url="~/Program/Warehouse/PurchaseReceive/UpdateReferenceInfoCtl.ascx" width="400" height="250" />
+      <task code="updateTax" id="btnUpdateTax" title="Data Faktur Penerimaan" description="Ubah Data Faktur Pajak Penerimaan" url="~/Program/Warehouse/PurchaseReceive/UpdateTaxInfoCtl.ascx" width="400" height="250" />
+      <task code="updateEDAndBatchNo" id="btnUpdateEDAndBatchNo" title="Data Expired Date Dan Batch No" description="Ubah Expired Date Dan Batch No" url="~/Program/Warehouse/PurchaseReceive/UpdateEDAndBatchNoCtl.ascx" width="1000" height="600" />
+    </tasks>
+    <prints>
+      <print title="Bukti Penerimaan Pembelian" reportcode="IM-00261" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="Bukti Penerimaan Pembelian 2" reportcode="IM-00018" isByHealthcare="1" healthcareName="RSPKSB" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM030305 -->
+  <page menucode="IM030305">
+    <informations>
+      <information code="infoInvoiceWithoutPrice" title="Informasi Tukar Faktur (Tanpa Nilai)" description="Informasi Tukar Faktur" url="~/Program/Warehouse/PurchaseReceive/PurchaseReceiveInvoiceInfoWithoutPriceCtl.ascx" id="btnInvoiceInfoWithoutPrice" width="1100" height="550" />
+    </informations>
+    <tasks>
+      <task code="updateReference" id="btnUpdateReference" title="Data Faktur Kirim" description="Ubah Data Faktur Kirim" url="~/Program/Warehouse/PurchaseReceive/UpdateReferenceInfoCtl.ascx" width="400" height="250" />
+      <task code="updateTax" id="btnUpdateTax" title="Data Faktur Penerimaan" description="Ubah Data Faktur Pajak Penerimaan" url="~/Program/Warehouse/PurchaseReceive/UpdateTaxInfoCtl.ascx" width="400" height="250" />
+      <task code="updateEDAndBatchNo" id="btnUpdateEDAndBatchNo" title="Data Expired Date Dan Batch No" description="Ubah Expired Date Dan Batch No" url="~/Program/Warehouse/PurchaseReceive/UpdateEDAndBatchNoCtl.ascx" width="1000" height="600" />
+    </tasks>
+    <prints>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM030303 -->
+  <page menucode="IM030303">
+    <prints>
+      <print title="Bukti Nota Kredit" reportcode="IM-00006" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM030304 -->
+  <page menucode="IM030304">
+    <prints>
+      <print title="Bukti Penggantian Barang" reportcode="IM-00009" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM030503 -->
+  <page menucode="IM030503">
+    <prints>
+      <print title="Bukti Pemakaian Barang Dengan Nilai" reportcode="IM-00054" isByHealthcare="1" healthcareName="RSPKSB"/>
+
+      <print title="Bukti Pemakaian Barang Tanpa Nilai" reportcode="IM-00053" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM030502 -->
+  <page menucode="IM030502">
+    <prints>
+      <print title="Bukti Penyesuaian Persediaan" reportcode="IM-00032" isByHealthcare="1" healthcareName="RSPKSB" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM030504 -->
+  <page menucode="IM030504">
+    <prints>
+      <print title="Bukti Produksi" reportcode="IM-00014" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM030505 -->
+  <page menucode="IM030505">
+    <prints>
+      <print title="Form Stock Opname" reportcode="IM-00038" />
+
+      <print title="Form Stock Opname (Tanpa Qty BSO)" reportcode="IM-00042" />
+
+      <print title="Form Stock Opname - Rak (per halaman)" reportcode="IM-00072" />
+
+      <print title="Form Stock Opname (Tanpa Qty BSO) - Rak (per halaman)" reportcode="IM-00073" />
+
+      <print title="Bukti Stock Opname - Selisih" reportcode="IM-00037" />
+
+      <print title="Bukti Stock Opname - Selisih (Format 2)" reportcode="IM-00074" />
+
+      <print title="Bukti Stock Opname" reportcode="IM-00015" />
+
+      <print title="Bukti Stock Opname (Format 2)" reportcode="IM-00075" />
+
+      <print title="Bukti Stock Opname (DRAFT)" reportcode="IM-00110" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM030508 -->
+  <page menucode="IM030508">
+    <prints>
+      <print title="Form Stock Opname" reportcode="IM-00038" />
+
+      <print title="Form Stock Opname (Tanpa Qty BSO)" reportcode="IM-00042" />
+
+      <print title="Form Stock Opname - Rak (per halaman)" reportcode="IM-00072" />
+
+      <print title="Form Stock Opname (Tanpa Qty BSO) - Rak (per halaman)" reportcode="IM-00073" />
+
+      <print title="Bukti Stock Opname - Selisih" reportcode="IM-00037" />
+
+      <print title="Bukti Stock Opname - Selisih (Format 2)" reportcode="IM-00074" />
+
+      <print title="Bukti Stock Opname" reportcode="IM-00015" />
+
+      <print title="Bukti Stock Opname (Format 2)" reportcode="IM-00075" />
+
+      <print title="Bukti Stock Opname (DRAFT)" reportcode="IM-00110" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM030509 -->
+  <page menucode="IM030509">
+    <prints>
+      <print title="Form Stock Opname Per Rak" reportcode="IM-00143" />
+
+      <print title="Form Stock Opname Per Rak (Tanpa Qty BSO)" reportcode="IM-00152" />
+
+      <print title="Bukti Stock Opname Per Rak" reportcode="IM-00144" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM040101 -->
+  <page menucode="IM040101">
+    <informations>
+      <information code="infoInvoice" title="Informasi Tukar Faktur" description="Informasi Tukar Faktur" url="~/Program/Consignment/ConsignmentOrder/ConsignmentOrderInvoiceInfoCtl.ascx" id="btnInvoiceInfo" width="1100" height="550" />
+      <information code="infoReceived" title="Informasi Penerimaan Barang" description="Informasi Penerimaan Barang" url="~/Program/Procurement/PurchaseOrder/PurchaseOrderDtReceivedCtl.ascx" id="btnInfoPurchaseOrder" width="1100" height="550" />
+    </informations>
+    <prints>
+      <print title="Bukti Pemesanan Barang Konsinyasi" reportcode="IM-00263" isByHealthcare="1" healthcareName="RSPKSB" />
+
+      <print title="Bukti Pemesanan Barang Konsinyasi Tanpa Nilai" reportcode="IM-00264" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM040200 -->
+  <page menucode="IM040200">
+    <tasks>
+      <task code="updateReferenceConsignment" id="btnUpdateReferenceConsignment" title="Data Faktur Kirim" description="Ubah Data Faktur Kirim" url="~/Program/Consignment/ConsignmentReceive/UpdateReferenceInfoConsignmentCtl.ascx" width="400" height="250" />
+      <task code="updateTaxConsignment" id="btnUpdateTaxConsignment" title="Data Faktur Penerimaan" description="Ubah Data Faktur Pajak Penerimaan" url="~/Program/Consignment/ConsignmentReceive/UpdateTaxInfoConsignmentCtl.ascx" width="400" height="250" />
+    </tasks>
+    <informations>
+      <information code="infoInvoice" title="Informasi Tukar Faktur" description="Informasi Tukar Faktur" url="~/Program/Warehouse/PurchaseReceive/PurchaseReceiveInvoiceInfoCtl.ascx" id="btnInvoiceInfo" width="1100" height="550" />
+      <information code="infoPurchased" title="Informasi Pemesanan Barang Konsinyasi" description="Informasi Pemesanan Barang Konsinyasi" url="~/Program/Warehouse/PurchaseReceive/PurchaseReceivedDtOrderCtl.ascx" id="btnInfoPurchaseReceive" width="1100" height="550" />
+    </informations>
+    <prints>
+      <print title="Bukti Penerimaan Barang Konsinyasi" reportcode="IM-00021" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM040300 -->
+  <page menucode="IM040300">
+    <prints>
+      <print title="Bukti Retur Barang Konsinyasi Dengan Nilai" reportcode="IM-00022" />
+      <print title="Bukti Retur Barang Konsinyasi Tanpa Nilai" reportcode="IM-00023" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM030401 -->
+  <page menucode="IM030401">
+    <prints>
+      <print title="Bukti Penerimaan Donasi" reportcode="IM-00024" isByHealthcare="1" healthcareName="RSPKSB"/>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM050232 -->
+  <page menucode="IM050232">
+    <prints>
+      <print title="Bukti Penerimaan Pembelian" reportcode="IM-00261" isByHealthcare="1" healthcareName="RSPKSB" />
+      <print title="Bukti Penerimaan Pembelian 2" reportcode="IM-00018" isByHealthcare="1" healthcareName="RSPKSB" />
+
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM050237 -->
+  <page menucode="IM050237">
+    <prints>
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM060202 -->
+  <page menucode="IM060202">
+    <prints>
+      <print title="Informasi Saldo Per Item" reportcode="IM090404" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM070201 -->
+  <page menucode="IM070201">
+    <prints>
+      <print title="Bukti Permintaan CSSD" reportcode="IM-00064" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM070202 -->
+  <page menucode="IM070202">
+    <tasks>
+      <task code="CSSDHandover" title="Serah Terima CSSD" description="Cetak Bukti Serah Terima CSSD" url="~/Libs/Program/Controls/CSSDHandoverCtl.ascx" width="550" height="200" />
+    </tasks>
+  </page>
+  <!-- #EndRegion -->
+  <!-- #Region IM070301 -->
+  <page menucode="IM070301">
+    <prints>
+      <print title="Bukti Pemakaian CSSD" reportcode="IM-00066" />
+
+      <print title="Formulir Pengiriman / Pengembalian CSSD" reportcode="IM-00047" />
+    </prints>
+  </page>
+  <!-- #EndRegion -->
+</root>

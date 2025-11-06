@@ -1,0 +1,27 @@
+101;Ada transaksi pasien yang belum diproses menjadi tagihan.
+102;Tempat tidur tidak dapat digunakan.
+103;Pasien memiliki nomor kunjungan yang belum ditutup.
+104;Nomor Pendaftaran Pasien telah ditutup.
+105;Pasien harus dipulangkan terlebih dahulu.
+106;Masih ada tagihan pasien yang belum diproses.
+107;Ada transaksi pasien yang belum diproses menjadi tagihan.
+108;Perjanjian pasien telah diproses, tidak dapat diubah.
+109;Harap memilih nomor perjanjian pasien terlebih dahulu.
+110;Harap memilih nomor pendaftaran pasien terlebih dahulu.
+111;Masih ada kunjungan pasien yang belum ditutup.
+112;Harap memilih nomor rekam medis pasien terlebih dahulu.
+113;Harap memilih nomor transaksi terlebih dahulu.
+114;Uang yang dibayarkan tidak boleh kurang dari jumlah tagihan.
+115;Uang yang dibayarkan tidak boleh lebih dari jumlah tagihan.
+116;Pasien belum memiliki nomor rekam medis, Identitas Pasien harus diisi.
+117;Waktu perjanjian ini tidak dapat digunakan.
+118;Tagihan Pasien telah dipindahkan ke Rawat Inap, tidak dapat diubah lagi status pendaftarannya.
+119;Transaksi sudah digunakan dalam Proses Honor Dokter, tidak dapat dibatalkan.
+120;Uang Muka sudah digunakan untuk Proses Pelunasan, tidak dapat dibatalkan.
+123;Maaf, Pembayaran ini tidak dapat dibatalkan karena kwitansi telah diproses.
+124;Maaf, Pembayaran ini tidak dapat dibatalkan karena telah dibuatkan tagihan ke customer.
+125;Maaf, Registrasi ini tidak dapat dibatalkan karena sudah memiliki transaksi / pembayaran.
+126;Maaf, Registrasi ini tidak dapat dibatalkan karena sudah terisi pengkajian awal dan anamnesa nya.
+127;Maaf, Registrasi ini tidak dapat dibatalkan karena sudah memiliki transfer transaksi dari registrasi asal.
+128;Transaksi sudah digunakan dalam Transaksi Rujukan ke Pihak Ketiga, tidak dapat dibatalkan.
+129;Maaf, Registrasi ini tidak dapat dibatalkan karena sudah memiliki link registrasi.
