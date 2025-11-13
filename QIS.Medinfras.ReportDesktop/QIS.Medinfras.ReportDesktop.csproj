@@ -23375,7 +23375,9 @@
     <Compile Include="SystemSetup\LDaftarRuangRawat.Designer.cs">
       <DependentUpon>LDaftarRuangRawat.cs</DependentUpon>
     </Compile>
-    <Compile Include="SystemSetup\LLogLoginUser.cs" />
+    <Compile Include="SystemSetup\LLogLoginUser.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SystemSetup\LLogLoginUser.Designer.cs">
       <DependentUpon>LLogLoginUser.cs</DependentUpon>
     </Compile>
