@@ -594,6 +594,46 @@ namespace QIS.Medinfras.Data.Service
             return result;
         }
         #endregion
+        #region ApplicationAccessHistory
+        public static ApplicationAccessHistory GetApplicationAccessHistory(Int32 ID)
+        {
+            return new ApplicationAccessHistoryDao().Get(ID);
+        }
+        public static int InsertApplicationAccessHistory(ApplicationAccessHistory record)
+        {
+            return new ApplicationAccessHistoryDao().Insert(record);
+        }
+        public static int UpdateApplicationAccessHistory(ApplicationAccessHistory record)
+        {
+            return new ApplicationAccessHistoryDao().Update(record);
+        }
+        public static int DeleteApplicationAccessHistory(Int32 ID)
+        {
+            return new ApplicationAccessHistoryDao().Delete(ID);
+        }
+        public static List<ApplicationAccessHistory> GetApplicationAccessHistoryList(string filterExpression)
+        {
+            List<ApplicationAccessHistory> result = new List<ApplicationAccessHistory>();
+            IDbContext ctx = DbFactory.Configure();
+            try
+            {
+                DbHelper helper = new DbHelper(typeof(ApplicationAccessHistory));
+                ctx.CommandText = helper.Select(filterExpression);
+                using (IDataReader reader = DaoBase.GetDataReader(ctx))
+                    while (reader.Read())
+                        result.Add((ApplicationAccessHistory)helper.IDataReaderToObject(reader, new ApplicationAccessHistory()));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+            finally
+            {
+                ctx.Close();
+            }
+            return result;
+        }
+        #endregion
         #region Appointment
         public static Appointment GetAppointment(Int32 AppointmentID)
         {

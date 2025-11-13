@@ -770,6 +770,18 @@ namespace QIS.Medinfras.Data.Service
         }
     }
     #endregion
+    #region vApplicationAccessHistory
+    public partial class vApplicationAccessHistory
+    {
+        public string cfCreatedDateInString
+        {
+            get
+            {
+                return _CreatedDateFull.ToString(Constant.FormatString.DATE_TIME_FORMAT);
+            }
+        }
+    }
+    #endregion
     #region vAPInvoiceSupplier
     public partial class vAPInvoiceSupplier
     {

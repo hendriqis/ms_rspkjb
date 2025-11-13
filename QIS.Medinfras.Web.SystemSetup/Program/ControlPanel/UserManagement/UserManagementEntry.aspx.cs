@@ -61,6 +61,9 @@ namespace QIS.Medinfras.Web.SystemSetup.Program
             SetControlEntrySetting(hdnParamedicID, new ControlEntrySetting(true, true));
             SetControlEntrySetting(txtParamedicCode, new ControlEntrySetting(true, true, false));
             SetControlEntrySetting(txtParamedicName, new ControlEntrySetting(false, false, false));
+            SetControlEntrySetting(hdnEmployeeID, new ControlEntrySetting(true, true));
+            SetControlEntrySetting(txtEmployeeCode, new ControlEntrySetting(true, true, false));
+            SetControlEntrySetting(txtEmployeeName, new ControlEntrySetting(false, false, false));
             SetControlEntrySetting(hdnCopyUserID, new ControlEntrySetting(true, false));
             SetControlEntrySetting(txtCopyUserName, new ControlEntrySetting(true, false, false));
             SetControlEntrySetting(txtCopyUserFullName, new ControlEntrySetting(false, false, false));
@@ -96,6 +99,9 @@ namespace QIS.Medinfras.Web.SystemSetup.Program
             chkIsResetPassword.Checked = entity.IsResetPassword;
             chkIsCashier.Checked = entity.IsCashier;
             txtSSN.Text = entity.SSN;
+            hdnEmployeeID.Value = entity.EmployeeID.ToString();
+            txtEmployeeCode.Text = entity.EmployeeCode;
+            txtEmployeeName.Text = entity.EmployeeName;
 
             #region Custom Attribute
             foreach (RepeaterItem item in rptCustomAttribute.Items)
@@ -120,6 +126,11 @@ namespace QIS.Medinfras.Web.SystemSetup.Program
                 entityAttribute.ParamedicID = null;
             else
                 entityAttribute.ParamedicID = Convert.ToInt32(hdnParamedicID.Value);
+
+            if (hdnEmployeeID.Value == "")
+                entityAttribute.EmployeeID = null;
+            else
+                entityAttribute.EmployeeID = Convert.ToInt32(hdnEmployeeID.Value);
 
             entityAttribute.IsResetPassword = chkIsResetPassword.Checked;
             entityAttribute.IsCashier = chkIsCashier.Checked;

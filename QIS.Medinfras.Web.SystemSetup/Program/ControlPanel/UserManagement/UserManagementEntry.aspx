@@ -76,6 +76,40 @@
                 });
             }
             //#endregion
+
+            //#region Employee
+            function getEmployeeFilterExpression() {
+                var filterExpression = "IsDeleted = 0";
+                return filterExpression;
+            }
+            $('#<%:lblEmployee.ClientID %>.lblLink').live('click', function () {
+                openSearchDialog('employeeNew', getEmployeeFilterExpression(), function (value) {
+                    var param = value.split('|');
+                    $('#<%:hdnEmployeeID.ClientID %>').val(param[0]);
+                    $('#<%:txtEmployeeCode.ClientID %>').val(param[1]);
+                    $('#<%:txtEmployeeName.ClientID %>').val(param[2]);
+                });
+            });
+
+            $('#<%:txtEmployeeCode.ClientID %>').change(function () {
+                onTxtEmployeeCodeChanged($(this).val());
+            });
+
+            function onTxtEmployeeCodeChanged(value) {
+                var filterExpression = getEmployeeFilterExpression() + " AND EmployeeCode = '" + value + "'";
+                Methods.getObject('GetEmployeeList', filterExpression, function (result) {
+                    if (result != null) {
+                        $('#<%:hdnEmployeeID.ClientID %>').val(result.EmployeeID);
+                        $('#<%:txtEmployeeName.ClientID %>').val(result.FullName);
+                    }
+                    else {
+                        $('#<%:hdnEmployeeID.ClientID %>').val('');
+                        $('#<%:txtEmployeeCode.ClientID %>').val('');
+                        $('#<%:txtEmployeeName.ClientID %>').val('');
+                    }
+                });
+            }
+            //#endregion
         }
     </script>
     <input type="hidden" id="hdnPageTitle" runat="server" />
@@ -131,6 +165,33 @@
                     <tr style="display:none">
                         <td class="tdLabel"><label class="lblMandatory"><%=GetLabel("Jawaban Keamanan")%></label></td>
                         <td><asp:TextBox ID="txtSecurityAnswer" Width="100%" runat="server" /></td>
+                    </tr>
+                    <tr>
+                        <td class="tdLabel">
+                            <label class="lblLink" runat="server" id="lblEmployee">
+                                <%:GetLabel("Pegawai")%></label>
+                        </td>
+                        <td>
+                            <input type="hidden" runat="server" id="hdnEmployeeID" value="" />
+                            <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                <colgroup>
+                                    <col style="width: 100px" />
+                                    <col style="width: 3px" />
+                                    <col />
+                                </colgroup>
+                                <tr>
+                                    <td>
+                                        <asp:TextBox ID="txtEmployeeCode" Width="100%" runat="server" />
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtEmployeeName" Width="100%" runat="server" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
                     </tr>
                     <tr>
                         <td class="tdLabel"><label class="lblLink" id="lblParamedic"><%=GetLabel("Paramedis")%></label></td>

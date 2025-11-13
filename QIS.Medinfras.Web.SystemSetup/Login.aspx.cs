@@ -318,6 +318,15 @@ namespace QIS.Medinfras.Web.SystemSetup
                             hdnIsCashier.Value = "0";
                         }
 
+                        #region LoginHistory
+                        ApplicationAccessHistory history = new ApplicationAccessHistory();
+                        history.UserID = user.UserID;
+                        history.IPAddress = ipAddress;
+                        history.IsLogin = true;
+                        history.CreatedBy = user.UserID;
+                        BusinessLayer.InsertApplicationAccessHistory(history);
+                        #endregion
+
                         //check licensi
                         string dateexpired = string.Empty;
                         if (IsValidLicence(userLogin.UserID, ref dateexpired))
@@ -937,6 +946,14 @@ namespace QIS.Medinfras.Web.SystemSetup
 
         protected void lnkLogout_Click(object sender, EventArgs e)
         {
+            string ipAddress = HttpContext.Current.Request.UserHostAddress;
+            ApplicationAccessHistory history = new ApplicationAccessHistory();
+            history.UserID = AppSession.UserLogin.UserID;
+            history.IPAddress = ipAddress;
+            history.IsLogout = true;
+            history.CreatedBy = AppSession.UserLogin.UserID;
+            BusinessLayer.InsertApplicationAccessHistory(history);
+
             AppSession.ClearSession();
             HttpContext.Current.Response.Redirect("~/Login.aspx", true);
         }

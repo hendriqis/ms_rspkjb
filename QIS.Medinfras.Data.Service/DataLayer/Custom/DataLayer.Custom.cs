@@ -283,6 +283,15 @@ namespace QIS.Medinfras.Data.Service
         }
     }
     #endregion
+    #region Employee
+    public partial class Employee
+    {
+        public String cfInformationSummary
+        {
+            get { return string.Format("{0}|{1}|{2}", _EmployeeID, _EmployeeCode, _FullName); }
+        }
+    }
+    #endregion
     #region FADepreciation
     public partial class FADepreciation
     {

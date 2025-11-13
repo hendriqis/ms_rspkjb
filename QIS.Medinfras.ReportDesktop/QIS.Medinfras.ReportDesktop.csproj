@@ -23375,6 +23375,10 @@
     <Compile Include="SystemSetup\LDaftarRuangRawat.Designer.cs">
       <DependentUpon>LDaftarRuangRawat.cs</DependentUpon>
     </Compile>
+    <Compile Include="SystemSetup\LLogLoginUser.cs" />
+    <Compile Include="SystemSetup\LLogLoginUser.Designer.cs">
+      <DependentUpon>LLogLoginUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="SystemSetup\LPenggunaanLaporan.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -34993,6 +34997,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SystemSetup\LDaftarRuangRawat.resx">
       <DependentUpon>LDaftarRuangRawat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSetup\LLogLoginUser.resx">
+      <DependentUpon>LLogLoginUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SystemSetup\LPenggunaanLaporan.resx">
       <DependentUpon>LPenggunaanLaporan.cs</DependentUpon>

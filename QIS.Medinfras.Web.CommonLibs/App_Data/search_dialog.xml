@@ -1122,6 +1122,18 @@
     </intellisensetexts>
   </searchdialog>
   <!-- #EndRegion -->
+  <!-- #Region Employee New-->
+  <searchdialog type="employeeNew" methodname="GetEmployeeList" keyfieldname="cfInformationSummary">
+    <gridcolumns>
+      <gridcolumn datafield="EmployeeCode" headertext="Kode" width="100px" />
+      <gridcolumn datafield="FullName" headertext="Nama" width="300px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="FullName" headertext="Nama" description="" />
+      <intellisensetext datafield="EmployeeCode" headertext="Kode" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <!-- #EndRegion -->
   <!-- #Region Estimated ChargesHd -->
   <searchdialog type="estimatedcharges" methodname="GetvEstimatedChargesHdList" keyfieldname="TransactionNo" orderbyexpression="TransactionNo">
     <gridcolumns>

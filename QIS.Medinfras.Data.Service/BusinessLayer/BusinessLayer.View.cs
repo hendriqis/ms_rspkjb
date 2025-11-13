@@ -618,6 +618,30 @@ namespace QIS.Medinfras.Data.Service
             return result;
         }
         #endregion
+        #region vApplicationAccessHistory
+        public static List<vApplicationAccessHistory> GetvApplicationAccessHistoryList(string filterExpression)
+        {
+            List<vApplicationAccessHistory> result = new List<vApplicationAccessHistory>();
+            IDbContext ctx = DbFactory.Configure();
+            try
+            {
+                DbHelper helper = new DbHelper(typeof(vApplicationAccessHistory));
+                ctx.CommandText = helper.Select(filterExpression);
+                using (IDataReader reader = DaoBase.GetDataReader(ctx))
+                    while (reader.Read())
+                        result.Add((vApplicationAccessHistory)helper.IDataReaderToObject(reader, new vApplicationAccessHistory()));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+            finally
+            {
+                ctx.Close();
+            }
+            return result;
+        }
+        #endregion
         #region vAppointment
         public static List<vAppointment> GetvAppointmentList(string filterExpression)
         {
