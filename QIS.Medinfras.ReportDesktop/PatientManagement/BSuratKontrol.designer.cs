@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator1 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblPatientName = new DevExpress.XtraReports.UI.XRLabel();
             this.lblDOB = new DevExpress.XtraReports.UI.XRLabel();
@@ -55,6 +56,8 @@
             this.lblRencanaKontrol = new DevExpress.XtraReports.UI.XRLabel();
             this.lblNoSurkon = new DevExpress.XtraReports.UI.XRLabel();
             this.lblDiagnosa = new DevExpress.XtraReports.UI.XRLabel();
+            this.qrImg = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.lblBarcode = new DevExpress.XtraReports.UI.XRBarCode();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // BottomMargin
@@ -64,6 +67,8 @@
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lblBarcode,
+            this.qrImg,
             this.lblDiagnosa,
             this.lblNoSurkon,
             this.lblRencanaKontrol,
@@ -152,7 +157,7 @@
             this.lblDPJPYth.LocationFloat = new DevExpress.Utils.PointFloat(322.7917F, 133.5209F);
             this.lblDPJPYth.Name = "lblDPJPYth";
             this.lblDPJPYth.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lblDPJPYth.SizeF = new System.Drawing.SizeF(789.3522F, 31.75003F);
+            this.lblDPJPYth.SizeF = new System.Drawing.SizeF(950.2187F, 31.75003F);
             this.lblDPJPYth.StylePriority.UseFont = false;
             this.lblDPJPYth.StylePriority.UseTextAlignment = false;
             this.lblDPJPYth.Text = "lblDPJPYth";
@@ -174,11 +179,11 @@
             // xrLabel41
             // 
             this.xrLabel41.Dpi = 254F;
-            this.xrLabel41.Font = new System.Drawing.Font("Tahoma", 6.75F);
-            this.xrLabel41.LocationFloat = new DevExpress.Utils.PointFloat(0.0002281121F, 427.1143F);
+            this.xrLabel41.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.xrLabel41.LocationFloat = new DevExpress.Utils.PointFloat(0.0002260844F, 427.1143F);
             this.xrLabel41.Name = "xrLabel41";
             this.xrLabel41.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel41.SizeF = new System.Drawing.SizeF(1233.896F, 31.75F);
+            this.xrLabel41.SizeF = new System.Drawing.SizeF(1112.144F, 31.75F);
             this.xrLabel41.StylePriority.UseFont = false;
             this.xrLabel41.StylePriority.UseTextAlignment = false;
             this.xrLabel41.Text = "Demikian atas bantuannya, diucapkan banyak terima kasih.";
@@ -272,7 +277,7 @@
             this.xrLabel15.SizeF = new System.Drawing.SizeF(322.7917F, 31.75F);
             this.xrLabel15.StylePriority.UseFont = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
-            this.xrLabel15.Text = "Diagnosa";
+            this.xrLabel15.Text = "Diagnosa Awal";
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel17
@@ -305,14 +310,14 @@
             // 
             this.xrLabel38.Dpi = 254F;
             this.xrLabel38.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(1338.792F, 503.4348F);
+            this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(1338.792F, 509.9588F);
             this.xrLabel38.Name = "xrLabel38";
             this.xrLabel38.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel38.SizeF = new System.Drawing.SizeF(592.6666F, 31.75F);
             this.xrLabel38.StylePriority.UseFont = false;
             this.xrLabel38.StylePriority.UseTextAlignment = false;
-            this.xrLabel38.Text = "Mengetahui DPJP,";
-            this.xrLabel38.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrLabel38.Text = "Mengetahui,";
+            this.xrLabel38.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // lblNoKartu
             // 
@@ -331,7 +336,7 @@
             // 
             this.xrLabel1.Dpi = 254F;
             this.xrLabel1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(597.9583F, 0F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(546.2545F, 0F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel1.SizeF = new System.Drawing.SizeF(565.8898F, 55.77417F);
@@ -344,10 +349,10 @@
             // 
             this.lblHealthcareName.Dpi = 254F;
             this.lblHealthcareName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHealthcareName.LocationFloat = new DevExpress.Utils.PointFloat(597.9583F, 55.77414F);
+            this.lblHealthcareName.LocationFloat = new DevExpress.Utils.PointFloat(546.2545F, 55.77412F);
             this.lblHealthcareName.Name = "lblHealthcareName";
             this.lblHealthcareName.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lblHealthcareName.SizeF = new System.Drawing.SizeF(565.8898F, 55.77417F);
+            this.lblHealthcareName.SizeF = new System.Drawing.SizeF(851.6396F, 55.77417F);
             this.lblHealthcareName.StylePriority.UseFont = false;
             this.lblHealthcareName.StylePriority.UseTextAlignment = false;
             this.lblHealthcareName.Text = "HealthcareName";
@@ -384,7 +389,7 @@
             this.lblDPJP.StylePriority.UseFont = false;
             this.lblDPJP.StylePriority.UseTextAlignment = false;
             this.lblDPJP.Text = "lblDPJP";
-            this.lblDPJP.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.lblDPJP.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel32
             // 
@@ -416,10 +421,10 @@
             // 
             this.lblRencanaKontrol.Dpi = 254F;
             this.lblRencanaKontrol.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRencanaKontrol.LocationFloat = new DevExpress.Utils.PointFloat(354.5418F, 357.1874F);
+            this.lblRencanaKontrol.LocationFloat = new DevExpress.Utils.PointFloat(354.5419F, 357.1875F);
             this.lblRencanaKontrol.Name = "lblRencanaKontrol";
             this.lblRencanaKontrol.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lblRencanaKontrol.SizeF = new System.Drawing.SizeF(757.6019F, 31.75F);
+            this.lblRencanaKontrol.SizeF = new System.Drawing.SizeF(757.6022F, 31.74988F);
             this.lblRencanaKontrol.StylePriority.UseFont = false;
             this.lblRencanaKontrol.StylePriority.UseTextAlignment = false;
             this.lblRencanaKontrol.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
@@ -449,7 +454,33 @@
             this.lblDiagnosa.StylePriority.UseTextAlignment = false;
             this.lblDiagnosa.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // BSuratKontrol_RSPW
+            // qrImg
+            // 
+            this.qrImg.Dpi = 254F;
+            this.qrImg.LocationFloat = new DevExpress.Utils.PointFloat(1555.969F, 554.7587F);
+            this.qrImg.Name = "qrImg";
+            this.qrImg.SizeF = new System.Drawing.SizeF(158.3124F, 144.5462F);
+            this.qrImg.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
+            // 
+            // lblBarcode
+            // 
+            this.lblBarcode.Alignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.lblBarcode.AutoModule = true;
+            this.lblBarcode.Dpi = 254F;
+            this.lblBarcode.Font = new System.Drawing.Font("Tahoma", 6.75F);
+            this.lblBarcode.LocationFloat = new DevExpress.Utils.PointFloat(1273.01F, 165.2709F);
+            this.lblBarcode.Module = 5.08F;
+            this.lblBarcode.Name = "lblBarcode";
+            this.lblBarcode.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            this.lblBarcode.ShowText = false;
+            this.lblBarcode.SizeF = new System.Drawing.SizeF(716.653F, 85F);
+            this.lblBarcode.StylePriority.UseFont = false;
+            this.lblBarcode.StylePriority.UsePadding = false;
+            this.lblBarcode.StylePriority.UseTextAlignment = false;
+            this.lblBarcode.Symbology = code128Generator1;
+            this.lblBarcode.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // BSuratKontrol
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail,
@@ -497,6 +528,8 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel32;
         private DevExpress.XtraReports.UI.XRLabel lblNoSurkon;
         private DevExpress.XtraReports.UI.XRLabel lblDiagnosa;
+        private DevExpress.XtraReports.UI.XRPictureBox qrImg;
+        private DevExpress.XtraReports.UI.XRBarCode lblBarcode;
 
     }
 }

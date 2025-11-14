@@ -36,7 +36,13 @@ namespace QIS.Medinfras.ReportDesktop
                 }
             }
 
-            lblNoSurkon.Text = string.Format("No. {0}", entity.NoSuratRencanaKontrolBerikutnya);
+            lblBarcode.Visible = false;
+            if (!string.IsNullOrEmpty(entity.NoSuratRencanaKontrolBerikutnya))
+            {
+                lblNoSurkon.Text = string.Format("No. {0}", entity.NoSuratRencanaKontrolBerikutnya);
+                lblBarcode.Visible = true;
+                lblBarcode.Text = entity.NoSuratRencanaKontrolBerikutnya;
+            }
             lblDPJP.Text = entity.ParamedicName;
             if (!string.IsNullOrEmpty(entity.SpecialtyBPJSReferenceInfo))
             {
@@ -80,7 +86,7 @@ namespace QIS.Medinfras.ReportDesktop
             {
                 lblDiagnosa.Text = "";
             }
-            lblRencanaKontrol.Text = entity.TanggalRencanaKontrol.ToString(Constant.FormatString.DATE_FORMAT);
+            lblRencanaKontrol.Text = string.Format("{0}", entity.TanggalRencanaKontrol.ToString(Constant.FormatString.DATE_FORMAT));
 
             if (entity.GCSex == Constant.Gender.MALE)
             {
@@ -93,9 +99,35 @@ namespace QIS.Medinfras.ReportDesktop
              
             lblNoKartu.Text = entity.NHSRegistrationNo;
 
-            lblCetakanKe.Text = String.Format("Tgl.Entri: {0} | Tgl.Cetak: {0} {1}",DateTime.Today.ToString("MM/dd/yy") ,DateTime.Now.ToString("HH:mm:ss tt"));
+            lblCetakanKe.Text = String.Format("Tgl.Cetak: {0} {1}",DateTime.Today.ToString("MM/dd/yy") ,DateTime.Now.ToString("HH:mm:ss tt"));
 
             logoBPJS.ImageUrl = ResolveUrl("~/SystemSetup/Libs/Images/BPJS.jpg");
+
+            #region QR Codes Image
+            string contents = string.Format(@"{0}", entity.NHSRegistrationNo);
+
+            QRCodeEncoder qRCodeEncoder = new QRCodeEncoder();
+            qRCodeEncoder.QRCodeEncodeMode = QRCodeEncoder.ENCODE_MODE.BYTE;
+            qRCodeEncoder.QRCodeScale = 4;
+            qRCodeEncoder.QRCodeVersion = 7;
+            qRCodeEncoder.QRCodeErrorCorrect = QRCodeEncoder.ERROR_CORRECTION.L;
+            MemoryStream memoryStream = new MemoryStream();
+            //System.Web.UI.WebControls.Image imgBarCode = new System.Web.UI.WebControls.Image();
+            //imgBarCode.Height = 400;
+            //imgBarCode.Width = 400;
+
+            using (Bitmap bitMap = qRCodeEncoder.Encode(contents, System.Text.Encoding.UTF8))
+            {
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    bitMap.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    //byte[] byteImage = ms.ToArray();
+                    //imgBarCode.ImageUrl = "data:image/png;base64," + Convert.ToBase64String(byteImage);
+                    ////pictMRNQR.Image = System.Drawing.Image.FromStream(ms, true, true);
+                    qrImg.Image = System.Drawing.Image.FromStream(ms, true, true);
+                }
+            }
+            #endregion
         }
     }
 }
